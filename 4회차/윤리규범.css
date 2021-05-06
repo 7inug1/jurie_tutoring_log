@@ -1,0 +1,156 @@
+/* !: 결과물과 동일하게 하기 위해 임의로 바꾼 부분 */
+
+@import './reset.css';
+
+@font-face {
+  font-family: 'ydiy330';
+  src: url('./font/ydiygo330/YDIYGO330.woff2') format('woff2'),
+    url('./font/ydiygo330/YDIYGO330.woff') format('woff');
+  font-family: 'FuturaBT';
+  src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
+}
+
+:root {
+  --black: #464646;
+  --gray: #9b9b9b;
+  --orange: #f7941e;
+}
+
+h1 {
+  font-size: 20px;
+  color: var(--black);
+  display: inline;
+  line-height: 18.58px;
+  letter-spacing: -0.4px;
+}
+
+nav {
+  font-size: 11px;
+  letter-spacing: -0.4px;
+  font-family: '돋움', Dotum;
+  color: #c8c8c8;
+  float: right;
+  position: relative;
+}
+
+.nav_specific {
+  color: var(--orange);
+}
+
+.nav_arrow {
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  background-image: url('./images/nav_arrow.png');
+}
+
+body {
+  font-family: 'ydiy330', sans-serif;
+  margin: 0 auto;
+}
+
+.outerbox {
+  margin: 0 auto;
+  width: 790px;
+  height: 748px;
+  /* margin-top:10px; */
+}
+
+.outerbox_head {
+  width: 790px;
+  height: 3px;
+  background-image: url('./images/outer_border_head.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.outerbox_body {
+  background-image: url('./images/outer_border_body.png');
+  background-repeat: repeat-y;
+  background-position: center;
+  padding: 59px 59px;
+  /* margin: 0 auto; */
+}
+
+.outerbox_tail {
+  width: 790px;
+  height: 3px;
+  background-image: url('./images/outer_border_tail.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.horizontal-line {
+  /* display: inline-block; */
+  display: table;
+  margin-top: 8px;
+  margin-bottom: 34px;
+}
+
+.horizontal-line-head {
+  display: table-cell;
+  width: 1px;
+  height: 2px;
+  background-image: url('./images/horizontal-line-head.png');
+}
+
+.horizontal-line-body {
+  display: table-cell;
+  width: 669px;
+  height: 2px;
+  background-repeat: repeat-x;
+  background-image: url('./images/horizontal-line-body.png');
+}
+
+.horizontal-line-tail {
+  display: table-cell;
+  width: 1px;
+  height: 2px;
+  background-image: url('./images/horizontal-line-tail.png');
+}
+
+.mission-statement {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.8px;
+  color: #9b9b9b;
+}
+
+.innerbox {
+}
+
+.innerbox_head {
+  background-image: url('./images/윤리규범/orange-horizontal-line.png');
+  width: 670px;
+  height: 3px;
+  background-position: center;
+}
+
+.innerbox_body {
+  margin: 0 auto;
+}
+
+button {
+  color: white;
+  text-decoration: none;
+  width: 135px;
+  height: 29px;
+  border: none;
+}
+
+.rule-of-ethics-page {
+  background-color: #c1c1c1;
+}
+
+.practice-guideline {
+  background-color: #ff9500;
+}
+
+.dotted-horizontal-line {
+  background-image: url('./images/dotted-horizontal-line.png');
+  background-position: center;
+  width: 625px;
+  height: 1px;
+  /* background-repeat: repeat-x; */
+  margin: 0 auto;
+}

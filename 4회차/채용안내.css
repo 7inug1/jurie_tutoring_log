@@ -1,9 +1,13 @@
+/* !: 결과물과 동일하게 하기 위해 임의로 바꾼 부분 */
+
 @import './reset.css';
 
 @font-face {
   font-family: 'ydiy330';
   src: url('./font/ydiygo330/YDIYGO330.woff2') format('woff2'),
     url('./font/ydiygo330/YDIYGO330.woff') format('woff');
+  font-family: 'FuturaBT';
+  src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
 }
 
 :root {
@@ -48,6 +52,58 @@ body {
   background-position: center;
 }
 
+.horizontal-line {
+  /* display: inline-block; */
+  display: table;
+  margin-top: 4px;
+  margin-bottom: 30px;
+}
+
+.horizontal-line-head {
+  display: table-cell;
+  width: 1px;
+  height: 2px;
+  background-image: url('./images/horizontal-line-head.png');
+}
+
+.horizontal-line-body {
+  display: table-cell;
+  width: 669px;
+  height: 2px;
+  background-repeat: repeat-x;
+  background-image: url('./images/horizontal-line-body.png');
+}
+
+.horizontal-line-tail {
+  display: table-cell;
+  width: 1px;
+  height: 2px;
+  background-image: url('./images/horizontal-line-tail.png');
+}
+
+.horizontal-line_second {
+  padding-left: 28px;
+}
+
+.horizontal-line-head_second {
+  width: 1px;
+  height: 2px;
+  background-image: url('./images/horizontal-line-head.png');
+}
+
+.horizontal-line-body_second {
+  width: 608px;
+  height: 2px;
+  background-repeat: repeat-x;
+  background-image: url('./images/horizontal-line-body.png');
+}
+
+.horizontal-line-tail_second {
+  width: 1px;
+  height: 2px;
+  background-image: url('./images/horizontal-line-tail.png');
+}
+
 .innerbox {
   margin: 0 auto;
   width: 670px;
@@ -55,14 +111,14 @@ body {
 }
 
 .innerbox_body {
-  background-image: url('./images/inner_box_body.png');
+  background-image: url('./images/채용안내/inner_box_body.png');
   background-repeat: repeat-y;
   background-position: center;
   height: 437px;
 }
 
 .innerbox_headtail {
-  background-image: url('./images/inner_box_headtail.png');
+  background-image: url('./images/채용안내/inner_box_headtail.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 670px;
@@ -73,16 +129,91 @@ h1 {
   font-size: 20px;
   color: var(--black);
   display: inline;
+  line-height: 18.58px;
+  letter-spacing: -0.4px;
+}
+
+nav {
+  font-size: 11px;
+  letter-spacing: -0.4px;
+  font-family: '돋움', Dotum;
+  color: #c8c8c8;
+  float: right;
+  position: relative;
+}
+
+.nav_specific {
+  color: var(--orange);
+}
+
+.nav_arrow {
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  background-image: url('./images/nav_arrow.png');
 }
 
 h2 {
   color: var(--orange);
   font-size: 18px;
+  margin-left: 28px;
 }
 
 strong {
+  font-stretch: semi-expanded;
+  display: inline-block;
   font-size: 19px;
   color: var(--black);
+  letter-spacing: -0.4px;
+}
+
+.employment-process {
+  display: table;
+  text-align: center;
+  margin: 0 auto;
+  /* margin-top: 0.9375rem; */
+  /* border-spacing: 15px 5px; */
+}
+
+.item {
+  display: inline-block;
+  width: 109px;
+  height: 45px;
+  border: 3px solid #dfdfdf;
+  color: var(--gray);
+  font-size: 0;
+  display: table-cell;
+  /* text-align: center; */
+  vertical-align: middle;
+  border-spacing: 8px;
+}
+
+.box-arrow {
+  /* display: inline; */
+  background-image: url('./images/채용안내/box-arrow.png');
+  width: 9px;
+  height: 12px;
+  background-repeat: none;
+  position: relative;
+  top: 16.5px;
+  left: -3px;
+}
+
+.item:nth-of-type(1) {
+}
+
+.item-number {
+  font-family: 'FuturaBT', sans-serif;
+  display: inline;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+}
+
+.item-name {
+  display: inline;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.8px;
 }
 
 section,
@@ -90,14 +221,24 @@ aside {
   color: var(--gray);
 }
 
-.section_one,
-.section_two,
-.section_three {
+aside {
+  font-size: 13px;
+  line-heigh: 18.58px;
+  letter-spacing: -0.8px;
+}
+
+.logo-container,
+.position-container,
+.bottom-container {
   /* border: 1px solid black; */
   /* display: inline; */
 }
 
-.section_one {
+.top-container {
+  height: 308px;
+}
+
+.logo-container {
   float: left;
   display: inline;
   width: 276px;
@@ -113,18 +254,19 @@ aside {
 }
 
 .section_one_paragraph {
-  width: 215px;
+  /* width: 200px; */
   /* height: 52px; */
   margin-top: 19px;
   padding-left: 48px;
   /* padding-right: 40px; */
+  font-size: 15px;
+  line-height: 19px;
   letter-spacing: -0.8px;
-  line-height: 1.3;
-  font-kerning: auto;
+  /* font-kerning: auto; */
 }
 
 .vertical_line {
-  background-image: url('./images/vertical_line.png');
+  background-image: url('./images/채용안내/vertical_line.png');
   display: inline-block;
   /* position: absolute; */
   /* margin-left: 276px; */
@@ -140,7 +282,7 @@ h3 {
   font-size: 15px;
   color: var(--orange);
 }
-.section_two {
+.position-container {
   display: inline;
   float: right;
   width: 280px;
@@ -149,44 +291,80 @@ h3 {
   /* padding-left: 27px; */
   padding-right: 79px;
   /* ? */
-  line-height: 17px;
 }
 
-.section_two p {
+.position-container h3 {
+  font-size: 15px;
+}
+
+.position-container p {
+  width: 310px; /*!*/
   font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.8px;
 }
 
-.section_two_first_heading {
-  margin-bottom: 7px;
+.position-container p:nth-of-type(3) {
+  margin-bottom: 9px;
 }
 
-.section_two_second_heading {
+.position-container_first_heading {
+  margin-bottom: 9px;
+}
+
+.position-container_second_heading {
   margin-top: 30px;
   margin-bottom: 7px;
 }
 
-.section_two_third_heading {
+.position-container_third_heading {
   margin-top: 30px;
   margin-bottom: 7px;
+}
+
+.button {
+  /* margin-top: 9px; */
+  display: inline;
+  font-size: 0;
 }
 
 .button_head {
-  background-image: url('./images/button_head.png');
-  width: 2px;
-  height: 21px;
+  display: inline-block;
+
+  background-image: url('./images/채용안내/button_head.png');
+  width: 4px;
+  height: 22px;
   background-repeat: no-repeat;
 }
 
 .button_body {
-  background-image: url('./images/button_head.png');
-  width: 20px;
-  height: 21px;
+  display: inline-block;
+
+  background-image: url('./images/채용안내/button_body.png');
+  width: 67px;
+  height: 22px;
   background-repeat: repeat-x;
+  /* font-size: 4.62px; */
+}
+
+.button_body p {
+  width: 67px;
+  height: 22px;
 }
 
 .button_tail {
-  background-image: url('./images/button_head.png');
-  width: 2px;
-  height: 21px;
+  display: inline-block;
+
+  background-image: url('./images/채용안내/button_tail.png');
+  width: 4px;
+  height: 22px;
   background-repeat: no-repeat;
+}
+
+aside {
+  margin-top: 35px;
+  margin-left: 29px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.8px;
 }

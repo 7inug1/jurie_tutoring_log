@@ -43,7 +43,6 @@ nav {
   height: 9px;
   background-image: url('./images/nav_arrow.png');
 }
-
 body {
   font-family: 'ydiy330', sans-serif;
   margin: 0 auto;
@@ -109,10 +108,11 @@ body {
   background-image: url('./images/horizontal-line-tail.png');
 }
 
-strong {
-  font-size: 19px;
-  letter-spacing: -0.4px;
-  color: var(--black);
+.mission-statement {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.8px;
+  color: #9b9b9b;
 }
 
 .innerbox {
@@ -152,56 +152,4 @@ button {
   height: 1px;
   /* background-repeat: repeat-x; */
   margin: 0 auto;
-}
-
-.button-container {
-  font-size: 0;
-}
-
-.orange-button,
-.white-button {
-  display: inline;
-}
-
-.orange-button {
-  margin-left: 192px;
-  margin-right: 4px;
-}
-
-.orange-button-head {
-  background-image: url('./images/인재상/orange-button-head.png');
-  width: 3px;
-  height: 36px;
-  display: inline-block;
-}
-.orange-button-body {
-  background-image: url('./images/인재상/orange-button-body-whole.png');
-  width: 113px;
-  height: 36px;
-  display: inline-block;
-}
-.orange-button-tail {
-  background-image: url('./images/인재상/orange-button-tail.png');
-  width: 4px;
-  height: 36px;
-  display: inline-block;
-}
-
-.white-button-head {
-  background-image: url('./images/인재상/white-button-head.png');
-  width: 3px;
-  height: 36px;
-  display: inline-block;
-}
-.white-button-body {
-  background-image: url('./images/인재상/white-button-body-whole.png');
-  width: 150px;
-  height: 36px;
-  display: inline-block;
-}
-.white-button-tail {
-  background-image: url('./images/인재상/white-button-tail.png');
-  width: 5px;
-  height: 36px;
-  display: inline-block;
 }

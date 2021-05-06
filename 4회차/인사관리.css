@@ -24,6 +24,11 @@ h1 {
   letter-spacing: -0.4px;
 }
 
+body {
+  font-family: 'ydiy330', sans-serif;
+  margin: 0 auto;
+}
+
 nav {
   font-size: 11px;
   letter-spacing: -0.4px;
@@ -43,7 +48,6 @@ nav {
   height: 9px;
   background-image: url('./images/nav_arrow.png');
 }
-
 body {
   font-family: 'ydiy330', sans-serif;
   margin: 0 auto;
@@ -52,7 +56,7 @@ body {
 .outerbox {
   margin: 0 auto;
   width: 790px;
-  height: 748px;
+  height: 865px;
   /* margin-top:10px; */
 }
 
@@ -65,11 +69,46 @@ body {
 }
 
 .outerbox_body {
-  background-image: url('./images/outer_border_body.png');
+  background-image: url(./images/outer_border_body.png);
   background-repeat: repeat-y;
   background-position: center;
   padding: 59px 59px;
   /* margin: 0 auto; */
+}
+
+.innerbox {
+  margin: 0 auto;
+  width: 670px;
+  height: 633px;
+}
+
+.innerbox_body {
+  /* margin-top: 30px; */
+  /* margin-left: 30px; */
+  background-image: url('./images/채용안내/inner_box_body.png');
+  background-repeat: repeat-y;
+  background-position: center;
+  height: 437px;
+}
+
+.innerbox_body .thumbnail:nth-child(1) {
+  background-image: url('./images/인사관리/yellow-box.png');
+  width: 65px;
+  height: 65px;
+}
+
+/* .innerbox_body .thumbnail:nth-child(2) {
+  background-image: url('./images/인사관리/orange-box.png');
+  width: 65px;
+  height: 65px;
+} */
+
+.innerbox_headtail {
+  background-image: url('./images/채용안내/inner_box_headtail.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 670px;
+  height: 3px;
 }
 
 .outerbox_tail {
@@ -80,11 +119,19 @@ body {
   background-position: center;
 }
 
+.dotted-horizontal-line {
+  background-image: url('./images/dotted-horizontal-line.png');
+  background-position: center;
+  width: 625px;
+  height: 1px;
+  margin: 0 auto;
+}
+
 .horizontal-line {
   /* display: inline-block; */
   display: table;
-  margin-top: 8px;
-  margin-bottom: 34px;
+  margin-top: 4px;
+  margin-bottom: 28px;
 }
 
 .horizontal-line-head {
@@ -109,99 +156,11 @@ body {
   background-image: url('./images/horizontal-line-tail.png');
 }
 
-strong {
-  font-size: 19px;
-  letter-spacing: -0.4px;
-  color: var(--black);
+.mission-statement p {
+  color: #d1d1d1;
 }
 
-.innerbox {
-}
-
-.innerbox_head {
-  background-image: url('./images/윤리규범/orange-horizontal-line.png');
-  width: 670px;
-  height: 3px;
-  background-position: center;
-}
-
-.innerbox_body {
-  margin: 0 auto;
-}
-
-button {
-  color: white;
-  text-decoration: none;
-  width: 135px;
-  height: 29px;
-  border: none;
-}
-
-.rule-of-ethics-page {
-  background-color: #c1c1c1;
-}
-
-.practice-guideline {
-  background-color: #ff9500;
-}
-
-.dotted-horizontal-line {
-  background-image: url('./images/dotted-horizontal-line.png');
-  background-position: center;
-  width: 625px;
-  height: 1px;
-  /* background-repeat: repeat-x; */
-  margin: 0 auto;
-}
-
-.button-container {
-  font-size: 0;
-}
-
-.orange-button,
-.white-button {
-  display: inline;
-}
-
-.orange-button {
-  margin-left: 192px;
-  margin-right: 4px;
-}
-
-.orange-button-head {
-  background-image: url('./images/인재상/orange-button-head.png');
-  width: 3px;
-  height: 36px;
-  display: inline-block;
-}
-.orange-button-body {
-  background-image: url('./images/인재상/orange-button-body-whole.png');
-  width: 113px;
-  height: 36px;
-  display: inline-block;
-}
-.orange-button-tail {
-  background-image: url('./images/인재상/orange-button-tail.png');
-  width: 4px;
-  height: 36px;
-  display: inline-block;
-}
-
-.white-button-head {
-  background-image: url('./images/인재상/white-button-head.png');
-  width: 3px;
-  height: 36px;
-  display: inline-block;
-}
-.white-button-body {
-  background-image: url('./images/인재상/white-button-body-whole.png');
-  width: 150px;
-  height: 36px;
-  display: inline-block;
-}
-.white-button-tail {
-  background-image: url('./images/인재상/white-button-tail.png');
-  width: 5px;
-  height: 36px;
-  display: inline-block;
+.mission-statement strong {
+  color: var(--orange);
+  line-height: 24px;
 }
