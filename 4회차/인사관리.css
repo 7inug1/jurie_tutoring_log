@@ -88,14 +88,68 @@ body {
   background-image: url('./images/채용안내/inner_box_body.png');
   background-repeat: repeat-y;
   background-position: center;
-  height: 437px;
+  /* width: 670px; */
+  height: 633px;
 }
 
-.innerbox_body .thumbnail:nth-child(1) {
+.section {
+  display: table;
+}
+
+.section:nth-of-type(n) .thumbnail {
+  width: 65px;
+  height: 65px;
+  margin-right: 22px;
+}
+
+.innerbox_body > div:nth-of-type(1) > .thumbnail {
+  margin-top: 30px;
+}
+
+.innerbox_body > div:nth-of-type(1) > .thumbnail,
+.innerbox_body > div:nth-of-type(5) > .thumbnail {
+  background-image: url('./images/인사관리/yellow-box.png');
+}
+
+.innerbox_body > div:nth-of-type(3) > .thumbnail,
+.innerbox_body > div:nth-of-type(7) > .thumbnail {
+  background-image: url('./images/인사관리/orange-box.png');
+}
+
+.thumbnail {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.8px;
+  color: white;
+  text-align: center;
+  margin-left: 34px;
+  /* vertical-align: middle; */
+}
+
+.thumbnail-text {
+  position: relative;
+  top: 20%;
+}
+
+.description {
+  display: table-cell;
+  font-size: 11px;
+  line-height: 18px;
+  font-family: 'dotum', sans-serif;
+  color: #9b9b9b;
+}
+
+/* .section:nth-child(3) .thumbnail {
   background-image: url('./images/인사관리/yellow-box.png');
   width: 65px;
   height: 65px;
-}
+} */
+
+/* .section:nth-child(3) .thumbnail {
+  background-image: url('./images/인사관리/yellow-box.png');
+  width: 65px;
+  height: 65px;
+} */
 
 /* .innerbox_body .thumbnail:nth-child(2) {
   background-image: url('./images/인사관리/orange-box.png');
@@ -125,6 +179,21 @@ body {
   width: 625px;
   height: 1px;
   margin: 0 auto;
+}
+
+.innerbox_body > div:nth-of-type(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.innerbox_body > div:nth-of-type(4) {
+  margin-top: 20px;
+  margin-bottom: 29px;
+}
+
+.innerbox_body > div:nth-of-type(6) {
+  margin-top: 45px;
+  margin-bottom: 30px;
 }
 
 .horizontal-line {

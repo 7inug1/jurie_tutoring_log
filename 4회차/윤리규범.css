@@ -8,6 +8,9 @@
     url('./font/ydiygo330/YDIYGO330.woff') format('woff');
   font-family: 'FuturaBT';
   src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
+  font-family: 'ydiywebdotum';
+  src: url('./font/ydiywebdotum/YDIWebDotum.woff2') format('woff2'),
+    url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
 }
 
 :root {
@@ -117,6 +120,7 @@ body {
 }
 
 .innerbox {
+  margin: 0 auto;
 }
 
 .innerbox_head {
@@ -127,7 +131,23 @@ body {
 }
 
 .innerbox_body {
-  margin: 0 auto;
+  background-image: url('./images/윤리규범/inner_box_body.png');
+  width: 670px;
+  height: 772px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.innerbox_tail {
+  background-image: url('./images/윤리규범/inner_box_headtail.png');
+  width: 670px;
+  height: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-container {
+  font-size: 0;
 }
 
 button {
@@ -136,6 +156,11 @@ button {
   width: 135px;
   height: 29px;
   border: none;
+  cursor: pointer;
+}
+
+button:first-of-type {
+  margin-right: 1px;
 }
 
 .rule-of-ethics-page {
@@ -151,6 +176,120 @@ button {
   background-position: center;
   width: 625px;
   height: 1px;
-  /* background-repeat: repeat-x; */
-  margin: 0 auto;
+}
+
+.section-one > div:nth-of-type(2) {
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.section-one > div:nth-of-type(4) {
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+
+.section-one > div:nth-of-type(5) {
+  margin-bottom: 18px;
+  margin-top: 8px;
+}
+
+ol {
+  /* display: table; */
+}
+
+li {
+  display: inline;
+}
+
+ol:first-of-type {
+  background-color: #f4f4f4;
+  width: 622px;
+  height: 41px;
+}
+
+ol:first-of-type li {
+  padding-top: 15px;
+}
+
+ol:first-of-type li:first-of-type {
+  padding-left: 20px;
+  /* padding-top: 15px; */
+}
+
+ol:nth-of-type(2) {
+  background-color: #f4f4f4;
+  width: 622px;
+  height: 73px;
+}
+
+.list-numbering {
+  font-size: 14px;
+  letter-spacing: -1.6px;
+  font-family: 'FuturaBT';
+  color: var(--orange);
+  font-weight: 800; /*!*/
+}
+
+.list-item {
+  font-size: 14px;
+  letter-spacing: -0.8px;
+  color: var(--gray);
+}
+
+.section-one {
+  padding-left: 21px;
+  padding-top: 21px;
+}
+
+.section-one > ul:nth-child(1) {
+  background-color: #f4f4f4;
+  width: 622px;
+  height: 41px;
+}
+
+.section-one > ul:nth-child(2) {
+  background-color: #f4f4f4;
+  width: 622px;
+  height: 73px;
+}
+
+.section-two {
+  padding-left: 21px;
+  /* padding-top: 2 1px; */
+  font-family: 'ydiywebdotum';
+  font-size: 11px;
+  line-height: 16px;
+  color: #949494;
+}
+
+.section-one > .title {
+  font-size: 15px;
+  line-height: 18.58px;
+  letter-spacing: -0.8px;
+  color: var(--gray);
+}
+
+.section-two .title,
+.sub-list-container {
+  margin-bottom: 22px;
+}
+
+.section-two .title {
+  font-weight: bolder; /*!*/
+}
+
+.sub-list-container {
+  margin-left: 7px;
+}
+
+.sub-sub-list {
+}
+
+.main-list {
+  color: #ff9501;
+}
+
+.main-list,
+.mid-list {
+  font-weight: bolder;
 }
