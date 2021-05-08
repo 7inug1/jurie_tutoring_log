@@ -8,6 +8,9 @@
     url('./font/ydiygo330/YDIYGO330.woff') format('woff');
   font-family: 'FuturaBT';
   src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
+  font-family: 'ydiywebdotum';
+  src: url('./font/ydiywebdotum/YDIWebDotum.woff2') format('woff2'),
+    url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
 }
 
 :root {
@@ -124,6 +127,7 @@ nav {
   width: 670px;
   height: 3px;
   background-position: center;
+  background-repeat: repeat-y;
 }
 
 .innerbox_body {
@@ -152,4 +156,247 @@ button {
   width: 625px;
   height: 1px;
   margin: 0 auto;
+  margin-top: 8px;
+  /* margin-bottom: 20px; */
+}
+
+.progress {
+  width: 670px;
+  height: 79px;
+  background-image: url('./images/회원가입/progress_non-related.png');
+}
+
+.orange-arrow {
+  background-image: url('./images/회원가입/progress-main_orange-arrow.png');
+  width: 5px;
+  height: 8px;
+  position: absolute;
+  margin-left: 333px;
+  margin-top: 34px;
+}
+
+.progress {
+  margin-bottom: 43px;
+}
+
+.progress-main {
+  width: 164px;
+  height: 79px;
+  background-color: #ff9501;
+  position: absolute;
+  margin-left: 169px;
+  /* padding-top: 22px; */
+  display: inline;
+  vertical-align: middle;
+}
+
+.white-bar {
+  width: 16px;
+  height: 4px;
+  background-image: url('./images/회원가입/white-bar.png');
+  position: relative;
+  top: 37.5px;
+}
+
+.numbering {
+  font-size: 47px;
+  color: white;
+  /* font-family: 'FuturaBT'; */ /*! FuturaBT가 유료*/
+  font-weight: bold;
+  letter-spacing: -0.4px;
+  padding-left: 23px;
+  padding-top: 22px;
+  display: inline;
+  position: relative;
+  top: 15%;
+}
+
+.item {
+  display: inline;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 18.58px;
+  letter-spacing: -0.8px;
+  color: white;
+  position: relative;
+}
+
+.innerbox {
+  margin: 0 auto;
+  width: 670px;
+  height: 271px;
+  margin-bottom: 23px;
+}
+
+.innerbox_head {
+  width: 670px;
+  height: 1px;
+  background-image: url('./images/회원가입/innerbox_head.png');
+  /* background-position: center; */
+}
+.innerbox_body {
+  width: 670px;
+  height: 245px;
+  background-image: url('./images/회원가입/innerbox_body.png');
+  /* background-position: center; */
+}
+.innerbox_tail {
+  width: 670px;
+  height: 25px;
+  background-image: url('./images/회원가입/innerbox_tail.png');
+  /* background-position: center; */
+}
+
+.title,
+.contents {
+  width: 625px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 15px;
+  letter-spacing: -0.8px;
+  color: var(--orange);
+  padding-top: 22px;
+}
+
+.contents {
+  font-size: 11px;
+  line-height: 18px;
+  font-family: 'YDIWebDotum';
+  color: #949494;
+  max-height: 170px; /*! 원래 190인데 margin-top||padding-top: 20px 주면 밀려서 줄이게 됨*/
+  overflow-y: scroll;
+  padding-top: 20px;
+}
+
+.checkbox-container {
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  /* position: relative; */
+}
+
+input,
+label {
+  /* position: relative;
+  top: 25%; */
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+}
+
+input {
+  float: left;
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  margin: 0;
+  margin-right: 6px;
+  /* padding-top: 2px; */
+  /* line-height: 25px; */
+  position: relative;
+  top: 35%;
+}
+
+label {
+  float: right;
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  position: relative;
+  top: 25%;
+  /* left: 50%; */
+  font-size: 11px;
+  font-family: 'YDIWebDotum';
+  color: #949494;
+  padding-right: 12px;
+}
+
+button {
+  color: white;
+  text-decoration: none;
+  width: 135px;
+  height: 29px;
+  border: none;
+}
+
+.button-container {
+  font-size: 0;
+  margin: 0 auto;
+  height: 36px;
+}
+
+.orange-button,
+.white-button {
+  display: inline-block;
+  height: 36px;
+}
+
+.orange-button {
+  margin-left: 251px;
+  margin-right: 12px;
+}
+
+.orange-button-head {
+  background-image: url('./images/회원가입/orange-button_head.png');
+  width: 3px;
+  height: 36px;
+  display: inline-block;
+}
+.orange-button-body {
+  background-image: url('./images/회원가입/orange-button_body.png');
+  width: 72px;
+  height: 36px;
+  display: inline-block;
+  letter-spacing: -0.8px;
+  color: white;
+  padding-left: 16px;
+}
+
+.orange-button-body > span {
+  font-size: 14px;
+  position: relative;
+  top: 30%;
+}
+.orange-button-icon {
+  background-image: url('./images/회원가입/orange-button_icon.png');
+  width: 15px;
+  height: 14px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  padding-right: 6px;
+}
+
+.orange-button-tail {
+  background-image: url('./images/회원가입/orange-button_tail.png');
+  width: 4px;
+  height: 36px;
+  display: inline-block;
+}
+
+.white-button-head {
+  background-image: url('./images/회원가입/white-button_head.png');
+  width: 3px;
+  height: 36px;
+  display: inline-block;
+}
+.white-button-body {
+  background-image: url('./images/회원가입/white-button_body.png');
+  width: 72px;
+  height: 36px;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -1.2px;
+  color: #a0a0a0;
+}
+
+.white-button-body > span {
+  padding-left: 24px;
+  position: relative;
+  top: 30%;
+}
+
+.white-button-tail {
+  background-image: url('./images/회원가입/white-button_tail.png');
+  width: 4px;
+  height: 36px;
+  display: inline-block;
+  /* background-repeat: none; */
 }
