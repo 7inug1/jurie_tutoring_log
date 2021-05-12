@@ -37,7 +37,7 @@ body {
 }
 
 .outerbox_body {
-  background-image: url(./images/outer_border_body.png);
+  background-image: url('./images/outer_border_body.png');
   background-repeat: repeat-y;
   background-position: center;
   padding: 59px 59px;
