@@ -11,7 +11,6 @@
 body {
   font-family: 'ydiy330', sans-serif;
   margin: 0 auto;
-  /* margin-top: 20px; */
 }
 
 h1 {
@@ -29,7 +28,6 @@ h1 {
 
   border-bottom: 1px solid #efefef;
   width: 645px;
-  margin-bottom: 30px;
   padding-bottom: 4px;
 }
 
@@ -80,10 +78,12 @@ h1 {
   background-image: url('./images/outer_border_body.png');
   margin: 0 auto;
   width: 790px;
+  background-position: center;
   /* padding: 59px; */
 }
 
 .outerbox_head {
+  margin: 0 auto;
   width: 790px;
   height: 3px;
   background-image: url('./images/outer_border_head.png');
@@ -93,7 +93,74 @@ h1 {
   margin-top: 10px;
 }
 
+.outerbox_tail {
+  margin: 0 auto;
+  width: 790px;
+  height: 3px;
+  background-image: url('./images/outer_border_tail.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+.innerbox_body {
+  background-image: url('./images/채용안내/inner_box_body.png');
+  width: 670px;
+  margin-top: 30px;
+}
+
+.innerbox_head {
+  background-image: url('./images/채용안내/inner_box_headtail.png');
+  width: 670px;
+  height: 3px;
+  background-repeat: repeat-y;
+}
+.innerbox_tail {
+  background-image: url('./images/채용안내/inner_box_headtail.png');
+  background-repeat: no-repeat;
+  width: 670px;
+  height: 3px;
+  margin-top: 33px;
+}
+
 .contents_main {
   margin: 0 auto;
   padding: 59px;
+}
+
+h1 + .paragraph_ethics {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -1.1px;
+  color: #9b9b9b;
+}
+
+h1 + .paragraph_HR {
+  font-size: 18px;
+  line-height: 22px;
+  color: #d1d1d1;
+  letter-spacing: -3.5px;
+}
+
+h1 + .paragraph_HR strong {
+  font-size: 20px;
+  line-height: 24px;
+  color: #f7941e;
+  font-weight: bold;
+  letter-spacing: -2.5px;
+}
+
+h1 + .paragraph_registration {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+  color: #9b9b9b;
+}
+
+h1 + .paragraph_talent {
+  font-size: 19px;
+  letter-spacing: -2px;
+  color: #464646;
+  font-weight: 500;
 }
