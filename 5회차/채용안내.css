@@ -6,6 +6,24 @@ h1 + strong {
   margin-top: 30px;
 }
 
+.location {
+  font-size: 0px;
+  letter-spacing: -0.4px;
+  font-family: '돋움', Dotum;
+  color: #c8c8c8;
+  position: absolute;
+  /* 102 + 372 */
+  padding-left: 474px;
+  padding-top: 0.5%;
+}
+
+.innerbox_head {
+  background-image: url('./images/채용안내/inner_box_headtail.png');
+  width: 670px;
+  height: 3px;
+  background-repeat: repeat-y;
+}
+
 .left-section {
   display: inline-block;
   width: 276px;
