@@ -57,6 +57,7 @@ button:nth-of-type(2) {
 
 .inner-wrapper {
   width: 625px;
+  letter-spacing: -0.8px;
 }
 
 .inner-wrapper > a {
@@ -97,7 +98,7 @@ button:nth-of-type(2) {
 }
 
 .innerbox_body > :not(.innerbox_head) {
-  padding: 21px 0px 0px 21px;
+  /* padding: 21px 0px 0px 21px; */
 }
 
 li > .numbering {
@@ -112,4 +113,41 @@ li > .item {
   font-size: 14px;
   letter-spacing: -1.8px;
   color: #9b9b9b;
+}
+
+ul {
+  /* padding-left: 21px; */
+  /* padding-top: 2 1px; */
+  font-family: 'ydiywebdotum';
+  font-size: 11px;
+  line-height: 16px;
+  color: #949494;
+}
+
+.main-list {
+  color: #ff9501;
+  font-weight: bolder;
+  margin-top: 22px;
+}
+.inner-wrapper > ul > li,
+.mid-list {
+  font-weight: bolder;
+}
+
+.inner-wrapper > ul > li {
+  margin-top: 22px;
+}
+
+.mid-list {
+  margin-top: 22px;
+}
+
+.mid-list + ol,
+.main-list + ol {
+  margin-left: 9px;
+}
+
+.page-two {
+  margin: 21px 0 0 21px;
+  /* margin-left: 21px; */
 }

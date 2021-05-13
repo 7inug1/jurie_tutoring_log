@@ -183,7 +183,6 @@ strong {
   color: var(--gray);
   font-size: 0;
   display: table-cell;
-  /* text-align: center; */
   vertical-align: middle;
   border-spacing: 8px;
 }
@@ -223,7 +222,7 @@ aside {
 
 aside {
   font-size: 13px;
-  line-heigh: 18.58px;
+  line-height: 18.58px;
   letter-spacing: -0.8px;
 }
 
@@ -254,15 +253,11 @@ aside {
 }
 
 .section_one_paragraph {
-  /* width: 200px; */
-  /* height: 52px; */
   margin-top: 19px;
   padding-left: 48px;
-  /* padding-right: 40px; */
   font-size: 15px;
   line-height: 19px;
   letter-spacing: -0.8px;
-  /* font-kerning: auto; */
 }
 
 .vertical_line {
