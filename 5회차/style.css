@@ -31,6 +31,15 @@ h1 {
   padding-bottom: 4px;
 }
 
+.location {
+  font-size: 0px;
+  letter-spacing: -0.4px;
+  font-family: '돋움', Dotum;
+  color: #c8c8c8;
+  position: absolute;
+  padding-top: 0.5%;
+}
+
 .location span {
   font-size: 11px;
   padding-right: 10px;
@@ -99,7 +108,7 @@ h1 {
   background-repeat: no-repeat;
   width: 670px;
   height: 3px;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .contents_main {
@@ -107,11 +116,9 @@ h1 {
   padding: 59px;
 }
 
-h1 + .paragraph_ethics {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -1.1px;
-  color: #9b9b9b;
+h1 + strong,
+h1 + p {
+  margin-top: 30px;
 }
 
 h1 + .paragraph_HR {

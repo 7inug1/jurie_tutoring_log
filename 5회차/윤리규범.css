@@ -1,16 +1,12 @@
 h1 + p {
-  margin-top: 34px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -1.1px;
+  color: #9b9b9b;
 }
 
 .location {
-  font-size: 0px;
-  letter-spacing: -0.4px;
-  font-family: '돋움', Dotum;
-  color: #c8c8c8;
-  position: absolute;
-  /* 102 + 214 */
   padding-left: 425px;
-  padding-top: 0.5%;
 }
 
 .innerbox_head {
@@ -142,8 +138,9 @@ ul {
   margin-top: 22px;
 }
 
-.mid-list + ol,
-.main-list + ol {
+.mid-list + ol, .main-list+ol>ul
+/* , */
+/* .main-list + ol  */ {
   margin-left: 9px;
 }
 

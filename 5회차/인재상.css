@@ -1,0 +1,87 @@
+.location {
+  padding-left: 549px;
+}
+
+h1 + strong {
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -2px;
+  margin-top: 30px;
+  color: #464646;
+  display: inline-block;
+  /* font-size: 19px; */
+}
+
+dl {
+  background-image: url('./images/인재상/main-board.png');
+  height: 455px;
+  /* position: relative; */
+  margin-top: 30px;
+}
+
+dt:first-of-type {
+  position: relative;
+  left: -234px;
+  top: 38px;
+  /* top: 100px; */
+}
+
+dd:first-of-type {
+  position: relative;
+  left: -234px;
+  top: 58px;
+}
+
+dt:nth-of-type(2) {
+  position: relative;
+  left: 234px;
+  top: -78px;
+}
+
+dd:nth-of-type(2) {
+  position: relative;
+  left: 234px;
+  top: -58px;
+}
+
+dt:nth-of-type(3) {
+  position: relative;
+  left: -234px;
+  top: 54px;
+}
+
+dd:nth-of-type(3) {
+  position: relative;
+  left: -234px;
+  top: 74px;
+}
+
+dt:nth-of-type(4) {
+  position: relative;
+  left: 230px;
+  top: -62px;
+}
+
+dd:nth-of-type(4) {
+  position: relative;
+  left: 230px;
+  top: -38px;
+}
+
+dt {
+  font-size: 17.5px;
+  letter-spacing: -2px;
+  font-family: 'ydiy340';
+  color: #ff8c25;
+  font-weight: 600;
+
+  text-align: center;
+  line-height: 20px;
+}
+dd {
+  text-align: center;
+  font-size: 12.93px;
+  letter-spacing: -1.6px;
+  color: #636363;
+  line-height: 15px;
+}

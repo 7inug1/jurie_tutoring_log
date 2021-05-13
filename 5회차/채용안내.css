@@ -3,18 +3,19 @@ h1 + strong {
   display: inline-block;
   font-size: 19px;
   letter-spacing: -2px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  font-weight: 600;
 }
 
 .location {
-  font-size: 0px;
+  /* font-size: 0px;
   letter-spacing: -0.4px;
   font-family: '돋움', Dotum;
   color: #c8c8c8;
   position: absolute;
-  /* 102 + 372 */
+  padding-top: 0.5%; */
+
   padding-left: 474px;
-  padding-top: 0.5%;
 }
 
 .innerbox_head {
