@@ -13,7 +13,6 @@ h1 + p {
   background-image: url('./images/윤리규범/orange-horizontal-line.png');
   width: 670px;
   height: 3px;
-  /* background-repeat: repeat-y; */
 }
 
 .innerbox_body {
@@ -35,9 +34,6 @@ button {
   cursor: pointer;
 }
 
-button:first-of-type {
-}
-
 button:nth-of-type(2) {
   margin-left: 1px;
 }
@@ -47,8 +43,6 @@ button:nth-of-type(2) {
   background-repeat: no-repeat;
   background-color: #ff9500;
   background-position: 0% 50%;
-  /* width: 16px;
-  height: 4px; */
 }
 
 .inner-wrapper {
@@ -68,10 +62,8 @@ button:nth-of-type(2) {
   height: 24px;
   background-image: url('./images/dotted-horizontal-line.png');
   background-repeat: repeat-x;
-  /* background-position: center; */
   background-position: 0px 23px;
   position: relative;
-  /* padding-top: 15px; */
   margin-top: 22px;
 }
 .inner-wrapper > a:first-of-type {
@@ -108,10 +100,6 @@ button:nth-of-type(2) {
   padding: 3.5px 0px;
 }
 
-.innerbox_body > :not(.innerbox_head) {
-  /* padding: 21px 0px 0px 21px; */
-}
-
 li > .numbering {
   color: #ff8416;
   font-weight: bolder;
@@ -127,8 +115,6 @@ li > .item {
 }
 
 ul {
-  /* padding-left: 21px; */
-  /* padding-top: 2 1px; */
   font-family: 'ydiywebdotum';
   font-size: 11px;
   line-height: 16px;
@@ -153,13 +139,11 @@ ul {
   margin-top: 22px;
 }
 
-.mid-list + ol, .main-list+ol>ul
-/* , */
-/* .main-list + ol  */ {
+.mid-list + ol,
+.main-list + ol > ul {
   margin-left: 9px;
 }
 
 .page-two {
   margin: 21px 0 0 21px;
-  /* margin-left: 21px; */
 }

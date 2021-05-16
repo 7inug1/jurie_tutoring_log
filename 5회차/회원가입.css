@@ -3,10 +3,6 @@
 }
 
 h1 + p {
-  /* background-image: url('./images/회원가입/progress.png');
-  background-repeat: no-repeat;
-  background-position: 0px 62px;
-  height: 200px; */
   font-size: 15px;
   line-height: 24.29px;
   letter-spacing: -0.8px;
@@ -19,9 +15,7 @@ img {
 
 .innerbox-head {
   background-image: url('./images/회원가입/innerbox_head.png');
-  /* width: 670px; */
   height: 3px;
-  /* background-position: -10px 0px; */
   position: relative;
   top: -21px;
 }
@@ -38,16 +32,10 @@ legend {
   font-size: 15px;
   letter-spacing: -0.8px;
   color: #f7941e;
-  /* padding-top: 22px; */
-
   background-image: url('./images/dotted-horizontal-line.png');
   background-repeat: repeat-x;
   background-position: 0px 22px;
   width: 625px;
-  /* height: 1px; */
-
-  /* border: 1px solid black; */
-
   margin-left: 24px;
   position: relative;
   top: 42px;
@@ -107,8 +95,6 @@ button:first-of-type > .button-tail {
   height: 36px;
 }
 
-/* ---------------------------- */
-
 button:nth-of-type(2) {
   margin-left: -8px;
 }
@@ -151,7 +137,6 @@ button:first-of-type > .button-body > .button-text {
 }
 
 button:nth-of-type(2) > .button-body > .button-text {
-  /* padding-left: 27px; */
   position: relative;
   top: 8px;
   color: #a0a0a0;
@@ -164,18 +149,14 @@ fieldset > div:nth-of-type(2) {
   color: #949494;
   max-height: 188px;
   overflow-y: scroll;
-  /* padding-top: 20px; */
   margin-bottom: 10px;
   margin-top: 25px;
   letter-spacing: -0.4px;
 }
 .innerbox-tail {
   background-image: url('./images/회원가입/innerbox_tail.png');
-  /* width: 670px; */
   height: 25px;
-  /* background-position: -10px 0px; */
   position: relative;
-  /* top: -21px; */
 }
 
 .checkbox {
@@ -207,6 +188,5 @@ label {
   letter-spacing: 0.8px;
   float: right;
   margin-right: 12px;
-  /* position: absolute; */
   padding-top: 8px;
 }

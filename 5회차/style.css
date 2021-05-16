@@ -10,7 +10,7 @@
 
 body {
   font-family: 'ydiy330', sans-serif;
-  /* margin: 0 auto; */
+
   margin: 20px 0;
 }
 
@@ -19,9 +19,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: 0px 3px;
   position: relative;
-  /*16 + 11*/
   padding-left: 27px;
-  /* top: 6px; */
 
   font-size: 20px;
   line-height: 22px;
@@ -64,7 +62,6 @@ h1 {
   color: #f7941e;
 }
 
-/* outerbox */
 .outerbox {
   margin: 0 auto;
 }
@@ -74,7 +71,6 @@ h1 {
   margin: 0 auto;
   width: 790px;
   background-position: center;
-  /* padding: 59px; */
 }
 
 .outerbox_head {
@@ -84,8 +80,9 @@ h1 {
   background-image: url('./images/outer_border_head.png');
   background-repeat: no-repeat;
   background-position: center;
-  /* position: absolute; */
-  /* margin-top: 20px; */
+  position: absolute;
+  padding-top: 8px;
+  top: 12px;
 }
 
 .outerbox_tail {
@@ -97,6 +94,7 @@ h1 {
   background-position: center;
   position: absolute;
   margin-bottom: 20px;
+  /* left: 20.667px; */
 }
 
 .innerbox_body {
