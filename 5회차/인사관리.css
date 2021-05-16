@@ -73,6 +73,11 @@
   /* background-position: -150px 0px; */
 }
 
+.wrapper > ul > li > span {
+  position: relative;
+  top: 13px;
+}
+
 .wrapper > ul > ul:first-of-type {
   /* margin-top: 30px; */
   /* padding: 0px 0px 0px 87px; */

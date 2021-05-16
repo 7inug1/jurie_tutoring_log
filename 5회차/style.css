@@ -10,7 +10,8 @@
 
 body {
   font-family: 'ydiy330', sans-serif;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: 20px 0;
 }
 
 h1 {
@@ -84,7 +85,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   /* position: absolute; */
-  margin-top: 10px;
+  /* margin-top: 20px; */
 }
 
 .outerbox_tail {
@@ -95,6 +96,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  margin-bottom: 20px;
 }
 
 .innerbox_body {

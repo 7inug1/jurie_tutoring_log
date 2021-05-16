@@ -85,3 +85,120 @@ dd {
   color: #636363;
   line-height: 15px;
 }
+
+button {
+  border: none;
+  font-size: 0px;
+  padding: 0;
+  background-color: white;
+}
+
+button:first-of-type {
+  /* width: 120px; */
+  color: white;
+  height: 36px;
+
+  /* background-color: #ff8c25; */
+}
+
+button:first-of-type > span:first-of-type {
+  background-image: url('./images/인재상/orange-button-head.png');
+  display: inline-block;
+  width: 3px;
+  height: 36px;
+  /* position: relative; */
+}
+
+button:first-of-type > span:nth-of-type(2) {
+  background-image: url('./images/인재상/orange-button-body.png');
+  background-repeat: repeat-x;
+  display: inline-block;
+  width: 113px;
+  height: 36px;
+  position: relative;
+  top: -20px;
+  font-size: 15px;
+}
+
+button:first-of-type > span:nth-of-type(3) {
+  background-image: url('./images/인재상/orange-button-tail.png');
+  display: inline-block;
+  width: 4px;
+  height: 36px;
+}
+
+button:first-of-type > span:nth-of-type(4) {
+  background-image: url('./images/인재상/orange-button-icon.png');
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  position: relative;
+  left: -104px;
+  top: -11px;
+}
+/* ----------------------------------------------------------------- */
+button:nth-of-type(2) {
+  margin-left: -12px;
+  /* width: 158px; */
+  color: #ff8c25;
+  /* background-color: white; */
+  height: 36px;
+}
+
+button:nth-of-type(2) > span:first-of-type {
+  background-image: url('./images/인재상/white-button-head.png');
+  display: inline-block;
+  width: 3px;
+  height: 36px;
+}
+
+button:nth-of-type(2) > span:nth-of-type(2) {
+  background-image: url('./images/인재상/white-button-body.png');
+  background-repeat: repeat-x;
+  display: inline-block;
+  width: 150px;
+  height: 36px;
+  /* position: absolute; */
+  font-size: 15px;
+  position: relative;
+  top: -20px;
+}
+
+button:nth-of-type(2) > span:nth-of-type(3) {
+  background-image: url('./images/인재상/white-button-tail.png');
+  display: inline-block;
+  width: 5px;
+  height: 36px;
+}
+
+button:nth-of-type(2) > span:nth-of-type(4) {
+  background-image: url('./images/인재상/white-button-icon.png');
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  position: relative;
+  left: -142px;
+  top: -11px;
+}
+
+.button-container {
+  margin-left: 198px;
+  font-size: 0;
+  margin-top: 27px;
+}
+
+.button-text {
+  letter-spacing: -1.6px;
+}
+
+.button-container > button:first-of-type > .button-body > .button-text {
+  padding-left: 13px;
+  position: relative;
+  top: 8px;
+}
+
+.button-container > button:nth-of-type(2) > .button-body > .button-text {
+  padding-left: 27px;
+  position: relative;
+  top: 8px;
+}

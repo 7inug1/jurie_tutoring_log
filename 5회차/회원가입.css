@@ -1,3 +1,212 @@
 .location {
   padding-left: 590px;
 }
+
+h1 + p {
+  /* background-image: url('./images/회원가입/progress.png');
+  background-repeat: no-repeat;
+  background-position: 0px 62px;
+  height: 200px; */
+  font-size: 15px;
+  line-height: 24.29px;
+  letter-spacing: -0.8px;
+  color: #9b9b9b;
+}
+
+img {
+  margin-top: 36px;
+}
+
+.innerbox-head {
+  background-image: url('./images/회원가입/innerbox_head.png');
+  /* width: 670px; */
+  height: 3px;
+  /* background-position: -10px 0px; */
+  position: relative;
+  top: -21px;
+}
+
+fieldset {
+  background-image: url('./images/회원가입/innerbox_body.png');
+}
+
+legend:first-of-type {
+  margin-top: 21px;
+}
+
+legend {
+  font-size: 15px;
+  letter-spacing: -0.8px;
+  color: #f7941e;
+  /* padding-top: 22px; */
+
+  background-image: url('./images/dotted-horizontal-line.png');
+  background-repeat: repeat-x;
+  background-position: 0px 22px;
+  width: 625px;
+  /* height: 1px; */
+
+  /* border: 1px solid black; */
+
+  margin-left: 24px;
+  position: relative;
+  top: 42px;
+  padding-bottom: 22px;
+}
+
+legend + div {
+  width: 623px;
+  margin: 0 auto;
+}
+
+fieldset:nth-of-type(4) {
+  margin-left: 251px;
+  margin-top: 29px;
+}
+
+button {
+  border: none;
+  font-size: 0px;
+  padding: 0;
+  background-color: white;
+}
+
+button:first-of-type > .button-head {
+  background-image: url('./images/회원가입/orange-button_head.png');
+  display: inline-block;
+  width: 3px;
+  height: 36px;
+}
+
+button:first-of-type > .button-icon {
+  background-image: url('./images/인재상/orange-button-icon.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  position: relative;
+  left: -63px;
+  top: -13.5px;
+}
+
+button:first-of-type > .button-body {
+  background-image: url('./images/회원가입/orange-button_body.png');
+  background-repeat: repeat-x;
+  display: inline-block;
+  width: 72px;
+  height: 36px;
+  position: relative;
+  top: -21px;
+  font-size: 15px;
+}
+
+button:first-of-type > .button-tail {
+  background-image: url('./images/회원가입/orange-button_tail.png');
+  display: inline-block;
+  width: 4px;
+  height: 36px;
+}
+
+/* ---------------------------- */
+
+button:nth-of-type(2) {
+  margin-left: -8px;
+}
+
+button:nth-of-type(2) > .button-head {
+  background-image: url('./images/회원가입/white-button_head.png');
+  display: inline-block;
+  width: 3px;
+  height: 36px;
+}
+
+button:nth-of-type(2) > .button-body {
+  background-image: url('./images/회원가입/white-button_body.png');
+  background-repeat: repeat-x;
+  display: inline-block;
+  width: 72px;
+  height: 36px;
+  position: relative;
+  top: -21px;
+  font-size: 15px;
+}
+
+button:nth-of-type(2) > .button-tail {
+  background-image: url('./images/회원가입/white-button_tail.png');
+  display: inline-block;
+  width: 4px;
+  height: 36px;
+}
+
+.button-text {
+  letter-spacing: -1.6px;
+  font-size: 14px;
+}
+
+button:first-of-type > .button-body > .button-text {
+  padding-left: 15px;
+  position: relative;
+  top: 5px;
+  color: white;
+}
+
+button:nth-of-type(2) > .button-body > .button-text {
+  /* padding-left: 27px; */
+  position: relative;
+  top: 8px;
+  color: #a0a0a0;
+}
+
+fieldset > div:nth-of-type(2) {
+  font-size: 11px;
+  line-height: 19px;
+  font-family: 'YDIWebDotum';
+  color: #949494;
+  max-height: 188px;
+  overflow-y: scroll;
+  /* padding-top: 20px; */
+  margin-bottom: 10px;
+  margin-top: 25px;
+  letter-spacing: -0.4px;
+}
+.innerbox-tail {
+  background-image: url('./images/회원가입/innerbox_tail.png');
+  /* width: 670px; */
+  height: 25px;
+  /* background-position: -10px 0px; */
+  position: relative;
+  /* top: -21px; */
+}
+
+.checkbox {
+  top: 6px;
+  margin: 0;
+}
+
+fieldset:first-of-type > .innerbox-tail > label > .checkbox {
+  position: absolute;
+
+  padding-top: 0;
+  left: 426px;
+}
+
+fieldset:nth-of-type(2) > .innerbox-tail > label > .checkbox {
+  position: absolute;
+  left: 418px;
+}
+
+fieldset:nth-of-type(3) > .innerbox-tail > label > .checkbox {
+  position: absolute;
+  left: 360px;
+}
+
+label {
+  font-size: 11px;
+  font-family: 'YDIWebDotum';
+  color: #949494;
+  letter-spacing: 0.8px;
+  float: right;
+  margin-right: 12px;
+  /* position: absolute; */
+  padding-top: 8px;
+}
