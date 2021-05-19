@@ -206,8 +206,8 @@ body {
 
 .outerbox > div {
   background: url('./images/outer_border_tail.png') no-repeat;
-  width: 790px;
-  height: 3px;
+  /* width: 790px;
+  height: 3px; */
 }
 
 .outerbox > div > div {
@@ -237,7 +237,15 @@ h1 + strong {
   color: #464646;
   font-size: 19px;
   font-weight: 600;
-  letter-spacing: -2px;
+  letter-spacing: -1.9px;
+}
+
+h1 + strong.statement_employment {
+  /* letter-spacing: -3.7px; */
+}
+
+h1 + strong.statement_talent {
+  /* letter-spacing: -2.2px; */
 }
 
 h1 + p {
@@ -302,6 +310,20 @@ h1 + p.paragraph_HR > strong {
   margin-top: 30px;
 }
 
+.innerbox {
+  background: url('./images/채용안내/inner_box_headtail.png') no-repeat;
+}
+
+.innerbox > div {
+  background: url('./images/채용안내/inner_box_headtail.png') no-repeat;
+}
+
+.innerbox > div > div {
+  border-left: 3px solid #e3e3e3;
+  border-right: 3px solid #e3e3e3;
+  padding: 35px 28px;
+}
+
 /* 
 #### ##    ## ########  ######## ##     ##       ##   
  ##  ###   ## ##     ## ##        ##   ##      ####   
@@ -311,6 +333,152 @@ h1 + p.paragraph_HR > strong {
  ##  ##   ### ##     ## ##        ##   ##        ##   
 #### ##    ## ########  ######## ##     ##     ###### 
 */
+
+.introduction {
+  min-height: 114px;
+  background: url('./images/채용안내/haitai-logo.png') no-repeat;
+}
+
+.introduction > p {
+  width: 188px;
+  color: #9b9b9b;
+  line-height: 20px;
+  font-size: 15px;
+  letter-spacing: -2.5px;
+}
+
+.position > dl > dt {
+  color: #f7941e;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.position > dl > dd {
+  margin-top: 8px;
+  line-height: 15px;
+  color: #9b9b9b;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -1.7px;
+}
+
+.position > button.job-apply-button {
+  display: inline-block;
+  background: url('./images/채용안내/button_head.png') no-repeat;
+  border: none;
+  color: white;
+  padding-left: 4px;
+  /* height: 22px; */
+  /* font-size: 0; */
+  /* width: 77px; */
+  background-color: white;
+  /* padding: 0; */
+  vertical-align: top;
+}
+
+.position > button.job-apply-button > span {
+  display: inline-block;
+  background: url('./images/채용안내/button_tail.png') no-repeat;
+  padding-right: 4px;
+  vertical-align: top;
+}
+
+.position > button.job-apply-button > span > span {
+  display: inline-block;
+  background: url('./images/채용안내/button_body.png');
+  vertical-align: top;
+  height: 22px;
+}
+
+.process > .title {
+  padding-bottom: 9px;
+  width: 610px;
+  color: #f7941e;
+  font-size: 18px;
+  font-weight: normal;
+  border-bottom: 1px solid #efefef;
+}
+
+.process > .contents {
+  margin-top: 14px;
+}
+
+.process > .contents > ol {
+  font-size: 0;
+}
+
+.process > .contents > ol > li {
+  display: inline-block;
+  /* padding-left: 4px; */
+  width: 103px;
+  height: 39px;
+  margin-right: 9px;
+  line-height: 2;
+  color: #9b9b9b;
+  border: 3px solid #dfdfdf;
+
+  font-size: 16px;
+  /* line-height: 22px; */
+  letter-spacing: -2.2px;
+  text-align: center;
+}
+
+.process > .contents > ol > li:before {
+  margin-right: 4px;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+}
+
+.process > .contents > ol > li:first-of-type::before {
+  content: '01';
+}
+.process > .contents > ol > li:nth-of-type(2)::before {
+  content: '02';
+}
+.process > .contents > ol > li:nth-of-type(3)::before {
+  content: '03';
+}
+.process > .contents > ol > li:nth-of-type(4)::before {
+  content: '04';
+}
+.process > .contents > ol > li:nth-of-type(5)::before {
+  content: '05';
+}
+.process > .contents > ol > li:not(:last-of-type):after {
+  display: inline-block;
+  position: relative;
+  content: '';
+  background: url('./images/채용안내/box-arrow.png') no-repeat;
+  width: 9px;
+  height: 12px;
+
+  left: 17px;
+  /* right: 0px; */
+
+  /* top: 13.5px; */
+}
+.process > .contents > ol > li:first-of-type::after {
+  /* content: '01'; */
+}
+
+.footer {
+  color: #9b9b9b;
+  font-size: 13px;
+  line-height: 18.58px;
+  letter-spacing: -0.8px;
+  font-weight: normal;
+  margin-top: 35px;
+  margin-left: 29px;
+}
+
+.footer > ul > li::before {
+  display: inline-block;
+  content: '';
+  margin: 0px 5px 5px 0px;
+  width: 4px;
+  height: 2px;
+  background: url('./images/채용안내/dash.png') no-repeat;
+}
 
 /* 
 #### ##    ## ########  ######## ##     ##     #######  
