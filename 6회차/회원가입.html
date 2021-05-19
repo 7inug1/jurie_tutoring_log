@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link rel="stylesheet" href="./style.css" />
     <title>회원가입</title>
   </head>
   <body>
@@ -13,23 +13,24 @@
         <div>
           <div class="head">
             <div class="location">
-              <a href="">HOME</a>
-              <a href="">
+              <a href="#">HOME</a>
+              <a href="#">
                 <strong>회원가입</strong>
               </a>
             </div>
             <h1>회원가입</h1>
-            <p>시원함과 즐거움이 있는 해태음료에 오신 것을 환영합니다</p>
+            <!-- <sup>시원함과 즐거움이 있는 해태음료에 오신 것을 환영합니다</sup> -->
             <p>
               회원가입을 위해 아래 해태음료 이용약관, 개인정보 수집 및 이용에
               대한 안내, 취급위탁에 대한 안내를 읽고 동의해 주십시오.
             </p>
-            <h2>
-              <img src="" alt="약관동의" />
-            </h2>
+            <p>시원함과 즐거움이 있는 해태음료에 오신 것을 환영합니다</p>
           </div>
           <div class="body">
-            <form action="#" method="POST" onsubmit="return false;">
+            <h2>
+              <img src="./images/회원가입/progress.png" alt="약관동의" />
+            </h2>
+            <form action="#" method="POST" onsubmit="return false;" class="terms_of_service">
               <fieldset>
                 <legend>해태음료 사이트 이용약관</legend>
                 <div>
@@ -78,7 +79,7 @@
                     </li>
                   </ol>
                 </div>
-                <label>해태음료 사이트 이용약관에 동의합니다.<input type="checkbox"/></label>
+                <label>해태음료 사이트 이용약관에 동의합니다.<input type="checkbox" id="checkbox1" name="checkbox1" value="agree"/></label>
               </fieldset>
               <fieldset>
                 <legend>해태음료 개인정보취급방침</legend>
@@ -118,7 +119,7 @@
                     <li>01. 개인정보의 수집목적 및 이용목적</li>
                   </ol>
                 </div>
-                <label><input type="checkbox"/>해태음료 개인정보취급방침에 동의합니다.</label>
+                <label><input type="checkbox" id="checkbox2" name="checkbox2" value="agree"/>해태음료 개인정보취급방침에 동의합니다.</label>
               </fieldset>
               <fieldset>
                 <legend>해태음료 사이트 이용약관</legend>
@@ -168,7 +169,7 @@
                     </li>
                   </ol>
                 </p>
-                <label>해태음료 사이트 이용약관에 동의합니다.<input type="checkbox" /></label>
+                <label>해태음료 사이트 이용약관에 동의합니다.<input type="checkbox" id="checkbox3" name="checkbox3" value="agree"/></label>
               </fieldset>
               <fieldset>
                 <input type="submit" value="확인">

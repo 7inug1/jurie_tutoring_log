@@ -11,7 +11,8 @@
 
 ## 2) 깃
 
-- [ ] branch 나눠 작업 진행하기
+- [ ] branch 나눠 작업 진행하기<br>
+      `https://stackoverflow.com/a/33484321`
 - [ ] issue 사용하기
 
 ## 3) 포토샵
@@ -40,12 +41,37 @@
 - [ ] `<dl>`, `<dt>`, `<dd>` 사이엔 다른 태그가 올 수 없다
 - [ ] :first-child를 사용하고 싶을 때 사용하는 게 맞는지 생각해보자. `+` selector로 대체하는 게 맞을 수도 있다
 - [ ] float을 주면 inline-block과 비슷하게 되지만 동일하게 되진 않는다
+
+```
+Q. float은 언제 사용하는가?
+A.
+1)float은 layout을 위해 사용하는 것이 아니라, 한 element를 한 쪽(오른쪽 혹은 왼쪽)으로 배치하고, 주변의 inline element 및 텍스트가 float element를 둘러싸게 만드는 역할을 함. float 은 블록 레이아웃의 사용을 뜻하기 때문에, 일부 경우에 지정한 display 값을 수정합니다.
+```
+
 - [ ] tag 간 상성 이해하기
 
 ```
-A. block 태그 안에 또 다른 block 태그가 올 수 없다
+Q. Block, inline, inline-block 차이
+A. block 태그 안에 또 다른 block 태그가 올 수 없다.
 
-https://www.w3schools.com/html/html_blocks.asp
+1. Block:
+- always takes up the full width available
+- has a top and a bottom margin
+ex)article, canvas, div, dl, dt, dd, footer, h1~h6, header, ol, ul, li, nav, p, section, table
+
+2. Inline:
+- does not start on a new line.
+- inline element only takes up as much width as necessary
+- doesn't have a top and a bottom margin
+ex)a, button, br, img, input, span, strong, textarea
+https://www.w3schools.com/html/html_blocks.
+
+3. Inline-block:
+- allows to set a width and height on the element unlike inline element
+- does not add a line-break after the element
+- 따라서 inline인데 block처럼 width와 height을 지정할 수 있는 것이라고 보면 됨
+
+ex)According the default style sheet for HTML in the CSS 2.1 specification, the elements that have display: inline-block by default are: button, input, select, and textarea. Browsers use such settings, except that in Firefox, this only applies to button and select.
 ```
 
 - [ ] 대제목에만 <`h1`> 주고 나머지에 `<h2>`주기
@@ -71,17 +97,52 @@ A. <button>의 type 기본값은 "submit"이다.
 - [ ] height은 가급적 auto로 세팅
 - [ ] default 스타일링에서 시작하여 필요한 텍스트 적은 이후 padding으로 조정하기
 - [ ] 최상위 태그에만 width 정하고 나머지 layout 관련한 것엔 정하지 말기
-- [ ] CSS 변수(var) 사용하지 않기 (CSS3)
+- [ ] CSS 변수(var) 사용 자제하기
+      `https://medium.com/dev-channel/css-variables-no-really-76f8c91bd34e`
 
 ### 프로퍼티 사용법
 
 #### 일반
 
 - [ ] height과 width 정해두고 시작하지 말기
+
+```
+Q. Using '%' and 'auto' on width and height
+A.
+1. Width
+- margin-left/right을 주며 어떻게 작동하는지 볼 수 있음
+
+1)%
+- side-scrolling이 생김
+
+2)auto (default)
+- side-scrolling이 안생김
+
+2. Height
+- try not to set a height when you don't need to set a height
+- or use 'min-width'
+
+1)%
+- 부모의 height에 비례한 %를 나타냄
+
+2)auto
+- 안에 contents가 생길수록 element가 자동적으로 늘어남 (주로 우리가 원하는 행동)
+
+결론:
+-least-favourable: height 지정 (height이 줄어들고 늘어날 여지가 없음)
+-somewhat-favourable: min-height 지정 (height이 적어도 최소 정도를 유지하고 늘어날 여지가 있음)
+-most-favourable: auto 지정 (contents 양에 따라 알아서 조정)
+```
+
 - [ ] 상하 배치 요소들을 좌우 배치 해야할 때: 하나를 absolute로 옮기고, 다른 하나를 padding/margin(?)으로 옮긴다
 - [ ] horizontal scaling은 적용 안해도 되고 letter-spacing으로 이용하자
 
 - [ ] `<a>`를 가장 밖에 감싸기. 그렇지 않을 때 어떤지 보기
+
+```
+A. ? 해봤는데 잘 모르겠음
+```
+
 - [ ] markup을 계단 구조로 작성하여 outerbox body 안에 head와 tail 넣기.
 - [ ] h1 + background image + border bottom, .location
 - [ ] CSS 작성 예제 참고하기
@@ -117,6 +178,36 @@ A. <button>의 type 기본값은 "submit"이다.
 #### .location
 
 - [ ] .location에 position: absolute 쓰지 말고 relative 준 이후에 right 주기
+
+```
+<Position>
+1. static
+- default
+- normal flow대로 배치됨
+- top, bottom, left, right 프로퍼티에 영향받지 않음
+
+2. relative
+- positioned relative to its normal position
+- top, right, bottom, left 프로퍼티를 적용하면 normal position에서 이동하게 됨
+- Other content will not be adjusted to fit into any gap left by the element: 바로 아래에 다른 element가 있고 현재 element에 margin-top을 주어도 아래 것이 밀리거나 하지 않음. 겹치게 됨
+
+3. fixed
+- positioned relative to the viewport (meaning it always stays in the same place even if the page is scrolled)
+- top, right, bottom, left 프로퍼티로 조정 가능
+
+4. absolute
+- positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed)
+- if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling
+- positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed)
+
+5. sticky
+- positioned based on the user's scroll position
+- toggles between relative and fixed, depending on the scroll position
+- It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed)
+- Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
+<Position in parent and child>
+```
+
 - [ ] .location에도 `<a>` 달고, :before/:after로 화살표 달기
 - [ ] .location에 `<strong>`, `<a>` 사용하고 .location `<span>` + \*로 padding right(?) 주기
 
@@ -145,11 +236,26 @@ A. <button>의 type 기본값은 "submit"이다.
 
 ```
 Q. 언제 margin을 쓰고 언제 padding을 쓰는가?
+A. margin과 padding 둘 다 gap을 만들어낸다.
+
+하지만 margin은 형제 element를 밀어내며 gap을 만들어낸다.
+
+padding은 자기 자신을 키우거나, 내부의 컨텐츠 크기를 줄여 gap을 만들어낸다. element에 box-sizing: border-box를 지정하면 안의 content 사이즈를 줄여 gap을 만들어낸다.
+https://medium.com/frontendshortcut/margin-vs-padding-c1fc8ea8bfaf
 ```
 
 #### pseudo-class
 
 - [ ] :before/:after pseudo-class 공부하고 이용하기
+
+```
+- content 무조건 필요
+- 해당 element 바깥의 전, 후가 아닌 안쪽의 전, 후
+- input과 같이 content 없고 self-closing tag엔 작동 안함
+- 한 개의 before과 after만 가능
+- 예시: required field (*)
+- 예시: 툴팁
+```
 
 - [ ] 주로 사용하는 구조는 <부모>에 position: relative를 주고 <자식>에 position: absolute를 주는 것이다
 - [ ] <자식>에 position: absolute를 주는 것으로 위와 같이 행동한다 (부모의 default position이 relative)

@@ -181,10 +181,116 @@ table {
 ##    ##  ##       ##  #### ##       ##   ##   ######### ##       
 ##    ##  ##       ##   ### ##       ##    ##  ##     ## ##       
  ######   ######## ##    ## ######## ##     ## ##     ## ######## 
-
 */
-p > strong {
+
+@font-face {
+  font-family: 'ydiy330';
+  src: url('./font/ydiygo330/YDIYGO330.woff2') format('woff2'),
+    url('./font/ydiygo330/YDIYGO330.woff') format('woff');
+  font-family: 'FuturaBT';
+  src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
+}
+
+body {
+  font-family: ydiy330, 'sans-serif';
+  margin: 20px auto;
+  /* margin: 0 auto; */
+}
+
+.outerbox {
+  background: url('./images/outer_border_head.png') no-repeat;
+  width: 790px;
+  height: 3px;
+  margin: 20px 20px;
+}
+
+.outerbox > div {
+  background: url('./images/outer_border_tail.png') no-repeat;
+  width: 790px;
+  height: 3px;
+}
+
+.outerbox > div > div {
+  position: relative;
+  /* width: 784.5px; */
+  top: 3px;
+  padding: 59px;
+  border-left: 2px solid #e3e3e3;
+  border-right: 2px solid #e3e3e3;
+}
+/* .head */
+
+h1 {
+  /* display: inline-block; */
+  padding-bottom: 4px;
+  color: #464646;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  border-bottom: 1px solid #efefef;
+  background: url('./images/orange-circle.png') no-repeat;
+
+  padding-left: 26px;
+}
+
+h1 + strong {
+  /* display: inline-block; */
+  color: #464646;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+h1 + p {
+  line-height: 16px;
+  color: #9b9b9b;
+  font-size: 14px;
+  letter-spacing: -1.5px;
+}
+
+h1 + p,
+h1 + strong {
   display: block;
+  margin-top: 30px;
+}
+
+h1 + p.paragraph_HR {
+  line-height: 22px;
+  color: #d1d1d1;
+  font-size: 18px;
+  letter-spacing: -4.5px;
+}
+
+h1 + p.paragraph_HR > strong {
+  line-height: 24px;
+  color: #f7941e;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -2.5px;
+}
+
+.location {
+  display: inline-block;
+  display: relative;
+  position: absolute;
+  right: 59px;
+  font-size: 0;
+}
+
+.location > a {
+  color: #c8c8c8;
+  font-size: 11px;
+  font-family: '돋움', Dotum;
+  text-decoration: none;
+  letter-spacing: -0.4px;
+}
+
+.location > a > strong {
+  color: #f7941e;
+}
+
+/* .body */
+.body {
+  margin-top: 30px;
 }
 
 /* 
@@ -205,8 +311,14 @@ p > strong {
  ##  ##  #### ##     ## ##         ## ##      ##        
  ##  ##   ### ##     ## ##        ##   ##     ##        
 #### ##    ## ########  ######## ##     ##    ######### 
-
 */
+.tabs {
+  font-size: 0;
+}
+
+.tabs > button {
+  font-size: 15px;
+}
 /* 
 #### ##    ## ########  ######## ##     ##     #######  
  ##  ###   ## ##     ## ##        ##   ##     ##     ## 
@@ -216,6 +328,9 @@ p > strong {
  ##  ##   ### ##     ## ##        ##   ##     ##     ## 
 #### ##    ## ########  ######## ##     ##     #######  
 */
+.head > p > strong {
+  display: block;
+}
 /* 
 #### ##    ## ########  ######## ##     ##    ##        
  ##  ###   ## ##     ## ##        ##   ##     ##    ##  
@@ -224,8 +339,14 @@ p > strong {
  ##  ##  #### ##     ## ##         ## ##      ######### 
  ##  ##   ### ##     ## ##        ##   ##           ##  
 #### ##    ## ########  ######## ##     ##          ##  
-
 */
+.terms_of_service > fieldset:nth-of-type(4) {
+  font-size: 0;
+}
+.terms_of_service > fieldset:nth-of-type(4) > button,
+.terms_of_service > fieldset:nth-of-type(4) > input {
+  font-size: 14px;
+}
 /* 
 #### ##    ## ########  ######## ##     ##    ######## 
  ##  ###   ## ##     ## ##        ##   ##     ##       
@@ -234,8 +355,11 @@ p > strong {
  ##  ##  #### ##     ## ##         ## ##            ## 
  ##  ##   ### ##     ## ##        ##   ##     ##    ## 
 #### ##    ## ########  ######## ##     ##     ######  
-
 */
-/* 
+.diagram-container + .button-container {
+  font-size: 0;
+}
 
-*/
+.diagram-container + .button-container > button {
+  font-size: 15px;
+}
