@@ -284,6 +284,15 @@ h1 + p.paragraph_HR > strong {
   letter-spacing: -0.4px;
 }
 
+.location > :not(a:last-of-type):after {
+  display: inline-block;
+  margin: 0px 5px;
+  content: '';
+  background: url('./images/location_arrow.png') no-repeat;
+  width: 5px;
+  height: 9px;
+}
+
 .location > a > strong {
   color: #f7941e;
 }
