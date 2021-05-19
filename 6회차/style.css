@@ -204,10 +204,15 @@ body {
   margin: 20px 20px;
 }
 
+/* .outerbox_ethics {
+  background: url('./images/윤리규범/orange-horizontal-line.png') no-repeat;
+  width: 790px;
+  height: 3px;
+  margin: 20px 20px;
+} */
+
 .outerbox > div {
   background: url('./images/outer_border_tail.png') no-repeat;
-  /* width: 790px;
-  height: 3px; */
 }
 
 .outerbox > div > div {
@@ -314,11 +319,20 @@ h1 + p.paragraph_HR > strong {
   background: url('./images/채용안내/inner_box_headtail.png') no-repeat;
 }
 
-.innerbox > div {
+.innerbox_ethics {
+  background: url('./images/윤리규범/orange-horizontal-line.png') repeat-x;
+  width: 666px;
+}
+
+.innerbox > div,
+.innerbox_ethics > div {
   background: url('./images/채용안내/inner_box_headtail.png') no-repeat;
 }
 
-.innerbox > div > div {
+.innerbox > div > div,
+.innerbox_ethics > div > div {
+  position: relative;
+  top: 3px;
   border-left: 3px solid #e3e3e3;
   border-right: 3px solid #e3e3e3;
   padding: 35px 28px;
@@ -494,7 +508,64 @@ h1 + p.paragraph_HR > strong {
 }
 
 .tabs > button {
+  width: 135px;
+  height: 29px;
   font-size: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs > button:first-of-type {
+  margin-right: 1px;
+  background-color: #c1c1c1;
+}
+
+.tabs > button:first-of-type::after {
+  /* content: '';
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 4px;
+
+  background: url('./images/윤리규범/white-bar.png') no-repeat; */
+}
+
+.tabs button.active {
+  position: relative;
+  background: 0% 50% url('./images/윤리규범/white-bar.png') no-repeat;
+}
+
+.tabs > button:nth-of-type(2) {
+  background-color: #ff9500;
+}
+
+.list_folded > section > a {
+  text-decoration: none;
+}
+.list_folded > section > a > h2 {
+  line-height: 18.58px;
+  letter-spacing: -0.8px;
+  padding-bottom: 8px;
+  color: #9b9b9b;
+  background: 0px 23px url('./images/dotted-horizontal-line.png') repeat-x;
+  width: 625px;
+}
+
+.list_unfolded > section {
+  font-family: 'ydiywebdotum';
+  font-size: 11px;
+  line-height: 16px;
+  color: #949494;
+}
+.list_unfolded > section > h2,
+.list_unfolded > section > ol > li > h3,
+.list_unfolded > section > ol > li > ol > li > h4 {
+  font-weight: bold;
+}
+
+.list_unfolded > section > h2#list-two + ol > li > h3 {
+  color: orange;
 }
 /* 
 #### ##    ## ########  ######## ##     ##     #######  
@@ -508,6 +579,7 @@ h1 + p.paragraph_HR > strong {
 .head > p > strong {
   display: block;
 }
+
 /* 
 #### ##    ## ########  ######## ##     ##    ##        
  ##  ###   ## ##     ## ##        ##   ##     ##    ##  

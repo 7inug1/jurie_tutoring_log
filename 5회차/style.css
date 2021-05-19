@@ -10,7 +10,6 @@
 
 body {
   font-family: 'ydiy330', sans-serif;
-
   margin: 20px 0;
 }
 
@@ -22,8 +21,8 @@ h1 {
   padding-left: 27px;
 
   font-size: 20px;
-  line-height: 22px;
   letter-spacing: -0.4px;
+  line-height: 22px;
 
   border-bottom: 1px solid #efefef;
   width: 645px;
