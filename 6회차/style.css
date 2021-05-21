@@ -270,7 +270,7 @@ h1 + p.paragraph_HR {
   line-height: 22px;
   color: #d1d1d1;
   font-size: 18px;
-  letter-spacing: -4.5px;
+  letter-spacing: -2px;
 }
 
 h1 + p.paragraph_HR > strong {
@@ -335,7 +335,7 @@ h1 + p.paragraph_HR > strong {
   top: 3px;
   border-left: 3px solid #e3e3e3;
   border-right: 3px solid #e3e3e3;
-  padding: 35px 28px;
+  padding: 30px 30px;
 }
 
 /* 
@@ -681,6 +681,95 @@ h1 + p.paragraph_HR > strong {
 */
 .head > p > strong {
   display: block;
+}
+
+.thumbnail_section > ul > li > h3,
+.thumbnail_section > ul > li > p {
+  display: inline-block;
+}
+
+.thumbnail_section:not(:first-of-type) {
+  background: url('./images/dotted-horizontal-line.png') repeat-x;
+  margin-top: 20px;
+}
+
+.thumbnail_section:nth-of-type(3) {
+  margin-top: 34px;
+}
+
+.thumbnail_section:nth-of-type(2),
+.thumbnail_section:nth-of-type(3) {
+  padding-top: 20px;
+}
+.thumbnail_section:nth-of-type(4) {
+  margin-top: 45px;
+  padding-top: 20px;
+}
+
+.thumbnail_section:nth-of-type(3) > ul > li:nth-of-type(2) > h3,
+.thumbnail_section:nth-of-type(3) > ul > li:nth-of-type(4) > h3 {
+  position: relative;
+  top: -13px;
+}
+.thumbnail_section:nth-of-type(3) > ul > li:nth-of-type(3) > h3 {
+  position: relative;
+  top: -14px;
+}
+
+.thumbnail_section > h2 {
+  /* display: inline-block; */
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.thumbnail_section > ul,
+.thumbnail_section > p {
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  color: #9b9b9b;
+  letter-spacing: -0.4px;
+
+  margin-left: 87px;
+  line-height: 15.5px;
+}
+.thumbnail_section > ul {
+  /* position: absolute; */
+}
+.thumbnail_section > p {
+  position: relative;
+  top: -66px;
+}
+
+.thumbnail_section > ul {
+  margin-top: -65px;
+}
+
+.thumbnail_section:first-of-type > ul {
+  margin-top: -53px;
+}
+
+.thumbnail_section:nth-of-type(2) > ul {
+  margin-top: -45px;
+}
+
+.thumbnail_section:nth-of-type(4) > ul {
+  padding-top: 24px;
+}
+
+.thumbnail_section > h2 > span {
+  position: relative;
+  top: 13px;
+}
+
+.thumbnail_section:nth-of-type(2n-1) > h2 {
+  background-color: #ffba00;
+}
+
+.thumbnail_section:nth-of-type(2n) > h2 {
+  background-color: #ff9500;
 }
 
 /* 
