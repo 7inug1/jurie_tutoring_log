@@ -192,6 +192,8 @@ table {
     url('./font/ydiygo340/YDIYGO340.woff') format('woff');
   font-family: 'FuturaBT';
   src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
+  font-family: 'YDIWebDotum';
+  src: url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
 }
 
 body {
@@ -233,7 +235,8 @@ h1 {
   padding-bottom: 4px;
   color: #464646;
   font-size: 20px;
-  letter-spacing: -0.4px;
+  font-weight: bold;
+  letter-spacing: -1.6px;
   border-bottom: 1px solid #efefef;
   background: url('./images/orange-circle.png') no-repeat;
 
@@ -260,7 +263,7 @@ h1 + p {
   line-height: 16px;
   color: #9b9b9b;
   font-size: 14px;
-  letter-spacing: -1.5px;
+  letter-spacing: -1.53px;
 }
 
 h1 + p,
@@ -784,13 +787,81 @@ h1 + p.paragraph_HR > strong {
  ##  ##   ### ##     ## ##        ##   ##           ##  
 #### ##    ## ########  ######## ##     ##          ##  
 */
-.terms_of_service > fieldset:nth-of-type(4) {
-  font-size: 0;
+
+.registration-paragraph_top {
+  position: absolute;
+  top: 60px;
+  left: 183px;
+  font-size: 15px;
+  letter-spacing: -1.6px;
+  color: #8f8f8f;
 }
-.terms_of_service > fieldset:nth-of-type(4) > button,
-.terms_of_service > fieldset:nth-of-type(4) > input {
+
+form.terms-of-service {
+  margin-top: 43px;
+}
+
+.terms-of-service > fieldset:not(:last-of-type) {
+  /* padding: 24px 0px 0px 0px; */
+  background: url('./images/회원가입/innerbox_head.png') no-repeat;
+  padding-top: 24px;
+  border-left: 3px solid #ececec;
+  border-right: 3px solid #ececec;
+  margin-top: 23px;
+}
+
+.terms-of-service > fieldset > div {
+  max-height: 188px;
+  width: 623px;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding-top: 20px;
+  line-height: 19px;
+  color: #949494;
+  font-size: 11px;
+  font-family: 'YDIWebDotum';
+  overflow-y: scroll;
+  background: url('./images/dotted-horizontal-line.png') repeat-x;
+}
+
+.terms-of-service > fieldset > div > ol > li > h3,
+.terms-of-service > fieldset > div > ol > li > ol > li > p,
+.terms-of-service > fieldset > div > p,
+.terms-of-service > fieldset > div > h2:nth-of-type(2) {
+  padding-top: 20px;
+}
+
+.terms-of-service > fieldset:not(:nth-of-type(2)) > div > h2 {
+  /* padding: 20px 0px; */
+}
+
+.terms-of-service > fieldset > h2:first-of-type {
+  width: 623px;
+  margin: 0 auto;
+  color: #f7941e;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+}
+
+.terms-of-service > fieldset > label {
+  background: #ececec;
+  display: inline-block;
+  width: 670px;
+}
+
+.terms-of-service > fieldset:nth-of-type(4) {
+  font-size: 0;
+  margin-top: 29px;
+  width: 170px;
+  margin: 29px auto 0px auto;
+}
+.terms-of-service > fieldset:nth-of-type(4) > button,
+.terms-of-service > fieldset:nth-of-type(4) > input {
   font-size: 14px;
 }
+
 /* 
 #### ##    ## ########  ######## ##     ##    ######## 
  ##  ###   ## ##     ## ##        ##   ##     ##       
