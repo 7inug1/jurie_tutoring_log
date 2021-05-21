@@ -4,6 +4,9 @@
   font-family: 'ydiy330';
   src: url('./font/ydiygo330/YDIYGO330.woff2') format('woff2'),
     url('./font/ydiygo330/YDIYGO330.woff') format('woff');
+  font-family: 'ydiy340';
+  src: url('./font/ydiygo340/YDIYGO340.woff2') format('woff2'),
+    url('./font/ydiygo340/YDIYGO340.woff') format('woff');
   font-family: 'FuturaBT';
   src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
 }

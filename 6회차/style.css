@@ -187,6 +187,9 @@ table {
   font-family: 'ydiy330';
   src: url('./font/ydiygo330/YDIYGO330.woff2') format('woff2'),
     url('./font/ydiygo330/YDIYGO330.woff') format('woff');
+  font-family: 'ydiy340';
+  src: url('./font/ydiygo340/YDIYGO340.woff2') format('woff2'),
+    url('./font/ydiygo340/YDIYGO340.woff') format('woff');
   font-family: 'FuturaBT';
   src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
 }
@@ -242,7 +245,7 @@ h1 + strong {
   color: #464646;
   font-size: 19px;
   font-weight: 600;
-  letter-spacing: -1.9px;
+  letter-spacing: -2.01px;
 }
 
 h1 + strong.statement_employment {
@@ -803,4 +806,100 @@ h1 + p.paragraph_HR > strong {
 
 .diagram-container + .button-container > button {
   font-size: 15px;
+}
+
+.diagram-container {
+  background: url('./images/인재상/main-board.png') no-repeat;
+  /* width: auto; */
+  min-height: 455px;
+}
+
+.diagram-container > dl {
+  text-align: center;
+  position: relative;
+}
+
+.diagram-container > dl:first-of-type {
+  width: 120px;
+  left: 43px;
+  top: 33px;
+}
+
+.diagram-container > dl:nth-of-type(2) {
+  width: 145px;
+  left: 493px;
+  top: -110px;
+}
+.diagram-container > dl:nth-of-type(3) {
+  width: 160px;
+  left: 23px;
+  top: -3px;
+}
+.diagram-container > dl:nth-of-type(4) {
+  width: 165px;
+  left: 483px;
+  top: -144px;
+}
+
+.diagram-container > dl > dt {
+  line-height: 20px;
+  color: #ff8c25;
+  font-size: 17.5px;
+  font-weight: bold;
+  font-family: 'ydiy340';
+  letter-spacing: -2px;
+}
+
+.diagram-container > dl > dd {
+  margin-top: 27px;
+  line-height: 15px;
+  color: #636363;
+  font-size: 12.93px;
+  letter-spacing: -1.6px;
+}
+
+.diagram-container + .button-container {
+  width: 282px;
+  margin: 0 auto;
+}
+
+.diagram-container + .button-container > button {
+  border: none;
+}
+
+.diagram-container + .button-container > button:first-of-type {
+  display: inline-block;
+  vertical-align: top;
+  background: url('./images/인재상/orange-button-head.png') no-repeat;
+  width: 3px;
+  height: 36px;
+  /* background-color: #ff9600;
+  color: white; */
+  padding: 0;
+}
+
+.diagram-container + .button-container > button:first-of-type > span {
+  display: inline-block;
+  vertical-align: top;
+  background: url('./images/인재상/orange-button-body.png') repeat-x;
+  height: 36px;
+  width: 113px;
+}
+
+.diagram-container + .button-container > button:first-of-type > span > span {
+  display: inline-block;
+  vertical-align: top;
+  background: url('./images/인재상/orange-button-tail.png') no-repeat;
+  width: 4px;
+  height: 36px;
+}
+
+.diagram-container
+  + .button-container
+  > button:first-of-type
+  .diagram-container
+  + .button-container
+  > button:nth-of-type(2) {
+  background-color: white;
+  color: #ff9600;
 }
