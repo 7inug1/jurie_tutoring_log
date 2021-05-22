@@ -209,20 +209,12 @@ body {
   margin: 20px 20px;
 }
 
-/* .outerbox_ethics {
-  background: url('./images/윤리규범/orange-horizontal-line.png') no-repeat;
-  width: 790px;
-  height: 3px;
-  margin: 20px 20px;
-} */
-
 .outerbox > div {
   background: url('./images/outer_border_tail.png') no-repeat;
 }
 
 .outerbox > div > div {
   position: relative;
-  /* width: 784.5px; */
   top: 3px;
   padding: 59px;
   border-left: 2px solid #e3e3e3;
@@ -231,7 +223,6 @@ body {
 /* .head */
 
 h1 {
-  /* display: inline-block; */
   padding-bottom: 4px;
   color: #464646;
   font-size: 20px;
@@ -249,14 +240,6 @@ h1 + strong {
   font-size: 19px;
   font-weight: 600;
   letter-spacing: -2.01px;
-}
-
-h1 + strong.statement_employment {
-  /* letter-spacing: -3.7px; */
-}
-
-h1 + strong.statement_talent {
-  /* letter-spacing: -2.2px; */
 }
 
 h1 + p {
@@ -323,25 +306,28 @@ h1 + p.paragraph_HR > strong {
 
 .innerbox {
   background: url('./images/채용안내/inner_box_headtail.png') no-repeat;
+  position: relative;
 }
 
 .innerbox_ethics {
   background: url('./images/윤리규범/orange-horizontal-line.png') repeat-x;
+  position: relative;
   width: 666px;
 }
 
 .innerbox > div,
 .innerbox_ethics > div {
   background: url('./images/채용안내/inner_box_headtail.png') no-repeat;
+  position: relative;
 }
 
 .innerbox > div > div,
 .innerbox_ethics > div > div {
-  position: relative;
+  /* position: absolute; */
   top: 3px;
   border-left: 3px solid #e3e3e3;
   border-right: 3px solid #e3e3e3;
-  padding: 30px 30px;
+  padding: 28px 28px;
 }
 
 /* 
@@ -355,22 +341,38 @@ h1 + p.paragraph_HR > strong {
 */
 
 .introduction {
-  min-height: 114px;
+  display: inline-block;
+  height: auto;
+  height: 185px;
+  width: 191px;
   background: url('./images/채용안내/haitai-logo.png') no-repeat;
+  margin-left: 17px;
 }
 
 .introduction > p {
   width: 188px;
+  margin-top: 132px;
   color: #9b9b9b;
   line-height: 20px;
   font-size: 15px;
   letter-spacing: -2.5px;
 }
 
+.position {
+  display: inline-block;
+  position: absolute;
+  right: 79px;
+  width: 280px;
+}
+
 .position > dl > dt {
   color: #f7941e;
   font-size: 15px;
   font-weight: 500;
+}
+
+.position > dl:not(:first-of-type) > dt {
+  margin-top: 30px;
 }
 
 .position > dl > dd {
@@ -382,45 +384,63 @@ h1 + p.paragraph_HR > strong {
   letter-spacing: -1.7px;
 }
 
+.position > button {
+  margin-top: 9px;
+}
+
 .position > button.job-apply-button {
   display: inline-block;
+  position: relative;
+  height: 22px;
+  color: white;
   background: url('./images/채용안내/button_head.png') no-repeat;
   border: none;
-  color: white;
   padding-left: 4px;
-  /* height: 22px; */
-  /* font-size: 0; */
-  /* width: 77px; */
+  cursor: pointer;
   background-color: white;
-  /* padding: 0; */
   vertical-align: top;
 }
 
-.position > button.job-apply-button > span {
+.position > button.job-apply-button > div {
   display: inline-block;
+  position: relative;
+  top: -1px;
+  left: 67px;
+  width: 4px;
+  height: 22px;
   background: url('./images/채용안내/button_tail.png') no-repeat;
   padding-right: 4px;
   vertical-align: top;
 }
 
-.position > button.job-apply-button > span > span {
+.position > button.job-apply-button > div > div {
   display: inline-block;
-  background: url('./images/채용안내/button_body.png');
-  vertical-align: top;
+  position: absolute;
+  left: -67px;
+  padding: 3px 0px;
+  width: 67px;
   height: 22px;
+  font-size: 10px;
+  background: url('./images/채용안내/button_body.png') repeat-x;
+  vertical-align: top;
+}
+
+.process {
+  margin-left: 17px;
+  margin-top: 88px;
 }
 
 .process > .title {
-  padding-bottom: 9px;
   width: 610px;
   color: #f7941e;
   font-size: 18px;
   font-weight: normal;
-  border-bottom: 1px solid #efefef;
 }
 
 .process > .contents {
   margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #efefef;
 }
 
 .process > .contents > ol {
@@ -429,16 +449,13 @@ h1 + p.paragraph_HR > strong {
 
 .process > .contents > ol > li {
   display: inline-block;
-  /* padding-left: 4px; */
   width: 103px;
   height: 39px;
   margin-right: 9px;
   line-height: 2;
   color: #9b9b9b;
   border: 3px solid #dfdfdf;
-
   font-size: 16px;
-  /* line-height: 22px; */
   letter-spacing: -2.2px;
   text-align: center;
 }
@@ -466,19 +483,24 @@ h1 + p.paragraph_HR > strong {
 }
 .process > .contents > ol > li:not(:last-of-type):after {
   display: inline-block;
-  position: relative;
+  position: absolute;
+  top: 363px;
   content: '';
   background: url('./images/채용안내/box-arrow.png') no-repeat;
   width: 9px;
   height: 12px;
-
-  left: 17px;
-  /* right: 0px; */
-
-  /* top: 13.5px; */
 }
 .process > .contents > ol > li:first-of-type::after {
-  /* content: '01'; */
+  left: 151px;
+}
+.process > .contents > ol > li:nth-of-type(2)::after {
+  left: 268.5px;
+}
+.process > .contents > ol > li:nth-of-type(3)::after {
+  left: 385.5px;
+}
+.process > .contents > ol > li:nth-of-type(4)::after {
+  left: 503px;
 }
 
 .footer {
@@ -825,6 +847,10 @@ form.terms-of-service {
   background: url('./images/dotted-horizontal-line.png') repeat-x;
 }
 
+.terms-of-service > fieldset > div > * {
+  width: 580px;
+}
+
 .terms-of-service > fieldset > div > ol > li > h3,
 .terms-of-service > fieldset > div > ol > li > ol > li > p,
 .terms-of-service > fieldset > div > p,
@@ -857,9 +883,116 @@ form.terms-of-service {
   width: 170px;
   margin: 29px auto 0px auto;
 }
-.terms-of-service > fieldset:nth-of-type(4) > button,
-.terms-of-service > fieldset:nth-of-type(4) > input {
+.terms-of-service > fieldset:nth-of-type(4) > button {
   font-size: 14px;
+  border: none;
+}
+
+.terms-of-service > fieldset:nth-of-type(4) > button:first-of-type {
+  display: inline-block;
+  height: 36px;
+  color: white;
+  background: url('./images/회원가입/orange-button_head.png') no-repeat;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.terms-of-service > fieldset:nth-of-type(4) > button:first-of-type > div {
+  display: inline-block;
+  position: relative;
+  left: 67px;
+  top: -1px;
+  width: 4px;
+  height: 36px;
+  background: url('./images/회원가입/orange-button_tail.png') no-repeat;
+  vertical-align: top;
+
+  /* float: right; */
+}
+
+.terms-of-service
+  > fieldset:nth-of-type(4)
+  > button:first-of-type
+  > div
+  > div:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+  height: 15px;
+  width: 14px;
+  background: url('./images/회원가입/orange-button_icon.png') no-repeat;
+}
+
+.terms-of-service > fieldset:nth-of-type(4) > button:first-of-type > div > div {
+  display: inline-block;
+  position: absolute;
+  left: -72px;
+  padding: 7px 0px;
+  height: 36px;
+  width: 72px;
+  background: url('./images/회원가입/orange-button_body.png') repeat-x;
+  vertical-align: top;
+}
+
+.terms-of-service > fieldset:nth-of-type(4) > button:nth-of-type(2) {
+  display: inline-block;
+  position: relative;
+  left: 71px;
+  height: 36px;
+  color: #a0a0a0;
+  cursor: pointer;
+  background: url('./images/회원가입/white-button_head.png') no-repeat;
+  vertical-align: top;
+}
+
+.terms-of-service > fieldset:nth-of-type(4) > button:nth-of-type(2) > div {
+  display: inline-block;
+  position: relative;
+  left: 67px;
+  top: -1px;
+
+  width: 4px;
+  height: 36px;
+  background: url('./images/회원가입/white-button_tail.png') no-repeat;
+  vertical-align: top;
+}
+
+.terms-of-service
+  > fieldset:nth-of-type(4)
+  > button:nth-of-type(2)
+  > div
+  > div {
+  display: inline-block;
+  position: absolute;
+  left: -72px;
+  padding: 7px 0px;
+  width: 72px;
+  height: 36px;
+  background: url('./images/회원가입/white-button_body.png') repeat-x;
+  vertical-align: top;
+}
+
+form > fieldset > label {
+  color: #949494;
+  font-size: 11px;
+  font-family: 'YDIWebDotum';
+  letter-spacing: 0.8px;
+}
+
+form > fieldset > label > * {
+  position: relative;
+  right: 12px;
+  float: right;
+}
+
+form > fieldset > label > span {
+  top: 5px;
+}
+
+form > fieldset > label > input {
+  margin-right: 4px;
 }
 
 /* 
@@ -940,29 +1073,104 @@ form.terms-of-service {
 
 .diagram-container + .button-container > button:first-of-type {
   display: inline-block;
-  vertical-align: top;
+  position: relative;
+  /* left: 71px; */
+  height: 36px;
+  color: white;
   background: url('./images/인재상/orange-button-head.png') no-repeat;
-  width: 3px;
-  height: 36px;
-  /* background-color: #ff9600;
-  color: white; */
-  padding: 0;
+  cursor: pointer;
+  vertical-align: top;
 }
 
-.diagram-container + .button-container > button:first-of-type > span {
+.diagram-container + .button-container > button:first-of-type > div {
   display: inline-block;
-  vertical-align: top;
-  background: url('./images/인재상/orange-button-body.png') repeat-x;
-  height: 36px;
-  width: 113px;
-}
+  position: relative;
+  left: 108px;
+  /* left: -7px;
+  top: -1px; */
 
-.diagram-container + .button-container > button:first-of-type > span > span {
-  display: inline-block;
-  vertical-align: top;
-  background: url('./images/인재상/orange-button-tail.png') no-repeat;
+  top: -1px;
   width: 4px;
   height: 36px;
+  background: url('./images/인재상/orange-button-tail.png') no-repeat;
+  /* width: 113px; */
+  vertical-align: top;
+}
+
+.diagram-container + .button-container > button:first-of-type > div > * {
+  padding: 7.5px 0px;
+}
+
+.diagram-container
+  + .button-container
+  > button:first-of-type
+  > div
+  > div:before {
+  content: '';
+  display: inline-block;
+  background: url('./images/인재상/orange-button-icon.png') no-repeat;
+  width: 15px;
+  height: 14px;
+  padding-right: 6px;
+}
+
+.diagram-container + .button-container > button:first-of-type > div > div {
+  display: inline-block;
+  position: absolute;
+  left: -113px;
+  /* top: -1px; */
+  width: 113px;
+  height: 36px;
+  background: url('./images/인재상/orange-button-body.png') repeat-x;
+  vertical-align: top;
+}
+
+.diagram-container + .button-container > button:nth-of-type(2) {
+  display: inline-block;
+  position: relative;
+  background: url('./images/인재상/white-button-head.png') no-repeat;
+  height: 36px;
+  margin-left: 103px;
+  color: #ff9600;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.diagram-container + .button-container > button:nth-of-type(2) > div {
+  display: inline-block;
+  position: relative;
+  left: 143px;
+  top: -1px;
+  background: url('./images/인재상/white-button-tail.png') no-repeat;
+  width: 5px;
+  height: 36px;
+  vertical-align: top;
+}
+
+.diagram-container
+  + .button-container
+  > button:nth-of-type(2)
+  > div
+  > div:before {
+  content: '';
+  display: inline-block;
+  background: url('./images/인재상/white-button-icon.png') no-repeat;
+  width: 15px;
+  height: 14px;
+}
+
+.diagram-container + .button-container > button:nth-of-type(2) > div > * {
+  padding: 7.5px 0px;
+}
+
+.diagram-container + .button-container > button:nth-of-type(2) > div > div {
+  display: inline-block;
+  position: absolute;
+  left: -148px;
+  background: url('./images/인재상/white-button-body.png') repeat-x;
+  width: 149px;
+  height: 36px;
+  vertical-align: top;
 }
 
 .diagram-container
