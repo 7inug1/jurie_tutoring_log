@@ -199,7 +199,7 @@ table {
 body {
   font-family: 'ydiy330', sans-serif;
   margin: 20px auto;
-  /* margin: 0 auto; */
+  min-height: 1400px;
 }
 
 .outerbox {
@@ -384,11 +384,11 @@ h1 + p.paragraph_HR > strong {
   letter-spacing: -1.7px;
 }
 
-.position > button {
+.position > div.button-container > button {
   margin-top: 9px;
 }
 
-.position > button.job-apply-button {
+.position > div.button-container > button.job-apply-button {
   display: inline-block;
   position: relative;
   height: 22px;
@@ -401,7 +401,7 @@ h1 + p.paragraph_HR > strong {
   vertical-align: top;
 }
 
-.position > button.job-apply-button > div {
+.position > div.button-container > button.job-apply-button > div {
   display: inline-block;
   position: relative;
   top: -1px;
@@ -413,7 +413,7 @@ h1 + p.paragraph_HR > strong {
   vertical-align: top;
 }
 
-.position > button.job-apply-button > div > div {
+.position > div.button-container > button.job-apply-button > div > div {
   display: inline-block;
   position: absolute;
   left: -67px;
@@ -451,13 +451,16 @@ h1 + p.paragraph_HR > strong {
   display: inline-block;
   width: 103px;
   height: 39px;
-  margin-right: 9px;
   line-height: 2;
   color: #9b9b9b;
   border: 3px solid #dfdfdf;
   font-size: 16px;
   letter-spacing: -2.2px;
   text-align: center;
+}
+
+.process > .contents > ol > li:not(:last-of-type) {
+  margin-right: 12px;
 }
 
 .process > .contents > ol > li:before {
@@ -484,23 +487,23 @@ h1 + p.paragraph_HR > strong {
 .process > .contents > ol > li:not(:last-of-type):after {
   display: inline-block;
   position: absolute;
-  top: 363px;
+  top: 367px;
   content: '';
   background: url('./images/채용안내/box-arrow.png') no-repeat;
   width: 9px;
   height: 12px;
 }
 .process > .contents > ol > li:first-of-type::after {
-  left: 151px;
+  left: 153.5px;
 }
 .process > .contents > ol > li:nth-of-type(2)::after {
-  left: 268.5px;
+  left: 273.5px;
 }
 .process > .contents > ol > li:nth-of-type(3)::after {
-  left: 385.5px;
+  left: 394px;
 }
 .process > .contents > ol > li:nth-of-type(4)::after {
-  left: 503px;
+  left: 514px;
 }
 
 .footer {
@@ -549,16 +552,6 @@ h1 + p.paragraph_HR > strong {
   background-color: #c1c1c1;
 }
 
-.tabs > button:first-of-type::after {
-  /* content: '';
-  display: inline-block;
-  position: absolute;
-  width: 16px;
-  height: 4px;
-
-  background: url('./images/윤리규범/white-bar.png') no-repeat; */
-}
-
 .tabs button.active {
   position: relative;
   background: 0% 50% url('./images/윤리규범/white-bar.png') no-repeat;
@@ -573,7 +566,6 @@ h1 + p.paragraph_HR > strong {
 }
 
 .list_folded > section > a > h2 {
-  width: 625px;
   line-height: 18.58px;
   padding-bottom: 8px;
   color: #9b9b9b;
@@ -581,8 +573,20 @@ h1 + p.paragraph_HR > strong {
   letter-spacing: -0.8px;
 }
 
+.list_folded > section > a > h2:hover {
+  color: black;
+}
+
 .list_folded > section:nth-of-type(2) > a > h2 {
   margin-top: 20px;
+}
+
+.list_folded > section:first-of-type > ol {
+  letter-spacing: -1.8px;
+}
+
+.list_folded > section:nth-of-type(2) > ol {
+  letter-spacing: -2.1px;
 }
 
 .list_folded > section > ol {
@@ -590,49 +594,61 @@ h1 + p.paragraph_HR > strong {
   padding: 15px 0px 15px 20px;
   color: #9b9b9b;
   background-color: #f4f4f4;
-  letter-spacing: -1.8px;
   font-size: 0px;
 }
 
-.list_folded > section > ol > li:before {
+.list_folded > section > ol > li {
+  display: inline-block;
+}
+
+.list_folded > section > ol > li > a {
+  color: #9b9b9b;
+  text-decoration: none;
+}
+
+.list_folded > section > ol > li > a:hover {
+  color: black;
+}
+
+.list_folded > section > ol > li > a:before {
   color: #ff8416;
   font-weight: bold;
   margin-right: 6px;
   font-size: 14px;
 }
 
-.list_folded > section > ol > li:first-of-type::before {
+.list_folded > section > ol > li:first-of-type > a::before {
   content: '01';
 }
-.list_folded > section > ol > li:first-of-type {
+.list_folded > section > ol > li:first-of-type > a {
   margin-right: 65px;
 }
 
-.list_folded > section > ol > li:nth-of-type(2)::before {
+.list_folded > section > ol > li:nth-of-type(2) > a::before {
   content: '02';
 }
-.list_folded > section > ol > li:nth-of-type(2) {
+.list_folded > section > ol > li:nth-of-type(2) > a {
   margin-right: 135px;
 }
-.list_folded > section > ol > li:nth-of-type(3)::before {
+.list_folded > section > ol > li:nth-of-type(3) > a::before {
   content: '03';
 }
-.list_folded > section > ol > li:nth-of-type(4)::before {
+.list_folded > section > ol > li:nth-of-type(4) > a::before {
   content: '04';
 }
-.list_folded > section > ol > li:nth-of-type(4) {
+.list_folded > section > ol > li:nth-of-type(4) > a {
   margin-right: 92px;
 }
-.list_folded > section > ol > li:nth-of-type(5)::before {
+.list_folded > section > ol > li:nth-of-type(5) > a::before {
   content: '05';
 }
-.list_folded > section > ol > li:nth-of-type(5) {
+.list_folded > section > ol > li:nth-of-type(5) > a {
   margin-right: 96px;
 }
-.list_folded > section > ol > li:nth-of-type(6)::before {
+.list_folded > section > ol > li:nth-of-type(6) > a::before {
   content: '06';
 }
-.list_folded > section > ol > li {
+.list_folded > section > ol > li > a {
   display: inline-block;
   font-size: 14px;
   /* margin-right: 30px; */
@@ -640,11 +656,11 @@ h1 + p.paragraph_HR > strong {
   padding: 3.5px 0px;
 }
 
-.list_folded > section:first-of-type > ol > li {
+.list_folded > section:first-of-type > ol > li > a {
   margin-right: 30px;
 }
 
-.list_folded > section:nth-of-type(2) > ol > li {
+.list_folded > section:nth-of-type(2) > ol > a > li {
   /* margin-right: 30px; */
 }
 
@@ -661,7 +677,7 @@ h1 + p.paragraph_HR > strong {
   font-weight: bold;
 }
 
-.list_unfolded > section > h2#list-two + ol > li > h3 {
+.list_unfolded > section > h2#section-two + ol > li > h3 {
   color: orange;
 }
 
@@ -694,7 +710,7 @@ h1 + p.paragraph_HR > strong {
 .list_unfolded > section:nth-of-type(2) > ol > li > ol > li > ul,
 .list_unfolded > section:nth-of-type(2) > ol > li:nth-of-type(2) > ol,
 
-.list_unfolded > section:nth-of-type(2) >ol>li>ol>li>p+ul {
+.list_unfolded > section:nth-of-type(2) > ol > li > ol > li > p+ul {
   margin-left: 9px;
 }
 
