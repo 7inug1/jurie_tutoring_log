@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="outerbox">
-        <div>
-          <div>
+      <div class="outerbox_head">
+        <div class="outerbox_tail">
+          <div class="outerbox_body">
             <div class="head">
               <div class="location">
                 <a href="#">HOME</a>
@@ -185,17 +185,24 @@
                     </label>
                   </div>
                 </fieldset>
-                <fieldset>
-                  <button type="submit">
-                    <span>
-                      <span>확인</span>
-                    </span>
-                  </button>
-                  <button type="button">
-                    <span>
-                      <span>취소</span>
-                    </span>
-                  </button>
+                <fieldset class="signup_button-container">
+                  <div class="signup_button-wrapper">
+                    <button type="submit" class="signup_button-one_head">
+                      <span class="signup_button-one_tail">
+                        <span class="signup_button-one_body">
+                          <span class="signup_button-one_icon"></span>
+                          <span class="signup_button-one_text">확인</span>
+                        </span>
+                      </span>
+                    </button>
+                    <button type="button" class="signup_button-two_head">
+                      <span class="signup_button-two_tail">
+                        <span class="signup_button-two_body">
+                          <span class="signup_button-two_text">취소</span>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
                 </fieldset>
               </form>
             </div>

@@ -1,0 +1,438 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  
+ ######   ######## ##    ## ######## ########     ###    ##       
+##    ##  ##       ###   ## ##       ##     ##   ## ##   ##       
+##        ##       ####  ## ##       ##     ##  ##   ##  ##       
+##   #### ######   ## ## ## ######   ########  ##     ## ##       
+##    ##  ##       ##  #### ##       ##   ##   ######### ##       
+##    ##  ##       ##   ### ##       ##    ##  ##     ## ##       
+ ######   ######## ##    ## ######## ##     ## ##     ## ######## 
+*/
+
+@font-face {
+  font-family: 'ydiy330';
+  src: url('./font/ydiygo330/YDIYGO330.woff2') format('woff2'),
+    url('./font/ydiygo330/YDIYGO330.woff') format('woff');
+  font-family: 'ydiy340';
+  src: url('./font/ydiygo340/YDIYGO340.woff2') format('woff2'),
+    url('./font/ydiygo340/YDIYGO340.woff') format('woff');
+  font-family: 'FuturaBT';
+  src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
+  font-family: 'YDIWebDotum';
+  src: url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 790px;
+}
+
+.outerbox_head {
+  padding-top: 3px;
+  background: url('./images/outer_border_head.png') top no-repeat;
+}
+
+.outerbox_tail {
+  padding-bottom: 3px;
+  background: url('./images/outer_border_tail.png') bottom no-repeat;
+}
+
+.outerbox_body {
+  padding: 0px 3px;
+  background: url('./images/outer_border_body.png') repeat-y;
+}
+
+/* button {
+  border: none;
+  background: white;
+  padding: 0;
+  display: inline-block;
+} */
+
+/* 
+채용안내
+#### ##    ## ########  ######## ##     ##       ##   
+ ##  ###   ## ##     ## ##        ##   ##      ####   
+ ##  ####  ## ##     ## ##         ## ##         ##   
+ ##  ## ## ## ##     ## ######      ###          ##   
+ ##  ##  #### ##     ## ##         ## ##         ##   
+ ##  ##   ### ##     ## ##        ##   ##        ##   
+#### ##    ## ########  ######## ##     ##     ###### 
+채용안내
+*/
+
+button.jobapply_button_head {
+  display: inline-block;
+  padding: 0 0 0 4px;
+  height: 22px;
+  border: none;
+  background: url('./images/채용안내/button_head.png') no-repeat;
+  vertical-align: top;
+}
+
+.jobapply_button_tail {
+  display: inline-block;
+  padding-right: 4px;
+  height: 22px;
+  background: url('./images/채용안내/button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.jobapply_button_body {
+  display: inline-block;
+  min-width: 67px;
+  height: 22px;
+  background: url('./images/채용안내/button_body.png') repeat-x;
+}
+
+/* 
+윤리규범
+#### ##    ## ########  ######## ##     ##     #######  
+ ##  ###   ## ##     ## ##        ##   ##     ##     ## 
+ ##  ####  ## ##     ## ##         ## ##             ## 
+ ##  ## ## ## ##     ## ######      ###        #######  
+ ##  ##  #### ##     ## ##         ## ##      ##        
+ ##  ##   ### ##     ## ##        ##   ##     ##        
+#### ##    ## ########  ######## ##     ##    ######### 
+윤리규범
+*/
+
+/* 
+인사관리
+#### ##    ## ########  ######## ##     ##     #######  
+ ##  ###   ## ##     ## ##        ##   ##     ##     ## 
+ ##  ####  ## ##     ## ##         ## ##             ## 
+ ##  ## ## ## ##     ## ######      ###        #######  
+ ##  ##  #### ##     ## ##         ## ##             ## 
+ ##  ##   ### ##     ## ##        ##   ##     ##     ## 
+#### ##    ## ########  ######## ##     ##     #######  
+인사관리
+*/
+
+/* 
+회원가입
+#### ##    ## ########  ######## ##     ##    ##        
+ ##  ###   ## ##     ## ##        ##   ##     ##    ##  
+ ##  ####  ## ##     ## ##         ## ##      ##    ##  
+ ##  ## ## ## ##     ## ######      ###       ##    ##  
+ ##  ##  #### ##     ## ##         ## ##      ######### 
+ ##  ##   ### ##     ## ##        ##   ##           ##  
+#### ##    ## ########  ######## ##     ##          ##  
+회원가입
+*/
+
+.signup_button-container {
+  font-size: 0;
+}
+
+.signup_button-wrapper {
+  text-align: center;
+}
+
+button.signup_button-one_head {
+  display: inline-block;
+  padding: 0 0 0 3px;
+  height: 36px;
+  background: url('./images/회원가입/orange-button_head.png') no-repeat;
+  border: none;
+}
+.signup_button-one_tail {
+  display: inline-block;
+  padding-right: 4px;
+  height: 36px;
+  background: url('./images/회원가입/orange-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.signup_button-one_body {
+  display: inline-block;
+  position: relative;
+  min-width: 72px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 0px;
+  background: url('./images/회원가입/orange-button_body.png') repeat-x;
+  vertical-align: top;
+}
+
+.signup_button-one_icon {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url('./images/회원가입/orange-button_icon.png') no-repeat;
+}
+
+.signup_button-one_text {
+  color: white;
+  margin-left: 6px;
+  font-size: 15px;
+  letter-spacing: -2px;
+}
+
+button.signup_button-two_head {
+  display: inline-block;
+  margin-left: 13px;
+  padding: 0 0 0 3px;
+  height: 36px;
+  background: url('./images/회원가입/white-button_head.png') no-repeat;
+  border: none;
+}
+.signup_button-two_tail {
+  display: inline-block;
+  padding-right: 4px;
+  height: 36px;
+  background: url('./images/회원가입/white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.signup_button-two_body {
+  display: inline-block;
+  position: relative;
+  min-width: 72px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 0px;
+  background: url('./images/회원가입/white-button_body.png') repeat-x;
+  vertical-align: top;
+}
+
+.signup_button-two_text {
+  color: #a0a0a0;
+  font-size: 15px;
+  letter-spacing: -2px;
+}
+
+/* 
+인재상
+#### ##    ## ########  ######## ##     ##    ######## 
+ ##  ###   ## ##     ## ##        ##   ##     ##       
+ ##  ####  ## ##     ## ##         ## ##      ##       
+ ##  ## ## ## ##     ## ######      ###       #######  
+ ##  ##  #### ##     ## ##         ## ##            ## 
+ ##  ##   ### ##     ## ##        ##   ##     ##    ## 
+#### ##    ## ########  ######## ##     ##     ######  
+인재상
+*/
+
+.talent_button-container {
+  font-size: 0;
+}
+
+.talent_button-wrapper {
+  text-align: center;
+}
+
+button.talent_button-one_head {
+  display: inline-block;
+  padding: 0 0 0 3px;
+  height: 36px;
+  background: url('./images/인재상/orange-button-head.png') no-repeat;
+  border: none;
+}
+
+.talent_button-one_tail {
+  display: inline-block;
+  padding-right: 4px;
+  height: 36px;
+  background: url('./images/인재상/orange-button-tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.talent_button-one_body {
+  display: inline-block;
+  position: relative;
+  min-width: 113px;
+  height: 36px;
+  line-height: 36px;
+  background: url('./images/인재상/orange-button-body.png') repeat-x;
+  vertical-align: top;
+}
+
+.talent_button-one_icon {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url('./images/인재상/orange-button-icon.png') no-repeat;
+}
+
+.talent_button-one_text {
+  color: white;
+  font-size: 15px;
+}
+
+button.talent_button-two_head {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 0 0 3px;
+  height: 36px;
+  background: url('./images/인재상/white-button-head.png') no-repeat;
+  border: none;
+}
+
+.talent_button-two_tail {
+  display: inline-block;
+  padding-right: 4px;
+  height: 36px;
+  background: url('./images/인재상/white-button-tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.talent_button-two_body {
+  display: inline-block;
+  position: relative;
+  min-width: 150px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 15px;
+  background: url('./images/인재상/white-button-body.png') repeat-x;
+  vertical-align: top;
+}
+
+.talent_button-two_icon {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url('./images/인재상/white-button-icon.png') no-repeat;
+}
+
+.talent_button-two_text {
+  color: #ff9600;
+  font-size: 15px;
+}
