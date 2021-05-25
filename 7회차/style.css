@@ -177,16 +177,63 @@ table {
 }
 
 .outerbox_body {
-  padding: 0px 3px;
+  padding: 59px 62px;
   background: url('./images/outer_border_body.png') repeat-y;
 }
 
-/* button {
-  border: none;
-  background: white;
-  padding: 0;
+.head {
+  /* position: relative; */
+}
+
+.location {
   display: inline-block;
-} */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5.5px;
+  font-size: 0;
+}
+
+.location-text_first,
+.location-text,
+.location-text_last {
+  color: #c8c8c8;
+  font-size: 11px;
+  font-family: '돋움', Dotum;
+  text-decoration: none;
+  letter-spacing: -0.4px;
+}
+
+.location-text,
+.location-text_last {
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+.location-text_last {
+  color: #f7941e;
+}
+
+.location-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -4.5px;
+  margin-left: 5px;
+  width: 5px;
+  height: 9px;
+  background: url('./images/location-arrow.png');
+}
+
+.h1-wrapper {
+  position: relative;
+  /* padding-bottom: 4px; */
+  border-bottom: 1px solid #efefef;
+}
+
+h1 {
+  /* padding-bottom: 4px; */
+}
 
 /* 
 채용안내
@@ -199,6 +246,20 @@ table {
 #### ##    ## ########  ######## ##     ##     ###### 
 채용안내
 */
+.employment_h1 {
+  background: url('./images/채용안내/h1-title.png') no-repeat;
+  /* border-bottom: 1px solid #efefef; */
+  /* width: 69px; */
+  height: 18px;
+}
+
+.employment_strong {
+  display: inline-block;
+  margin-top: 30px;
+  min-width: 658px;
+  height: 19px;
+  background: url('./images/채용안내/strong_head.png') no-repeat;
+}
 
 button.jobapply_button_head {
   display: inline-block;
@@ -207,6 +268,7 @@ button.jobapply_button_head {
   border: none;
   background: url('./images/채용안내/button_head.png') no-repeat;
   vertical-align: top;
+  cursor: pointer;
 }
 
 .jobapply_button_tail {
@@ -236,6 +298,20 @@ button.jobapply_button_head {
 윤리규범
 */
 
+.ethics_h1 {
+  background: url('./images/윤리규범/h1-title.png') no-repeat;
+  /* border-bottom: 1px solid #efefef; */
+  height: 19px;
+}
+
+.ethics_paragraph {
+  display: inline-block;
+  margin-top: 34px;
+  min-width: 670px;
+  height: 70px;
+  background: url('./images/윤리규범/paragraph_head.png') no-repeat;
+}
+
 /* 
 인사관리
 #### ##    ## ########  ######## ##     ##     #######  
@@ -248,6 +324,20 @@ button.jobapply_button_head {
 인사관리
 */
 
+.hr_h1 {
+  background: url('./images/인사관리/h1-title.png') no-repeat;
+  /* border-bottom: 1px solid #efefef; */
+  height: 18px;
+}
+
+.hr_paragraph {
+  display: inline-block;
+  margin-top: 28px;
+  min-width: 455px;
+  height: 39px;
+  background: url('./images/인사관리/paragraph_hr.png') no-repeat;
+}
+
 /* 
 회원가입
 #### ##    ## ########  ######## ##     ##    ##        
@@ -259,6 +349,30 @@ button.jobapply_button_head {
 #### ##    ## ########  ######## ##     ##          ##  
 회원가입
 */
+
+.signup_h1 {
+  background: url('./images/인사관리/h1-title.png') no-repeat;
+  /* border-bottom: 1px solid #efefef; */
+  height: 18px;
+}
+
+.signup_paragraph_bottom {
+  display: inline-block;
+  margin-top: 20px;
+  min-width: 664px;
+  height: 14px;
+  background: url('./images/회원가입/paragraph_bottom_signup.png') no-repeat;
+}
+
+.signup_paragraph_top {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -7.5px;
+  min-width: 318px;
+  height: 15px;
+  background: url('./images/회원가입/paragraph_top_signup.png') no-repeat;
+}
 
 .signup_button-container {
   font-size: 0;
@@ -274,6 +388,7 @@ button.signup_button-one_head {
   height: 36px;
   background: url('./images/회원가입/orange-button_head.png') no-repeat;
   border: none;
+  cursor: pointer;
 }
 .signup_button-one_tail {
   display: inline-block;
@@ -314,6 +429,7 @@ button.signup_button-two_head {
   height: 36px;
   background: url('./images/회원가입/white-button_head.png') no-repeat;
   border: none;
+  cursor: pointer;
 }
 .signup_button-two_tail {
   display: inline-block;
@@ -351,6 +467,20 @@ button.signup_button-two_head {
 인재상
 */
 
+.talent_h1 {
+  background: url('./images/인재상/h1-title.png') no-repeat;
+  /* border-bottom: 1px solid #efefef; */
+  height: 19px;
+}
+
+.talent_strong {
+  display: inline-block;
+  margin-top: 31px;
+  min-width: 658px;
+  height: 19px;
+  background: url('./images/인재상/strong_talent.png') no-repeat;
+}
+
 .talent_button-container {
   font-size: 0;
 }
@@ -365,6 +495,7 @@ button.talent_button-one_head {
   height: 36px;
   background: url('./images/인재상/orange-button-head.png') no-repeat;
   border: none;
+  cursor: pointer;
 }
 
 .talent_button-one_tail {
@@ -404,6 +535,7 @@ button.talent_button-two_head {
   height: 36px;
   background: url('./images/인재상/white-button-head.png') no-repeat;
   border: none;
+  cursor: pointer;
 }
 
 .talent_button-two_tail {
