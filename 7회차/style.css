@@ -252,11 +252,14 @@ body {
 
 .h1-wrapper {
   position: relative;
+  padding: 4px 0;
+  background: url('./images/heading-underline.png') bottom no-repeat;
   /* padding-bottom: 4px; */
-  border-bottom: 1px solid #efefef;
+  /* border-bottom: 1px solid #efefef; */
 }
 
 h1 {
+  /* position: relative; */
   /* padding-bottom: 4px; */
 }
 
@@ -296,6 +299,7 @@ h1 {
   /* padding-left: 28px;*/
   padding-top: 35px;
   padding-bottom: 33px;
+  font-size: 0;
 }
 
 div.introduction.employment {
@@ -341,10 +345,10 @@ dd.employment {
   line-height: 15px;
   color: #9b9b9b;
   font-size: 13px;
-  letter-spacing: -1.7px;
+  letter-spacing: -1.56px;
 }
 
-button.jobapply_button_head {
+.button.head {
   display: inline-block;
   margin-top: 9px;
   padding: 0 0 0 4px;
@@ -355,21 +359,32 @@ button.jobapply_button_head {
   cursor: pointer;
 }
 
-.jobapply_button_tail {
+.button.tail {
   display: inline-block;
   padding-right: 4px;
   height: 22px;
-  font-size: 10px;
   background: url('./images/채용안내/button_tail.png') right no-repeat;
   vertical-align: top;
 }
 
-.jobapply_button_body {
+.button.body {
   display: inline-block;
+  position: relative;
   min-width: 67px;
   height: 22px;
   color: white;
   background: url('./images/채용안내/button_body.png') repeat-x;
+}
+
+.button.text {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: -7.5px;
+  font-size: 10px;
 }
 
 div.footer.employment {
@@ -395,7 +410,7 @@ li.footer.employment::before {
 }
 
 div.process.employment {
-  margin-top: 29px;
+  margin-top: 12px;
   padding-left: 28px;
   padding-right: 25px;
 }
@@ -408,30 +423,51 @@ h2.process.employment {
   letter-spacing: -3px;
 }
 
+div.list-container.employment {
+  padding: 0;
+  background: url('./images/dotted-horizontal-line.png') repeat-x;
+}
+
 ul.process.employment {
   margin-top: 12px;
   padding-top: 14px;
   font-size: 0;
-  background: url('./images/dotted-horizontal-line.png') repeat-x;
 }
 
 li.process.employment {
   display: inline-block;
+  position: relative;
+  padding: 0 2.5px;
   width: 103px;
   height: 39px;
   line-height: 2;
   color: #9b9b9b;
+  font-size: 0;
   border: 3px solid #dfdfdf;
-  font-size: 16px;
   letter-spacing: -2.2px;
   text-align: center;
+}
+
+li.process.first.employment::after,
+li.process.second.employment::after,
+li.process.third.employment::after,
+li.process.fourth.employment::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 50%;
+  left: 108px;
+  margin-top: -6px;
+  width: 9px;
+  height: 12px;
+  background: url('./images/채용안내/box-arrow.png') no-repeat;
 }
 
 li.process.second.employment,
 li.process.third.employment,
 li.process.fourth.employment,
 li.process.fifth.employment {
-  margin-left: 16px;
+  margin-left: 10px;
 }
 
 span.process.number.employment {
@@ -439,6 +475,10 @@ span.process.number.employment {
   font-size: 20px;
   letter-spacing: -0.8px;
   font-family: 'ydiy330', sans-serif;
+}
+
+span.process.text.employment {
+  font-size: 16px;
 }
 /* 
 윤리규범
