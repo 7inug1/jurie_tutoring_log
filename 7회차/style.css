@@ -170,32 +170,32 @@ body {
   width: 790px;
 }
 
-.outerbox_head {
+.outerbox.head {
   padding-top: 3px;
   background: url('./images/outer_border_head.png') top no-repeat;
 }
 
-.outerbox_tail {
+.outerbox.tail {
   padding-bottom: 3px;
   background: url('./images/outer_border_tail.png') bottom no-repeat;
 }
 
-.outerbox_body {
+.outerbox.body {
   padding: 59px 62px;
   background: url('./images/outer_border_body.png') repeat-y;
 }
 
-.innerbox_head {
+.innerbox.head {
   padding-top: 3px;
   background: url('./images/채용안내/inner_box_headtail.png') top no-repeat;
 }
 
-.innerbox_tail {
+.innerbox.tail {
   padding-bottom: 3px;
   background: url('./images/채용안내/inner_box_headtail.png') bottom no-repeat;
 }
 
-.innerbox_body {
+.innerbox.body {
   /* background: url('./images/채용안내/inner_box_body.png'); */
   border-left: 3px solid #efefef;
   border-right: 3px solid #efefef;
@@ -204,10 +204,6 @@ body {
 .label-container {
   padding-bottom: 3px;
   background: url('./images/채용안내/inner_box_headtail.png') repeat-y;
-}
-
-.head {
-  /* position: relative; */
 }
 
 .location {
@@ -219,9 +215,9 @@ body {
   font-size: 0;
 }
 
-.location-text_first,
+.location-text.first,
 .location-text,
-.location-text_last {
+.location-text.last {
   color: #c8c8c8;
   font-size: 11px;
   font-family: '돋움', Dotum;
@@ -230,12 +226,12 @@ body {
 }
 
 .location-text,
-.location-text_last {
+.location-text.last {
   padding-left: 10px;
   margin-left: 5px;
 }
 
-.location-text_last {
+.location-text.last {
   color: #f7941e;
 }
 
@@ -258,11 +254,6 @@ body {
   /* border-bottom: 1px solid #efefef; */
 }
 
-h1 {
-  /* position: relative; */
-  /* padding-bottom: 4px; */
-}
-
 /* 
 채용안내
 #### ##    ## ########  ######## ##     ##       ##   
@@ -275,14 +266,12 @@ h1 {
 채용안내
 */
 
-.employment_h1 {
+h1.employment {
   background: url('./images/채용안내/h1-title.png') no-repeat;
-  /* border-bottom: 1px solid #efefef; */
-  /* width: 69px; */
   height: 18px;
 }
 
-.employment_strong {
+strong.employment {
   display: inline-block;
   margin-top: 30px;
   min-width: 658px;
@@ -290,13 +279,11 @@ h1 {
   background: url('./images/채용안내/strong_head.png') no-repeat;
 }
 
-.innerbox_head.employment {
+.innerbox.head.employment {
   margin-top: 30px;
 }
 
-.innerbox_body.employment {
-  /* padding: 35px 28px; */
-  /* padding-left: 28px;*/
+.innerbox.body.employment {
   padding-top: 35px;
   padding-bottom: 33px;
   font-size: 0;
@@ -307,13 +294,11 @@ div.introduction.employment {
   min-height: 185px;
   max-width: 276px;
   padding-left: 48px;
-  /* padding-right: 38px; */
   box-sizing: border-box;
   vertical-align: top;
 }
 
 p.introduction.employment {
-  /* width: 188px; */
   padding-top: 133px;
   color: #9b9b9b;
   line-height: 20px;
@@ -335,8 +320,8 @@ dt.employment {
   font-size: 15px;
 }
 
-dl.employment.second,
-dl.employment.third {
+dl.second.employment,
+dl.third.employment {
   margin-top: 30px;
 }
 
@@ -348,7 +333,7 @@ dd.employment {
   letter-spacing: -1.56px;
 }
 
-.button.head {
+.button.head.employment {
   display: inline-block;
   margin-top: 9px;
   padding: 0 0 0 4px;
@@ -359,7 +344,7 @@ dd.employment {
   cursor: pointer;
 }
 
-.button.tail {
+.button.tail.employment {
   display: inline-block;
   padding-right: 4px;
   height: 22px;
@@ -367,7 +352,7 @@ dd.employment {
   vertical-align: top;
 }
 
-.button.body {
+.button.body.employment {
   display: inline-block;
   position: relative;
   min-width: 67px;
@@ -376,7 +361,7 @@ dd.employment {
   background: url('./images/채용안내/button_body.png') repeat-x;
 }
 
-.button.text {
+.button.text.employment {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -492,13 +477,13 @@ span.process.text.employment {
 윤리규범
 */
 
-.ethics_h1 {
+h1.ethics {
   background: url('./images/윤리규범/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
   height: 19px;
 }
 
-.ethics_paragraph {
+p.ethics {
   display: inline-block;
   margin-top: 34px;
   min-width: 670px;
@@ -518,21 +503,21 @@ span.process.text.employment {
 인사관리
 */
 
-div.innerbox_head.hr {
+div.innerbox.head.hr {
   margin-top: 28px;
 }
 
-div.innerbox_body.hr {
+div.innerbox.body.hr {
   padding: 30px;
 }
 
-.hr_h1 {
+h1.hr {
   background: url('./images/인사관리/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
   height: 18px;
 }
 
-.hr_paragraph {
+p.hr {
   display: inline-block;
   margin-top: 28px;
   min-width: 455px;
@@ -544,9 +529,9 @@ div.innerbox_body.hr {
   /* position: relative; */
 }
 
-.section.second,
-.section.third,
-.section.fourth {
+section.second,
+section.third,
+section.fourth {
   /* position: relative; */
   background: url('./images/인사관리/dotted-horizontal-line.png') no-repeat;
   margin-top: 20px;
@@ -574,7 +559,7 @@ h2.second,
 h2.fourth {
   background-color: #ff9500;
 }
-span.thumbnail-text {
+span.thumbnail.text {
   position: absolute;
   top: 50%;
   right: 0;
@@ -583,11 +568,11 @@ span.thumbnail-text {
   margin-top: -16.25px;
 }
 
-.description_hr.fourth {
+.description.fourth.hr {
   margin-top: 24px;
 }
 
-.description-container_hr {
+.description-container.hr {
   display: inline-block;
   position: relative;
 
@@ -610,8 +595,8 @@ span.thumbnail-text {
 }
 .description_hr.first,
 .description_hr.second {
-  position: absolute;
-  top: 50%;
+  /* position: absolute;
+  top: 50%; */
   /* margin-top: -16.25px; */
 }
 .description-container_hr.second {
@@ -635,13 +620,13 @@ span.thumbnail-text {
 회원가입
 */
 
-.signup_h1 {
+h1.signup {
   background: url('./images/인사관리/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
   height: 18px;
 }
 
-.signup_paragraph_bottom {
+p.signup.bottom {
   display: inline-block;
   margin-top: 20px;
   min-width: 664px;
@@ -649,7 +634,7 @@ span.thumbnail-text {
   background: url('./images/회원가입/paragraph_bottom_signup.png') no-repeat;
 }
 
-.signup_paragraph_top {
+p.signup.top {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -659,15 +644,15 @@ span.thumbnail-text {
   background: url('./images/회원가입/paragraph_top_signup.png') no-repeat;
 }
 
-.signup_button-container {
+.button-container.signup {
   font-size: 0;
 }
 
-.signup_button-wrapper {
+.button-wrapper.signup {
   text-align: center;
 }
 
-button.signup_button-one_head {
+.button.one.head.signup {
   display: inline-block;
   padding: 0 0 0 3px;
   height: 36px;
@@ -675,14 +660,14 @@ button.signup_button-one_head {
   border: none;
   cursor: pointer;
 }
-.signup_button-one_tail {
+.button.one.tail.signup {
   display: inline-block;
   padding-right: 4px;
   height: 36px;
   background: url('./images/회원가입/orange-button_tail.png') right no-repeat;
   vertical-align: top;
 }
-.signup_button-one_body {
+.button.one.body.signup {
   display: inline-block;
   position: relative;
   min-width: 72px;
@@ -693,21 +678,21 @@ button.signup_button-one_head {
   vertical-align: top;
 }
 
-.signup_button-one_icon {
+.button.one.icon.signup {
   display: inline-block;
   width: 15px;
   height: 14px;
   background: url('./images/회원가입/orange-button_icon.png') no-repeat;
 }
 
-.signup_button-one_text {
+.button.one.text.signup {
   color: white;
   margin-left: 6px;
   font-size: 15px;
   letter-spacing: -2px;
 }
 
-button.signup_button-two_head {
+.button.two.head.signup {
   display: inline-block;
   margin-left: 13px;
   padding: 0 0 0 3px;
@@ -716,14 +701,14 @@ button.signup_button-two_head {
   border: none;
   cursor: pointer;
 }
-.signup_button-two_tail {
+.button.two.tail.signup {
   display: inline-block;
   padding-right: 4px;
   height: 36px;
   background: url('./images/회원가입/white-button_tail.png') right no-repeat;
   vertical-align: top;
 }
-.signup_button-two_body {
+.button.two.body.signup {
   display: inline-block;
   position: relative;
   min-width: 72px;
@@ -734,7 +719,7 @@ button.signup_button-two_head {
   vertical-align: top;
 }
 
-.signup_button-two_text {
+.button.two.text.signup {
   color: #a0a0a0;
   font-size: 15px;
   letter-spacing: -2px;
@@ -763,13 +748,13 @@ fieldset.third {
 인재상
 */
 
-.talent_h1 {
+h1.talent {
   background: url('./images/인재상/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
   height: 19px;
 }
 
-.talent_strong {
+strong.talent {
   display: inline-block;
   margin-top: 31px;
   min-width: 658px;
