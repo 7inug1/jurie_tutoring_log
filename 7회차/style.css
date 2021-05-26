@@ -181,6 +181,21 @@ table {
   background: url('./images/outer_border_body.png') repeat-y;
 }
 
+.innerbox_head {
+  padding-top: 3px;
+  background: url('./images/채용안내/inner_box_headtail.png') top no-repeat;
+}
+
+.innerbox_tail {
+  padding-bottom: 3px;
+  background: url('./images/채용안내/inner_box_headtail.png') bottom no-repeat;
+}
+
+.label-container {
+  padding-bottom: 3px;
+  background: url('./images/채용안내/inner_box_headtail.png') repeat-y;
+}
+
 .head {
   /* position: relative; */
 }
@@ -324,6 +339,10 @@ button.jobapply_button_head {
 인사관리
 */
 
+div.innerbox_body.hr {
+  padding: 30px;
+}
+
 .hr_h1 {
   background: url('./images/인사관리/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
@@ -336,6 +355,67 @@ button.jobapply_button_head {
   min-width: 455px;
   height: 39px;
   background: url('./images/인사관리/paragraph_hr.png') no-repeat;
+}
+
+/* section {
+  position: relative;
+} */
+
+div.description_hr {
+  position: relative;
+  /* top: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* left: 0; */
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  color: #9b9b9b;
+  letter-spacing: -0.4px;
+  /* margin-left: 87px; */
+  padding-left: 87px;
+  line-height: 15.5px;
+}
+
+.description_hr.second,
+.description_hr.third,
+.description_hr.fourth {
+  /* height: 1px; */
+  background: url('./images/인사관리/dotted-horizontal-line.png') no-repeat;
+}
+
+.description_hr.second {
+  margin-top: 32px;
+}
+
+.description_hr.third {
+  margin-top: 39px;
+}
+
+.description_hr.fourth {
+  margin-top: 45px;
+}
+
+h2.thumbnail {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+h2.odd {
+  background-color: #ffba00;
+}
+h2.even {
+  background-color: #ff9500;
+}
+span.thumbnail-text {
+  /* position: absolute; */
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: -16.25px;
 }
 
 /* 
@@ -455,6 +535,17 @@ button.signup_button-two_head {
   letter-spacing: -2px;
 }
 
+fieldset.first,
+fieldset.second,
+fieldset.third {
+  border-left: 3px solid #ececec;
+  border-right: 3px solid #ececec;
+}
+
+fieldset.second,
+fieldset.third {
+  margin-top: 23px;
+}
 /* 
 인재상
 #### ##    ## ########  ######## ##     ##    ######## 
