@@ -477,6 +477,18 @@ span.process.text.employment {
 윤리규범
 */
 
+body.ethics {
+  min-height: 2000px;
+}
+
+.innerbox.head.ethics {
+  background: url('./images/윤리규범/orange-horizontal-line.png') no-repeat;
+}
+
+.innerbox.body.ethics {
+  padding: 21px;
+}
+
 h1.ethics {
   background: url('./images/윤리규범/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
@@ -489,6 +501,161 @@ p.ethics {
   min-width: 670px;
   height: 70px;
   background: url('./images/윤리규범/paragraph_head.png') no-repeat;
+}
+
+.tabs.ethics {
+  margin-top: 31px;
+  font-size: 0;
+}
+
+button.first.ethics,
+button.second.ethics {
+  width: 135px;
+  height: 29px;
+  font-size: 15px;
+  border: none;
+  color: white;
+  background-color: #c1c1c1;
+  cursor: pointer;
+}
+button.active.ethics {
+  background: #ff9500 0.5% 50% url('./images/윤리규범/white-bar.png') no-repeat;
+}
+
+button.first.ethics {
+}
+
+button.second.ethics {
+  margin-left: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+.list.folded.heading:hover {
+  color: black;
+}
+
+.list.folded.heading.ethics {
+  line-height: 18.58px;
+  /* padding-bottom: 8px; */
+  color: #9b9b9b;
+  /* background: 0px 23px url('./images/dotted-horizontal-line.png') repeat-x; */
+  letter-spacing: -0.8px;
+}
+
+h2.list.folded.ethics {
+  display: block;
+  padding-bottom: 8px;
+  background: url('./images/dotted-horizontal-line.png') 0px 23px repeat-x;
+}
+
+ul.list.folded.ethics {
+  display: block;
+  margin-top: 16px;
+  padding: 15px 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.list.folded.ethics {
+  display: inline-block;
+  line-height: 16px;
+}
+
+li.list.folded.section-one.second.ethics,
+li.list.folded.section-one.third.ethics,
+li.list.folded.section-one.fourth.ethics {
+  margin-left: 36px;
+}
+
+a.list.folded.section-one.ethics.first {
+  width: 69px;
+  height: 14px;
+  background: url('./images/윤리규범/윤리규범-01.png') no-repeat;
+}
+a.list.folded.section-one.ethics.second {
+  width: 222px;
+  height: 13px;
+  background: url('./images/윤리규범/윤리규범-02.png') no-repeat;
+}
+a.list.folded.section-one.ethics.third {
+  width: 95px;
+  height: 13px;
+  background: url('./images/윤리규범/윤리규범-03.png') no-repeat;
+}
+a.list.folded.section-one.ethics.fourth {
+  width: 84px;
+  height: 13px;
+  background: url('./images/윤리규범/윤리규범-04.png') no-repeat;
+}
+
+.list.folded.section-two.ethics {
+  width: 149px;
+  height: 14px;
+}
+
+li.list.folded.section-two.ethics.second,
+li.list.folded.section-two.ethics.third,
+li.list.folded.section-two.ethics.fifth,
+li.list.folded.section-two.ethics.sixth {
+  margin-left: 65px;
+}
+
+a.list.folded.section-two.ethics.first {
+  background: url('./images/윤리규범/실천지침-01.png') no-repeat;
+}
+a.list.folded.section-two.ethics.second {
+  background: url('./images/윤리규범/실천지침-02.png') no-repeat;
+}
+a.list.folded.section-two.ethics.third {
+  background: url('./images/윤리규범/실천지침-03.png') no-repeat;
+}
+a.list.folded.section-two.ethics.fourth {
+  background: url('./images/윤리규범/실천지침-04.png') no-repeat;
+}
+a.list.folded.section-two.ethics.fifth {
+  background: url('./images/윤리규범/실천지침-05.png') no-repeat;
+}
+a.list.folded.section-two.ethics.sixth {
+  background: url('./images/윤리규범/실천지침-06.png') no-repeat;
+}
+
+.list.unfolded {
+  font-family: 'ydiywebdotum';
+  font-size: 11px;
+  line-height: 16px;
+  color: #949494;
+}
+
+section.list.folded.second {
+  margin-top: 22px;
+}
+
+#section-one,
+#section-two,
+h2#section-one_list-one,
+h2#section-one_list-two,
+h2#section-two_list-one,
+h2#section-two_list-two,
+h2#section-two_list-one_subheading {
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+h2#section-two_list-one,
+h2#section-two_list-two {
+  color: orange;
+}
+
+.indent.first.ethics,
+.indent.second.ethics {
+  padding-left: 9px;
 }
 
 /* 
@@ -528,14 +695,14 @@ section.hr {
   font-size: 0;
 }
 
-section.first,
-section.second {
+section.first.hr,
+section.second.hr {
   position: relative;
 }
 
-section.second,
-section.third,
-section.fourth {
+section.second.hr,
+section.third.hr,
+section.fourth.hr {
   background: url('./images/인사관리/dotted-horizontal-line.png') no-repeat;
   margin-top: 20px;
   padding-top: 20px;
@@ -625,7 +792,7 @@ h2.description.hr {
 */
 
 h1.signup {
-  background: url('./images/인사관리/h1-title.png') no-repeat;
+  background: url('./images/회원가입/h1-title.png') no-repeat;
   /* border-bottom: 1px solid #efefef; */
   height: 18px;
 }
