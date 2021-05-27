@@ -933,7 +933,58 @@ strong.talent {
   background: url('./images/인재상/strong_talent.png') no-repeat;
 }
 
+.diagram-container.talent {
+  position: relative;
+  margin-top: 34px;
+  min-height: 455px;
+  background: url('./images/인재상/main-board.png') no-repeat;
+}
+
+dl.talent {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+dl.first.talent {
+  left: 45px;
+  top: 31px;
+}
+
+dl.second.talent {
+  left: 493px;
+  top: 33px;
+}
+
+dl.third.talent {
+  left: 22px;
+  top: 281px;
+}
+
+dl.fourth.talent {
+  left: 483px;
+  top: 281px;
+}
+
+dt.talent {
+  line-height: 20px;
+  color: #ff8c25;
+  font-size: 17.5px;
+  font-weight: bold;
+  font-family: 'ydiy340';
+  letter-spacing: -2px;
+}
+
+dd.talent {
+  margin-top: 27px;
+  line-height: 15px;
+  color: #636363;
+  font-size: 12.93px;
+  letter-spacing: -1.6px;
+}
+
 .talent_button-container {
+  margin-top: 20px;
   font-size: 0;
 }
 
