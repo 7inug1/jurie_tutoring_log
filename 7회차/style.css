@@ -503,21 +503,20 @@ p.ethics {
 인사관리
 */
 
-div.innerbox.head.hr {
+.innerbox.head.hr {
   margin-top: 28px;
 }
 
-div.innerbox.body.hr {
+.innerbox.body.hr {
   padding: 30px;
 }
 
 h1.hr {
   background: url('./images/인사관리/h1-title.png') no-repeat;
-  /* border-bottom: 1px solid #efefef; */
   height: 18px;
 }
 
-p.hr {
+p.head.hr {
   display: inline-block;
   margin-top: 28px;
   min-width: 455px;
@@ -525,47 +524,66 @@ p.hr {
   background: url('./images/인사관리/paragraph_hr.png') no-repeat;
 }
 
-.section {
-  /* position: relative; */
+section.hr {
+  font-size: 0;
+}
+
+section.first,
+section.second {
+  position: relative;
 }
 
 section.second,
 section.third,
 section.fourth {
-  /* position: relative; */
   background: url('./images/인사관리/dotted-horizontal-line.png') no-repeat;
   margin-top: 20px;
   padding-top: 20px;
 }
 
-.section.second {
-}
-
 h2.thumbnail {
   display: inline-block;
-  position: relative;
+  /* position: relative; */
   width: 65px;
   height: 65px;
-  font-size: 20px;
-  color: white;
-  text-align: center;
+  /* font-size: 20px; */
+  /* color: white; */
+  /* text-align: center; */
   vertical-align: top;
 }
-h2.first,
-h2.third {
-  background-color: #ffba00;
+
+h2.thumbnail.first {
+  background: url('./images/인사관리/thumbnail_first.png');
 }
-h2.second,
-h2.fourth {
-  background-color: #ff9500;
+h2.thumbnail.second {
+  background: url('./images/인사관리/thumbnail_second.png');
 }
-span.thumbnail.text {
+h2.thumbnail.third {
+  background: url('./images/인사관리/thumbnail_third.png');
+}
+
+h2.thumbnail.fourth {
+  background: url('./images/인사관리/thumbnail_fourth.png');
+}
+
+/* span.thumbnail.text {
   position: absolute;
   top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
   margin-top: -16.25px;
+} */
+
+.description-container.first.hr {
+  position: absolute;
+  top: 50%;
+  margin-top: -16.25px;
+}
+
+.description-container.second.hr {
+  position: absolute;
+  top: 50%;
 }
 
 .description.fourth.hr {
@@ -582,30 +600,16 @@ span.thumbnail.text {
   letter-spacing: -0.4px;
   /* margin-left: 87px; */
   padding-left: 22px;
-  /* line-height: 15.5px; */
+  line-height: 13px;
 }
 
-.description-container_hr.second,
-.description-container_hr.third,
-.description-container_hr.fourth {
-  /* height: 1px; */
+h2.description.hr,
+p.description.hr {
+  display: inline-block;
 }
 
-.description-container_hr.first {
-}
-.description_hr.first,
-.description_hr.second {
-  /* position: absolute;
-  top: 50%; */
-  /* margin-top: -16.25px; */
-}
-.description-container_hr.second {
-}
-
-.description-container_hr.third {
-}
-
-.description-container_hr.fourth {
+h2.description.hr {
+  vertical-align: top;
 }
 
 /* 
