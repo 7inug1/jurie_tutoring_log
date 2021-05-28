@@ -158,7 +158,10 @@ table {
   font-family: 'FuturaBT';
   src: url('./font/FuturaBT/futuraMediumBT.woff') format('woff');
   font-family: 'YDIWebDotum';
-  src: url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
+  src: url('./font/ydiywebdotum/YDIWebDotum.eot?#iefix')
+      format('embedded-opentype'),
+    , url('./font/ydiywebdotum/YDIWebDotum.woff2') format('woff2'),
+    url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
 }
 
 body {
@@ -181,7 +184,7 @@ body {
 }
 
 .outerbox.body {
-  padding: 59px 62px;
+  padding: 59px 60px;
   background: url('./images/outer_border_body.png') repeat-y;
 }
 
@@ -196,7 +199,6 @@ body {
 }
 
 .innerbox.body {
-  /* background: url('./images/채용안내/inner_box_body.png'); */
   border-left: 3px solid #efefef;
   border-right: 3px solid #efefef;
 }
@@ -225,10 +227,10 @@ body {
   letter-spacing: -0.4px;
 }
 
-.location-text,
+.location-text.second,
+.location-text.third,
 .location-text.last {
-  padding-left: 10px;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 .location-text.last {
@@ -250,8 +252,6 @@ body {
   position: relative;
   padding: 4px 0;
   background: url('./images/heading-underline.png') bottom no-repeat;
-  /* padding-bottom: 4px; */
-  /* border-bottom: 1px solid #efefef; */
 }
 
 /* 
@@ -377,23 +377,6 @@ div.footer.employment {
   margin-top: 35px;
 }
 
-ul.footer.employment {
-  line-height: 18.58px;
-  color: #9b9b9b;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: -0.8px;
-}
-
-li.footer.employment::before {
-  display: inline-block;
-  content: '';
-  padding: 0px 5px 5px 0px;
-  width: 4px;
-  height: 2px;
-  background: url('./images/채용안내/dash.png') no-repeat;
-}
-
 div.process.employment {
   margin-top: 12px;
   padding-left: 28px;
@@ -401,7 +384,6 @@ div.process.employment {
 }
 
 h2.process.employment {
-  /* width: 610px; */
   color: #f7941e;
   font-size: 18px;
   font-weight: normal;
@@ -409,13 +391,12 @@ h2.process.employment {
 }
 
 div.list-container.employment {
-  padding: 0;
+  margin-top: 12px;
+  padding: 14px 0 0 0;
   background: url('./images/dotted-horizontal-line.png') repeat-x;
 }
 
 ul.process.employment {
-  margin-top: 12px;
-  padding-top: 14px;
   font-size: 0;
 }
 
@@ -441,7 +422,7 @@ li.process.fourth.employment::after {
   content: '';
   display: inline-block;
   top: 50%;
-  left: 108px;
+  left: 108.5px;
   margin-top: -6px;
   width: 9px;
   height: 12px;
@@ -465,6 +446,24 @@ span.process.number.employment {
 span.process.text.employment {
   font-size: 16px;
 }
+
+li.footer.employment::before {
+  display: inline-block;
+  content: '';
+  padding: 0px 5px 5px 0px;
+  width: 4px;
+  height: 2px;
+  background: url('./images/채용안내/dash.png') no-repeat;
+}
+
+li.footer.employment {
+  line-height: 18.58px;
+  color: #9b9b9b;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: -0.8px;
+}
+
 /* 
 윤리규범
 #### ##    ## ########  ######## ##     ##     #######  
@@ -491,7 +490,6 @@ body.ethics {
 
 h1.ethics {
   background: url('./images/윤리규범/h1-title.png') no-repeat;
-  /* border-bottom: 1px solid #efefef; */
   height: 19px;
 }
 
@@ -515,11 +513,11 @@ button.second.ethics {
   font-size: 15px;
   border: none;
   color: white;
-  background-color: #c1c1c1;
+  background: #c1c1c1;
   cursor: pointer;
 }
 button.active.ethics {
-  background: #ff9500 0.5% 50% url('./images/윤리규범/white-bar.png') no-repeat;
+  background: #ff9500 url('./images/윤리규범/white-bar.png') 0.5% 50% no-repeat;
 }
 
 button.first.ethics {
@@ -543,9 +541,7 @@ a:hover {
 
 .list.folded.heading.ethics {
   line-height: 18.58px;
-  /* padding-bottom: 8px; */
   color: #9b9b9b;
-  /* background: 0px 23px url('./images/dotted-horizontal-line.png') repeat-x; */
   letter-spacing: -0.8px;
 }
 
@@ -559,8 +555,13 @@ ul.list.folded.ethics {
   display: block;
   margin-top: 16px;
   padding: 15px 0;
+  font-size: 0;
   background: #f4f4f4;
   text-align: center;
+}
+
+li.list.folded.ethics {
+  height: 14px;
 }
 
 .list.folded.ethics {
@@ -572,6 +573,14 @@ li.list.folded.section-one.second.ethics,
 li.list.folded.section-one.third.ethics,
 li.list.folded.section-one.fourth.ethics {
   margin-left: 36px;
+}
+
+ul.list.folded.first.ethics {
+  height: 14px;
+}
+
+ul.list.folded.second.ethics {
+  height: 36px;
 }
 
 a.list.folded.section-one.ethics.first {
@@ -637,7 +646,14 @@ section.list.folded.second {
   margin-top: 22px;
 }
 
-#section-one,
+section.one.ethics {
+  margin-top: 22px;
+}
+
+h2#section-one {
+  font-weight: bolder;
+}
+
 #section-two,
 h2#section-one_list-one,
 h2#section-one_list-two,
@@ -645,7 +661,7 @@ h2#section-two_list-one,
 h2#section-two_list-two,
 h2#section-two_list-one_subheading {
   margin-top: 22px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 h2#section-two_list-one,
@@ -684,7 +700,6 @@ h1.hr {
 }
 
 p.head.hr {
-  display: inline-block;
   margin-top: 28px;
   min-width: 455px;
   height: 39px;
@@ -710,12 +725,8 @@ section.fourth.hr {
 
 h2.thumbnail {
   display: inline-block;
-  /* position: relative; */
   width: 65px;
   height: 65px;
-  /* font-size: 20px; */
-  /* color: white; */
-  /* text-align: center; */
   vertical-align: top;
 }
 
@@ -732,15 +743,6 @@ h2.thumbnail.third {
 h2.thumbnail.fourth {
   background: url('./images/인사관리/thumbnail_fourth.png');
 }
-
-/* span.thumbnail.text {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin-top: -16.25px;
-} */
 
 .description-container.first.hr {
   position: absolute;
@@ -760,13 +762,11 @@ h2.thumbnail.fourth {
 .description-container.hr {
   display: inline-block;
   position: relative;
-
   font-size: 11px;
   font-family: 'dotum', sans-serif;
   color: #9b9b9b;
   letter-spacing: -0.4px;
-  /* margin-left: 87px; */
-  padding-left: 22px;
+  margin-left: 22px;
   line-height: 13px;
 }
 
@@ -791,9 +791,12 @@ h2.description.hr {
 회원가입
 */
 
+.h1-wrapper.signup {
+  padding: 10px 0;
+}
+
 h1.signup {
   background: url('./images/회원가입/h1-title.png') no-repeat;
-  /* border-bottom: 1px solid #efefef; */
   height: 18px;
 }
 
@@ -810,13 +813,13 @@ p.signup.top {
   position: absolute;
   top: 50%;
   margin-top: -7.5px;
-  margin-left: 117px;
+  left: 117px;
   min-width: 318px;
   height: 15px;
   background: url('./images/회원가입/paragraph_top_signup.png') no-repeat;
 }
 
-img.signup {
+div.body.signup {
   margin-top: 36px;
 }
 
@@ -827,15 +830,6 @@ form.signup {
 fieldset.innerbox.signup {
   padding-top: 22px;
 }
-
-/* h2.fieldset.title.signup,
-div.fieldset.content.signup {
-  padding: 0 19px;
-} */
-
-/* span.fieldset.wrapper {
-  padding: 23px 0 0 19px;
-} */
 
 h2.fieldset.title.signup {
   color: #f7941e;
@@ -863,19 +857,9 @@ span.label.signup {
 
 h2.fieldset.title.signup,
 div.fieldset.content.signup {
-  /* padding-left: 19px; */
   width: 623px;
   margin: 8px auto 12px auto;
-  /* padding-top: 20px; */
-  /* -right: 20px; */
 }
-
-/* span.label.signup {
-  color: #949494;
-  font-size: 11px;
-  font-family: 'YDIWebDotum';
-  letter-spacing: 0.8px;
-} */
 
 fieldset.button-container {
   margin-top: 29px;
@@ -987,7 +971,6 @@ input.signup {
   left: -22px;
   top: 50%;
   margin-top: -4.75px;
-  /* margin: 0; */
 }
 
 span.label.signup {
@@ -1070,6 +1053,7 @@ dd.talent {
   line-height: 15px;
   color: #636363;
   font-size: 12.93px;
+  font-family: 'YDIYGO330';
   letter-spacing: -1.6px;
 }
 
