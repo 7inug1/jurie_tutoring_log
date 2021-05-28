@@ -810,9 +810,75 @@ p.signup.top {
   position: absolute;
   top: 50%;
   margin-top: -7.5px;
+  margin-left: 117px;
   min-width: 318px;
   height: 15px;
   background: url('./images/회원가입/paragraph_top_signup.png') no-repeat;
+}
+
+img.signup {
+  margin-top: 36px;
+}
+
+form.signup {
+  margin-top: 43px;
+}
+
+fieldset.innerbox.signup {
+  padding-top: 22px;
+}
+
+/* h2.fieldset.title.signup,
+div.fieldset.content.signup {
+  padding: 0 19px;
+} */
+
+/* span.fieldset.wrapper {
+  padding: 23px 0 0 19px;
+} */
+
+h2.fieldset.title.signup {
+  color: #f7941e;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+}
+
+div.fieldset.content.signup {
+  padding-top: 20px;
+  margin-top: 8px;
+  background: url('./images/dotted-horizontal-line.png') repeat-x;
+  line-height: 13px;
+}
+
+div.fieldset.content.signup,
+span.label.signup {
+  max-height: 188px;
+  color: #949494;
+  font-size: 11px;
+  font-family: 'YDIWebDotum';
+  overflow-y: scroll;
+  letter-spacing: 0.8px;
+}
+
+h2.fieldset.title.signup,
+div.fieldset.content.signup {
+  /* padding-left: 19px; */
+  width: 623px;
+  margin: 8px auto 12px auto;
+  /* padding-top: 20px; */
+  /* -right: 20px; */
+}
+
+/* span.label.signup {
+  color: #949494;
+  font-size: 11px;
+  font-family: 'YDIWebDotum';
+  letter-spacing: 0.8px;
+} */
+
+fieldset.button-container {
+  margin-top: 29px;
 }
 
 .button-container.signup {
@@ -906,6 +972,30 @@ fieldset.third {
 fieldset.second,
 fieldset.third {
   margin-top: 23px;
+}
+
+div.label-container {
+  text-align: right;
+}
+
+label.label {
+  position: relative;
+}
+
+input.signup {
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  margin-top: -4.75px;
+  /* margin: 0; */
+}
+
+span.label.signup {
+  padding-right: 12px;
+}
+
+.indent.top {
+  margin-top: 26px;
 }
 /* 
 인재상
