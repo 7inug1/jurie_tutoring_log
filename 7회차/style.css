@@ -160,12 +160,16 @@ table {
   font-family: 'YDIWebDotum';
   src: url('./font/ydiywebdotum/YDIWebDotum.eot?#iefix')
       format('embedded-opentype'),
-    , url('./font/ydiywebdotum/YDIWebDotum.woff2') format('woff2'),
+    url('./font/ydiywebdotum/YDIWebDotum.woff2') format('woff2'),
     url('./font/ydiywebdotum/YDIWebDotum.woff') format('woff');
 }
 
 body {
-  margin: 20px 0;
+  margin: 150px 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -203,11 +207,6 @@ body {
   border-right: 3px solid #efefef;
 }
 
-.label-container {
-  padding-bottom: 3px;
-  background: url('./images/채용안내/inner_box_headtail.png') repeat-y;
-}
-
 .location {
   display: inline-block;
   position: absolute;
@@ -217,9 +216,7 @@ body {
   font-size: 0;
 }
 
-.location-text.first,
-.location-text,
-.location-text.last {
+.location-text {
   color: #c8c8c8;
   font-size: 11px;
   font-family: '돋움', Dotum;
@@ -279,11 +276,11 @@ strong.employment {
   background: url('./images/채용안내/strong_head.png') no-repeat;
 }
 
-.innerbox.head.employment {
+div.innerbox.head.employment {
   margin-top: 30px;
 }
 
-.innerbox.body.employment {
+div.innerbox.body.employment {
   padding-top: 35px;
   padding-bottom: 33px;
   font-size: 0;
@@ -300,8 +297,8 @@ div.introduction.employment {
 
 p.introduction.employment {
   padding-top: 133px;
-  color: #9b9b9b;
   line-height: 20px;
+  color: #9b9b9b;
   font-size: 15px;
   background: url('./images/채용안내/haitai-logo.png') no-repeat;
   letter-spacing: -2;
@@ -333,9 +330,12 @@ dd.employment {
   letter-spacing: -1.56px;
 }
 
-.button.head.employment {
-  display: inline-block;
+div.button-container.employment {
   margin-top: 9px;
+}
+
+button.head.employment {
+  display: inline-block;
   padding: 0 0 0 4px;
   height: 22px;
   border: none;
@@ -344,7 +344,7 @@ dd.employment {
   cursor: pointer;
 }
 
-.button.tail.employment {
+span.button.tail.employment {
   display: inline-block;
   padding-right: 4px;
   height: 22px;
@@ -352,7 +352,7 @@ dd.employment {
   vertical-align: top;
 }
 
-.button.body.employment {
+span.button.body.employment {
   display: inline-block;
   position: relative;
   min-width: 67px;
@@ -361,7 +361,7 @@ dd.employment {
   background: url('./images/채용안내/button_body.png') repeat-x;
 }
 
-.button.text.employment {
+span.button.text.employment {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -422,7 +422,7 @@ li.process.fourth.employment::after {
   content: '';
   display: inline-block;
   top: 50%;
-  left: 108.5px;
+  left: 108px;
   margin-top: -6px;
   width: 9px;
   height: 12px;
@@ -480,11 +480,11 @@ body.ethics {
   min-height: 2000px;
 }
 
-.innerbox.head.ethics {
+div.innerbox.head.ethics {
   background: url('./images/윤리규범/orange-horizontal-line.png') no-repeat;
 }
 
-.innerbox.body.ethics {
+div.innerbox.body.ethics {
   padding: 21px;
 }
 
@@ -501,7 +501,7 @@ p.ethics {
   background: url('./images/윤리규범/paragraph_head.png') no-repeat;
 }
 
-.tabs.ethics {
+div.body_ethics {
   margin-top: 31px;
   font-size: 0;
 }
@@ -516,35 +516,23 @@ button.second.ethics {
   background: #c1c1c1;
   cursor: pointer;
 }
+
 button.active.ethics {
   background: #ff9500 url('./images/윤리규범/white-bar.png') 0.5% 50% no-repeat;
-}
-
-button.first.ethics {
 }
 
 button.second.ethics {
   margin-left: 1px;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: black;
-}
-
-.list.folded.heading:hover {
-  color: black;
-}
-
-.list.folded.heading.ethics {
+span.list.folded.heading.ethics {
   line-height: 18.58px;
   color: #9b9b9b;
+  font-size: 15px;
   letter-spacing: -0.8px;
 }
-
+/* ----------------------------------------------------- */
+/* list folded general */
 h2.list.folded.ethics {
   display: block;
   padding-bottom: 8px;
@@ -555,117 +543,119 @@ ul.list.folded.ethics {
   display: block;
   margin-top: 16px;
   padding: 15px 0;
+  line-height: 16px;
   font-size: 0;
   background: #f4f4f4;
   text-align: center;
 }
 
-li.list.folded.ethics {
+li.list.folded.ethics,
+a.list.folded.ethics {
+  display: inline-block;
   height: 14px;
 }
 
-.list.folded.ethics {
-  display: inline-block;
-  line-height: 16px;
+/* list folded first section */
+ul.list.folded.first.ethics {
+  height: 14px;
 }
 
-li.list.folded.section-one.second.ethics,
-li.list.folded.section-one.third.ethics,
-li.list.folded.section-one.fourth.ethics {
+li.list.folded.first-section.second.ethics,
+li.list.folded.first-section.third.ethics,
+li.list.folded.first-section.fourth.ethics {
   margin-left: 36px;
 }
 
-ul.list.folded.first.ethics {
+a.list.folded.first-section.first.ethics {
+  width: 69px;
   height: 14px;
+  background: url('./images/윤리규범/윤리규범-01.png') no-repeat;
+}
+a.list.folded.first-section.second.ethics {
+  width: 222px;
+  height: 13px;
+  background: url('./images/윤리규범/윤리규범-02.png') no-repeat;
+}
+a.list.folded.first-section.third.ethics {
+  width: 95px;
+  height: 13px;
+  background: url('./images/윤리규범/윤리규범-03.png') no-repeat;
+}
+a.list.folded.first-section.fourth.ethics {
+  width: 84px;
+  height: 13px;
+  background: url('./images/윤리규범/윤리규범-04.png') no-repeat;
+}
+
+/* ---------------------------------------- */
+/* list folded second section */
+section.list.folded.second.ethics {
+  margin-top: 22px;
 }
 
 ul.list.folded.second.ethics {
   height: 36px;
 }
 
-a.list.folded.section-one.ethics.first {
-  width: 69px;
-  height: 14px;
-  background: url('./images/윤리규범/윤리규범-01.png') no-repeat;
-}
-a.list.folded.section-one.ethics.second {
-  width: 222px;
-  height: 13px;
-  background: url('./images/윤리규범/윤리규범-02.png') no-repeat;
-}
-a.list.folded.section-one.ethics.third {
-  width: 95px;
-  height: 13px;
-  background: url('./images/윤리규범/윤리규범-03.png') no-repeat;
-}
-a.list.folded.section-one.ethics.fourth {
-  width: 84px;
-  height: 13px;
-  background: url('./images/윤리규범/윤리규범-04.png') no-repeat;
-}
-
-.list.folded.section-two.ethics {
-  width: 149px;
-  height: 14px;
-}
-
-li.list.folded.section-two.ethics.second,
-li.list.folded.section-two.ethics.third,
-li.list.folded.section-two.ethics.fifth,
-li.list.folded.section-two.ethics.sixth {
+li.list.folded.second-section.second.ethics,
+li.list.folded.second-section.third.ethics,
+li.list.folded.second-section.fifth.ethics,
+li.list.folded.second-section.sixth.ethics {
   margin-left: 65px;
 }
 
-a.list.folded.section-two.ethics.first {
+a.list.folded.second-section.ethics {
+  width: 149px;
+}
+
+a.list.folded.second-section.first.ethics {
   background: url('./images/윤리규범/실천지침-01.png') no-repeat;
 }
-a.list.folded.section-two.ethics.second {
+a.list.folded.second-section.second.ethics {
   background: url('./images/윤리규범/실천지침-02.png') no-repeat;
 }
-a.list.folded.section-two.ethics.third {
+a.list.folded.second-section.third.ethics {
   background: url('./images/윤리규범/실천지침-03.png') no-repeat;
 }
-a.list.folded.section-two.ethics.fourth {
+a.list.folded.second-section.fourth.ethics {
   background: url('./images/윤리규범/실천지침-04.png') no-repeat;
 }
-a.list.folded.section-two.ethics.fifth {
+a.list.folded.second-section.fifth.ethics {
   background: url('./images/윤리규범/실천지침-05.png') no-repeat;
 }
-a.list.folded.section-two.ethics.sixth {
+a.list.folded.second-section.sixth.ethics {
   background: url('./images/윤리규범/실천지침-06.png') no-repeat;
 }
 
-.list.unfolded {
+/* ------------------------------------------------------ */
+/* list unfolded */
+div.list.unfolded.ethics {
   font-family: 'ydiywebdotum';
   font-size: 11px;
   line-height: 16px;
   color: #949494;
 }
 
-section.list.folded.second {
+div.list.unfolded.ethics {
   margin-top: 22px;
 }
 
-section.one.ethics {
-  margin-top: 22px;
-}
-
-h2#section-one {
+h2#first-section {
   font-weight: bolder;
 }
 
-#section-two,
-h2#section-one_list-one,
-h2#section-one_list-two,
-h2#section-two_list-one,
-h2#section-two_list-two,
-h2#section-two_list-one_subheading {
+#second-section,
+h2#first-section_list-one,
+h2#first-section_list-two,
+h2#second-section_list-one,
+h2#second-section_list-two,
+h2#second-section_list-one_subheading {
   margin-top: 22px;
   font-weight: bolder;
 }
 
-h2#section-two_list-one,
-h2#section-two_list-two {
+h2#second-section_list-one,
+h2#second-section_list-two {
   color: orange;
 }
 
@@ -686,11 +676,11 @@ h2#section-two_list-two {
 인사관리
 */
 
-.innerbox.head.hr {
+div.body_hr {
   margin-top: 28px;
 }
 
-.innerbox.body.hr {
+div.innerbox.body.hr {
   padding: 30px;
 }
 
@@ -723,40 +713,24 @@ section.fourth.hr {
   padding-top: 20px;
 }
 
-h2.thumbnail {
+h2.thumbnail.hr {
   display: inline-block;
   width: 65px;
   height: 65px;
   vertical-align: top;
 }
 
-h2.thumbnail.first {
+h2.thumbnail.first.hr {
   background: url('./images/인사관리/thumbnail_first.png');
 }
-h2.thumbnail.second {
+h2.thumbnail.second.hr {
   background: url('./images/인사관리/thumbnail_second.png');
 }
-h2.thumbnail.third {
+h2.thumbnail.third.hr {
   background: url('./images/인사관리/thumbnail_third.png');
 }
-
-h2.thumbnail.fourth {
+h2.thumbnail.fourth.hr {
   background: url('./images/인사관리/thumbnail_fourth.png');
-}
-
-.description-container.first.hr {
-  position: absolute;
-  top: 50%;
-  margin-top: -16.25px;
-}
-
-.description-container.second.hr {
-  position: absolute;
-  top: 50%;
-}
-
-.description.fourth.hr {
-  margin-top: 24px;
 }
 
 .description-container.hr {
@@ -768,6 +742,21 @@ h2.thumbnail.fourth {
   letter-spacing: -0.4px;
   margin-left: 22px;
   line-height: 13px;
+}
+
+div.description-container.first.hr {
+  position: absolute;
+  top: 50%;
+  margin-top: -16.25px;
+}
+
+div.description-container.second.hr {
+  position: absolute;
+  top: 50%;
+}
+
+ul.description.fourth.hr {
+  margin-top: 24px;
 }
 
 h2.description.hr,
@@ -791,7 +780,7 @@ h2.description.hr {
 회원가입
 */
 
-.h1-wrapper.signup {
+div.h1-wrapper.signup {
   padding: 10px 0;
 }
 
@@ -800,7 +789,7 @@ h1.signup {
   height: 18px;
 }
 
-p.signup.bottom {
+p.head.bottom.signup {
   display: inline-block;
   margin-top: 20px;
   min-width: 664px;
@@ -808,7 +797,7 @@ p.signup.bottom {
   background: url('./images/회원가입/paragraph_bottom_signup.png') no-repeat;
 }
 
-p.signup.top {
+p.head.top.signup {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -819,7 +808,7 @@ p.signup.top {
   background: url('./images/회원가입/paragraph_top_signup.png') no-repeat;
 }
 
-div.body.signup {
+div.body_signup {
   margin-top: 36px;
 }
 
@@ -861,19 +850,19 @@ div.fieldset.content.signup {
   margin: 8px auto 12px auto;
 }
 
-fieldset.button-container {
+fieldset.button-container.signup {
   margin-top: 29px;
 }
 
-.button-container.signup {
+fieldset.button-container.signup {
   font-size: 0;
 }
 
-.button-wrapper.signup {
+div.button-wrapper.signup {
   text-align: center;
 }
 
-.button.one.head.signup {
+button.button.one.head.signup {
   display: inline-block;
   padding: 0 0 0 3px;
   height: 36px;
@@ -881,14 +870,14 @@ fieldset.button-container {
   border: none;
   cursor: pointer;
 }
-.button.one.tail.signup {
+span.button.one.tail.signup {
   display: inline-block;
   padding-right: 4px;
   height: 36px;
   background: url('./images/회원가입/orange-button_tail.png') right no-repeat;
   vertical-align: top;
 }
-.button.one.body.signup {
+span.button.one.body.signup {
   display: inline-block;
   position: relative;
   min-width: 72px;
@@ -899,21 +888,21 @@ fieldset.button-container {
   vertical-align: top;
 }
 
-.button.one.icon.signup {
+span.button.one.icon.signup {
   display: inline-block;
   width: 15px;
   height: 14px;
   background: url('./images/회원가입/orange-button_icon.png') no-repeat;
 }
 
-.button.one.text.signup {
+span.button.one.text.signup {
   color: white;
   margin-left: 6px;
   font-size: 15px;
   letter-spacing: -2px;
 }
 
-.button.two.head.signup {
+button.button.two.head.signup {
   display: inline-block;
   margin-left: 13px;
   padding: 0 0 0 3px;
@@ -922,14 +911,14 @@ fieldset.button-container {
   border: none;
   cursor: pointer;
 }
-.button.two.tail.signup {
+span.button.two.tail.signup {
   display: inline-block;
   padding-right: 4px;
   height: 36px;
   background: url('./images/회원가입/white-button_tail.png') right no-repeat;
   vertical-align: top;
 }
-.button.two.body.signup {
+span.button.two.body.signup {
   display: inline-block;
   position: relative;
   min-width: 72px;
@@ -940,29 +929,31 @@ fieldset.button-container {
   vertical-align: top;
 }
 
-.button.two.text.signup {
+span.button.two.text.signup {
   color: #a0a0a0;
   font-size: 15px;
   letter-spacing: -2px;
 }
 
-fieldset.first,
-fieldset.second,
-fieldset.third {
+fieldset.first.signup,
+fieldset.second.signup,
+fieldset.third.signup {
   border-left: 3px solid #ececec;
   border-right: 3px solid #ececec;
 }
 
-fieldset.second,
-fieldset.third {
+fieldset.second.signup,
+fieldset.third.signup {
   margin-top: 23px;
 }
 
-div.label-container {
+div.label-container.signup {
+  min-height: 19px;
+  background: url('./images/채용안내/inner_box_headtail.png') repeat-y;
   text-align: right;
 }
 
-label.label {
+label.label.signup {
   position: relative;
 }
 
@@ -977,7 +968,7 @@ span.label.signup {
   padding-right: 12px;
 }
 
-.indent.top {
+.margin.top.signup {
   margin-top: 26px;
 }
 /* 
@@ -994,7 +985,6 @@ span.label.signup {
 
 h1.talent {
   background: url('./images/인재상/h1-title.png') no-repeat;
-  /* border-bottom: 1px solid #efefef; */
   height: 19px;
 }
 
@@ -1006,7 +996,7 @@ strong.talent {
   background: url('./images/인재상/strong_talent.png') no-repeat;
 }
 
-.diagram-container.talent {
+div.diagram-container.talent {
   position: relative;
   margin-top: 34px;
   min-height: 455px;
@@ -1057,16 +1047,16 @@ dd.talent {
   letter-spacing: -1.6px;
 }
 
-.talent_button-container {
+div.button-container.talent {
   margin-top: 20px;
   font-size: 0;
 }
 
-.talent_button-wrapper {
+div.button-wrapper.talent {
   text-align: center;
 }
 
-button.talent_button-one_head {
+button.button-one_head.talent {
   display: inline-block;
   padding: 0 0 0 3px;
   height: 36px;
@@ -1075,7 +1065,7 @@ button.talent_button-one_head {
   cursor: pointer;
 }
 
-.talent_button-one_tail {
+span.button-one_tail.talent {
   display: inline-block;
   padding-right: 4px;
   height: 36px;
@@ -1083,7 +1073,7 @@ button.talent_button-one_head {
   vertical-align: top;
 }
 
-.talent_button-one_body {
+span.button-one_body.talent {
   display: inline-block;
   position: relative;
   min-width: 113px;
@@ -1093,19 +1083,27 @@ button.talent_button-one_head {
   vertical-align: top;
 }
 
-.talent_button-one_icon {
+span.button-one_body.talent,
+span.button-two_body.talent {
+  display: inline-block;
+  height: 36px;
+  font-size: 0;
+}
+
+span.button-one_icon.talent {
   display: inline-block;
   width: 15px;
   height: 14px;
   background: url('./images/인재상/orange-button-icon.png') no-repeat;
 }
 
-.talent_button-one_text {
+span.button-one_text.talent {
+  margin-left: 9px;
   color: white;
   font-size: 15px;
 }
 
-button.talent_button-two_head {
+button.button-two_head.talent {
   display: inline-block;
   margin-left: 4px;
   padding: 0 0 0 3px;
@@ -1115,7 +1113,7 @@ button.talent_button-two_head {
   cursor: pointer;
 }
 
-.talent_button-two_tail {
+span.button-two_tail.talent {
   display: inline-block;
   padding-right: 4px;
   height: 36px;
@@ -1123,7 +1121,7 @@ button.talent_button-two_head {
   vertical-align: top;
 }
 
-.talent_button-two_body {
+span.button-two_body.talent {
   display: inline-block;
   position: relative;
   min-width: 150px;
@@ -1134,14 +1132,15 @@ button.talent_button-two_head {
   vertical-align: top;
 }
 
-.talent_button-two_icon {
+span.button-two_icon.talent {
   display: inline-block;
   width: 15px;
   height: 14px;
   background: url('./images/인재상/white-button-icon.png') no-repeat;
 }
 
-.talent_button-two_text {
+span.button-two_text.talent {
+  margin-left: 4px;
   color: #ff9600;
   font-size: 15px;
 }
