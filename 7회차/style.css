@@ -172,6 +172,15 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  background: url('./images/orange-circle.png') 0px 0.5px no-repeat;
+  height: 18px;
+}
+
+h1 > img {
+  padding-left: 26px;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 790px;
@@ -188,7 +197,7 @@ a {
 }
 
 .outerbox.body {
-  padding: 59px 60px;
+  padding: 59px;
   background: url('./images/outer_border_body.png') repeat-y;
 }
 
@@ -263,17 +272,13 @@ a {
 채용안내
 */
 
-h1.employment {
-  background: url('./images/채용안내/h1-title.png') no-repeat;
-  height: 18px;
-}
-
 strong.employment {
   display: inline-block;
   margin-top: 30px;
-  min-width: 658px;
-  height: 19px;
-  background: url('./images/채용안내/strong_head.png') no-repeat;
+}
+
+strong.employment > img {
+  max-width: 100%;
 }
 
 div.innerbox.head.employment {
@@ -488,17 +493,13 @@ div.innerbox.body.ethics {
   padding: 21px;
 }
 
-h1.ethics {
-  background: url('./images/윤리규범/h1-title.png') no-repeat;
-  height: 19px;
-}
-
 p.ethics {
   display: inline-block;
   margin-top: 34px;
-  min-width: 670px;
-  height: 70px;
-  background: url('./images/윤리규범/paragraph_head.png') no-repeat;
+}
+
+p.ethics > img {
+  max-width: 100%;
 }
 
 div.body_ethics {
@@ -518,7 +519,7 @@ button.second.ethics {
 }
 
 button.active.ethics {
-  background: #ff9500 url('./images/윤리규범/white-bar.png') 0.5% 50% no-repeat;
+  background: #ff9500 url('./images/윤리규범/white-bar.png') 0% 50% no-repeat;
 }
 
 button.second.ethics {
@@ -566,27 +567,6 @@ li.list.folded.first-section.fourth.ethics {
   margin-left: 36px;
 }
 
-a.list.folded.first-section.first.ethics {
-  width: 69px;
-  height: 14px;
-  background: url('./images/윤리규범/윤리규범-01.png') no-repeat;
-}
-a.list.folded.first-section.second.ethics {
-  width: 222px;
-  height: 13px;
-  background: url('./images/윤리규범/윤리규범-02.png') no-repeat;
-}
-a.list.folded.first-section.third.ethics {
-  width: 95px;
-  height: 13px;
-  background: url('./images/윤리규범/윤리규범-03.png') no-repeat;
-}
-a.list.folded.first-section.fourth.ethics {
-  width: 84px;
-  height: 13px;
-  background: url('./images/윤리규범/윤리규범-04.png') no-repeat;
-}
-
 /* ---------------------------------------- */
 /* list folded second section */
 section.list.folded.second.ethics {
@@ -608,25 +588,6 @@ a.list.folded.second-section.ethics {
   width: 149px;
 }
 
-a.list.folded.second-section.first.ethics {
-  background: url('./images/윤리규범/실천지침-01.png') no-repeat;
-}
-a.list.folded.second-section.second.ethics {
-  background: url('./images/윤리규범/실천지침-02.png') no-repeat;
-}
-a.list.folded.second-section.third.ethics {
-  background: url('./images/윤리규범/실천지침-03.png') no-repeat;
-}
-a.list.folded.second-section.fourth.ethics {
-  background: url('./images/윤리규범/실천지침-04.png') no-repeat;
-}
-a.list.folded.second-section.fifth.ethics {
-  background: url('./images/윤리규범/실천지침-05.png') no-repeat;
-}
-a.list.folded.second-section.sixth.ethics {
-  background: url('./images/윤리규범/실천지침-06.png') no-repeat;
-}
-
 /* ------------------------------------------------------ */
 /* list unfolded */
 div.list.unfolded.ethics {
@@ -644,7 +605,6 @@ h2#first-section {
   font-weight: bolder;
 }
 
-#second-section,
 h2#first-section_list-one,
 h2#first-section_list-two,
 h2#second-section_list-one,
@@ -652,6 +612,10 @@ h2#second-section_list-two,
 h2#second-section_list-one_subheading {
   margin-top: 22px;
   font-weight: bolder;
+}
+
+section.list.unfolded.second.ethics {
+  margin-top: 22px;
 }
 
 h2#second-section_list-one,
@@ -684,16 +648,15 @@ div.innerbox.body.hr {
   padding: 30px;
 }
 
-h1.hr {
-  background: url('./images/인사관리/h1-title.png') no-repeat;
-  height: 18px;
-}
-
 p.head.hr {
   margin-top: 28px;
-  min-width: 455px;
-  height: 39px;
-  background: url('./images/인사관리/paragraph_hr.png') no-repeat;
+  /* min-width: 455px; */
+  /* height: 39px; */
+  /* background: url('./images/인사관리/paragraph_hr.png') no-repeat; */
+}
+
+p.head.hr > img {
+  max-width: 100%;
 }
 
 section.hr {
@@ -784,17 +747,17 @@ div.h1-wrapper.signup {
   padding: 10px 0;
 }
 
-h1.signup {
+/* h1.signup {
   background: url('./images/회원가입/h1-title.png') no-repeat;
   height: 18px;
-}
+} */
 
 p.head.bottom.signup {
   display: inline-block;
   margin-top: 20px;
-  min-width: 664px;
-  height: 14px;
-  background: url('./images/회원가입/paragraph_bottom_signup.png') no-repeat;
+  /* min-width: 664px; */
+  /* height: 14px; */
+  /* background: url('./images/회원가입/paragraph_bottom_signup.png') no-repeat; */
 }
 
 p.head.top.signup {
@@ -803,9 +766,14 @@ p.head.top.signup {
   top: 50%;
   margin-top: -7.5px;
   left: 117px;
-  min-width: 318px;
-  height: 15px;
-  background: url('./images/회원가입/paragraph_top_signup.png') no-repeat;
+  /* min-width: 318px; */
+  /* height: 15px; */
+  /* background: url('./images/회원가입/paragraph_top_signup.png') no-repeat; */
+}
+
+p.head.bottom.signup > img,
+img.signup {
+  max-width: 100%;
 }
 
 div.body_signup {
@@ -983,17 +951,16 @@ span.label.signup {
 인재상
 */
 
-h1.talent {
-  background: url('./images/인재상/h1-title.png') no-repeat;
-  height: 19px;
-}
-
 strong.talent {
   display: inline-block;
   margin-top: 31px;
-  min-width: 658px;
-  height: 19px;
-  background: url('./images/인재상/strong_talent.png') no-repeat;
+  /* min-width: 658px; */
+  /* height: 19px; */
+  /* background: url('./images/인재상/strong_talent.png') no-repeat; */
+}
+
+strong.talent > img {
+  max-width: 100%;
 }
 
 div.diagram-container.talent {
