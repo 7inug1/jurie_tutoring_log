@@ -136,6 +136,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
 }
 
 /*  
@@ -150,8 +151,95 @@ font: banner3
  ######   ######## ##    ## ######## ##     ## ##     ## ######## 
 */
 
+.main-page_tab_head::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: 3px;
+  min-width: 176px;
+  height: 41px;
+  background: url('./images/main-page_tab_grey-shadow.png');
+  vertical-align: top;
+}
+
+.main-page_tab_head {
+  display: inline-block;
+  position: relative;
+  padding-left: 4px;
+  min-height: 31px;
+  background: url('./images/main-page_tab_head.png') left no-repeat;
+  vertical-align: top;
+}
+.main-page_tab_tail {
+  display: inline-block;
+  padding-right: 33px;
+  min-height: 31px;
+  background: url('./images/main-page_tab_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.main-page_tab_body::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: url('./images/main-page_tab_white-bit.png');
+}
+
+.main-page_tab_body {
+  display: inline-block;
+  /* position: relative; */
+  min-width: 146px;
+  min-height: 31px;
+  background: url('./images/main-page_tab_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.main-page_tab_body::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 31px;
+  right: 0;
+  bottom: 0;
+  left: 0.9px;
+  min-width: 181.1px;
+  height: 1px;
+
+  background: url('./images/main-page_tab_white-horizontal-line.png') repeat-x;
+}
+
+/* .main-page_background::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid #d7d7cb;
+  height: 100%;
+  width: 100%;
+} */
+
+.main-page_background {
+  padding: 45px 8px 17px 8px;
+  min-width: 913px;
+  min-height: 665px;
+  border: 1px solid #fafafa;
+  background: #ededed;
+  position: relative;
+}
+
+.main-page {
+  min-height: 599px;
+  padding: 58px 25px 58px 11px;
+  border: 1px solid #cdcdcd;
+  background: white;
+}
+
 table {
   border-collapse: collapse; /*없애도 딱히 문제 없는데?*/
+  /* text-align: center; */
 }
 
 table,
@@ -160,12 +248,60 @@ td {
   border: 1px solid #cccccc;
 }
 
+th,
+td {
+  text-align: center;
+}
+
 td {
   color: #414141;
   background: #f3f3f3;
 }
 
 /* tabbed table */
+
+.tabbed-table_tab_head {
+  display: inline-block;
+  background: url('./images/tabbed-table_tab_head.png') left no-repeat;
+  padding-left: 5px;
+  min-height: 21px;
+
+  vertical-align: top;
+}
+
+.tabbed-table_tab_tail {
+  display: inline-block;
+  background: url('./images/tabbed-table_tab_tail.png') right no-repeat;
+  padding-right: 5px;
+  min-height: 21px;
+  vertical-align: top;
+}
+
+.tabbed-table_tab_body::before {
+  content: '';
+  display: inline-block;
+  /* position: absolute; */
+  background: url('./images/tabbed-table_yellow-bit.png') no-repeat;
+  line-height: 21px;
+
+  width: 3px;
+  height: 11px;
+}
+
+.tabbed-table_tab_body {
+  display: inline-block;
+  position: relative;
+  /* padding-left: 8px; */
+  min-width: 126px;
+  background: url('./images/tabbed-table_tab_body.png') center repeat-x;
+  min-height: 21px;
+  line-height: 21px;
+  color: white;
+  font-size: 12px;
+  font-family: 'dotum';
+  vertical-align: top;
+}
+
 table.tabbed-table {
   border-top: 2px solid #36699b;
 }
@@ -206,6 +342,11 @@ button {
 .button-container {
   display: inline;
   font-size: 0;
+}
+
+.button-container_1005 {
+  font-size: 0;
+  text-align: center;
 }
 
 .blue-button_head {
