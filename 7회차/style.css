@@ -368,12 +368,7 @@ span.button.body.employment {
 
 span.button.text.employment {
   display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin-top: -7.5px;
+  line-height: 10px;
   font-size: 10px;
 }
 
@@ -410,13 +405,14 @@ li.process.employment {
   position: relative;
   padding: 0 2.5px;
   width: 103px;
-  height: 39px;
+  /* height: 39px; */
   line-height: 2;
   color: #9b9b9b;
   font-size: 0;
   border: 3px solid #dfdfdf;
   letter-spacing: -2.2px;
   text-align: center;
+  vertical-align: top;
 }
 
 li.process.first.employment::after,
@@ -486,11 +482,17 @@ body.ethics {
 }
 
 div.innerbox.head.ethics {
-  background: url('./images/윤리규범/orange-horizontal-line.png') no-repeat;
+  min-width: 670px;
+  background: url('./images/윤리규범/orange-horizontal-line.png') repeat-x;
 }
 
 div.innerbox.body.ethics {
   padding: 21px;
+  /* border: 3px solid black; */
+  /* border-top: 3px solid #ff9500; */
+  border-left: 3px solid #ececec;
+  border-right: 3px solid #ececec;
+  border-bottom: 3px solid #ececec;
 }
 
 p.ethics {
@@ -509,8 +511,9 @@ div.body_ethics {
 
 button.first.ethics,
 button.second.ethics {
-  width: 135px;
-  height: 29px;
+  /* width: 135px; */
+  padding: 6px 38px;
+  /* min-height: 29px; */
   font-size: 15px;
   border: none;
   color: white;
@@ -820,13 +823,7 @@ div.fieldset.content.signup {
 
 fieldset.button-container.signup {
   margin-top: 29px;
-}
-
-fieldset.button-container.signup {
   font-size: 0;
-}
-
-div.button-wrapper.signup {
   text-align: center;
 }
 
@@ -845,9 +842,15 @@ span.button.one.tail.signup {
   background: url('./images/회원가입/orange-button_tail.png') right no-repeat;
   vertical-align: top;
 }
+
+span.button.body.signup {
+  padding: 0px 4px;
+}
+
 span.button.one.body.signup {
   display: inline-block;
   position: relative;
+  /* padding: 0px 4px; */
   min-width: 72px;
   height: 36px;
   line-height: 36px;
@@ -1017,9 +1020,7 @@ dd.talent {
 div.button-container.talent {
   margin-top: 20px;
   font-size: 0;
-}
 
-div.button-wrapper.talent {
   text-align: center;
 }
 
@@ -1053,6 +1054,7 @@ span.button-one_body.talent {
 span.button-one_body.talent,
 span.button-two_body.talent {
   display: inline-block;
+  padding: 0px 4px;
   height: 36px;
   font-size: 0;
 }
