@@ -151,13 +151,68 @@ font: banner3
  ######   ######## ##    ## ######## ##     ## ##     ## ######## 
 */
 
+a {
+  /* color: black; */
+  text-decoration: none;
+}
+
 .background {
-  padding: 50px;
+  /* padding: 50px; */
   /* background: red; */
   background: #dadada;
 }
 
+.header {
+  display: block;
+  /* width: 100%; */
+  min-height: 49px;
+  /* width: 100vw; */
+  vertical-align: top;
+}
+
+.header_head {
+  display: block;
+  /* position: relative; */
+  /* width: 55vw; */
+  min-height: 49px;
+  /* margin-bottom: 15px; */
+  background: url('./images/header_background_head.png') left;
+  vertical-align: top;
+}
+
+.header_tail {
+  display: inline-block;
+  position: absolute;
+  /* right: 0; */
+  /* padding-left: 37.76vw; */
+  width: 37.76vw;
+  min-height: 49px;
+  background: url('./images/header_background_tail.png') right;
+  vertical-align: top;
+}
+
+span {
+  display: inline-block;
+}
+
+.header_body {
+  display: inline-block;
+  /* width: 7.2%; */
+  width: 80px;
+  min-height: 49px;
+  /* margin-left: -80px; */
+  background: url('./images/header_background_body.png') center no-repeat;
+  vertical-align: top;
+}
+
+.body {
+  margin-top: 15px;
+  padding: 0 13px 55px 13px;
+  /* font-size: 0; */
+}
+
 .nav_head {
+  /* width: auto; */
   display: inline-block;
   /* width: 18.3%; */
 
@@ -183,10 +238,42 @@ font: banner3
   vertical-align: top;
 }
 
+.nav_body ul {
+  margin-top: 24px;
+}
+
+.nav_body ul li h2 {
+  padding-bottom: 7px;
+  background: url('./images/nav_solid-line.png') bottom repeat-x;
+}
+
+.nav_body ul li:nth-of-type(2) h2 {
+  margin-top: 9px;
+}
+
+.nav_body ul li ul {
+  margin-top: 14px;
+}
+
+.nav_body ul li ul li {
+  margin-bottom: 10px;
+  /* padding-bottom: 8px; */
+}
+
+.nav_body ul li ul li a {
+  display: block;
+  padding-bottom: 8px;
+  font-family: 'dotum';
+  font-size: 12px;
+  color: #414141;
+  background: url('./images/nav_dotted-line.png') bottom repeat-x;
+}
+
 .main-page_wrapper {
   display: inline-block;
-  width: 79.3%;
-  min-height: 703px;
+  width: auto;
+  margin-left: 2px;
+  /* min-height: 703px; */
 }
 
 .main-page_background_header_head {
@@ -223,7 +310,7 @@ font: banner3
   display: inline-block;
   position: relative;
   padding: 14px 8px 17px 8px;
-  /* width: 80%; */
+  width: 100%;
   /* min-height: 665px; */
   border: 1px solid black; /*fafafa*/
   outline: 1px solid red; /*d7d7cb*/
@@ -293,7 +380,7 @@ font: banner3
 
 .main-page {
   /* min-height: 599px; */
-  padding: 58px 25px 0px 11px;
+  padding: 37px 25px 0px 11px;
   border: 1px solid #cdcdcd;
   background: white;
 }
