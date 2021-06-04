@@ -190,7 +190,8 @@ a {
 
 .header_head {
   display: block;
-
+  position: relative;
+  min-width: 399px;
   min-height: 49px;
   background: url('./images/header_background_head.png') left;
   vertical-align: top;
@@ -199,12 +200,55 @@ a {
 .header_tail {
   display: inline-block;
   position: absolute;
-  /* right: 0; */
+  right: 0;
   /* padding-left: 37.76vw; */
   /* width: 37.76vw; */
-  min-height: 49px;
-  background: url('./images/header_background_tail.png') right;
+  min-width: 520px;
+  min-height: 48px;
+  background: url('./images/header_background_right2.png') no-repeat;
   vertical-align: top;
+}
+
+.header_tail-wrapper {
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  right: 13px;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+}
+
+.header_tail > div:first-of-type:before {
+  content: '';
+  display: inline-block;
+  margin-top: 4.5px;
+  padding-left: 6px;
+  width: 3px;
+  height: 3px;
+  background: url('./images/header_signin_yellow-bit.png') no-repeat;
+  vertical-align: top;
+}
+
+.signin-wrapper {
+  display: inline-block;
+  font-size: 0px;
+}
+
+/* .header_tail > div > span {
+  font-size: 12px;
+} */
+
+.signin-wrapper > span,
+.signin-wrapper > strong {
+  display: inline-block;
+  color: white;
+  font-family: 'dotum';
+  font-size: 12px;
+}
+
+.signin-wrapper > strong {
+  font-weight: bolder;
 }
 
 span {
@@ -218,14 +262,98 @@ span {
   vertical-align: top;
 }
 
+.header_nav-container {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+}
+
+.header_nav-container span:nth-of-type(2)::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 42px;
+  /* margin-left: 19px; */
+  width: 1px;
+  height: 7px;
+  background: url('./images/header_nav_vertical-bar.png') no-repeat;
+  vertical-align: top;
+}
+
+.header_nav-container span + span {
+  margin-left: 19px;
+}
+
+.logout-button_head {
+  display: inline-block;
+  position: relative;
+  padding-left: 4px;
+  /* min-width: 57px; */
+  /* width: 4px; */
+  min-height: 26px;
+  background: url('./images/logout-button_head.png') no-repeat;
+  vertical-align: top;
+}
+
+.logout-button_tail {
+  display: inline-block;
+  padding-right: 6px;
+  /* width: 6px; */
+  min-height: 26px;
+  background: url('./images/logout-button_tail.png') no-repeat;
+  vertical-align: top;
+}
+
+.logout-button_body {
+  display: inline-block;
+  padding: 0 7px;
+  min-height: 26px;
+  color: #ffffff;
+  /* font-size: 10px; */
+  background: url('./images/logout-button_body.png') repeat-x;
+  vertical-align: top;
+  /* letter-spacing: -1.2px; */
+  /* line-height: 26px; */
+}
+
+.logout-button_body::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 2px;
+  background: url('./images/logout-button_shadow.png');
+  width: 57px;
+  height: 12px;
+}
+
 .body {
   margin-top: 15px;
   padding: 0 13px 55px 13px;
   /* font-size: 0; */
 }
 
+.nav_head::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  right: 1px;
+  width: 207px;
+  height: 40px;
+  background: url('./images/nav_lid.png');
+}
+
 .nav_head {
   display: inline-block;
+  position: relative;
   padding-left: 1px;
   /* max-width: 17.97vw; */
   border: 1px solid #f8f8f7;
@@ -245,53 +373,116 @@ span {
   display: inline-block;
   min-width: 207px;
   min-height: 699px;
+  /* padding: 0px 8px 0 8px; */
   background: url('./images/nav_body.png') center repeat-x;
   vertical-align: top;
   /* text-align: center; */
 }
 
-.nav_body ul {
-  margin-top: 24px;
+.nav_body > ul {
+  padding-top: 17px;
+
+  /* margin: 24px auto 0 auto; */
+  /* min-width: 190px; */
 }
 
-.nav_body ul li {
-  /* padding-left: 55px; */
+.nav_body > ul > li {
+  padding: 0 9px;
 }
 
 .nav_body ul li h2 {
-  padding-bottom: 7px;
+}
+
+.nav_body ul li h2 a {
+  padding: 8px 0 8px 55px;
   background: url('./images/nav_solid-line.png') bottom repeat-x;
 }
 
-.nav_body ul li h2 img {
-  padding-left: 55px;
+.nav_body ul li h2 a,
+.nav_body ul li ul li a {
+  /* padding-top: 7px; */
+  /* padding-bottom: 7px; */
+  /* padding-left: 55px; */
 }
 
+.nav_body ul li h2 img .nav_body ul li h2 img {
+  /* padding-left: 55px; */
+  padding: 8px 0;
+}
+
+/* .nav_first-list::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 10px;
+  background: url('./images/nav_blue-bit.png') no-repeat;
+}
+
+.nav_second-list::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 10px;
+  background: url('./images/nav') no-repeat;
+} */
+
 .nav_body ul li:nth-of-type(2) h2 {
-  margin-top: 9px;
+  /* margin-top: 9px; */
 }
 
 .nav_body ul li ul {
-  margin-top: 14px;
+  /* margin-top: 14px; */
 }
 
 .nav_body ul li ul li {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   /* padding-bottom: 8px; */
 }
 
 .nav_body ul li ul li a {
-  display: block;
-  padding-bottom: 8px;
-  padding-left: 55px;
+  /* display: block; */
+  /* padding-bottom: 8px; */
+  /* padding-left: 55px; */
   font-family: 'dotum';
   font-size: 12px;
   color: #414141;
   background: url('./images/nav_dotted-line.png') bottom no-repeat;
+  padding: 8px 0 8px 55px;
+}
+
+.current-tab::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 37px;
+  margin-top: -7px;
+  width: 4px;
+  height: 10px;
+  background: url('./images/nav_yellow-bit.png') no-repeat;
 }
 
 .current-tab {
+  /* display: inline-block; */
+  position: relative;
   background: url('./images/nav_current-tab_body.png') repeat-x;
+  /* height: 27px; */
+}
+
+.non-current-tab::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 37px;
+  margin-top: -7px;
+  width: 4px;
+  height: 10px;
+  background: url('./images/nav_blue-bit.png') no-repeat;
+}
+
+.non-current-tab {
+  position: relative;
 }
 
 .nav_body ul li ul li a.current-page {
@@ -569,7 +760,8 @@ table.tabbed-table th.small {
 }
 
 /* untabbed table */
-table.untabbed-table th {
+table.untabbed-table th,
+table.untabbed-table_first th {
   color: #fefefe;
   /* font-weight: bolder;
   font-family: 'dotum'; */

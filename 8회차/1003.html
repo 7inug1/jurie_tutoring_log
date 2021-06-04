@@ -10,16 +10,37 @@
   <body>
     <div class="background">
       <div class="header_head">
-        <span>개인연구관리</span>
-        <span>NATIONAL RESEARCH FOUNDATION OF KOREA</span>
+        <span>
+          <img src="./images/header_title_kor.png" alt="개인연구관리" />
+        </span>
+        <span>
+          <img
+            src="./images/header_title_eng.png"
+            alt="NATIONAL RESEARCH FOUNDATION OF KOREA"
+          />
+        </span>
         <div class="header_tail">
-          <span>
-            <strong>flawless 님</strong>
-            이 로그인 하셨습니다.
-          </span>
-          <span>HOME</span>
-          <span>NRF HOME</span>
-          <button>로그아웃</button>
+          <div class="header_tail-wrapper">
+            <div class="signin-wrapper">
+              <strong>flawless 님</strong>
+              <span>이 로그인 하셨습니다.</span>
+            </div>
+            <div class="header_nav-container">
+              <span>
+                <img src="./images/header_nav_HOME.png" alt="HOME" />
+              </span>
+              <span>
+                <img src="./images/header_nav_NRF-HOME.png" alt="NRF HOME" />
+              </span>
+            </div>
+            <button type="button" class="logout-button_head">
+              <span class="logout-button_tail">
+                <span class="logout-button_body">
+                  <img src="./images/logout-button_text.png" alt="로그아웃" />
+                </span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
       <div class="body">
@@ -28,21 +49,25 @@
             <div class="nav_body">
               <ul>
                 <li>
-                  <h2>
+                  <h2 class="non-current-tab">
                     <a href="#">
                       <img
-                        src="./images/nav_first-list_white.png"
+                        src="./images/nav_first-list_black.png"
                         alt="연구지원과제 정보"
+                        class="nav_first-list"
                       />
                     </a>
                   </h2>
                 </li>
                 <li>
-                  <h2>
-                    <img
-                      src="./images/nav_second-list_black.png"
-                      alt="개연연구관리"
-                    />
+                  <h2 class="current-tab">
+                    <a href="#">
+                      <img
+                        src="./images/nav_second-list_white.png"
+                        alt="개연연구관리"
+                        class="nav_second-list"
+                      />
+                    </a>
                   </h2>
                   <ul>
                     <li><a href="#">변경신청내역보기</a></li>
