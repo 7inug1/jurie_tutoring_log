@@ -193,6 +193,7 @@ a {
   position: relative;
   min-width: 399px;
   min-height: 49px;
+  line-height: 49px;
   background: url('./images/header_background_head.png') left;
   vertical-align: top;
 }
@@ -571,7 +572,7 @@ span {
   display: inline-block;
   position: relative;
   padding-left: 5px;
-  min-height: 32px;
+  min-height: 42px;
   background: url('./images/main-page_tab/main-page_tab_head.png') left
     no-repeat;
   vertical-align: top;
@@ -591,7 +592,7 @@ span {
 .main-page_tab_tail {
   display: inline-block;
   padding-right: 33px;
-  min-height: 32px;
+  min-height: 42px;
   background: url('./images/main-page_tab/main-page_tab_tail.png') right
     no-repeat;
   vertical-align: top;
@@ -614,8 +615,8 @@ span {
   display: inline-block;
   padding-right: 9px;
   padding-left: 30px;
-  min-height: 32px;
-  line-height: 32px;
+  min-height: 42px;
+  line-height: 42px;
   color: #fa6c03;
   font-size: 16px;
   background: url('./images/main-page_tab/main-page_tab_body.png') center
