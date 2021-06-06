@@ -203,17 +203,23 @@ h1 > img {
 
 .innerbox.head {
   padding-top: 3px;
-  background: url('./images/채용안내/inner_box_headtail.png') top no-repeat;
+  /* background: url('./images/채용안내/inner_box_headtail.png') top no-repeat; */
 }
 
 .innerbox.tail {
   padding-bottom: 3px;
-  background: url('./images/채용안내/inner_box_headtail.png') bottom no-repeat;
+  /* background: url('./images/채용안내/inner_box_headtail.png') bottom no-repeat; */
 }
 
 .innerbox.body {
+  border-top: 3px solid #efefef;
+  border-bottom: 3px solid #efefef;
   border-left: 3px solid #efefef;
   border-right: 3px solid #efefef;
+}
+
+.innerbox.body.ethics {
+  border-top: none;
 }
 
 .location {
@@ -243,7 +249,8 @@ h1 > img {
   color: #f7941e;
 }
 
-.location-arrow {
+.location-text:not(.location-text.last)::after {
+  content: '';
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -277,7 +284,7 @@ strong.employment {
   margin-top: 30px;
 }
 
-strong.employment > img {
+strong > img {
   max-width: 100%;
 }
 
@@ -421,13 +428,15 @@ li.process.third.employment::after,
 li.process.fourth.employment::after {
   position: absolute;
   content: '';
-  display: inline-block;
+  display: inline;
   top: 50%;
-  left: 108px;
+  /* left: 0; */
+  right: -9px;
   margin-top: -6px;
   width: 9px;
   height: 12px;
   background: url('./images/채용안내/box-arrow.png') no-repeat;
+  vertical-align: top;
 }
 
 li.process.second.employment,
@@ -486,13 +495,17 @@ div.innerbox.head.ethics {
   background: url('./images/윤리규범/orange-horizontal-line.png') repeat-x;
 }
 
-div.innerbox.body.ethics {
+.innerbox.body.ethics {
   padding: 21px;
+  /* min-width: 670px; */
+  /* background: url('./images/윤리규범/orange-horizontal-line.png') repeat-x; */
   /* border: 3px solid black; */
   /* border-top: 3px solid #ff9500; */
   border-left: 3px solid #ececec;
   border-right: 3px solid #ececec;
   border-bottom: 3px solid #ececec;
+  position: relative;
+  z-index: 100;
 }
 
 p.ethics {
@@ -788,7 +801,7 @@ form.signup {
 }
 
 fieldset.innerbox.signup {
-  padding-top: 22px;
+  /* padding-top: 22px; */
 }
 
 h2.fieldset.title.signup {
@@ -815,10 +828,11 @@ span.label.signup {
   letter-spacing: 0.8px;
 }
 
-h2.fieldset.title.signup,
-div.fieldset.content.signup {
-  width: 623px;
-  margin: 8px auto 12px auto;
+.fieldset-wrapper {
+  /* width: 623px; */
+  /* margin: 8px 0 12px 0; */
+  padding: 30px 20px 12px 19px;
+  /* padding-left: 19px; */
 }
 
 fieldset.button-container.signup {
@@ -909,6 +923,7 @@ span.button.two.text.signup {
 fieldset.first.signup,
 fieldset.second.signup,
 fieldset.third.signup {
+  border-top: 3px solid #ececec;
   border-left: 3px solid #ececec;
   border-right: 3px solid #ececec;
 }
