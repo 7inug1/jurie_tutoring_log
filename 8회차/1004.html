@@ -10,15 +10,17 @@
   <body>
     <div class="background">
       <div class="header_head">
-        <span>
-          <img src="./images/header_title_kor.png" alt="개인연구관리" />
-        </span>
-        <span>
-          <img
-            src="./images/header_title_eng.png"
-            alt="NATIONAL RESEARCH FOUNDATION OF KOREA"
-          />
-        </span>
+        <div class="header-left_wrapper">
+          <span>
+            <img src="./images/header_title_kor.png" alt="개인연구관리" />
+          </span>
+          <span>
+            <img
+              src="./images/header_title_eng.png"
+              alt="NATIONAL RESEARCH FOUNDATION OF KOREA"
+            />
+          </span>
+        </div>
         <div class="header_tail">
           <div class="header_tail-wrapper">
             <div class="signin-wrapper">
@@ -27,19 +29,25 @@
             </div>
             <div class="header_nav-container">
               <span>
-                <img src="./images/header_nav_HOME.png" alt="HOME" />
+                <a href="#">
+                  <img src="./images/header_nav_HOME.png" alt="HOME" />
+                </a>
               </span>
               <span>
-                <img src="./images/header_nav_NRF-HOME.png" alt="NRF HOME" />
+                <a href="#">
+                  <img src="./images/header_nav_NRF-HOME.png" alt="NRF HOME" />
+                </a>
               </span>
             </div>
-            <button type="button" class="logout-button_head">
-              <span class="logout-button_tail">
-                <span class="logout-button_body">
-                  <img src="./images/logout-button_text.png" alt="로그아웃" />
+            <div class="logout-button_wrapper">
+              <button type="button" class="logout-button_head">
+                <span class="logout-button_tail">
+                  <span class="logout-button_body">
+                    <img src="./images/logout-button_text.png" alt="로그아웃" />
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +59,7 @@
               <ul>
                 <li>
                   <h2 class="non-current-tab">
-                    <a href="#">
+                    <a href="./1001.html">
                       <img
                         src="./images/nav_first-list_black.png"
                         alt="연구지원과제 정보"
@@ -62,7 +70,7 @@
                 </li>
                 <li>
                   <h2 class="current-tab">
-                    <a href="#">
+                    <a href="./1002.html">
                       <img
                         src="./images/nav_second-list_white.png"
                         alt="개연연구관리"
@@ -71,10 +79,14 @@
                     </a>
                   </h2>
                   <ul>
-                    <li><a href="#">변경신청내역보기</a></li>
-                    <li><a href="#">공동연구원변경</a></li>
-                    <li><a href="#" class="current-page">연구기관변경</a></li>
-                    <li><a href="#">연구보조원변경</a></li>
+                    <li><a href="./1002.html">변경신청내역보기</a></li>
+                    <li><a href="./1003.html">공동연구원변경</a></li>
+                    <li>
+                      <a href="./1004.html" class="current-page">
+                        연구기관변경
+                      </a>
+                    </li>
+                    <li><a href="./1005.html">연구보조원변경</a></li>
                   </ul>
                 </li>
               </ul>
@@ -106,105 +118,113 @@
             </div>
             <div class="main-page">
               <!-- table 1 -->
-              <table border="1" class="untabbed-table_first">
-                <tr>
-                  <th>년도</th>
-                  <th>사업명</th>
-                  <th>사업차수</th>
-                  <th>과제번호</th>
-                  <th>과제명</th>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>한국사회기반연구사업(SSK)</td>
-                  <td>1</td>
-                  <td>B00037</td>
-                  <td class="left-aligned-text">
-                    '작은' 복지국가 비교연구를 통한 새로운 복지국가 이론 형성
-                  </td>
-                </tr>
-              </table>
+              <div class="table-container">
+                <table border="1" class="untabbed-table_first">
+                  <tr>
+                    <th>년도</th>
+                    <th>사업명</th>
+                    <th>사업차수</th>
+                    <th>과제번호</th>
+                    <th>과제명</th>
+                  </tr>
+                  <tr>
+                    <td>2011</td>
+                    <td>한국사회기반연구사업(SSK)</td>
+                    <td>1</td>
+                    <td>B00037</td>
+                    <td class="left-aligned-text">
+                      '작은' 복지국가 비교연구를 통한 새로운 복지국가 이론 형성
+                    </td>
+                  </tr>
+                </table>
+              </div>
               <!-- table 2 -->
-              <div class="tabbed-table_tab_head">
-                <span class="tabbed-table_tab_tail">
-                  <span class="tabbed-table_tab_body">변경신청내역</span>
-                </span>
+              <div class="table-container">
+                <div class="tabbed-table_tab_head">
+                  <span class="tabbed-table_tab_tail">
+                    <span class="tabbed-table_tab_body">변경신청내역</span>
+                  </span>
+                </div>
+                <table class="tabbed-table">
+                  <tr>
+                    <th>구분</th>
+                    <th>변경전</th>
+                    <th>변경후</th>
+                  </tr>
+                  <tr>
+                    <td>연구기관</td>
+                    <td class="left-aligned-text">연세대학교</td>
+                    <td class="left-aligned-box">
+                      <input type="text" name="" id="" />
+                      <div class="search-file-button-container">
+                        <button type="button" class="white-button_head">
+                          <span class="white-button_tail">
+                            <span class="white-button_body">파일찾기</span>
+                          </span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <table class="tabbed-table">
-                <tr>
-                  <th>구분</th>
-                  <th>변경전</th>
-                  <th>변경후</th>
-                </tr>
-                <tr>
-                  <td>연구기관</td>
-                  <td class="left-aligned-text">연세대학교</td>
-                  <td class="left-aligned-box">
-                    <input type="text" name="" id="" />
-                    <div class="button-container">
-                      <button type="button" class="white-button_head">
-                        <span class="white-button_tail">
-                          <span class="white-button_body">파일찾기</span>
-                        </span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </table>
               <!-- table 3 -->
-              <div class="tabbed-table_tab_head">
-                <span class="tabbed-table_tab_tail">
-                  <span class="tabbed-table_tab_body">
-                    관련파일이 있는 겨우 파일을 첨부하여 주십시요.
+              <div class="table-container">
+                <div class="tabbed-table_tab_head">
+                  <span class="tabbed-table_tab_tail">
+                    <span class="tabbed-table_tab_body">
+                      관련파일이 있는 겨우 파일을 첨부하여 주십시요.
+                    </span>
                   </span>
-                </span>
+                </div>
+                <table class="tabbed-table">
+                  <tr>
+                    <th>첨부파일</th>
+                    <td class="left-aligned-box">
+                      <input type="text" name="" id="" />
+                      <div class="search-file-button-container">
+                        <button type="button" class="white-button_head">
+                          <span class="white-button_tail">
+                            <span class="white-button_body">파일찾기</span>
+                          </span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <table class="tabbed-table">
-                <tr>
-                  <th>첨부파일</th>
-                  <td class="left-aligned-box">
-                    <input type="text" name="" id="" />
-                    <div class="button-container">
-                      <button type="button" class="white-button_head">
-                        <span class="white-button_tail">
-                          <span class="white-button_body">파일찾기</span>
-                        </span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </table>
               <!-- table 4 -->
-              <div class="tabbed-table_tab_head">
-                <span class="tabbed-table_tab_tail">
-                  <span class="tabbed-table_tab_body">
-                    변경 사유를 입력하여 주십시오.
+              <div class="table-container">
+                <div class="tabbed-table_tab_head">
+                  <span class="tabbed-table_tab_tail">
+                    <span class="tabbed-table_tab_body">
+                      변경 사유를 입력하여 주십시오.
+                    </span>
                   </span>
-                </span>
+                </div>
+                <table class="tabbed-table">
+                  <tr>
+                    <th>첨부파일</th>
+                    <td class="left-aligned-box">
+                      <select name="attachment" id="attachment">
+                        <option value="" selected disabled hidden>
+                          선택하여주십시오.
+                        </option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>상세내역</th>
+                    <td class="left-aligned-box">
+                      <textarea
+                        name="details"
+                        id="details"
+                        cols="30"
+                        rows="10"
+                      ></textarea>
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <table class="tabbed-table">
-                <tr>
-                  <th>첨부파일</th>
-                  <td class="left-aligned-box">
-                    <select name="attachment" id="attachment">
-                      <option value="" selected disabled hidden>
-                        선택하여주십시오.
-                      </option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <th>상세내역</th>
-                  <td class="left-aligned-box">
-                    <textarea
-                      name="details"
-                      id="details"
-                      cols="30"
-                      rows="10"
-                    ></textarea>
-                  </td>
-                </tr>
-              </table>
             </div>
           </div>
         </div>

@@ -10,15 +10,17 @@
   <body>
     <div class="background">
       <div class="header_head">
-        <span>
-          <img src="./images/header_title_kor.png" alt="개인연구관리" />
-        </span>
-        <span>
-          <img
-            src="./images/header_title_eng.png"
-            alt="NATIONAL RESEARCH FOUNDATION OF KOREA"
-          />
-        </span>
+        <div class="header-left_wrapper">
+          <span>
+            <img src="./images/header_title_kor.png" alt="개인연구관리" />
+          </span>
+          <span>
+            <img
+              src="./images/header_title_eng.png"
+              alt="NATIONAL RESEARCH FOUNDATION OF KOREA"
+            />
+          </span>
+        </div>
         <div class="header_tail">
           <div class="header_tail-wrapper">
             <div class="signin-wrapper">
@@ -27,19 +29,25 @@
             </div>
             <div class="header_nav-container">
               <span>
-                <img src="./images/header_nav_HOME.png" alt="HOME" />
+                <a href="#">
+                  <img src="./images/header_nav_HOME.png" alt="HOME" />
+                </a>
               </span>
               <span>
-                <img src="./images/header_nav_NRF-HOME.png" alt="NRF HOME" />
+                <a href="#">
+                  <img src="./images/header_nav_NRF-HOME.png" alt="NRF HOME" />
+                </a>
               </span>
             </div>
-            <button type="button" class="logout-button_head">
-              <span class="logout-button_tail">
-                <span class="logout-button_body">
-                  <img src="./images/logout-button_text.png" alt="로그아웃" />
+            <div class="logout-button_wrapper">
+              <button type="button" class="logout-button_head">
+                <span class="logout-button_tail">
+                  <span class="logout-button_body">
+                    <img src="./images/logout-button_text.png" alt="로그아웃" />
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +58,7 @@
               <ul>
                 <li>
                   <h2 class="non-current-tab">
-                    <a href="#">
+                    <a href="./1001.html">
                       <img
                         src="./images/nav_first-list_black.png"
                         alt="연구지원과제 정보"
@@ -61,7 +69,7 @@
                 </li>
                 <li>
                   <h2 class="current-tab">
-                    <a href="#">
+                    <a href="./1002.html">
                       <img
                         src="./images/nav_second-list_white.png"
                         alt="개연연구관리"
@@ -71,11 +79,13 @@
                   </h2>
                   <ul>
                     <li>
-                      <a href="#" class="current-page">변경신청내역보기</a>
+                      <a href="./1002.html" class="current-page">
+                        변경신청내역보기
+                      </a>
                     </li>
-                    <li><a href="#">공동연구원변경</a></li>
-                    <li><a href="#">연구기관변경</a></li>
-                    <li><a href="#">연구보조원변경</a></li>
+                    <li><a href="./1003.html">공동연구원변경</a></li>
+                    <li><a href="./1004.html">연구기관변경</a></li>
+                    <li><a href="./1005.html">연구보조원변경</a></li>
                   </ul>
                 </li>
               </ul>
@@ -105,48 +115,52 @@
               </span>
             </div>
             <div class="main-page">
-              <!-- table -->
-              <table border="1" class="untabbed-table_first">
-                <tr>
-                  <th>년도</th>
-                  <th>사업명</th>
-                  <th>사업차수</th>
-                  <th>과제번호</th>
-                  <th>과제명</th>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>한국사회기반연구사업(SSK)</td>
-                  <td>1</td>
-                  <td>B00037</td>
-                  <td class="left-aligned-text">
-                    '작은' 복지국가 비교연구를 통한 새로운 복지국가 이론 형성
-                  </td>
-                </tr>
-              </table>
-
-              <!-- table -->
-              <div class="tabbed-table_tab_head">
-                <span class="tabbed-table_tab_tail">
-                  <span class="tabbed-table_tab_body">변경신청내역 목록</span>
-                </span>
+              <!-- table 1 -->
+              <div class="table-container">
+                <table border="1" class="untabbed-table_first">
+                  <tr>
+                    <th>년도</th>
+                    <th>사업명</th>
+                    <th>사업차수</th>
+                    <th>과제번호</th>
+                    <th>과제명</th>
+                  </tr>
+                  <tr>
+                    <td>2011</td>
+                    <td>한국사회기반연구사업(SSK)</td>
+                    <td>1</td>
+                    <td>B00037</td>
+                    <td class="left-aligned-text">
+                      '작은' 복지국가 비교연구를 통한 새로운 복지국가 이론 형성
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <table border="1" class="tabbed-table">
-                <tr>
-                  <th>신청일</th>
-                  <th>변경유형</th>
-                  <th>변경사유</th>
-                  <th>진행상태/처리결과</th>
-                  <th>신청취소</th>
-                </tr>
-                <tr>
-                  <td>2011-04-04</td>
-                  <td class="bold blue-highlight">연구보조원변경</td>
-                  <td>기타</td>
-                  <td>재단승인 완료 - 승인</td>
-                  <td>취소불가</td>
-                </tr>
-              </table>
+
+              <!-- table 2 -->
+              <div class="table-container">
+                <div class="tabbed-table_tab_head">
+                  <span class="tabbed-table_tab_tail">
+                    <span class="tabbed-table_tab_body">변경신청내역 목록</span>
+                  </span>
+                </div>
+                <table border="1" class="tabbed-table">
+                  <tr>
+                    <th>신청일</th>
+                    <th>변경유형</th>
+                    <th>변경사유</th>
+                    <th>진행상태/처리결과</th>
+                    <th>신청취소</th>
+                  </tr>
+                  <tr>
+                    <td>2011-04-04</td>
+                    <td class="bold blue-highlight">연구보조원변경</td>
+                    <td>기타</td>
+                    <td>재단승인 완료 - 승인</td>
+                    <td>취소불가</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
