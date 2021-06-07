@@ -1,0 +1,230 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.left-aligned-text {
+  padding-left: 15px;
+  text-align: left;
+}
+
+.left-aligned-box {
+  position: relative;
+  font-size: 0;
+  text-align: left;
+}
+
+.left-aligned-box-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.search-file-button-container {
+  display: inline-block;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  /* left: 100px; */
+  margin-left: 3px;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.blue-text {
+  color: #36699b;
+}
+
+/*  
+http://www.network-science.de/ascii/
+font: banner3
+ ######   ######## ##    ## ######## ########     ###    ##       
+##    ##  ##       ###   ## ##       ##     ##   ## ##   ##       
+##        ##       ####  ## ##       ##     ##  ##   ##  ##       
+##   #### ######   ## ## ## ######   ########  ##     ## ##       
+##    ##  ##       ##  #### ##       ##   ##   ######### ##       
+##    ##  ##       ##   ### ##       ##    ##  ##     ## ##       
+ ######   ######## ##    ## ######## ##     ## ##     ## ######## 
+*/
+
+img {
+  vertical-align: middle;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 38.2%;
+  width: 80px;
+  height: 49px;
+  background: url('./images/header_background_body.png');
+}
+
+.header {
+  height: 49px;
+  position: relative;
+  background: url('./images/header_background_head.png') repeat-x;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38.2%;
+  height: 49px;
+  background: url('./images/header_background_tail.png') repeat-x;
+}
+
+.header-left {
+  display: inline-block;
+}
+.header-right {
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* position: relative; */
+  /* z-index: 99; */
+  text-align: right;
+  z-index: 99;
+}
