@@ -660,15 +660,8 @@ div.body_hr {
   margin-top: 28px;
 }
 
-div.innerbox.body.hr {
-  padding: 30px;
-}
-
 p.head.hr {
   margin-top: 28px;
-  /* min-width: 455px; */
-  /* height: 39px; */
-  /* background: url('./images/인사관리/paragraph_hr.png') no-repeat; */
 }
 
 p.head.hr > img {
@@ -677,61 +670,52 @@ p.head.hr > img {
 
 section.hr {
   font-size: 0;
-}
-
-section.first.hr,
-section.second.hr {
-  position: relative;
+  padding: 30px 0px 30px 30px;
+  min-height: 65px;
 }
 
 section.second.hr,
 section.third.hr,
-section.fourth.hr {
-  background: url('./images/인사관리/dotted-horizontal-line.png') no-repeat;
-  margin-top: 20px;
-  padding-top: 20px;
+section.first.hr {
+  background: url('./images/인사관리/dotted-horizontal-line.png') bottom
+    no-repeat;
 }
 
 h2.thumbnail.hr {
-  display: inline-block;
-  width: 65px;
+  position: absolute;
   height: 65px;
-  vertical-align: top;
+  width: 65px;
 }
 
 h2.thumbnail.first.hr {
-  background: url('./images/인사관리/thumbnail_first.png');
+  background: url('./images/인사관리/thumbnail_first.png') no-repeat;
 }
 h2.thumbnail.second.hr {
-  background: url('./images/인사관리/thumbnail_second.png');
+  background: url('./images/인사관리/thumbnail_second.png') no-repeat;
 }
 h2.thumbnail.third.hr {
-  background: url('./images/인사관리/thumbnail_third.png');
+  background: url('./images/인사관리/thumbnail_third.png') no-repeat;
 }
 h2.thumbnail.fourth.hr {
-  background: url('./images/인사관리/thumbnail_fourth.png');
+  background: url('./images/인사관리/thumbnail_fourth.png') no-repeat;
 }
 
 .description-container.hr {
-  display: inline-block;
   position: relative;
   font-size: 11px;
   font-family: 'dotum', sans-serif;
   color: #9b9b9b;
   letter-spacing: -0.4px;
-  margin-left: 22px;
+  margin-left: 87px;
   line-height: 13px;
 }
 
 div.description-container.first.hr {
-  position: absolute;
-  top: 50%;
-  margin-top: -16.25px;
+  padding-top: 14px;
 }
 
 div.description-container.second.hr {
-  position: absolute;
-  top: 50%;
+  padding-top: 20px;
 }
 
 ul.description.fourth.hr {
