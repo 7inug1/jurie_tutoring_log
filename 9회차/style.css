@@ -185,15 +185,31 @@ font: banner3
  ######   ######## ##    ## ######## ##     ## ##     ## ######## 
 */
 
-img {
+/* img {
   vertical-align: middle;
+} */
+
+button {
+  padding: 0;
+  border: none;
+  background: white;
+  cursor: pointer;
 }
 
+/* 
+    #     # #######    #    ######  ####### ######  
+    #     # #         # #   #     # #       #     # 
+    #     # #        #   #  #     # #       #     # 
+    ####### #####   #     # #     # #####   ######  
+### #     # #       ####### #     # #       #   #   
+### #     # #       #     # #     # #       #    #  
+### #     # ####### #     # ######  ####### #     # 
+*/
 .header::before {
   content: '';
   position: absolute;
   top: 0;
-  right: 38.2%;
+  right: 45%; /*38.2*/
   width: 80px;
   height: 49px;
   background: url('./images/header_background_body.png');
@@ -210,21 +226,128 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  width: 38.2%;
+  width: 45%; /*38.2*/
   height: 49px;
   background: url('./images/header_background_tail.png') repeat-x;
 }
 
 .header-left {
   display: inline-block;
+  padding-top: 15px;
+  padding-left: 14px;
+  font-size: 0;
 }
+
+.header-left img:nth-of-type(2) {
+  margin-left: 12px;
+}
+
+.header-title {
+  vertical-align: middle;
+}
+
 .header-right {
-  /* display: inline-block; */
   position: absolute;
   top: 0;
   right: 0;
-  /* position: relative; */
-  /* z-index: 99; */
+  padding-right: 9px;
+  font-size: 0;
   text-align: right;
   z-index: 99;
+}
+
+.login-info,
+.header-nav {
+  display: inline-block;
+}
+
+.login-info > strong::before {
+  content: '';
+  display: inline-block;
+  padding-left: 6px;
+  background: url('./images/header_signin_yellow-bit.png') no-repeat;
+  width: 3px;
+  height: 3px;
+  vertical-align: 3px;
+}
+
+.login-info {
+  padding-top: 17px;
+}
+
+.header-nav {
+  margin-left: 26px;
+  padding-top: 17.5px;
+}
+
+.header-nav a {
+  display: inline-block;
+}
+
+.header-nav a:first-of-type {
+  padding-right: 9px;
+}
+
+.header-nav > a:nth-of-type(2)::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 7px;
+  /* margin-left: 9px; */
+  padding-left: 9px;
+  background: url('./images/header_nav_vertical-bar.png') no-repeat;
+  vertical-align: 2px;
+}
+
+.login-info,
+.header-nav,
+.logout-button-container {
+  /* display: inline-block; */
+  font-size: 0;
+  vertical-align: top;
+}
+
+.login-info strong {
+  font-weight: bolder;
+}
+
+.login-info strong,
+.login-info span {
+  /* display: inline-block; */
+  color: white;
+  font-family: 'dotum';
+  font-size: 12px;
+}
+
+.logout-button-container {
+  display: inline-block;
+  padding-top: 11px;
+}
+
+.logout-button_head {
+  display: inline-block;
+  position: relative;
+  padding-left: 4px;
+  margin-left: 13px;
+  min-height: 26px;
+  background: url('./images/logout-button_head.png') no-repeat;
+  vertical-align: top;
+}
+
+.logout-button_tail {
+  display: inline-block;
+  padding-right: 6px;
+  min-height: 26px;
+  background: url('./images/logout-button_tail.png') no-repeat;
+  vertical-align: top;
+}
+
+.logout-button_body {
+  display: inline-block;
+  padding: 0 7px;
+  min-height: 26px;
+  line-height: 27px;
+  color: #ffffff;
+  background: url('./images/logout-button_body.png') repeat-x;
+  vertical-align: top;
 }
