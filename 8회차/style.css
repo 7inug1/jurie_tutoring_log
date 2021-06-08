@@ -519,7 +519,7 @@ span {
   display: inline-block;
   position: relative;
   padding: 14px 8px 17px 8px;
-  border: 1px solid #fafafa; /*fafafa*/
+  border: 1px solid #fafafa; /*fafafa*/ㄹ
   outline: 1px solid #d7d7cb; /*d7d7cb*/
   background: #ededed;
   position: relative;
@@ -697,7 +697,6 @@ table.tabbed-table {
 
 table.tabbed-table th {
   color: #65839d;
-
   background: #e7e9ed;
 }
 

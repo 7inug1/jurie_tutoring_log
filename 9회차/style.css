@@ -138,6 +138,31 @@ table {
   border-spacing: 0;
 }
 
+tr,
+th,
+td {
+  border: 1px solid #cccccc;
+}
+
+th,
+td {
+  padding: 6px 6px;
+  text-align: center;
+}
+
+th {
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum';
+}
+
+td {
+  color: #414141;
+  font-family: 'dotum';
+  font-size: 12px;
+  background: #f3f3f3;
+}
+
 .left-aligned-text {
   padding-left: 15px;
   text-align: left;
@@ -188,6 +213,10 @@ font: banner3
 /* img {
   vertical-align: middle;
 } */
+
+body {
+  background: #dadada;
+}
 
 button {
   padding: 0;
@@ -349,5 +378,306 @@ button {
   line-height: 27px;
   color: #ffffff;
   background: url('./images/logout-button_body.png') repeat-x;
+  vertical-align: top;
+}
+
+.main {
+  /* height: 100%; */
+}
+
+/*
+#    #   ##   #    # #  ####    ##   ##### #  ####  #    # 
+##   #  #  #  #    # # #    #  #  #    #   # #    # ##   # 
+# #  # #    # #    # # #      #    #   #   # #    # # #  # 
+#  # # ###### #    # # #  ### ######   #   # #    # #  # # 
+#   ## #    #  #  #  # #    # #    #   #   # #    # #   ## 
+#    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
+*/
+
+.navigation {
+  display: inline-block;
+  width: 211px;
+  /* height: 100%; */
+  background: url('./images/nav_body.png') center repeat-x;
+}
+
+/*                                    
+#    #   ##   # #    #        ####  ######  ####  ##### #  ####  #    # 
+##  ##  #  #  # ##   #       #      #      #    #   #   # #    # ##   # 
+# ## # #    # # # #  # #####  ####  #####  #        #   # #    # # #  # 
+#    # ###### # #  # #            # #      #        #   # #    # #  # # 
+#    # #    # # #   ##       #    # #      #    #   #   # #    # #   ## 
+#    # #    # # #    #        ####  ######  ####    #   #  ####  #    # 
+*/
+
+.blue-bar_head {
+  background: url('./images/main-page_background_header_head.png') no-repeat;
+  height: 36px;
+  padding-left: 1px;
+}
+
+.blue-bar_bodytail {
+  padding-left: 29px;
+  height: 36px;
+  line-height: 40px;
+  background: url('./images/main-page_background_header_bodytail.png') repeat-x;
+}
+
+.main-section .background {
+  background: #ededed;
+}
+
+.main-page_tab_head::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 30.6px;
+  right: 1px;
+  bottom: 0;
+  left: 0.7px;
+  height: 2px;
+  background: url('./images/main-page_tab/main-page_tab_white-horizontal-line.png')
+    repeat-x;
+  vertical-align: top;
+}
+
+.main-page_tab_head {
+  display: inline-block;
+  position: relative;
+  padding-left: 5px;
+  min-height: 42px;
+  background: url('./images/main-page_tab/main-page_tab_head.png') left
+    no-repeat;
+  vertical-align: top;
+}
+
+.main-page_tab_head::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: 26px;
+  width: 6px;
+  height: 6px;
+  background: url('./images/main-page_tab/main-page_tab_white-bit.png');
+}
+
+.main-page_tab_tail {
+  display: inline-block;
+  padding-right: 33px;
+  min-height: 42px;
+  background: url('./images/main-page_tab/main-page_tab_tail.png') right
+    no-repeat;
+  vertical-align: top;
+}
+
+.main-page_tab_body {
+  display: inline-block;
+  padding-right: 9px;
+  padding-left: 30px;
+  min-height: 42px;
+  line-height: 42px;
+  color: #fa6c03;
+  font-size: 16px;
+  background: url('./images/main-page_tab/main-page_tab_body.png') center
+    repeat-x;
+  letter-spacing: -0.8px;
+  vertical-align: top;
+}
+
+.main-page {
+  border: 1px solid #cdcdcd;
+  background: white;
+}
+
+/* 
+#####   ##   #####  #####  ###### #####        #####   ##   #####  #      ###### 
+  #    #  #  #    # #    # #      #    #         #    #  #  #    # #      #      
+  #   #    # #####  #####  #####  #    # #####   #   #    # #####  #      #####  
+  #   ###### #    # #    # #      #    #         #   ###### #    # #      #      
+  #   #    # #    # #    # #      #    #         #   #    # #    # #      #      
+  #   #    # #####  #####  ###### #####          #   #    # #####  ###### ###### 
+*/
+
+.tabbed-table {
+  width: 100%;
+}
+
+.tabbed-table_tab_head {
+  display: inline-block;
+  position: relative;
+  background: url('./images/tabbed-table_tab_head.png') left no-repeat;
+  padding-left: 5px;
+  height: 21px;
+
+  vertical-align: top;
+}
+
+.tabbed-table_tab_tail {
+  display: inline-block;
+  background: url('./images/tabbed-table_tab_tail.png') right no-repeat;
+  padding-right: 5px;
+  height: 21px;
+  vertical-align: top;
+}
+
+.tabbed-table_tab_body::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 12px;
+  margin-top: -5.25px;
+  background: url('./images/tabbed-table_yellow-bit.png') no-repeat;
+  line-height: 21px;
+  width: 3px;
+  height: 11px;
+}
+
+.tabbed-table_tab_body {
+  display: inline-block;
+
+  padding-left: 18px;
+  min-width: 108px;
+  background: url('./images/tabbed-table_tab_body.png') center repeat-x;
+  height: 21px;
+  line-height: 21px;
+  color: white;
+  font-size: 12px;
+  font-family: 'dotum';
+  vertical-align: top;
+}
+
+table.tabbed-table {
+  border-top: 2px solid #36699b;
+}
+
+table.tabbed-table th {
+  color: #65839d;
+  background: #e7e9ed;
+}
+
+table.tabbed-table th.small {
+  color: #414141;
+  font-size: 12px;
+  font-family: 'dotum';
+  font-weight: normal;
+  background: #e7e9ed;
+}
+
+/* 
+#    # #    # #####   ##   #####  #####  ###### #####        #####   ##   #####  #      ###### 
+#    # ##   #   #    #  #  #    # #    # #      #    #         #    #  #  #    # #      #      
+#    # # #  #   #   #    # #####  #####  #####  #    # #####   #   #    # #####  #      #####  
+#    # #  # #   #   ###### #    # #    # #      #    #         #   ###### #    # #      #      
+#    # #   ##   #   #    # #    # #    # #      #    #         #   #    # #    # #      #      
+ ####  #    #   #   #    # #####  #####  ###### #####          #   #    # #####  ###### ###### 
+*/
+
+.untabbed-table {
+  width: 100%;
+}
+
+.untabbed-table thead {
+  color: #fefefe;
+  background: #36699b;
+}
+
+/* 
+#####  #      #    # ######       #####  #    # ##### #####  ####  #    # 
+#    # #      #    # #            #    # #    #   #     #   #    # ##   # 
+#####  #      #    # #####  ##### #####  #    #   #     #   #    # # #  # 
+#    # #      #    # #            #    # #    #   #     #   #    # #  # # 
+#    # #      #    # #            #    # #    #   #     #   #    # #   ## 
+#####  ######  ####  ######       #####   ####    #     #    ####  #    # 
+*/
+
+.blue-button_head {
+  display: inline-block;
+  position: relative;
+
+  padding-left: 4px;
+  min-height: 23px;
+  background: url('./images/blue-button_head.png') left no-repeat;
+  vertical-align: top;
+}
+
+.blue-button_tail {
+  display: inline-block;
+  padding-right: 5px;
+  min-height: 23px;
+  background: url('./images/blue-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.blue-button_body {
+  display: inline-block;
+  padding: 0px 5px;
+  line-height: 21px; /*?*/
+  color: #ffffff;
+  font-size: 12px;
+  background: url('./images/blue-button_body.png') center repeat-x;
+  min-height: 23px;
+  vertical-align: top;
+}
+
+.blue-button_body::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 48px;
+  height: 23px;
+  background: url('./images/blue-button_white-shadow.png') no-repeat;
+}
+
+.blue-button_body::after {
+  content: '';
+  display: inline-block;
+  margin-left: 2px;
+  padding-bottom: 2px;
+  width: 3px;
+  height: 5px;
+  background: url('./images/blue-button_arrow.png') no-repeat;
+}
+
+/* 
+#    # #    # # ##### ######       #####  #    # ##### #####  ####  #    # 
+#    # #    # #   #   #            #    # #    #   #     #   #    # ##   # 
+#    # ###### #   #   #####  ##### #####  #    #   #     #   #    # # #  # 
+# ## # #    # #   #   #            #    # #    #   #     #   #    # #  # # 
+##  ## #    # #   #   #            #    # #    #   #     #   #    # #   ## 
+#    # #    # #   #   ######       #####   ####    #     #    ####  #    # 
+*/
+
+.white-button_head {
+  display: inline-block;
+  padding-left: 2px;
+  margin: 0px 1px;
+  min-height: 16px;
+  background: url('./images/white-button_head.png') left no-repeat;
+  vertical-align: top;
+}
+
+.white-button_tail {
+  display: inline-block;
+  padding-right: 2px;
+  min-height: 16px;
+  background: url('./images/white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.white-button_body {
+  display: inline-block;
+  padding: 0px 6px;
+  min-height: 16px;
+  line-height: 16px;
+  color: #3e3e3e;
+  font-size: 11px;
+  font-family: 'dotum';
+  background: url('./images/white-button_body.png') center repeat-x;
   vertical-align: top;
 }
