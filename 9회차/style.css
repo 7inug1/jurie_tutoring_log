@@ -225,6 +225,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* 
     #     # #######    #    ######  ####### ######  
     #     # #         # #   #     # #       #     # 
@@ -490,6 +494,10 @@ button {
   background: white;
 }
 
+.vertical-align_top {
+  vertical-align: middle;
+}
+
 /* 
 #####   ##   #####  #####  ###### #####        #####   ##   #####  #      ###### 
   #    #  #  #    # #    # #      #    #         #    #  #  #    # #      #      
@@ -556,6 +564,7 @@ table.tabbed-table {
 
 table.tabbed-table th {
   color: #65839d;
+  font-weight: bolder;
   background: #e7e9ed;
 }
 
@@ -565,6 +574,11 @@ table.tabbed-table th.small {
   font-family: 'dotum';
   font-weight: normal;
   background: #e7e9ed;
+}
+
+.blue-highlight {
+  color: #396c9e;
+  font-weight: bolder;
 }
 
 /* 

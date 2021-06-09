@@ -117,13 +117,15 @@
             <div class="main-page">
               <!-- table 1 -->
               <div class="table-container">
-                <table border="1" class="untabbed-table_first">
+                <table class="untabbed-table">
+                  <caption hidden>변경신청내역 표</caption>
+                  <colgroup></colgroup>
                   <tr>
-                    <th>년도</th>
-                    <th>사업명</th>
-                    <th>사업차수</th>
-                    <th>과제번호</th>
-                    <th>과제명</th>
+                    <th scope="col">년도</th>
+                    <th scope="col">사업명</th>
+                    <th scope="col">사업차수</th>
+                    <th scope="col">과제번호</th>
+                    <th scope="col">과제명</th>
                   </tr>
                   <tr>
                     <td>2011</td>
@@ -144,21 +146,33 @@
                     <span class="tabbed-table_tab_body">변경신청내역 목록</span>
                   </span>
                 </div>
-                <table border="1" class="tabbed-table">
-                  <tr>
-                    <th>신청일</th>
-                    <th>변경유형</th>
-                    <th>변경사유</th>
-                    <th>진행상태/처리결과</th>
-                    <th>신청취소</th>
-                  </tr>
-                  <tr>
-                    <td>2011-04-04</td>
-                    <td class="bold blue-highlight">연구보조원변경</td>
-                    <td>기타</td>
-                    <td>재단승인 완료 - 승인</td>
-                    <td>취소불가</td>
-                  </tr>
+                <table class="tabbed-table">
+                  <caption hidden>변경신청내역 목록 표</caption>
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">신청일</th>
+                      <th scope="col">변경유형</th>
+                      <th scope="col">변경사유</th>
+                      <th scope="col">진행상태/처리결과</th>
+                      <th scope="col">신청취소</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2011-04-04</td>
+                      <td class="bold blue-highlight">연구보조원변경</td>
+                      <td>기타</td>
+                      <td>재단승인 완료 - 승인</td>
+                      <td>취소불가</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
