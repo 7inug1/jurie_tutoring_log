@@ -66,10 +66,10 @@
           <li>
             <div>
               <h2 class="current-tab">
-                  <img
-                    src="./images/nav_second-list_white.png"
-                    alt="개인연구관리"
-                  />
+                <img
+                  src="./images/nav_second-list_white.png"
+                  alt="개인연구관리"
+                />
               </h2>
             </div>
             <ul>
@@ -103,7 +103,7 @@
               <!-- table 1 -->
               <div class="untabbed-table-container first">
                 <table class="untabbed-table">
-                  <caption >변경신청내역 표</caption>
+                  <caption>변경신청내역 표</caption>
                   <colgroup>
                     <col />
                     <col />
@@ -143,7 +143,7 @@
                   </span>
                 </div>
                 <table class="tabbed-table">
-                  <caption >변경신청내역 표</caption>
+                  <caption>변경신청내역 표</caption>
                   <colgroup>
                     <col width="10%" />
                     <col width="45%" />
@@ -161,13 +161,20 @@
                       <td>연구기관</td>
                       <td class="left-aligned-text">연세대학교</td>
                       <td class="left-aligned-box">
-                        <input type="text" name="" id="" />
+                        <!-- <input type="text" /> -->
                         <div class="search-file-button-container">
-                          <button type="button" class="white-button_head">
-                            <span class="white-button_tail">
-                              <span class="white-button_body">파일찾기</span>
-                            </span>
-                          </button>
+                          <!-- <label for="file-upload-button">
+                            <button type="button" class="white-button_head">
+                              <span class="white-button_tail">
+                                <span class="white-button_body">파일찾기</span>
+                              </span>
+                            </button>
+                          </label> -->
+                          <input
+                            type="file"
+                            id="file-upload-button"
+                            name="file-upload-button"
+                          />
                         </div>
                       </td>
                     </tr>
@@ -186,7 +193,7 @@
                     </span>
                   </div>
                   <table class="tabbed-table">
-                    <caption >관련 파일 첨부 표</caption>
+                    <caption>관련 파일 첨부 표</caption>
                     <colgroup>
                       <col />
                       <col />
@@ -194,19 +201,20 @@
                     <tr>
                       <th scope="row">첨부파일</th>
                       <td class="left-aligned-box">
-                        <input type="text" />
+                        <!-- <input type="text" /> -->
                         <div class="search-file-button-container">
-                          <button type="button" class="white-button_head">
-                            <span class="white-button_tail">
-                              <span class="white-button_body">파일찾기</span>
-                            </span>
-                          </button>
-                          <!-- <input type="file" class="white-button_head">
-                            <span class="white-button_tail">
-                              <span class="white-button_body">파일찾기</span>
-                            </span>
-                          </input> -->
-                          <input type="file" />
+                          <!-- <label for="file-upload-button">
+                            <button type="button" class="white-button_head">
+                              <span class="white-button_tail">
+                                <span class="white-button_body">파일찾기</span>
+                              </span>
+                            </button>
+                          </label> -->
+                          <input
+                            type="file"
+                            id="file-upload-button"
+                            name="file-upload-button"
+                          />
                         </div>
                       </td>
                     </tr>
@@ -226,7 +234,7 @@
                     </span>
                   </div>
                   <table class="tabbed-table">
-                    <caption >변경 사유 입력 표</caption>
+                    <caption>변경 사유 입력 표</caption>
                     <colgroup>
                       <col />
                       <col />

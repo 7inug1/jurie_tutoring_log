@@ -353,19 +353,20 @@
                     <tr>
                       <th scope="row">첨부파일</th>
                       <td class="left-aligned-box">
-                        <input type="text" />
+                        <!-- <input type="text" /> -->
                         <div class="search-file-button-container">
-                          <button type="button" class="white-button_head">
-                            <span class="white-button_tail">
-                              <span class="white-button_body">파일찾기</span>
-                            </span>
-                          </button>
-                          <!-- <input type="file" class="white-button_head">
-                            <span class="white-button_tail">
-                              <span class="white-button_body">파일찾기</span>
-                            </span>
-                          </input> -->
-                          <input type="file" />
+                          <!-- <label for="file-upload-button">
+                            <button type="button" class="white-button_head">
+                              <span class="white-button_tail">
+                                <span class="white-button_body">파일찾기</span>
+                              </span>
+                            </button>
+                          </label> -->
+                          <input
+                            type="file"
+                            id="file-upload-button"
+                            name="file-upload-button"
+                          />
                         </div>
                       </td>
                     </tr>
@@ -410,6 +411,7 @@
                           cols="30"
                           rows="2"
                         ></textarea>
+                        <div>현재 0 / (한글 100자, 영문 200자 이내)</div>
                       </td>
                     </tr>
                   </table>
