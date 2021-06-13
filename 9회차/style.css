@@ -150,6 +150,10 @@
     text-align: left;
   }
 
+  td.textarea {
+    padding: 0;
+  }
+
   .left-aligned-box-wrapper {
     display: inline-block;
     position: relative;
@@ -181,6 +185,7 @@ font: banner3
 */
 
 body {
+  min-width: 900px;
   background: url('./images/background_body.png') repeat-x;
 }
 
@@ -196,11 +201,41 @@ a {
 }
 
 textarea {
-  width: 99%;
+  width: 100%;
+  border: 0 none;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+textarea:focus {
+  outline: 0 none;
+}
+
+.textarea-wrapper {
+  position: relative;
+  padding-bottom: 12px;
+  border: 1px solid black;
+  background: white;
+}
+
+textarea + .length {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  /* text-align: right; */
 }
 
 input {
   vertical-align: middle;
+}
+
+input[type='file'] {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  opacity: 0;
+  z-index: -100;
 }
 
 caption {
@@ -351,7 +386,7 @@ caption {
   position: relative;
   padding-left: 4px;
   height: 26px;
-  background: url('./images/logout-button_head.png') no-repeat;
+  background: url('./images/logout-button_head.png') left no-repeat;
   vertical-align: top;
 }
 
@@ -359,7 +394,7 @@ caption {
   display: inline-block;
   padding-right: 6px;
   height: 26px;
-  background: url('./images/logout-button_tail.png') no-repeat;
+  background: url('./images/logout-button_tail.png') right no-repeat;
   vertical-align: top;
 }
 
@@ -369,7 +404,7 @@ caption {
   height: 26px;
   line-height: 27px;
   color: #ffffff;
-  background: url('./images/logout-button_body.png') repeat-x;
+  background: url('./images/logout-button_body.png') center repeat-x;
   vertical-align: top;
 }
 
@@ -457,6 +492,12 @@ caption {
   border: 1px solid #f8f8f7;
   outline: 1px solid #d7d7cc;
   background: url('./images/nav_body.png') top repeat;
+  z-index: 1;
+}
+
+.navigation .navigation_blue-bold {
+  color: #366899;
+  font-weight: bolder;
 }
 
 .navigation ul {

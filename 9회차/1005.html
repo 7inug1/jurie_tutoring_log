@@ -78,10 +78,12 @@
                 </h2>
               </div>
               <ul>
-                <li>변경신청내역보기</li>
+                <li><a href="./1002.html">변경신청내역보기</a></li>
                 <li><a href="./1003.html">공동연구원 변경</a></li>
                 <li><a href="./1004.html">연구기관변경</a></li>
-                <li><a href="./1005.html">연구보조원변경</a></li>
+                <li>
+                  <a class="navigation_blue-bold">연구보조원변경</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -116,11 +118,11 @@
                 <table class="untabbed-table">
                   <caption>변경신청내역 표</caption>
                   <colgroup>
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
+                    <col style="width: 7.38%" />
+                    <col style="width: 23.56%" />
+                    <col style="width: 6.91%" />
+                    <col style="width: 9.49%" />
+                    <col style="width: 52.168%" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -171,12 +173,12 @@
                 <table class="tabbed-table">
                   <caption>현재구성 공동연구원 표</caption>
                   <colgroup>
-                    <col width="16.6%" />
-                    <col width="16.6%" />
-                    <col width="16.6%" />
-                    <col width="16.6%" />
-                    <col width="16.6%" />
-                    <col width="16.6%" />
+                    <col style="width: 16.6%" />
+                    <col style="width: 16.6%" />
+                    <col style="width: 16.6%" />
+                    <col style="width: 16.6%" />
+                    <col style="width: 16.6%" />
+                    <col style="width: 16.6%" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -308,14 +310,14 @@
                   <table class="tabbed-table">
                     <caption>변경신청내역 표</caption>
                     <colgroup>
-                      <col width="12.5%" />
-                      <col width="12.5%" />
-                      <col width="12.5%" />
-                      <col width="12.5%" />
-                      <col width="12.5%" />
-                      <col width="12.5%" />
-                      <col width="12.5%" />
-                      <col width="12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
+                      <col style="width: 12.5%" />
                     </colgroup>
                     <thead>
                       <tr>
@@ -358,27 +360,48 @@
                   <table class="tabbed-table">
                     <caption>관련 파일 첨부 표</caption>
                     <colgroup>
-                      <col />
-                      <col />
+                      <col style="width: 13.83%" />
+                      <col style="width: 86.049" />
                     </colgroup>
                     <tr>
                       <th scope="row" class="vertical-align_middle">
                         <label for="file-upload-button">첨부파일</label>
                       </th>
                       <td class="left-aligned-box">
-                        <!-- <input type="text" /> -->
+                        <input
+                          type="text"
+                          readonly="readonly"
+                          id="file-input"
+                        />
                         <div class="search-file-button-container">
-                          <!-- <label for="file-upload-button">
-                            <button type="button" class="white-button_head">
-                              <span class="white-button_tail">
-                                <span class="white-button_body">파일찾기</span>
-                              </span>
-                            </button>
-                          </label> -->
+                          <label
+                            for="file-upload-button"
+                            class="white-button_head"
+                          >
+                            <span class="white-button_tail">
+                              <span class="white-button_body">파일찾기</span>
+                            </span>
+                          </label>
+                          <script>
+                            let fileInput =
+                              document.querySelector('#file-input');
+                            fileInput.value = '';
+
+                            function getEventChange() {
+                              let fileInput =
+                                document.querySelector('#file-input');
+                              let fileName =
+                                document.getElementById('file-upload-button');
+                              fileName = fileName.value;
+                              console.log('filename: ' + fileName);
+                              fileInput.value = fileName;
+                            }
+                          </script>
                           <input
                             type="file"
                             id="file-upload-button"
                             name="file-upload-button"
+                            onchange="getEventChange()"
                           />
                         </div>
                       </td>
@@ -401,8 +424,8 @@
                   <table class="tabbed-table">
                     <caption>변경 사유 입력 표</caption>
                     <colgroup>
-                      <col />
-                      <col />
+                      <col style="width: 13.83%" />
+                      <col style="width: 86.049" />
                     </colgroup>
                     <tr>
                       <th class="vertical-align_middle">
@@ -417,7 +440,9 @@
                           <option value="" selected disabled hidden>
                             선택하여주십시오.
                           </option>
-                          <option value="변경사유.pdf">변경사유.pdf</option>
+                          <option value="변경사유.pdf">변경사유1.pdf</option>
+                          <option value="변경사유.pdf">변경사유2.pdf</option>
+                          <option value="변경사유.pdf">변경사유3.pdf</option>
                         </select>
                       </td>
                     </tr>
@@ -425,14 +450,18 @@
                       <th class="vertical-align_middle">
                         <label for="details">상세내역</label>
                       </th>
-                      <td class="left-aligned-box">
-                        <textarea
-                          name="details"
-                          id="details"
-                          cols="30"
-                          rows="2"
-                        ></textarea>
-                        <div>현재 0 / (한글 100자, 영문 200자 이내)</div>
+                      <td class="left-aligned-box textarea">
+                        <div class="textarea-wrapper">
+                          <textarea
+                            name="details"
+                            id="details"
+                            cols="30"
+                            rows="2"
+                          ></textarea>
+                          <div class="length">
+                            현재 0 / (한글 100자, 영문 200자 이내)
+                          </div>
+                        </div>
                       </td>
                     </tr>
                   </table>
