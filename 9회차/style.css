@@ -138,39 +138,6 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
-
-  .left-aligned-text {
-    padding-left: 15px;
-    text-align: left;
-  }
-
-  .left-aligned-box {
-    position: relative;
-    font-size: 0;
-    text-align: left;
-  }
-
-  td.textarea {
-    padding: 0;
-  }
-
-  .left-aligned-box-wrapper {
-    display: inline-block;
-    position: relative;
-  }
-
-  .search-file-button-container {
-    display: inline-block;
-    margin-left: 3px;
-  }
-
-  .bold {
-    font-weight: bolder;
-  }
-
-  .blue-text {
-    color: #36699b;
-  }
 }
 /*  
 http://www.network-science.de/ascii/
@@ -240,6 +207,39 @@ input[type='file'] {
 
 caption {
   display: none;
+}
+
+.left-aligned-text {
+  padding-left: 15px;
+  text-align: left;
+}
+
+.left-aligned-box {
+  position: relative;
+  font-size: 0;
+  text-align: left;
+}
+
+td.textarea {
+  padding: 0;
+}
+
+.left-aligned-box-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.search-file-button-container {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.blue-text {
+  color: #36699b;
 }
 
 /* 

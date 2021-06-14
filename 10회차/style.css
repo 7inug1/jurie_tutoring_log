@@ -1,0 +1,245 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+/* 
+ ####    ##   #      ###### #    # #####  ###### #####      #    # ##### #    # #      
+#    #  #  #  #      #      ##   # #    # #      #    #     #    #   #   ##  ## #      
+#      #    # #      #####  # #  # #    # #####  #    #     ######   #   # ## # #      
+#      ###### #      #      #  # # #    # #      #####  ### #    #   #   #    # #      
+#    # #    # #      #      #   ## #    # #      #   #  ### #    #   #   #    # #      
+ ####  #    # ###### ###### #    # #####  ###### #    # ### #    #   #   #    # ###### 
+*/
+
+/* body */
+body {
+  padding: 100px 0;
+}
+
+/* .wrapper */
+.wrapper {
+  margin: 0 auto;
+  width: 824px;
+}
+
+/* .calendar-box */
+.calendar-box_head {
+  width: 824px;
+  margin-top: 10px;
+  background: url('./images/calendar/wrapper_head.png') top no-repeat;
+  padding-top: 5px;
+}
+.calendar-box_tail {
+  width: 824px;
+  background: url('./images/calendar/wrapper_tail.png') bottom no-repeat;
+  padding-bottom: 5px;
+}
+.calendar-box_body {
+  width: 824px;
+  background: url('./images/calendar/wrapper_body.png') center repeat-y;
+}
+
+/* location */
+.calendar .directory {
+  padding-right: 7px;
+  font-size: 0;
+  text-align: right;
+}
+
+.calendar .directory span {
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+  letter-spacing: -0.8px;
+}
+
+.calendar .directory span.not-current {
+  color: #7a7c7e;
+  font-weight: normal;
+}
+
+.calendar .directory span.not-current::after {
+  content: '';
+  display: inline-block;
+  margin: 0 6px 0 6px;
+  width: 5px;
+  height: 9px;
+  background: url('./images/calendar/directory-arrow.png');
+}
+
+.calendar .directory span.current {
+  color: #5a5a5a;
+  font-weight: bolder;
+}
+
+/* h1 */
+.calendar h1 {
+  font-size: 0;
+}
+
+.calendar h1 img {
+  vertical-align: middle;
+}
+
+.calendar h1::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 26px;
+  background: url('./images/calendar/h1-icon.png');
+  vertical-align: middle;
+}
+
+/*                                                                        
+#       ####   ####  # #    #       #####    ##    ####  ######     #    # ##### #    # #      
+#      #    # #    # # ##   #       #    #  #  #  #    # #          #    #   #   ##  ## #      
+#      #    # #      # # #  # ##### #    # #    # #      #####      ######   #   # ## # #      
+#      #    # #  ### # #  # #       #####  ###### #  ### #      ### #    #   #   #    # #      
+#      #    # #    # # #   ##       #      #    # #    # #      ### #    #   #   #    # #      
+######  ####   ####  # #    #       #      #    #  ####  ###### ### #    #   #   #    # ###### 
+*/
+/* 
+#####   ##   #####  #      ######     #    # ##### #    # #      
+  #    #  #  #    # #      #          #    #   #   ##  ## #      
+  #   #    # #####  #      #####      ######   #   # ## # #      
+  #   ###### #    # #      #      ### #    #   #   #    # #      
+  #   #    # #    # #      #      ### #    #   #   #    # #      
+  #   #    # #####  ###### ###### ### #    #   #   #    # ###### 
+*/
