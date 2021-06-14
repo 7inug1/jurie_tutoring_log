@@ -162,18 +162,16 @@ body {
 
 /* .calendar-box */
 .calendar-box_head {
-  width: 824px;
   margin-top: 10px;
   background: url('./images/calendar/wrapper_head.png') top no-repeat;
   padding-top: 5px;
 }
 .calendar-box_tail {
-  width: 824px;
   background: url('./images/calendar/wrapper_tail.png') bottom no-repeat;
   padding-bottom: 5px;
 }
 .calendar-box_body {
-  width: 824px;
+  padding: 16px 19px 23px 21px;
   background: url('./images/calendar/wrapper_body.png') center repeat-y;
 }
 
@@ -201,7 +199,7 @@ body {
   margin: 0 6px 0 6px;
   width: 5px;
   height: 9px;
-  background: url('./images/calendar/directory-arrow.png');
+  background: url('./images/calendar/directory-arrow.png') no-repeat;
 }
 
 .calendar .directory span.current {
@@ -215,6 +213,7 @@ body {
 }
 
 .calendar h1 img {
+  padding-left: 9px;
   vertical-align: middle;
 }
 
@@ -225,6 +224,95 @@ body {
   height: 26px;
   background: url('./images/calendar/h1-icon.png');
   vertical-align: middle;
+}
+
+/* .calender-navigation */
+button {
+  padding: 0;
+  border: 0 none;
+}
+
+select {
+  vertical-align: middle;
+}
+
+.white-button_head {
+  position: relative;
+  height: 18px;
+  padding-left: 3px;
+  background: url('./images/calendar/white-button_head.png') left no-repeat;
+  vertical-align: middle;
+}
+
+.white-button_tail {
+  height: 18px;
+  padding-right: 3px;
+  background: url('./images/calendar/white-button_tail.png') right no-repeat;
+  /* vertical-align: top; */
+}
+
+.white-button_body {
+  height: 18px;
+  background: url('./images/calendar/white-button_body.png') center repeat-x;
+}
+
+/* .calendar-navigation */
+
+.calendar-navigation {
+  font-size: 0;
+  text-align: center;
+}
+
+.calendar-navigation select:first-of-type {
+  margin-left: 10px;
+}
+
+.calendar-navigation select + select {
+  margin-left: 3px;
+}
+
+.calendar-navigation button:nth-of-type(2) {
+  margin-left: 9px;
+}
+
+.calendar-navigation button:first-of-type span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -2.5px;
+  width: 3px;
+  height: 5px;
+  background: url('./images/calendar/white-button_arrow-left.png') no-repeat;
+  vertical-align: middle;
+}
+
+.calendar-navigation button:first-of-type .white-button_body {
+  padding-left: 9px;
+  padding-right: 5px;
+}
+
+.calendar-navigation button:nth-of-type(2) .white-button_body {
+  padding-left: 5px;
+  padding-right: 9px;
+}
+
+.calendar-navigation button:nth-of-type(2) span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -2.5px;
+  width: 3px;
+  height: 5px;
+  background: url('./images/calendar/white-button_arrow-right.png') no-repeat;
+  vertical-align: middle;
+}
+
+.white-button_body span {
+  font-size: 12px;
+  font-family: 'gulim', sans-serif;
+  color: #333333;
 }
 
 /*                                                                        
