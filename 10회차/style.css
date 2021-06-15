@@ -141,6 +141,22 @@
 }
 
 /* 
+ ####  ###### #    # ###### #####    ##   #      
+#    # #      ##   # #      #    #  #  #  #      
+#      #####  # #  # #####  #    # #    # #      
+#  ### #      #  # # #      #####  ###### #      
+#    # #      #   ## #      #   #  #    # #      
+ ####  ###### #    # ###### #    # #    # ###### 
+*/
+
+@font-face {
+  font-family: 'MalgunGothic';
+  src: url('./fonts/malgungothic/MalgunGothicRegular.woff') format('woff'),
+    url('./fonts/malgungothic/MalgunGothicRegular.woff2') format('woff2'),
+    url('./fonts/malgungothic/malgun.ttf') format('ttf');
+}
+
+/* 
  ####    ##   #      ###### #    # #####  ###### #####      #    # ##### #    # #      
 #    #  #  #  #      #      ##   # #    # #      #    #     #    #   #   ##  ## #      
 #      #    # #      #####  # #  # #    # #####  #    #     ######   #   # ## # #      
@@ -359,6 +375,107 @@ td {
 #      #    # #    # # #   ##       #      #    # #    # #      ### #    #   #   #    # #      
 ######  ####   ####  # #    #       #      #    #  ####  ###### ### #    #   #   #    # ###### 
 */
+
+.login-page h1::before {
+  content: '';
+  display: inline-block;
+  width: 65px;
+  height: 52px;
+  background: url('./images/login-page/h1-icon.png');
+  vertical-align: middle;
+}
+
+.login-page h1 img {
+  padding-left: 3px;
+  vertical-align: middle;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 970px;
+  height: 398px;
+  background: url('./images/login-page/vector-smart-object.png');
+  z-index: -2;
+}
+
+/* .body */
+.blue-container_tail {
+  background: url('./images/login-page/blue-container_tail.png') right no-repeat;
+  height: 208px;
+  padding-right: 111px;
+}
+
+.blue-container_headbody::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 421px;
+  height: 275px;
+  background: url('./images/login-page/line.png');
+  z-index: -1;
+}
+
+.blue-container_headbody {
+  position: relative;
+  min-width: 807px;
+  height: 207px;
+  background: url('./images/login-page/blue-container_headbody.png') repeat-x;
+  z-index: 1;
+}
+
+.blue-container_headbody .intro::before {
+  content: '';
+  display: inline-block;
+  width: 107px;
+  height: 34px;
+  background: url('./images/login-page/login-font.png');
+}
+
+.blue-container_headbody img {
+  display: block;
+}
+
+.blue-container_headbody .intro {
+  z-index: 2;
+}
+
+.blue-container_headbody .intro::after {
+  content: '';
+  display: inline-block;
+  min-width: 336px;
+  height: 1px;
+  background: url('./images/login-page/dotted-line.png') repeat-x;
+}
+
+.signin-container {
+  z-index: 2;
+}
+
+.signin-container #login-button {
+  padding: 0;
+  width: 67px;
+  height: 50px;
+  font-size: 0;
+  border: none;
+  background: url('./images/login-page/login-button.png');
+  cursor: pointer;
+}
+
+/* .footer */
+.login-page .footer p {
+  color: #616161;
+  font-size: 11px;
+  font-family: 'MalgunGothic';
+}
+
 /* 
 #####   ##   #####  #      ######     #    # ##### #    # #      
   #    #  #  #    # #      #          #    #   #   ##  ## #      
