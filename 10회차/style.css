@@ -426,8 +426,15 @@ select {
 ####### ### ######  ####   ####  # #    #       #      #    #  ####  ###### ### #    #   #   #    # ######  
 */
 
+.login-page .wrapper {
+  display: relative;
+  min-height: 565px;
+}
+
 .login-page .header {
   display: block;
+  position: absolute;
+  left: 382px;
 }
 
 .login-page h1 {
@@ -444,6 +451,7 @@ select {
   content: '';
   /* display: inline-block; */
   position: absolute;
+  left: -65px;
   width: 65px;
   height: 52px;
   background: url('./images/login-page/h1-icon.png') no-repeat;
@@ -451,11 +459,11 @@ select {
 }
 
 .login-page h1 {
-  padding-left: 382px;
+  /* padding-left: 382px; */
 }
 
 .login-page h1 img {
-  padding-top: 15px;
+  padding-top: 18px;
   padding-left: 3px;
   vertical-align: top;
 }
@@ -468,8 +476,8 @@ select {
   content: '';
   display: inline-block;
   position: absolute;
-  top: -6px;
-  left: 149px;
+  top: 1px;
+  left: 152px;
   width: 970px;
   height: 398px;
   background: url('./images/login-page/vector-smart-object.png');
@@ -477,9 +485,11 @@ select {
 }
 
 /* .body */
-.body {
-  margin-top: 26px;
-  min-width: 918px;
+.login-page .body {
+  position: absolute;
+  /* margin-top: 26px; */
+  /* min-width: 918px; */
+  top: 67px;
 }
 
 .blue-container_tail {
@@ -501,7 +511,7 @@ select {
 
 .blue-container_headbody {
   position: relative;
-  min-width: 807px;
+  min-width: 810px;
   height: 207px;
   background: url('./images/login-page/blue-container_headbody.png') repeat-x;
   z-index: 1;
@@ -511,8 +521,8 @@ select {
   content: '';
   display: inline-block;
   position: absolute;
-  top: 31px;
-  left: 314px;
+  top: 33px;
+  left: 317px;
   width: 107px;
   height: 34px;
   background: url('./images/login-page/login-font.png') no-repeat;
@@ -525,8 +535,8 @@ select {
 .blue-container_headbody .intro {
   display: inline-block;
   position: relative;
-  padding-top: 33px;
-  padding-left: 467px;
+  padding-top: 34px;
+  padding-left: 468px;
   z-index: 2;
 }
 
@@ -535,7 +545,7 @@ select {
 }
 
 .blue-container_headbody .intro img + img {
-  margin-top: 11px;
+  margin-top: 10px;
 }
 
 .blue-container_headbody .intro::after {
@@ -567,7 +577,7 @@ select {
 .signin-container {
   position: relative;
   margin-top: 19px;
-  padding-left: 465px;
+  padding-left: 466px;
   z-index: 2;
 }
 
@@ -601,11 +611,11 @@ label[for='password'] {
 }
 
 label[for='id'] {
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 
 label[for='password'] {
-  letter-spacing: 0px;
+  letter-spacing: -0.2px;
 }
 
 label[for='save-id'] {
@@ -621,7 +631,9 @@ label[for='save-id'] {
   font-weight: bolder;
 }
 
-input#id,
+input#id {
+  margin-left: 8px;
+}
 input#password {
   /* padding: 0; */
   margin-left: 12px;
@@ -642,8 +654,8 @@ input#save-id {
   /* dis */
   position: absolute;
   padding: 0;
-  top: 0;
-  right: -74px;
+  top: -2px;
+  right: -76px;
   width: 67px;
   height: 50px;
   font-size: 0;
@@ -654,18 +666,27 @@ input#save-id {
 
 /* .footer */
 .login-page .footer {
-  padding-left: 314px;
-  margin-top: 248px;
+  position: absolute;
+  bottom: 0px;
+  left: 317px;
+  /* padding-left: 314px; */
+  /* margin-top: 248px; */
 }
 
 .login-page .footer p {
   color: #616161;
   font-size: 11px;
   font-family: 'MalgunGothic';
+  letter-spacing: -0.4px;
+}
+
+.login-page .footer p.top {
+  letter-spacing: -0.5px;
 }
 
 .login-page .footer p.bottom {
   margin-top: 10px;
+  letter-spacing: -0.2px;
 }
 
 /* 
