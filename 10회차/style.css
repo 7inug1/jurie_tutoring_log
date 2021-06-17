@@ -180,7 +180,6 @@ body {
 /* .calendar-box */
 .calendar-box_head {
   width: 824px;
-  /* height: 663px; */
   margin-top: 9px;
   background: url('./images/calendar/wrapper_head.png') top no-repeat;
   padding-top: 5px;
@@ -251,7 +250,6 @@ body {
 }
 
 /* .calender-navigation */
-
 button {
   padding: 0;
   border: 0 none;
@@ -274,7 +272,6 @@ select {
   height: 18px;
   padding-right: 3px;
   background: url('./images/calendar/white-button_tail.png') right no-repeat;
-  /* vertical-align: top; */
 }
 
 .white-button_body {
@@ -283,7 +280,6 @@ select {
 }
 
 /* .calendar-navigation */
-
 .calendar-navigation {
   margin-top: 18px;
   padding-right: 13px;
@@ -358,23 +354,9 @@ select {
   border: 1px solid #dddddd;
 }
 
-.calendar th::after {
-  /* content: ''; */
-  display: inline-block;
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  /* width: 111px; */
-  /* height: 26px; */
-  /* overflow: hidden; */
-  /* background: url('./images/calendar/th-shadow.png') repeat-x; */
-}
-
 .calendar th {
-  /* display: inline-block; */
   position: relative;
   padding: 7px 0;
-
   font-size: 12px;
   font-weight: bolder;
   font-family: 'gulim', sans-serif;
@@ -421,17 +403,16 @@ select {
 
 .calendar td.closed {
   background: #f7f7f7;
-  background-clip: padding-box; /* Add this line */
+  background-clip: padding-box;
 }
 
 .calendar td.taken {
   background: #fcf3de;
-  background-clip: padding-box; /* Add this line */
+  background-clip: padding-box;
 }
 
 .calendar td.selected {
   outline: 1px solid #f09457;
-  /* border: 1px solid #f09457; */
   outline-offset: -2px;
 }
 
@@ -445,22 +426,32 @@ select {
 ####### ### ######  ####   ####  # #    #       #      #    #  ####  ###### ### #    #   #   #    # ######  
 */
 
+.login-page .header {
+  display: block;
+}
+
+.login-page h1 {
+  display: inline-block;
+  /* position: absolute; */
+}
+
 .login-page h1 a {
   display: inline-block;
-  font-size: 0;
+  /* font-size: 0; */
 }
 
 .login-page h1 a::before {
   content: '';
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
   width: 65px;
   height: 52px;
-  background: url('./images/login-page/h1-icon.png');
-  vertical-align: middle;
+  background: url('./images/login-page/h1-icon.png') no-repeat;
+  /* vertical-align: middle; */
 }
 
 .login-page h1 {
-  padding-left: 314px;
+  padding-left: 382px;
 }
 
 .login-page h1 img {
@@ -469,7 +460,7 @@ select {
   vertical-align: top;
 }
 
-.wrapper {
+.login-page .wrapper {
   position: relative;
 }
 
@@ -487,7 +478,8 @@ select {
 
 /* .body */
 .body {
-  margin-top: 15px;
+  margin-top: 26px;
+  min-width: 918px;
 }
 
 .blue-container_tail {
@@ -549,17 +541,32 @@ select {
 .blue-container_headbody .intro::after {
   content: '';
   display: inline-block;
-  position: absolute;
-  top: 93px;
-  left: 462px;
-  min-width: 336px;
+  padding-top: 20px;
+  padding-left: -3px;
+  /* position: absolute; */
+  /* top: 93px; */
+  /* left: 462px; */
+  /* padding-left: -3px; */
+  /* padding-bottom: 20px; */
+  /* right: -54px; */
+
+  min-width: 337px;
   height: 1px;
   background: url('./images/login-page/dotted-line.png') bottom repeat-x;
 }
 
+/* .signin-container::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  min-width: 336px;
+  height: 1px;
+  background: url('./images/login-page/dotted-line.png') repeat-x;
+} */
+
 .signin-container {
   position: relative;
-  margin-top: 40px;
+  margin-top: 19px;
   padding-left: 465px;
   z-index: 2;
 }
@@ -588,7 +595,6 @@ label[for='password']::before {
 
 label[for='id'],
 label[for='password'] {
-  /* vertical-align: middle; */
   color: white;
   font-size: 12px;
   font-family: 'MalgunGothic', sans-serif;
@@ -603,11 +609,13 @@ label[for='password'] {
 }
 
 label[for='save-id'] {
-  position: absolute;
-  /* padding-left: 62px; */
+  display: block;
+  /* position: absolute; */
+  padding-left: 62px;
   /* margin-top: 9px; */
-  top: 57px;
-  left: 62px;
+  /* padding-top: 57px; */
+  /* padding-left: 62px; */
+  padding-top: 9px;
   color: black;
   font-size: 12px;
   font-weight: bolder;
@@ -621,6 +629,8 @@ input#password {
 
 input#save-id {
   margin: 0;
+  /* padding-top: 57px;
+  padding-left: 62px; */
 }
 
 .signin-container form {
@@ -668,7 +678,7 @@ input#save-id {
  #####  ###   #   #    # #####  ###### ###### ### #    #   #   #    # ###### 
 */
 
-.wrapper {
+.table .wrapper {
   margin: 0 auto;
   width: 980px;
 }
