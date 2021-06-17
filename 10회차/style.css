@@ -157,12 +157,13 @@
 }
 
 /* 
- ####    ##   #      ###### #    # #####  ###### #####      #    # ##### #    # #      
-#    #  #  #  #      #      ##   # #    # #      #    #     #    #   #   ##  ## #      
-#      #    # #      #####  # #  # #    # #####  #    #     ######   #   # ## # #      
-#      ###### #      #      #  # # #    # #      #####  ### #    #   #   #    # #      
-#    # #    # #      #      #   ## #    # #      #   #  ### #    #   #   #    # #      
- ####  #    # ###### ###### #    # #####  ###### #    # ### #    #   #   #    # ###### 
+   #                                                                                              
+  ##        ####    ##   #      ###### #    # #####  ###### #####      #    # ##### #    # #      
+ # #       #    #  #  #  #      #      ##   # #    # #      #    #     #    #   #   ##  ## #      
+   #       #      #    # #      #####  # #  # #    # #####  #    #     ######   #   # ## # #      
+   #   ### #      ###### #      #      #  # # #    # #      #####  ### #    #   #   #    # #      
+   #   ### #    # #    # #      #      #   ## #    # #      #   #  ### #    #   #   #    # #      
+ ##### ###  ####  #    # ###### ###### #    # #####  ###### #    # ### #    #   #   #    # ###### 
 */
 
 /* body */
@@ -179,35 +180,41 @@ body {
 /* .calendar-box */
 .calendar-box_head {
   width: 824px;
-  margin-top: 10px;
+  height: 663px;
+  margin-top: 9px;
   background: url('./images/calendar/wrapper_head.png') top no-repeat;
   padding-top: 5px;
 }
+
 .calendar-box_tail {
   background: url('./images/calendar/wrapper_tail.png') bottom no-repeat;
   padding-bottom: 5px;
 }
+
 .calendar-box_body {
-  padding: 16px 19px 18px 21px;
+  padding: 11px 19px 18px 21px;
   background: url('./images/calendar/wrapper_body.png') center repeat-y;
 }
 
 /* DIRECTORY */
 .calendar .directory {
-  padding-right: 7px;
+  padding-right: 5px;
   font-size: 0;
   text-align: right;
+}
+
+.calendar .directory span a {
+  display: inline-block;
+
+  text-decoration: none;
+  color: #7a7c7e;
+  font-weight: normal;
 }
 
 .calendar .directory span {
   font-size: 12px;
   font-family: 'dotum', sans-serif;
-  letter-spacing: -0.8px;
-}
-
-.calendar .directory span.not-current {
-  color: #7a7c7e;
-  font-weight: normal;
+  letter-spacing: -0.4px;
 }
 
 .calendar .directory span.not-current::after {
@@ -278,7 +285,8 @@ select {
 /* .calendar-navigation */
 
 .calendar-navigation {
-  margin-top: 17px;
+  margin-top: 18px;
+  padding-right: 13px;
   font-size: 0;
   text-align: center;
 }
@@ -330,7 +338,7 @@ select {
 }
 
 .table-wrapper {
-  margin-top: 13px;
+  margin-top: 11px;
 }
 
 .white-button_body span {
@@ -351,25 +359,29 @@ select {
 }
 
 .calendar th::after {
-  content: '';
-  position: absolute;
+  /* content: ''; */
+  display: inline-block;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  display: inline-block;
-  background: url('./images/calendar/th-shadow.png') repeat-x;
-  width: 111px;
-  height: 26px;
-  overflow: hidden;
+  /* width: 111px; */
+  /* height: 26px; */
+  /* overflow: hidden; */
+  /* background: url('./images/calendar/th-shadow.png') repeat-x; */
 }
 
 .calendar th {
+  /* display: inline-block; */
   position: relative;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /* min-height: 26px; */
   font-size: 12px;
   font-weight: bolder;
   font-family: 'gulim', sans-serif;
+  background: url('./images/calendar/th-shadow.png') repeat-x;
   letter-spacing: -0.8px;
+  vertical-align: middle;
 }
 
 .calendar th:first-of-type {
@@ -381,7 +393,7 @@ select {
 }
 
 .calendar tbody tr {
-  height: 85px;
+  height: 87px;
   font-family: 'gulim', sans-serif;
   font-size: 11px;
   color: #5b5b5b;
@@ -422,12 +434,13 @@ select {
 }
 
 /*                                                                        
-#       ####   ####  # #    #       #####    ##    ####  ######     #    # ##### #    # #      
-#      #    # #    # # ##   #       #    #  #  #  #    # #          #    #   #   ##  ## #      
-#      #    # #      # # #  # ##### #    # #    # #      #####      ######   #   # ## # #      
-#      #    # #  ### # #  # #       #####  ###### #  ### #      ### #    #   #   #    # #      
-#      #    # #    # # #   ##       #      #    # #    # #      ### #    #   #   #    # #      
-######  ####   ####  # #    #       #      #    #  ####  ###### ### #    #   #   #    # ###### 
+ #####                                                                                                     
+#     #     #       ####   ####  # #    #       #####    ##    ####  ######     #    # ##### #    # #      
+      #     #      #    # #    # # ##   #       #    #  #  #  #    # #          #    #   #   ##  ## #      
+ #####      #      #    # #      # # #  # ##### #    # #    # #      #####      ######   #   # ## # #      
+#       ### #      #    # #  ### # #  # #       #####  ###### #  ### #      ### #    #   #   #    # #      
+#       ### #      #    # #    # # #   ##       #      #    # #    # #      ### #    #   #   #    # #      
+####### ### ######  ####   ####  # #    #       #      #    #  ####  ###### ### #    #   #   #    # ######  
 */
 
 .login-page h1 a {
@@ -644,12 +657,13 @@ input#save-id {
 }
 
 /* 
-#####   ##   #####  #      ######     #    # ##### #    # #      
-  #    #  #  #    # #      #          #    #   #   ##  ## #      
-  #   #    # #####  #      #####      ######   #   # ## # #      
-  #   ###### #    # #      #      ### #    #   #   #    # #      
-  #   #    # #    # #      #      ### #    #   #   #    # #      
-  #   #    # #####  ###### ###### ### #    #   #   #    # ###### 
+ #####                                                                       
+#     #     #####   ##   #####  #      ######     #    # ##### #    # #      
+      #       #    #  #  #    # #      #          #    #   #   ##  ## #      
+ #####        #   #    # #####  #      #####      ######   #   # ## # #      
+      # ###   #   ###### #    # #      #      ### #    #   #   #    # #      
+#     # ###   #   #    # #    # #      #      ### #    #   #   #    # #      
+ #####  ###   #   #    # #####  ###### ###### ### #    #   #   #    # ###### 
 */
 
 .wrapper {
@@ -657,7 +671,7 @@ input#save-id {
   width: 980px;
 }
 
-.main-content {
+.table .main-content {
   padding: 18px 14px 67px 14px;
 }
 
@@ -687,7 +701,7 @@ input#save-id {
 .table .directory span {
   font-size: 12px;
   font-family: 'dotum', sans-serif;
-  letter-spacing: -0.4px;
+  /* letter-spacing: -0.2px; */
   vertical-align: middle;
 }
 
