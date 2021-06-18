@@ -729,10 +729,11 @@ input#save-id {
   padding-right: 12px;
   font-size: 0;
   text-align: right;
+  letter-spacing: -0.6px;
 }
 
 .table .directory span {
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'dotum', sans-serif;
   /* letter-spacing: -0.2px; */
   vertical-align: middle;
@@ -802,6 +803,7 @@ input#save-id {
 .blue-button_body span {
   padding: 0 7px;
   line-height: 22px;
+  letter-spacing: -1px;
 }
 
 /* table */
@@ -825,7 +827,7 @@ table {
 
 .table .table-container:nth-of-type(2) {
   /* position: absolute; */
-  padding-left: 400px;
+  padding-left: 404px;
   width: 530px;
   z-index: 1;
 }
@@ -837,7 +839,7 @@ table {
 .table .table-container .button-container {
   /* display: inline-block; */
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 0;
   /* text-align: right; */
 }
@@ -846,6 +848,7 @@ table {
   border: 1px solid #9bb1cb;
   background: url('./images/table/inner-glow_body.png') repeat-x;
   /* height: 22px; */
+  padding: 1.15px 0px;
   color: #19537f;
   font-size: 12px;
   font-family: 'Gulim', sans-serif;
@@ -864,7 +867,6 @@ table {
   right: -16px;
   width: 9px;
   height: 5px;
-  /* padding-top: 3px; */
   background: url('./images/table/th_arrow-down.png') no-repeat;
   vertical-align: top;
 }
@@ -880,10 +882,12 @@ table {
 }
 
 .table table td {
-  border: 1px solid #cccccc;
+  padding: 0.8px 0px;
   color: #323232;
   font-size: 12px;
   font-family: 'Gulim', sans-serif;
+  border: 1px solid #cccccc;
+  text-align: center;
 }
 
 .table table tr:nth-of-type(2n-1) {
@@ -917,15 +921,18 @@ table {
   /* display: inline-block; */
   position: absolute;
   top: 50%;
-  right: 19px;
-  margin-top: -4px;
+  right: 21px;
+  margin-top: -6.5px;
+  font-size: 0;
+
   /* padding-right: 19px; */
-  color: white;
-  font-size: 8px;
   text-align: right;
 }
 
 .table .footer .right span {
+  padding-right: 5px;
+  color: white;
+  font-size: 8px;
   vertical-align: middle;
 }
 
@@ -934,6 +941,7 @@ table {
   display: inline-block;
   width: 18px;
   height: 14px;
-  background: url('./images/table/footer-icon.png');
+  background: url('./images/table/footer-icon.png') no-repeat;
   vertical-align: middle;
+  cursor: pointer;
 }
