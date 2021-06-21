@@ -10,9 +10,9 @@
   <body class="calendar">
     <div class="wrapper">
       <div class="directory">
-          <a href="#" class="not-current">커뮤니티</a>
-          <a href="#" class="not-current">MY연구팀</a>
-          <strong class="current">연구일정</strong>
+        <a href="#" class="not-current">커뮤니티</a>
+        <a href="#" class="not-current">MY연구팀</a>
+        <strong class="current">연구일정</strong>
       </div>
       <div class="calendar-box_head">
         <div class="calendar-box_tail">
@@ -23,11 +23,16 @@
               </h1>
               <div class="calendar-navigation">
                 <button type="button" class="white-button_head">
-                  <div class="white-button_tail">
-                    <div class="white-button_body"><span>이전달</span></div>
-                  </div>
+                  <span class="white-button_tail">
+                    <span class="white-button_body"><span>이전달</span></span>
+                  </span>
                 </button>
-                <select name="year" id="year" required>
+                <select
+                  name="year"
+                  id="year"
+                  title="년도를 선택해주세요."
+                  required
+                >
                   <option value="2001년">2001년</option>
                   <option value="2002년">2002년</option>
                   <option value="2003년">2003년</option>
@@ -43,7 +48,7 @@
                   <option value="2013년">2013년</option>
                   <option value="2014년">2014년</option>
                 </select>
-                <select name="month" id="month">
+                <select name="month" id="month" title="월을 선택해주세요.">
                   <option value="01월" selected>01월</option>
                   <option value="02월">02월</option>
                   <option value="03월">03월</option>
@@ -58,9 +63,9 @@
                   <option value="12월">12월</option>
                 </select>
                 <button type="button" class="white-button_head">
-                  <div class="white-button_tail">
-                    <div class="white-button_body"><span>다음달</span></div>
-                  </div>
+                  <span class="white-button_tail">
+                    <span class="white-button_body"><span>다음달</span></span>
+                  </span>
                 </button>
               </div>
               <div class="table-wrapper">
@@ -73,7 +78,7 @@
                     <col style="width: 14.28%" />
                     <col style="width: 14.28%" />
                     <col style="width: 14.28%" />
-                    <col style="width: 12.276%" />
+                    <col style="width: 14.28%" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -100,7 +105,12 @@
                       <td><span>6</span></td>
                       <td><span>7</span></td>
                       <td><span>8</span></td>
-                      <td id="holiday1"><span>9</span></td>
+                      <td>
+                        <span>9</span>
+                        <ul class="holiday">
+                          <li>주간보고회</li>
+                        </ul>
+                      </td>
                       <td><span>10</span></td>
                       <td><span>11</span></td>
                       <td><span>12</span></td>
@@ -108,9 +118,9 @@
                     <tr>
                       <td><span>13</span></td>
                       <td><span>14</span></td>
-                      <td class="taken"><span>15</span></td>
-                      <td><span>16</td>
-                      <td class="selected"><span>17</span></td>
+                      <td class="today"><span>15</span></td>
+                      <td><span>16</span></td>
+                      <td><span>17</span></td>
                       <td><span>18</span></td>
                       <td><span>19</span></td>
                     </tr>
