@@ -449,7 +449,7 @@ select {
 }
 
 .calendar tbody tr {
-  height: 87px;
+  height: 86px;
   font-family: 'gulim', sans-serif;
   font-size: 11px;
   color: #5b5b5b;
@@ -460,20 +460,29 @@ select {
   position: relative;
 }
 
-.calendar td .holiday {
+.calendar td ul {
   /* content: '주간보고회'; */
-  position: absolute;
-  left: 7px;
-  top: 24px;
+  /* position: absolute; */
+  /* left: 7px; */
+  /* top: 24px; */
+  padding-top: 24px;
+  padding-left: 7px;
   color: #f18061;
   font-size: 11px;
   font-family: 'dotum';
+
+  height: 62px;
+  overflow-y: auto;
+}
+
+.calendar td ul li {
+  padding: 1px 0;
 }
 
 .calendar td span {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 6px;
+  left: 6px;
 }
 
 .calendar td.closed {
@@ -543,7 +552,7 @@ select {
   position: relative;
 }
 
-.login-page .wrapper::after {
+/* .login-page .wrapper::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -553,75 +562,94 @@ select {
   height: 398px;
   background: url('./images/login-page/vector-smart-object.png');
   z-index: -2;
-}
+} */
 
 /* .body */
+.login-page .wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 1121px;
+}
+
 .login-page .body {
   position: absolute;
   top: 67px;
 }
 
+.blue-container_head {
+  /* padding-right: 356px; */
+  position: relative;
+  min-width: 296px;
+  max-width: 100%;
+  height: 207px;
+  background: url('./images/login-page/blue-container_headbody.png') left
+    repeat-x;
+  z-index: 1;
+}
+
 .blue-container_tail {
-  background: url('./images/login-page/blue-container_tail.png') right no-repeat;
-  height: 208px;
-  padding-right: 111px;
+  position: absolute;
+  background: url('./images/login-page/blue-container_bodytail.png') right
+    no-repeat;
+  height: 325px;
+  width: 828px;
+  padding-left: 296px;
 }
 
 .blue-container_headbody::before {
   content: '';
   display: inline-block;
   position: absolute;
-  top: 6px;
+  /* top: 6px; */
   width: 470px;
   height: 197px;
   background: url('./images/login-page/line.png');
   z-index: -1;
 }
 
-.blue-container_headbody {
-  position: relative;
-  min-width: 810px;
-  height: 207px;
-  background: url('./images/login-page/blue-container_headbody.png') repeat-x;
-  z-index: 1;
-}
-
-.blue-container_headbody .intro::before {
+.blue-container_head .intro::before {
   content: '';
   display: inline-block;
   position: absolute;
-  top: 33px;
-  left: 317px;
+  top: 31px;
+  left: 21px;
+  /* top: 0px;
+  left: 0px; */
   width: 107px;
   height: 34px;
   background: url('./images/login-page/login-font.png') no-repeat;
 }
 
-.blue-container_headbody .intro-wrapper {
+.blue-container_head .intro-wrapper {
   position: relative;
 }
 
-.blue-container_headbody .intro {
+.blue-container_head .intro {
   display: inline-block;
   position: relative;
-  padding-top: 31px;
-  padding-left: 468px;
+  /* padding-top: 31px;
+  padding-left: 468px; */
+  padding-top: 32px;
+  padding-left: 172px;
   z-index: 2;
 }
 
-.blue-container_headbody .intro img {
+.blue-container_head .intro img {
   display: block;
 }
 
-.blue-container_headbody .intro img + img {
+.blue-container_head .intro img + img {
   margin-top: 10px;
 }
 
-.blue-container_headbody .intro::after {
+.blue-container_head .intro::after {
   content: '';
   display: inline-block;
-  padding-top: 20px;
-  padding-left: -3px;
+  position: absolute;
+  top: 92px;
+  left: 169px;
+  /* padding-top: 19px;
+  padding-left: -3px; */
   min-width: 337px;
   height: 1px;
   background: url('./images/login-page/dotted-line.png') bottom repeat-x;
@@ -629,8 +657,10 @@ select {
 
 .signin-container {
   position: relative;
-  margin-top: 18px;
-  padding-left: 466px;
+  /* margin-top: 18px;
+  padding-left: 466px; */
+  margin-top: 37px;
+  padding-left: 170px;
   z-index: 2;
 }
 
@@ -639,18 +669,34 @@ select {
 }
 
 .signin-container form > div + div {
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
-label[for='id']::before,
+label[for='id']::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: -9px;
+  width: 3px;
+  height: 3px;
+  /* padding-right: 7px; */
+  background: url('./images/login-page/red-dot.png') no-repeat;
+  vertical-align: top;
+}
+
+/* label[for='id']::before, */
 label[for='password']::before {
   content: '';
   display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -9px;
   width: 3px;
   height: 3px;
-  padding-right: 7px;
+  /* padding-right: 6px; */
   background: url('./images/login-page/red-dot.png') no-repeat;
-  vertical-align: super;
+  vertical-align: top;
 }
 
 label[for='id'],
@@ -661,11 +707,25 @@ label[for='password'] {
 }
 
 label[for='id'] {
-  letter-spacing: 5px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  letter-spacing: 5.1px;
 }
 
 label[for='password'] {
+  position: absolute;
+  top: 6px;
+  left: 10px;
   letter-spacing: -0.2px;
+}
+
+label[for='save-id']::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('./images/login-page/checkbox_unchecked.png');
 }
 
 label[for='save-id'] {
@@ -677,11 +737,29 @@ label[for='save-id'] {
   font-weight: bolder;
 }
 
+input#save-id:checked {
+  /* content: ''; */
+  /* background: red; */
+  /* content: ''; */
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('./images/login-page/checkbox_checked.png');
+}
+
+input {
+  padding: 0px;
+}
+
 input#id {
-  margin-left: 8px;
+  margin-left: 69px;
+  width: 146px;
+  height: 18px;
 }
 input#password {
-  margin-left: 12px;
+  margin-left: 69px;
+  width: 146px;
+  height: 18px;
 }
 
 input#save-id {
@@ -693,11 +771,15 @@ input#save-id {
   position: relative;
 }
 
+.signin-container form div {
+  position: relative;
+}
+
 .signin-container #login-button {
   position: absolute;
   padding: 0;
-  top: -2px;
-  right: -75px;
+  top: 0px;
+  right: -74px;
   width: 67px;
   height: 50px;
   font-size: 0;
@@ -709,8 +791,12 @@ input#save-id {
 /* .footer */
 .login-page .footer {
   position: absolute;
-  bottom: 18px;
-  left: 319px;
+  bottom: 9px;
+  left: 317px;
+}
+
+.login-page .footer img + img {
+  margin-top: 7px;
 }
 
 .login-page .footer p {
