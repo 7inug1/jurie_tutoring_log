@@ -13,6 +13,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
 @media only screen {
   html,
   body,
@@ -720,31 +722,59 @@ label[for='password'] {
   letter-spacing: -0.2px;
 }
 
-label[for='save-id']::before {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 17px;
-  background: url('./images/login-page/checkbox_unchecked.png');
+input#save-id {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  font-family: 'gulim', sans-serif;
+  font-size: 11px;
+  opacity: 0;
+  z-index: -100;
 }
 
 label[for='save-id'] {
-  display: block;
-  padding-left: 62px;
-  padding-top: 9px;
+  position: absolute;
+  top: 53px;
+}
+
+label[for='save-id'] img {
+  padding-left: 2px;
+  padding-top: 4px;
+  vertical-align: top;
+}
+
+input#save-id + label::before {
+  content: '';
+  display: inline-block;
+  /* position: absolute;
+  bottom: -10px;
+  left: 63px; */
+
+  min-width: 14px;
+  min-height: 17px;
+  background: url('./images/login-page/checkbox_unchecked.png') no-repeat;
+  /* display: inline-block; */
+}
+
+input#save-id + label {
+  padding-left: 63px;
+  /* padding-top: 5px; */
   color: black;
   font-size: 12px;
   font-weight: bolder;
 }
 
-input#save-id:checked {
+input#save-id:checked + label::before {
   /* content: ''; */
   /* background: red; */
-  /* content: ''; */
+  content: '';
   display: inline-block;
-  width: 14px;
-  height: 17px;
-  background: url('./images/login-page/checkbox_checked.png');
+  /* position: absolute;
+  bottom: -10px;
+  left: 63px; */
+  min-width: 14px;
+  min-height: 17px;
+  background: url('./images/login-page/checkbox_checked.png') no-repeat;
 }
 
 input {
