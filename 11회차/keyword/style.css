@@ -1,0 +1,203 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+/* 
+ ####  ###### #    # ###### #####    ##   #      
+#    # #      ##   # #      #    #  #  #  #      
+#      #####  # #  # #####  #    # #    # #      
+#  ### #      #  # # #      #####  ###### #      
+#    # #      #   ## #      #   #  #    # #      
+ ####  ###### #    # ###### #    # #    # ###### 
+*/
+
+.wrapper {
+  background: url('./images/background.png') no-repeat;
+  position: relative;
+  margin: 0 auto;
+  width: 1024px;
+  height: 1253px;
+  z-index: -3;
+}
+
+.wrapper::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 1253px;
+  background: url('./images/popup-background.png') no-repeat;
+  z-index: -2;
+}
+
+.popup_wrapper {
+  /* min-width: 753px; */
+  padding-top: 285px;
+  padding-left: 265px;
+}
+
+.popup_head {
+  padding-left: 6px;
+  /* width: 6px; */
+  height: 367px;
+  background: url('./images/popup-head.png') left no-repeat;
+  z-index: 1;
+}
+
+.popup_tail {
+  display: inline-block;
+  padding-right: 6px;
+  /* width: 6px; */
+  height: 367px;
+  background: url('./images/popup-tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.popup_body {
+  display: inline-block;
+  min-width: 558px;
+  height: 367px;
+  background: url('./images/popup-body.png') center repeat-x;
+  /* min-width: 741px; */
+  vertical-align: top;
+}
