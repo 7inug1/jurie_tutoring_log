@@ -317,3 +317,145 @@ h1 {
   font-family: 'Dotum', sans-serif;
   letter-spacing: 0.73px;
 }
+
+.innerbox-container::before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  /* top: 0px;
+  left: 0px; */
+  min-width: 651px;
+  height: 1px;
+  background: url('./images/popup_dotted-line.png') top repeat-x;
+}
+
+.innerbox-container {
+  position: relative;
+  /* padding: 10px 43px 0 25px; */
+  padding: 0;
+  padding-left: 25px;
+  padding-right: 26px;
+  padding-top: 10px;
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.innerbox-container::after {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  bottom: -15px;
+  left: 26px;
+  /* bottom: 0px;
+  left: 0px; */
+  /* margin-bottom: -1px; */
+  min-width: 639px;
+  height: 1px;
+  background: url('./images/popup_dotted-line.png') bottom repeat-x;
+}
+
+.first-innerbox_head {
+  padding-left: 5px;
+  height: 63px;
+  background: url('./images/first-innerbox_head.png') left no-repeat;
+  vertical-align: top;
+}
+.first-innerbox_tail {
+  padding-right: 5px;
+  height: 63px;
+  background: url('./images/first-innerbox_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.first-innerbox_body {
+  height: 63px;
+  background: url('./images/first-innerbox_body.png') center repeat-x;
+  vertical-align: top;
+}
+.second-innerbox_head {
+  padding-left: 5px;
+  margin-top: 13px;
+  height: 49px;
+  background: url('./images/second-innerbox_head.png') left no-repeat;
+  vertical-align: top;
+}
+.second-innerbox_tail {
+  padding-right: 5px;
+  height: 49px;
+  background: url('./images/second-innerbox_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.second-innerbox_body {
+  height: 49px;
+  background: url('./images/second-innerbox_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+/* 
+.innerbox-container::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  min-width: 651px;
+  height: 1px;
+  background: url('./images/popup_dotted-line.png') top repeat-x;
+}
+
+.innerbox-container {
+  position: relative;
+  padding: 10px 43px 0 25px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.innerbox-container::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: -14px;
+  left: 26px;
+  margin-bottom: -1px;
+  min-width: 639px;
+  height: 1px;
+  background: url('./images/popup_dotted-line.png') bottom repeat-x;
+}
+
+.first-innerbox_head {
+  padding-left: 5px;
+  height: 63px;
+  background: url('./images/first-innerbox_head.png') left no-repeat;
+  vertical-align: top;
+}
+.first-innerbox_tail {
+  padding-right: 5px;
+  height: 63px;
+  background: url('./images/first-innerbox_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.first-innerbox_body {
+  height: 63px;
+  background: url('./images/first-innerbox_body.png') center repeat-x;
+  vertical-align: top;
+}
+.second-innerbox_head {
+  padding-left: 5px;
+  margin-top: 13px;
+  height: 49px;
+  background: url('./images/second-innerbox_head.png') left no-repeat;
+  vertical-align: top;
+}
+.second-innerbox_tail {
+  padding-right: 5px;
+  height: 49px;
+  background: url('./images/second-innerbox_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.second-innerbox_body {
+  height: 49px;
+  background: url('./images/second-innerbox_body.png') center repeat-x;
+  vertical-align: top;
+} */
