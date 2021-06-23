@@ -182,7 +182,7 @@
   padding-left: 6px;
   height: 664px;
   background: url('./images/popup-head.png') left no-repeat;
-  z-index: -1;
+  /* z-index: -1; */
   text-align: left;
 }
 
@@ -195,6 +195,7 @@
   width: 50px;
   height: 50px;
   background: url('./images/popup_close-button.png');
+  cursor: pointer;
 }
 
 .popup_tail {
@@ -294,4 +295,25 @@ h1 {
   height: 505px;
   background: url('./images/popup-content_body.png') center repeat-x;
   vertical-align: top;
+}
+
+.popup-content_body p::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: 19px;
+  width: 12px;
+  height: 12px;
+  background: url('./images/popup_bullet.png') no-repeat;
+}
+
+.popup-content_body p {
+  position: relative;
+  padding-top: 19px;
+  padding-left: 42px;
+  color: #40403e;
+  font-size: 12px;
+  font-family: 'Dotum', sans-serif;
+  letter-spacing: 0.73px;
 }
