@@ -171,23 +171,35 @@
 }
 
 .popup_wrapper {
-  /* min-width: 753px; */
   padding-top: 154px;
-  padding-left: 136px;
+  padding-left: 1px;
+  text-align: center;
 }
 
 .popup_head {
+  position: relative;
+  display: inline-block;
   padding-left: 6px;
-  /* width: 6px; */
   height: 664px;
   background: url('./images/popup-head.png') left no-repeat;
-  z-index: 1;
+  z-index: -1;
+  text-align: left;
+}
+
+.popup_head::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: -19px;
+  right: -17px;
+  width: 50px;
+  height: 50px;
+  background: url('./images/popup_close-button.png');
 }
 
 .popup_tail {
   display: inline-block;
   padding-right: 6px;
-  /* width: 6px; */
   height: 664px;
   background: url('./images/popup-tail.png') right no-repeat;
   vertical-align: top;
@@ -195,7 +207,6 @@
 
 .popup_body {
   display: inline-block;
-  min-width: 741px;
   height: 664px;
   background: url('./images/popup-body.png') center repeat-x;
   min-width: 741px;
@@ -206,23 +217,63 @@
   padding: 37px 20px 22px 20px;
 }
 
+.popup-title_head::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 583px;
+  height: 48px;
+  background: url('./images/popup-title_background_left.png') left no-repeat;
+}
+
 .popup-title_head {
+  position: relative;
   padding-left: 2px;
   height: 48px;
   background: url('./images/popup-title_head.png') left no-repeat;
+  /* z-index: 3; */
 }
 .popup-title_tail {
-  /* display: inline-block; */
   padding-right: 2px;
   height: 48px;
   background: url('./images/popup-title_tail.png') right no-repeat;
   vertical-align: top;
 }
+
+.popup-title_body::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 22px;
+  width: 6px;
+  height: 7px;
+  background: url('./images/popup-title_arrow.png');
+}
+
 .popup-title_body {
-  /* display: inline-block; */
   height: 48px;
   background: url('./images/popup-title_body.png') center repeat-x;
   vertical-align: top;
+}
+
+h1::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 31px;
+  top: 0px;
+  width: 49px;
+  height: 47px;
+  background: url('./images/popup-title_icon.png') no-repeat;
+}
+
+h1 {
+  padding-top: 16px;
+  padding-left: 88px;
+  /* line-height: 40px; */
 }
 
 .popup-content_head {
