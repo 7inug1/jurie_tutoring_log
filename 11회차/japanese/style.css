@@ -148,3 +148,66 @@
 #    # #      #   ## #      #   #  #    # #      
  ####  ###### #    # ###### #    # #    # ###### 
 */
+
+body {
+  padding-top: 200px;
+  background: whitesmoke;
+}
+
+.wrapper {
+  width: 475px;
+  height: 307px;
+  margin: 0 auto;
+  background: white;
+}
+
+.header_head {
+  padding-left: 9px;
+  height: 40px;
+  background: url('./images/header_head.png') left no-repeat;
+  text-align: center;
+}
+.header_tail {
+  /* display: inline-block; */
+  padding-right: 9px;
+  height: 40px;
+  background: url('./images/header_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.header_body {
+  /* display: inline-block; */
+  min-width: 446px;
+  height: 40px;
+  background: url('./images/header_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.japanese-keyboard td {
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+.blue-button_head {
+  padding-left: 1px;
+  height: 20px;
+  background: url('./images/blue-button_headtail.png') left no-repeat;
+  /* vertical-align: middle; */
+}
+.blue-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 20px;
+  background: url('./images/blue-button_headtail.png') right no-repeat;
+  /* vertical-align: middle; */
+}
+.blue-button_body {
+  display: inline-block;
+  min-width: 58px;
+  height: 20px;
+  background: url('./images/blue-button_body.png') center repeat-x;
+  /* vertical-align: middle; */
+}
