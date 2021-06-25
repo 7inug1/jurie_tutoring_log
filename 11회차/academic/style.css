@@ -292,6 +292,7 @@ h1 {
 }
 
 .popup-content_body {
+  position: relative;
   height: 505px;
   background: url('./images/popup-content_body.png') center repeat-x;
   vertical-align: top;
@@ -648,13 +649,17 @@ td {
   font-family: 'dotum', sans-serif;
 }
 
+td span {
+  display: inline-block;
+}
+
 td:not(:last-of-type) {
   border-right: 1px solid #d9d9d9;
 }
 
 td input {
   margin: 0;
-  height: 31px;
+  /* height: 31px; */
 }
 
 td::before {
@@ -679,15 +684,73 @@ tbody td:not(:first-of-type)::after {
   background: url('./images/td_head.png');
 }
 
+th:first-of-type span {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+}
+
+th:nth-of-type(2) span {
+  position: absolute;
+  top: 8px;
+  left: 11px;
+}
+
+th:nth-of-type(3) span {
+  position: absolute;
+  top: 8px;
+  left: 160px;
+}
+
+th:nth-of-type(4) span {
+  position: absolute;
+  top: 9px;
+  left: 64px;
+}
+
+tbody td:first-of-type span {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+}
+
+tbody td:nth-of-type(2) span {
+  position: absolute;
+  top: 11px;
+  left: 19px;
+}
+
+tbody td:nth-of-type(3) span {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  letter-spacing: 0.4px;
+}
+
+tbody td:nth-of-type(4) span {
+  position: absolute;
+  top: 11px;
+  left: 64px;
+}
+
 button {
   padding: 0;
   border: none;
+}
+
+/* number button */
+.number-button-container {
+  position: absolute;
+  bottom: 13px;
+  left: 150px;
+  font-size: 0;
 }
 
 .number-button_head {
   padding-left: 6px;
   height: 26px;
   background: url('./images/white-button_head.png') left no-repeat;
+  vertical-align: top;
 }
 .number-button_tail {
   display: inline-block;
@@ -695,10 +758,97 @@ button {
   height: 26px;
   background: url('./images/white-button_tail.png') right no-repeat;
 }
+.number-button_tail_current {
+  display: inline-block;
+  padding-right: 6px;
+  height: 26px;
+  background: url('./images/white-button_tail_current.png') right no-repeat;
+}
 .number-button_body {
   display: inline-block;
+  position: relative;
   height: 26px;
   background: url('./images/white-button_body.png') center repeat-x;
+}
+.number-button_body_current {
+  display: inline-block;
+  position: relative;
+  height: 26px;
+  background: url('./images/white-button_body_current.png') center repeat-x;
+}
+
+/* .number-button_body.prev,
+.number-button_body.next {
+  position: relative;
+} */
+
+/* --- */
+/* .number-button_body span {
+  position: absolute;
+} */
+
+.number-button_body.prev span .number-button_body.next span {
+  display: inline-block;
+}
+
+.number-button_body img,
+.number-button_body_current img {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+}
+
+.number-button_body.prev span::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: url('./images/white-button_left-arrow.png') no-repeat;
+}
+
+.number-button_body.next span::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  background: url('./images/white-button_right-arrow.png') no-repeat;
+}
+
+.number-button_body.prev span img,
+.number-button_body.next span img {
+  padding-top: 9px;
+}
+
+.number-button_body.prev span img {
+  padding-left: 18px;
+}
+
+.number-button_body.next span img {
+  padding-left: 5px;
+}
+
+.number-button_body span img,
+.number-button_body.prev span img,
+.number-button_body.next span img,
+.number-button_body_current span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* text-align: center; */
+}
+/* --- */
+
+.number-button_head:not(:first-of-type),
+.number-button_head_current:not(:first-of-type) {
+  margin-left: 2px;
+}
+
+.number-button_head:nth-of-type(6) {
+  margin-left: 3px;
 }
 
 .number-button_head_current {
@@ -706,31 +856,22 @@ button {
   height: 26px;
   background: url('./images/white-button_head_current.png') left no-repeat;
 }
-.number-button_tail_current {
-  display: inline-block;
-  padding-right: 6px;
-  height: 26px;
-  background: url('./images/white-button_tail_current.png') right no-repeat;
-}
-.number-button_body_current {
-  display: inline-block;
-  height: 26px;
-  background: url('./images/white-button_body_current.png') center repeat-x;
-}
 
+/* 버튼 크기 */
 .number-button_body,
 .number-button_body_current {
   min-width: 15px;
 }
 .number-button_body.prev {
-  min-width: 58px;
+  min-width: 50px;
 }
 .number-button_body.next {
-  min-width: 60px;
+  min-width: 52px;
 }
+
 .black-button-container {
   margin-top: 15px;
-  padding-left: 16px;
+  padding-left: 15px;
   font-size: 0;
   text-align: center;
 }
@@ -763,4 +904,5 @@ button {
 
 .black-button_body span img {
   padding-top: 7px;
+  padding-right: 1px;
 }
