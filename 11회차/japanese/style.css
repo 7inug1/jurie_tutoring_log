@@ -260,9 +260,21 @@ input#textbox1 {
   cursor: pointer;
 }
 
+table td {
+  position: relative;
+  font-size: 12px;
+  font-family: 'MS PGothic', sans-serif;
+  border: 1px solid #e6e6e6;
+}
 table {
   width: 100%;
   border: 1px solid #9bb3d5;
+}
+
+tbody td span {
+  position: absolute;
+  top: 4px;
+  left: 8px;
 }
 
 button {
@@ -299,4 +311,9 @@ button {
   height: 20px;
   background: url('./images/blue-button_body.png') center repeat-x;
   /* vertical-align: middle; */
+}
+
+.blue-button_body img {
+  padding-top: 4px;
+  padding-left: 3px;
 }
