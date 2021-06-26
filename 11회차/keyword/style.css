@@ -149,6 +149,24 @@
  ####  ###### #    # ###### #    # #    # ###### 
 */
 
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+/* 
+#    # #####    ##   #####  #####  ###### #####  
+#    # #    #  #  #  #    # #    # #      #    # 
+#    # #    # #    # #    # #    # #####  #    # 
+# ## # #####  ###### #####  #####  #      #####  
+##  ## #   #  #    # #      #      #      #   #  
+#    # #    # #    # #      #      ###### #    # 
+*/
 .wrapper {
   background: url('./images/background.png') no-repeat;
   position: relative;
@@ -170,11 +188,21 @@
   z-index: -2;
 }
 
+/* 
+#####   ####  #####  #    # #####  
+#    # #    # #    # #    # #    # 
+#    # #    # #    # #    # #    # 
+#####  #    # #####  #    # #####  
+#      #    # #      #    # #      
+#       ####  #       ####  #  
+*/
 .popup_wrapper {
-  /* min-width: 753px; */
+  max-width: 872px;
   padding-top: 285px;
+  padding-left: 114px;
   text-align: center;
-  /* padding-left: 265px; */
+  position: relative;
+  z-index: 1;
 }
 
 .popup_head {
@@ -183,13 +211,11 @@
   padding-left: 6px;
   height: 367px;
   background: url('./images/popup-head.png') left no-repeat;
-  z-index: 1;
   text-align: left;
 }
 
 .popup_head::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: -19px;
   right: -17px;
@@ -197,14 +223,6 @@
   height: 50px;
   background: url('./images/popup_close-button.png');
   cursor: pointer;
-}
-
-.popup_tail {
-  display: inline-block;
-  padding-right: 6px;
-  height: 367px;
-  background: url('./images/popup-tail.png') right no-repeat;
-  vertical-align: top;
 }
 
 .popup_body {
@@ -215,14 +233,38 @@
   vertical-align: top;
 }
 
+.popup_tail {
+  display: inline-block;
+  padding-right: 6px;
+  height: 367px;
+  background: url('./images/popup-tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+/* 
+#####   ####  #####  #    # #####         ####   ####  #    # ##### ###### #    # ##### 
+#    # #    # #    # #    # #    #       #    # #    # ##   #   #   #      ##   #   #   
+#    # #    # #    # #    # #    # ##### #      #    # # #  #   #   #####  # #  #   #   
+#####  #    # #####  #    # #####        #      #    # #  # #   #   #      #  # #   #   
+#      #    # #      #    # #            #    # #    # #   ##   #   #      #   ##   #   
+#       ####  #       ####  #             ####   ####  #    #   #   ###### #    #   #   
+*/
 .popup-content-wrapper {
   padding: 37px 20px 22px 19px;
 }
 
+/* 
+   #                                                                               
+  ##          #####   ####  #####  #    # #####        ##### # ##### #      ###### 
+ # #          #    # #    # #    # #    # #    #         #   #   #   #      #      
+   #          #    # #    # #    # #    # #    # #####   #   #   #   #      #####  
+   #   ###    #####  #    # #####  #    # #####          #   #   #   #      #      
+   #   ###    #      #    # #      #    # #              #   #   #   #      #      
+ ##### ###    #       ####  #       ####  #              #   #   #   ###### ###### 
+*/
 .popup-title_head::before {
   content: '';
   position: absolute;
-  display: inline-block;
   top: 0;
   left: 0;
   width: 519px;
@@ -237,7 +279,6 @@
   background: url('./images/popup-title_head.png') left no-repeat;
 }
 .popup-title_tail {
-  /* display: inline-block; */
   padding-right: 2px;
   height: 48px;
   background: url('./images/popup-title_tail.png') right no-repeat;
@@ -246,7 +287,6 @@
 
 .popup-title_body::before {
   content: '';
-  display: inline-block;
   position: absolute;
   left: 8px;
   top: 22px;
@@ -256,7 +296,6 @@
 }
 
 .popup-title_body {
-  /* display: inline-block; */
   height: 48px;
   background: url('./images/popup-title_body.png') center repeat-x;
   vertical-align: top;
@@ -264,7 +303,6 @@
 
 h1::before {
   content: '';
-  display: inline-block;
   position: absolute;
   left: 21px;
   top: 0px;
@@ -276,9 +314,17 @@ h1::before {
 h1 {
   padding-top: 16px;
   padding-left: 81px;
-  /* line-height: 40px; */
 }
 
+/*
+ #####                                                                                                 
+#     #        #####   ####  #####  #    # #####         ####   ####  #    # ##### ###### #    # ##### 
+      #        #    # #    # #    # #    # #    #       #    # #    # ##   #   #   #      ##   #   #   
+ #####         #    # #    # #    # #    # #    # ##### #      #    # # #  #   #   #####  # #  #   #   
+#       ###    #####  #    # #####  #    # #####        #      #    # #  # #   #   #      #  # #   #   
+#       ###    #      #    # #      #    # #            #    # #    # #   ##   #   #      #   ##   #   
+####### ###    #       ####  #       ####  #             ####   ####  #    #   #   ###### #    #   #    
+ */
 .popup-content_head {
   padding-left: 5px;
   margin-top: 10px;
@@ -301,7 +347,6 @@ h1 {
 
 .popup-content_body p::before {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 21px;
   left: 9px;
@@ -321,15 +366,12 @@ h1 {
 }
 
 .keyword-box_head {
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
   height: 29px;
   padding-left: 4px;
   background: url('./images/keyword-box_head.png') left no-repeat;
-
-  /* padding: 0 0 0 140px; */
 }
 
 .keyword-box_tail {
@@ -349,7 +391,6 @@ h1 {
 
 .keyword-box_body h2::before {
   content: '';
-  display: inline-block;
   position: absolute;
   left: 3px;
   top: 4px;
@@ -373,11 +414,6 @@ h1 {
 }
 
 input[type='text'] {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 0 0 140px; */
-  /* padding: 0 0 0 180px; */
   padding: 0;
   width: 335px;
   height: 27px;
@@ -392,10 +428,10 @@ input[type='text'] {
 
 .boxes-container {
   position: relative;
-  /* padding-left: 12px; */
 }
 
-.boxes-container:nth-of-type(2) {
+.boxes-container:nth-of-type(2),
+.boxes-container:nth-of-type(4) {
   margin-top: 8px;
 }
 
@@ -403,15 +439,16 @@ input[type='text'] {
   margin-top: 9px;
 }
 
-.boxes-container:nth-of-type(4) {
-  margin-top: 8px;
-}
-
-button {
-  padding: 0;
-  border: none;
-}
-
+/* 
+ #####                                                                                          
+#     #        #####  #        ##    ####  #    #       #####  #    # ##### #####  ####  #    # 
+      #        #    # #       #  #  #    # #   #        #    # #    #   #     #   #    # ##   # 
+ #####         #####  #      #    # #      ####   ##### #####  #    #   #     #   #    # # #  # 
+      # ###    #    # #      ###### #      #  #         #    # #    #   #     #   #    # #  # # 
+#     # ###    #    # #      #    # #    # #   #        #    # #    #   #     #   #    # #   ## 
+ #####  ###    #####  ###### #    #  ####  #    #       #####   ####    #     #    ####  #    # 
+                                                                                                
+*/
 .black-button-container {
   margin-top: 16px;
   padding-left: 8px;

@@ -149,6 +149,24 @@
  ####  ###### #    # ###### #    # #    # ###### 
 */
 
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+/* 
+#    # #####    ##   #####  #####  ###### #####  
+#    # #    #  #  #  #    # #    # #      #    # 
+#    # #    # #    # #    # #    # #####  #    # 
+# ## # #####  ###### #####  #####  #      #####  
+##  ## #   #  #    # #      #      #      #   #  
+#    # #    # #    # #      #      ###### #    # 
+*/
 .wrapper {
   background: url('./images/background.png') no-repeat;
   position: relative;
@@ -160,7 +178,6 @@
 
 .wrapper::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -170,6 +187,14 @@
   z-index: -2;
 }
 
+/* 
+#####   ####  #####  #    # #####  
+#    # #    # #    # #    # #    # 
+#    # #    # #    # #    # #    # 
+#####  #    # #####  #    # #####  
+#      #    # #      #    # #      
+#       ####  #       ####  #  
+*/
 .popup_wrapper {
   padding-top: 154px;
   padding-left: 1px;
@@ -182,13 +207,11 @@
   padding-left: 6px;
   height: 664px;
   background: url('./images/popup-head.png') left no-repeat;
-  /* z-index: -1; */
   text-align: left;
 }
 
 .popup_head::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: -19px;
   right: -17px;
@@ -214,14 +237,30 @@
   vertical-align: top;
 }
 
+/* 
+#####   ####  #####  #    # #####         ####   ####  #    # ##### ###### #    # ##### 
+#    # #    # #    # #    # #    #       #    # #    # ##   #   #   #      ##   #   #   
+#    # #    # #    # #    # #    # ##### #      #    # # #  #   #   #####  # #  #   #   
+#####  #    # #####  #    # #####        #      #    # #  # #   #   #      #  # #   #   
+#      #    # #      #    # #            #    # #    # #   ##   #   #      #   ##   #   
+#       ####  #       ####  #             ####   ####  #    #   #   ###### #    #   #   
+*/
 .popup-content-wrapper {
   padding: 37px 20px 22px 20px;
 }
 
+/* 
+   #                                                                               
+  ##          #####   ####  #####  #    # #####        ##### # ##### #      ###### 
+ # #          #    # #    # #    # #    # #    #         #   #   #   #      #      
+   #          #    # #    # #    # #    # #    # #####   #   #   #   #      #####  
+   #   ###    #####  #    # #####  #    # #####          #   #   #   #      #      
+   #   ###    #      #    # #      #    # #              #   #   #   #      #      
+ ##### ###    #       ####  #       ####  #              #   #   #   ###### ###### 
+*/
 .popup-title_head::before {
   content: '';
   position: absolute;
-  display: inline-block;
   top: 0;
   left: 0;
   width: 583px;
@@ -234,7 +273,6 @@
   padding-left: 2px;
   height: 48px;
   background: url('./images/popup-title_head.png') left no-repeat;
-  /* z-index: 3; */
 }
 .popup-title_tail {
   padding-right: 2px;
@@ -245,7 +283,6 @@
 
 .popup-title_body::before {
   content: '';
-  display: inline-block;
   position: absolute;
   left: 15px;
   top: 22px;
@@ -262,7 +299,6 @@
 
 h1::before {
   content: '';
-  display: inline-block;
   position: absolute;
   left: 31px;
   top: 0px;
@@ -274,9 +310,17 @@ h1::before {
 h1 {
   padding-top: 16px;
   padding-left: 88px;
-  /* line-height: 40px; */
 }
 
+/* 
+ #####                                                                                                 
+#     #        #####   ####  #####  #    # #####         ####   ####  #    # ##### ###### #    # ##### 
+      #        #    # #    # #    # #    # #    #       #    # #    # ##   #   #   #      ##   #   #   
+ #####         #    # #    # #    # #    # #    # ##### #      #    # # #  #   #   #####  # #  #   #   
+#       ###    #####  #    # #####  #    # #####        #      #    # #  # #   #   #      #  # #   #   
+#       ###    #      #    # #      #    # #            #    # #    # #   ##   #   #      #   ##   #   
+####### ###    #       ####  #       ####  #             ####   ####  #    #   #   ###### #    #   #   
+*/
 .popup-content_head {
   padding-left: 5px;
   margin-top: 10px;
@@ -300,7 +344,6 @@ h1 {
 
 .popup-content_body p.intro::before {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 18px;
   left: 19px;
@@ -319,6 +362,14 @@ h1 {
   letter-spacing: 0.73px;
 }
 
+/* 
+# #    # #    # ###### #####  #####   ####  #    #        ####   ####  #    # #####   ##   # #    # ###### #####  
+# ##   # ##   # #      #    # #    # #    #  #  #        #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+# # #  # # #  # #####  #    # #####  #    #   ##   ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+# #  # # #  # # #      #####  #    # #    #   ##         #      #    # #  # #   #   ###### # #  # # #      #####  
+# #   ## #   ## #      #   #  #    # #    #  #  #        #    # #    # #   ##   #   #    # # #   ## #      #   #  
+# #    # #    # ###### #    # #####   ####  #    #        ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
 .innerbox-container::before {
   content: '';
   position: absolute;
@@ -336,7 +387,6 @@ h1 {
   padding-right: 26px;
   padding-top: 10px;
   margin-top: 16px;
-  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -348,31 +398,6 @@ h1 {
   min-width: 639px;
   height: 1px;
   background: url('./images/popup_dotted-line.png') bottom repeat-x;
-}
-
-p.number_of_result {
-  position: absolute;
-  top: -18px;
-  right: 28px;
-  font-size: 12px;
-  font-family: 'dotum', sans-serif;
-}
-
-p.number_of_result span {
-  color: #777676;
-}
-
-p.number_of_result span + strong {
-  margin-left: 2px;
-  color: #1779b1;
-  font-weight: bolder;
-}
-
-.table-container {
-  position: relative;
-  padding-left: 25px;
-  padding-right: 26px;
-  margin-top: 49px;
 }
 
 .first-innerbox_head {
@@ -396,7 +421,6 @@ p.number_of_result span + strong {
 }
 .first-innerbox_body h2::before {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 23px;
   left: 17px;
@@ -405,6 +429,7 @@ p.number_of_result span + strong {
   background: url('./images/popup_tick.png');
 }
 .first-innerbox_body h2 {
+  display: inline-block;
   position: relative;
   line-height: 61px;
 }
@@ -414,21 +439,27 @@ p.number_of_result span + strong {
   cursor: pointer;
 }
 
+.alphabet-container::before {
+  content: '';
+  position: absolute;
+  top: 17px;
+  left: 86px;
+  width: 2px;
+  height: 31px;
+  background: url('./images/vertical-dotted-line.png');
+}
+
 .alphabet-container {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 12px;
+  padding-top: 15px;
   padding-left: 111px;
 }
 
 .english-container,
 .korean-container {
   font-size: 0;
-}
-
-.english-container {
-  padding-top: 3px;
 }
 
 .english-container img {
@@ -510,7 +541,6 @@ p.number_of_result span + strong {
 }
 .second-innerbox_body h2::before {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 17px;
   left: 17px;
@@ -519,15 +549,16 @@ p.number_of_result span + strong {
   background: url('./images/popup_tick.png');
 }
 .second-innerbox_body h2 {
+  display: inline-block;
   position: relative;
   line-height: 49px;
 }
+
 .second-innerbox_body h2 img {
   padding-left: 37px;
 }
 
 .inputbox-container {
-  display: inline-block;
   position: absolute;
   top: 8px;
   left: 103px;
@@ -537,7 +568,6 @@ p.number_of_result span + strong {
 
 .inputbox-container::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 12px;
   left: 130px;
@@ -575,7 +605,48 @@ p.number_of_result span + strong {
   background: url('./images/search-button_red.png');
 }
 
-/* 1. table */
+/* 
+#####   ##   #####  #      ######        ####   ####  #    # #####   ##   # #    # ###### #####  
+  #    #  #  #    # #      #            #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+  #   #    # #####  #      #####  ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+  #   ###### #    # #      #            #      #    # #  # #   #   ###### # #  # # #      #####  
+  #   #    # #    # #      #            #    # #    # #   ##   #   #    # # #   ## #      #   #  
+  #   #    # #####  ###### ######        ####   ####  #    #   #   #    # # #    # ###### #    #           #    # ######  ####   ####  ######   #   
+*/
+.table-container {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 26px;
+  margin-top: 49px;
+}
+p.number_of_result {
+  position: absolute;
+  top: -18px;
+  right: 28px;
+  font-size: 0;
+  font-family: 'dotum', sans-serif;
+}
+
+p.number_of_result span {
+  color: #777676;
+  font-size: 12px;
+}
+
+p.number_of_result span + strong {
+  margin-left: 6px;
+  color: #1779b1;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+/* 
+#####   ##   #####  #      ###### 
+  #    #  #  #    # #      #      
+  #   #    # #####  #      #####  
+  #   ###### #    # #      #      
+  #   #    # #    # #      #      
+  #   #    # #####  ###### ###### 
+*/
 table {
   width: 100%;
   border-top: 1px solid #999999;
@@ -583,14 +654,41 @@ table {
   text-align: center;
 }
 
-/* 2. thead */
-
+/* 
+##### #    # ######   ##   #####  
+  #   #    # #       #  #  #    # 
+  #   ###### #####  #    # #    # 
+  #   #    # #      ###### #    # 
+  #   #    # #      #    # #    # 
+  #   #    # ###### #    # #####  
+*/
 th {
   border-bottom: 1px solid #787878;
   height: 30px;
 }
 
-thead th:last-of-type {
+th:first-of-type span {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+}
+
+th:nth-of-type(2) span {
+  position: absolute;
+  top: 8px;
+  left: 11px;
+}
+
+th:nth-of-type(3) span {
+  position: absolute;
+  top: 8px;
+  left: 160px;
+}
+
+th:nth-of-type(4) span {
+  position: absolute;
+  top: 9px;
+  left: 64px;
 }
 
 th:not(:last-of-type) {
@@ -599,7 +697,6 @@ th:not(:last-of-type) {
 
 .th_bodytail::before {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -613,8 +710,14 @@ th:not(:last-of-type) {
   background: url('./images/th_bodytail.png') repeat-x;
 }
 
-/* 3. tbody */
-
+/* 
+##### #####   ####  #####  #   # 
+  #   #    # #    # #    #  # #  
+  #   #####  #    # #    #   #   
+  #   #    # #    # #    #   #   
+  #   #    # #    # #    #   #   
+  #   #####   ####  #####    #   
+*/
 table tbody tr:nth-of-type(2n-1) {
   background: #f7f7f3;
 }
@@ -656,37 +759,12 @@ td::before {
 
 tbody td:not(:first-of-type)::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
   height: 32px;
   width: 1px;
   background: url('./images/td_head.png');
-}
-
-th:first-of-type span {
-  position: absolute;
-  top: 9px;
-  left: 7px;
-}
-
-th:nth-of-type(2) span {
-  position: absolute;
-  top: 8px;
-  left: 11px;
-}
-
-th:nth-of-type(3) span {
-  position: absolute;
-  top: 8px;
-  left: 160px;
-}
-
-th:nth-of-type(4) span {
-  position: absolute;
-  top: 9px;
-  left: 64px;
 }
 
 tbody td:first-of-type span {
@@ -714,12 +792,14 @@ tbody td:nth-of-type(4) span {
   left: 64px;
 }
 
-button {
-  padding: 0;
-  border: none;
-}
-
-/* number button */
+/* 
+#    # #    # #    # #####  ###### #####        #####  #    # ##### #####  ####  #    # 
+##   # #    # ##  ## #    # #      #    #       #    # #    #   #     #   #    # ##   # 
+# #  # #    # # ## # #####  #####  #    # ##### #####  #    #   #     #   #    # # #  # 
+#  # # #    # #    # #    # #      #####        #    # #    #   #     #   #    # #  # # 
+#   ## #    # #    # #    # #      #   #        #    # #    #   #     #   #    # #   ## 
+#    #  ####  #    # #####  ###### #    #       #####   ####    #     #    ####  #    # 
+*/
 .number-button-container {
   position: absolute;
   bottom: 13px;
