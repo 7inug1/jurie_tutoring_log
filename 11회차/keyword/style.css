@@ -135,7 +135,7 @@
     content: none;
   }
   table {
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
   }
 }
@@ -157,6 +157,12 @@ body {
 button {
   padding: 0;
   border: none;
+}
+
+input {
+  border: 0 none;
+  background: transparent;
+  width: 100%;
 }
 
 /* 
