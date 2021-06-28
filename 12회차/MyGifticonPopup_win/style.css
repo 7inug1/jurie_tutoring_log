@@ -164,3 +164,20 @@ input {
   background: transparent;
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.table-container h2::before,
+ul li::before {
+  content: '∙';
+  position: absolute;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
