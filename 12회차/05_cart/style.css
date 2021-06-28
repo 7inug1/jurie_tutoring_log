@@ -159,8 +159,31 @@ button {
   border: none;
 }
 
-input {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input[type='text'] {
   border: 0 none;
   background: transparent;
   width: 100%;
+}
+
+.input-wrapper.d8d8d8 {
+  border: 1px solid #d8d8d8;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+p strong.arrow::before {
+}
+
+.warning-sign::before {
+  content: '※';
+  position: absolute;
 }
