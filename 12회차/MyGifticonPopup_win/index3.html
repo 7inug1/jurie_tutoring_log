@@ -21,8 +21,10 @@
         </li>
         <li>
           엑셀 파일 업로드 시 스팸/오류번호 등이 포함되어 있으면 엑셀파일을
-          업로드 하실 수 없습니다. 오류번호가 포함되어 있을 경우 다시 파일을
-          다운로드 하여 체크된 휴대폰 번호를 수정 후 다시 업로드 해주세요.
+          업로드 하실 수 없습니다.
+          <br />
+          오류번호가 포함되어 있을 경우 다시 파일을 다운로드 하여 체크된 휴대폰
+          번호를 수정 후 다시 업로드 해주세요.
         </li>
       </ul>
       <div class="table-container">
@@ -55,7 +57,37 @@
             </tr>
             <tr>
               <th scope="row">주소록 가져오기</th>
-              <td></td>
+              <td>
+                <div class="input-wrapper d8d8d8">
+                  <input
+                    type="text"
+                    name="file input"
+                    id="file-input"
+                    readonly
+                  />
+                </div>
+                <div class="excel-file-upload-container">
+                  <label for="excel-file-upload" class="lookup-button_head">
+                    <span class="lookup-button_tail">
+                      <span class="lookup-button_body">파일 찾기</span>
+                    </span>
+                  </label>
+                  <input
+                    type="file"
+                    name="excel file upload"
+                    id="excel-file-upload"
+                  />
+                </div>
+                <p>
+                  총
+                  <strong>500명</strong>
+                  의 주소록 정보 중
+                  <br />
+                  <strong>
+                    정상 번호 (490) | 중복번호 (10개) 를 입력하였습니다.
+                  </strong>
+                </p>
+              </td>
             </tr>
           </tbody>
         </table>

@@ -170,6 +170,14 @@ a {
   color: black;
 }
 
+.input-wrapper.d8d8d8 {
+  border: 1px solid #d8d8d8;
+}
+
+.input-wrapper.e5e5e5 {
+  border: 1px solid #e5e5e5;
+}
+
 .table-container h2::before,
 ul li::before {
   content: '∙';
