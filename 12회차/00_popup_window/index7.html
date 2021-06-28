@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>수신자 엑셀 업로드</title>
+  </head>
+  <body>
+    <div class="head"></div>
+    <div class="body">
+      <div class="input-container">
+        <div class="input-wrapper e5e5e5">
+          <input type="text" name="file input" id="file-input" readonly />
+        </div>
+        <div class="excel-file-upload-container">
+          <label for="excel-file-upload" class="lookup-button_head">
+            <span class="lookup-button_tail">
+              <span class="lookup-button_body">찾아보기</span>
+            </span>
+          </label>
+          <input type="file" name="excel file upload" id="excel-file-upload" />
+        </div>
+      </div>
+      <ul>
+        <li>
+          <p class="bullet">
+            엑셀 업로드 시 중복번호/스팸번호/오류 번호등의 휴대폰 번호가
+            포함되어
+            <br />
+            있을 경우에는 엑셀파일을 업로드 할 수가 없습니다.
+            <br />
+            오류번호가 포함되어 있을 경우 다시 파일을 다운로드 하여 체크된
+            <br />
+            휴대폰 번호를 수정 후 다시 업로드해 주세요.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <button class="orange-button_head">
+        <span class="orange-button_tail">
+          <span class="orange-button_body"><img src="" alt="확인" /></span>
+        </span>
+      </button>
+    </div>
+  </body>
+</html>

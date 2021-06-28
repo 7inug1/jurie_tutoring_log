@@ -164,3 +164,24 @@ input {
   background: transparent;
   width: 100%;
 }
+
+.input-wrapper.d8d8d8 {
+  border: 1px solid #d8d8d8;
+}
+
+.input-wrapper.e5e5e5 {
+  border: 1px solid #e5e5e5;
+}
+
+.input-wrapper.first {
+  border: 1px solid #d5d5d5;
+  background: #eaeaea;
+}
+
+.input-wrapper.second {
+  border: 1px solid #e5e5e5;
+}
+ul li p.bullet::before {
+  content: '∙';
+  position: absolute;
+}

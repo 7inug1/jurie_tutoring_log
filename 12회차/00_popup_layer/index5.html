@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <title>환불 받을 계좌 정보 확인</title>
   </head>
   <body>
@@ -44,17 +44,55 @@
       </p>
       <div class="table-container">
         <table>
-          <caption></caption>
-          <colgroup></colgroup>
-          <thead></thead>
-          <tbody></tbody>
+          <caption hidden>환불 금액 표</caption>
+          <colgroup>
+            <col />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">환불 금액</th>
+              <td>8,300원</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption hidden>환불계좌 표</caption>
+          <colgroup>
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">환불계좌</th>
+              <th scope="row">예금주</th>
+              <td>Ping 커뮤니케이션</td>
+            </tr>
+            <tr>
+              <!-- <th scope="row"></th> -->
+              <th scope="row">은행 명</th>
+              <td>우리은행</td>
+            </tr>
+            <tr>
+              <!-- <th scope="row"></th> -->
+              <th scope="row">계좌번호</th>
+              <td>12345678967</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
     <div class="button-container">
-      <button class="orange-button_head">
-        <span class="orange-button_tail">
-          <span class="orange-button_body"><img src="" alt="확인" /></span>
+      <button class="button_head">
+        <span class="button_tail">
+          <span class="button_body"><img src="" alt="환불요청" /></span>
+        </span>
+      </button>
+      <button class="button_head">
+        <span class="button_tail">
+          <span class="button_body"><img src="" alt="취소" /></span>
         </span>
       </button>
     </div>

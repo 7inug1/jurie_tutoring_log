@@ -166,6 +166,10 @@ input {
   width: 100%;
 }
 
+.title {
+  font-weight: bolder;
+}
+
 ul li p.bullet::before {
   content: '∙';
   position: absolute;
@@ -179,12 +183,12 @@ ul li p.bullet::before {
 # #    # #####  ###### #    #      #
 */
 
-.input-wrapper_first {
+.input-wrapper.first {
   border: 1px solid #d5d5d5;
   background: #eaeaea;
 }
 
-.input-wrapper_second {
+.input-wrapper.second {
   border: 1px solid #e5e5e5;
 }
 
