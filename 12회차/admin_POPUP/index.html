@@ -5,7 +5,180 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>추천 상품 등록</title>
   </head>
-  <body></body>
+  <body>
+    <div class="head">
+      <h1>추천 상품 등록</h1>
+    </div>
+    <div class="body">
+      <div class="table-container">
+        <table>
+          <caption hidden>추천 상품 등록 표</caption>
+          <colgroup>
+            <col />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">게시여부</th>
+              <td>
+                <input type="radio" name="post status" id="yes_post" />
+                <label for="yes_post">게시</label>
+                <input type="radio" name="post status" id="no_post" />
+                <label for="no_post">비게시</label>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">추천상품</th>
+              <td>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="product number"
+                    id="product-number"
+                    placeholder="상품번호"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="product name"
+                    id="product name"
+                    placeholder="상품명"
+                  />
+                </div>
+                <div class="button-container">
+                  <button class="white-button_head">
+                    <span class="white-button_tail">
+                      <span class="white-button_body">상품찾기</span>
+                    </span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-container">
+          <button class="red-button_head">
+            <span class="red-button_tail">
+              <span class="red-button_body">등록</span>
+            </span>
+          </button>
+          <button class="gray-button_head">
+            <span class="gray-button_tail">
+              <span class="gray-button_body">취소</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="table-container">
+        <div class="filter-container">
+          <select name="dineout or coffee" id="dineout-or-coffee">
+            <option disabled selected hidden>선택하기</option>
+            <option value="외식/커피">외식/커피</option>
+            <option value="외식/양식">외식/양식</option>
+            <option value="외식/한식">외식/한식</option>
+          </select>
+          <select name="donut or bun" id="donut-or-bun">
+            <option disabled selected hidden>선택하기</option>
+            <option value="글레이즈드 도넛">쿠키/비스킷</option>
+            <option value="도너츠/번">도너츠/번</option>
+          </select>
+          <select name="product name for sale" id="product-name-for-sale">
+            <option disabled selected hidden>선택하기</option>
+            <option value="판매상품명">판매상품명</option>
+            <option value="판매상품ID">판매상품ID</option>
+          </select>
+          <div class="input-wrapper">
+            <input type="text" />
+          </div>
+          <div class="button-container">
+            <button class="white-button_head">
+              <span class="white-button_tail">
+                <span class="white-button_body">검색</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <table>
+          <caption hidden>판매상품 표</caption>
+          <colgroup>
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">대분류</th>
+              <th scope="col">소분류</th>
+              <th scope="col">판매상품명</th>
+              <th scope="col">판매상품ID</th>
+              <th scope="col">선택</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>외식/커피</td>
+              <td>도너츠/번</td>
+              <td>던킨 치즈 베이글</td>
+              <td>admin1</td>
+              <td>
+                <button class="small-red-button_body">선택</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>외식/커피</td>
+              <td>도너츠/번</td>
+              <td>오리지널 글레이즈</td>
+              <td>kaown</td>
+              <td><button class="small-red-button_body">선택</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>외식/커피</td>
+              <td>도너츠/번</td>
+              <td>던킨 5천원 교환권</td>
+              <td>wowrk1</td>
+              <td><button class="small-red-button_body">선택</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>외식/커피</td>
+              <td>도너츠/번</td>
+              <td>던킨 치즈 베이글</td>
+              <td>admin1</td>
+              <td><button class="small-red-button_body">선택</button></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>외식/커피</td>
+              <td>도너츠/번</td>
+              <td>오리지널 글레이즈</td>
+              <td>kaown</td>
+              <td><button class="small-red-button_body">선택</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="number-navigation-container">
+          <a href="#" class="chosen"><span>1</span></a>
+          <a href="#"><span>2</span></a>
+          <a href="#"><span>3</span></a>
+          <a href="#"><span>4</span></a>
+          <a href="#"><span>5</span></a>
+          <a href="#"><span>6</span></a>
+          <a href="#"><span>7</span></a>
+          <a href="#"><span>8</span></a>
+          <a href="#"><span>9</span></a>
+          <a href="#"><span>10</span></a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

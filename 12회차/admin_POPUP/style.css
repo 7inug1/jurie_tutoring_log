@@ -159,8 +159,21 @@ button {
   border: none;
 }
 
-input {
+input[type='text'] {
   border: 0 none;
   background: transparent;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.number-navigation-container a {
+  color: #5e5d5d;
+}
+
+.number-navigation-container a.chosen {
+  color: #9f001d;
 }
