@@ -165,6 +165,26 @@ input {
   width: 100%;
 }
 
+input[type='radio'] {
+  margin: 0;
+}
+
+input[type='file'] {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  opacity: 0;
+  z-index: -100;
+}
+
+table {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
 .input-wrapper.d8d8d8 {
   border: 1px solid #d8d8d8;
 }
@@ -173,17 +193,21 @@ input {
   border: 1px solid #e5e5e5;
 }
 
-.input-wrapper.first {
-  border: 1px solid #d5d5d5;
-  background: #eaeaea;
+.input-wrapper.e5e5e5.index7 {
+  /* position: absolute;
+  top: 0; */
+  /* right: 0; */
+  /* min-width: 312px; */
 }
 
-.input-wrapper.second {
-  border: 1px solid #e5e5e5;
+p.bullet {
+  padding-left: 10px;
 }
-ul li p.bullet::before {
+
+p.bullet::before {
   content: '∙';
   position: absolute;
+  left: 23px;
 }
 
 /* 
@@ -218,18 +242,115 @@ body.width-196px {
   /* min-width: 196px; */
 }
 
+.body h2 {
+}
+
+.body h2.index5,
+.body h2.index6 {
+  position: absolute;
+  left: 20px;
+  color: #969696;
+}
+
+.body p.index5,
+.body ul.index5,
+.body ul.index6,
+.body .input-container.index6 {
+  padding-left: 53px;
+}
+
+.body p,
+.body ul,
+input[type='text'],
+.input-length {
+  color: #646464;
+}
+
+.body h2,
+.body p,
+.body ul,
+.input-length,
+input[type='text'] {
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container.index7 {
+  padding-right: 83px;
+}
+
+.input-container.index7 + ul {
+  margin-top: 15px;
+}
+
+.input-container.index8 {
+  padding-left: 97px;
+  padding-right: 53px;
+}
+
+.input-length {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  /* bottom: 5px;
+    right: 5px; */
+  /* color: #646464; */
+  /* font-size: 12px; */
+  /* font-family: 'dotum', sans-serif; */
+}
+
 .body.top {
+  padding-right: 20px;
   border-top: 1px solid #c6c6c6;
 }
 
 .body.top.bottom {
+  padding-right: 16px;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
 }
 
-.coupon-image {
+.body.top.bottom.index1,
+.body.top.bottom.index2 {
   padding-top: 20px;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
+}
+
+.body.top.bottom.index5,
+.body.top.bottom.index6 {
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+.body.top.bottom.index7,
+.body.top.bottom.index8,
+.body.top.bottom.index9,
+.body.top.bottom.index10 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.coupon-image {
+  display: block;
+
+  /* padding-top: 20px;
+  padding-bottom: 19px; */
+  text-align: center;
+}
+
+.coupon-image.absolute {
+  position: absolute;
+  left: 20px;
+}
+
+.right {
+  /* min-width: 330px; */
+  padding-left: 239px;
 }
 
 .coupon-image.center {
@@ -245,12 +366,60 @@ body.width-196px {
 ###   #   #    # #####  ###### ######        ####   ####  #    #   #   #    # # #    # ###### #    #
 */
 
+.table-wrapper {
+  overflow-y: scroll;
+}
+
 .table-container {
   padding-top: 20px;
 }
 
-.table-container.first table {
+.table-container.first {
+  position: relative;
+}
+
+.table-container.first table.thead,
+.textarea-wrapper.customize {
+  margin-top: 10px;
+}
+
+.table-container.first table.thead th {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+  border-bottom: 1px solid #e6cec0;
+  box-sizing: border-box;
+  background: #f4e9e3;
+}
+
+.table-container.second table th {
+  height: 32px;
+  line-height: 32px;
+  color: #323232;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+.table-container.second table td {
+  height: 45px;
+  line-height: 45px;
+  color: #646464;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+/* .table-container.first table {
   border-top: 1px solid #d8b19b;
+  border-bottom: 1px solid #d8b19b;
+} */
+
+.table-container.first table.thead {
+  border-top: 1px solid #d8b19b;
+}
+
+.table-container.first table.tbody {
   border-bottom: 1px solid #d8b19b;
 }
 
@@ -260,7 +429,12 @@ body.width-196px {
 }
 
 .table-container.first table th {
+  line-height: 32px;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
   border-bottom: 1px solid #e6cec0;
+  box-sizing: border-box;
   background: #f4e9e3;
 }
 
@@ -277,8 +451,26 @@ body.width-196px {
   color: #646464;
 }
 
+/* .table-container.first table.tbody td {
+  position: relative;
+  height: 42px;
+} */
+
 .table-container.first table td {
+  position: relative;
+  padding-top: 10.5px;
+  padding-left: 22px;
+  height: 42px;
+  line-height: 21px;
+  box-sizing: border-box;
   border-bottom: 1px solid #ead6ca;
+  /* text-align: center; */
+}
+
+.table-container.first table td label {
+  color: #646464;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
 }
 
 .table-container.second table td {
@@ -294,6 +486,47 @@ body.width-196px {
 }
 
 /* 
+##### ###### #    # #####   ##   #####  ######   ##   
+  #   #       #  #    #    #  #  #    # #       #  #  
+  #   #####    ##     #   #    # #    # #####  #    # 
+  #   #        ##     #   ###### #####  #      ###### 
+  #   #       #  #    #   #    # #   #  #      #    # 
+  #   ###### #    #   #   #    # #    # ###### #    # 
+*/
+
+.textarea-container {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 52px;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
+
+.textarea-wrapper.customize {
+  position: relative;
+  padding: 0 0 18px 0;
+  border: 1px solid #e5e5e5;
+}
+
+.textarea-wrapper.customize,
+.textarea-wrapper.customize textarea {
+  background: #f8f8f8;
+}
+
+.textarea-length {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #646464;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+/* 
     #####  #    # ##### #####  ####  #    #        ####   ####  #    # #####   ##   # #    # ###### #####  
     #    # #    #   #     #   #    # ##   #       #    # #    # ##   #   #    #  #  # ##   # #      #    # 
     #####  #    #   #     #   #    # # #  # ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
@@ -305,6 +538,10 @@ body.width-196px {
 .button-container {
   margin-top: 10px;
   text-align: center;
+}
+
+.button-container.index4 {
+  margin-top: 21px;
 }
 
 .orange-button_body,
@@ -351,4 +588,80 @@ body.width-196px {
   height: 25px;
   background: url('./images/white-button_body.png') center repeat-x;
   vertical-align: top;
+}
+
+/* 
+#       ####   ####  #    # #    # #####        #####  #    # ##### #####  ####  #    # 
+#      #    # #    # #   #  #    # #    #       #    # #    #   #     #   #    # ##   # 
+#      #    # #    # ####   #    # #    # ##### #####  #    #   #     #   #    # # #  # 
+#      #    # #    # #  #   #    # #####        #    # #    #   #     #   #    # #  # # 
+#      #    # #    # #   #  #    # #            #    # #    #   #     #   #    # #   ## 
+######  ####   ####  #    #  ####  #            #####   ####    #     #    ####  #    # 
+*/
+
+.lookup-button_head {
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 1px;
+  height: 22px;
+  background: url('./images/lookup-button_head.png') left no-repeat;
+}
+
+.lookup-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 22px;
+  background: url('./images/lookup-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.lookup-button_body {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  color: #646464;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  background: url('./images/lookup-button_body.png') center repeat-x;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.lookup-button_body.index7 {
+  padding-left: 14px;
+  padding-right: 17px;
+}
+
+.lookup-button_body.index8 {
+  padding-left: 11px;
+  padding-right: 14px;
+}
+
+#selectbox_index8 {
+  position: absolute;
+  left: 0;
+  width: 88px;
+  height: 20px;
+}
+
+.number-change-container {
+  position: relative;
+  text-align: right;
+}
+
+.input-wrapper.first {
+  /* position: absolute; */
+  /* width: 163px; */
+  width: 48.6%;
+  border: 1px solid #d5d5d5;
+  background: #eaeaea;
+}
+
+.input-wrapper.second {
+  width: 48.6%;
+  /* width: 163px; */
+  border: 1px solid #e5e5e5;
+  padding-left: 48.6%;
 }
