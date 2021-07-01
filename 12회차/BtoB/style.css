@@ -164,3 +164,179 @@ input {
   background: transparent;
   width: 100%;
 }
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 21px;
+  padding-right: 20px;
+}
+
+.wrapper.index1 {
+  width: 350px;
+  height: 219px;
+  border: 2px solid black;
+}
+.wrapper.index2 {
+  width: 350px;
+  height: 258px;
+  border: 2px solid black;
+}
+.wrapper.index3 {
+  width: 350px;
+  height: 219px;
+  border: 2px solid black;
+}
+
+/* body {
+  padding-top: 20px;
+  padding-left: 21px;
+  padding-right: 20px;
+} */
+
+.body.index1 {
+  text-align: center;
+}
+
+.body.index1 p {
+  margin-top: 57px;
+  margin-bottom: 19px;
+}
+
+/* .body.index1 span {
+  text-align: center;
+} */
+
+.body.index2 {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.body.index2 p + p {
+  margin-top: 9px;
+}
+
+.square-message.index2 {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #ebebeb;
+  padding-top: 14px;
+  padding-left: 74px;
+  margin-top: 21px;
+  width: 306px;
+  height: 69px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.square-message.index3 p {
+  margin-top: 30px;
+}
+.square-message.index3 p:nth-of-type(2) {
+  margin-top: 9px;
+}
+
+.square-message.index3 {
+  display: inline-block;
+  border: 1px solid #ebebeb;
+  width: 306px;
+  height: 93px;
+  box-sizing: border-box;
+}
+
+.square-message.index2 h2:not(:first-of-type) {
+  margin-top: 6px;
+}
+
+.square-message.index2 h2 {
+  position: absolute;
+}
+
+.quantity {
+  padding-left: 112px;
+}
+
+.quantity:nth-of-type(2) {
+  margin-top: 7px;
+}
+
+.button-container {
+  margin-top: 14px;
+  font-size: 0;
+}
+
+.button-container button + button {
+  margin-left: 10px;
+}
+
+.white-button_head {
+  padding-left: 1px;
+  height: 22px;
+  background: url('./images/white-button_head.png') left no-repeat;
+}
+.white-button_tail {
+  display: inline-block;
+  padding-right: 2px;
+  height: 22px;
+  background: url('./images/white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.white-button_body {
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 25px;
+  line-height: 24px;
+  color: #646464;
+  background: url('./images/white-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+/* h2 {
+  text-align: left;
+}
+
+h2,
+h2 + span {
+  display: inline-block;
+} */
+
+.red {
+  color: red;
+}
+
+.body p {
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+.loading-bar {
+  position: relative;
+}
+
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  top: 2.5px;
+  left: 0px;
+  width: 141px;
+  height: 12px;
+  background: url(./images/loading-bar_filled.png);
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+.close-button {
+  /* display: inline-block; */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
