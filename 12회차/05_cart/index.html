@@ -34,6 +34,15 @@
     </div>
     <div class="body">
       <table class="outer">
+        <div class="button-container help-button">
+          <button class="help-button_head">
+            <span class="help-button_tail">
+              <span class="help-button_body">
+                <img src="./images/help-button_font.png" alt="도움말" />
+              </span>
+            </span>
+          </button>
+        </div>
         <caption hidden>장바구니 표</caption>
         <colgroup>
           <col style="width: 16.9791%" />
@@ -94,25 +103,25 @@
           <tr>
             <th scope="row" class="leftmost-th">회신 번호등록</th>
             <td colspan="2" class="content-cell">
-              <div class="input-container">
-                <div class="input-wrapper d8d8d8 answering-number">
-                  <input
-                    type="text"
-                    name="answering number input"
-                    id="answering-number-input"
-                    value="02-123-4567"
-                  />
-                </div>
-                <div class="button-container answering-number">
-                  <button class="small-white-button_head answering-number">
-                    <span class="small-white-button_tail">
-                      <span class="small-white-button_body">
-                        자주 쓰는 회신번호
-                      </span>
-                    </span>
-                  </button>
-                </div>
+              <!-- <div class="input-container"> -->
+              <div class="input-wrapper d8d8d8 answering-number">
+                <input
+                  type="text"
+                  name="answering number input"
+                  id="answering-number-input"
+                  value="02-123-4567"
+                />
               </div>
+              <div class="button-container answering-number">
+                <button class="small-white-button_head answering-number">
+                  <span class="small-white-button_tail">
+                    <span class="small-white-button_body">
+                      자주 쓰는 회신번호
+                    </span>
+                  </span>
+                </button>
+              </div>
+              <!-- </div> -->
             </td>
             <!-- <td>X</td> -->
           </tr>
@@ -379,15 +388,19 @@
         </tbody>
       </table>
     </div>
-    <div class="button-container">
+    <div class="button-container bottom">
       <button class="white-button_head">
         <span class="white-button_tail">
-          <span class="white-button_body"><img src="" alt="이전" /></span>
+          <span class="white-button_body">
+            <img src="./images/white-button_prev.png" alt="이전" />
+          </span>
         </span>
       </button>
       <button class="orange-button_head">
         <span class="orange-button_tail">
-          <span class="orange-button_body"><img src="" alt="다음" /></span>
+          <span class="orange-button_body">
+            <img src="./images/orange-button_next.png" alt="다음" />
+          </span>
         </span>
       </button>
     </div>

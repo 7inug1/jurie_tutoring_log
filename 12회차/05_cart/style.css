@@ -174,6 +174,7 @@ input[type='text'] {
   border: 0 none;
   background: transparent;
   width: 100%;
+  color: #646464;
 }
 
 .input-wrapper.d8d8d8 {
@@ -181,9 +182,10 @@ input[type='text'] {
   border: 1px solid #d8d8d8;
 }
 
-/* .input-wrapper.answering-number {
+.input-wrapper.answering-number {
   position: absolute;
-} */
+  top: 7px;
+}
 
 table {
   width: 100%;
@@ -274,12 +276,40 @@ h1::before {
   position: relative;
   padding-top: 39px;
   padding-bottom: 37px;
+  padding-left: 10px;
   margin-top: 11px;
   font-size: 0;
+  vertical-align: middle;
+  /* text-align: center; */
 }
 
 .progress li {
   display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.progress li:not(:first-of-type) {
+  margin-left: 42px;
+}
+
+.progress li:not(:last-of-type)::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: -31px;
+  margin-top: -8px;
+
+  /* padding-top: 39px; */
+  width: 16px;
+  height: 18px;
+  background: url('./images/progress_arrow.png') no-repeat;
+  vertical-align: middle;
+}
+
+.progress li:first-of-type {
+  padding-left: 10px;
 }
 
 /* 
@@ -304,6 +334,7 @@ h1::before {
 */
 
 table.outer {
+  margin-top: 12px;
   border: 1px solid black;
 }
 
@@ -320,7 +351,7 @@ table.outer tfoot td {
 .leftmost-th {
   padding-left: 44px;
   font-size: 12px;
-  background: rgb(212, 81, 81);
+  /* background: rgb(212, 81, 81); */
   text-align: left;
   vertical-align: middle;
 }
@@ -328,7 +359,7 @@ table.outer tfoot td {
 .inner-th {
   padding-left: 33px;
   font-size: 12px;
-  background: rgb(173, 211, 173);
+  /* background: rgb(173, 211, 173); */
   text-align: left;
   vertical-align: middle;
 }
@@ -344,14 +375,50 @@ table.inner {
   border-bottom: 1px solid #d8619b;
 }
 
+table.inner thead th,
+table.inner tbody td {
+  vertical-align: middle;
+}
+
 table.inner tbody tr:nth-of-type(2n) td {
   background: #fcf9f8;
 }
 
 table.outer thead th {
+  /* height: 32px; */
   color: #898989;
   font-weight: normal;
   background: #f4e9e3;
+}
+
+/* table.outer tfoot th,
+table.outer tfoot td {
+  height: 32px;
+} */
+
+table.outer thead th,
+table.outer tfoot th,
+table.outer tfoot td,
+table.outer tbody tr:first-of-type,
+table.outer tbody tr:nth-of-type(2),
+table.outer tbody tr:nth-of-type(6),
+table.outer tbody tr:nth-of-type(7),
+table.outer tbody tr:nth-of-type(9),
+table.outer tbody tr:nth-of-type(10) {
+  height: 32px;
+}
+
+table.outer tbody tr:nth-of-type(3) {
+  height: 46px;
+}
+table.outer tbody tr:nth-of-type(4) {
+  height: 32px;
+}
+table.outer tbody tr:nth-of-type(5) {
+  height: 113px;
+}
+table.outer tbody tr:nth-of-type(8) {
+  height: 287px;
 }
 
 table.inner thead tr th:first-of-type {
@@ -374,8 +441,9 @@ table.inner tbody td {
   position: relative;
   padding-left: 13px;
   text-align: left;
-  background: rgb(255, 211, 130);
+  /* background: rgb(255, 211, 130); */
   font-size: 12px;
+  vertical-align: middle;
 }
 
 .input-container {
@@ -404,9 +472,9 @@ table.inner tbody td {
 
 input#answering-number-input {
   width: 163px;
-  color: #646464;
+  /* color: #646464; */
   font-size: 12px;
-  background: greenyellow;
+  /* background: greenyellow; */
   vertical-align: middle;
 }
 
@@ -428,13 +496,27 @@ button.answering-number {
   font-size: 0;
 }
 
+.button-container.bottom {
+  text-align: center;
+}
+
+.button-container.bottom button + button {
+  margin-left: 5px;
+  margin-top: 37px;
+}
+
+.button-container.help-button {
+  text-align: right;
+}
+
 .button-container.purchase-info {
   padding-right: 5px;
   text-align: right;
   /* position: absolute;
   right: 0; */
 }
-.button-container.coupon-image-table button {
+.button-container.coupon-image-table {
+  text-align: right;
 }
 
 .button-container.coupon-image-table button + button {
@@ -445,7 +527,7 @@ button.answering-number {
 
 .button-container.answering-number {
   /* box-sizing: border-box; */
-  padding-left: 168px;
+  padding-left: 173px;
   /* vertical-align: middle; */
 }
 
@@ -550,6 +632,99 @@ label[for='excel-file-upload'] .small-white-button_body {
 
 .small-white-button_body a {
   color: #646464;
+}
+
+.help-button_head {
+  padding-left: 2px;
+  height: 19px;
+  background: url('./images/help-button_head.png') left no-repeat;
+}
+.help-button_tail {
+  display: inline-block;
+  padding-right: 2px;
+  height: 19px;
+  background: url('./images/help-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.orange-button_head {
+  padding-left: 2px;
+  height: 25px;
+  background: url('./images/orange-button_head.png') left no-repeat;
+}
+.orange-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/orange-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.orange-button_body {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  padding-top: 5px;
+  padding-left: 16px;
+  padding-right: 22px;
+  box-sizing: border-box;
+  background: url('./images/orange-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.orange-button_body::after {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 4px;
+  height: 7px;
+  background: url('./images/orange-button_arrow.png');
+}
+
+.white-button_head {
+  padding-left: 1px;
+  height: 25px;
+  background: url('./images/white-button_head.png') left no-repeat;
+}
+.white-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.white-button_body {
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 17px;
+  padding-right: 17px;
+  height: 25px;
+  box-sizing: border-box;
+  background: url('./images/white-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.help-button_body {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 13px;
+  height: 19px;
+  line-height: 20px;
+  background: url('./images/help-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.help-button_body::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 13px;
+  width: 13px;
+  height: 14px;
+  background: url(./images/help-button_icon.png) no-repeat;
 }
 
 .arrow::before {
