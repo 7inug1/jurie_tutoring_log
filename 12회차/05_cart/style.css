@@ -150,8 +150,14 @@
 */
 
 body {
+  /* padding: 100px; */
+  width: 1000px;
+  /* border: 1px solid black; */
   padding-top: 100px;
   padding-bottom: 100px;
+  margin: 0 auto;
+  font-family: 'dotum', sans-serif;
+  /* text-align: center; */
 }
 
 button {
@@ -171,19 +177,418 @@ input[type='text'] {
 }
 
 .input-wrapper.d8d8d8 {
+  display: block;
   border: 1px solid #d8d8d8;
 }
 
-table,
+/* .input-wrapper.answering-number {
+  position: absolute;
+} */
+
+table {
+  width: 100%;
+}
+
+/* table,
 th,
 td {
   border: 1px solid black;
-}
+} */
 
-p strong.arrow::before {
+p.warning-sign {
+  position: relative;
+  padding-left: 13px;
+  color: #a9a9a9;
 }
 
 .warning-sign::before {
   content: '※';
   position: absolute;
+  left: 0;
+}
+
+label[for='excel-file-upload'] {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type='file'] {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  opacity: 0;
+  z-index: -100;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+h1::before {
+  content: '';
+  display: inline-block;
+  margin-right: 14px;
+  width: 55px;
+  height: 52px;
+  background: url('./images/h1_icon.png') no-repeat;
+}
+
+/* 
+    #####  #####   ####   ####  #####  ######  ####   ####  
+    #    # #    # #    # #    # #    # #      #      #      
+    #    # #    # #    # #      #    # #####   ####   ####  
+### #####  #####  #    # #  ### #####  #           #      # 
+### #      #   #  #    # #    # #   #  #      #    # #    # 
+### #      #    #  ####   ####  #    # ######  ####   ####  
+*/
+.progress::before {
+  /* padding-bottom: 39px; */
+  position: absolute;
+  top: 0;
+}
+
+.progress::after {
+  /* padding-top: 37px; */
+  position: absolute;
+  bottom: 0;
+}
+
+.progress::before,
+.progress::after {
+  content: '';
+  display: block;
+  /* padding-top: 39px; */
+  min-width: 960px;
+  height: 1px;
+  background: url('./images/header_line.png') repeat-x;
+}
+
+.progress {
+  position: relative;
+  padding-top: 39px;
+  padding-bottom: 37px;
+  margin-top: 11px;
+  font-size: 0;
+}
+
+.progress li {
+  display: inline-block;
+}
+
+/* 
+    #####   ####  #####  #   # 
+    #    # #    # #    #  # #  
+    #####  #    # #    #   #   
+### #    # #    # #    #   #   
+### #    # #    # #    #   #   
+### #####   ####  #####    #   
+*/
+.body {
+  margin-top: 49px;
+}
+
+/* 
+    #####   ##   #####  #      ###### 
+      #    #  #  #    # #      #      
+      #   #    # #####  #      #####  
+###   #   ###### #    # #      #      
+###   #   #    # #    # #      #      
+###   #   #    # #####  ###### ###### 
+*/
+
+table.outer {
+  border: 1px solid black;
+}
+
+table.outer thead th,
+table.outer tfoot th,
+table.outer tfoot td {
+  color: #464646;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+  background: #ebebeb;
+}
+
+.leftmost-th {
+  padding-left: 44px;
+  font-size: 12px;
+  background: rgb(212, 81, 81);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.inner-th {
+  padding-left: 33px;
+  font-size: 12px;
+  background: rgb(173, 211, 173);
+  text-align: left;
+  vertical-align: middle;
+}
+
+tbody tr:nth-of-type(8) .content-cell {
+  padding-top: 12px;
+}
+
+table.inner {
+  margin-top: 3px;
+  color: #898989;
+  border-top: 1px solid #d8619b;
+  border-bottom: 1px solid #d8619b;
+}
+
+table.inner tbody tr:nth-of-type(2n) td {
+  background: #fcf9f8;
+}
+
+table.outer thead th {
+  color: #898989;
+  font-weight: normal;
+  background: #f4e9e3;
+}
+
+table.inner thead tr th:first-of-type {
+  text-align: center;
+}
+table.inner thead th {
+  text-align: center;
+}
+table.inner tbody td {
+  text-align: center;
+}
+
+/* input#answering-number-input {
+  color: #646464;
+  font-size: 12px;
+  background: greenyellow;
+} */
+
+.content-cell {
+  position: relative;
+  padding-left: 13px;
+  text-align: left;
+  background: rgb(255, 211, 130);
+  font-size: 12px;
+}
+
+.input-container {
+  position: relative;
+  /* vertical-align: middle; */
+}
+
+.input-length {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #646464;
+  font-weight: 12px;
+}
+
+.input-wrapper.answering-number {
+  position: absolute;
+}
+
+.input-container.answering-input {
+  position: absolute;
+}
+
+/* #answering-number-input {
+} */
+
+input#answering-number-input {
+  width: 163px;
+  color: #646464;
+  font-size: 12px;
+  background: greenyellow;
+  vertical-align: middle;
+}
+
+button.answering-number {
+  vertical-align: middle;
+}
+
+/* 
+    #####  #    # ##### #####  ####  #    # 
+    #    # #    #   #     #   #    # ##   # 
+    #####  #    #   #     #   #    # # #  # 
+### #    # #    #   #     #   #    # #  # # 
+### #    # #    #   #     #   #    # #   ## 
+### #####   ####    #     #    ####  #    # 
+*/
+
+.button-container {
+  /* display: inline-block; */
+  font-size: 0;
+}
+
+.button-container.purchase-info {
+  padding-right: 5px;
+  text-align: right;
+  /* position: absolute;
+  right: 0; */
+}
+.button-container.coupon-image-table button {
+}
+
+.button-container.coupon-image-table button + button {
+  position: absolute;
+  right: 0;
+  bottom: -27px;
+}
+
+.button-container.answering-number {
+  /* box-sizing: border-box; */
+  padding-left: 168px;
+  /* vertical-align: middle; */
+}
+
+.small-orange-button_head {
+  /* display: inline-block; */
+  /* position: absolute; */
+  /* top: 0;
+  right: 0; */
+  padding-left: 1px;
+  height: 22px;
+  background: url('./images/small-orange-button_head.png') left no-repeat;
+}
+
+.small-orange-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 22px;
+  background: url('./images/small-orange-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.small-orange-button_body {
+  display: inline-block;
+  padding-left: 9px;
+  padding-right: 9px;
+  height: 22px;
+  line-height: 22px;
+  color: white;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  background: url('./images/small-orange-button_body.png') center repeat-x;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.re-enter {
+  position: relative;
+  padding-right: 24px;
+}
+
+.re-enter::after {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 14px;
+  height: 12px;
+  background: url(./images/small-orange-button_icon.png);
+}
+
+label[for='excel-file-upload'] .small-white-button_body::before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 14px;
+  height: 14px;
+  background: url(./images/excel-icon.png);
+}
+
+label[for='excel-file-upload'] .small-white-button_body {
+  /* background: red; */
+  position: relative;
+  padding-left: 34px;
+  color: #ff5f28;
+}
+
+.small-white-button_head {
+  display: inline-block;
+  /* position: absolute; */
+  /* top: 0;
+  right: 0; */
+  padding-left: 1px;
+  height: 22px;
+  background: url('./images/small-white-button_head.png') left no-repeat;
+  vertical-align: top;
+}
+
+.small-white-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 22px;
+  background: url('./images/small-white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.small-white-button_body {
+  display: inline-block;
+  padding-left: 9px;
+  padding-right: 9px;
+  height: 22px;
+  line-height: 22px;
+  color: #646464;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  background: url('./images/small-white-button_body.png') center repeat-x;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.small-white-button_body a {
+  color: #646464;
+}
+
+.arrow::before {
+  content: '';
+  display: inline-block;
+  /* position: absolute; */
+  top: 5px;
+  right: 5px;
+  width: 6px;
+  height: 7px;
+  background: url(./images/arrow-icon.png);
+}
+
+.arrow {
+  font-weight: bolder;
+  color: #646464;
+}
+
+.thead-content,
+.tfoot-content {
+  position: absolute;
+  top: 11px;
+}
+
+.coupon-image {
+  display: inline-block;
+  text-align: center;
+}
+
+.coupon-image img {
+  display: block;
+}
+
+.coupon-image button {
+  margin-top: 5px;
+}
+
+.coupon-image + .table-container {
+  position: absolute;
+  top: 12px;
+  left: 278px;
 }

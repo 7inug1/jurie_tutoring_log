@@ -166,7 +166,79 @@ input {
   width: 100%;
 }
 
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
 .title {
+  color: #464646;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+}
+
+.title:not(:first-of-type) {
+  padding-top: 20px;
+}
+
+.title.index6:not(:first-of-type) {
+  padding-top: 18px;
+}
+
+.title + ul p,
+.title + ul h2,
+.title + ul strong {
+  color: #646464;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+}
+
+.title + p,
+.title + div.p-container p {
+  color: #646464;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+}
+
+p.index1 {
+  padding-left: 12px;
+}
+
+.second-indent {
+  position: absolute;
+  padding-left: 11px;
+}
+
+p.padding-left {
+  padding-left: 76px;
+}
+
+p.padding-left.extra {
+  padding-left: 91px;
+}
+
+ul p.index4 {
+  color: #646464;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+ul p.index4 strong {
+  color: #464646;
+  font-weight: bolder;
+  /* font-family: 'dotum', sans-serif; */
+}
+
+ul p.index5 {
+  margin-top: 14px;
+  color: #646464;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+ul p.index5 strong {
   font-weight: bolder;
 }
 
@@ -174,6 +246,93 @@ ul li p.bullet::before {
   content: '∙';
   position: absolute;
 }
+ul li p.bullet.index1::before {
+  left: 25px;
+}
+
+ul li p.bullet.index2::before,
+ul li p.bullet.index3::before {
+  left: 26px;
+}
+
+ul li p.bullet.index4::before,
+ul li p.bullet.index5::before,
+ul li p.bullet.index6::before {
+  left: 20px;
+}
+
+p.warning {
+  color: #a9a9a9;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+}
+
+.table-container.index5 table {
+  border-top: 1px solid #dedfde;
+  border-bottom: 1px solid #dedfde;
+}
+
+.table-container.index5 th {
+  color: #969696;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+  background: #f6f6f6;
+}
+
+.table-container.index5 td {
+  color: #646464;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+  background: #f6f6f6;
+}
+
+.body.top.bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-top: 1px solid #cdcccb;
+  border-bottom: 1px solid #cdcccb;
+}
+
+.body ul li:not(:first-of-type) .title,
+p.index4
+/* , */
+/* .body ul li:not(:first-of-type) */ {
+  margin-top: 20px;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    #
+*/
+
+h1::before {
+  content: '';
+  display: inline-block;
+  margin-right: 6px;
+  width: 5px;
+  height: 16px;
+  background: url('./images/h1_icon.png') no-repeat;
+}
+
+h1 {
+  /* padding-left: 6px; */
+  font-size: 0;
+}
+
+/* 
+    #####   ####  #####  #   # 
+    #    # #    # #    #  # #  
+    #####  #    # #    #   #   
+### #    # #    # #    #   #   
+### #    # #    # #    #   #   
+### #####   ####  #####    #  
+*/
+
 /* 
 # #    # #####  ###### #    # #    #  
 # ##   # #    # #       #  #  #    #  
@@ -201,3 +360,63 @@ ul li p.bullet::before {
 # #   ## #    # #       #  #  #     # 
 # #    # #####  ###### #    #  #####  
 */
+
+/* 
+    #####  #    # ##### #####  ####  #    #        ####   ####  #    # #####   ##   # #    # ###### #####  
+    #    # #    #   #     #   #    # ##   #       #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+    #####  #    #   #     #   #    # # #  # ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+### #    # #    #   #     #   #    # #  # #       #      #    # #  # #   #   ###### # #  # # #      #####  
+### #    # #    #   #     #   #    # #   ##       #    # #    # #   ##   #   #    # # #   ## #      #   #  
+### #####   ####    #     #    ####  #    #        ####   ####  #    #   #   #    # # #    # ###### #    #
+*/
+
+.button-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.orange-button_body,
+.white-button_body {
+  padding-top: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.orange-button_head {
+  padding-left: 2px;
+  height: 25px;
+  background: url('./images/orange-button_head.png') left no-repeat;
+}
+.orange-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/orange-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.orange-button_body {
+  display: inline-block;
+  height: 25px;
+  background: url('./images/orange-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.white-button_head {
+  padding-left: 1px;
+  height: 25px;
+  background: url('./images/white-button_head.png') left no-repeat;
+}
+.white-button_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.white-button_body {
+  display: inline-block;
+  height: 25px;
+  background: url('./images/white-button_body.png') center repeat-x;
+  vertical-align: top;
+}

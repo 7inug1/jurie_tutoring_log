@@ -8,55 +8,75 @@
     <title>장바구니</title>
   </head>
   <body>
-    <div class="head">
-      <h1><img src="" alt="장바구니" /></h1>
+    <div class="header">
+      <h1><img src="./images/h1_text.png" alt="장바구니" /></h1>
       <ul class="progress">
-        <li><img src="" alt="장바구니" /></li>
-        <li><img src="" alt="캠페인 선택하기" /></li>
-        <li><img src="" alt="구매정보 입력" /></li>
-        <li><img src="" alt="주문정보 확인/결제" /></li>
-        <li><img src="" alt="주문완료" /></li>
+        <li><img src="./images/step01_장바구니.png" alt="장바구니" /></li>
+        <li>
+          <img
+            src="./images/step02_캠페인-선택하기.png"
+            alt="캠페인 선택하기"
+          />
+        </li>
+        <li>
+          <strong>
+            <img src="./images/step03_구매정보-입력.png" alt="구매정보 입력" />
+          </strong>
+        </li>
+        <li>
+          <img
+            src="./images/step04_주문정보-확인&결제.png"
+            alt="주문정보 확인/결제"
+          />
+        </li>
+        <li><img src="./images/step05_주문완료.png" alt="주문완료" /></li>
       </ul>
     </div>
     <div class="body">
-      <table border="1">
+      <table class="outer">
         <caption hidden>장바구니 표</caption>
         <colgroup>
-          <col />
-          <col />
-          <col />
+          <col style="width: 16.9791%" />
+          <col style="width: 16.875%" />
+          <col style="width: 65.9375%" />
         </colgroup>
         <thead>
           <tr>
-            <th scope="col">발송상품</th>
-            <th scope="col" colspan="2">
-              <span>아이스 카라멜 마끼야또 S</span>
-              <button class="small-orange-button_head">
-                <span class="small-orange-button_tail">
-                  <span class="small-orange-button_body">구매정보 재입력</span>
-                </span>
-              </button>
+            <th scope="col" class="leftmost-th">발송상품</th>
+            <th scope="col" colspan="2" class="content-cell">
+              <span class="thead-content">아이스 카라멜 마끼야또 S</span>
+              <div class="button-container purchase-info">
+                <button class="small-orange-button_head">
+                  <span class="small-orange-button_tail">
+                    <span class="small-orange-button_body re-enter">
+                      구매정보 재입력
+                    </span>
+                  </span>
+                </button>
+              </div>
             </th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <td>발송상품</td>
-            <td colspan="2">
-              <span>파리크라상 제품교환권</span>
-              <button class="small-orange-button_head">
-                <span class="small-orange-button_tail">
-                  <span class="small-orange-button_body">구매정보 입력</span>
-                </span>
-              </button>
+            <th scope="row" class="leftmost-th">발송상품</th>
+            <td colspan="2" class="content-cell">
+              <span class="tfoot-content">파리크라상 제품교환권</span>
+              <div class="button-container purchase-info">
+                <button class="small-orange-button_head">
+                  <span class="small-orange-button_tail">
+                    <span class="small-orange-button_body">구매정보 입력</span>
+                  </span>
+                </button>
+              </div>
             </td>
             <td></td>
           </tr>
         </tfoot>
         <tbody>
           <tr>
-            <td>발송그룹 명</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">발송그룹 명</th>
+            <td colspan="2" class="content-cell">
               <div class="input-container">
                 <div class="input-wrapper d8d8d8">
                   <input
@@ -72,20 +92,36 @@
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <td>회신 번호등록</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">회신 번호등록</th>
+            <td colspan="2" class="content-cell">
               <div class="input-container">
-                <div class="input-wrapper d8d8d8">
-                  <input type="text" name="" id="" />
+                <div class="input-wrapper d8d8d8 answering-number">
+                  <input
+                    type="text"
+                    name="answering number input"
+                    id="answering-number-input"
+                    value="02-123-4567"
+                  />
+                </div>
+                <div class="button-container answering-number">
+                  <button class="small-white-button_head answering-number">
+                    <span class="small-white-button_tail">
+                      <span class="small-white-button_body">
+                        자주 쓰는 회신번호
+                      </span>
+                    </span>
+                  </button>
                 </div>
               </div>
             </td>
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <td scope="rowgroup" rowspan="3">수신 번호 등록</td>
-            <th scope="row">수신자 중복 허용</th>
-            <td>
+            <th scope="rowgroup" rowspan="3" class="leftmost-th">
+              수신 번호 등록
+            </th>
+            <th scope="row" class="inner-th">수신자 중복 허용</th>
+            <td class="content-cell">
               <div class="radio-button-container">
                 <input
                   type="radio"
@@ -110,8 +146,8 @@
           </tr>
           <tr>
             <!-- <td>X</td> -->
-            <th scope="row">수신자 정보 입력</th>
-            <td>
+            <th scope="row" class="inner-th">수신자 정보 입력</th>
+            <td class="content-cell">
               <div class="radio-button-container">
                 <input
                   type="radio"
@@ -134,8 +170,8 @@
           </tr>
           <tr>
             <!-- <td>X</td> -->
-            <th scope="row">수신자 엑셀 업로드</th>
-            <td>
+            <th scope="row" class="inner-th">수신자 엑셀 업로드</th>
+            <td class="content-cell">
               <p>
                 <strong class="arrow">
                   총 10,000명의 수신자 정보를 입력하였습니다
@@ -170,8 +206,8 @@
             </td>
           </tr>
           <tr>
-            <td>발송유형 선택</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">발송유형 선택</th>
+            <td colspan="2" class="content-cell">
               <div class="radio-button-container">
                 <input
                   type="radio"
@@ -190,8 +226,8 @@
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <td>SMS 문구</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">SMS 문구</th>
+            <td colspan="2" class="content-cell">
               <div class="input-container">
                 <div class="input-wrapper d8d8d8">
                   <input
@@ -207,10 +243,10 @@
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <td>이미지 꾸미기</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">이미지 꾸미기</th>
+            <td colspan="2" class="content-cell">
               <div class="coupon-image">
-                <img src="" alt="" />
+                <img src="./images/gifticon-image.png" alt="기프티콘 이미지" />
                 <button class="small-white-button_head">
                   <span class="small-white-button_tail">
                     <span class="small-white-button_body">
@@ -219,29 +255,31 @@
                   </span>
                 </button>
               </div>
-              <div class="table-container">
+              <div class="table-container coupon-image-table">
                 <h2 class="arrow">꾸미기 이미지 선택</h2>
-                <p>
-                  <strong class="warning-sign">
+                <p class="warning-sign">
+                  <strong>
                     직접 쿠폰 이미지를 꾸민 후 기프티콘을 전송 하실 수 있습니다.
                     <br />
                     단, 사전 검수가 완료된 이미지로만 상품 쿠폰을 꾸미실 수
                     있습니다.
                   </strong>
                 </p>
-                <button class="small-white-button_head">
-                  <span class="small-white-button_tail">
-                    <span class="small-white-button_body">신규 등록</span>
-                  </span>
-                </button>
-                <button class="small-white-button_head">
-                  <span class="small-white-button_tail">
-                    <span class="small-white-button_body">
-                      적용 이미지 확인
+                <div class="button-container coupon-image-table">
+                  <button class="small-white-button_head">
+                    <span class="small-white-button_tail">
+                      <span class="small-white-button_body">신규 등록</span>
                     </span>
-                  </span>
-                </button>
-                <table>
+                  </button>
+                  <button class="small-white-button_head">
+                    <span class="small-white-button_tail">
+                      <span class="small-white-button_body">
+                        적용 이미지 확인
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <table class="inner">
                   <caption hidden>쿠폰 이미지 표</caption>
                   <colgroup>
                     <col />
@@ -262,7 +300,9 @@
                           id="coupon-image_1"
                         />
                       </td>
-                      <td>기프티콘 기본 이미지</td>
+                      <td>
+                        <label for="coupon-image_1">기프티콘 기본 이미지</label>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -272,7 +312,11 @@
                           id="coupon-image_2"
                         />
                       </td>
-                      <td>한 여름 페스티벌 당첨</td>
+                      <td>
+                        <label for="coupon-image_2">
+                          한 여름 페스티벌 당첨
+                        </label>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -282,7 +326,11 @@
                           id="coupon-image_3"
                         />
                       </td>
-                      <td>팅팅팅 탱탱탱 경품 이미지</td>
+                      <td>
+                        <label for="coupon-image_3">
+                          팅팅팅 탱탱탱 경품 이미지
+                        </label>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -291,8 +339,8 @@
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <td>무선페이지 선택</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">무선페이지 선택</th>
+            <td colspan="2" class="content-cell">
               <input
                 type="radio"
                 name="wireless page"
@@ -311,8 +359,8 @@
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <td>발송시간 선택</td>
-            <td colspan="2">
+            <th scope="row" class="leftmost-th">발송시간 선택</th>
+            <td colspan="2" class="content-cell">
               <input
                 type="radio"
                 name="dispatch time"
