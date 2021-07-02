@@ -157,6 +157,7 @@ body {
 button {
   padding: 0;
   border: none;
+  background: transparent;
 }
 
 input[type='text'] {
@@ -170,10 +171,298 @@ a {
   color: black;
 }
 
+.number-navigation-container::before {
+  content: '';
+  display: inline-block;
+  /* position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -3px; */
+  width: 9px;
+  height: 5px;
+  background: url(./images/button-container_left-icon.png);
+  vertical-align: middle;
+}
+
+.number-navigation-container::after {
+  content: '';
+  display: inline-block;
+  /* position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -3px; */
+  width: 9px;
+  height: 5px;
+  background: url(./images/button-container_right-icon.png);
+  vertical-align: middle;
+}
+
 .number-navigation-container a {
   color: #5e5d5d;
 }
 
 .number-navigation-container a.chosen {
   color: #9f001d;
+}
+
+table {
+  width: 100%;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -3px;
+  width: 9px;
+  height: 9px;
+  background: url(./images/h1_icon.png);
+}
+
+h1 {
+  position: relative;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 29px;
+  color: white;
+  font-weight: bolder;
+  background: #8e001a;
+}
+
+.body {
+  margin-top: 30px;
+}
+
+/* 
+    #####   ##   #####  #      ######                ###### # #####   ####  ##### 
+      #    #  #  #    # #      #                     #      # #    # #        #   
+      #   #    # #####  #      #####                 #####  # #    #  ####    #   
+###   #   ###### #    # #      #      ### ### ###    #      # #####       #   #   
+###   #   #    # #    # #      #      ### ### ###    #      # #   #  #    #   #   
+###   #   #    # #####  ###### ###### ### ### ###    #      # #    #  ####    #   
+*/
+
+.table-container.first table {
+  border: 1px solid #dddddd;
+}
+
+.table-container.first table th {
+  color: #650013;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+  background: #ffeded;
+}
+
+.table-container.first table tbody th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table-container.first table tbody td {
+  color: #666666;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+}
+
+/* 
+    #####   ##   #####  #      ######                 ####  ######  ####   ####  #    # #####  
+      #    #  #  #    # #      #                     #      #      #    # #    # ##   # #    # 
+      #   #    # #####  #      #####                  ####  #####  #      #    # # #  # #    # 
+###   #   ###### #    # #      #      ### ### ###         # #      #      #    # #  # # #    # 
+###   #   #    # #    # #      #      ### ### ###    #    # #      #    # #    # #   ## #    # 
+###   #   #    # #####  ###### ###### ### ### ###     ####  ######  ####   ####  #    # #####  
+*/
+
+.table-container.second table thead th {
+  height: 25px;
+  color: #650013;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+  background: #f0dbda;
+  vertical-align: middle;
+}
+
+.table-container.second table tbody td {
+  color: #666666;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+  text-align: center;
+}
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+button {
+  cursor: pointer;
+}
+
+.button-container.right {
+  text-align: right;
+}
+
+.button-container.search {
+  display: inline-block;
+  padding-left: 342px;
+  vertical-align: top;
+}
+
+.white-button_head {
+  padding-left: 1px;
+  height: 23px;
+  background: url('./images/white-button_head.png') left no-repeat;
+}
+.white-button_tail {
+  display: inline-block;
+  padding-right: 2px;
+  height: 23px;
+  background: url('./images/white-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.white-button_body {
+  display: inline-block;
+  padding-left: 7px;
+  padding-right: 7px;
+  height: 23px;
+  line-height: 22px;
+  color: #555555;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  background: url('./images/white-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.red-button_head {
+  padding-left: 3px;
+  height: 23px;
+  background: url('./images/red-button_head.png') left no-repeat;
+  vertical-align: top;
+}
+.red-button_tail {
+  display: inline-block;
+  padding-right: 3px;
+  height: 23px;
+  background: url('./images/red-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.red-button_body {
+  display: inline-block;
+  height: 23px;
+  line-height: 22px;
+  color: white;
+  background: url('./images/red-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.gray-button_head {
+  padding-left: 3px;
+  height: 21px;
+  background: url('./images/gray-button_head.png') left no-repeat;
+  /* vertical-align: top; */
+}
+.gray-button_tail {
+  display: inline-block;
+  padding-right: 3px;
+  height: 21px;
+  background: url('./images/gray-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.gray-button_body {
+  display: inline-block;
+  height: 21px;
+  line-height: 22px;
+  color: white;
+  background: url('./images/gray-button_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.small-red-button_body {
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  background: #6d001b;
+}
+
+input[type='text'] {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.input-wrapper {
+  border: 1px solid #dddddd;
+}
+
+/* .input-wrapper.product-number {
+  left: 9px;
+}
+
+.input-wrapper.product-name {
+  left: 103px;
+} */
+
+.input-wrapper.product-number {
+  position: absolute;
+  left: 9px;
+  width: 90px;
+  height: 22px;
+}
+
+.input-wrapper.product-name {
+  position: absolute;
+  left: 103px;
+  width: 113px;
+  height: 22px;
+}
+
+.input-wrapper.item-search {
+  display: inline-block;
+  position: absolute;
+  /* padding-left: 114px; */
+  left: 114px;
+  width: 219px;
+  height: 22px;
+}
+
+td.recommended-items {
+  position: relative;
+  padding-left: 225px;
+}
+
+/* 
+ ####  ###### #      ######  ####  ##### #####   ####  #    # 
+#      #      #      #      #    #   #   #    # #    #  #  #  
+ ####  #####  #      #####  #        #   #####  #    #   ##   
+     # #      #      #      #        #   #    # #    #   ##   
+#    # #      #      #      #    #   #   #    # #    #  #  #  
+ ####  ###### ###### ######  ####    #   #####   ####  #    # 
+*/
+
+select {
+  display: block;
+  width: 100%;
+}
+
+.select1-wrapper {
+  position: absolute;
+  width: 109px;
+  height: 22px;
+}
+.select2-wrapper {
+  padding-left: 114px;
+  width: 219px;
+  height: 22px;
+}
+.select3-wrapper {
+  position: absolute;
+  width: 109px;
+  height: 22px;
 }

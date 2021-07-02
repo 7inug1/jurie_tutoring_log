@@ -154,13 +154,330 @@ body {
   padding-bottom: 100px;
 }
 
+.wrapper {
+  position: relative;
+  width: 460px;
+  height: 675px;
+  background: black;
+  padding-left: 30px;
+  padding-right: 24px;
+  padding-top: 34px;
+  margin: 0 auto;
+}
+
 button {
   padding: 0;
   border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 input {
   border: 0 none;
   background: transparent;
   width: 100%;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+h1 + p {
+  margin-top: 12px;
+}
+
+.button-container.close-button {
+  position: absolute;
+  top: 35px;
+  right: 24px;
+}
+
+/* 
+    #####   ####  #####  #   # 
+    #    # #    # #    #  # #  
+    #####  #    # #    #   #   
+### #    # #    # #    #   #   
+### #    # #    # #    #   #   
+### #####   ####  #####    #   
+*/
+
+/* 
+    #####   ##   #####         ####   ####  #    # #####   ##   # #    # ###### #####  
+      #    #  #  #    #       #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+      #   #    # #####  ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+###   #   ###### #    #       #      #    # #  # #   #   ###### # #  # # #      #####  
+###   #   #    # #    #       #    # #    # #   ##   #   #    # # #   ## #      #   #  
+###   #   #    # #####         ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+.tab-container {
+  position: relative;
+  font-size: 0;
+  /* background: red; */
+}
+
+.tab-container button {
+  position: relative;
+  min-width: 139px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* background: orange; */
+}
+
+.tab-container.index1 {
+  border-bottom: 2px solid #ec1118;
+}
+.tab-container.index2 {
+  border-bottom: 2px solid #ec1118;
+}
+.tab-container.index1 button:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 2px;
+  height: 29px;
+  background: url(./images/tab01_red-border-vertical_longer.png) repeat-y;
+}
+.tab-container.index2 button:nth-of-type(2)::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 2px;
+  height: 28px;
+  background: url(./images/tab01_red-border-vertical_shorter.png) repeat-y;
+}
+
+.tab-container.index1 button:first-of-type {
+  /* border-left: 2px solid #ec1118; */
+  border-top: 2px solid #ec1118;
+  /* border-right: 2px solid #ec1118; */
+  border-bottom: 2px solid black;
+}
+
+.tab-container.index2 button:nth-of-type(2) {
+  /* border-left: 2px solid #ec1118; */
+  border-top: 2px solid #ec1118;
+  /* border-right: 2px solid #ec1118; */
+  border-bottom: 2px solid black;
+}
+
+.tab-container.index1 button:first-of-type::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 2px;
+  height: 28px;
+  background: url(./images/tab01_red-border-vertical_shorter.png) repeat-y;
+}
+
+.tab-container.index2 button:nth-of-type(2)::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 2px;
+  height: 28px;
+  background: url(./images/tab01_red-border-vertical_longer.png) repeat-y;
+}
+
+/* .tab-container button:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  height: 29px;
+  background: url(./images/tab01_red-border.png);
+} */
+
+.tab1 {
+  position: relative;
+}
+
+.tab1 h2 {
+  position: relative;
+  padding-left: 16px;
+}
+.tab2 h2 {
+  position: relative;
+  padding-left: 16px;
+}
+.tab1 > h2::before,
+.tab2 > h2::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  width: 9px;
+  height: 9px;
+  background: url('./images/h2_icon.png') no-repeat;
+}
+
+.tab1 > ul.steps_content {
+  padding-left: 118px;
+}
+
+.tab1,
+.tab2 {
+  margin-top: 32px;
+}
+
+.tab2 > ul {
+  padding-left: 30px;
+  margin-top: 48px;
+}
+
+.tab2 > ul li {
+  line-height: 14px;
+  color: white;
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+}
+
+.tab2 > ul li:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.tab1 > ul.steps_title {
+  color: white;
+  font-family: 'Verdana', sans-serif;
+  font-size: 9px;
+}
+
+.tab1 > ul.steps_title li:first-of-type {
+  position: absolute;
+  left: 36px;
+  top: 120px;
+}
+.tab1 > ul.steps_title li:nth-of-type(2) {
+  position: absolute;
+  left: 36px;
+  top: 235px;
+}
+.tab1 > ul.steps_title li:nth-of-type(3) {
+  position: absolute;
+  left: 36px;
+  top: 335px;
+}
+.tab1 > ul.steps_title li:nth-of-type(4) {
+  position: absolute;
+  left: 36px;
+  top: 455px;
+}
+
+.tab1 > ul.steps_content {
+  position: relative;
+}
+
+.tab1 > ul.steps_content > li:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 37px;
+  width: 37px;
+  height: 42px;
+  background: url('./images/step01_icon.png') no-repeat;
+}
+
+.tab1 > ul.steps_content > li:nth-of-type(2)::before {
+  content: '';
+  position: absolute;
+  top: 116px;
+  left: 28px;
+  width: 50px;
+  height: 51px;
+  background: url('./images/step02_icon.png') no-repeat;
+}
+
+.tab1 > ul.steps_content > li:nth-of-type(3)::before {
+  content: '';
+  position: absolute;
+  top: 221px;
+  left: 28px;
+  width: 50px;
+  height: 51px;
+  background: url('./images/step03_icon.png') no-repeat;
+}
+
+.tab1 > ul.steps_content > li:nth-of-type(4)::before {
+  content: '';
+  position: absolute;
+  top: 336px;
+  left: 30px;
+  width: 46px;
+  height: 50px;
+  background: url('./images/step04_icon.png') no-repeat;
+}
+
+/* .tab1 > ul > li:nth-of-type(4)::before {
+  content: '';
+  position: absolute;
+  top: 336px;
+  left: 30px;
+  width: 46px;
+  height: 50px;
+  background: url('./images/step04_icon.png') no-repeat;
+} */
+
+.tab1 > ul.steps_content > li:first-of-type {
+  margin-top: 43px;
+}
+.tab1 > ul.steps_content > li:nth-of-type(2) {
+  margin-top: 54px;
+}
+.tab1 > ul.steps_content > li:nth-of-type(3) {
+  margin-top: 50px;
+}
+.tab1 > ul.steps_content > li:nth-of-type(4) {
+  margin-top: 50px;
+}
+
+.tab1 ul.steps_content li h2 {
+  color: #ec1118;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+}
+
+.tab1 ul.steps_content li h2 + ul {
+  margin-top: 15px;
+}
+
+.tab1 ul.steps_content li h2 + ul li {
+  line-height: 16px;
+  color: white;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+}
+
+.tab2 ul.steps_content li {
+  color: white;
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+}
+
+.step01_desc-icon {
+  position: relative;
+  /* padding-left: 11px; */
+}
+
+.step01_desc-icon::before {
+  content: '';
+  display: inline-block;
+  /* position: absolute; */
+
+  top: 0px;
+  left: 0px;
+  padding-right: 11px;
+  width: 19px;
+  height: 13px;
+  background: url(./images/step01_desc-icon.png) no-repeat;
+  vertical-align: bottom;
 }
