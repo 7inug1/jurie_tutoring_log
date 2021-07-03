@@ -291,8 +291,8 @@
                 <table class="inner">
                   <caption hidden>쿠폰 이미지 표</caption>
                   <colgroup>
-                    <col />
-                    <col />
+                    <col style="width: 15.1631%" />
+                    <col style="width: 84.8368%" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -348,42 +348,45 @@
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <th scope="row" class="leftmost-th">무선페이지 선택</th>
-            <td colspan="2" class="content-cell">
-              <input
-                type="radio"
-                name="wireless page"
-                id="wireless-page_decorate"
-              />
-              <label for="wireless-page_decorate">무선페이지 꾸미기</label>
-              <input
-                type="radio"
-                name="wireless page"
-                id="wireless-page_do-not-decorate"
-              />
-              <label for="wireless-page_do-not-decorate">
-                무선페이지 꾸미지 않기
-              </label>
-            </td>
+            <div class="radio-button-container">
+              <th scope="row" class="leftmost-th">무선페이지 선택</th>
+              <td colspan="2" class="content-cell">
+                <input
+                  type="radio"
+                  name="wireless page"
+                  id="wireless-page_decorate"
+                />
+                <label for="wireless-page_decorate">무선페이지 꾸미기</label>
+                <input
+                  type="radio"
+                  name="wireless page"
+                  id="wireless-page_do-not-decorate"
+                />
+                <label for="wireless-page_do-not-decorate">
+                  무선페이지 꾸미지 않기
+                </label>
+              </td>
+            </div>
             <!-- <td>X</td> -->
           </tr>
           <tr>
-            <th scope="row" class="leftmost-th">발송시간 선택</th>
-            <td colspan="2" class="content-cell">
-              <input
-                type="radio"
-                name="dispatch time"
-                id="dispatch-time_instant"
-              />
-              <label for="dispatch-time_instant">즉시 발송하기</label>
-              <input
-                type="radio"
-                name="dispatch time"
-                id="dispatch-time_scheduled"
-              />
-              <label for="dispatch-time_scheduled">예약 발송하기</label>
-            </td>
-            <td></td>
+            <div class="radio-button-container">
+              <th scope="row" class="leftmost-th">발송시간 선택</th>
+              <td colspan="2" class="content-cell">
+                <input
+                  type="radio"
+                  name="dispatch time"
+                  id="dispatch-time_instant"
+                />
+                <label for="dispatch-time_instant">즉시 발송하기</label>
+                <input
+                  type="radio"
+                  name="dispatch time"
+                  id="dispatch-time_scheduled"
+                />
+                <label for="dispatch-time_scheduled">예약 발송하기</label>
+              </td>
+            </div>
           </tr>
         </tbody>
       </table>

@@ -150,14 +150,11 @@
 */
 
 body {
-  /* padding: 100px; */
   width: 1000px;
-  /* border: 1px solid black; */
   padding-top: 100px;
   padding-bottom: 100px;
   margin: 0 auto;
   font-family: 'dotum', sans-serif;
-  /* text-align: center; */
 }
 
 button {
@@ -179,6 +176,7 @@ input[type='text'] {
 
 .input-wrapper.d8d8d8 {
   display: block;
+  padding-right: 77px;
   border: 1px solid #d8d8d8;
 }
 
@@ -190,12 +188,6 @@ input[type='text'] {
 table {
   width: 100%;
 }
-
-/* table,
-th,
-td {
-  border: 1px solid black;
-} */
 
 p.warning-sign {
   position: relative;
@@ -251,13 +243,11 @@ h1::before {
 ### #      #    #  ####   ####  #    # ######  ####   ####  
 */
 .progress::before {
-  /* padding-bottom: 39px; */
   position: absolute;
   top: 0;
 }
 
 .progress::after {
-  /* padding-top: 37px; */
   position: absolute;
   bottom: 0;
 }
@@ -266,8 +256,7 @@ h1::before {
 .progress::after {
   content: '';
   display: block;
-  /* padding-top: 39px; */
-  min-width: 960px;
+  width: 100%;
   height: 1px;
   background: url('./images/header_line.png') repeat-x;
 }
@@ -280,7 +269,7 @@ h1::before {
   margin-top: 11px;
   font-size: 0;
   vertical-align: middle;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .progress li {
@@ -295,13 +284,10 @@ h1::before {
 
 .progress li:not(:last-of-type)::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 50%;
   right: -31px;
   margin-top: -8px;
-
-  /* padding-top: 39px; */
   width: 16px;
   height: 18px;
   background: url('./images/progress_arrow.png') no-repeat;
@@ -335,7 +321,8 @@ h1::before {
 
 table.outer {
   margin-top: 12px;
-  border: 1px solid black;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 table.outer thead th,
@@ -348,10 +335,15 @@ table.outer tfoot td {
   background: #ebebeb;
 }
 
+.leftmost-th,
+.inner-th {
+  color: #7e7e7e;
+  background: #f5f5f5;
+}
+
 .leftmost-th {
   padding-left: 44px;
   font-size: 12px;
-  /* background: rgb(212, 81, 81); */
   text-align: left;
   vertical-align: middle;
 }
@@ -359,7 +351,6 @@ table.outer tfoot td {
 .inner-th {
   padding-left: 33px;
   font-size: 12px;
-  /* background: rgb(173, 211, 173); */
   text-align: left;
   vertical-align: middle;
 }
@@ -375,6 +366,19 @@ table.inner {
   border-bottom: 1px solid #d8619b;
 }
 
+table.inner thead th {
+  position: relative;
+}
+
+table.inner thead th:first-of-type::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 12px;
+  background: url('./images/th_small-bit.png');
+}
+
 table.inner thead th,
 table.inner tbody td {
   vertical-align: middle;
@@ -384,17 +388,11 @@ table.inner tbody tr:nth-of-type(2n) td {
   background: #fcf9f8;
 }
 
-table.outer thead th {
-  /* height: 32px; */
+table.inner thead th {
   color: #898989;
   font-weight: normal;
   background: #f4e9e3;
 }
-
-/* table.outer tfoot th,
-table.outer tfoot td {
-  height: 32px;
-} */
 
 table.outer thead th,
 table.outer tfoot th,
@@ -431,24 +429,17 @@ table.inner tbody td {
   text-align: center;
 }
 
-/* input#answering-number-input {
-  color: #646464;
-  font-size: 12px;
-  background: greenyellow;
-} */
-
 .content-cell {
   position: relative;
   padding-left: 13px;
-  text-align: left;
-  /* background: rgb(255, 211, 130); */
+  color: #646464;
   font-size: 12px;
   vertical-align: middle;
+  text-align: left;
 }
 
 .input-container {
   position: relative;
-  /* vertical-align: middle; */
 }
 
 .input-length {
@@ -467,14 +458,9 @@ table.inner tbody td {
   position: absolute;
 }
 
-/* #answering-number-input {
-} */
-
 input#answering-number-input {
   width: 163px;
-  /* color: #646464; */
   font-size: 12px;
-  /* background: greenyellow; */
   vertical-align: middle;
 }
 
@@ -492,7 +478,6 @@ button.answering-number {
 */
 
 .button-container {
-  /* display: inline-block; */
   font-size: 0;
 }
 
@@ -512,8 +497,6 @@ button.answering-number {
 .button-container.purchase-info {
   padding-right: 5px;
   text-align: right;
-  /* position: absolute;
-  right: 0; */
 }
 .button-container.coupon-image-table {
   text-align: right;
@@ -526,16 +509,10 @@ button.answering-number {
 }
 
 .button-container.answering-number {
-  /* box-sizing: border-box; */
   padding-left: 173px;
-  /* vertical-align: middle; */
 }
 
 .small-orange-button_head {
-  /* display: inline-block; */
-  /* position: absolute; */
-  /* top: 0;
-  right: 0; */
   padding-left: 1px;
   height: 22px;
   background: url('./images/small-orange-button_head.png') left no-repeat;
@@ -570,7 +547,6 @@ button.answering-number {
 
 .re-enter::after {
   content: '';
-  /* display: inline-block; */
   position: absolute;
   top: 5px;
   right: 5px;
@@ -581,7 +557,6 @@ button.answering-number {
 
 label[for='excel-file-upload'] .small-white-button_body::before {
   content: '';
-  /* display: inline-block; */
   position: absolute;
   top: 5px;
   left: 15px;
@@ -591,7 +566,6 @@ label[for='excel-file-upload'] .small-white-button_body::before {
 }
 
 label[for='excel-file-upload'] .small-white-button_body {
-  /* background: red; */
   position: relative;
   padding-left: 34px;
   color: #ff5f28;
@@ -599,9 +573,6 @@ label[for='excel-file-upload'] .small-white-button_body {
 
 .small-white-button_head {
   display: inline-block;
-  /* position: absolute; */
-  /* top: 0;
-  right: 0; */
   padding-left: 1px;
   height: 22px;
   background: url('./images/small-white-button_head.png') left no-repeat;
@@ -673,7 +644,6 @@ label[for='excel-file-upload'] .small-white-button_body {
 
 .orange-button_body::after {
   content: '';
-  /* display: inline-block; */
   position: absolute;
   top: 8px;
   right: 12px;
@@ -730,7 +700,6 @@ label[for='excel-file-upload'] .small-white-button_body {
 .arrow::before {
   content: '';
   display: inline-block;
-  /* position: absolute; */
   top: 5px;
   right: 5px;
   width: 6px;
