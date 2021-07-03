@@ -193,13 +193,6 @@ button {
   border: 1px solid #e5e5e5;
 }
 
-.input-wrapper.e5e5e5.index7 {
-  /* position: absolute;
-  top: 0; */
-  /* right: 0; */
-  /* min-width: 312px; */
-}
-
 p.bullet {
   padding-left: 10px;
 }
@@ -238,12 +231,14 @@ h1 {
   font-size: 0;
 }
 
-body.width-196px {
-  /* min-width: 196px; */
-}
-
-.body h2 {
-}
+/* 
+    #####   ####  #####  #   # 
+    #    # #    # #    #  # #  
+    #####  #    # #    #   #   
+### #    # #    # #    #   #   
+### #    # #    # #    #   #   
+### #####   ####  #####    #   
+*/
 
 .body h2.index5,
 .body h2.index6 {
@@ -273,29 +268,6 @@ input[type='text'],
 input[type='text'] {
   font-size: 12px;
   font-family: 'dotum', sans-serif;
-}
-
-.input-container {
-  position: relative;
-}
-
-.input-container.index7 {
-  padding-right: 83px;
-}
-
-.input-container.index7 + ul {
-  margin-top: 15px;
-}
-
-.input-container.index8 {
-  padding-left: 97px;
-  padding-right: 53px;
-}
-
-.input-length {
-  position: absolute;
-  top: 4px;
-  right: 6px;
 }
 
 .body.top {
@@ -329,12 +301,52 @@ input[type='text'] {
   padding-bottom: 20px;
   padding-left: 20px;
 }
+/* 
+    # #    # #####  #    # ##### 
+    # ##   # #    # #    #   #   
+    # # #  # #    # #    #   #   
+### # #  # # #####  #    #   #   
+### # #   ## #      #    #   #   
+### # #    # #       ####    #   
+*/
+
+.input-container {
+  position: relative;
+}
+
+.input-container.index6:first-of-type .input-wrapper {
+  padding-right: 76px;
+}
+
+.input-container.index6:nth-of-type(2) .input-wrapper {
+  padding-right: 87px;
+}
+
+.input-container.index7 {
+  padding-right: 83px;
+}
+
+.input-container.index7 + ul {
+  margin-top: 15px;
+}
+
+.input-container.index8 {
+  padding-left: 97px;
+  padding-right: 53px;
+}
+
+.input-container.index9 .input-wrapper {
+  padding-right: 70px;
+}
+
+.input-length {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+}
 
 .coupon-image {
   display: block;
-
-  /* padding-top: 20px;
-  padding-bottom: 19px; */
   text-align: center;
 }
 
@@ -344,12 +356,40 @@ input[type='text'] {
 }
 
 .right {
-  /* min-width: 330px; */
   padding-left: 239px;
 }
 
 .coupon-image.center {
   text-align: center;
+}
+
+.input-container.second {
+  position: absolute;
+  right: 0;
+  top: 23px;
+}
+
+.input-wrapper.first {
+  width: 46.6vw;
+  border: 1px solid #d5d5d5;
+  background: #eaeaea;
+}
+
+.input-wrapper.second::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  margin-top: -4px;
+  width: 8px;
+  height: 10px;
+  background: url('./images/arrow-right.png') no-repeat;
+}
+
+.input-wrapper.second {
+  position: relative;
+  width: 46.6vw;
+  border: 1px solid #e5e5e5;
 }
 
 /* 
@@ -403,12 +443,8 @@ input[type='text'] {
   color: #646464;
   font-size: 12px;
   font-family: 'dotum', sans-serif;
+  text-align: center;
 }
-
-/* .table-container.first table {
-  border-top: 1px solid #d8b19b;
-  border-bottom: 1px solid #d8b19b;
-} */
 
 .table-container.first table.thead {
   border-top: 1px solid #d8b19b;
@@ -434,7 +470,6 @@ input[type='text'] {
 }
 
 .table-container.second table th {
-  /* border-bottom: 1px solid #f5f5f5; */
   background: #f5f5f5;
 }
 
@@ -446,11 +481,6 @@ input[type='text'] {
   color: #646464;
 }
 
-/* .table-container.first table.tbody td {
-  position: relative;
-  height: 42px;
-} */
-
 .table-container.first table td {
   position: relative;
   padding-top: 10.5px;
@@ -459,7 +489,6 @@ input[type='text'] {
   line-height: 21px;
   box-sizing: border-box;
   border-bottom: 1px solid #ead6ca;
-  /* text-align: center; */
 }
 
 .table-container.first table td label {
@@ -595,7 +624,6 @@ textarea {
 */
 
 .lookup-button_head {
-  /* display: inline-block; */
   position: absolute;
   top: 0;
   right: 0;
@@ -641,22 +669,16 @@ textarea {
   height: 20px;
 }
 
+.number-change-container::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  height: 1px;
+  background: url('./images/horizontal-dotted-line.png') repeat-x;
+}
+
 .number-change-container {
   position: relative;
-  text-align: right;
-}
-
-.input-wrapper.first {
-  /* position: absolute; */
-  /* width: 163px; */
-  width: 48.6%;
-  border: 1px solid #d5d5d5;
-  background: #eaeaea;
-}
-
-.input-wrapper.second {
-  width: 48.6%;
-  /* width: 163px; */
-  border: 1px solid #e5e5e5;
-  padding-left: 48.6%;
+  padding-top: 23px;
 }
