@@ -598,7 +598,7 @@ textarea {
 .white-button_head {
   padding-left: 1px;
   height: 25px;
-  background: url('./images/white-button_head.png') left no-repeat;
+  background: url('./images/button') left no-repeat;
 }
 .white-button_tail {
   display: inline-block;

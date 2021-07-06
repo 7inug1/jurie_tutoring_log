@@ -1,0 +1,499 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+}
+
+/* 
+#####  ###### #####   ####   ####  #    #   ##   #         #####  ######  ####  ###### #####  ####   ####   ####  
+#    # #      #    # #      #    # ##   #  #  #  #         #    # #      #      #        #   #    # #      #      
+#    # #####  #    #  ####  #    # # #  # #    # #         #    # #####   ####  #####    #   #       ####   ####  
+#####  #      #####       # #    # #  # # ###### #         #####  #           # #        #   #           #      # 
+#      #      #   #  #    # #    # #   ## #    # #         #   #  #      #    # #        #   #    # #    # #    # 
+#      ###### #    #  ####   ####  #    # #    # ######    #    # ######  ####  ######   #    ####   ####   ####  
+*/
+
+table {
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* 
+    #    # #####    ##   #####  #####  ###### #####  
+    #    # #    #  #  #  #    # #    # #      #    # 
+    #    # #    # #    # #    # #    # #####  #    # 
+### # ## # #####  ###### #####  #####  #      #####  
+### ##  ## #   #  #    # #      #      #      #   #  
+### #    # #    # #    # #      #      ###### #    # 
+*/
+
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: 'dotum', sans-serif;
+}
+
+.wrapper {
+  border: 3px solid #c6c6c6;
+}
+
+.wrapper.index1 {
+  margin: 0 auto;
+  width: 242px;
+  box-sizing: border-box;
+}
+.wrapper.index2 {
+  margin: 0 auto;
+  width: 242px;
+  box-sizing: border-box;
+}
+.wrapper.index3 {
+  margin: 0 auto;
+  width: 591px;
+  min-height: 442px;
+  box-sizing: border-box;
+}
+.wrapper.index4 {
+  margin: 0 auto;
+  width: 591px;
+  min-height: 442px;
+  box-sizing: border-box;
+}
+.wrapper.index5 {
+  margin: 0 auto;
+  width: 584px;
+  box-sizing: border-box;
+}
+.wrapper.index6 {
+  margin: 0 auto;
+  width: 584px;
+  box-sizing: border-box;
+}
+.wrapper.index7 {
+  margin: 0 auto;
+  width: 453px;
+  box-sizing: border-box;
+}
+.wrapper.index8 {
+  margin: 0 auto;
+  width: 400px;
+  box-sizing: border-box;
+}
+.wrapper.index9 {
+  margin: 0 auto;
+  width: 400px;
+  box-sizing: border-box;
+}
+.wrapper.index10 {
+  margin: 0 auto;
+  width: 397px;
+  box-sizing: border-box;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.h1_type01 {
+  font-size: 0;
+}
+
+.h1_type01::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  width: 5px;
+  height: 16px;
+  background: url('./images/h1_icon.png');
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.bolder {
+  font-weight: bolder;
+}
+
+.padding-left-25px {
+  padding-left: 25px;
+}
+
+.padding-top_19px {
+  padding-top: 19px;
+}
+
+.main {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid #cdcccb;
+  border-bottom: 1px solid #cdcccb;
+}
+
+.main.border-top-only {
+  border-top: 1px solid #cdcccb;
+  border-bottom: none;
+}
+
+.main.index3,
+.main.index4 {
+  padding-left: 236px;
+}
+
+.gifticon_type01.index3,
+.gifticon_type01.index4 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+  height: 30px;
+}
+
+textarea,
+.textarea_type01 {
+  background: #f8f8f8;
+}
+
+.textarea_type01 {
+  position: relative;
+  border: 1px solid #e5e5e5;
+  padding: 0 0 18px 0;
+}
+
+.entered-text-in-byte {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  color: #646464;
+  font-size: 12px;
+}
+
+/*                      
+    ##### # ##### #      ###### 
+      #   #   #   #      #      
+      #   #   #   #      #####  
+###   #   #   #   #      #      
+###   #   #   #   #      #      
+###   #   #   #   ###### ###### 
+*/
+
+/* 
+                                                                    ###      #   
+    ##### # ##### #      ######         ##### #   # #####  ######  #   #    ##   
+      #   #   #   #      #                #    # #  #    # #      #     #  # #   
+      #   #   #   #      #####            #     #   #    # #####  #     #    #   
+###   #   #   #   #      #                #     #   #####  #      #     #    #   
+###   #   #   #   #      #                #     #   #      #       #   #     #   
+###   #   #   #   ###### ######           #     #   #      ######   ###    ##### 
+                                #######                                          
+*/
+.title_type01 {
+  margin-bottom: 8px;
+}
+
+/* 
+#####   ##   #####  #      ###### 
+  #    #  #  #    # #      #      
+  #   #    # #####  #      #####  
+  #   ###### #    # #      #      
+  #   #    # #    # #      #      
+  #   #    # #####  ###### ###### 
+*/
+
+.cell-content-center {
+  text-align: center;
+}
+
+/* 
+                                                                      ###      #   
+#####   ##   #####  #      ######         ##### #   # #####  ######  #   #    ##   
+  #    #  #  #    # #      #                #    # #  #    # #      #     #  # #   
+  #   #    # #####  #      #####            #     #   #    # #####  #     #    #   
+  #   ###### #    # #      #                #     #   #####  #      #     #    #   
+  #   #    # #    # #      #                #     #   #      #       #   #     #   
+  #   #    # #####  ###### ######           #     #   #      ######   ###    ##### 
+                                  #######                                          
+*/
+
+.table_type01_thead {
+  color: #969696;
+  font-size: 12px;
+  border-top: 1px solid #d8b19b;
+  border-bottom: 1px solid #e6cec0;
+  background: #f4e9e3;
+}
+
+.table_type01_thead tr th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.table_type01_tbody-wrapper {
+  overflow-y: scroll;
+}
+
+.table_type01_tbody {
+  border-bottom: 2px solid #ead6ca;
+  color: #646464;
+  font-size: 12px;
+}
+
+.table_type01_tbody tr td {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.table_type01_tbody tr:nth-of-type(2n) td {
+  background: #fcf9f8;
+}
+
+.table_type01_tbody tr:not(:last-of-type) td {
+  border-bottom: 1px solid #ead6ca;
+}
+
+.table_type01.index3,
+.table_type01.index4 {
+  margin-top: -1px;
+  /* position: absolute;
+  top: 20px;
+  right: 20px; */
+}
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
+
+.footer {
+}
+
+.button-container {
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 2px;
+  font-size: 0;
+  text-align: center;
+}
+
+.button_type01_orange_head {
+  padding-left: 2px;
+  height: 25px;
+  background: url('./images/button_type01_orange_head.png') left no-repeat;
+  vertical-align: top;
+}
+
+.button_type01_orange_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/button_type01_orange_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.button_type01_orange_body {
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 25px;
+  box-sizing: border-box;
+  background: url('./images/button_type01_orange_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.button_type01_white_head {
+  padding-left: 2px;
+  margin-left: 5px;
+  height: 25px;
+  background: url('./images/button_type01_white_head.png') left no-repeat;
+}
+
+.button_type01_white_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/button_type01_white_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.button_type01_white_body {
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 16px;
+  height: 25px;
+  box-sizing: border-box;
+  background: url('./images/button_type01_white_body.png') center repeat-x;
+  vertical-align: top;
+}
