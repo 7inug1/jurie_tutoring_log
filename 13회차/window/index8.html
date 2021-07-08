@@ -14,34 +14,68 @@
           <img src="./images/h1_index8.png" alt="MY 캠페인" />
         </h1>
       </div>
-      <div class="main">
-        <div class="gifticon_type0X">
-          <img src="" alt="" />
-        </div>
-        <div class="table_type0X">
-          <table>
-            <caption hidden></caption>
-            <colgroup></colgroup>
-            <thead></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-
-        <div class="textarea_type01"></div>
-        <div class="content_type0X"></div>
-        <div class="input-text_type0X"></div>
-        <div class="input-file_type0X"></div>
-      </div>
-      <div class="footer">
-        <div class="button-container">
-          <button class="button_type01_orange_head">
-            <span class="button_type01_orange_tail">
-              <span class="button_type01_orange_body"></span>
+      <div class="main index8">
+        <div class="field-wrapper index8">
+          <select name="selectbox" id="selectbox_index8" title="선택해주세요.">
+            <option selected disabled hidden>선택하기</option>
+            <option value="캠페인1">캠페인1</option>
+            <option value="캠페인2">캠페인2</option>
+            <option value="캠페인3">캠페인3</option>
+          </select>
+          <div class="input-wrapper_type01 index8">
+            <input type="text" />
+          </div>
+          <button class="button_type02_head">
+            <span class="button_type02_tail">
+              <span class="button_type02_body index8">조회</span>
             </span>
           </button>
-          <button class="button_type01_white_head">
-            <span class="button_type01_white_tail">
-              <span class="button_type01_white_body"></span>
+        </div>
+
+        <div class="table_type02-container index8">
+          <table class="table_type02 index8">
+            <caption hidden>My 캠페인 표</caption>
+            <colgroup>
+              <col style="width: 14.2655%" />
+              <col style="width: 15.8192%" />
+              <col style="width: 31.7796%" />
+              <col style="width: 38.1355%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">NO</th>
+                <th scope="col">캠페인ID</th>
+                <th scope="col">캠페인 명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="radio" name="event" id="event1" /></td>
+                <td><label for="event1">1</label></td>
+                <td><label for="event1">M135478</label></td>
+                <td><label for="event1">별별별 이벤트</label></td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="event" id="event2" /></td>
+                <td><label for="event2">25</label></td>
+                <td><label for="event2">M135478</label></td>
+                <td><label for="event2">별별별 이벤트 3!4!</label></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="button-container index8">
+          <button class="button_type01_orange_head">
+            <span class="button_type01_orange_tail">
+              <span class="button_type01_orange_body">
+                <img
+                  src="./images/button_type01_orange_confirm.png"
+                  alt="확인"
+                />
+              </span>
             </span>
           </button>
         </div>
