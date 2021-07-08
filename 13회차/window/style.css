@@ -543,22 +543,13 @@ textarea,
 .input-wrapper_type03_before,
 .input-wrapper_type03_after {
   width: calc(50% - 10px);
-
   box-sizing: border-box;
-}
-
-.wrapper.index10 .input-wrapper_type03_before {
-  /* float: left; */
 }
 
 .wrapper.index10 .input-wrapper_type03_before input,
 .wrapper.index10 .input-wrapper_type03_after input {
   color: #646464;
   font-size: 11px;
-}
-
-.wrapper.index10 .input-wrapper_type03_after {
-  /* float: right; */
 }
 
 .entered-text-in-byte_type01 {
