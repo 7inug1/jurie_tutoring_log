@@ -156,10 +156,11 @@ table {
 button {
   padding: 0;
   border: none;
-  cursor: pointer;
 }
 
-label {
+label,
+input[type='radio'],
+button {
   cursor: pointer;
 }
 

@@ -156,10 +156,11 @@ table {
 button {
   padding: 0;
   border: none;
-  cursor: pointer;
 }
 
-label {
+label,
+input[type='radio'],
+button {
   cursor: pointer;
 }
 
@@ -176,6 +177,10 @@ input[type='file'] {
   left: -200%;
   opacity: 0;
   z-index: -100;
+}
+
+input[type='radio'] {
+  cursor: pointer;
 }
 
 .bolder {
