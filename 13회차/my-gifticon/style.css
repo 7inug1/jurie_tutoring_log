@@ -154,5 +154,609 @@ table {
 }
 
 button {
+  padding: 0;
+  border: none;
   cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  padding: 0;
+  border: 0 none;
+  background: transparent;
+  width: 100%;
+}
+
+input[type='file'] {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  opacity: 0;
+  z-index: -100;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+select {
+  box-sizing: border-box;
+}
+
+/* 
+ ####  #    #  ####  #####  ####  #    # 
+#    # #    # #        #   #    # ##  ## 
+#      #    #  ####    #   #    # # ## # 
+#      #    #      #   #   #    # #    # 
+#    # #    # #    #   #   #    # #    # 
+ ####   ####   ####    #    ####  #    # 
+*/
+
+.line-height_14px {
+  line-height: 14px;
+}
+
+.padding-bottom_3px {
+  padding-bottom: 3px;
+}
+
+.padding-left_2px {
+  padding-left: 2px;
+}
+
+.padding-left_9px {
+  padding-left: 9px;
+}
+
+.padding-left_10px {
+  padding-left: 10px;
+}
+
+.padding-top_4px {
+  padding-top: 4px;
+}
+
+.padding-top_5px {
+  padding-top: 5px;
+}
+
+.padding-top_6px {
+  padding-top: 6px;
+}
+
+.padding-bottom_6px {
+  padding-bottom: 6px;
+}
+
+.margin-top_2px {
+  margin-top: 2px;
+}
+
+.margin-top_8px {
+  margin-top: 8px;
+}
+
+/* 
+    #    # #####    ##   #####  #####  ###### #####  
+    #    # #    #  #  #  #    # #    # #      #    # 
+    #    # #    # #    # #    # #    # #####  #    # 
+### # ## # #####  ###### #####  #####  #      #####  
+### ##  ## #   #  #    # #      #      #      #   #  
+### #    # #    # #    # #      #      ###### #    # 
+*/
+
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: 'dotum', sans-serif;
+}
+
+.wrapper {
+  border: 3px solid #c6c6c6;
+}
+
+.wrapper.index1 {
+  margin: 0 auto;
+  width: 766px;
+  box-sizing: border-box;
+}
+.wrapper.index2 {
+  margin: 0 auto;
+  width: 766px;
+  box-sizing: border-box;
+}
+.wrapper.index3 {
+  margin: 0 auto;
+  width: 700px;
+  box-sizing: border-box;
+}
+.wrapper.index4 {
+  margin: 0 auto;
+  width: 419px;
+  box-sizing: border-box;
+}
+.wrapper.index5 {
+  margin: 0 auto;
+  width: 400px;
+  box-sizing: border-box;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.h1_type01 {
+  font-size: 0;
+}
+
+.h1_type01::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  width: 5px;
+  height: 16px;
+  background: url('./images/h1_icon.png');
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid #cdcccb;
+  border-bottom: 1px solid #cdcccb;
+}
+
+.main.index3 {
+  padding-top: 17px;
+}
+
+.main.index5 {
+  /* padding-left: 29px; */
+}
+
+/* 
+                                                                          ###    #####  
+    #####   ##   #####  #      ######         ##### #   # #####  ######  #   #  #     # 
+      #    #  #  #    # #      #                #    # #  #    # #      #     #       # 
+      #   #    # #####  #      #####            #     #   #    # #####  #     #  #####  
+###   #   ###### #    # #      #                #     #   #####  #      #     # #       
+###   #   #    # #    # #      #                #     #   #      #       #   #  #       
+###   #   #    # #####  ###### ######           #     #   #      ######   ###   ####### 
+                                      #######                                           
+*/
+
+.table_type02-container:nth-of-type(2) {
+  margin-top: 29px;
+}
+
+.table_type02-container:nth-of-type(2) .table_type02 {
+  margin-top: 8px;
+}
+
+.table_type02-container.index3 {
+  margin-top: 5px;
+}
+
+.table_type02 {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.table_type02 th {
+  color: #969696;
+  font-size: 12px;
+  letter-spacing: -0.35px;
+  background: #f5f5f5;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table_type02.index1 th {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.table_type02 tr:not(:last-of-type) th {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table_type02 tbody td {
+  color: #646464;
+  font-size: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table_type02.index1 tbody td {
+  padding-top: 10px;
+  padding-bottom: 9px;
+  padding-left: 14px;
+}
+
+.table_type02.index2 {
+  margin-top: 10px;
+}
+
+.table_type02.index2 th {
+  padding-top: 11px;
+  padding-bottom: 9px;
+}
+
+.table_type02.index2 td {
+  text-align: left;
+}
+
+.table_type02.index4 th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table_type02.index4 tbody td {
+  text-align: left;
+}
+
+.table_type02 tr:not(:last-of-type) td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 
+    # #    # #####  #    # ##### 
+    # ##   # #    # #    #   #   
+    # # #  # #    # #    #   #   
+### # #  # # #####  #    #   #   
+### # #   ## #      #    #   #   
+### # #    # #       ####    #   
+*/
+
+.input-wrapper_type00 {
+  height: 20px;
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+}
+
+.input-wrapper_type00.index5 {
+  width: 312px;
+  margin-top: 9px;
+}
+
+.input-wrapper_type01 {
+  width: 312px;
+  height: 21px;
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+}
+
+.input-wrapper_type01.index3 {
+  position: absolute;
+  width: 231px;
+}
+
+.input-wrapper_type01.index4 {
+  width: 160px;
+}
+
+/* 
+##### ###### #    # #####   ##   #####  ######   ##   
+  #   #       #  #    #    #  #  #    # #       #  #  
+  #   #####    ##     #   #    # #    # #####  #    # 
+  #   #        ##     #   ###### #####  #      ###### 
+  #   #       #  #    #   #    # #   #  #      #    # 
+  #   ###### #    #   #   #    # #    # ###### #    #
+*/
+
+.textarea-wrapper_type02 {
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+}
+
+.textarea-wrapper_type02.index4 {
+  width: 233px;
+  height: 75px;
+}
+
+/* 
+ ####  ###### #      ######  ####  ##### 
+#      #      #      #      #    #   #   
+ ####  #####  #      #####  #        #   
+     # #      #      #      #        #   
+#    # #      #      #      #    #   #   
+ ####  ###### ###### ######  ####    #   
+*/
+
+.width_55px {
+  width: 55px;
+  height: 20px;
+}
+.width_115px {
+  width: 115px;
+  height: 20px;
+}
+.width_135px {
+  width: 135px;
+  height: 20px;
+}
+/* 
+     ####   ####  #    # ##### ###### #    # ##### 
+    #    # #    # ##   #   #   #      ##   #   #   
+    #      #    # # #  #   #   #####  # #  #   #   
+### #      #    # #  # #   #   #      #  # #   #   
+### #    # #    # #   ##   #   #      #   ##   #   
+###  ####   ####  #    #   #   ###### #    #   #   
+*/
+
+.content_type02 {
+  position: relative;
+  color: #686868;
+  font-size: 12px;
+}
+.content_type02::before {
+  content: '';
+  position: absolute;
+  /* left: 0px; */
+  /* top: 8px; */
+  width: 2px;
+  height: 2px;
+  background: url('./images/middle-dot.png');
+}
+
+.content_type02.index3 {
+  line-height: 18px;
+}
+
+.content_type02.index3::before {
+  left: -6px;
+  top: 4px;
+}
+
+.content_type02.index5::before {
+  left: -6px;
+  top: 4px;
+}
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+.button-container {
+  /* padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 1px; */
+  padding-top: 11px;
+  padding-bottom: 10px;
+  font-size: 0;
+  text-align: center;
+}
+
+.button-container.index1 {
+  padding-left: 8px;
+}
+.button-container.index2 {
+  padding-right: 2px;
+}
+.button-container.index3 {
+  /* padding-left: 4px; */
+}
+
+.button-container_01 {
+  text-align: right;
+}
+
+.button-container.index3 .button_type01_orange_body {
+  /* padding: 0; */
+  position: relative;
+  padding-top: 5px;
+  padding-left: 11px;
+  padding-right: 19px;
+}
+
+.button-container.index3 .button_type01_orange_body::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -3.25px;
+  right: 9px;
+  width: 4px;
+  height: 7px;
+  background: url('./images/button_arrow.png');
+}
+
+.button-container.index4 {
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+}
+
+.button-container.index4 .button_type01_orange_body {
+  padding-left: 8px;
+  padding-right: 11px;
+}
+
+.button-container.index5 {
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 8px;
+}
+
+.button-container.index5 .button_type01_orange_body {
+  padding-left: 8px;
+  padding-right: 11px;
+}
+
+.button_type01_orange_head {
+  padding-left: 2px;
+  height: 25px;
+  background: url('./images/button_type01_orange_head.png') left no-repeat;
+  vertical-align: top;
+}
+
+.button_type01_orange_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/button_type01_orange_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.button_type01_orange_body {
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 25px;
+  box-sizing: border-box;
+  background: url('./images/button_type01_orange_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.button_type01_white_head {
+  padding-left: 2px;
+  margin-left: 5px;
+  height: 25px;
+  background: url('./images/button_type01_white_head.png') left no-repeat;
+}
+
+.button_type01_white_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 25px;
+  background: url('./images/button_type01_white_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.button_type01_white_body {
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 16px;
+  height: 25px;
+  box-sizing: border-box;
+  background: url('./images/button_type01_white_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.button_type02_head {
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+  display: inline-block;
+  padding-left: 1px;
+  height: 22px;
+  background: url('./images/lookup-button_head.png') left no-repeat;
+}
+
+.button_type02_tail {
+  display: inline-block;
+  padding-right: 1px;
+  height: 22px;
+  background: url('./images/lookup-button_tail.png') right no-repeat;
+  vertical-align: top;
+}
+
+.button_type02_body {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  color: #646464;
+  font-size: 11px;
+  background: url('./images/lookup-button_body.png') center repeat-x;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.button_type02_body.index3 {
+  padding-left: 13px;
+  padding-right: 5px;
+}
+
+.button_type03_head {
+  padding-left: 2px;
+  height: 19px;
+  background: url('./images/button_type03_head.png') left no-repeat;
+}
+.button_type03_tail {
+  display: inline-block;
+  padding-right: 2px;
+  height: 19px;
+  background: url('./images/button_type03_tail.png') right no-repeat;
+  vertical-align: top;
+}
+.button_type03_body {
+  display: inline-block;
+  padding-top: 3px;
+  height: 19px;
+  box-sizing: border-box;
+  background: url('./images/button_type03_body.png') center repeat-x;
+  vertical-align: top;
+}
+
+.button_type03_body.index3::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 15px;
+  height: 14px;
+  background: url('./images/excel-icon.png');
+}
+
+.button_type03_body.index3 {
+  position: relative;
+  padding-left: 23px;
+  padding-right: 9px;
+}
+
+.excel-file-upload-container {
+  display: inline-block;
+  padding-left: 236px;
 }

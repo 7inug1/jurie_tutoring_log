@@ -178,9 +178,9 @@ input[type='file'] {
   z-index: -100;
 }
 
-/* .input-wrapper {
-  box-sizing: border-box;
-} */
+.bolder {
+  font-weight: bolder;
+}
 
 /* 
     #    # #####    ##   #####  #####  ###### #####  

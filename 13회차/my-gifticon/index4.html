@@ -4,7 +4,161 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>개인 추가하기</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper index4">
+      <div class="header">
+        <h1 class="h1_type01">
+          <img src="./images/h1_index4.png" alt="개인 추가하기" />
+        </h1>
+      </div>
+      <div class="main">
+        <div class="table_type02-container">
+          <table class="table_type02 index4">
+            <caption hidden>개인 추가하기 표</caption>
+            <colgroup>
+              <col style="width: 31%" />
+              <col style="width: 68.47826%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">이름</th>
+                <td class="padding-left_10px">
+                  <div class="input-wrapper_type01 index4">
+                    <input type="text" name="name" id="name" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴대폰 번호</th>
+                <td class="padding-left_10px">
+                  <div class="input-wrapper_type01 index4">
+                    <input type="text" name="phone number" id="phone-number" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">이메일</th>
+                <td class="padding-left_10px">
+                  <div class="input-wrapper_type01 index4">
+                    <input type="text" name="email" id="email" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">기념일</th>
+                <td class="padding-left_10px">
+                  <select name="year" id="year" class="width_55px">
+                    <option hidden selected disabled>년</option>
+                    <option value="2021년">2021년</option>
+                    <option value="2020년">2020년</option>
+                    <option value="2019년">2019년</option>
+                    <option value="2018년">2018년</option>
+                    <option value="2017년">2017년</option>
+                    <option value="2016년">2016년</option>
+                    <option value="2015년">2015년</option>
+                    <option value="2014년">2014년</option>
+                  </select>
+                  <select name="month" id="month" class="width_55px">
+                    <option hidden selected disabled>월</option>
+                    <option value="12월">12월</option>
+                    <option value="11월">11월</option>
+                    <option value="10월">10월</option>
+                    <option value="9월">9월</option>
+                    <option value="8월">8월</option>
+                    <option value="7월">7월</option>
+                    <option value="6월">6월</option>
+                    <option value="5월">5월</option>
+                    <option value="4월">4월</option>
+                    <option value="3월">3월</option>
+                    <option value="2월">2월</option>
+                    <option value="1월">1월</option>
+                  </select>
+                  <select name="day" id="day" class="width_55px">
+                    <option hidden selected disabled>일</option>
+                    <option value="31일">31일</option>
+                    <option value="30일">30일</option>
+                    <option value="29일">29일</option>
+                    <option value="28일">28일</option>
+                    <option value="27일">27일</option>
+                    <option value="26일">26일</option>
+                    <option value="25일">25일</option>
+                    <option value="24일">24일</option>
+                    <option value="23일">23일</option>
+                    <option value="22일">22일</option>
+                    <option value="21일">21일</option>
+                    <option value="20일">20일</option>
+                    <option value="19일">19일</option>
+                    <option value="18일">18일</option>
+                    <option value="17일">17일</option>
+                    <option value="16일">16일</option>
+                    <option value="15일">15일</option>
+                    <option value="14일">14일</option>
+                    <option value="13일">13일</option>
+                    <option value="12일">12일</option>
+                    <option value="11일">11일</option>
+                    <option value="10일">10일</option>
+                    <option value="9일">9일</option>
+                    <option value="8일">8일</option>
+                    <option value="7일">7일</option>
+                    <option value="6일">6일</option>
+                    <option value="5일">5일</option>
+                    <option value="4일">4일</option>
+                    <option value="3일">3일</option>
+                    <option value="2일">2일</option>
+                    <option value="1일">1일</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">그룹</th>
+                <td class="padding-left_10px">
+                  <select name="group" id="group" class="width_115px">
+                    <option hidden disabled selected>기타</option>
+                    <option value="그룹1">그룹1</option>
+                    <option value="그룹2">그룹2</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">메모</th>
+                <td
+                  class="padding-left_10px padding-top_5px padding-bottom_6px"
+                >
+                  <div class="textarea-wrapper_type02 index4">
+                    <textarea
+                      name="memo"
+                      id="memo"
+                      cols="30"
+                      rows="1"
+                    ></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="button-container index4">
+          <button class="button_type01_orange_head">
+            <span class="button_type01_orange_tail">
+              <span class="button_type01_orange_body">
+                <img src="./images/button_add-address.png" alt="주소추가" />
+              </span>
+            </span>
+          </button>
+          <button class="button_type01_white_head">
+            <span class="button_type01_white_tail">
+              <span class="button_type01_white_body">
+                <img src="./images/button_cancel.png" alt="취소" />
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

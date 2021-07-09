@@ -4,7 +4,141 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>주소록 가져오기</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper index3">
+      <div class="header">
+        <h1 class="h1_type01">
+          <img src="./images/h1_index3.png" alt="주소록 가져오기" />
+        </h1>
+      </div>
+      <div class="main index3">
+        <ul>
+          <li class="padding-left_9px">
+            <p class="content_type02 index3">
+              엑셀파일로 저장된 주소록을 MY주소록에 추가할 수 있습니다.
+              <br />
+              단, 하단의 파일 형식을 다운받아 포맷에 맞게 작성하셔야만 주소록에
+              등록하실 수 있습니다.
+            </p>
+          </li>
+          <li class="padding-left_9px">
+            <p class="content_type02 index3 margin-top_2px">
+              엑셀 파일 업로드 시 스팸/오류번호 등이 포함되어 있으면 엑셀파일을
+              업로드 하실 수 없습니다.
+              <br />
+              오류번호가 포함되어 있을 경우 다시 파일을 다운로드 하여 체크된
+              휴대폰 번호를 수정 후 다시 업로드 해주세요.
+            </p>
+          </li>
+        </ul>
+        <div class="table_type02-container index3">
+          <div class="button-container_01">
+            <button class="button_type03_head index3">
+              <span class="button_type03_tail">
+                <span class="button_type03_body index3">
+                  <a href="./엑셀_업로드_샘플.xlsx" download>
+                    <img
+                      src="./images/button_excel-file-download.png"
+                      alt="엑셀파일 샘플 다운로드"
+                    />
+                  </a>
+                </span>
+              </span>
+            </button>
+          </div>
+          <table class="table_type02 index2">
+            <caption hidden>주소록 가져오기 표</caption>
+            <colgroup>
+              <col style="width: 17.738%" />
+              <col style="width: 82.26299%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">그룹 선택</th>
+                <td class="padding-left_9px">
+                  <select
+                    name="select else"
+                    id="select_else"
+                    class="width_135px"
+                  >
+                    <option selected disabled hidden>기타</option>
+                    <option value="그룹1">그룹1</option>
+                    <option value="그룹2">그룹2</option>
+                    <option value="그룹3">그룹3</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소록 가져오기</th>
+                <td class="padding-left_9px padding-top_6px">
+                  <div class="input-wrapper_type01 index3">
+                    <input
+                      type="text"
+                      name="file input"
+                      id="file-input"
+                      readonly
+                    />
+                  </div>
+                  <div class="excel-file-upload-container">
+                    <label for="excel-file-upload" class="button_type02_head">
+                      <span class="button_type02_tail">
+                        <span class="button_type02_body index3">파일 찾기</span>
+                      </span>
+                    </label>
+
+                    <input
+                      type="file"
+                      name="excel file upload"
+                      id="excel-file-upload"
+                      readonly
+                    />
+                  </div>
+                  <p
+                    class="
+                      padding-top_4px
+                      padding-left_2px
+                      line-height_14px
+                      padding-bottom_3px
+                    "
+                  >
+                    총
+                    <strong class="bolder">500명</strong>
+                    의 주소록 정보 중
+                    <br />
+                    <strong class="bolder">
+                      정상 번호 (490) | 중복번호 (10개) 를 입력하였습니다.
+                    </strong>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="button-container index3">
+          <button class="button_type01_orange_head">
+            <span class="button_type01_orange_tail">
+              <span class="button_type01_orange_body">
+                <img
+                  src="./images/button_retrieve-address.png"
+                  alt="주소록 가져오기"
+                />
+              </span>
+            </span>
+          </button>
+          <button class="button_type01_white_head">
+            <span class="button_type01_white_tail">
+              <span class="button_type01_white_body">
+                <img src="./images/button_cancel.png" alt="취소" />
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
