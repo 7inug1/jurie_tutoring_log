@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style1.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>장바구니</title>
   </head>
   <body>
@@ -37,7 +37,7 @@
         </ul>
       </div>
       <div class="body">
-        <table class="outer">
+        <table class="table_type02 index1">
           <div class="button-container help-button">
             <button class="help-button_head">
               <span class="help-button_tail">
@@ -93,7 +93,7 @@
               <th scope="row" class="leftmost-th">발송그룹 명</th>
               <td colspan="2" class="content-cell">
                 <div class="input-container">
-                  <div class="input-wrapper d8d8d8">
+                  <div class="input-wrapper d8d8d8 width_787px">
                     <input
                       type="text"
                       name=""
@@ -108,9 +108,9 @@
             </tr>
             <tr>
               <th scope="row" class="leftmost-th">회신 번호등록</th>
-              <td colspan="2" class="content-cell">
+              <td colspan="2" class="content-cell padding-left_180px">
                 <!-- <div class="input-container"> -->
-                <div class="input-wrapper d8d8d8 answering-number">
+                <div class="input-wrapper d8d8d8 width_163px answering-number">
                   <input
                     type="text"
                     name="answering number input"
@@ -249,7 +249,7 @@
               <th scope="row" class="leftmost-th">SMS 문구</th>
               <td colspan="2" class="content-cell">
                 <div class="input-container">
-                  <div class="input-wrapper d8d8d8">
+                  <div class="input-wrapper d8d8d8 width_787px">
                     <input
                       type="text"
                       name=""
@@ -303,7 +303,7 @@
                       </span>
                     </button>
                   </div>
-                  <table class="inner">
+                  <table class="table_type01_thead">
                     <caption hidden>쿠폰 이미지 표</caption>
                     <colgroup>
                       <col style="width: 15.1631%" />
@@ -311,55 +311,65 @@
                     </colgroup>
                     <thead>
                       <tr>
-                        <th scope="col">선택</th>
-                        <th scope="col">쿠폰이미지 제목</th>
+                        <th scope="col" class="pink_thead">선택</th>
+                        <th scope="col" class="pink_thead">쿠폰이미지 제목</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <input
-                            type="radio"
-                            name="coupon image"
-                            id="coupon-image_1"
-                          />
-                        </td>
-                        <td>
-                          <label for="coupon-image_1">
-                            기프티콘 기본 이미지
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <input
-                            type="radio"
-                            name="coupon image"
-                            id="coupon-image_2"
-                          />
-                        </td>
-                        <td>
-                          <label for="coupon-image_2">
-                            한 여름 페스티벌 당첨
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <input
-                            type="radio"
-                            name="coupon image"
-                            id="coupon-image_3"
-                          />
-                        </td>
-                        <td>
-                          <label for="coupon-image_3">
-                            팅팅팅 탱탱탱 경품 이미지
-                          </label>
-                        </td>
-                      </tr>
-                    </tbody>
                   </table>
+                  <div class="table_type01_tbody-wrapper">
+                    <table class="table_type01_tbody">
+                      <caption hidden>쿠폰 이미지 표</caption>
+                      <colgroup>
+                        <col style="width: 15.1631%" />
+                        <col style="width: 84.8368%" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <input
+                              type="radio"
+                              name="coupon image"
+                              id="coupon-image_1"
+                            />
+                          </td>
+                          <td>
+                            <label for="coupon-image_1">
+                              기프티콘 기본 이미지
+                            </label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input
+                              type="radio"
+                              name="coupon image"
+                              id="coupon-image_2"
+                            />
+                          </td>
+                          <td>
+                            <label for="coupon-image_2">
+                              한 여름 페스티벌 당첨
+                            </label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input
+                              type="radio"
+                              name="coupon image"
+                              id="coupon-image_3"
+                            />
+                          </td>
+                          <td>
+                            <label for="coupon-image_3">
+                              팅팅팅 탱탱탱 경품 이미지
+                            </label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </td>
               <!-- <td>X</td> -->
