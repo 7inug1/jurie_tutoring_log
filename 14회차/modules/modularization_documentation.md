@@ -66,11 +66,13 @@
 - .input01:
   - height: 21px;
   - border: 1px solid #d8d8d8;
-- .input01_v1:
+- .input01.v1:
   - nothing extra
-- .input01_v2:
+- .input01.v2:
+
   - .byte-in-length01
   - value (12px #64)
+
 - .input02:
 
   - height: 20px;
@@ -168,3 +170,4 @@
 ## 질문
 
 - window의 index3, 4는 button 마크업을 바꿔도 되는지?
+- input[type="text"]:focus{outline: 0 none} 적용해도 되는지?
