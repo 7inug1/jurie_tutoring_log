@@ -4,53 +4,189 @@
 
 ### index1
 
+- .header .title01
+- .wrapper01
+- .coupon-image01
+- .button01
+
 ### index2
+
+- .header .title01
+- .wrapper01
+- .coupon-image02
+- .button01
 
 ### index3
 
+- .header .title01
+- .wrapper01
+- .coupon-image03
+- h2
+- .table01
+- .button01
+
 ### index4
+
+- .header .title01
+- .wrapper01
+- .coupon-image02
+  h2
+- .table01
+  h2
+- .textarea01 (+byte-in-length)
+- .button01
 
 ### index5
 
+- .header .title01
+- .wrapper01
+
+- .button01
+
 ### index6
+
+- .header .title01
+- .wrapper01
+
+- .button01
 
 ### index7
 
+- .header .title01
+- .wrapper01
+
+- .button01
+
 ### index8
+
+- .header .title01
+- .wrapper01
+  {
+  .select01
+  .input02
+  .button02
+  }
+  .table02
+- .button01
 
 ### index9
 
+- .header .title01
+- .wrapper01
+- .input01.v2
+- .button01
+
 ### index10
+
+- .header .title01
+- .wrapper01
+
+* dotted-line
+
+- .input04.before & .input04.after
+- .button01
 
 ## 2. layer
 
 ### index1
 
+- .header .title01
+- .wrapper01
+
+- .button01
+- .close-button01
+
 ### index2
+
+- .header .title01
+- .wrapper01
+
+- .button01
+- .close-button01
 
 ### index3
 
+- .header .title01
+- .wrapper01
+
+- .button01
+- .close-button01
+
 ### index4
+
+- .header .title01
+- .wrapper01
+
+- .button01
+- .close-button01
 
 ### index5
 
+- .header .title01
+- .wrapper01
+- .table03
+-
+- .button01
+- .close-button01
+
 ### index6
+
+- .header .title01
+- .wrapper01
+
+- .button01
+- .close-button01
 
 ## 3. gifticon
 
 ### index1
 
+- .header .title01
+- .wrapper01
+- .table02
+- h2
+- .table02
+- .button01
+
 ### index2
+
+- .header .title01
+- .wrapper01
+- .button01
+- .table02
 
 ### index3
 
+- .header .title01
+- .wrapper01
+- .table02
+- .button01
+
 ### index4
 
+- .header .title01
+- .wrapper01
+- .button01
+
 ### index5
+
+- .header .title01
+- .wrapper01
+- .button01
 
 #### header title (.header .title01)
 
 - .header .title01: 주황색 icon과 img로 된 h1
+
+##### .wrapper
+
+- .wrapper01: border: 3px solid #c6c6c6;
+
+##### .main
+
+- .main01: border-top: 1px solid #cdcccb; border-bottom: 1px solid #cdcccb;
+- .main02: border-top: 1px solid #cdcccb; border-bottom: none;
+  }
 
 ##### button (.button01)
 
@@ -63,6 +199,7 @@
 - .input00:
   - height: 20px;
   - border: 1px solid #d8d8d8;
+-
 - .input01:
   - height: 21px;
   - border: 1px solid #d8d8d8;
@@ -106,11 +243,21 @@
 
 ##### textarea (.textarea01)
 
+- .textarea01
+- .textarea02
+
 ##### select (? .select01)
+
+- .select01
+  height: 20px;
+  border: 1px solid #e5e5e5;
+- .select02
+  height: 20px;
+  border: 1px solid #d8d8d8;
 
 ##### table (.table01)
 
-- .table-container .table01(핑크색)
+- .table01(핑크색)
   - font-size: 12px;
   1. .table-container .table01
   - color: #969696;
@@ -123,29 +270,42 @@
   - color: #646464;
   - border-bottom: 1px solid #ead6ca;
   - `... td {border-bottom: 1px solid #ead6ca;}`
-- .table-container .table02(회색)
+  -
+- .table02(회색)
+
   - border-top: 1px solid #dcdcdc;
   - border-bottom: 1px solid #e1e1e1;
   - `... th{ color: #969696; font-size: 12px; letter-spacing: -0.35px; background: #f5f5f5; text-align: center; vertical-align: middle; }`
   - `... td{color: #646464; font-size: 12px;}`
 
+* dotted-line
+
+- .table03(회색)
+  - border-top: 1px solid #dedfde;
+  - border-bottom: 1px solid #dedfde;
+
 ##### .coupon-image
 
-##### .text-content
+.coupon-image01: dunkin image
+.coupon-image02: gifticon + input
+.coupon-image03: gifticon (+ no input)
 
-- coupon-image: input/textarea가 있는 이미지가 있고 아닌 이미지가 있음.
+##### .content
 
-- button 02 - 1px 그림자가 있는 버튼
-- table 01 - 핑크색 계열의 테이블
-- table 02 - 회색 계열의 테이블
-- textarea 01 - 회색 계열로 .length-in-byte가 같이 있음
-- .length-in-byte
-- input 01: 빈 것
-- input 02: 01과 같은 형태로 보이나 .length-in-byte를 가지고 있음
-- input 03: 02와 같은 형태로 보이나 input value까지 가지고 있음
-- select 01
-- .text-content 01: index5, 6 처럼 제목과 내용 부분이 있는 것
-- .text-content 02: index 7, 10 처럼 앞에 . 있는 텍스트
+- .content01.title : 12px #96
+- .content01.content : 12px #64
+- .content01.subcontent : 앞에 ㅁ / 12px #64
+
+- .content02: 앞에 . / 12px #64
+- .content02.v2: 앞에 . / 12px #68
+
+- .content03.title: font-weight: bolder, font-size: 12px, #46
+- .content03.content: 앞에 . / 11px, #64
+- - .content03.subcontent: 앞에 - / 11px, #64
+
+##### .close-button
+
+- close-button01:
 
 ### 2. layer
 
