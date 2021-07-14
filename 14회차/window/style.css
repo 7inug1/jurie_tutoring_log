@@ -161,7 +161,8 @@
     background: transparent;
   }
 
-  input[type='text']:focus {
+  input[type='text']:focus,
+  textarea {
     outline: none;
   }
 
@@ -322,6 +323,11 @@ body {
   font-size: 24px;
 }
 
+.header .title01 {
+  padding: 15px 0px 15px 15px;
+  font-size: 0;
+}
+
 .header .title01::before {
   content: '';
   display: inline-block;
@@ -341,12 +347,36 @@ body {
 */
 
 .main01 {
+  position: relative;
   border-top: 1px solid #cdcccb;
   border-bottom: 1px solid #cdcccb;
+
+  padding: 20px 0px 17px 20px;
 }
 
 .main02 {
+  position: relative;
   border-top: 1px solid #cdcccb;
+
+  padding: 20px 0px 17px 20px;
+}
+
+.main01.index5 {
+  padding-top: 24px;
+  padding-left: 56px;
+  padding-bottom: 15px;
+}
+
+.main01.index6 {
+  padding-top: 20px;
+  padding-left: 53px;
+  padding-bottom: 15px;
+}
+
+.right {
+  position: absolute;
+  top: 19px;
+  right: 20px;
 }
 
 /* 
@@ -358,6 +388,8 @@ body {
 #####   ####    #     #    ####  #    # 
 */
 .button-container {
+  padding-top: 10px;
+  padding-bottom: 11px;
   font-size: 0;
   text-align: center;
 }
@@ -399,6 +431,7 @@ body {
 }
 
 .button01.body.orange {
+  padding-top: 5px;
   background: url('./images/button01_orange_body.png') center repeat-x;
 }
 
@@ -411,7 +444,53 @@ body {
 }
 
 .button01.body.white {
+  padding-top: 5px;
   background: url('./images/button01_white_body.png') center repeat-x;
+}
+
+/*  */
+.button-container.index1,
+.button-container.index2,
+.button-container.index3,
+.button-container.index4 {
+  padding-left: 2px;
+}
+
+.button-container.index4 {
+  margin-top: 11px;
+}
+
+.button-container.index5 {
+  padding-top: 11px;
+  padding-left: 28px;
+}
+
+.button-container.index6 {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.button01.body.orange.index1,
+.button01.body.orange.index2,
+.button01.body.orange.index3,
+.button01.body.orange.index4,
+.button01.body.orange.index5,
+.button01.body.orange.index6 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.button01.body.white.index3,
+.button01.body.white.index4,
+.button01.body.white.index6 {
+  padding-left: 16px;
+  padding-right: 15px;
+}
+
+.button01.head.white.index3,
+.button01.head.white.index4,
+.button01.head.white.index6 {
+  margin-left: 5px;
 }
 
 /* 2. .button02 */
@@ -474,6 +553,13 @@ body {
 # #    # #       ####    #   
 */
 
+.input01,
+.input02,
+.input03,
+.input04 {
+  box-sizing: border-box;
+}
+
 .input00 {
   height: 20px;
   border: 1px solid #d8d8d8;
@@ -525,6 +611,20 @@ body {
   color: #646464;
 }
 
+/*  */
+.input03.index2 {
+  padding-left: 5px;
+  padding-bottom: 4px;
+}
+
+.input03.index2 input {
+  letter-spacing: -0.35px;
+}
+
+.input01.v2.index6 {
+  width: 505px;
+}
+
 /* 
 ##### ###### #    # #####   ##   #####  ######   ##   
   #   #       #  #    #    #  #  #    # #       #  #  
@@ -534,6 +634,15 @@ body {
   #   ###### #    #   #   #    # #    # ###### #    #
 */
 
+.textarea-section.index4 {
+  margin-top: 19px;
+}
+
+.textarea01,
+.textarea02 {
+  box-sizing: border-box;
+}
+
 .textarea01 {
   border: 1px solid #e5e5e5;
   background: #f8f8f8;
@@ -541,6 +650,10 @@ body {
 
 .textarea01.index4 {
   position: relative;
+  padding-bottom: 15px;
+  margin-top: 8px;
+  width: 329px;
+  height: 52px;
 }
 
 .textarea01 textarea {
@@ -566,6 +679,11 @@ body {
   right: 0; /*!*/
   color: #646464;
   font-size: 12px;
+}
+
+.byte-in-length01 {
+  bottom: 4px;
+  right: 4px;
 }
 
 /* 
@@ -626,6 +744,7 @@ body {
 }
 
 .table01.head table th {
+  /* padding: 10px 0; */
   color: #969696;
   font-size: 12px;
   letter-spacing: -0.35px;
@@ -639,7 +758,7 @@ body {
 .table01.head table th:first-of-type::after {
   content: '';
   position: absolute;
-  top: 0px;
+  top: 9px;
   right: 0px;
   width: 2px;
   height: 12px;
@@ -656,7 +775,9 @@ body {
 
 .table01.body table td {
   color: #646464;
+  font-size: 12px;
   border-bottom: 1px solid #ead6ca;
+  background: white;
 }
 
 .table01.body tr:nth-of-type(2n) td {
@@ -665,6 +786,11 @@ body {
 
 .table01.body tr td:first-of-type {
   text-align: center;
+}
+
+.table01.body tr td:not(:first-of-type) {
+  padding-left: 23px;
+  text-align: left;
 }
 
 .table02 table {
@@ -708,6 +834,25 @@ body {
   border-top: 1px solid #f0f0f0;
 }
 
+/*  */
+
+.table-container.index3,
+.table-container.index4 {
+  padding-top: 8px;
+  min-width: 329px;
+}
+
+.table-container.index3 .table01.head table th,
+.table-container.index4 .table01.head table th {
+  padding: 10px 0;
+}
+
+.table-container.index3 .table01.body table td,
+.table-container.index4 .table01.body table td {
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+}
+
 /* 
  ####   ####  #    # ##### ###### #    # ##### 
 #    # #    # ##   #   #   #      ##   #   #   
@@ -724,17 +869,54 @@ body {
 .content01.title {
   color: #969696;
 }
+
+.content01.title.index5,
+.content01.title.index6 {
+  position: absolute;
+  left: 20px;
+}
+
+/* .content.index6 {
+  position: relative;
+} */
+
+/* .content01.title.index6 {
+  top: 4px;
+} */
+
+/* .content01.title.index6 {
+  position: absolute;
+  left: 24px;
+} */
+
+.content-container.index5 .content:nth-of-type(2) {
+  padding-top: 22px;
+}
+
+.content-container.index6 .content:nth-of-type(2) {
+  padding-top: 11px;
+}
+
+.content-container.index5 .content:nth-of-type(3) {
+  padding-top: 20px;
+}
+
+.content-container.index6 .content:nth-of-type(3) {
+  padding-top: 17px;
+  padding-left: 3px;
+}
+
 .content01.content,
 .content01.subcontent {
   color: #646464;
 }
-.content01.subcontent::before {
+/* .content01.subcontent::before {
   content: '';
   display: inline-block;
   width: 6px;
   height: 6px;
   background: url('./images/content01_subcontent_icon.png');
-}
+} */
 
 .content02::before {
   content: '';
@@ -780,4 +962,31 @@ body {
   width: 5px;
   height: 1px;
   background: url('./images/content03_subcontent_icon.png');
+}
+
+/*  */
+.content-container.index5 .content01.subcontent:not(:first-of-type),
+.content-container.index6 .content01.subcontent:not(:first-of-type) {
+  margin-top: 9px;
+}
+
+.content-container.index6 .content:first-of-type .content01.title {
+  top: 24px;
+}
+
+.content-container.index6 .content:nth-of-type(2) .content01.title {
+  top: 58px;
+}
+
+/* 
+ ####  #    #  ####  #####  ####  #    # 
+#    # #    # #        #   #    # ##  ## 
+#      #    #  ####    #   #    # # ## # 
+#      #    #      #   #   #    # #    # 
+#    # #    # #    #   #   #    # #    # 
+ ####   ####   ####    #    ####  #    # 
+*/
+
+.gifticon-present {
+  padding-left: 4px;
 }
