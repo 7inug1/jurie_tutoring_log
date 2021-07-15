@@ -332,3 +332,7 @@
 - window의 index3, 4는 button 마크업을 바꿔도 되는지?
 - input[type="text"]:focus, textarea{outline: 0 none} 적용해도 되는지?
 - padding: 15px 0px 15px 15px; 이 나은지, 아니면 padding: 15px; 이 나은지
+
+## 노트
+
+- layer .content.title은 color: #464646으로 통일

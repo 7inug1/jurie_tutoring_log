@@ -301,6 +301,11 @@ body {
   background: url('./images/h1_icon.png');
 }
 
+.header .title01 {
+  padding: 15px 0px 15px 15px;
+  font-size: 0;
+}
+
 /* 
     #    #   ##   # #    # 
     ##  ##  #  #  # ##   # 
@@ -311,11 +316,16 @@ body {
 */
 
 .main01 {
+  position: relative;
   border-top: 1px solid #cdcccb;
+  border-bottom: 1px solid #cdcccb;
+  padding: 20px 0px 17px 20px;
 }
 
-.main01.v2 {
-  border-bottom: 1px solid #cdcccb;
+.main02 {
+  position: relative;
+  border-top: 1px solid #cdcccb;
+  padding: 20px 0px 17px 20px;
 }
 
 /* 
@@ -696,6 +706,7 @@ body {
 .content03.title {
   color: #969696;
   font-size: 12px;
+  font-weight: bolder;
 }
 
 .content03.content::before {
