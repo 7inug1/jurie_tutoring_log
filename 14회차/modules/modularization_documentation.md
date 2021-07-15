@@ -336,3 +336,10 @@
 ## 노트
 
 - layer .content.title은 color: #464646으로 통일
+- layer 기준점:
+  - content.content-container :
+  - content.title : index6 첫 줄
+  - content.content : index6 첫 줄
+  - content.subcontent: index1 첫 줄
+  - .close-button : index1
+  - 확인 버튼: index1

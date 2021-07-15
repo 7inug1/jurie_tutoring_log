@@ -722,6 +722,11 @@ body {
   color: #646464;
   font-size: 11px;
 }
+
+.content03.subcontent h2 {
+  position: absolute;
+}
+
 .content03.subcontent::before {
   content: '';
   display: inline-block;
