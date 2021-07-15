@@ -409,6 +409,7 @@ body {
   background: url('./images/button02_white_body.png') center repeat-x;
   color: #646464;
   font-size: 11px;
+  letter-spacing: -0.9px;
 }
 
 .button03 {
@@ -674,7 +675,7 @@ body {
 
 .content02::before {
   content: '';
-  display: inline-block;
+  position: absolute;
   width: 2px;
   height: 2px;
   background: url('./images/content_dot.png');

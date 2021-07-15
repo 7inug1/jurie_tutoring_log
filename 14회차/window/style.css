@@ -373,6 +373,11 @@ body {
   padding-bottom: 15px;
 }
 
+.main01.index7 {
+  padding-top: 19px;
+  padding-bottom: 15px;
+}
+
 .right {
   position: absolute;
   top: 19px;
@@ -470,12 +475,17 @@ body {
   padding-left: 20px;
 }
 
+.button-container.index7 {
+  padding-left: 12px;
+}
+
 .button01.body.orange.index1,
 .button01.body.orange.index2,
 .button01.body.orange.index3,
 .button01.body.orange.index4,
 .button01.body.orange.index5,
-.button01.body.orange.index6 {
+.button01.body.orange.index6,
+.button01.body.orange.index7 {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -519,6 +529,7 @@ body {
   background: url('./images/button02_white_body.png') center repeat-x;
   color: #646464;
   font-size: 11px;
+  letter-spacing: -1.3px;
 }
 
 .button03 {
@@ -544,6 +555,14 @@ body {
   background: url('./images/button03_body.png') center repeat-x;
 }
 
+/*  */
+
+.button02.body.white.index7 {
+  padding-top: 7px;
+  padding-left: 13px;
+  padding-right: 16px;
+}
+
 /* 
 # #    # #####  #    # ##### 
 # ##   # #    # #    #   #   
@@ -552,6 +571,11 @@ body {
 # #   ## #      #    #   #   
 # #    # #       ####    #   
 */
+
+.input-container.index7 {
+  /* padding-top: 1px; */
+  padding-left: 318px;
+}
 
 .input01,
 .input02,
@@ -623,6 +647,17 @@ body {
 
 .input01.v2.index6 {
   width: 505px;
+}
+
+.input02.index7 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 312px;
+}
+
+.input01.v1.index8 {
+  position: absolute;
 }
 
 /* 
@@ -727,6 +762,12 @@ body {
 .select02 select {
   font-size: 12px;
   color: #646464;
+}
+
+/*  */
+
+.select02.index8 {
+  position: absolute;
 }
 
 /* 
@@ -920,7 +961,9 @@ body {
 
 .content02::before {
   content: '';
-  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 3px;
   width: 2px;
   height: 2px;
   background: url('./images/content_dot.png');
@@ -976,6 +1019,13 @@ body {
 
 .content-container.index6 .content:nth-of-type(2) .content01.title {
   top: 58px;
+}
+
+.content02.v2.index7 {
+  position: relative;
+  padding-left: 9px;
+  margin-top: 10px;
+  line-height: 19.9px;
 }
 
 /* 
