@@ -332,14 +332,20 @@
 - window의 index3, 4는 button 마크업을 바꿔도 되는지?
 - input[type="text"]:focus, textarea{outline: 0 none} 적용해도 되는지?
 - padding: 15px 0px 15px 15px; 이 나은지, 아니면 padding: 15px; 이 나은지
+- layer index4에 margin-top :-4px 준 부분 왜 padding || margin 없는데 빈 공간 생기는지
+- colgroup percentage 완벽하게 안될 때
 
 ## 노트
 
 - layer .content.title은 color: #464646으로 통일
 - layer 기준점:
+
   - content.content-container :
   - content.title : index6 첫 줄
   - content.content : index6 첫 줄
   - content.subcontent: index1 첫 줄
   - .close-button : index1
   - 확인 버튼: index1
+
+- gifticon 기준점:
+  - content02 bullet은 index5 기준

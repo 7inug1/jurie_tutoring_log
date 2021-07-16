@@ -8,23 +8,23 @@
     <title>주소록 가져오기</title>
   </head>
   <body>
-    <div class="wrapper index3">
+    <div class="wrapper01 index3">
       <div class="header">
-        <h1 class="h1_type01">
-          <img src="./images/h1_index3.png" alt="주소록 가져오기" />
+        <h1 class="title01">
+          <img src="./images/title01_index3.png" alt="주소록 가져오기" />
         </h1>
       </div>
-      <div class="main index3">
+      <div class="main01 index3">
         <ul>
-          <li class="padding-left_9px">
-            <p class="content_type02 index3">
+          <li class="content02 v2 index3">
+            <p>
               엑셀파일로 저장된 주소록을 MY주소록에 추가할 수 있습니다.
               <br />
               단, 하단의 파일 형식을 다운받아 포맷에 맞게 작성하셔야만 주소록에
               등록하실 수 있습니다.
             </p>
           </li>
-          <li class="padding-left_9px">
+          <li class="content02 v2 index3">
             <p class="content_type02 index3 margin-top_2px">
               엑셀 파일 업로드 시 스팸/오류번호 등이 포함되어 있으면 엑셀파일을
               업로드 하실 수 없습니다.
@@ -34,10 +34,10 @@
             </p>
           </li>
         </ul>
-        <div class="button-container_01">
-          <button class="button_type03_head index3">
-            <span class="button_type03_tail">
-              <span class="button_type03_body index3">
+        <div class="button-container excel index3">
+          <button class="button03 head white index3">
+            <span class="button03 tail white">
+              <span class="button03 body white index3">
                 <a href="./엑셀_업로드_샘플.xlsx" download>
                   <img
                     src="./images/button_excel-file-download.png"
@@ -48,8 +48,8 @@
             </span>
           </button>
         </div>
-        <div class="table_type02-container index3">
-          <table class="table_type02 index2">
+        <div class="table02 index3">
+          <table>
             <caption hidden>주소록 가져오기 표</caption>
             <colgroup>
               <col style="width: 17.738%" />
@@ -59,22 +59,24 @@
               <tr>
                 <th scope="row">그룹 선택</th>
                 <td class="padding-left_9px">
-                  <select
-                    name="select else"
-                    id="select_else"
-                    class="width_135px"
-                  >
-                    <option selected disabled hidden>기타</option>
-                    <option value="그룹1">그룹1</option>
-                    <option value="그룹2">그룹2</option>
-                    <option value="그룹3">그룹3</option>
-                  </select>
+                  <div class="select02 index3">
+                    <select
+                      name="select else"
+                      id="select_else"
+                      class="width_135px"
+                    >
+                      <option selected disabled hidden>기타</option>
+                      <option value="그룹1">그룹1</option>
+                      <option value="그룹2">그룹2</option>
+                      <option value="그룹3">그룹3</option>
+                    </select>
+                  </div>
                 </td>
               </tr>
               <tr>
                 <th scope="row">주소록 가져오기</th>
                 <td class="padding-left_9px padding-top_6px">
-                  <div class="input-wrapper_type01 index3">
+                  <div class="input01 v1 index3">
                     <input
                       type="text"
                       name="file input"
@@ -82,10 +84,12 @@
                       readonly
                     />
                   </div>
-                  <div class="excel-file-upload-container">
-                    <label for="excel-file-upload" class="button_type02_head">
-                      <span class="button_type02_tail">
-                        <span class="button_type02_body index3">파일 찾기</span>
+                  <div class="excel-file-upload-container index3">
+                    <label for="excel-file-upload" class="button02 head white">
+                      <span class="button02 tail white">
+                        <span class="button02 body white index3">
+                          파일 찾기
+                        </span>
                       </span>
                     </label>
 
@@ -96,20 +100,14 @@
                       readonly
                     />
                   </div>
-                  <p
-                    class="
-                      padding-top_4px
-                      padding-left_2px
-                      line-height_14px
-                      padding-bottom_3px
-                    "
-                  >
-                    총
+                  <p class="whitespace-remover index3">
+                    <span>총</span>
                     <strong class="bolder">500명</strong>
-                    의 주소록 정보 중
+                    <span>의 주소록 정보 중</span>
                     <br />
                     <strong class="bolder">
-                      정상 번호 (490) | 중복번호 (10개) 를 입력하였습니다.
+                      정상 번호 (490) | 중복
+                      <span>번호 (10개) 를 입력하였습니다.</span>
                     </strong>
                   </p>
                 </td>
@@ -118,26 +116,25 @@
           </table>
         </div>
       </div>
-      <div class="footer">
-        <div class="button-container index3">
-          <button class="button_type01_orange_head">
-            <span class="button_type01_orange_tail">
-              <span class="button_type01_orange_body">
-                <img
-                  src="./images/button_retrieve-address.png"
-                  alt="주소록 가져오기"
-                />
-              </span>
+
+      <div class="button-container index3">
+        <button class="button01 orange head">
+          <span class="button01 orange tail">
+            <span class="button01 orange body index3">
+              <img
+                src="./images/button01_retrieve-address.png"
+                alt="주소록 가져오기"
+              />
             </span>
-          </button>
-          <button class="button_type01_white_head">
-            <span class="button_type01_white_tail">
-              <span class="button_type01_white_body">
-                <img src="./images/button_cancel.png" alt="취소" />
-              </span>
+          </span>
+        </button>
+        <button class="button01 white head index3">
+          <span class="button01 white tail">
+            <span class="button01 white body index3">
+              <img src="./images/button01_white_cancel.png" alt="취소" />
             </span>
-          </button>
-        </div>
+          </span>
+        </button>
       </div>
     </div>
   </body>
