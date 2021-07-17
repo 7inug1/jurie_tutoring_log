@@ -762,3 +762,7 @@ body {
   height: 1px;
   background: url('./images/content03_subcontent_icon.png');
 }
+
+.padding-remover {
+  padding: 0;
+}

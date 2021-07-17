@@ -359,6 +359,11 @@ body {
   padding-right: 20px;
 }
 
+.main01.index4 {
+  padding-bottom: 19px;
+  padding-right: 25px;
+}
+
 .main01.index5 {
   padding-top: 17px;
   padding-right: 62px;
@@ -629,6 +634,11 @@ body {
   /* left: 0; */
   width: 231px;
 }
+
+.input01.v1.index4 {
+  width: 160px;
+}
+
 .input00.index5 {
   margin-top: 6px;
 }
@@ -642,6 +652,11 @@ body {
   #   ###### #    #   #   #    # #    # ###### #    #
 */
 
+.textarea01,
+.textarea02 {
+  box-sizing: border-box;
+}
+
 .textarea01 {
   border: 1px solid #e5e5e5;
   background: #f8f8f8;
@@ -654,6 +669,12 @@ body {
 .textarea02 {
   border: 1px solid #d8d8d8;
   background: white;
+}
+
+/*  */
+.textarea02.index4 {
+  width: 233px;
+  height: 75px;
 }
 
 /* 
@@ -703,6 +724,25 @@ body {
 }
 
 /*  */
+
+.table02.index4 table tr:nth-of-type(4) .select01 {
+  width: 55px;
+}
+
+.table02.index4 table tr:nth-of-type(4) .select01:first-of-type {
+  position: absolute;
+  left: 10px;
+}
+
+.table02.index4 table tr:nth-of-type(4) .select01:nth-of-type(2) {
+  position: absolute;
+  left: 70px;
+}
+
+.table02.index4 table tr:nth-of-type(5) .select01 {
+  width: 115px;
+}
+
 .select02.index3 {
   width: 135px;
 }
@@ -849,6 +889,20 @@ body {
   border-top: 1px solid #f0f0f0;
 }
 
+.table02.index4 th,
+.table02.index4 td {
+  padding-top: 6px;
+  padding-bottom: 5.5px;
+}
+
+.table02.index4 td {
+  padding-left: 10px;
+}
+
+.table02.index4 tr:nth-of-type(4) td {
+  position: relative;
+  padding-left: 130px;
+}
 /* 
  ####   ####  #    # ##### ###### #    # ##### 
 #    # #    # ##   #   #   #      ##   #   #   

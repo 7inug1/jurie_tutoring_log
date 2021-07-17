@@ -314,10 +314,13 @@ body {
 .main01.index5 {
   padding-top: 16px;
   padding-left: 21px;
+  padding-right: 25px;
+  padding-bottom: 20px;
 }
 
 .main01.index6 {
   padding-bottom: 20px;
+  padding-left: 19px;
 }
 
 /* 
@@ -443,10 +446,17 @@ body {
 .button-container.index2,
 .button-container.index3,
 .button-container.index4,
+/* .button-container.index5, */
 .button-container.index6 {
   padding-top: 11px;
   padding-bottom: 10px;
   /* padding-right: 2px; */
+}
+
+.button-container.index5 {
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
 }
 
 /* .button-container.index3 {
@@ -470,6 +480,21 @@ body {
   padding-right: 16px;
 }
 
+.button01.body.orange.index5 {
+  padding-top: 6px;
+  padding-left: 8px;
+  padding-right: 11px;
+}
+
+.button01.head.white.index5 {
+  margin-left: 5px;
+}
+
+.button01.body.white.index5 {
+  padding-top: 5px;
+  padding-left: 16px;
+  padding-right: 15px;
+}
 /* 
 # #    # #####  #    # ##### 
 # ##   # #    # #    #   #   
@@ -537,8 +562,6 @@ body {
 .input-section.index4::before {
   content: '';
   display: inline-block;
-  /* position: absolute;
-  top: 0; */
   background: url('./images/horizontal-dotted-line.png');
   width: 100%;
   height: 1px;
@@ -550,7 +573,6 @@ body {
 
 .input-container.index4 {
   position: relative;
-  /* overflow: hidden; */
   clear: both;
 }
 
@@ -713,12 +735,24 @@ body {
   border-top: 1px solid #f0f0f0;
 }
 
+.table03::before {
+  content: '';
+  display: inline-block;
+  background: url('./images/horizontal-dotted-line.png') repeat-x;
+  width: 100%;
+  height: 1px;
+}
+
 .table03 table {
   border-top: 1px solid #dedfde;
   border-bottom: 1px solid #dedfde;
 }
 
-.table03 table th,
+.table03 table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .table03 table td {
   text-align: left;
 }
@@ -732,6 +766,30 @@ body {
 .table03 table tr:not(:first-of-type) th,
 .table03 table tr:not(:first-of-type) td {
   border-top: 1px solid #f0f0f0;
+}
+
+.table03.index5 table {
+  margin-top: 13px;
+}
+
+.table03.index5:nth-of-type(2) {
+  margin-top: 3px;
+}
+
+.table03.index5 td {
+  color: #646464;
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+.table03.index5 th,
+.table03.index5 td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table-container.index5 {
+  margin-top: 3px;
 }
 
 /* 
@@ -786,8 +844,17 @@ body {
   line-height: 20.3px;
 }
 
+.content02.v1.index4:nth-of-type(2) p:nth-of-type(2) {
+  margin-top: 5px;
+}
+
+.content02.v1.index4:nth-of-type(2) p:nth-of-type(3) {
+  margin-top: 2px;
+  line-height: 16.5px;
+}
+
 .content02.v1.index4:not(:first-of-type) {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .content02.v2 {
@@ -911,4 +978,31 @@ body {
 
 .orange-font {
   color: #ff5f28;
+}
+
+.whitespace-remover {
+  font-size: 0;
+}
+
+.whitespace-remover.index5 span,
+.whitespace-remover.index5 strong {
+  font-size: 12px;
+}
+
+.whitespace-remover.index5 strong {
+  padding-left: 4px;
+}
+
+.whitespace-remover.index5 .padding-remover {
+  padding-left: 0;
+}
+
+.warning.index5 {
+  margin-top: 7px;
+  padding-left: 5px;
+}
+
+.warning.whitespace-remover.index5 span,
+.warning.whitespace-remover.index5 strong {
+  font-size: 11px;
 }
