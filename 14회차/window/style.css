@@ -356,7 +356,7 @@ body {
 .button-container {
   padding-top: 10px;
   padding-bottom: 11px;
-  margin-top: 11px;
+  /* margin-top: 11px; */
   font-size: 0;
   text-align: center;
 }
@@ -436,7 +436,7 @@ body {
 
 .button-container.index5 {
   padding-top: 11px;
-  padding-left: 28px;
+  padding-left: 27px;
 }
 
 .button-container.index6,
@@ -445,10 +445,36 @@ body {
   padding-left: 20px;
 }
 
+.button-container.index6 {
+  padding-left: 19px;
+}
+
 .button-container.index7 {
   padding-left: 12px;
 }
 
+.button-container.index8 {
+  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 13px;
+}
+
+.button-container.index9 {
+  padding-left: 14px;
+}
+
+.button-container.index10 {
+  padding-left: 10px;
+}
+
+.button01.body.orange.index10 {
+  padding-top: 7px;
+}
+
+.button01.body.white.index10 {
+  padding-left: 15px;
+  padding-right: 16px;
+}
 .button01.body.orange.index1,
 .button01.body.orange.index2,
 .button01.body.orange.index3,
@@ -470,8 +496,7 @@ body {
 .button01.body.white.index3,
 .button01.body.white.index4,
 .button01.body.white.index6,
-.button01.body.white.index9,
-.button01.body.white.index10 {
+.button01.body.white.index9 {
   padding-left: 16px;
   padding-right: 15px;
 }
@@ -482,6 +507,18 @@ body {
 .button01.head.white.index9,
 .button01.head.white.index10 {
   margin-left: 5px;
+}
+
+.button01.body.orange.index3,
+.button01.body.orange.index4,
+.button01.body.orange.index9 {
+  padding-top: 6px;
+}
+.button01.body.white.index3,
+.button01.body.white.index4,
+.button01.body.white.index9 {
+  padding-left: 15px;
+  padding-right: 16px;
 }
 
 /* 2. .button02 */
