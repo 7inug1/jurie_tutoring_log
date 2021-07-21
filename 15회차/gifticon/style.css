@@ -1,0 +1,392 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    /* added personally */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* added personally from below */
+  button {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  label,
+  input[type='radio'],
+  button {
+    cursor: pointer;
+  }
+
+  input[type='text'] {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  select {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+  }
+
+  /* for customizing the 'browsing-file' functionality */
+  input[type='file'] {
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  strong,
+  .bolder {
+    font-weight: bolder;
+  }
+}
+
+/* 
+#####  ###### #####   ####   ####  #    #   ##   #         #####  ######  ####  ###### #####  ####   ####   ####  
+#    # #      #    # #      #    # ##   #  #  #  #         #    # #      #      #        #   #    # #      #      
+#    # #####  #    #  ####  #    # # #  # #    # #         #    # #####   ####  #####    #   #       ####   ####  
+#####  #      #####       # #    # #  # # ###### #         #####  #           # #        #   #           #      # 
+#      #      #   #  #    # #    # #   ## #    # #         #   #  #      #    # #        #   #    # #    # #    # 
+#      ###### #    #  ####   ####  #    # #    # ######    #    # ######  ####  ######   #    ####   ####   ####  
+*/
+.whitespace-remover {
+  font-size: 0;
+}
+
+table td {
+  vertical-align: top;
+}
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+.button01,
+.button01 > .tail,
+.button01 .body {
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+}
+
+.button01 {
+  padding-left: 1px;
+  background: url('./images/button01_head.png') left no-repeat;
+}
+
+.button01 > .tail {
+  padding-right: 2px;
+  background: url('./images/button01_tail.png') right no-repeat;
+}
+
+.button01 .body {
+  background: url('./images/button01_body.png') center repeat-x;
+  padding-top: 4px;
+  padding-left: 7px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  color: #646464;
+  letter-spacing: -2.4px;
+}
+
+/* 
+    #    # #####    ##   #####  #####  ###### #####  
+    #    # #    #  #  #  #    # #    # #      #    # 
+    #    # #    # #    # #    # #    # #####  #    # 
+### # ## # #####  ###### #####  #####  #      #####  
+### ##  ## #   #  #    # #      #      #      #   #  
+### #    # #    # #    # #      #      ###### #    # 
+*/
+
+body {
+  font-family: 'dotum', sans-serif;
+}
+
+.wrapper {
+  width: 1075px;
+  margin: 0 auto;
+}
+
+/* 
+    #      ###### ###### ##### 
+    #      #      #        #   
+    #      #####  #####    #   
+### #      #      #        #   
+### #      #      #        #   
+### ###### ###### #        #   
+*/
+
+.left {
+  width: 220px;
+}
+
+.left ul .title {
+  font-size: 12px;
+  color: #323232;
+}
+
+.left ul .content {
+  font-size: 12px;
+  color: #f36a00;
+}
+
+/* 
+    #    # #   #       # #    # ######  ####  
+    ##  ##  # #        # ##   # #      #    # 
+    # ## #   #   ##### # # #  # #####  #    # 
+### #    #   #         # #  # # #      #    # 
+### #    #   #         # #   ## #      #    # 
+### #    #   #         # #    # #       ####  
+*/
+
+.my-info {
+  position: relative;
+  padding: 21px 15px 5px 15px;
+  border: 3px solid #e51937;
+}
+
+.my-info .button01 {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+}
+
+.my-info .name {
+  font-size: 12px;
+  color: #666666;
+}
+
+.my-info .name strong {
+  color: #000000;
+  letter-spacing: -0.6px;
+}
+
+.my-info ul {
+  padding-top: 9px;
+}
+
+.my-info > ul > li {
+  padding-top: 10px;
+  padding-bottom: 9px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.my-info ul li .title {
+  letter-spacing: -0.3px;
+}
+
+.my-info ul li .title:not(.anniversary) {
+  position: absolute;
+  /* left: 19px; */
+}
+
+.my-info ul li .content:not(.anniversary) {
+  text-align: right;
+}
+
+.my-info ul li .content.anniversary {
+  font-size: 11px;
+}
+
+/* 
+    #    #   ##   #    # #  ####    ##   ##### #  ####  #    # 
+    ##   #  #  #  #    # # #    #  #  #    #   # #    # ##   # 
+    # #  # #    # #    # # #      #    #   #   # #    # # #  # 
+### #  # # ###### #    # # #  ### ######   #   # #    # #  # # 
+### #   ## #    #  #  #  # #    # #    #   #   # #    # #   ## 
+### #    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
+*/
+
+.navigation {
+  margin-top: 19px;
+}
+
+.navigation li {
+  padding-bottom: 6px;
+}
+
+.navigation li:not(:first-of-type) {
+  border-top: 1px solid #ebebeb;
+  padding-top: 9px;
+}
+
+/* 
+     ####  ###### #    # ##### ###### #####  
+    #    # #      ##   #   #   #      #    # 
+    #      #####  # #  #   #   #####  #    # 
+### #      #      #  # #   #   #      #####  
+### #    # #      #   ##   #   #      #   #  
+###  ####  ###### #    #   #   ###### #    # 
+*/
+
+/* 
+    #####  #  ####  #    # ##### 
+    #    # # #    # #    #   #   
+    #    # # #      ######   #   
+### #####  # #  ### #    #   #   
+### #   #  # #    # #    #   #   
+### #    # #  ####  #    #   #   
+*/
