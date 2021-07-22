@@ -268,6 +268,10 @@ body {
   margin: 0 auto;
 }
 
+.wrapper h1 img {
+  cursor: pointer;
+}
+
 /* 
     #      ###### ###### ##### 
     #      #      #        #   
@@ -278,6 +282,7 @@ body {
 */
 
 .left {
+  position: absolute;
   width: 220px;
 }
 
@@ -365,6 +370,7 @@ body {
 }
 
 .navigation li {
+  cursor: pointer;
   padding-bottom: 6px;
 }
 
@@ -381,6 +387,232 @@ body {
 ### #    # #      #   ##   #   #      #   #  
 ###  ####  ###### #    #   #   ###### #    # 
 */
+
+.center {
+  position: relative;
+  width: 720px;
+  padding-left: 250px;
+}
+
+/* 
+     ####  # ###### ##### #  ####   ####  #    #       #####  ######  ####   ####  #    # #    # ###### #    # #####    ##   ##### #  ####  #    # 
+    #    # # #        #   # #    # #    # ##   #       #    # #      #    # #    # ##  ## ##  ## #      ##   # #    #  #  #    #   # #    # ##   # 
+    #      # #####    #   # #      #    # # #  # ##### #    # #####  #      #    # # ## # # ## # #####  # #  # #    # #    #   #   # #    # # #  # 
+### #  ### # #        #   # #      #    # #  # #       #####  #      #      #    # #    # #    # #      #  # # #    # ######   #   # #    # #  # # 
+### #    # # #        #   # #    # #    # #   ##       #   #  #      #    # #    # #    # #    # #      #   ## #    # #    #   #   # #    # #   ## 
+###  ####  # #        #   #  ####   ####  #    #       #    # ######  ####   ####  #    # #    # ###### #    # #####  #    #   #   #  ####  #    # 
+*/
+
+.center .gifticon-recommendation::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: 21px;
+  background: url('./images/gifticon-recommendation_grid.png');
+  width: 680px;
+  height: 318px;
+}
+
+.center .gifticon-recommendation {
+  position: relative;
+}
+
+.center .gifticon-recommendation .title-bar {
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 17px;
+  border-top: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  border-bottom: 1px solid #f0f0f0;
+  background: #f6f6f6;
+}
+
+.center .gifticon-recommendation .title-bar h2 {
+  position: absolute;
+}
+
+.center .gifticon-recommendation .title-bar p {
+  padding-left: 92px;
+}
+
+.center .gifticon-recommendation ul {
+  position: relative;
+  min-height: 333px;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  box-sizing: border-box;
+}
+
+.center .gifticon-recommendation ul .best {
+  position: absolute;
+  left: 17px;
+  top: 19px;
+}
+
+.center .gifticon-recommendation ul .best::before {
+  content: '';
+  display: inline-block;
+  background: url('./images/gifticon-recommendation_best-dunkin.png') no-repeat;
+  width: 213px;
+  height: 206px;
+}
+
+.center .gifticon-recommendation ul .best .information {
+  padding-top: 50px;
+  /* padding-left: 2px; */
+}
+
+.center .gifticon-recommendation ul .best .brand,
+.center .gifticon-recommendation ul .best .title,
+.center .gifticon-recommendation ul .best .price {
+  /* font-size: 12px; */
+  font-weight: bolder;
+  /* letter-spacing: -0.5px; */
+}
+
+.center .gifticon-recommendation ul .best .brand {
+  /* display: inline-block; */
+  position: absolute;
+  padding-left: 2px;
+  color: #868686;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+
+.center .gifticon-recommendation ul .best .title {
+  /* display: inline-block; */
+  padding-left: 68px;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+
+.center .gifticon-recommendation ul .best .price {
+  margin-top: 9px;
+  color: #e70002;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+/* ---------------- */
+.center .gifticon-recommendation ul .item:nth-of-type(2)::before,
+.center .gifticon-recommendation ul .item:nth-of-type(3)::before,
+.center .gifticon-recommendation ul .item:nth-of-type(4)::before,
+.center .gifticon-recommendation ul .item:nth-of-type(5)::before,
+.center .gifticon-recommendation ul .item:nth-of-type(6)::before,
+.center .gifticon-recommendation ul .item:nth-of-type(7)::before {
+  content: '';
+  position: absolute;
+  top: -77px;
+  left: 18px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(2),
+.center .gifticon-recommendation ul .item:nth-of-type(3),
+.center .gifticon-recommendation ul .item:nth-of-type(4),
+.center .gifticon-recommendation ul .item:nth-of-type(5),
+.center .gifticon-recommendation ul .item:nth-of-type(6),
+.center .gifticon-recommendation ul .item:nth-of-type(7) {
+  position: absolute;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(2),
+.center .gifticon-recommendation ul .item:nth-of-type(3),
+.center .gifticon-recommendation ul .item:nth-of-type(4) {
+  top: 105px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(5),
+.center .gifticon-recommendation ul .item:nth-of-type(6),
+.center .gifticon-recommendation ul .item:nth-of-type(7) {
+  top: 274px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(2)::before {
+  background: url('./images/gifticon-recommendation_lotteria-burger.png');
+  width: 72px;
+  height: 53px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(3)::before {
+  background: url('./images/gifticon-recommendation_coffeebean-macchiato.png');
+  width: 52px;
+  height: 68px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(4)::before {
+  background: url('./images/gifticon-recommendation_baskinrobbins-icecream.png');
+  width: 60px;
+  height: 67px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(5)::before {
+  background: url('./images/gifticon-recommendation_javacity-latte.png');
+  width: 60px;
+  height: 67px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(6)::before {
+  background: url('./images/gifticon-recommendation_friedchicken.png');
+  width: 87px;
+  height: 50px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(7)::before {
+  background: url('./images/gifticon-recommendation_parisbaguette-cake.png');
+  width: 67px;
+  height: 65px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(2),
+.center .gifticon-recommendation ul .item:nth-of-type(5) {
+  left: 307px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(3),
+.center .gifticon-recommendation ul .item:nth-of-type(6) {
+  left: 450px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(4),
+.center .gifticon-recommendation ul .item:nth-of-type(7) {
+  left: 594px;
+}
+
+.center .gifticon-recommendation ul .item .title {
+  color: #646464;
+  font-size: 12px;
+}
+
+.center .gifticon-recommendation ul .item .price {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(2) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(3) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(4) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(5) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(6) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(7) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(8) .title,
+.center .gifticon-recommendation ul .item:nth-of-type(9) .title {
+  letter-spacing: -0.9px;
+  line-height: 15px;
+}
+
+.center .gifticon-recommendation ul .item:nth-of-type(2) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(3) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(4) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(5) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(6) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(7) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(8) .price,
+.center .gifticon-recommendation ul .item:nth-of-type(9) .price {
+  margin-top: 5px;
+}
 
 /* 
     #####  #  ####  #    # ##### 
