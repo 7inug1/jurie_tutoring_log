@@ -265,13 +265,15 @@ body {
 */
 
 .header {
-  position: relative;
+  position: absolute;
   height: 21px;
+  padding-top: 3px;
+  z-index: 1;
 }
 
 .header h1 {
-  position: absolute;
-  left: -1px;
+  /* position: absolute;
+  left: -1px; */
 }
 
 /* 
@@ -284,6 +286,7 @@ body {
 */
 
 .main {
+  position: relative;
   margin-top: 10px;
 }
 
@@ -301,6 +304,8 @@ body {
 }
 
 .wrapper {
+  position: relative;
+  left: 15px;
   width: 1075px;
   margin: 0 auto;
 }
@@ -320,6 +325,7 @@ body {
 
 .left {
   position: absolute;
+  top: 34px;
   width: 220px;
   z-index: 1;
 }
@@ -431,9 +437,11 @@ body {
 */
 
 .center {
-  position: relative;
+  /* position: absolute; */
+  padding-top: 34px;
   width: 720px;
-  padding-left: 250px;
+  padding-left: 240px;
+  /* z-index: 1; */
 }
 
 /* 
@@ -700,8 +708,8 @@ body {
   /* background: red; */
 }
 
-.present .tab li:first-of-type {
-  background: url('./images/');
+.present .tab .current {
+  /* background: url('./images/'); */
   background: #7a7a7a;
   border: 1px solid #6b6b6b;
   /* text-align: center; */
@@ -753,10 +761,22 @@ body {
 
 .present .tab-content {
   position: relative;
-  height: 173px;
+  height: 172px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.present .tab-content .item:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  top: -95px;
+  right: -21px;
+  height: 141px;
+  width: 1px;
+  background: url('./images/present_vertical-line.png') repeat-y;
 }
 
 .present .tab-content li {
+  position: relative;
   cursor: pointer;
 }
 
@@ -976,6 +996,7 @@ body {
 
 .theme-ranking .theme ul li {
   position: relative;
+  cursor: pointer;
 }
 
 .theme-ranking .theme ul li:not(:first-of-type) {
@@ -1058,16 +1079,29 @@ body {
 }
 
 .gifticon-brand .brand-container {
+  position: relative;
   margin-top: 10px;
+  padding-left: 221px;
 }
 
-.gifticon-brand .brand-container .new-brand,
-.gifticon-brand .brand-container .existing-brands {
+.gifticon-brand .new-brand,
+.gifticon-brand .existing-brands {
   box-sizing: border-box;
 }
 
-.gifticon-brand .brand-container .new-brand {
-  position: relative;
+.gifticon-brand .new-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url('./images/gifticon-brand_new-tag.png');
+}
+
+.gifticon-brand .new-brand {
+  position: absolute;
+  left: 0;
   padding-top: 65px;
   padding-right: 4px;
   width: 212px;
@@ -1076,7 +1110,7 @@ body {
   text-align: center;
 }
 
-.gifticon-brand .brand-container .new-brand span::before {
+.gifticon-brand .new-brand span::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -1086,8 +1120,12 @@ body {
   background: url('./images/gifticon-brand_new_mrpizza.png');
 }
 
-.gifticon-brand .brand-container .new-brand span,
-.gifticon-brand .brand-container .existing-brands ul li {
+.gifticon-brand .new-brand span {
+  cursor: pointer;
+}
+
+.gifticon-brand .new-brand span,
+.gifticon-brand .existing-brands ul li {
   /* padding-top: 71px; */
   color: #828282;
   font-size: 11px;
@@ -1097,7 +1135,7 @@ body {
   bottom: 13px; */
 }
 
-.gifticon-brand .brand-container .existing-brands {
+.gifticon-brand .existing-brands {
   width: 498px;
   height: 95px;
   border-top: 1px solid #e6e6e6;
@@ -1105,31 +1143,94 @@ body {
   background: #f8f8f8;
 }
 
-.gifticon-brand .brand-container .existing-brands ul li:first-of-type::before,
-.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(2)::before,
-.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(3)::before,
-.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(4)::before {
+.gifticon-brand .existing-brands ul::before {
   content: '';
-  display: inline-block;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  background: url('./images/gifticon-brand_left-arrow.png');
+  width: 11px;
+  height: 15px;
+  cursor: pointer;
 }
 
-.gifticon-brand .brand-container .existing-brands ul li:first-of-type::before {
+.gifticon-brand .existing-brands ul {
+  position: relative;
+}
+
+.gifticon-brand .existing-brands ul::after {
+  content: '';
+  position: absolute;
+  top: 39px;
+  right: 0;
+  background: url('./images/gifticon-brand_right-arrow.png');
+  width: 11px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.gifticon-brand .existing-brands ul li {
+  cursor: pointer;
+}
+
+.gifticon-brand .existing-brands ul li:first-of-type,
+.gifticon-brand .existing-brands ul li:nth-of-type(2),
+.gifticon-brand .existing-brands ul li:nth-of-type(3),
+.gifticon-brand .existing-brands ul li:nth-of-type(4) {
+  position: absolute;
+  top: 71px;
+}
+
+.gifticon-brand .existing-brands ul li:first-of-type {
+  left: 57px;
+}
+
+.gifticon-brand .existing-brands ul li:nth-of-type(2) {
+  left: 172px;
+}
+
+.gifticon-brand .existing-brands ul li:nth-of-type(3) {
+  left: 285px;
+}
+
+.gifticon-brand .existing-brands ul li:nth-of-type(4) {
+  left: 405px;
+}
+
+.gifticon-brand .existing-brands ul li:first-of-type::before,
+.gifticon-brand .existing-brands ul li:nth-of-type(2)::before,
+.gifticon-brand .existing-brands ul li:nth-of-type(3)::before,
+.gifticon-brand .existing-brands ul li:nth-of-type(4)::before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+}
+
+.gifticon-brand .existing-brands ul li:first-of-type::before {
+  top: -50px;
+  left: -11px;
   width: 54px;
   height: 28px;
   background: url('./images/gifticon-brand_natuur.png');
 }
 
-.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(2)::before {
+.gifticon-brand .existing-brands ul li:nth-of-type(2)::before {
+  top: -52px;
+  left: -20px;
   width: 81px;
   height: 30px;
   background: url('./images/gifticon-brand_dunkin.png');
 }
-.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(3)::before {
+.gifticon-brand .existing-brands ul li:nth-of-type(3)::before {
+  top: -51px;
+  left: -5px;
   width: 51px;
   height: 30px;
   background: url('./images/gifticon-brand_smoothie-king.png');
 }
-.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(4)::before {
+.gifticon-brand .existing-brands ul li:nth-of-type(4)::before {
+  top: -49px;
+  left: -22px;
   width: 71px;
   height: 27px;
   background: url('./images/gifticon-brand_outback.png');
@@ -1143,3 +1244,128 @@ body {
 ### #   #  # #    # #    #   #   
 ### #    # #  ####  #    #   #   
 */
+
+.right {
+  position: absolute;
+  padding-left: 980px;
+}
+
+.viewed-items,
+.sample-zone {
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.viewed-items .title-bar,
+.sample-zone .title-bar {
+  padding-top: 8px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e6e6e6;
+  background: #f3f3f3;
+  /* text-align: center; */
+}
+
+.viewed-items .item .title,
+.viewed-items .notice,
+.sample-zone .item p {
+  color: #828282;
+  font-size: 11px;
+}
+
+.viewed-items .item .price,
+.sample-zone .item .title {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bolder;
+}
+
+/* 
+    #    # # ###### #    # ###### #####        # ##### ###### #    #  ####  
+    #    # # #      #    # #      #    #       #   #   #      ##  ## #      
+    #    # # #####  #    # #####  #    # ##### #   #   #####  # ## #  ####  
+### #    # # #      # ## # #      #    #       #   #   #      #    #      # 
+###  #  #  # #      ##  ## #      #    #       #   #   #      #    # #    # 
+###   ##   # ###### #    # ###### #####        #   #   ###### #    #  ####  
+*/
+
+.viewed-items {
+  position: relative;
+  width: 95px;
+  /* text-align: center; */
+  /* min-height: 413px; */
+}
+
+.viewed-items .arrow-button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  /* display: block; */
+}
+
+.viewed-items ul li {
+  position: relative;
+}
+
+.viewed-items .item:first-of-type {
+  padding-top: 69px;
+  padding-left: 2px;
+}
+
+.viewed-items .item:first-of-type .price {
+  margin-top: 4px;
+}
+
+.viewed-items .item:first-of-type::before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  top: 9px;
+  left: 23px;
+  background: url('./images/viewed-items_red-berry-heart-cake.png');
+  width: 50px;
+  height: 48px;
+}
+
+.viewed-items .item:nth-of-type(2)::before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('./images/viewed-items_black-forest.png');
+  width: 49px;
+  height: 48px;
+}
+
+.viewed-items .item .title,
+.viewed-items .notice {
+  letter-spacing: -1.6px;
+}
+
+.viewed-items .notice {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #e6e6e6;
+  background: #fafafa;
+  line-height: 14px;
+}
+
+/* 
+     ####    ##   #    # #####  #      ######       ######  ####  #    # ###### 
+    #       #  #  ##  ## #    # #      #                #  #    # ##   # #      
+     ####  #    # # ## # #    # #      #####  #####    #   #    # # #  # #####  
+###      # ###### #    # #####  #      #              #    #    # #  # # #      
+### #    # #    # #    # #      #      #             #     #    # #   ## #      
+###  ####  #    # #    # #      ###### ######       ######  ####  #    # ###### 
+*/
+
+.sample-zone {
+  width: 95px;
+  height: 195px;
+  margin-top: 14px;
+}
+
+.sample-zone .title,
+.sample-zone p {
+  letter-spacing: -1.6px;
+}
