@@ -696,6 +696,7 @@ body {
 .present .tab li {
   /* display: inline-block; */
   min-width: 136px;
+  cursor: pointer;
   /* background: red; */
 }
 
@@ -755,9 +756,13 @@ body {
   height: 173px;
 }
 
-.present .tab-content:first-of-type {
-  background: url('./images/present_burger.png');
+.present .tab-content li {
+  cursor: pointer;
 }
+
+/* .present .tab-content:first-of-type {
+  background: url('./images/present_burger.png');
+} */
 
 .present .tab-content .item .title {
   letter-spacing: -0.9px;
@@ -863,6 +868,271 @@ body {
   color: #333333;
   font-size: 12px;
   font-weight: bolder;
+}
+
+/* 
+    ##### #    # ###### #    # ######       #####    ##   #    # #    # # #    #  ####  
+      #   #    # #      ##  ## #            #    #  #  #  ##   # #   #  # ##   # #    # 
+      #   ###### #####  # ## # #####  ##### #    # #    # # #  # ####   # # #  # #      
+###   #   #    # #      #    # #            #####  ###### #  # # #  #   # #  # # #  ### 
+###   #   #    # #      #    # #            #   #  #    # #   ## #   #  # #   ## #    # 
+###   #   #    # ###### #    # ######       #    # #    # #    # #    # # #    #  ####  
+*/
+
+.theme-ranking {
+  margin-top: 28px;
+}
+
+.theme-ranking .title-bar {
+  padding-left: 1px;
+  margin-bottom: 9px;
+}
+
+.theme-ranking .title-bar h2 {
+  position: absolute;
+}
+
+.theme-ranking .title-bar p {
+  padding-left: 74px;
+}
+
+.theme-ranking .theme {
+  position: relative;
+}
+
+.theme-ranking .theme:nth-of-type(2) {
+  position: absolute;
+  z-index: 1;
+}
+
+.theme-ranking .theme:nth-of-type(3) {
+  padding-left: 375px;
+  /* background: red; */
+}
+
+.theme-ranking .theme .title {
+  padding-left: 1px;
+}
+
+.theme-ranking .theme .title h2 {
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  width: 344px;
+  color: #969696;
+  font-size: 12px;
+  font-weight: bolder;
+  border: 1px solid #f1f1f1;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  letter-spacing: -1px;
+}
+
+.theme-ranking .theme .rank,
+.theme-ranking .theme .item-name,
+.theme-ranking .theme .price {
+  font-size: 11px;
+}
+
+.theme-ranking .theme .rank {
+  color: #ff8e0a;
+  font-weight: bolder;
+}
+
+.theme-ranking .theme .item-name {
+  color: #646464;
+}
+
+.theme-ranking .theme .price {
+  color: #9e9e9e;
+}
+
+.theme-ranking .theme ul {
+  position: relative;
+  padding-left: 164px;
+  margin-top: 9px;
+}
+
+.theme-ranking .theme:nth-of-type(2) ul::before,
+.theme-ranking .theme:nth-of-type(3) ul::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 1px;
+}
+
+.theme-ranking .theme:nth-of-type(2) ul::before {
+  background: url('./images/theme-ranking_topic1.png');
+  width: 144px;
+  height: 83px;
+}
+
+.theme-ranking .theme:nth-of-type(3) ul::before {
+  background: url('./images/theme-ranking_topic2.png');
+  width: 145px;
+  height: 83px;
+}
+
+.theme-ranking .theme ul li {
+  position: relative;
+}
+
+.theme-ranking .theme ul li:not(:first-of-type) {
+  margin-top: 2px;
+}
+
+.theme-ranking .theme ul li .price {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+/* 
+    #    #  ####  #####       ###### #    # ###### #    # #####        ####  # ###### ##### #  ####   ####  #    # 
+    #    # #    #   #         #      #    # #      ##   #   #         #    # # #        #   # #    # #    # ##   # 
+    ###### #    #   #   ##### #####  #    # #####  # #  #   #   ##### #      # #####    #   # #      #    # # #  # 
+### #    # #    #   #         #      #    # #      #  # #   #         #  ### # #        #   # #      #    # #  # # 
+### #    # #    #   #         #       #  #  #      #   ##   #         #    # # #        #   # #    # #    # #   ## 
+### #    #  ####    #         ######   ##   ###### #    #   #          ####  # #        #   #  ####   ####  #    # 
+*/
+
+.hot-event-gifticon {
+  margin-top: 29px;
+  padding-left: 1px;
+}
+
+.hot-event-gifticon .title-bar h2 {
+  position: absolute;
+}
+
+.hot-event-gifticon .title-bar p {
+  padding-left: 139px;
+}
+
+.hot-event-gifticon .section-container {
+  position: relative;
+  margin-top: 11px;
+  height: 75px;
+}
+
+.hot-event-gifticon .section {
+  display: inline-block;
+  width: 231px;
+  height: 75px;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+.hot-event-gifticon .section:nth-of-type(2),
+.hot-event-gifticon .section:nth-of-type(3) {
+  margin-left: 8px;
+}
+
+/* 
+     ####  # ###### ##### #  ####   ####  #    #       #####  #####    ##   #    # #####  
+    #    # # #        #   # #    # #    # ##   #       #    # #    #  #  #  ##   # #    # 
+    #      # #####    #   # #      #    # # #  # ##### #####  #    # #    # # #  # #    # 
+### #  ### # #        #   # #      #    # #  # #       #    # #####  ###### #  # # #    # 
+### #    # # #        #   # #    # #    # #   ##       #    # #   #  #    # #   ## #    # 
+###  ####  # #        #   #  ####   ####  #    #       #####  #    # #    # #    # #####  
+*/
+
+.gifticon-brand {
+  padding-left: 1px;
+  margin-top: 29px;
+}
+
+.gifticon-brand .title-bar {
+  position: relative;
+}
+
+.gifticon-brand .title-bar h2 {
+  position: absolute;
+  top: 1px;
+}
+
+.gifticon-brand .title-bar p {
+  padding-left: 106px;
+}
+
+.gifticon-brand .brand-container {
+  margin-top: 10px;
+}
+
+.gifticon-brand .brand-container .new-brand,
+.gifticon-brand .brand-container .existing-brands {
+  box-sizing: border-box;
+}
+
+.gifticon-brand .brand-container .new-brand {
+  position: relative;
+  padding-top: 65px;
+  padding-right: 4px;
+  width: 212px;
+  height: 95px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.gifticon-brand .brand-container .new-brand span::before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 41px;
+  width: 124px;
+  height: 31px;
+  background: url('./images/gifticon-brand_new_mrpizza.png');
+}
+
+.gifticon-brand .brand-container .new-brand span,
+.gifticon-brand .brand-container .existing-brands ul li {
+  /* padding-top: 71px; */
+  color: #828282;
+  font-size: 11px;
+  letter-spacing: -1.4px;
+  /* position: absolute;
+  left: 78px;
+  bottom: 13px; */
+}
+
+.gifticon-brand .brand-container .existing-brands {
+  width: 498px;
+  height: 95px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  background: #f8f8f8;
+}
+
+.gifticon-brand .brand-container .existing-brands ul li:first-of-type::before,
+.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(2)::before,
+.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(3)::before,
+.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(4)::before {
+  content: '';
+  display: inline-block;
+}
+
+.gifticon-brand .brand-container .existing-brands ul li:first-of-type::before {
+  width: 54px;
+  height: 28px;
+  background: url('./images/gifticon-brand_natuur.png');
+}
+
+.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(2)::before {
+  width: 81px;
+  height: 30px;
+  background: url('./images/gifticon-brand_dunkin.png');
+}
+.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(3)::before {
+  width: 51px;
+  height: 30px;
+  background: url('./images/gifticon-brand_smoothie-king.png');
+}
+.gifticon-brand .brand-container .existing-brands ul li:nth-of-type(4)::before {
+  width: 71px;
+  height: 27px;
+  background: url('./images/gifticon-brand_outback.png');
 }
 
 /* 
