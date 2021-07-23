@@ -250,6 +250,43 @@ table td {
   letter-spacing: -2.4px;
 }
 
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+.header {
+  position: relative;
+  height: 21px;
+}
+
+.header h1 {
+  position: absolute;
+  left: -1px;
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main {
+  margin-top: 10px;
+}
+
 /* 
     #    # #####    ##   #####  #####  ###### #####  
     #    # #    #  #  #  #    # #    # #      #    # 
@@ -284,6 +321,11 @@ body {
 .left {
   position: absolute;
   width: 220px;
+  z-index: 1;
+}
+
+.left .navigation li {
+  cursor: pointer;
 }
 
 .left ul .title {
@@ -403,7 +445,7 @@ body {
 ###  ####  # #        #   #  ####   ####  #    #       #    # ######  ####   ####  #    # #    # ###### #    # #####  #    #   #   #  ####  #    # 
 */
 
-.center .gifticon-recommendation::before {
+.gifticon-recommendation::before {
   content: '';
   position: absolute;
   top: 52px;
@@ -413,11 +455,11 @@ body {
   height: 318px;
 }
 
-.center .gifticon-recommendation {
+.gifticon-recommendation {
   position: relative;
 }
 
-.center .gifticon-recommendation .title-bar {
+.gifticon-recommendation .title-bar {
   padding-top: 16px;
   padding-bottom: 12px;
   padding-left: 17px;
@@ -428,15 +470,15 @@ body {
   background: #f6f6f6;
 }
 
-.center .gifticon-recommendation .title-bar h2 {
+.gifticon-recommendation .title-bar h2 {
   position: absolute;
 }
 
-.center .gifticon-recommendation .title-bar p {
+.gifticon-recommendation .title-bar p {
   padding-left: 92px;
 }
 
-.center .gifticon-recommendation ul {
+.gifticon-recommendation ul {
   position: relative;
   min-height: 333px;
   border-left: 1px solid #e6e6e6;
@@ -445,13 +487,17 @@ body {
   box-sizing: border-box;
 }
 
-.center .gifticon-recommendation ul .best {
+.gifticon-recommendation ul li {
+  cursor: pointer;
+}
+
+.gifticon-recommendation ul .best {
   position: absolute;
   left: 17px;
   top: 19px;
 }
 
-.center .gifticon-recommendation ul .best::before {
+.gifticon-recommendation ul .best::before {
   content: '';
   display: inline-block;
   background: url('./images/gifticon-recommendation_best-dunkin.png') no-repeat;
@@ -459,20 +505,20 @@ body {
   height: 206px;
 }
 
-.center .gifticon-recommendation ul .best .information {
+.gifticon-recommendation ul .best .information {
   padding-top: 50px;
   /* padding-left: 2px; */
 }
 
-.center .gifticon-recommendation ul .best .brand,
-.center .gifticon-recommendation ul .best .title,
-.center .gifticon-recommendation ul .best .price {
+.gifticon-recommendation ul .best .brand,
+.gifticon-recommendation ul .best .title,
+.gifticon-recommendation ul .best .price {
   /* font-size: 12px; */
   font-weight: bolder;
   /* letter-spacing: -0.5px; */
 }
 
-.center .gifticon-recommendation ul .best .brand {
+.gifticon-recommendation ul .best .brand {
   /* display: inline-block; */
   position: absolute;
   padding-left: 2px;
@@ -481,7 +527,7 @@ body {
   letter-spacing: -0.5px;
 }
 
-.center .gifticon-recommendation ul .best .title {
+.gifticon-recommendation ul .best .title {
   /* display: inline-block; */
   padding-left: 68px;
   color: #1e1e1e;
@@ -489,129 +535,334 @@ body {
   letter-spacing: -0.5px;
 }
 
-.center .gifticon-recommendation ul .best .price {
+.gifticon-recommendation ul .best .price {
   margin-top: 9px;
   color: #e70002;
   font-size: 14px;
   letter-spacing: -0.5px;
 }
 /* ---------------- */
-.center .gifticon-recommendation ul .item:nth-of-type(2)::before,
-.center .gifticon-recommendation ul .item:nth-of-type(3)::before,
-.center .gifticon-recommendation ul .item:nth-of-type(4)::before,
-.center .gifticon-recommendation ul .item:nth-of-type(5)::before,
-.center .gifticon-recommendation ul .item:nth-of-type(6)::before,
-.center .gifticon-recommendation ul .item:nth-of-type(7)::before {
+.gifticon-recommendation ul .item:nth-of-type(2)::before,
+.gifticon-recommendation ul .item:nth-of-type(3)::before,
+.gifticon-recommendation ul .item:nth-of-type(4)::before,
+.gifticon-recommendation ul .item:nth-of-type(5)::before,
+.gifticon-recommendation ul .item:nth-of-type(6)::before,
+.gifticon-recommendation ul .item:nth-of-type(7)::before {
   content: '';
   position: absolute;
   top: -77px;
   left: 18px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(2),
-.center .gifticon-recommendation ul .item:nth-of-type(3),
-.center .gifticon-recommendation ul .item:nth-of-type(4),
-.center .gifticon-recommendation ul .item:nth-of-type(5),
-.center .gifticon-recommendation ul .item:nth-of-type(6),
-.center .gifticon-recommendation ul .item:nth-of-type(7) {
+.gifticon-recommendation ul .item:nth-of-type(2),
+.gifticon-recommendation ul .item:nth-of-type(3),
+.gifticon-recommendation ul .item:nth-of-type(4),
+.gifticon-recommendation ul .item:nth-of-type(5),
+.gifticon-recommendation ul .item:nth-of-type(6),
+.gifticon-recommendation ul .item:nth-of-type(7) {
   position: absolute;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(2),
-.center .gifticon-recommendation ul .item:nth-of-type(3),
-.center .gifticon-recommendation ul .item:nth-of-type(4) {
+.gifticon-recommendation ul .item:nth-of-type(2),
+.gifticon-recommendation ul .item:nth-of-type(3),
+.gifticon-recommendation ul .item:nth-of-type(4) {
   top: 105px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(5),
-.center .gifticon-recommendation ul .item:nth-of-type(6),
-.center .gifticon-recommendation ul .item:nth-of-type(7) {
+.gifticon-recommendation ul .item:nth-of-type(5),
+.gifticon-recommendation ul .item:nth-of-type(6),
+.gifticon-recommendation ul .item:nth-of-type(7) {
   top: 274px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(2)::before {
+.gifticon-recommendation ul .item:nth-of-type(2)::before {
   background: url('./images/gifticon-recommendation_lotteria-burger.png');
   width: 72px;
   height: 53px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(3)::before {
+.gifticon-recommendation ul .item:nth-of-type(3)::before {
   background: url('./images/gifticon-recommendation_coffeebean-macchiato.png');
   width: 52px;
   height: 68px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(4)::before {
+.gifticon-recommendation ul .item:nth-of-type(4)::before {
   background: url('./images/gifticon-recommendation_baskinrobbins-icecream.png');
   width: 60px;
   height: 67px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(5)::before {
+.gifticon-recommendation ul .item:nth-of-type(5)::before {
   background: url('./images/gifticon-recommendation_javacity-latte.png');
   width: 60px;
   height: 67px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(6)::before {
+.gifticon-recommendation ul .item:nth-of-type(6)::before {
   background: url('./images/gifticon-recommendation_friedchicken.png');
   width: 87px;
   height: 50px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(7)::before {
+.gifticon-recommendation ul .item:nth-of-type(7)::before {
   background: url('./images/gifticon-recommendation_parisbaguette-cake.png');
   width: 67px;
   height: 65px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(2),
-.center .gifticon-recommendation ul .item:nth-of-type(5) {
+.gifticon-recommendation ul .item:nth-of-type(2),
+.gifticon-recommendation ul .item:nth-of-type(5) {
   left: 307px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(3),
-.center .gifticon-recommendation ul .item:nth-of-type(6) {
+.gifticon-recommendation ul .item:nth-of-type(3),
+.gifticon-recommendation ul .item:nth-of-type(6) {
   left: 450px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(4),
-.center .gifticon-recommendation ul .item:nth-of-type(7) {
+.gifticon-recommendation ul .item:nth-of-type(4),
+.gifticon-recommendation ul .item:nth-of-type(7) {
   left: 594px;
 }
 
-.center .gifticon-recommendation ul .item .title {
+.gifticon-recommendation ul .item .title {
   color: #646464;
   font-size: 12px;
 }
 
-.center .gifticon-recommendation ul .item .price {
+.gifticon-recommendation ul .item .price {
   color: #333333;
   font-size: 12px;
   font-weight: bolder;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(2) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(3) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(4) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(5) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(6) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(7) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(8) .title,
-.center .gifticon-recommendation ul .item:nth-of-type(9) .title {
+.gifticon-recommendation ul .item:nth-of-type(2) .title,
+.gifticon-recommendation ul .item:nth-of-type(3) .title,
+.gifticon-recommendation ul .item:nth-of-type(4) .title,
+.gifticon-recommendation ul .item:nth-of-type(5) .title,
+.gifticon-recommendation ul .item:nth-of-type(6) .title,
+.gifticon-recommendation ul .item:nth-of-type(7) .title,
+.gifticon-recommendation ul .item:nth-of-type(8) .title,
+.gifticon-recommendation ul .item:nth-of-type(9) .title {
   letter-spacing: -0.9px;
   line-height: 15px;
 }
 
-.center .gifticon-recommendation ul .item:nth-of-type(2) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(3) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(4) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(5) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(6) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(7) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(8) .price,
-.center .gifticon-recommendation ul .item:nth-of-type(9) .price {
+.gifticon-recommendation ul .item:nth-of-type(2) .price,
+.gifticon-recommendation ul .item:nth-of-type(3) .price,
+.gifticon-recommendation ul .item:nth-of-type(4) .price,
+.gifticon-recommendation ul .item:nth-of-type(5) .price,
+.gifticon-recommendation ul .item:nth-of-type(6) .price,
+.gifticon-recommendation ul .item:nth-of-type(7) .price,
+.gifticon-recommendation ul .item:nth-of-type(8) .price,
+.gifticon-recommendation ul .item:nth-of-type(9) .price {
   margin-top: 5px;
+}
+
+/* 
+    #####  #####  ######  ####  ###### #    # ##### 
+    #    # #    # #      #      #      ##   #   #   
+    #    # #    # #####   ####  #####  # #  #   #   
+### #####  #####  #           # #      #  # #   #   
+### #      #   #  #      #    # #      #   ##   #   
+### #      #    # ######  ####  ###### #    #   #   
+*/
+
+.present {
+  margin-top: 30px;
+}
+
+.present .title-bar {
+  position: relative;
+}
+
+.present .title-bar h2 {
+  position: absolute;
+  top: -1px;
+}
+
+.present .title-bar p {
+  padding-left: 120px;
+  margin-top: 1px;
+}
+
+.present .tab {
+  position: relative;
+  height: 26px;
+  padding-top: 8px;
+}
+
+.present .tab li {
+  /* display: inline-block; */
+  min-width: 136px;
+  /* background: red; */
+}
+
+.present .tab li:first-of-type {
+  background: url('./images/');
+  background: #7a7a7a;
+  border: 1px solid #6b6b6b;
+  /* text-align: center; */
+}
+
+.present .tab li:nth-of-type(2),
+.present .tab li:nth-of-type(3),
+.present .tab li:nth-of-type(4) {
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+}
+
+.present .tab li:first-of-type,
+.present .tab li:nth-of-type(2),
+.present .tab li:nth-of-type(3),
+.present .tab li:nth-of-type(4) {
+  position: absolute;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.present .tab li:nth-of-type(2) {
+  left: 136px;
+}
+
+.present .tab li:nth-of-type(3) {
+  left: 272px;
+}
+
+.present .tab li:nth-of-type(4) {
+  left: 408px;
+}
+
+/* 
+.gifticon-recommendation ul .item .title {
+  color: #646464;
+  font-size: 12px;
+}
+
+.gifticon-recommendation ul .item .price {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bolder;
+}
+*/
+
+.present .tab-content {
+  position: relative;
+  height: 173px;
+}
+
+.present .tab-content:first-of-type {
+  background: url('./images/present_burger.png');
+}
+
+.present .tab-content .item .title {
+  letter-spacing: -0.9px;
+  line-height: 15px;
+}
+
+.present .tab-content .item .price {
+  margin-top: 5px;
+}
+
+.present .tab-content .item:first-of-type::before,
+.present .tab-content .item:nth-of-type(2)::before,
+.present .tab-content .item:nth-of-type(3)::before,
+.present .tab-content .item:nth-of-type(4)::before,
+.present .tab-content .item:nth-of-type(5)::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  /* left: 17px; */
+}
+
+.present .tab-content .item:first-of-type::before {
+  left: 18px;
+  background: url('./images/present_burger.png');
+  width: 80px;
+  height: 58px;
+}
+
+.present .tab-content .item:nth-of-type(2)::before {
+  left: 32px;
+  background: url('./images/present_coffee.png');
+  width: 51px;
+  height: 70px;
+}
+
+.present .tab-content .item:nth-of-type(3)::before {
+  left: 28px;
+  background: url('./images/present_cake.png');
+  width: 59px;
+  height: 72px;
+}
+
+.present .tab-content .item:nth-of-type(4)::before {
+  left: 28px;
+  background: url('./images/present_overload.png');
+  width: 58px;
+  height: 75px;
+}
+
+.present .tab-content .item:nth-of-type(5)::before {
+  left: 18px;
+  background: url('./images/present_bread.png');
+  width: 73px;
+  height: 59px;
+}
+
+.present .tab-content .item:first-of-type,
+.present .tab-content .item:nth-of-type(2),
+.present .tab-content .item:nth-of-type(3),
+.present .tab-content .item:nth-of-type(4),
+.present .tab-content .item:nth-of-type(5) {
+  /* top: 30px; */
+
+  top: 109px;
+}
+
+.present .tab-content .item:first-of-type {
+  position: absolute;
+  /* top: 30px; */
+  left: 18px;
+}
+
+.present .tab-content .item:nth-of-type(2) {
+  position: absolute;
+  /* top: 30px; */
+  left: 162px;
+}
+
+.present .tab-content .item:nth-of-type(3) {
+  position: absolute;
+  /* top: 30px; */
+  left: 306px;
+}
+
+.present .tab-content .item:nth-of-type(4) {
+  position: absolute;
+  /* top: 30px; */
+  left: 450px;
+}
+
+.present .tab-content .item:nth-of-type(5) {
+  position: absolute;
+  /* top: 30px; */
+  left: 594px;
+}
+
+.present .tab-content .item .title {
+  color: #646464;
+  font-size: 12px;
+}
+
+.present .tab-content .item .price {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bolder;
 }
 
 /* 
