@@ -360,6 +360,7 @@ table td {
   padding-left: 3px;
   background: url('./images/button07_head.png') left no-repeat;
 }
+
 .button07 > .tail {
   padding-right: 3px;
   background: url('./images/button07_tail.png') right no-repeat;
@@ -400,6 +401,12 @@ table td {
   box-sizing: border-box;
   vertical-align: top;
   letter-spacing: -1px;
+}
+
+.button07.crossref {
+  background: url('./images/button07_crossref.png');
+  width: 42px;
+  height: 15px;
 }
 
 .button08 {
