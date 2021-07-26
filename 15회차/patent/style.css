@@ -142,6 +142,11 @@
   }
 
   /* added personally from below */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   button {
     padding: 0;
     border: none;
@@ -244,6 +249,121 @@ body {
 }
 
 /* 
+ ####   ####  #    # #    #  ####  #    # 
+#    # #    # ##  ## ##  ## #    # ##   # 
+#      #    # # ## # # ## # #    # # #  # 
+#      #    # #    # #    # #    # #  # # 
+#    # #    # #    # #    # #    # #   ## 
+ ####   ####  #    # #    #  ####  #    # 
+*/
+
+.tools .options li,
+.patent-details .details > .title h2,
+.references ul li h2 a:hover,
+.content ul li .title a,
+.patent_related-resources .content-container .content ul li a {
+  color: #26669d;
+}
+
+.tools .options li,
+.patent-details .details > .title h2,
+.references ul li h2 a,
+.references ul li h2 a:hover,
+.content ul li .title a,
+.patent_related-resources .content-container .content ul li a {
+  font-family: 'dotum', sans-serif;
+}
+
+.tools .options li,
+.references ul li h2 a,
+.content ul li .title a,
+.patent_related-resources .content-container .content ul li a {
+  font-size: 12px;
+}
+
+.patent-details .details > .title h2,
+.tools .options li {
+  font-weight: bolder;
+}
+
+.patent-details .details > .title h2 {
+  font-size: 15px;
+}
+
+.patent_related-resources .content-container .content ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ------- */
+.keyword_related-resources .content-container .tabs button.current,
+.patent_related-resources .content-container .tabs button.current {
+  font-family: 'dotum', sans-serif;
+  font-weight: bolder;
+  color: #004e9f;
+}
+
+.keyword_related-resources .content-container .tabs button.current {
+  font-size: 11px;
+}
+
+.patent_related-resources .content-container .tabs button.current {
+  font-size: 12px;
+}
+
+.show-more {
+  color: #00a5f2;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* ------------ */
+.patent-details .tools .input00 + span,
+.details .list-container .list-title li,
+.details .content-container .section .title h2,
+.details .content-container {
+  color: #807f7f;
+  font-family: 'dotum', sans-serif;
+}
+
+.patent-details .tools .input00 + span,
+.details .list-container .list-title li,
+.details .content-container .notice {
+  font-size: 12px;
+}
+
+.details .content-container .section .title h2 {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+/* ---------- */
+.details .list-container .list-content li,
+.details .content-container .section p,
+.details .content-container .section ul li {
+  color: black;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+}
+
+/* ------------ */
+.references ul li h2 a,
+.keyword_related-resources .content-container .content .details .years,
+.keyword_related-resources .content-container .content .details .association {
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  color: #454545;
+}
+
+/* ------ */
+.keyword_related-resources .content-container .tabs button,
+.patent_related-resources .content-container .tabs button {
+  color: #737373;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+}
+
+/* 
     #####    ##   ##### ###### #    # #####       #####  ###### #####   ##   # #       ####  
     #    #  #  #    #   #      ##   #   #         #    # #        #    #  #  # #      #      
     #    # #    #   #   #####  # #  #   #   ##### #    # #####    #   #    # # #       ####  
@@ -252,9 +372,39 @@ body {
 ### #      #    #   #   ###### #    #   #         #####  ######   #   #    # # ######  ####  
 */
 
+/* 
+#                                             
+#           #####  ####   ####  #       ####  
+#             #   #    # #    # #      #      
+#             #   #    # #    # #       ####  
+#       ###   #   #    # #    # #           # 
+#       ###   #   #    # #    # #      #    # 
+####### ###   #    ####   ####  ######  ####  
+*/
+
+.patent-details .tools .options li {
+  position: relative;
+}
+
+.patent-details .tools .options li:first-of-type::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  background: url('./images/tools_arrow.png');
+}
+
+.patent-details .tools .options li:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 11px;
+  background: url('./images/tools_bar.png');
+}
+
 .patent-details .details {
   width: 756px;
-  height: 503px;
+  /* height: 503px; */
   border: 5px solid #edf3f7;
   box-sizing: border-box;
 }
@@ -540,14 +690,14 @@ body {
 }
 
 .pagination ul li a {
-  color: black;
+  color: #454545;
   font-size: 13px;
   font-family: 'Arial', sans-serif;
   text-decoration: none;
 }
 
 .pagination ul li .current {
-  color: #464646;
+  color: black;
   font-weight: bolder;
 }
 
