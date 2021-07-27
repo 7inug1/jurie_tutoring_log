@@ -14,15 +14,13 @@
           <img src="./images/title.png" alt="특허 상세정보" />
         </div>
         <div class="tools">
-          <ul class="options">
-            <li>내보내기</li>
-            <li>즐겨찾기 저장</li>
-          </ul>
           <div class="pages">
-            <div class="input00">
-              <input type="text" />
+            <div class="input-container">
+              <div class="input00">
+                <input type="text" value="534" />
+              </div>
+              <span>/534건</span>
             </div>
-            <span>/ 534건</span>
 
             <div class="button-container whitespace-remover">
               <button class="button00 left"></button>
@@ -35,9 +33,7 @@
                   <span class="body">원문복사신청</span>
                 </span>
               </button>
-            </div>
 
-            <div class="button-container whitespace-remover">
               <button class="button02">
                 <span class="tail">
                   <span class="body">목록</span>
@@ -45,12 +41,26 @@
               </button>
             </div>
           </div>
+          <ul class="options">
+            <li><a href="#">내보내기</a></li>
+            <li><a href="#">즐겨찾기 저장</a></li>
+          </ul>
         </div>
         <div class="details">
           <div class="title">
             <h2>무선통신 안테나 디자인</h2>
+            <div class="mark-container whitespace-remover">
+              <div class="button03">
+                <span class="tail">
+                  <span class="body">원문</span>
+                </span>
+              </div>
+            </div>
           </div>
           <div class="list-container">
+            <div class="thumbnail-container">
+              <img src="./images/patent-details_thumbnail.png" alt="no image" />
+            </div>
             <ul class="list-title">
               <li>국가/구분</li>
               <li>디자인분류</li>
@@ -81,17 +91,23 @@
               </p>
             </div>
             <div class="section">
-              <h2>디자인 설명</h2>
+              <div class="title">
+                <h2>디자인 설명</h2>
+              </div>
               <ul>
                 <li>1. 재질은 합성수지 및 금속임.</li>
                 <li>
                   2. 본원 디자인은 무선통신 기능을 갖는 통신모듈이
                   디스플레이부를 포함하고 있는 본체(케이스형태임)로부터
-                  분리가능하게 결합된 것으로서, 상기 통신모듈은 본체에서
-                  분리되더라도 무선통신이 가능하며, 본체에 결합된 상태에서는...
+                  분리가능하게 결합된
+                  <br />
+                  것으로서, 상기 통신모듈은 본체에서 분리되더라도 무선통신이
+                  가능하며, 본체에 결합된 상태에서는...
                 </li>
               </ul>
-              <a href="#" class="show-more">더보기</a>
+              <div class="show-more">
+                <a href="#">더보기</a>
+              </div>
             </div>
             <div class="notice">
               ※ 특허정보는 특허청의 특허정보활용확산 정책의 일환으로
@@ -334,7 +350,9 @@
               </li>
             </ul>
           </div>
-          <a href="#" class="show-more">더보기</a>
+          <div class="show-more">
+            <a href="#">더보기</a>
+          </div>
         </div>
       </div>
     </div>
