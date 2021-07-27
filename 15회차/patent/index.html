@@ -211,24 +211,39 @@
           </li>
         </ul>
       </div>
-      <div class="keyword_related-resources">
-        <div class="title">
-          <h2>
-            <img src="./images/keyword_title.png" alt="주제어 연관자료" />
-          </h2>
-          <button class="button05"></button>
-        </div>
-        <div class="content-container">
-          <div class="tabs">
-            <button>논문</button>
-            <button class="current">특허</button>
-            <button>보고서</button>
-            <button>동향</button>
-            <button>표준규격</button>
-            <button>사실정보</button>
+      <div class="related-resources">
+        <div class="keyword_related-resources">
+          <div class="title">
+            <h2>
+              <img src="./images/keyword_title.png" alt="주제어 연관자료" />
+            </h2>
+            <div class="button-container">
+              <button class="button05"></button>
+            </div>
           </div>
-          <div class="content">
-            <ul>
+          <div class="content-container">
+            <div class="tabs">
+              <button class="tab01">
+                <span class="tail"><span class="body">논문</span></span>
+              </button>
+              <button class="current tab01">
+                <span class="tail"><span class="body">특허</span></span>
+              </button>
+              <button class="tab01">
+                <span class="tail"><span class="body">보고서</span></span>
+              </button>
+              <button class="tab01">
+                <span class="tail"><span class="body">동향</span></span>
+              </button>
+              <button class="tab01">
+                <span class="tail"><span class="body">표준규격</span></span>
+              </button>
+              <button class="tab01">
+                <span class="tail"><span class="body">사실정보</span></span>
+              </button>
+            </div>
+            <!-- <div> -->
+            <ul class="content">
               <li>
                 <div class="title">
                   <a href="#">가상현실 기술을 활용한 역사학습 콘텐츠의 구현</a>
@@ -299,67 +314,94 @@
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="pagination whitespace-remover">
-            <button class="button08 left-end"></button>
-            <button class="button08 left"></button>
-            <ul>
-              <li><a href="#">1</a></li>
-              <li><a href="#" class="current">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">6</a></li>
-              <li><a href="#">7</a></li>
-              <li><a href="#">8</a></li>
-              <li><a href="#">9</a></li>
-              <li><a href="#">10</a></li>
-            </ul>
-            <button class="button08 right"></button>
-            <button class="button08 right-end"></button>
+            <!-- </div> -->
+            <div class="pagination whitespace-remover">
+              <button class="button08 left-end"></button>
+              <button class="button08 left"></button>
+              <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#" class="current">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+              </ul>
+              <button class="button08 right"></button>
+              <button class="button08 right-end"></button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="patent_related-resources">
-        <div class="title">
-          <h2><img src="./images/patent_title.png" alt="특허 연관자료" /></h2>
-          <button class="button05"></button>
-        </div>
-        <div class="content-container">
-          <div class="tabs">
-            <button class="current">이 특허에 인용된 특허</button>
-            <button>이 특허를 인용된 특허</button>
-            <button>출원인의 동일분야 특허</button>
+        <div class="patent_related-resources">
+          <div class="title">
+            <h2><img src="./images/patent_title.png" alt="특허 연관자료" /></h2>
+            <div class="button-container">
+              <button class="button05"></button>
+            </div>
           </div>
-          <div class="content">
-            <ul>
+          <div class="content-container">
+            <div class="tabs">
+              <button class="current tab01">
+                <span class="tail">
+                  <span class="body">이 특허에 인용된 특허</span>
+                </span>
+              </button>
+              <button class="tab01">
+                <span class="tail">
+                  <span class="body">이 특허를 인용된 특허</span>
+                </span>
+              </button>
+              <button class="tab01">
+                <span class="tail">
+                  <span class="body">출원인의 동일분야 특허</span>
+                </span>
+              </button>
+            </div>
+            <!-- <div class="content"> -->
+            <ul class="content">
               <li>
-                <a href="#">
-                  Method of producing a Mad polypeptide (US-5302519)
-                </a>
+                <div class="title">
+                  <a href="#">
+                    Method of producing a Mad polypeptide (US-5302519)
+                  </a>
+                </div>
               </li>
-              <li><a href="#">Myod regulatory region (US-5352595)</a></li>
               <li>
-                <a href="#">
-                  Neurogenic differentiation (neurod) genes (US-5695995)
-                </a>
+                <div class="title">
+                  <a href="#">Myod regulatory region (US-5352595)</a>
+                </div>
               </li>
               <li>
-                <a href="#">
-                  Automated detection of objects in a biological sample
-                  (US-7558415)
-                </a>
+                <div class="title">
+                  <a href="#">
+                    Neurogenic differentiation (neurod) genes (US-5695995)
+                  </a>
+                </div>
               </li>
               <li>
-                <a href="#">
-                  Automated detection of objects in a biological sample
-                  (US-7177454)
-                </a>
+                <div class="title">
+                  <a href="#">
+                    Automated detection of objects in a biological sample
+                    (US-7558415)
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="title">
+                  <a href="#">
+                    Automated detection of objects in a biological sample
+                    (US-7177454)
+                  </a>
+                </div>
               </li>
             </ul>
-          </div>
-          <div class="show-more">
-            <a href="#">더보기</a>
+            <!-- </div> -->
+            <div class="show-more">
+              <a href="#">더보기</a>
+            </div>
           </div>
         </div>
       </div>
