@@ -403,13 +403,16 @@ body {
   left: 0;
   height: 1px;
   min-width: 757px;
-  background: url('./images/tools_horizontal-line.png');
+  background: url('./images/tools_horizontal-line.png') no-repeat;
 }
 
 .patent-details .tools {
   position: relative;
-  margin-top: 8px;
-  padding-top: 7px;
+  margin-top: 7px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  /* margin-top: 8px;
+  padding-top: 7px; */
   /* overflow: hidden; */
 }
 
@@ -459,7 +462,7 @@ body {
 .patent-details .pages {
   /* display: inline-block; */
   position: absolute;
-  top: 1px;
+  top: 0px;
   right: 0;
 }
 
@@ -468,22 +471,33 @@ body {
 }
 
 .patent-details .pages .input-container {
-  padding-top: 6px;
+  /* position: absolute;
+  right: 174px; */
+  padding-top: 7px;
 }
 
 .patent-details .pages .input00 {
+  /* padding-top: 1px; */
+  /* position: absolute;
+  top: 6px;
+  right: 220px; */
   padding-left: 6px;
+  vertical-align: top;
 }
 
 .patent-details .pages .input00 input {
   color: #807f7f;
   font-family: 'dotum', sans-serif;
   font-size: 12px;
-  vertical-align: top;
 }
 
 .patent-details .pages .input00 + span {
+  /* position: absolute;
+  right: 174px;
+  top: 10px; */
   margin-left: 8px;
+  padding-top: 4px;
+  vertical-align: top;
 }
 
 .patent-details .pages .button-container {
@@ -492,12 +506,12 @@ body {
 
 .patent-details .pages .button-container:nth-of-type(2) {
   margin-left: 4px;
-  padding-top: 8px;
+  padding-top: 9px;
 }
 
 .patent-details .pages .button-container + .button-container {
   margin-left: 16px;
-  padding-top: 5px;
+  padding-top: 6px;
 }
 
 .patent-details .pages .button-container .button02 {
@@ -515,7 +529,7 @@ body {
 */
 
 .patent-details .details {
-  margin-top: 8px;
+  /* margin-top: 8px; */
   width: 756px;
   padding-top: 20px;
   padding-left: 22px;
@@ -608,7 +622,7 @@ body {
 .patent-details .details .content-container .section p,
 .patent-details .details .content-container .section ul {
   margin-top: 19px;
-  padding-left: 2px;
+  padding-left: 1px;
 }
 .patent-details .details .content-container .section p,
 .patent-details .details .content-container .section ul li {
@@ -631,6 +645,61 @@ body {
 ### #   #  #      #      #      #   #  #      #   ## #    # #      #    # 
 ### #    # ###### #      ###### #    # ###### #    #  ####  ######  ####  
 */
+
+.references,
+.keyword_related-resources,
+.patent_related-resources {
+  padding-left: 30px;
+}
+
+.references {
+  margin-top: 39px;
+}
+
+.references .title {
+  position: relative;
+}
+
+.references .title h2 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+
+.references .title .button-container {
+  padding-left: 56px;
+}
+
+.references ul {
+  margin-top: 18px;
+}
+
+.references ul li {
+  position: relative;
+}
+
+.references ul li:not(:first-of-type) {
+  margin-top: 6px;
+}
+
+.references ul li .button06 {
+  position: absolute;
+  top: 3px;
+}
+
+.references ul li h2 {
+  padding-left: 15px;
+}
+
+.references ul li .button-container {
+  margin-top: 2px;
+  padding-left: 16px;
+  font-size: 0;
+}
+
+.references ul li .button-container button:not(:first-of-type) {
+  margin-left: 10px;
+}
 
 /* 
     #    # ###### #   # #    #  ####  #####  #####  
@@ -861,7 +930,7 @@ body {
   background: url('./images/button07_crossref.png');
   width: 42px;
   height: 15px;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
 .button08 {
