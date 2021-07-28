@@ -518,3 +518,32 @@ body {
   height: 48px;
   vertical-align: top;
 }
+
+.table00 table {
+  display: inline-block;
+  /* width:  */
+  border-top: 1px solid #99bddd;
+  border-bottom: 1px solid #99bddd;
+}
+
+.table00 table th {
+  background: #f9f9f9;
+  color: #1770b5;
+  font-size: 11px;
+  font-weight: bolder;
+  letter-spacing: -0.25px;
+  vertical-align: middle;
+}
+
+.table00 table td {
+  background: #ffffff;
+  color: #777777;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.table00 table th:not(:last-of-type),
+.table00 table td:not(:last-of-type) {
+  border-right: 1px solid #99bddd;
+}

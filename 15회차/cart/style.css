@@ -370,3 +370,57 @@ body {
   width: 29px;
   height: 41px;
 }
+
+/* table */
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main .table00 {
+  margin-top: 24px;
+}
+
+.table00 table {
+  display: inline-block;
+  border-top: 1px solid #99bddd;
+  border-bottom: 1px solid #99bddd;
+}
+
+.table00 table th,
+.table00 table td {
+  font-family: 'dotum', sans-serif;
+}
+
+.table00 table th {
+  background: #f9f9f9;
+  color: #1770b5;
+  font-size: 11px;
+  font-weight: bolder;
+  letter-spacing: -0.25px;
+  vertical-align: middle;
+}
+
+.table00 table th:first-of-type {
+  padding-top: 26px;
+  padding-bottom: 22px;
+}
+
+.table00 table td {
+  background: #ffffff;
+  color: #777777;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table00 table th:not(:last-of-type),
+.table00 table td:not(:last-of-type) {
+  border-right: 1px solid #99bddd;
+}
