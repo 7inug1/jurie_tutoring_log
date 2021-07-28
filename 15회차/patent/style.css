@@ -306,7 +306,7 @@ body {
 }
 
 .keyword_related-resources .content-container .tabs button.current {
-  font-size: 11px;
+  /* font-size: 11px; */
 }
 
 .patent_related-resources .content-container .tabs button.current {
@@ -443,6 +443,7 @@ body {
   width: 5px;
   height: 3px;
   background: url('./images/tools_arrow.png') no-repeat;
+  cursor: pointer;
 }
 
 .patent-details .tools .options li:not(:first-of-type)::before {
@@ -647,14 +648,13 @@ body {
 */
 
 .references,
-.keyword_related-resources,
-.patent_related-resources {
+.related-resources {
   padding-left: 30px;
 }
 
 .references {
   margin-top: 39px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .references .title,
@@ -674,10 +674,18 @@ body {
   top: 1px;
 }
 
-.keyword_related-resources .title h2,
+.keyword_related-resources .title h2 {
+  top: 3px;
+}
+
 .patent_related-resources .title h2 {
   top: 3px;
 }
+
+/* .keyword_related-resources .title h2,
+.patent_related-resources .title h2 {
+  top: 4px;
+} */
 
 .references .title .button-container {
   padding-left: 56px;
@@ -747,8 +755,8 @@ body {
 }
 
 .keyword_related-resources .content {
-  padding-top: 11px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 19px;
 }
 
 .patent_related-resources .content {
@@ -778,6 +786,28 @@ body {
   margin-top: 4px;
 }
 
+.patent_related-resources .tab01.current > .tail > .body::before {
+  content: '';
+  background: url('./images/patent_tab-current-icon.png');
+  /* display: inline-block; */
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 6px;
+  height: 4px;
+}
+
+.patent_related-resources .tab01 > .tail > .body::before {
+  content: '';
+  background: url('./images/patent_tab-icon.png');
+  /* display: inline-block; */
+  position: absolute;
+  top: 8px;
+  left: 11px;
+  width: 5px;
+  height: 4px;
+}
+
 .tab01 {
   display: inline-block;
   padding-left: 2px;
@@ -794,11 +824,43 @@ body {
 
 .tab01 > .tail > .body {
   display: inline-block;
+  position: relative;
   height: 21px;
   background: url('./images/tab_body.png') center repeat-x;
   box-sizing: border-box;
   padding-top: 4px;
-  min-width: 62px;
+}
+
+.tab01.current {
+  background: url('./images/current-tab_head.png') left no-repeat;
+}
+
+.tab01.current > .tail {
+  position: relative;
+  background: url('./images/current-tab_tail.png') right no-repeat;
+  z-index: 1;
+}
+
+.tab01.current > .tail > .body {
+  background: url('./images/current-tab_body.png') center repeat-x;
+}
+
+.keyword_related-resources .tab01 > .tail > .body {
+  min-width: 64px;
+}
+
+.keyword_related-resources .tab01.current > .tail > .body > span {
+  font-size: 11px;
+}
+
+.patent_related-resources .tab01 > .tail > .body {
+  padding-left: 20px;
+  padding-right: 7px;
+}
+
+.patent_related-resources .tab01.current > .tail > .body {
+  padding-top: 5px;
+  box-sizing: border-box;
 }
 
 /* 
@@ -812,7 +874,12 @@ body {
 */
 
 .keyword_related-resources {
-  margin-top: 20px;
+  margin-top: 17px;
+}
+
+.keyword_related-resources .content-container,
+.patent_related-resources .content-container {
+  margin-top: 21px;
 }
 
 .keyword_related-resources .content li .title {
@@ -820,7 +887,7 @@ body {
 }
 
 .keyword_related-resources .content li .details {
-  padding-left: 343px;
+  padding-left: 342px;
 }
 
 .keyword_related-resources .content li .details .years {
@@ -852,9 +919,9 @@ body {
   font-size: 0;
 }
 
-.keyword_related-resources .tabs button {
+.keyword_related-resources .tabs button:not(:first-of-type) {
   /* min-width: 66px; */
-  box-sizing: border-box;
+  margin-left: -1px;
   /* border-left: 1px solid; */
 }
 
@@ -867,6 +934,14 @@ body {
 #       ### #      #    #   #   #      #   ##   #   
 ####### ### #      #    #   #   ###### #    #   #   
 */
+
+.patent_related-resources {
+  margin-top: 17px;
+}
+
+.patent_related-resources .tabs button:not(:first-of-type) {
+  margin-left: -1px;
+}
 
 /* 
 # #    # #####  #    # ##### 
