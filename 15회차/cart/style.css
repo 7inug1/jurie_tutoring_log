@@ -235,3 +235,138 @@ body {
   padding-left: 310px;
   padding-right: 310px;
 }
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+.header {
+  position: relative;
+}
+
+.header h2 {
+  position: absolute;
+  left: -2px;
+  top: 9px;
+  cursor: pointer;
+}
+
+.header .progress {
+  position: relative;
+}
+
+.header .progress::after {
+  content: '';
+  background: url('./images/progress_horizontal-line.png');
+  position: absolute;
+  left: -1px;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  z-index: 2;
+}
+
+.header .progress ul {
+  font-size: 0;
+  padding-right: 29px;
+  text-align: right;
+}
+
+.header .progress li::before {
+  content: '';
+  background: url('./images/progress01_left.png');
+  position: absolute;
+  left: -29px;
+  width: 29px;
+  height: 41px;
+  z-index: 1;
+}
+
+.header .progress li {
+  display: inline-block;
+  position: relative;
+  margin-left: 29px;
+  padding-left: 51px;
+  padding-right: 10px;
+  /* padding-top: 15px; */
+  /* box-sizing: border-box; */
+  height: 41px;
+  background: url('./images/progress01_body.png');
+}
+
+.header .progress li::after {
+  content: '';
+  background: url('./images/progress01_right.png');
+  position: absolute;
+  right: -29px;
+  width: 29px;
+  height: 41px;
+}
+
+.header .progress li:first-of-type span::before {
+  content: '';
+  background: url('./images/progress_step1-number.png');
+  position: absolute;
+  left: -39px;
+  top: 5px;
+  width: 32px;
+  height: 9px;
+}
+
+.header .progress li:nth-of-type(2) span::before {
+  content: '';
+  background: url('./images/progress_step2-number.png');
+  position: absolute;
+  left: -41px;
+  top: 5px;
+  width: 34px;
+  height: 9px;
+}
+
+.header .progress li:nth-of-type(3) span::before {
+  content: '';
+  background: url('./images/progress_step3-number.png');
+  position: absolute;
+  left: -41px;
+  top: 5px;
+  width: 34px;
+  height: 9px;
+}
+
+.header .progress li span {
+  position: relative;
+  padding-top: 15px;
+  line-height: 58px;
+  /* box-sizing: border-box; */
+}
+
+.header .progress li.current::before {
+  content: '';
+  background: url('./images/progress02_left.png');
+  position: absolute;
+  left: -29px;
+  width: 29px;
+  height: 41px;
+  z-index: 1;
+}
+
+.header .progress li.current {
+  display: inline-block;
+  padding-right: 3px;
+  background: url('./images/progress02_body.png');
+  height: 41px;
+}
+
+.header .progress li.current::after {
+  content: '';
+  background: url('./images/progress02_right.png');
+  position: absolute;
+  right: -29px;
+  width: 29px;
+  height: 41px;
+}
