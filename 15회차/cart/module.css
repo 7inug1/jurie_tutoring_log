@@ -269,19 +269,24 @@ body {
 }
 
 .button03 {
-  border-left: 1px solid #d0d0d0;
-  border-right: 1px solid #d0d0d0;
-  background: url('./images/button03_head.png') left no-repeat;
+  padding-left: 1px;
+  background: url('./images/button03_headtail.png') left no-repeat;
 }
 
 .button03 > .tail {
-  background: url('./images/button03_tail.png') right no-repeat;
+  padding-right: 1px;
+  background: url('./images/button03_headtail.png') right no-repeat;
 }
 
 .button03 > .tail > .body {
   background: url('./images/button03_body.png') center repeat-x;
-  font-size: 11px;
+  padding-top: 2px;
+  padding-left: 6px;
+  padding-right: 4px;
   color: #777777;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  box-sizing: border-box;
 }
 
 .button03,
@@ -291,6 +296,7 @@ body {
   height: 16px;
   vertical-align: top;
 }
+
 .button04,
 .button04 > .tail,
 .button04 > .tail > .body {
@@ -298,6 +304,28 @@ body {
   height: 23px;
   vertical-align: top;
 }
+
+.button04 {
+  padding-left: 1px;
+  background: url('./images/button04_headtail.png') left no-repeat;
+}
+
+.button04 > .tail {
+  padding-right: 1px;
+  background: url('./images/button04_headtail.png') right no-repeat;
+}
+
+.button04 > .tail > .body {
+  background: url('./images/button04_body.png') center repeat-x;
+  padding-top: 6px;
+  padding-left: 9px;
+  padding-right: 8px;
+  color: #818181;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  box-sizing: border-box;
+}
+
 .button05,
 .button05 > .tail,
 .button05 > .tail > .body {
@@ -305,6 +333,25 @@ body {
   height: 21px;
   vertical-align: top;
 }
+
+.button05 {
+  padding-left: 4px;
+  background: url('./images/button05_head.png') left no-repeat;
+}
+
+.button05 > .tail {
+  padding-right: 3px;
+  background: url('./images/button05_tail.png') right no-repeat;
+}
+
+.button05 > .tail > .body {
+  padding-top: 3px;
+  padding-left: 8px;
+  padding-right: 9px;
+  background: url('./images/button05_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 .button06,
 .button06 > .tail,
 .button06 > .tail > .body {
@@ -312,6 +359,25 @@ body {
   height: 21px;
   vertical-align: top;
 }
+
+.button06 {
+  padding-left: 4px;
+  background: url('./images/button06_head.png') left no-repeat;
+}
+
+.button06 > .tail {
+  padding-right: 3px;
+  background: url('./images/button06_tail.png') right no-repeat;
+}
+
+.button06 > .tail > .body {
+  padding-top: 3px;
+  padding-left: 21px;
+  padding-right: 23px;
+  background: url('./images/button06_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 .button07,
 .button07 > .tail,
 .button07 > .tail > .body {
@@ -319,6 +385,43 @@ body {
   height: 21px;
   vertical-align: top;
 }
+
+.button07 {
+  padding-left: 4px;
+  background: url('./images/button07_head.png') left no-repeat;
+}
+
+.button07 > .tail {
+  padding-right: 3px;
+  background: url('./images/button07_tail.png') right no-repeat;
+}
+
+.button07 > .tail > .body {
+  padding-top: 3px;
+  padding-left: 7px;
+  padding-right: 8px;
+  background: url('./images/button07_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
+.button08 {
+  padding-left: 4px;
+  background: url('./images/button08_head.png') left no-repeat;
+}
+
+.button08 > .tail {
+  padding-right: 3px;
+  background: url('./images/button08_tail.png') right no-repeat;
+}
+
+.button08 > .tail > .body {
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 7px;
+  background: url('./images/button08_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 .button08,
 .button08 > .tail,
 .button08 > .tail > .body {
@@ -326,6 +429,36 @@ body {
   height: 22px;
   vertical-align: top;
 }
+
+.button09 {
+  padding-left: 4px;
+  background: url('./images/button09_head.png') left no-repeat;
+}
+
+.button09 > .tail {
+  padding-right: 3px;
+  background: url('./images/button09_tail.png') right no-repeat;
+}
+
+.button09 > .tail > .body::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  width: 2px;
+  height: 3px;
+  background: url('./images/button09_icon.png');
+}
+
+.button09 > .tail > .body {
+  position: relative;
+  padding-top: 1px;
+  padding-left: 9px;
+  padding-right: 7px;
+  background: url('./images/button09_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 .button09,
 .button09 > .tail,
 .button09 > .tail > .body {
@@ -333,6 +466,25 @@ body {
   height: 20px;
   vertical-align: top;
 }
+
+.button10 {
+  padding-left: 4px;
+  background: url('./images/button10_head.png') left no-repeat;
+}
+
+.button10 > .tail {
+  padding-right: 5px;
+  background: url('./images/button10_tail.png') right no-repeat;
+}
+
+.button10 > .tail > .body {
+  padding-top: 16px;
+  padding-left: 30px;
+  padding-right: 31px;
+  background: url('./images/button10_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 .button10,
 .button10 > .tail,
 .button10 > .tail > .body {
@@ -340,6 +492,25 @@ body {
   height: 49px;
   vertical-align: top;
 }
+
+.button11 {
+  padding-left: 4px;
+  background: url('./images/button11_head.png') left no-repeat;
+}
+
+.button11 > .tail {
+  padding-right: 5px;
+  background: url('./images/button11_tail.png') right no-repeat;
+}
+
+.button11 > .tail > .body {
+  padding-top: 15px;
+  padding-left: 29px;
+  padding-right: 31px;
+  background: url('./images/button11_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 .button11,
 .button11 > .tail,
 .button11 > .tail > .body {
