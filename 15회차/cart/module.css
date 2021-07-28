@@ -1,0 +1,349 @@
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    /* added personally */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* added personally from below */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  label,
+  input[type='radio'],
+  button {
+    cursor: pointer;
+  }
+
+  input[type='text'] {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  select {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+  }
+
+  /* for customizing the 'browsing-file' functionality */
+  input[type='file'] {
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  strong,
+  .bolder {
+    font-weight: bolder;
+  }
+}
+
+/* 
+#####  ###### #####   ####   ####  #    #   ##   #         #####  ######  ####  ###### #####  ####   ####   ####  
+#    # #      #    # #      #    # ##   #  #  #  #         #    # #      #      #        #   #    # #      #      
+#    # #####  #    #  ####  #    # # #  # #    # #         #    # #####   ####  #####    #   #       ####   ####  
+#####  #      #####       # #    # #  # # ###### #         #####  #           # #        #   #           #      # 
+#      #      #   #  #    # #    # #   ## #    # #         #   #  #      #    # #        #   #    # #    # #    # 
+#      ###### #    #  ####   ####  #    # #    # ######    #    # ######  ####  ######   #    ####   ####   ####  
+*/
+.whitespace-remover {
+  font-size: 0;
+}
+
+table td {
+  vertical-align: top;
+}
+
+/* 
+#####   ####  #####  #   # 
+#    # #    # #    #  # #  
+#####  #    # #    #   #   
+#    # #    # #    #   #   
+#    # #    # #    #   #   
+#####   ####  #####    #   
+*/
+
+body {
+  font-family: 'dotum', sans-serif;
+}
+
+/* 
+######  #     # ####### ####### ####### #     # 
+#     # #     #    #       #    #     # ##    # 
+#     # #     #    #       #    #     # # #   # 
+######  #     #    #       #    #     # #  #  # 
+#     # #     #    #       #    #     # #   # # 
+#     # #     #    #       #    #     # #    ## 
+######   #####     #       #    ####### #     # 
+*/
+
+.button01,
+.button01 > .tail,
+.button01 > .tail > .body {
+  display: inline-block;
+  height: 18px;
+  vertical-align: top;
+}
+
+.button01 {
+  padding-left: 1px;
+  background: url('./images/button01_head.png') left no-repeat;
+}
+
+.button01 > .tail {
+  padding-right: 1px;
+  background: url('./images/button01_tail.png') right no-repeat;
+}
+
+.button01 > .tail > .body {
+  background: url('./images/button01_body.png') center repeat-x;
+  padding-top: 3px;
+  padding-left: 8px;
+  padding-right: 7px;
+  color: white;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  box-sizing: border-box;
+}
+
+.button03 {
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+  background: url('./images/button03_head.png') left no-repeat;
+}
+
+.button03 > .tail {
+  background: url('./images/button03_tail.png') right no-repeat;
+}
+
+.button03 > .tail > .body {
+  background: url('./images/button03_body.png') center repeat-x;
+  font-size: 11px;
+  color: #777777;
+}
+
+.button03,
+.button03 > .tail,
+.button03 > .tail > .body {
+  display: inline-block;
+  height: 16px;
+  vertical-align: top;
+}
+.button04,
+.button04 > .tail,
+.button04 > .tail > .body {
+  display: inline-block;
+  height: 23px;
+  vertical-align: top;
+}
+.button05,
+.button05 > .tail,
+.button05 > .tail > .body {
+  display: inline-block;
+  height: 21px;
+  vertical-align: top;
+}
+.button06,
+.button06 > .tail,
+.button06 > .tail > .body {
+  display: inline-block;
+  height: 21px;
+  vertical-align: top;
+}
+.button07,
+.button07 > .tail,
+.button07 > .tail > .body {
+  display: inline-block;
+  height: 21px;
+  vertical-align: top;
+}
+.button08,
+.button08 > .tail,
+.button08 > .tail > .body {
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+}
+.button09,
+.button09 > .tail,
+.button09 > .tail > .body {
+  display: inline-block;
+  height: 20px;
+  vertical-align: top;
+}
+.button10,
+.button10 > .tail,
+.button10 > .tail > .body {
+  display: inline-block;
+  height: 49px;
+  vertical-align: top;
+}
+.button11,
+.button11 > .tail,
+.button11 > .tail > .body {
+  display: inline-block;
+  height: 48px;
+  vertical-align: top;
+}
