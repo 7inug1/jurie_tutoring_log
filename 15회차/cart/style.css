@@ -734,7 +734,7 @@ body {
 */
 
 .table-container {
-  margin-top: 24px;
+  margin-top: 27px;
 }
 
 .table-container .title::before {
@@ -780,6 +780,10 @@ body {
   vertical-align: middle;
 }
 
+.table01 table th:last-of-type {
+  text-align: left;
+}
+
 .table01 table td .book-container {
   position: absolute;
   top: 5px;
@@ -794,6 +798,7 @@ body {
   position: relative;
   height: 95px;
   border-top: 1px solid #e9e9e9;
+  box-sizing: border-box;
   vertical-align: middle;
 }
 
@@ -809,15 +814,30 @@ body {
 
 .table01 table td:nth-of-type(2) {
   padding-left: 87px;
+  padding-top: 21px;
   color: #666666;
   font-size: 12px;
   /* letter-spacing: -0.5px; */
   line-height: 17px;
+  vertical-align: top;
 }
 
 .table01 table td:nth-of-type(2) strong {
   color: #222222;
   font-weight: bolder;
+}
+
+.table01 table td:nth-of-type(2) .button-container {
+  margin-top: 4px;
+  padding-left: 1px;
+}
+
+.table01 table td:nth-of-type(4) {
+  text-align: center;
+}
+
+.table01 table td:nth-of-type(4) .input00 {
+  margin: 0 auto;
 }
 
 .table01 table td:nth-of-type(3),
@@ -870,6 +890,30 @@ body {
   color: #349e00;
   font-size: 12px;
   font-weight: bolder;
+}
+
+/* 
+#                                        
+#           # #    # #####  #    # ##### 
+#           # ##   # #    # #    #   #   
+#           # # #  # #    # #    #   #   
+#       ### # #  # # #####  #    #   #   
+#       ### # #   ## #      #    #   #   
+####### ### # #    # #       ####    #   
+*/
+
+/* input00 */
+.input00 {
+  width: 41px;
+  height: 23px;
+  border: 1px solid #c6c6c6;
+  box-sizing: border-box;
+}
+
+.input00 input {
+  text-align: center;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
 }
 
 /* 
@@ -929,4 +973,47 @@ body {
   margin-top: 8px;
   font-size: 12px;
   color: #222222;
+}
+
+/* 
+#                                                                                              
+#           #####   ##   #####         ####   ####  #    # #####   ##   # #    # ###### #####  
+#             #    #  #  #    #       #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+#             #   #    # #####  ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+#       ###   #   ###### #    #       #      #    # #  # #   #   ###### # #  # # #      #####  
+#       ###   #   #    # #    #       #    # #    # #   ##   #   #    # # #   ## #      #   #  
+####### ###   #   #    # #####         ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+.main .tab-container {
+  margin-top: 14px;
+  font-size: 0;
+  border-bottom: 2px solid #295a9c;
+}
+
+.main .tab-container button {
+  /* padding-top: 8px;
+  padding-bottom: 7px; */
+  padding-left: 12px;
+  padding-right: 11px;
+  color: #777777;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  background: #f7f7f7;
+}
+
+.main .tab-container button.current {
+  padding-top: 8px;
+  padding-bottom: 7px;
+  color: white;
+  background: #295a9c;
+}
+
+.main .tab-container button:not(.current) {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-top: 1px solid #bebdbd;
+  border-right: 1px solid #bebdbd;
+  box-sizing: border-box;
 }
