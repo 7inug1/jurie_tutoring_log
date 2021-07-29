@@ -37,13 +37,13 @@
             <table>
               <caption hidden>고객 정보 표</caption>
               <colgroup>
-                <col style="width: 151px" />
-                <col style="width: 171px" />
-                <col style="width: 121px" />
-                <col style="width: 121px" />
-                <col style="width: 121px" />
-                <col style="width: 121px" />
-                <col style="width: 121px" />
+                <col style="width: 152px" />
+                <col style="width: 172px" />
+                <col style="width: 127px" />
+                <col style="width: 127px" />
+                <col style="width: 125px" />
+                <col style="width: 127px" />
+                <col style="width: 126px" />
               </colgroup>
               <tr>
                 <th rowspan="2">홍길동 고객님</th>
@@ -67,20 +67,286 @@
         </div>
 
         <div class="notification-container">
-          <div class="notification"></div>
-          <div class="notification"></div>
+          <div class="notification">
+            <p>
+              여러종의 도서를 함께 주문할 경우, 배송예정일이 가장 오래걸리는
+              도서가 준비된 후에 같이 출고됩니다. 배송일이 짧은 도서와 긴 도서를
+              각각 별도로 주문하시면 배송시간이 절약됩니다.
+            </p>
+            <div class="button-container">
+              <button class="button01">
+                <span class="tail">
+                  <span class="body">예상출고일 안내</span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="notification">
+            <strong>※ 무료배송기간 ( 2010년 8월 13일 ~ 9월 30일 )</strong>
+            <p>
+              단 한권을 구매해도 배송료 무료! 지금은 무료배송 기간입니다! (
+              해외배송도서는 무료배송에서 제외됩니다.)
+            </p>
+          </div>
         </div>
 
         <div class="tab-container"></div>
 
         <div class="table-container">
-          <div class="table01"></div>
-          <div class="table01"></div>
+          <h2 class="title">일반주문 상품</h2>
+          <div class="table01">
+            <table>
+              <caption hidden>일반주문 상품 표</caption>
+              <colgroup>
+                <col style="width: 98px" />
+                <col style="width: 333px" />
+                <col style="width: 148px" />
+                <col style="width: 82px" />
+                <col style="width: 148px" />
+                <col style="width: 141px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">예상출고일</th>
+                  <th scope="col">상품명</th>
+                  <th scope="col">상품금액</th>
+                  <th scope="col">수량</th>
+                  <th scope="col">합계</th>
+                  <th scope="col"><input type="checkbox" name="" id="" /></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    내일
+                    <br />
+                    (15일,수)
+                  </td>
+                  <td>
+                    <div class="book-container">
+                      <img src="./images/snoop.png" alt="스눕 책" />
+                    </div>
+                    <div class="product-name">
+                      [도서]
+                      <strong>스포츠서비스 마케팅론</strong>
+                      <br />
+                      임운학 저 | 광림북하우스 | 2010.04.12
+                    </div>
+                    <button class="button03">
+                      <span class="tail">
+                        <span class="body">간략정보</span>
+                      </span>
+                    </button>
+                  </td>
+                  <td>
+                    <del hidden>16,000원</del>
+                    <ins>14,400</ins>
+                    원 (
+                    <span class="percentage">10%</span>
+                    )
+                    <br />
+                    <span class="rewards">130원</span>
+                  </td>
+                  <td>
+                    <button class="button04">
+                      <span class="tail"><span class="body">변경</span></span>
+                    </button>
+                  </td>
+                  <td>
+                    <del hidden>16,000원</del>
+                    <ins>14,400</ins>
+                    원 (
+                    <span class="percentage">10%</span>
+                    )
+                    <br />
+                    <span class="rewards">130원</span>
+                  </td>
+                  <td>
+                    <div class="button-container">
+                      <button class="button05">
+                        <span class="tail">
+                          <span class="body">
+                            <img
+                              src="./images/button05_text1.png"
+                              alt="보관함에 담기"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <button class="button06">
+                        <span class="tail">
+                          <span class="body">
+                            <img
+                              src="./images/button06_text1.png"
+                              alt="삭제하기"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    내일
+                    <br />
+                    (15일,수)
+                  </td>
+                  <td>
+                    <div class="book-container">
+                      <img src="./images/snoop.png" alt="스눕 책" />
+                    </div>
+                    <div class="product-name">
+                      [도서]
+                      <strong>스포츠서비스 마케팅론</strong>
+                      <br />
+                      임운학 저 | 광림북하우스 | 2010.04.12
+                    </div>
+                    <button class="button03">
+                      <span class="tail">
+                        <span class="body">간략정보</span>
+                      </span>
+                    </button>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <h2 class="title">해외주문 상품</h2>
+          <div class="table01">
+            <table>
+              <caption hidden>일반주문 상품 표</caption>
+              <colgroup>
+                <col style="width: 98px" />
+                <col style="width: 333px" />
+                <col style="width: 148px" />
+                <col style="width: 82px" />
+                <col style="width: 148px" />
+                <col style="width: 141px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">예상출고일</th>
+                  <th scope="col">상품명</th>
+                  <th scope="col">상품금액</th>
+                  <th scope="col">수량</th>
+                  <th scope="col">합계</th>
+                  <th scope="col"><input type="checkbox" name="" id="" /></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    내일
+                    <br />
+                    (15일,수)
+                  </td>
+                  <td>
+                    <div class="book-container">
+                      <img src="./images/snoop.png" alt="스눕 책" />
+                    </div>
+                    <div class="product-name">
+                      [도서]
+                      <strong>스포츠서비스 마케팅론</strong>
+                      <br />
+                      임운학 저 | 광림북하우스 | 2010.04.12
+                    </div>
+                    <button class="button03">
+                      <span class="tail">
+                        <span class="body">간략정보</span>
+                      </span>
+                    </button>
+                  </td>
+                  <td>
+                    <del hidden>16,000원</del>
+                    <ins>14,400</ins>
+                    원 (
+                    <span class="percentage">10%</span>
+                    )
+                    <br />
+                    <span class="rewards">130원</span>
+                  </td>
+                  <td>
+                    <button class="button04">
+                      <span class="tail"><span class="body">변경</span></span>
+                    </button>
+                  </td>
+                  <td>
+                    <del hidden>16,000원</del>
+                    <ins>14,400</ins>
+                    원 (
+                    <span class="percentage">10%</span>
+                    )
+                    <br />
+                    <span class="rewards">130원</span>
+                  </td>
+                  <td>
+                    <div class="button-container">
+                      <button class="button05">
+                        <span class="tail">
+                          <span class="body">
+                            <img
+                              src="./images/button05_text1.png"
+                              alt="보관함에 담기"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <button class="button06">
+                        <span class="tail">
+                          <span class="body">
+                            <img
+                              src="./images/button06_text1.png"
+                              alt="삭제하기"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    내일
+                    <br />
+                    (15일,수)
+                  </td>
+                  <td>
+                    <div class="book-container">
+                      <img src="./images/snoop.png" alt="스눕 책" />
+                    </div>
+                    <div class="product-name">
+                      [도서]
+                      <strong>스포츠서비스 마케팅론</strong>
+                      <br />
+                      임운학 저 | 광림북하우스 | 2010.04.12
+                    </div>
+                    <button class="button03">
+                      <span class="tail">
+                        <span class="body">간략정보</span>
+                      </span>
+                    </button>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div class="summary-container">
-          <div class="summary"></div>
-          <div class="summary"></div>
+          <div class="notification"></div>
+          <div class="notification"></div>
           <div class="table-container">
             <div class="table03"></div>
           </div>
