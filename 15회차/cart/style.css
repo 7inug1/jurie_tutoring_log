@@ -776,6 +776,7 @@ body {
   color: #666666;
   font-size: 11px;
   letter-spacing: -0.5px;
+  background: #f9f9f9;
   /* border: 1px solid #e9e9e9; */
   vertical-align: middle;
 }
@@ -794,7 +795,7 @@ body {
   border-left: 1px solid #e9e9e9;
 }
 
-.table01 table td {
+.table01 table tbody td {
   position: relative;
   height: 95px;
   border-top: 1px solid #e9e9e9;
@@ -802,8 +803,10 @@ body {
   vertical-align: middle;
 }
 
-.table01 table td:first-of-type {
+.table01 table tbody td:first-of-type {
   /* background: red; */
+  padding-bottom: 1px;
+  padding-right: 1px;
   color: #222222;
   font-size: 12px;
   font-weight: bolder;
@@ -812,9 +815,9 @@ body {
   text-align: center;
 }
 
-.table01 table td:nth-of-type(2) {
+.table01 table tbody td:nth-of-type(2) {
   padding-left: 87px;
-  padding-top: 21px;
+  padding-top: 22px;
   color: #666666;
   font-size: 12px;
   /* letter-spacing: -0.5px; */
@@ -822,34 +825,64 @@ body {
   vertical-align: top;
 }
 
-.table01 table td:nth-of-type(2) strong {
+.table01 table tbody td:nth-of-type(2) strong {
   color: #222222;
   font-weight: bolder;
 }
 
-.table01 table td:nth-of-type(2) .button-container {
-  margin-top: 4px;
+.table01 table tbody td:nth-of-type(2) .button-container {
+  margin-top: 3px;
   padding-left: 1px;
 }
 
-.table01 table td:nth-of-type(4) {
+.table01 table tbody td:nth-of-type(3) {
+  padding-top: 38px;
+  padding-bottom: 3px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+.table01 table tbody td:nth-of-type(3) div:first-of-type,
+.table01 table tbody td:nth-of-type(5) div:first-of-type {
+  padding-left: 2px;
+}
+
+.table01 table tbody td:nth-of-type(3) div + div,
+.table01 table tbody td:nth-of-type(5) div + div {
+  margin-top: 7px;
+  padding-left: 14px;
+}
+
+.table01 table tbody td:nth-of-type(4) {
   text-align: center;
+  vertical-align: top;
+  padding-top: 24px;
 }
 
-.table01 table td:nth-of-type(4) .input00 {
+.table01 table tbody td:nth-of-type(4) .input00 {
+  /* margin: 5px auto 0 auto; */
   margin: 0 auto;
+  /* margin-top: 5px; */
 }
 
-.table01 table td:nth-of-type(3),
-.table01 table td:nth-of-type(5) {
+.table01 table tbody td:nth-of-type(4) .button04 {
+  margin-top: 5px;
+}
+
+.table01 table tbody td:nth-of-type(3),
+.table01 table tbody td:nth-of-type(5) {
+  padding-top: 38px;
+  padding-bottom: 3px;
+  padding-right: 5px;
   font-size: 12px;
   color: #777777;
   letter-spacing: -0.5px;
   text-align: center;
+  vertical-align: top;
 }
 
-.table01 table td:nth-of-type(3) ins,
-.table01 table td:nth-of-type(5) ins {
+.table01 table tbody td:nth-of-type(3) ins,
+.table01 table tbody td:nth-of-type(5) ins {
   color: #e54c29;
   font-size: 14px;
   font-weight: bolder;
@@ -857,39 +890,87 @@ body {
   text-decoration: none;
 }
 
-.table01 table td:nth-of-type(3) .percentage,
-.table01 table td:nth-of-type(5) .percentage {
+.table01 table tbody td:nth-of-type(3) .percentage,
+.table01 table tbody td:nth-of-type(5) .percentage {
   position: relative;
   color: #0172c9;
   font-size: 12px;
   letter-spacing: -0.5px;
 }
 
-.table01 table td:nth-of-type(3) .percentage::after,
-.table01 table td:nth-of-type(5) .percentage::after {
+.table01 table tbody td:nth-of-type(3) .percentage::after,
+.table01 table tbody td:nth-of-type(5) .percentage::after {
   content: '';
   position: absolute;
   /* top: 2px; */
-  right: -5px;
+  right: -3px;
   background: url('./images/markdown-icon.png');
   width: 6px;
   height: 10px;
 }
 
+.table01 table tbody td .rewards {
+  position: relative;
+}
+
 .table01 table td:nth-of-type(3) .rewards::before,
-.table01 table td:nth-of-type(5) .rewards::before {
+.table01 table tbody td:nth-of-type(5) .rewards::before {
   content: '';
   position: absolute;
+  top: -2px;
+  left: -19px;
   background: url('./images/rewards-icon.png');
   width: 17px;
   height: 16px;
 }
 
-.table01 table td:nth-of-type(3) .rewards,
-.table01 table td:nth-of-type(5) .rewards {
+.table01 table tbody td:nth-of-type(3) .rewards,
+.table01 table tbody td:nth-of-type(5) .rewards {
   color: #349e00;
   font-size: 12px;
   font-weight: bolder;
+}
+
+.table01 table tfoot td {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-right: 5px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e9e9e9;
+  text-align: right;
+  font-size: 0;
+}
+
+.table01 table tfoot td > span {
+  /* position: absolute; */
+  color: #222222;
+  font-size: 12px;
+  font-weight: bolder;
+  letter-spacing: -0.8px;
+  line-height: 22px;
+}
+
+.table01 table tfoot td .button05 {
+  margin-left: 12px;
+}
+
+.table01 table tfoot td .button05 .body {
+  padding-left: 7px;
+  padding-right: 12px;
+}
+
+.table01 table tfoot td .button06 {
+  margin-left: 4px;
+}
+
+.table01 table tfoot td .button06 .body {
+  padding-left: 12px;
+  padding-right: 13px;
+}
+
+.table01 table tfoot td .button07 {
+  margin-left: 4px;
 }
 
 /* 
@@ -1016,4 +1097,93 @@ body {
   border-top: 1px solid #bebdbd;
   border-right: 1px solid #bebdbd;
   box-sizing: border-box;
+}
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
+
+/* 
+#                                                                          
+#            ####    ##   #####  #####        ####  #    # # #####  ###### 
+#           #    #  #  #  #    #   #         #    # #    # # #    # #      
+#           #      #    # #    #   #   ##### #      #    # # #    # #####  
+#       ### #      ###### #####    #         #  ### #    # # #    # #      
+#       ### #    # #    # #   #    #         #    # #    # # #    # #      
+####### ###  ####  #    # #    #   #          ####   ####  # #####  ###### 
+*/
+
+.footer .cart-guide,
+.footer .credit-card-benefits {
+  border: 1px solid #dadada;
+  font-family: 'dotum', sans-serif;
+}
+
+.footer .cart-guide .title,
+.footer .credit-card-benefits .title {
+  padding: 8px 0 6px 10px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: bolder;
+  letter-spacing: -0.2px;
+  border-bottom: 1px solid #dadada;
+}
+
+.footer .cart-guide .content ul {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 33px;
+}
+
+.footer .cart-guide .content ul li {
+  position: relative;
+}
+
+.footer .cart-guide .content ul li > span::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -18px;
+  width: 9px;
+  height: 9px;
+  background: url('./images/green-circular-icon.png');
+}
+
+.footer .cart-guide .content ul li > span {
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 14px;
+  color: #222222;
+}
+
+.footer .cart-guide .content ul li:first-of-type .button01 {
+  position: absolute;
+  top: 0px;
+  right: 203px;
+}
+
+.footer .cart-guide .content ul li:nth-of-type(2) {
+  margin-top: 4px;
+}
+
+.footer .credit-card-benefits {
+  margin-top: 9px;
+}
+
+/* 
+#                                                                                                                                         
+#            ####  #####  ###### #####  # #####        ####    ##   #####  #####        #####  ###### #    # ###### ###### # #####  ####  
+#           #    # #    # #      #    # #   #         #    #  #  #  #    # #    #       #    # #      ##   # #      #      #   #   #      
+#           #      #    # #####  #    # #   #   ##### #      #    # #    # #    # ##### #####  #####  # #  # #####  #####  #   #    ####  
+#       ### #      #####  #      #    # #   #         #      ###### #####  #    #       #    # #      #  # # #      #      #   #        # 
+#       ### #    # #   #  #      #    # #   #         #    # #    # #   #  #    #       #    # #      #   ## #      #      #   #   #    # 
+####### ###  ####  #    # ###### #####  #   #          ####  #    # #    # #####        #####  ###### #    # ###### #      #   #    ####  
+*/
+
+.footer .credit-card-benefits {
 }
