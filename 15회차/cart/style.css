@@ -1100,6 +1100,70 @@ body {
 }
 
 /* 
+#                                                                                                                          
+#            ####  #    # #    # #    #   ##   #####  #   #        ####   ####  #    # #####   ##   # #    # ###### #####  
+#           #      #    # ##  ## ##  ##  #  #  #    #  # #        #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+#            ####  #    # # ## # # ## # #    # #    #   #   ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+#       ###      # #    # #    # #    # ###### #####    #         #      #    # #  # #   #   ###### # #  # # #      #####  
+#       ### #    # #    # #    # #    # #    # #   #    #         #    # #    # #   ##   #   #    # # #   ## #      #   #  
+####### ###  ####   ####  #    # #    # #    # #    #   #          ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+.main .summary-container {
+  margin-top: 40px;
+}
+
+.main .summary-container .notification {
+  border: 1px solid #dadada;
+  font-family: 'dotum', sans-serif;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 27px;
+}
+
+.main .summary-container .notification .title {
+  color: #333333;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.main .summary-container .notification .date,
+.main .summary-container .notification .price {
+  color: #e54c29;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.main .summary-container .notification:first-of-type .content {
+  font-size: 14px;
+  color: #666666;
+}
+
+.main .summary-container .notification:nth-of-type(2) {
+  margin-top: 8px;
+}
+
+.main .summary-container .notification:nth-of-type(2) .content {
+  font-size: 12px;
+  color: #666666;
+}
+
+.main .button-container {
+  padding-right: 3px;
+  text-align: center;
+  font-size: 0px;
+}
+
+.main .button-container .button10,
+.main .button-container .button11 {
+  vertical-align: bottom;
+}
+
+.main .button-container .button11 {
+  margin-left: 12px;
+}
+
+/* 
     ######  ####   ####  ##### ###### #####  
     #      #    # #    #   #   #      #    # 
     #####  #    # #    #   #   #####  #    # 
@@ -1107,6 +1171,20 @@ body {
 ### #      #    # #    #   #   #      #   #  
 ### #       ####   ####    #   ###### #    # 
 */
+
+.footer::before {
+  content: '';
+  display: block;
+  /* position: ; */
+  padding-bottom: 10px;
+  background: url('./images/footer_horizontal-line.png') no-repeat;
+  height: 1px;
+  width: 949px;
+}
+
+.footer {
+  margin-top: 41px;
+}
 
 /* 
 #                                                                          
@@ -1185,5 +1263,101 @@ body {
 ####### ###  ####  #    # ###### #####  #   #          ####  #    # #    # #####        #####  ###### #    # ###### #      #   #    ####  
 */
 
-.footer .credit-card-benefits {
+.footer .credit-card-benefits .content ul {
+  font-size: 0;
+}
+
+.footer .credit-card-benefits .content ul li {
+  display: inline-block;
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 24px;
+  color: #858585;
+  font-size: 10.5px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.footer .credit-card-benefits .content ul li:first-of-type {
+  margin-left: 0;
+  padding-left: 17px;
+  margin-right: 24px;
+}
+
+.footer .credit-card-benefits .content ul li {
+  margin-left: 13px;
+  margin-right: 20px;
+}
+
+.footer .credit-card-benefits .content ul li:last-of-type {
+  margin-left: 17px;
+  padding-right: 24px;
+  margin-right: 0;
+}
+
+.footer .credit-card-benefits .content ul li:first-of-type::before,
+.footer .credit-card-benefits .content ul li:nth-of-type(2)::before,
+.footer .credit-card-benefits .content ul li:nth-of-type(3)::before,
+.footer .credit-card-benefits .content ul li:nth-of-type(4)::before,
+.footer .credit-card-benefits .content ul li:nth-of-type(5)::before,
+.footer .credit-card-benefits .content ul li:nth-of-type(6)::before,
+.footer .credit-card-benefits .content ul li:nth-of-type(7)::before {
+  content: '';
+  position: absolute;
+}
+
+.footer .credit-card-benefits .content ul li:first-of-type::before {
+  background: url('./images/card1.png');
+  width: 58px;
+  height: 13px;
+  top: 27px;
+  left: 42px;
+}
+
+.footer .credit-card-benefits .content ul li:nth-of-type(2)::before {
+  background: url('./images/card2.png');
+  width: 70px;
+  height: 16px;
+  top: 27px;
+  left: 13px;
+}
+
+.footer .credit-card-benefits .content ul li:nth-of-type(3)::before {
+  background: url('./images/card3.png');
+  width: 59px;
+  height: 16px;
+  left: 20px;
+  top: 25px;
+}
+
+.footer .credit-card-benefits .content ul li:nth-of-type(4)::before {
+  background: url('./images/card4.png');
+  width: 56px;
+  height: 25px;
+  left: 27px;
+  top: 20px;
+}
+
+.footer .credit-card-benefits .content ul li:nth-of-type(5)::before {
+  background: url('./images/card5.png');
+  width: 81px;
+  height: 12px;
+  left: 8px;
+  top: 28px;
+}
+
+.footer .credit-card-benefits .content ul li:nth-of-type(6)::before {
+  background: url('./images/card6.png');
+  width: 20px;
+  height: 20px;
+  left: 38px;
+  top: 22px;
+}
+
+.footer .credit-card-benefits .content ul li:nth-of-type(7)::before {
+  background: url('./images/card7.png');
+  width: 82px;
+  height: 11px;
+  top: 27px;
+  left: 6px;
 }
