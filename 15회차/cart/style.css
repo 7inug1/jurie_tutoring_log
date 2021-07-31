@@ -216,10 +216,6 @@ table td {
   vertical-align: top;
 }
 
-/* input[type='checkbox'] {
-  margin: 0;
-} */
-
 /* 
 #####  #    # ##### #####  ####  #    #    #    #  ####  #####  #    # #      ######  ####  
 #    # #    #   #     #   #    # ##   #    ##  ## #    # #    # #    # #      #      #      
@@ -544,6 +540,7 @@ body {
   position: absolute;
   left: -2px;
   top: 9px;
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -584,8 +581,6 @@ body {
   margin-left: 29px;
   padding-left: 51px;
   padding-right: 10px;
-  /* padding-top: 15px; */
-  /* box-sizing: border-box; */
   height: 41px;
   background: url('./images/progress01_body.png');
 }
@@ -633,7 +628,6 @@ body {
   position: relative;
   padding-top: 15px;
   line-height: 58px;
-  /* box-sizing: border-box; */
 }
 
 .header .progress li.current::before {
@@ -661,8 +655,6 @@ body {
   width: 29px;
   height: 41px;
 }
-
-/* table */
 
 /* 
     #    #   ##   # #    # 
@@ -745,11 +737,11 @@ body {
 ####### ###   #   #    # #####  ###### ######   ###    ##### 
 */
 
-.table-container {
+.main .table-container {
   margin-top: 23px;
 }
 
-.table-container .title::before {
+.main .table-container .title::before {
   content: '';
   position: absolute;
   top: 1px;
@@ -759,57 +751,55 @@ body {
   background: url('./images/green-circular-icon.png');
 }
 
-.table-container .title {
+.main .table-container .title {
   display: inline-block;
   position: relative;
   padding-left: 28px;
   color: #222222;
   font-size: 12px;
   font-weight: bolder;
-  /* letter-spacing: -0.8px; */
 }
 
 .main .table01 {
   margin-top: 14px;
 }
 
-.table01 table {
+.main .table01 table {
   border-top: 2px solid #a6a6a6;
   border-bottom: 1px solid #e9e9e9;
   font-family: 'dotum', sans-serif;
 }
 
-.table01 table th:not(:first-of-type) {
+.main .table01 table th:not(:first-of-type) {
   border-left: 1px solid #e9e9e9;
 }
 
-.table01 table th {
+.main .table01 table th {
   padding-top: 8px;
   padding-bottom: 5px;
   color: #666666;
   font-size: 11px;
   letter-spacing: -0.5px;
   background: #f9f9f9;
-  /* border: 1px solid #e9e9e9; */
   vertical-align: middle;
 }
 
-.table01 table th:last-of-type {
+.main .table01 table th:last-of-type {
   text-align: left;
   padding-left: 6px;
 }
 
-.table01 table td .book-container {
+.main .table01 table td .book-container {
   position: absolute;
   top: 5px;
   left: 15px;
 }
 
-.table01 table td:not(:first-of-type) {
+.main .table01 table td:not(:first-of-type) {
   border-left: 1px solid #e9e9e9;
 }
 
-.table01 table tbody td {
+.main .table01 table tbody td {
   position: relative;
   height: 95px;
   border-top: 1px solid #e9e9e9;
@@ -817,8 +807,7 @@ body {
   vertical-align: middle;
 }
 
-.table01 table tbody td:first-of-type {
-  /* background: red; */
+.main .table01 table tbody td:first-of-type {
   padding-bottom: 1px;
   padding-right: 6px;
   color: #222222;
@@ -829,66 +818,54 @@ body {
   text-align: center;
 }
 
-.table01 table tbody td:nth-of-type(2) {
+.main .table01 table tbody td:nth-of-type(2) {
   padding-left: 86px;
   padding-top: 21px;
-  /* padding-right: 2px; */
   color: #666666;
   font-size: 12px;
-  /* letter-spacing: -0.5px; */
   line-height: 17px;
   vertical-align: top;
 }
 
-.table01 table tbody td:nth-of-type(2) strong {
+.main .table01 table tbody td:nth-of-type(2) strong {
   color: #222222;
   font-weight: bolder;
 }
 
-.table01 table tbody td:nth-of-type(2) .button-container {
+.main .table01 table tbody td:nth-of-type(2) .button-container {
   margin-top: 4px;
   padding-left: 1px;
 }
 
-/* .table01 table tbody td:nth-of-type(3) {
-  padding-top: 38px;
-  padding-bottom: 3px;
-  padding-right: 5px;
-  vertical-align: top;
-} */
-
-.table01 table tbody td:nth-of-type(3) div:first-of-type,
-.table01 table tbody td:nth-of-type(5) div:first-of-type {
+.main .table01 table tbody td:nth-of-type(3) div:first-of-type,
+.main .table01 table tbody td:nth-of-type(5) div:first-of-type {
   padding-left: 2px;
 }
 
-.table01 table tbody td:nth-of-type(3) div + div,
-.table01 table tbody td:nth-of-type(5) div + div {
+.main .table01 table tbody td:nth-of-type(3) div + div,
+.main .table01 table tbody td:nth-of-type(5) div + div {
   margin-top: 7px;
   padding-left: 14px;
 }
 
-.table01 table tbody td:nth-of-type(4) {
+.main .table01 table tbody td:nth-of-type(4) {
   padding-right: 4px;
   padding-top: 24px;
   text-align: center;
   vertical-align: top;
 }
 
-.table01 table tbody td:nth-of-type(4) .input00 {
-  /* margin: 5px auto 0 auto; */
+.main .table01 table tbody td:nth-of-type(4) .input00 {
   margin: 0 auto;
-  /* margin-top: 5px; */
 }
 
-.table01 table tbody td:nth-of-type(4) .button04 {
+.main .table01 table tbody td:nth-of-type(4) .button04 {
   margin-top: 5px;
 }
 
-.table01 table tbody td:nth-of-type(3),
-.table01 table tbody td:nth-of-type(5) {
+.main .table01 table tbody td:nth-of-type(3),
+.main .table01 table tbody td:nth-of-type(5) {
   padding-top: 32px;
-  /* padding-bottom: 3px; */
   padding-right: 5px;
   font-size: 12px;
   color: #777777;
@@ -897,8 +874,8 @@ body {
   vertical-align: top;
 }
 
-.table01 table tbody td:nth-of-type(3) ins,
-.table01 table tbody td:nth-of-type(5) ins {
+.main .table01 table tbody td:nth-of-type(3) ins,
+.main .table01 table tbody td:nth-of-type(5) ins {
   color: #e54c29;
   font-size: 14px;
   font-weight: bolder;
@@ -906,31 +883,30 @@ body {
   text-decoration: none;
 }
 
-.table01 table tbody td:nth-of-type(3) .percentage,
-.table01 table tbody td:nth-of-type(5) .percentage {
+.main .table01 table tbody td:nth-of-type(3) .percentage,
+.main .table01 table tbody td:nth-of-type(5) .percentage {
   position: relative;
   color: #0172c9;
   font-size: 12px;
   letter-spacing: -0.5px;
 }
 
-.table01 table tbody td:nth-of-type(3) .percentage::after,
-.table01 table tbody td:nth-of-type(5) .percentage::after {
+.main .table01 table tbody td:nth-of-type(3) .percentage::after,
+.main .table01 table tbody td:nth-of-type(5) .percentage::after {
   content: '';
   position: absolute;
-  /* top: 2px; */
   right: -3px;
   background: url('./images/markdown-icon.png');
   width: 6px;
   height: 10px;
 }
 
-.table01 table tbody td .rewards {
+.main .table01 table tbody td .rewards {
   position: relative;
 }
 
-.table01 table td:nth-of-type(3) .rewards::before,
-.table01 table tbody td:nth-of-type(5) .rewards::before {
+.main .table01 table td:nth-of-type(3) .rewards::before,
+.main .table01 table tbody td:nth-of-type(5) .rewards::before {
   content: '';
   position: absolute;
   top: -2px;
@@ -940,33 +916,33 @@ body {
   height: 16px;
 }
 
-.table01 table tbody td:nth-of-type(3) .rewards,
-.table01 table tbody td:nth-of-type(5) .rewards {
+.main .table01 table tbody td:nth-of-type(3) .rewards,
+.main .table01 table tbody td:nth-of-type(5) .rewards {
   color: #349e00;
   font-size: 12px;
   font-weight: bolder;
 }
 
-.table01 table tbody td:nth-of-type(6) {
+.main .table01 table tbody td:nth-of-type(6) {
   vertical-align: top;
   padding-top: 24px;
 }
 
-.table01 table tbody td:nth-of-type(6) #checkbox1 {
+.main .table01 table tbody td:nth-of-type(6) #checkbox1 {
   position: absolute;
   left: 6px;
   top: 39px;
 }
 
-.table01 table tbody td:nth-of-type(6) .button-container {
+.main .table01 table tbody td:nth-of-type(6) .button-container {
   padding-left: 43px;
 }
 
-.table01 table tbody td:nth-of-type(6) .button-container .button06 {
+.main .table01 table tbody td:nth-of-type(6) .button-container .button06 {
   margin-top: 5px;
 }
 
-.table01 table tfoot td {
+.main .table01 table tfoot td {
   position: relative;
   padding-top: 8px;
   padding-bottom: 4px;
@@ -977,8 +953,7 @@ body {
   font-size: 0;
 }
 
-.table01 table tfoot td > span {
-  /* position: absolute; */
+.main .table01 table tfoot td > span {
   color: #222222;
   font-size: 12px;
   font-weight: bolder;
@@ -986,25 +961,25 @@ body {
   line-height: 22px;
 }
 
-.table01 table tfoot td .button05 {
+.main .table01 table tfoot td .button05 {
   margin-left: 12px;
 }
 
-.table01 table tfoot td .button05 .body {
+.main .table01 table tfoot td .button05 .body {
   padding-left: 7px;
   padding-right: 12px;
 }
 
-.table01 table tfoot td .button06 {
+.main .table01 table tfoot td .button06 {
   margin-left: 4px;
 }
 
-.table01 table tfoot td .button06 .body {
+.main .table01 table tfoot td .button06 .body {
   padding-left: 12px;
   padding-right: 13px;
 }
 
-.table01 table tfoot td .button07 {
+.main .table01 table tfoot td .button07 {
   margin-left: 4px;
 }
 
@@ -1058,7 +1033,6 @@ body {
 }
 
 .main > .notification-container .notification:first-of-type p {
-  /* padding-top: 9px; */
   padding-left: 1px;
   font-family: 'dotum', sans-serif;
   color: #777777;
@@ -1200,8 +1174,6 @@ body {
 }
 
 .main .tab-container button {
-  /* padding-top: 8px;
-  padding-bottom: 7px; */
   padding-left: 12px;
   padding-right: 11px;
   color: #777777;
@@ -1455,7 +1427,6 @@ body {
 .footer::before {
   content: '';
   display: block;
-  /* position: ; */
   padding-bottom: 10px;
   background: url('./images/footer_horizontal-line.png') no-repeat;
   height: 1px;
