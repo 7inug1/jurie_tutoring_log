@@ -216,6 +216,10 @@ table td {
   vertical-align: top;
 }
 
+/* input[type='checkbox'] {
+  margin: 0;
+} */
+
 /* 
 #####  #    # ##### #####  ####  #    #    #    #  ####  #####  #    # #      ######  ####  
 #    # #    #   #     #   #    # ##   #    ##  ## #    # #    # #    # #      #      #      
@@ -501,7 +505,7 @@ table td {
 .button11 > .tail > .body {
   display: inline-block;
   height: 48px;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 /* 
 #####   ####  #####  #   # 
@@ -668,6 +672,13 @@ body {
 ### #    # #    # # #   ## 
 ### #    # #    # # #    # 
 */
+.main {
+  margin-top: 24px;
+}
+
+.main .table-container:first-of-type {
+  margin-top: 0;
+}
 
 /* 
 #                                               ###     ###   
@@ -680,7 +691,7 @@ body {
 */
 
 .main .table00 {
-  margin-top: 24px;
+  margin-top: 0px;
   margin-left: -1px;
 }
 
@@ -696,6 +707,7 @@ body {
 }
 
 .main .table00 table th {
+  padding-left: 4px;
   background: #f9f9f9;
   color: #1770b5;
   font-size: 11px;
@@ -734,7 +746,7 @@ body {
 */
 
 .table-container {
-  margin-top: 27px;
+  margin-top: 23px;
 }
 
 .table-container .title::before {
@@ -748,6 +760,7 @@ body {
 }
 
 .table-container .title {
+  display: inline-block;
   position: relative;
   padding-left: 28px;
   color: #222222;
@@ -783,12 +796,13 @@ body {
 
 .table01 table th:last-of-type {
   text-align: left;
+  padding-left: 6px;
 }
 
 .table01 table td .book-container {
   position: absolute;
   top: 5px;
-  left: 16px;
+  left: 15px;
 }
 
 .table01 table td:not(:first-of-type) {
@@ -806,7 +820,7 @@ body {
 .table01 table tbody td:first-of-type {
   /* background: red; */
   padding-bottom: 1px;
-  padding-right: 1px;
+  padding-right: 6px;
   color: #222222;
   font-size: 12px;
   font-weight: bolder;
@@ -816,8 +830,9 @@ body {
 }
 
 .table01 table tbody td:nth-of-type(2) {
-  padding-left: 87px;
-  padding-top: 22px;
+  padding-left: 86px;
+  padding-top: 21px;
+  /* padding-right: 2px; */
   color: #666666;
   font-size: 12px;
   /* letter-spacing: -0.5px; */
@@ -831,16 +846,16 @@ body {
 }
 
 .table01 table tbody td:nth-of-type(2) .button-container {
-  margin-top: 3px;
+  margin-top: 4px;
   padding-left: 1px;
 }
 
-.table01 table tbody td:nth-of-type(3) {
+/* .table01 table tbody td:nth-of-type(3) {
   padding-top: 38px;
   padding-bottom: 3px;
   padding-right: 5px;
   vertical-align: top;
-}
+} */
 
 .table01 table tbody td:nth-of-type(3) div:first-of-type,
 .table01 table tbody td:nth-of-type(5) div:first-of-type {
@@ -854,9 +869,10 @@ body {
 }
 
 .table01 table tbody td:nth-of-type(4) {
+  padding-right: 4px;
+  padding-top: 24px;
   text-align: center;
   vertical-align: top;
-  padding-top: 24px;
 }
 
 .table01 table tbody td:nth-of-type(4) .input00 {
@@ -871,8 +887,8 @@ body {
 
 .table01 table tbody td:nth-of-type(3),
 .table01 table tbody td:nth-of-type(5) {
-  padding-top: 38px;
-  padding-bottom: 3px;
+  padding-top: 32px;
+  /* padding-bottom: 3px; */
   padding-right: 5px;
   font-size: 12px;
   color: #777777;
@@ -918,7 +934,7 @@ body {
   content: '';
   position: absolute;
   top: -2px;
-  left: -19px;
+  left: -20px;
   background: url('./images/rewards-icon.png');
   width: 17px;
   height: 16px;
@@ -931,11 +947,30 @@ body {
   font-weight: bolder;
 }
 
+.table01 table tbody td:nth-of-type(6) {
+  vertical-align: top;
+  padding-top: 24px;
+}
+
+.table01 table tbody td:nth-of-type(6) #checkbox1 {
+  position: absolute;
+  left: 6px;
+  top: 39px;
+}
+
+.table01 table tbody td:nth-of-type(6) .button-container {
+  padding-left: 43px;
+}
+
+.table01 table tbody td:nth-of-type(6) .button-container .button06 {
+  margin-top: 5px;
+}
+
 .table01 table tfoot td {
   position: relative;
   padding-top: 8px;
   padding-bottom: 4px;
-  padding-right: 5px;
+  padding-right: 6px;
   background: #f9f9f9;
   border-bottom: 1px solid #e9e9e9;
   text-align: right;
@@ -1007,22 +1042,22 @@ body {
 ####### ### #    #  ####    #   # #      #  ####  #    #   #   #  ####  #    #        ####   ####  #    #   #   #    # # #    # ###### #    # 
 */
 
-.notification-container {
+.main > .notification-container {
   margin-top: 8px;
   margin-left: -1px;
 }
 
-.notification-container .notification {
+.main > .notification-container .notification {
   font-size: 11px;
   border: 1px solid #dadada;
 }
 
-.notification-container .notification:first-of-type {
+.main > .notification-container .notification:first-of-type {
   padding-top: 9px;
   padding-bottom: 9px;
 }
 
-.notification-container .notification:first-of-type p {
+.main > .notification-container .notification:first-of-type p {
   /* padding-top: 9px; */
   padding-left: 1px;
   font-family: 'dotum', sans-serif;
@@ -1030,12 +1065,12 @@ body {
   text-align: center;
 }
 
-.notification-container .notification:first-of-type .button-container {
+.main > .notification-container .notification:first-of-type .button-container {
   margin-top: 5px;
   padding-left: 16px;
 }
 
-.notification-container .notification:nth-of-type(2) {
+.main > .notification-container .notification:nth-of-type(2) {
   font-family: 'dotum', sans-serif;
   margin-top: 7px;
   padding-top: 8px;
@@ -1043,17 +1078,109 @@ body {
   text-align: center;
 }
 
-.notification-container .notification:nth-of-type(2) strong {
+.main > .notification-container .notification:nth-of-type(2) strong {
   padding-left: 2px;
   font-size: 14px;
   color: #e54c29;
 }
 
-.notification-container .notification:nth-of-type(2) p {
+.main > .notification-container .notification:nth-of-type(2) p {
   padding-right: 8px;
   margin-top: 8px;
   font-size: 12px;
   color: #222222;
+}
+
+.main .basket {
+  position: relative;
+  margin-left: -1px;
+}
+
+.main .basket .message {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+  color: #777777;
+}
+
+.main .basket .message span {
+  color: #e54c29;
+  font-weight: bolder;
+}
+
+.main .basket .filter {
+  position: absolute;
+  top: 64px;
+  right: 19px;
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+  color: #777777;
+}
+
+.main .basket .filter .title {
+  font-weight: bolder;
+  color: #222222;
+}
+
+.main .basket .filter ul,
+.main .basket .filter ul li {
+  display: inline-block;
+}
+
+.main .basket .filter ul li:not(:first-of-type):before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  background: url('./images/filter_vertical-line.png');
+  width: 1px;
+  height: 10px;
+}
+
+.main .basket .filter ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+.main .basket .filter ul li:not(:first-of-type) {
+  margin-left: 7px;
+}
+
+.main .basket .popup {
+  position: absolute;
+  top: 24px;
+  right: -5px;
+  padding-top: 8px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background: url('./images/popup-panel.png') no-repeat;
+  width: 131px;
+  height: 81px;
+  z-index: 1;
+  letter-spacing: -0.5px;
+}
+
+.main .basket .popup .title,
+.main .basket .popup .content {
+  color: #777777;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+}
+
+.main .basket .popup .title {
+  font-weight: bolder;
+  line-height: 18px;
+}
+
+.main .basket .popup .content {
+  line-height: 14px;
+}
+
+.main .basket .popup .button12 {
+  position: absolute;
+  top: 4px;
+  right: 6px;
 }
 
 /* 
@@ -1110,15 +1237,30 @@ body {
 */
 
 .main .summary-container {
+  position: relative;
   margin-top: 40px;
+  padding-left: 545px;
+}
+
+.main .summary-container .notification-container {
+  position: absolute;
+  left: 0;
 }
 
 .main .summary-container .notification {
+  position: relative;
   border: 1px solid #dadada;
   font-family: 'dotum', sans-serif;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 27px;
+  padding-right: 12px;
+}
+
+.main .summary-container .notification .button08 {
+  position: absolute;
+  top: 12px;
+  right: 58px;
 }
 
 .main .summary-container .notification .title {
@@ -1148,18 +1290,156 @@ body {
   color: #666666;
 }
 
-.main .button-container {
+.main .summary-container + .button-container {
+  margin-top: 31px;
   padding-right: 3px;
   text-align: center;
   font-size: 0px;
 }
 
-.main .button-container .button10,
-.main .button-container .button11 {
+.main .summary-container + .button-container .button10,
+.main .summary-container + .button-container .button11 {
   vertical-align: bottom;
 }
 
-.main .button-container .button11 {
+.main .summary-container + .button-container .button11 {
+  margin-left: 12px;
+}
+
+/* 
+#                                                                                                            
+#           #####   ##   #####  #      ######        ####   ####  #    # #####   ##   # #    # ###### #####  
+#             #    #  #  #    # #      #            #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+#             #   #    # #####  #      #####  ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+#       ###   #   ###### #    # #      #            #      #    # #  # #   #   ###### # #  # # #      #####  
+#       ###   #   #    # #    # #      #            #    # #    # #   ##   #   #    # # #   ## #      #   #  
+####### ###   #   #    # #####  ###### ######        ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+.main .summary-container .table-container .table03 table {
+  border: 1px solid #99bddd;
+  width: 405px;
+}
+
+.main .summary-container .table-container .table03 table td {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  font-size: 14px;
+  font-family: 'dotum', sans-serif;
+  font-weight: bolder;
+}
+
+.main .summary-container .table-container .table03 table td span {
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tr:not(:last-of-type)
+  td {
+  border-bottom: 1px solid #dadada;
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tbody
+  tr:last-of-type
+  td {
+  border-bottom: 1px solid #99bddd;
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tbody
+  tr:last-of-type
+  td
+  .tooltip {
+  position: absolute;
+  top: 8px;
+  left: 103px;
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tfoot
+  tr:last-of-type
+  td
+  .tooltip {
+  position: absolute;
+  top: 8px;
+  left: 146px;
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tfoot
+  tr:first-of-type
+  td {
+  border-top: 1px solid #99bddd;
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tfoot
+  tr:first-of-type
+  td
+  .button09 {
+  position: absolute;
+  top: 5px;
+  left: 104px;
+}
+
+.main .summary-container .table-container .table03 table td:first-of-type {
+  padding-left: 9px;
+  border-right: 1px solid #dadada;
+}
+
+.main .summary-container .table-container .table03 table td:last-of-type {
+  text-align: right;
+  padding-right: 14px;
+}
+
+.main .summary-container .table-container .table03 table td {
+  color: #1770b5;
+}
+
+.main
+  .summary-container
+  .table-container
+  .table03
+  table
+  tfoot
+  tr:first-of-type
+  td {
+  color: #e54c29;
+}
+
+.main > .button-container {
+  text-align: center;
+  margin-top: 30px;
+  padding-right: 2px;
+  font-size: 0;
+}
+
+.main > .button-container .button11 {
   margin-left: 12px;
 }
 
@@ -1184,6 +1464,7 @@ body {
 
 .footer {
   margin-top: 41px;
+  margin-left: -1px;
 }
 
 /* 
