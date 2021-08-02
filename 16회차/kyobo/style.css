@@ -333,6 +333,26 @@ body {
 #    #  ####  #####   ####  ###### ######   ###   ####### 
 */
 
+.module02 > .title::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 3px;
+  height: 5px;
+  background: url('./images/module2_title_icon.png');
+}
+
+.module02 > .title {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 10px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+}
+
 /* 
 #                                               ###      #   
 #           #####   ##   #####  #      ######  #   #    ##   
@@ -343,9 +363,14 @@ body {
 ####### ###   #   #    # #####  ###### ######   ###    ##### 
 */
 
+.module02 .table01 {
+  margin-top: 9px;
+}
+
 /* thead */
 
-.module02 .table01 thead th:not(:last-of-type) {
+.module02 .table01 thead th:not(:last-of-type),
+.module02 .table02 thead th:not(:last-of-type) {
   border-right: 1px solid #c6c6c6;
 }
 
@@ -369,7 +394,8 @@ body {
 - .memo
 */
 
-.module02 .table01 tbody td:not(:last-of-type) {
+.module02 .table01 tbody td:not(:last-of-type),
+.module02 .table02 tbody td:not(:last-of-type) {
   border-right: 1px solid #c6c6c6;
 }
 
@@ -394,7 +420,8 @@ body {
 }
 
 .module02 .table01 tbody .price {
-  padding-left: 13px;
+  padding-right: 8px;
+  text-align: right;
 }
 
 .module02 .table01 tbody .return-quantity .input01 {
@@ -470,6 +497,53 @@ body {
 ####### ###   #   #    # #####  ###### ######   ###   ####### 
 */
 
+/* thead */
+
+.module02 .table02 {
+  margin-top: 10px;
+}
+
+.module02 .table02 thead .shipping-method {
+  padding-top: 1px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+}
+
+.module02 .table02 thead .return-fee {
+  padding-top: 1px;
+  padding-bottom: 4px;
+  padding-left: 2px;
+}
+
+.module02 .table02 thead .charge-bearer {
+  padding-left: 2px;
+}
+
+.module02 .table02 thead .return-method {
+  padding-left: 2px;
+}
+
+/* tbody */
+.module02 .table02 tbody .shipping-method {
+  padding-right: 8px;
+  text-align: center;
+  /* background: red; */
+}
+
+.module02 .table02 tbody .return-fee {
+  padding-right: 8px;
+  text-align: right;
+}
+
+.module02 .table02 tbody .charge-bearer {
+  padding-right: 1px;
+  text-align: center;
+}
+
+.module02 .table02 tbody .return-method {
+  padding-left: 14px;
+  text-align: left;
+}
 /* 
                                    ###      #   
     # #    # #####  #    # #####  #   #    ##   
