@@ -9,6 +9,35 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="feedback">
+        <ul>
+          <li>div.title 대신 h2.title 형식으로.</li>
+          <li>
+            각 테이블 cell에 class 이름 넣어주기 (nth-of-type 가급적 자제)
+          </li>
+          <li>:not(:first-of-type)은 + selector로 대체 가능</li>
+          <li>
+            .section (3 border box)은 inline-block 대신 float: left로 배치 가능.
+            .section에 이미 height 있으니 .section-container의 height 빼도 됨.
+          </li>
+          <li>.right은 padding-left 대신 right: 0 주기</li>
+          <li>button은 display block이 안되고 width:100%으로</li>
+          <li>
+            .gifticon-brand button markup 작성하기 (위 아래 있는 경우 나누는
+            대신 몰아서 하는 걸 선호)
+          </li>
+          <li>
+            상품 이미지 markup 작성 필요 (pseudo class 시 API서 받아올 때 문제
+            많음)
+          </li>
+          <li>best icon 따로 빼기</li>
+          <li>번호 리스트는 ol로도 해보기</li>
+          <li>.directory는 a tag로 하는 것 잊지 말기</li>
+          <li>p 대신 sub도 이용해볼 수 있다 (ex. 이럴 때 이런 선물)</li>
+          <li>img alt ex. 롯데리아의 불고기 버거의 예시 사진(입니다)</li>
+          <li>삼성전자 웹사이트 자주 참고하기</li>
+        </ul>
+      </div>
       <div class="header">
         <h1><img src="./images/title.png" alt="선물가게" /></h1>
         <div class="location">

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h2 class="title"><img src="" alt="" /></h2>
+      </div>
+      <div class="main">
+        <div class="tabs">
+          <button class="order-cancel">주문취소</button>
+          <button class="return">반품</button>
+          <button class="exchange">교환</button>
+        </div>
+        <div class="pages">
+          <div class="order-cancel" hidden></div>
+          <div class="return">
+            <!-- 1. -->
+            <div class="order-history">
+              <div class="order-number">
+                <h2>주문번호</h2>
+                <span class="content">00000000000000</span>
+              </div>
+              <div class="order-date">
+                <h2>주문일시</h2>
+                <span class="content">2010년 6월 24일 (00:00)</span>
+              </div>
+            </div>
+
+            <!-- 2. module01-->
+            <div class="module01 shipping-destination">
+              <div class="table01"></div>
+              <div class="table02"></div>
+            </div>
+            <div class="module01 shipping-destination">
+              <div class="table01"></div>
+              <div class="table02"></div>
+            </div>
+
+            <!-- 3. module02 -->
+            <div class="module02">
+              <div class="table01">
+                <table>
+                  <caption hidden>배송상품 표</caption>
+                  <colgroup>
+                    <col style="width: 42px" />
+                    <col style="width: 247px" />
+                    <col style="width: 78px" />
+                    <col style="width: 76px" />
+                    <col style="width: 77px" />
+                    <col style="width: 93px" />
+                    <col style="width: 167px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="checkbox"></th>
+                      <th scope="col" class="product-name">상품명</th>
+                      <th scope="col" class="order-quantity">주문수량</th>
+                      <th scope="col" class="price">금액</th>
+                      <th scope="col" class="return-quantity">반품수량</th>
+                      <th scope="col" class="return-reason">반품사유</th>
+                      <th scope="col" class="memo">메모</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="checkbox">
+                        <input
+                          type="checkbox"
+                          name="checkbox1"
+                          id="checkbox1"
+                        />
+                      </td>
+                      <td class="product-name">[도서] 운명이다</td>
+                      <td class="order-quantity">1</td>
+                      <td class="price">30,000원</td>
+                      <td class="return-quantity">
+                        <div class="input-container01">
+                          <div class="input01">
+                            <input type="text" />
+                          </div>
+                          <span>1</span>
+                        </div>
+                      </td>
+                      <td class="return-reason">
+                        <div class="select01">
+                          <select name="return reason" id="return-reason">
+                            <option value="이중주문" selected>이중주문</option>
+                            <option value="파본">파본</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="memo">
+                        <div class="input01">
+                          <input type="text" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="checkbox">
+                        <input
+                          type="checkbox"
+                          name="checkbox1"
+                          id="checkbox1"
+                        />
+                      </td>
+                      <td class="product-name">[도서] 운명이다</td>
+                      <td class="order-quantity">1</td>
+                      <td class="price">30,000원</td>
+                      <td class="return-quantity">
+                        <div class="input-container01">
+                          <div class="input01">
+                            <input type="text" />
+                          </div>
+                          <span>1</span>
+                        </div>
+                      </td>
+                      <td class="return-reason">
+                        <div class="select01">
+                          <select name="return reason" id="return-reason">
+                            <option value="이중주문">이중주문</option>
+                            <option value="파본" selected>파본</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="memo">
+                        <div class="input01">
+                          <input
+                            type="text"
+                            value="파본페이지번호를 적어주세요"
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table02"></div>
+            </div>
+            <div class="module02">
+              <div class="table01"></div>
+              <div class="table02"></div>
+            </div>
+            <div class="module02">
+              <div class="table01"></div>
+              <div class="table02"></div>
+            </div>
+          </div>
+          <div class="exchange" hidden></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
