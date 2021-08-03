@@ -5,42 +5,201 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>교보문고 - 반품신청상세</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="header">
-        <h2 class="title"><img src="" alt="" /></h2>
+        <h2 class="title">
+          <img src="./images/title.png" alt="반품신청상세" />
+        </h2>
       </div>
       <div class="main">
         <div class="tabs">
           <button class="order-cancel">주문취소</button>
-          <button class="return">반품</button>
+          <button class="return current">반품</button>
           <button class="exchange">교환</button>
         </div>
         <div class="pages">
           <div class="order-cancel" hidden></div>
           <div class="return">
             <!-- 1. -->
-            <div class="order-history">
-              <div class="order-number">
-                <h2>주문번호</h2>
+            <ul class="order-history">
+              <li class="order-number">
+                <h2 class="title">주문번호 :</h2>
                 <span class="content">00000000000000</span>
-              </div>
-              <div class="order-date">
-                <h2>주문일시</h2>
+              </li>
+              <li class="order-date">
+                <h2 class="title">주문일시 :</h2>
                 <span class="content">2010년 6월 24일 (00:00)</span>
-              </div>
-            </div>
+              </li>
+            </ul>
 
             <!-- 2. module01-->
             <div class="module01 shipping-destination">
-              <div class="table01"></div>
-              <div class="table02"></div>
-            </div>
-            <div class="module01 shipping-destination">
-              <div class="table01"></div>
-              <div class="table02"></div>
+              <div class="table01">
+                <h2 class="title">1번째 배송지</h2>
+                <table>
+                  <caption hidden>배송지 표</caption>
+                  <colgroup>
+                    <col style="width: 93px" />
+                    <col style="width: 427px" />
+                    <col style="width: 93px" />
+                    <col style="width: 167px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>받으시는 분</th>
+                      <td>홍길동</td>
+                      <th>연락처</th>
+                      <td>02-000-0000</td>
+                    </tr>
+                    <tr>
+                      <th>배송지 주소</th>
+                      <td>
+                        [000-000] 서울 종로구 신문로1가 238 신문로빌딩 7층
+                      </td>
+                      <th>휴대전화번호</th>
+                      <td>02-000-0000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table02">
+                <h2 class="title">회수지 주소</h2>
+                <table>
+                  <caption hidden>회수지 주소 표</caption>
+                  <colgroup>
+                    <col style="width: 93px" />
+                    <col style="width: 297px" />
+                    <col style="width: 93px" />
+                    <col style="width: 297px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="return-address">회수지 주소</th>
+                      <td colspan="3" class="return-address">
+                        <div class="radio-container">
+                          <label for="general-shipping">
+                            <input
+                              type="radio"
+                              name="return-address"
+                              id="general-shipping"
+                              value="[국내] 일반택배"
+                            />
+                            [국내] 일반택배
+                          </label>
+                          <label for="conveni-shipping">
+                            <input
+                              type="radio"
+                              name="return-address"
+                              id="conveni-shipping"
+                              value="[국내] 편의점 배송"
+                            />
+                            [국내] 편의점 배송
+                          </label>
+                        </div>
+                        <div class="input-container postal-code">
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="first postal code"
+                              id="postal-code_first"
+                            />
+                          </div>
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="second postal code"
+                              id="postal-code_second"
+                            />
+                          </div>
+                          <button class="button01">
+                            <span class="tail">
+                              <span class="body">검색</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="input-container detailed-address">
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="first detailed address"
+                              id="detailed-address_first"
+                            />
+                          </div>
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="second detailed address"
+                              id="detailed-address_second"
+                            />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="phone-number">전화번호</th>
+                      <td class="phone-number">
+                        <div class="select01 number">
+                          <select
+                            name="phone-number_first"
+                            id="phone-number_first"
+                          >
+                            <option value="02" selected>02</option>
+                            <option value="070">070</option>
+                          </select>
+                        </div>
+
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="phone-number_second"
+                            id="phone-number_second"
+                            value="123"
+                          />
+                        </div>
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="phone-number_third"
+                            id="phone-number_third"
+                            value="4567"
+                          />
+                        </div>
+                      </td>
+                      <th class="mobile-number">휴대전화번호</th>
+                      <td class="mobile-number">
+                        <div class="select01 number">
+                          <select
+                            name="mobile-number_first"
+                            id="mobile-number_first"
+                          >
+                            <option value="010" selected>010</option>
+                            <option value="011">011</option>
+                          </select>
+                        </div>
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="mobile-number_second"
+                            id="mobile-number_second"
+                            value="123"
+                          />
+                        </div>
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="mobile-number_third"
+                            id="mobile-number_third"
+                            value="4567"
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <!-- 3. module02 -->
@@ -83,14 +242,14 @@
                       <td class="price">30,000원</td>
                       <td class="return-quantity">
                         <div class="input-container01">
-                          <div class="input01">
+                          <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
                         </div>
                       </td>
                       <td class="return-reason">
-                        <div class="select01">
+                        <div class="select01 return-reason">
                           <select name="return reason" id="return-reason">
                             <option value="이중주문" selected>이중주문</option>
                             <option value="파본">파본</option>
@@ -116,14 +275,14 @@
                       <td class="price">30,000원</td>
                       <td class="return-quantity">
                         <div class="input-container01">
-                          <div class="input01">
+                          <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
                         </div>
                       </td>
                       <td class="return-reason">
-                        <div class="select01">
+                        <div class="select01 return-reason">
                           <select name="return reason" id="return-reason">
                             <option value="이중주문">이중주문</option>
                             <option value="파본" selected>파본</option>
@@ -131,7 +290,7 @@
                         </div>
                       </td>
                       <td class="memo">
-                        <div class="input01">
+                        <div class="input01 memo">
                           <input
                             type="text"
                             value="파본페이지번호를 적어주세요"
@@ -162,22 +321,26 @@
                   <tbody>
                     <tr>
                       <td class="shipping-method">
-                        <label for="kyobo-shipping">
-                          <input
-                            type="radio"
-                            name="shipping-method"
-                            id="kyobo-shipping"
-                          />
-                          교보택배
-                        </label>
-                        <label for="personal-shipping">
-                          <input
-                            type="radio"
-                            name="shipping-method"
-                            id="personal-shipping"
-                          />
-                          개인배송
-                        </label>
+                        <div class="radio-container">
+                          <label for="kyobo-shipping">
+                            <input
+                              type="radio"
+                              name="shipping-method"
+                              id="kyobo-shipping"
+                              value="교보택배"
+                            />
+                            교보택배
+                          </label>
+                          <label for="personal-shipping">
+                            <input
+                              type="radio"
+                              name="shipping-method"
+                              id="personal-shipping"
+                              value="개인배송"
+                            />
+                            개인배송
+                          </label>
+                        </div>
                       </td>
                       <td class="return-fee">1,000원</td>
                       <td class="charge-bearer">고객부담</td>
@@ -226,14 +389,14 @@
                       <td class="price">30,000원</td>
                       <td class="return-quantity">
                         <div class="input-container01">
-                          <div class="input01">
+                          <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
                         </div>
                       </td>
                       <td class="return-reason">
-                        <div class="select01">
+                        <div class="select01 return-reason">
                           <select name="return reason" id="return-reason">
                             <option value="이중주문" selected>이중주문</option>
                             <option value="파본">파본</option>
@@ -259,14 +422,14 @@
                       <td class="price">30,000원</td>
                       <td class="return-quantity">
                         <div class="input-container01">
-                          <div class="input01">
+                          <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
                         </div>
                       </td>
                       <td class="return-reason">
-                        <div class="select01">
+                        <div class="select01 return-reason">
                           <select name="return reason" id="return-reason">
                             <option value="이중주문">이중주문</option>
                             <option value="파본" selected>파본</option>
@@ -274,7 +437,7 @@
                         </div>
                       </td>
                       <td class="memo">
-                        <div class="input01">
+                        <div class="input01 memo">
                           <input
                             type="text"
                             value="파본페이지번호를 적어주세요"
@@ -305,26 +468,196 @@
                   <tbody>
                     <tr>
                       <td class="shipping-method">
-                        <label for="kyobo-shipping">
-                          <input
-                            type="radio"
-                            name="shipping-method"
-                            id="kyobo-shipping"
-                          />
-                          교보택배
-                        </label>
-                        <label for="personal-shipping">
-                          <input
-                            type="radio"
-                            name="shipping-method"
-                            id="personal-shipping"
-                          />
-                          개인배송
-                        </label>
+                        <div class="radio-container">
+                          <label for="kyobo-shipping">
+                            <input
+                              type="radio"
+                              name="shipping-method"
+                              id="kyobo-shipping"
+                              value="교보택배"
+                            />
+                            교보택배
+                          </label>
+                          <label for="personal-shipping">
+                            <input
+                              type="radio"
+                              name="shipping-method"
+                              id="personal-shipping"
+                              value="개인배송"
+                            />
+                            개인배송
+                          </label>
+                        </div>
                       </td>
                       <td class="return-fee">1,000원</td>
-                      <td class="charge-bearer">고객부담</td>
+                      <td class="charge-bearer">판매자부담</td>
                       <td class="return-method">환불금액에서 차감</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="module01 shipping-destination">
+              <div class="table01">
+                <h2 class="title">2번째 배송지</h2>
+                <table>
+                  <caption hidden>배송지 표</caption>
+                  <colgroup>
+                    <col style="width: 93px" />
+                    <col style="width: 427px" />
+                    <col style="width: 93px" />
+                    <col style="width: 167px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>받으시는 분</th>
+                      <td>홍길동</td>
+                      <th>연락처</th>
+                      <td>02-000-0000</td>
+                    </tr>
+                    <tr>
+                      <th>배송지 주소</th>
+                      <td>
+                        [000-000] 서울 종로구 신문로1가 238 신문로빌딩 7층
+                      </td>
+                      <th>휴대전화번호</th>
+                      <td>02-000-0000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table02">
+                <h2 class="title">회수지 주소</h2>
+                <table>
+                  <caption hidden>회수지 주소 표</caption>
+                  <colgroup>
+                    <col style="width: 93px" />
+                    <col style="width: 297px" />
+                    <col style="width: 93px" />
+                    <col style="width: 297px" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="return-address">회수지 주소</th>
+                      <td colspan="3" class="return-address">
+                        <div class="radio-container">
+                          <label for="general-shipping">
+                            <input
+                              type="radio"
+                              name="return-address"
+                              id="general-shipping"
+                              value="[국내] 일반택배"
+                            />
+                            [국내] 일반택배
+                          </label>
+                          <label for="conveni-shipping">
+                            <input
+                              type="radio"
+                              name="return-address"
+                              id="conveni-shipping"
+                              value="[국내] 편의점 배송"
+                            />
+                            [국내] 편의점 배송
+                          </label>
+                        </div>
+                        <div class="input-container postal-code">
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="first postal code"
+                              id="postal-code_first"
+                            />
+                          </div>
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="second postal code"
+                              id="postal-code_second"
+                            />
+                          </div>
+                          <button class="button01">
+                            <span class="tail">
+                              <span class="body">검색</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="input-container detailed-address">
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="first detailed address"
+                              id="detailed-address_first"
+                            />
+                          </div>
+                          <div class="input01">
+                            <input
+                              type="text"
+                              name="second detailed address"
+                              id="detailed-address_second"
+                            />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="phone-number">전화번호</th>
+                      <td class="phone-number">
+                        <div class="select01 number">
+                          <select
+                            name="phone-number_first"
+                            id="phone-number_first"
+                          >
+                            <option value="02" selected>02</option>
+                            <option value="070">070</option>
+                          </select>
+                        </div>
+
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="phone-number_second"
+                            id="phone-number_second"
+                            value="123"
+                          />
+                        </div>
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="phone-number_third"
+                            id="phone-number_third"
+                            value="4567"
+                          />
+                        </div>
+                      </td>
+                      <th class="mobile-number">휴대전화번호</th>
+                      <td class="mobile-number">
+                        <div class="select01 number">
+                          <select
+                            name="mobile-number_first"
+                            id="mobile-number_first"
+                          >
+                            <option value="010" selected>010</option>
+                            <option value="011">011</option>
+                          </select>
+                        </div>
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="mobile-number_second"
+                            id="mobile-number_second"
+                            value="123"
+                          />
+                        </div>
+                        <div class="input01">
+                          <input
+                            type="text"
+                            name="mobile-number_third"
+                            id="mobile-number_third"
+                            value="4567"
+                          />
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -369,14 +702,14 @@
                       <td class="price">30,000원</td>
                       <td class="return-quantity">
                         <div class="input-container01">
-                          <div class="input01">
+                          <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
                         </div>
                       </td>
                       <td class="return-reason">
-                        <div class="select01">
+                        <div class="select01 return-reason">
                           <select name="return reason" id="return-reason">
                             <option value="이중주문" selected>이중주문</option>
                             <option value="파본">파본</option>
@@ -402,14 +735,14 @@
                       <td class="price">30,000원</td>
                       <td class="return-quantity">
                         <div class="input-container01">
-                          <div class="input01">
+                          <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
                         </div>
                       </td>
                       <td class="return-reason">
-                        <div class="select01">
+                        <div class="select01 return-reason">
                           <select name="return reason" id="return-reason">
                             <option value="이중주문">이중주문</option>
                             <option value="파본" selected>파본</option>
@@ -417,7 +750,7 @@
                         </div>
                       </td>
                       <td class="memo">
-                        <div class="input01">
+                        <div class="input01 memo">
                           <input
                             type="text"
                             value="파본페이지번호를 적어주세요"
@@ -448,22 +781,26 @@
                   <tbody>
                     <tr>
                       <td class="shipping-method">
-                        <label for="kyobo-shipping">
-                          <input
-                            type="radio"
-                            name="shipping-method"
-                            id="kyobo-shipping"
-                          />
-                          교보택배
-                        </label>
-                        <label for="personal-shipping">
-                          <input
-                            type="radio"
-                            name="shipping-method"
-                            id="personal-shipping"
-                          />
-                          개인배송
-                        </label>
+                        <div class="radio-container">
+                          <label for="kyobo-shipping">
+                            <input
+                              type="radio"
+                              name="shipping-method"
+                              id="kyobo-shipping"
+                              value="교보택배"
+                            />
+                            교보택배
+                          </label>
+                          <label for="personal-shipping">
+                            <input
+                              type="radio"
+                              name="shipping-method"
+                              id="personal-shipping"
+                              value="개인배송"
+                            />
+                            개인배송
+                          </label>
+                        </div>
                       </td>
                       <td class="return-fee">1,000원</td>
                       <td class="charge-bearer">고객부담</td>
