@@ -744,10 +744,6 @@ label[for='save-id'] img {
 input#save-id + label::before {
   content: '';
   display: inline-block;
-  /* position: absolute;
-  bottom: -10px;
-  left: 63px; */
-
   min-width: 14px;
   min-height: 17px;
   background: url('./images/login-page/checkbox_unchecked.png') no-repeat;
@@ -763,13 +759,8 @@ input#save-id + label {
 }
 
 input#save-id:checked + label::before {
-  /* content: ''; */
-  /* background: red; */
   content: '';
   display: inline-block;
-  /* position: absolute;
-  bottom: -10px;
-  left: 63px; */
   min-width: 14px;
   min-height: 17px;
   background: url('./images/login-page/checkbox_checked.png') no-repeat;

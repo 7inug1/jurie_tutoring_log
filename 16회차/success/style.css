@@ -99,7 +99,7 @@
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /* font: inherit; */
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -229,9 +229,19 @@ table td {
 #####   ####  #####    #   
 */
 
+@font-face {
+  font-family: 'ydiywebdotum';
+  src: url('./fonts/ydiywebdotum/YDIWebDotum.woff2') format('woff2'),
+    url('./fonts/ydiywebdotum/YDIWebDotum.woff') format('woff');
+  font-family: '04b08';
+  src: url('./fonts/04b08/04B_08__.woff2') format('woff2'),
+    url('./fonts/04b08/04B_08__.woff') format('woff');
+}
+
 body {
   width: 1280px;
   margin: 0 auto;
+  font-family: 'ydiywebdotum', sans-serif;
 }
 
 /* 
@@ -251,6 +261,16 @@ body {
   height: 80px;
   background: url('./images/header-background.png') repeat;
   box-sizing: border-box;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background: url('./images/header_after_vertical-line.png');
 }
 
 .header .logo {
@@ -363,7 +383,330 @@ body {
 .main {
   padding-left: 158px;
   padding-right: 160px;
+  margin-top: 12px;
 }
+
+/* 
+    ###### # #####   ####  #####       #      # #    # ###### 
+    #      # #    # #        #         #      # ##   # #      
+    #####  # #    #  ####    #   ##### #      # # #  # #####  
+### #      # #####       #   #         #      # #  # # #      
+### #      # #   #  #    #   #         #      # #   ## #      
+### #      # #    #  ####    #         ###### # #    # ###### 
+*/
+
+/* 
+#                                                                                  
+#           #    #   ##   # #    #       #####    ##   #    # #    # ###### #####  
+#           ##  ##  #  #  # ##   #       #    #  #  #  ##   # ##   # #      #    # 
+#           # ## # #    # # # #  # ##### #####  #    # # #  # # #  # #####  #    # 
+#       ### #    # ###### # #  # #       #    # ###### #  # # #  # # #      #####  
+#       ### #    # #    # # #   ##       #    # #    # #   ## #   ## #      #   #  
+####### ### #    # #    # # #    #       #####  #    # #    # #    # ###### #    # 
+*/
+
+.main-banner {
+  position: absolute;
+  /* display: inline-block;
+  position: relative; */
+  padding-top: 1px;
+  padding-left: 1px;
+}
+
+.main-banner .banner-switch {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+.main-banner .banner-switch ul::after {
+  content: '';
+  display: inline-block;
+  clear: both;
+}
+
+.main-banner .banner-switch ul li {
+  float: left;
+  cursor: pointer;
+}
+
+.main-banner .banner-switch ul li:not(:first-of-type) {
+  margin-left: 3px;
+}
+
+.main-banner .banner-switch .current {
+  width: 12px;
+  height: 11px;
+  background: url('./images/main-banner_dot_current.png');
+}
+
+.main-banner .banner-switch .not-current {
+  width: 11px;
+  height: 11px;
+  background: url('./images/main-banner_dot_not-current.png');
+}
+
+.main-banner .main-banner_photo {
+  width: 712px;
+  height: 280px;
+}
+
+.main-banner .main-banner_text {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+}
+
+/* 
+####  #####   ####  #    # #####  # #    #  ####  
+#    # #    # #    # #    # #    # # ##   # #    # 
+#      #    # #    # #    # #    # # # #  # #      
+#  ### #####  #    # #    # #####  # #  # # #  ### 
+#    # #   #  #    # #    # #      # #   ## #    # 
+####  #    #  ####   ####  #      # #    #  ####  
+*/
+
+/* grouping */
+.grouping_signin-container_announcement_button-container {
+  /* display: inline-block; */
+  /* width: 100%; */
+  padding-left: 722px;
+  /* padding-left: 1px; */
+}
+
+.grouping_signin-container_announcement {
+  /* display: ; */
+  /* padding-left: 722px; */
+  border: 1px solid #d8d8d8;
+}
+
+.grouping_signin-container_announcement_button-container .button-container {
+  margin-top: 8px;
+  /* padding-left: 721px; */
+}
+
+/* 
+#                                                                                                          
+#            ####  #  ####  #    # # #    #        ####   ####  #    # #####   ##   # #    # ###### #####  
+#           #      # #    # ##   # # ##   #       #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+#            ####  # #      # #  # # # #  # ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+#       ###      # # #  ### #  # # # #  # #       #      #    # #  # #   #   ###### # #  # # #      #####  
+#       ### #    # # #    # #   ## # #   ##       #    # #    # #   ##   #   #    # # #   ## #      #   #  
+####### ###  ####  #  ####  #    # # #    #        ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+.signin-container {
+  padding: 15px 15px 12px 15px;
+}
+
+.signin-container .input-container {
+  position: absolute;
+}
+
+.signin-container .input01 {
+  width: 141px;
+  height: 20px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+}
+
+.signin-container .input01 + .input01 {
+  margin-top: 7px;
+}
+
+.signin-container label[for='save-id'],
+.signin-container .button01 {
+  display: block;
+}
+
+.signin-container label[for='save-id'],
+.signin-container .button01 > .tail > .body,
+.signin-container .signup a,
+.signin-container .account-recovery a span {
+  font-size: 11px;
+  color: #8e8f8f;
+}
+
+.signin-container .input-right {
+  padding-top: 4px;
+  padding-left: 152px;
+}
+
+.signin-container .input-right label[for='save-id'] {
+  position: relative;
+  padding-left: 19px;
+}
+
+.signin-container .input-right #save-id {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  opacity: 0;
+  z-index: -100;
+}
+
+.signin-container .input-right #save-id + label[for='save-id']::before {
+  content: '';
+  /* display: inline-block; */
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  background: url('./images/checkbox.png');
+  width: 13px;
+  height: 13px;
+}
+
+/* 체크박스 체크 상태 이미지 미제공 */
+.signin-container .input-right #save-id:checked + label[for='save-id']::before {
+}
+
+.signin-container .input-right .button01 {
+  margin-top: 12px;
+}
+
+.signin-container .input-right .button01 > .tail > .body {
+  padding-left: 7px;
+  padding-right: 6px;
+}
+
+.signin-container .grouping_signup_account-recovery {
+  margin-top: 11px;
+  padding-left: 21px;
+}
+
+.signin-container .grouping_signup_account-recovery .account-recovery::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -9px;
+  width: 1px;
+  height: 8px;
+  background: url(./images/signin-container_vertical-line.png);
+}
+
+.signin-container .grouping_signup_account-recovery .account-recovery {
+  position: relative;
+  margin-left: 14px;
+}
+
+.signin-container
+  .grouping_signup_account-recovery
+  .account-recovery
+  .password::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -5px;
+  width: 4px;
+  height: 10px;
+  background: url('./images/signin-container_slash.png');
+}
+
+.signin-container
+  .grouping_signup_account-recovery
+  .account-recovery
+  .password {
+  position: relative;
+}
+
+.signin-container
+  .grouping_signup_account-recovery
+  .account-recovery
+  .password {
+  margin-left: 2px;
+}
+
+/* 
+#                                                                                              
+#             ##   #    # #    #  ####  #    # #    #  ####  ###### #    # ###### #    # ##### 
+#            #  #  ##   # ##   # #    # #    # ##   # #    # #      ##  ## #      ##   #   #   
+#           #    # # #  # # #  # #    # #    # # #  # #      #####  # ## # #####  # #  #   #   
+#       ### ###### #  # # #  # # #    # #    # #  # # #      #      #    # #      #  # #   #   
+#       ### #    # #   ## #   ## #    # #    # #   ## #    # #      #    # #      #   ##   #   
+####### ### #    # #    # #    #  ####   ####  #    #  ####  ###### #    # ###### #    #   #   
+*/
+
+.announcement {
+  position: relative;
+  padding: 14px 14px 13px 14px;
+  border-top: 1px solid #d8d8d8;
+}
+
+.announcement dl {
+  position: relative;
+  margin-top: 6px;
+}
+
+.announcement dl dt::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 3px;
+  height: 4px;
+  background: url('./images/announcement_list-icon.png');
+}
+
+.announcement dl dt {
+  position: relative;
+  padding-left: 8px;
+}
+
+.announcement dl dt,
+.announcement dl dd {
+  font-size: 11px;
+}
+
+.announcement dl dt:not(:first-of-type),
+.announcement dl dd:not(:first-of-type) {
+  margin-top: 5px;
+}
+
+.announcement dl dt {
+  /* display: inline-block; */
+  position: absolute;
+
+  color: #8e8f8f;
+}
+
+.announcement dl dd {
+  color: #b7b7b7;
+  padding-left: 154px;
+}
+
+.announcement .more01 {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* 
+#                                                                                                                  
+#           #####  #    # ##### #####  ####  #    #        ####   ####  #    # #####   ##   # #    # ###### #####  
+#           #    # #    #   #     #   #    # ##   #       #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+#           #####  #    #   #     #   #    # # #  # ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+#       ### #    # #    #   #     #   #    # #  # #       #      #    # #  # #   #   ###### # #  # # #      #####  
+#       ### #    # #    #   #     #   #    # #   ##       #    # #    # #   ##   #   #    # # #   ## #      #   #  
+####### ### #####   ####    #     #    ####  #    #        ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+/* 
+     ####  ######  ####   ####  #    # #####        #      # #    # ###### 
+    #      #      #    # #    # ##   # #    #       #      # ##   # #      
+     ####  #####  #      #    # # #  # #    # ##### #      # # #  # #####  
+###      # #      #      #    # #  # # #    #       #      # #  # # #      
+### #    # #      #    # #    # #   ## #    #       #      # #   ## #      
+###  ####  ######  ####   ####  #    # #####        ###### # #    # ###### 
+*/
+
+/* 
+    ##### #    # # #####  #####        #      # #    # ###### 
+      #   #    # # #    # #    #       #      # ##   # #      
+      #   ###### # #    # #    # ##### #      # # #  # #####  
+###   #   #    # # #####  #    #       #      # #  # # #      
+###   #   #    # # #   #  #    #       #      # #   ## #      
+###   #   #    # # #    # #####        ###### # #    # ###### 
+*/
 
 /* 
     ######  ####   ####  ##### ###### #####  
@@ -373,3 +716,136 @@ body {
 ### #      #    # #    #   #   #      #   #  
 ### #       ####   ####    #   ###### #    # 
 */
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+.button01,
+.button01 > .tail,
+.button01 > .tail > .body {
+  display: inline-block;
+  height: 20px;
+  vertical-align: top;
+}
+
+.button01 {
+  padding-left: 4px;
+  background: url('./images/button01_head.png') left no-repeat;
+}
+
+.button01 > .tail {
+  padding-right: 4px;
+  background: url('./images/button01_tail.png') right no-repeat;
+}
+
+.button01 > .tail > .body {
+  padding-top: 3px;
+  background: url('./images/button01_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
+.button02,
+.button02 > .tail,
+.button02 > .tail > .body,
+.button03,
+.button03 > .tail,
+.button03 > .tail > .body {
+  display: inline-block;
+  height: 59px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.button02,
+.button03 {
+  padding-left: 4px;
+}
+
+.button02 > .tail,
+.button03 > .tail {
+  padding-right: 4px;
+}
+
+.button02 > .tail > .body,
+.button03 > .tail > .body {
+  padding-top: 12px;
+}
+
+.button02 {
+  background: url('./images/button02_head.png') left no-repeat;
+}
+
+.button02 > .tail {
+  background: url('./images/button02_tail.png') right no-repeat;
+}
+
+.button02 > .tail > .body {
+  padding-left: 23px;
+  padding-right: 22px;
+  background: url('./images/button02_body.png') center repeat-x;
+}
+
+.button03,
+.button03 > .tail,
+.button03 > .tail > .body {
+  display: inline-block;
+  height: 59px;
+  vertical-align: top;
+}
+
+.button03 {
+  /* padding-left: 4px; */
+  background: url('./images/button03_head.png') left no-repeat;
+}
+
+.button03 > .tail {
+  /* padding-right: 4px; */
+  background: url('./images/button03_tail.png') right no-repeat;
+}
+
+.button03 > .tail > .body {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: url('./images/button03_body.png') center repeat-x;
+}
+
+/* 
+    #    #  ####  #####  ###### 
+    ##  ## #    # #    # #      
+    # ## # #    # #    # #####  
+### #    # #    # #####  #      
+### #    # #    # #   #  #      
+### #    #  ####  #    # ###### 
+*/
+
+.more01 a::before,
+.more02 a::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -6px;
+  width: 3px;
+  height: 5px;
+}
+
+.more01 a::before {
+  background: url('./images/more01-icon.png');
+}
+
+.more02 a::before {
+  background: url('./images/more02-icon.png');
+}
+
+.more01 a,
+.more02 a {
+  position: relative;
+  color: #505050;
+  font-family: '04b08', sans-serif;
+  font-size: 8px;
+}

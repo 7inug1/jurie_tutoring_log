@@ -138,28 +138,51 @@
           <!-- 1 -->
           <div class="first-line">
             <div class="main-banner">
-              <div class="banner-switch"></div>
-              <img src="./images/main-banner.png" alt="" />
-              <img src="./images/main-banner_text.png" alt="오늘은 CEO 모임" />
+              <div class="banner-switch">
+                <ul>
+                  <li class="current"></li>
+                  <li class="not-current"></li>
+                  <li class="not-current"></li>
+                  <li class="not-current"></li>
+                  <li class="not-current"></li>
+                </ul>
+              </div>
+              <img
+                src="./images/main-banner.png"
+                alt="메인 배너의 오늘은 CEO 모임 사진"
+                class="main-banner_photo"
+              />
+              <img
+                src="./images/main-banner_text.png"
+                alt="오늘은 CEO 모임"
+                class="main-banner_text"
+              />
             </div>
             <div
               class="grouping_signin-container_announcement_button-container"
             >
               <div class="grouping_signin-container_announcement">
                 <div class="signin-container">
-                  <div class="input01"><input type="text" /></div>
-                  <div class="input01"><input type="text" /></div>
-                  <input type="checkbox" name="save-id" id="save-id" />
-                  <button class="button01">
-                    <span class="tail"><span class="body"></span></span>
-                  </button>
-                  <span class="signup"><a href="#">회원가입</a></span>
-                  <span class="account-recovery">
-                    <a href="#">
-                      <span>아이디</span>
-                      <span>비밀번호 찾기</span>
-                    </a>
-                  </span>
+                  <div class="input-container">
+                    <div class="input01"><input type="text" /></div>
+                    <div class="input01"><input type="text" /></div>
+                  </div>
+                  <div class="input-right">
+                    <input type="checkbox" name="save-id" id="save-id" />
+                    <label for="save-id">ID 저장</label>
+                    <button class="button01">
+                      <span class="tail"><span class="body">로그인</span></span>
+                    </button>
+                  </div>
+                  <div class="grouping_signup_account-recovery">
+                    <span class="signup"><a href="#">회원가입</a></span>
+                    <span class="account-recovery">
+                      <a href="#">
+                        <span class="id">아이디</span>
+                        <span class="password">비밀번호 찾기</span>
+                      </a>
+                    </span>
+                  </div>
                 </div>
                 <div class="announcement">
                   <h2 class="title">
