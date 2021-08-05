@@ -219,3 +219,56 @@
 table td {
   vertical-align: top;
 }
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+.button01,
+.button01 > .tail,
+.button01 > .tail > .body {
+  display: inline-block;
+  height: 18px;
+  vertical-align: top;
+}
+
+.button01 {
+  background: url('./images/button01_head.png') left no-repeat;
+  padding-left: 2px;
+}
+
+.button01 > .tail {
+  background: url('./images/button01_tail.png') right no-repeat;
+  padding-right: 2px;
+}
+
+.button01 > .tail > .body {
+  background: url('./images/button01_body.png') center repeat-x;
+}
+
+.button02,
+.button02 > .tail,
+.button02 > .tail > .body {
+  display: inline-block;
+  height: 18px;
+  vertical-align: top;
+}
+
+.button02 {
+  background: url('./images/button02_headtail.png') left no-repeat;
+  padding-left: 1px;
+}
+
+.button02 > .tail {
+  background: url('./images/button02_headtail.png') right no-repeat;
+  padding-right: 1px;
+}
+
+.button02 > .tail > .body {
+  background: url('./images/button02_body.png') center repeat-x;
+}

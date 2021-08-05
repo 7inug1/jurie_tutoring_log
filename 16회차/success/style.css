@@ -231,4 +231,145 @@ table td {
 
 body {
   width: 1280px;
+  margin: 0 auto;
 }
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+.header {
+  position: relative;
+  padding-left: 160px;
+  padding-right: 160px;
+  width: 1280px;
+  height: 80px;
+  background: url('./images/header-background.png') repeat;
+  box-sizing: border-box;
+}
+
+.header .logo {
+  position: absolute;
+  top: 42px;
+  left: 196px;
+  /* display: inline-block; */
+}
+
+.header .logo::before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: -37px;
+  background: url('./images/title-icon.png');
+  width: 76px;
+  height: 30px;
+}
+
+.header .navigation-bar {
+  /* display: inline-block; */
+  position: absolute;
+  top: 42px;
+  left: 398px;
+}
+
+.header .navigation-bar ul::after {
+  content: '';
+  display: inline-block;
+  clear: both;
+}
+
+.header .navigation-bar ul li {
+  /* position: relative; */
+  float: left;
+}
+
+.header .navigation-bar ul li:not(:first-of-type) {
+  margin-left: 49px;
+}
+
+.header .navigation-bar ul .the-place,
+.header .navigation-bar ul .the-items {
+  position: relative;
+  margin-top: -1px;
+}
+
+.header .navigation-bar ul .the-academy,
+.header .navigation-bar ul .customer-service,
+.header .navigation-bar ul .success-gallery {
+  padding-top: 1px;
+}
+
+.header .navigation-bar ul .success-gallery::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -40px;
+  width: 32px;
+  height: 27px;
+  background: url('./images/navigation_success-gallery-icon.png') no-repeat;
+  cursor: pointer;
+}
+
+.header .navigation-bar ul li.success-gallery {
+  position: relative;
+  margin-left: 89px;
+}
+
+.header .utility {
+  /* display: inline-block; */
+  padding-top: 4px;
+  float: right;
+}
+
+.header .utility ul::after {
+  content: '';
+  display: inline-block;
+  clear: both;
+}
+
+.header .utility ul li {
+  position: relative;
+  float: left;
+}
+
+.header .utility ul li:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -7px;
+  background: url('./images/utility_vertical-bar.png');
+  width: 1px;
+  height: 6px;
+}
+
+.header .utility ul li:not(:first-of-type) {
+  margin-left: 14px;
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main {
+  padding-left: 158px;
+  padding-right: 160px;
+}
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
