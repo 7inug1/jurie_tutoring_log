@@ -256,7 +256,6 @@ body {
 
 .header .title::after {
   content: '';
-  display: inline-block;
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -409,7 +408,8 @@ body {
 .module01 .table01 table,
 .module01 .table02 table,
 .module02 .table01 table,
-.module02 .table02 table {
+.module02 .table02 table,
+.table03 table {
   border-top: 1px solid #99bddd;
   border-bottom: 1px solid #99bddd;
 }
@@ -418,10 +418,12 @@ body {
 .module01 .table02 table th,
 .module02 .table01 table th,
 .module02 .table02 table th,
+.table03 table th,
 .module01 .table01 table tbody td,
 .module01 .table02 table tbody td,
 .module02 .table01 table tbody td,
-.module02 .table02 table tbody td {
+.module02 .table02 table tbody td,
+.table03 table td {
   font-family: 'dotum', sans-serif;
   vertical-align: middle;
 }
@@ -429,7 +431,8 @@ body {
 .module01 .table01 table th,
 .module01 .table02 table th,
 .module02 .table01 table th,
-.module02 .table02 table th {
+.module02 .table02 table th,
+.table03 table th {
   padding-top: 2px;
   padding-bottom: 3px;
   line-height: 24px;
@@ -442,7 +445,8 @@ body {
 .module01 .table01 table tbody td,
 .module01 .table02 table tbody td,
 .module02 .table01 table tbody td,
-.module02 .table02 table tbody td {
+.module02 .table02 table tbody td,
+.table03 table tbody td {
   padding-top: 3px;
   padding-bottom: 2px;
   line-height: 24px;
@@ -453,7 +457,8 @@ body {
 }
 
 .module02 .table01 table tbody td,
-.module02 .table02 table tbody td {
+.module02 .table02 table tbody td,
+.table03 table tbody td {
   border-top: 1px solid #cdcdcd;
 }
 
@@ -472,7 +477,8 @@ body {
 }
 
 .module01 .table01 .title::before,
-.module01 .table02 .title::before {
+.module01 .table02 .title::before,
+.main .refund-amount .title::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -483,7 +489,8 @@ body {
 }
 
 .module01 .table01 .title,
-.module01 .table02 .title {
+.module01 .table02 .title,
+.main .refund-amount .title {
   position: relative;
   padding-left: 18px;
   color: #222222;
@@ -508,7 +515,8 @@ body {
 */
 
 .module01 .table01 th,
-.module01 .table02 th {
+.module01 .table02 th,
+.table03 table th {
   border-right: 1px solid #dadada;
 }
 
@@ -517,7 +525,8 @@ body {
 }
 
 .module01 .table01 td:not(:last-of-type),
-.module01 .table02 td:not(:last-of-type) {
+.module01 .table02 td:not(:last-of-type),
+.table03 table td:not(:last-of-type) {
   border-right: 1px solid #dadada;
 }
 
@@ -559,8 +568,6 @@ body {
 }
 
 .module01 .table02 .return-address .input-container {
-  /* position: absolute; */
-  /* top: 0; */
   margin-top: 3px;
 }
 
@@ -576,7 +583,6 @@ body {
 }
 
 .module01 .table02 .return-address .input-container.postal-code .input01 {
-  /* background: red; */
   width: 67px;
   float: left;
 }
@@ -598,7 +604,6 @@ body {
   content: '';
   position: absolute;
   top: 50%;
-  /* margin-top: -3px; */
   left: -13px;
   width: 7px;
   height: 1px;
@@ -688,7 +693,6 @@ body {
 }
 
 /* thead */
-
 .module02 .table01 thead th:not(:last-of-type),
 .module02 .table02 thead th:not(:last-of-type) {
   border-right: 1px solid #c6c6c6;
@@ -700,20 +704,7 @@ body {
   padding-bottom: 4px;
 }
 
-.module02 .table01 thead .price {
-}
-
 /* tbody */
-/* 
-- .checkbox
-- .product-name
-- .order-quantity
-- .price
-- .return-quantity
-- .return-reason
-- .memo
-*/
-
 .module02 .table01 tbody td:not(:last-of-type),
 .module02 .table02 tbody td:not(:last-of-type) {
   border-right: 1px solid #c6c6c6;
@@ -728,15 +719,8 @@ body {
   text-align: center;
 }
 
-.module02 .table01 tbody .checkbox {
-}
-
 .module02 .table01 tbody .product-name {
   padding-left: 13px;
-}
-
-.module02 .table01 tbody .order-quantity {
-  /* padding-left:1px; */
 }
 
 .module02 .table01 tbody .price {
@@ -745,16 +729,10 @@ body {
 }
 
 .module02 .table01 tbody .return-quantity .input01 {
-  /* display: inline-block; */
   position: absolute;
   top: 1px;
   left: 13px;
 }
-
-/* .module02 .table01 tbody .return-quantity .input01 input {
-  color: #777777;
-  font-size: 11px;
-} */
 
 .module02 .table01 tbody .return-quantity span::before {
   content: '';
@@ -785,13 +763,6 @@ body {
   margin: 0 auto;
 }
 
-.module02 .table01 tbody .return-reason .select01 select {
-  /* padding-left: 5px;
-  color: #777777;
-  font-size: 12px;
-  letter-spacing: -0.5px; */
-}
-
 .module02 .table01 tbody .return-quantity .input01 {
   width: 28px;
 }
@@ -804,7 +775,6 @@ body {
 .module02 .table01 tbody .memo .input01 input {
   color: #777777;
   font-size: 11px;
-  /* letter-spacing: -0.5px; */
 }
 
 /* 
@@ -818,7 +788,6 @@ body {
 */
 
 /* thead */
-
 .module02 .table02 {
   margin-top: 10px;
 }
@@ -847,7 +816,6 @@ body {
 .module02 .table02 tbody .shipping-method {
   padding-right: 8px;
   text-align: center;
-  /* background: red; */
 }
 
 .module02 .table02 tbody .return-fee {
@@ -864,6 +832,136 @@ body {
   padding-left: 14px;
   text-align: left;
 }
+
+/* 
+#                                                                                                                                             
+#            ####  #    # ######  ####  #    #       #####  ###### ###### #    # #    # #####          ##   #    #  ####  #    # #    # ##### 
+#           #    # #    # #      #    # #   #        #    # #      #      #    # ##   # #    #        #  #  ##  ## #    # #    # ##   #   #   
+#           #      ###### #####  #      ####   ##### #    # #####  #####  #    # # #  # #    # ##### #    # # ## # #    # #    # # #  #   #   
+#       ### #      #    # #      #      #  #         #####  #      #      #    # #  # # #    #       ###### #    # #    # #    # #  # #   #   
+#       ### #    # #    # #      #    # #   #        #   #  #      #      #    # #   ## #    #       #    # #    # #    # #    # #   ##   #   
+####### ###  ####  #    # ######  ####  #    #       #    # ###### #       ####  #    # #####        #    # #    #  ####   ####  #    #   #   
+*/
+.main .check-refund-amount {
+  position: relative;
+  margin-top: 20px;
+  padding-right: 15px;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  background: #f5f5f5;
+}
+
+.main .check-refund-amount p {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  line-height: 20px;
+  color: #333333;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.main .check-refund-amount .button02 {
+  float: right;
+}
+
+.main .check-refund-amount .button02 > .tail > .body {
+  padding-top: 7px;
+  padding-left: 8px;
+  padding-right: 6px;
+}
+
+.main .check-refund-amount::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 
+#                                                                                                    
+#           #####  ###### ###### #    # #    # #####          ##   #    #  ####  #    # #    # ##### 
+#           #    # #      #      #    # ##   # #    #        #  #  ##  ## #    # #    # ##   #   #   
+#           #    # #####  #####  #    # # #  # #    # ##### #    # # ## # #    # #    # # #  #   #   
+#       ### #####  #      #      #    # #  # # #    #       ###### #    # #    # #    # #  # #   #   
+#       ### #   #  #      #      #    # #   ## #    #       #    # #    # #    # #    # #   ##   #   
+####### ### #    # ###### #       ####  #    # #####        #    # #    #  ####   ####  #    #   #                                                                                      
+*/
+
+.main .refund-amount {
+  position: relative;
+  margin-top: 30px;
+}
+
+.main .refund-amount .table03 {
+  margin-top: 9px;
+}
+
+.main .refund-amount .table03 tbody .payment-method {
+  padding-left: 14px;
+}
+
+.main .refund-amount .table03 tbody .refund-method {
+  padding-left: 15px;
+}
+
+.main .refund-amount .table03 tbody .order-price,
+.main .refund-amount .table03 tbody .additional-payment-price,
+.main .refund-amount .table03 tbody .refund-amount {
+  text-align: right;
+}
+
+.main .refund-amount .table03 tbody .order-price,
+.main .refund-amount .table03 tbody .refund-amount {
+  padding-right: 8px;
+}
+
+.main .refund-amount .table03 tbody .additional-payment-price.credit-card {
+  position: relative;
+  padding-right: 24px;
+}
+
+.main .refund-amount .table03 tbody .additional-payment-price.credit-card span {
+  position: relative;
+}
+
+.main
+  .refund-amount
+  .table03
+  tbody
+  .additional-payment-price.credit-card
+  span::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -14px;
+  width: 13px;
+  height: 13px;
+  background: url('./images/question-mark_icon.png');
+  cursor: pointer;
+}
+
+.main .refund-amount + .button-container {
+  margin-top: 9px;
+  text-align: right;
+}
+
+.main .refund-amount + .button-container button + button {
+  margin-left: 2px;
+}
+
+.main .refund-amount + .button-container .button02 > .tail > .body {
+  padding-left: 27px;
+  padding-right: 26px;
+}
+
+.main .refund-amount + .button-container .button03 > .tail > .body {
+  padding-left: 37px;
+  padding-right: 36px;
+}
+
 /* 
                                    ###      #   
     # #    # #####  #    # #####  #   #    ##   
@@ -940,45 +1038,92 @@ body {
 }
 
 /* 
-                                              ###      #   
-    #####  #    # ##### #####  ####  #    #  #   #    ##   
-    #    # #    #   #     #   #    # ##   # #     #  # #   
-    #####  #    #   #     #   #    # # #  # #     #    #   
-### #    # #    #   #     #   #    # #  # # #     #    #   
-### #    # #    #   #     #   #    # #   ##  #   #     #   
-### #####   ####    #     #    ####  #    #   ###    ##### 
+    #####  #    # ##### #####  ####  #    # 
+    #    # #    #   #     #   #    # ##   # 
+    #####  #    #   #     #   #    # # #  # 
+### #    # #    #   #     #   #    # #  # # 
+### #    # #    #   #     #   #    # #   ## 
+### #####   ####    #     #    ####  #    # 
 */
 
-.button01 {
-  /* width: 2px; */
+.button01,
+.button01 > .tail,
+.button01 > .tail > .body {
   display: inline-block;
   height: 22px;
-  padding-left: 2px;
-  background: url('./images/button03_head.png') left no-repeat;
-}
-
-.button01 > .tail {
-  display: inline-block;
-  /* width: 2px; */
-  height: 22px;
-  padding-right: 2px;
-  background: url('./images/button03_tail.png') right no-repeat;
   vertical-align: top;
 }
 
+.button01 {
+  padding-left: 2px;
+  background: url('./images/button01_head.png') left no-repeat;
+}
+
+.button01 > .tail {
+  padding-right: 2px;
+  background: url('./images/button01_tail.png') right no-repeat;
+}
+
 .button01 > .tail > .body {
-  display: inline-block;
-  /* width: 1px; */
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 4px;
-  height: 22px;
   font-family: 'dotum', sans-serif;
   font-size: 11px;
   font-weight: bolder;
   color: #ffffff;
-  background: url('./images/button03_body.png') center repeat-x;
+  background: url('./images/button01_body.png') center repeat-x;
   box-sizing: border-box;
-  vertical-align: top;
   letter-spacing: -0.5px;
+}
+
+.button02,
+.button03 {
+  padding-left: 4px;
+}
+
+.button02 {
+  background: url('./images/button02_head.png') left no-repeat;
+}
+
+.button03 {
+  background: url('./images/button03_head.png') left no-repeat;
+}
+
+.button02 > .tail,
+.button03 > .tail {
+  padding-right: 5px;
+}
+
+.button02 > .tail {
+  background: url('./images/button02_tail.png') right no-repeat;
+}
+
+.button03 > .tail {
+  background: url('./images/button03_tail.png') right no-repeat;
+}
+
+.button02 > .tail > .body,
+.button03 > .tail > .body {
+  padding-top: 8px;
+  box-sizing: border-box;
+}
+
+.button02 > .tail > .body {
+  background: url('./images/button02_body.png') center repeat-x;
+}
+
+.button03 > .tail > .body {
+  background: url('./images/button03_body.png') center repeat-x;
+}
+
+.button02,
+.button02 > .tail,
+.button02 > .tail > .body,
+.button03,
+.button03 > .tail,
+.button03 > .tail > .body {
+  display: inline-block;
+  height: 32px;
+  vertical-align: top;
 }
