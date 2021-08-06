@@ -478,6 +478,7 @@ body {
   /* display: ; */
   /* padding-left: 722px; */
   border: 1px solid #d8d8d8;
+  background: url('./images/grouping_signin-container_announcement_background.png');
 }
 
 .grouping_signin-container_announcement_button-container .button-container {
@@ -699,6 +700,236 @@ body {
 ###  ####  ######  ####   ####  #    # #####        ###### # #    # ###### 
 */
 
+.second-line {
+  position: relative;
+  margin-top: 9px;
+  padding-left: 721px;
+}
+
+/* 
+#                                                                                     
+#           ##### #    # ######         ##    ####    ##   #####  ###### #    # #   # 
+#             #   #    # #             #  #  #    #  #  #  #    # #      ##  ##  # #  
+#             #   ###### #####  ##### #    # #      #    # #    # #####  # ## #   #   
+#       ###   #   #    # #            ###### #      ###### #    # #      #    #   #   
+#       ###   #   #    # #            #    # #    # #    # #    # #      #    #   #   
+####### ###   #   #    # ######       #    #  ####  #    # #####  ###### #    #   #   
+*/
+
+.second-line .the-academy {
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  /* padding-left: 137px; */
+  /* position: relative; */
+  /* border: 1px solid #dadada; */
+}
+
+.second-line .the-academy .left {
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* padding-top: 12px;
+  padding-bottom: 2px; */
+  background: url('./images/the-academy_background.png');
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+}
+
+.second-line .the-academy .left .title,
+.second-line .the-academy .left .category {
+  padding-left: 14px;
+  padding-right: 30px;
+  /* border-right: 1px solid #dadada; */
+}
+
+.second-line .the-academy .left .title {
+  /* padding-bottom: 8px; */
+  padding-top: 13px;
+  padding-bottom: 11px;
+  /* padding-left: 14px; */
+  /* padding-right: 31px; */
+}
+
+.second-line .the-academy .left .category {
+  /* padding-top: 15px; */
+  padding-top: 14px;
+  padding-bottom: 12px;
+  border-top: 1px solid #dadada;
+}
+
+.second-line .the-academy .left .category li {
+  color: #8e8f8f;
+  font-size: 11px;
+}
+
+.second-line .the-academy .left .category li:not(:first-of-type) {
+  margin-top: 4px;
+}
+
+.second-line .the-academy .banner {
+  display: inline-block;
+  padding-top: 15px;
+  /* padding-left: 18px; */
+  padding-right: 16px;
+  padding-bottom: 12px;
+  border-top: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  padding-left: 155px;
+  box-sizing: border-box;
+}
+
+.second-line .the-academy .banner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.second-line .the-academy .banner dl {
+  float: left;
+}
+
+.second-line .the-academy .banner dl dt {
+  position: relative;
+  width: 124px;
+  height: 82px;
+  border: 1px solid #dadada;
+
+  box-sizing: border-box;
+}
+
+.second-line .the-academy .banner dl dt .image-container .title {
+  position: absolute;
+  top: 12px;
+  left: 9px;
+}
+
+.second-line .the-academy .banner dl dt .image-container .photo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.second-line .the-academy .banner dl dd {
+  margin-top: 10px;
+  color: #333333;
+  font-size: 11px;
+  text-align: center;
+  line-height: 15px;
+}
+
+.second-line .the-academy .banner dl:not(:first-of-type) {
+  margin-left: 15px;
+}
+
+/* 
+#                                                                                                                   
+#           ##### #    # ######       #####  #        ##    ####  ######       #####  ###### #    # # ###### #    # 
+#             #   #    # #            #    # #       #  #  #    # #            #    # #      #    # # #      #    # 
+#             #   ###### #####  ##### #    # #      #    # #      #####  ##### #    # #####  #    # # #####  #    # 
+#       ###   #   #    # #            #####  #      ###### #      #            #####  #      #    # # #      # ## # 
+#       ###   #   #    # #            #      #      #    # #    # #            #   #  #       #  #  # #      ##  ## 
+####### ###   #   #    # ######       #      ###### #    #  ####  ######       #    # ######   ##   # ###### #    # 
+*/
+
+.second-line .the-place-review {
+  /* display: inline-block; */
+  /* padding-left: 721px; */
+  position: relative;
+  padding-top: 12px;
+  padding-left: 9px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  border: 1px solid #dadada;
+}
+
+.second-line .the-place-review .title {
+  padding-left: 3px;
+}
+
+.second-line .the-place-review .content {
+  margin-top: 10px;
+}
+
+.second-line .the-place-review .content .right {
+  padding-top: 2px;
+  padding-left: 96px;
+  padding-bottom: 15px;
+}
+
+.second-line .the-place-review .content .image-container {
+  position: absolute;
+  padding-left: 4px;
+  /* float: left; */
+}
+
+.second-line .the-place-review .content .image-container img {
+  width: 86px;
+  height: 52px;
+  border: 3px solid white;
+  outline: 1px solid #bbbbbb;
+}
+
+.second-line .the-place-review .content .title {
+  position: relative;
+  font-weight: normal;
+  /* padding-top: 2px; */
+}
+
+.second-line .the-place-review .content .writer {
+  position: relative;
+  margin-top: 10px;
+}
+
+.second-line .the-place-review .content .title::after,
+.second-line .the-place-review .content .writer::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: -5px;
+  height: 1px;
+  width: 109px;
+  background: url('./images/the-place-review_dotted-line.png');
+}
+
+.second-line .the-place-review .content .writer .name {
+  color: #ff6f00;
+}
+
+.second-line .the-place-review .content .posting {
+  padding-left: 3px;
+  color: #505050;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: -0.8px;
+}
+
+.second-line .the-place-review .content .title,
+.second-line .the-place-review .content .writer {
+  padding-left: 9px;
+  color: black;
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.25px;
+}
+
+.second-line .the-place-review .content .title,
+.second-line .the-place-review .content .writer,
+.second-line .the-place-review .content .posting {
+  /* display: inline-block; */
+}
+
+.second-line .the-place-review .more01 {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+
 /* 
     ##### #    # # #####  #####        #      # #    # ###### 
       #   #    # # #    # #    #       #      # ##   # #      
@@ -708,6 +939,17 @@ body {
 ###   #   #    # # #    # #####        ###### # #    # ###### 
 */
 
+.third-line {
+  margin-top: 9px;
+}
+
+.third-line .inside,
+.third-line .story,
+.third-line .the-items,
+.third-line .customer-service {
+  border: 1px solid #dadada;
+}
+
 /* 
     ######  ####   ####  ##### ###### #####  
     #      #    # #    #   #   #      #    # 
@@ -716,6 +958,11 @@ body {
 ### #      #    # #    #   #   #      #   #  
 ### #       ####   ####    #   ###### #    # 
 */
+
+.footer .navigation-bar .left ul li {
+  font-size: 11px;
+  color: #858585;
+}
 
 /* 
 #####  #    # ##### #####  ####  #    # 
