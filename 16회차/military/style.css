@@ -272,3 +272,333 @@ table td {
 .button02 > .tail > .body {
   background: url('./images/button02_body.png') center repeat-x;
 }
+
+/* 
+#####   ####  #####  #   # 
+#    # #    # #    #  # #  
+#####  #    # #    #   #   
+#    # #    # #    #   #   
+#    # #    # #    #   #   
+#####   ####  #####    #   
+*/
+
+body {
+  width: 1024px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.wrapper {
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+/* 
+#    # ######   ##   #####  ###### #####  
+#    # #       #  #  #    # #      #    # 
+###### #####  #    # #    # #####  #    # 
+#    # #      ###### #    # #      #####  
+#    # #      #    # #    # #      #   #  
+#    # ###### #    # #####  ###### #    # 
+*/
+
+.header {
+  position: relative;
+  height: 55px;
+  text-align: center;
+}
+
+.header .title::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -51px;
+  width: 39px;
+  height: 52px;
+  background: url('./images/title_icon.png');
+}
+
+.header .title {
+  position: absolute;
+  top: 11px;
+  left: 362px;
+}
+
+.header .badges {
+  position: absolute;
+  top: 13px;
+  right: 6px;
+}
+
+.header .badges ul li {
+  float: left;
+  cursor: pointer;
+}
+
+.header .badges ul li:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main {
+  position: relative;
+  border: 1px solid #cfcfcf;
+}
+
+.main .search-bar {
+  position: relative;
+  padding-top: 8px;
+  padding-right: 22px;
+  padding-bottom: 7px;
+  text-align: right;
+}
+
+.main .search-bar::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -2px;
+  width: 982px;
+  height: 35px;
+  background: url('./images/search-bar.png');
+}
+
+.main .search-bar .input01 {
+  position: absolute;
+  top: 5px;
+  right: 67px;
+  z-index: 1;
+}
+
+.main .search-bar .button00 {
+  position: relative;
+  z-index: 1;
+}
+
+.main .left,
+.main .middle,
+.main .right,
+.main .bottom {
+  display: inline-block;
+}
+
+.main .left > div,
+.main .middle > div,
+.main .right > div,
+.main .bottom > ul > li {
+  border: 1px solid #a1c7f2;
+  box-sizing: border-box;
+}
+
+/* 
+    #      ###### ###### ##### 
+    #      #      #        #   
+    #      #####  #####    #   
+### #      #      #        #   
+### #      #      #        #   
+### ###### ###### #        #   
+*/
+
+/* 
+#                                                                  
+#           ######  ####  #####  ######  ####    ##    ####  ##### 
+#           #      #    # #    # #      #    #  #  #  #        #   
+#           #####  #    # #    # #####  #      #    #  ####    #   
+#       ### #      #    # #####  #      #      ######      #   #   
+#       ### #      #    # #   #  #      #    # #    # #    #   #   
+####### ### #       ####  #    # ######  ####  #    #  ####    #   
+*/
+
+/* 
+#                                                                                                                                           
+#           #####  #####  #  ####    ##   #####  ######        ####  ###### #####  #    # #  ####  ######       #####  #        ##   #    # 
+#           #    # #    # # #    #  #  #  #    # #            #      #      #    # #    # # #    # #            #    # #       #  #  ##   # 
+#           #####  #    # # #      #    # #    # #####  #####  ####  #####  #    # #    # # #      #####  ##### #    # #      #    # # #  # 
+#       ### #    # #####  # #  ### ###### #    # #                 # #      #####  #    # # #      #            #####  #      ###### #  # # 
+#       ### #    # #   #  # #    # #    # #    # #            #    # #      #   #   #  #  # #    # #            #      #      #    # #   ## 
+####### ### #####  #    # #  ####  #    # #####  ######        ####  ###### #    #   ##   #  ####  ######       #      ###### #    # #    # 
+*/
+
+.main .left .brigade-service-plan {
+  position: relative;
+  padding-top: 66px;
+  padding-bottom: 10px;
+}
+
+.main .left .brigade-service-plan::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 73px;
+  height: 98px;
+  background: url('./images/brigade-service-plan_character.png');
+}
+
+.main .left .brigade-service-plan .title {
+  position: relative;
+  text-align: right;
+  /* padding-left: 63px; */
+}
+
+.main .left .brigade-service-plan .title::after {
+  content: '';
+  position: absolute;
+  top: -55px;
+  left: 113px;
+  width: 29px;
+  height: 47px;
+  background: url('./images/brigade-service-plan_badges.png');
+}
+
+.main .left .brigade-service-plan .button-container {
+  margin-top: 19px;
+  padding-left: 4px;
+  text-align: center;
+}
+
+.main .left .brigade-service-plan .button-container button::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 17px;
+  height: 17px;
+  background: url('./images/brigade-service-plan_button_left-top.png');
+}
+
+.main .left .brigade-service-plan .button-container button {
+  position: relative;
+}
+
+.main .left .brigade-service-plan .button-container button::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 5px;
+  height: 5px;
+  background: url('./images/brigade-service-plan_button_left-bottom.png');
+}
+
+.main .left .brigade-service-plan .button-container button + button {
+  margin-left: 12px;
+}
+
+.main .left .brigade-service-plan .button-container .button03 {
+  padding-top: 5px;
+  padding-left: 11px;
+  padding-right: 4px;
+}
+
+/* 
+#                                                                                                                                     
+#           #####  #####  #  ####    ##   #####  ######       #    #   ##   # #    #         ##    ####  ##### # #    # # ##### #   # 
+#           #    # #    # # #    #  #  #  #    # #            ##  ##  #  #  # ##   #        #  #  #    #   #   # #    # #   #    # #  
+#           #####  #    # # #      #    # #    # #####  ##### # ## # #    # # # #  # ##### #    # #        #   # #    # #   #     #   
+#       ### #    # #####  # #  ### ###### #    # #            #    # ###### # #  # #       ###### #        #   # #    # #   #     #   
+#       ### #    # #   #  # #    # #    # #    # #            #    # #    # # #   ##       #    # #    #   #   #  #  #  #   #     #   
+####### ### #####  #    # #  ####  #    # #####  ######       #    # #    # # #    #       #    #  ####    #   #   ##   #   #     #  
+*/
+
+/* .main .left .brigade-main-activity */
+
+/* 
+#                                                                                                                     
+#            ####    ##   #    # #####        # #    # ##### #####   ####  #####  #    #  ####  ##### #  ####  #    # 
+#           #    #  #  #  ##  ## #    #       # ##   #   #   #    # #    # #    # #    # #    #   #   # #    # ##   # 
+#           #      #    # # ## # #    # ##### # # #  #   #   #    # #    # #    # #    # #        #   # #    # # #  # 
+#       ### #      ###### #    # #####        # #  # #   #   #####  #    # #    # #    # #        #   # #    # #  # # 
+#       ### #    # #    # #    # #            # #   ##   #   #   #  #    # #    # #    # #    #   #   # #    # #   ## 
+####### ###  ####  #    # #    # #            # #    #   #   #    #  ####  #####   ####   ####    #   #  ####  #    # 
+*/
+
+/* 
+#                                                                                                      
+#            ####    ##   #    # #####        #    # #    # #      ##### # #####  #      ###### #    # 
+#           #    #  #  #  ##  ## #    #       ##  ## #    # #        #   # #    # #      #       #  #  
+#           #      #    # # ## # #    # ##### # ## # #    # #        #   # #    # #      #####    ##   
+#       ### #      ###### #    # #####        #    # #    # #        #   # #####  #      #        ##   
+#       ### #    # #    # #    # #            #    # #    # #        #   # #      #      #       #  #  
+####### ###  ####  #    # #    # #            #    #  ####  ######   #   # #      ###### ###### #    # 
+*/
+
+/* 
+#                                                                          
+#           #####   ####  #####  #    # #####        #      #  ####  ##### 
+#           #    # #    # #    # #    # #    #       #      # #        #   
+#           #    # #    # #    # #    # #    # ##### #      #  ####    #   
+#       ### #####  #    # #####  #    # #####        #      #      #   #   
+#       ### #      #    # #      #    # #            #      # #    #   #   
+####### ### #       ####  #       ####  #            ###### #  ####    #   
+*/
+
+/* 
+    #    # # #####  #####  #      ###### 
+    ##  ## # #    # #    # #      #      
+    # ## # # #    # #    # #      #####  
+### #    # # #    # #    # #      #      
+### #    # # #    # #    # #      #      
+### #    # # #####  #####  ###### ###### 
+*/
+
+/* 
+    #####  #  ####  #    # ##### 
+    #    # # #    # #    #   #   
+    #    # # #      ######   #   
+### #####  # #  ### #    #   #   
+### #   #  # #    # #    #   #   
+### #    # #  ####  #    #   #   
+*/
+
+/* 
+# #    # #####  #    # ##### 
+# ##   # #    # #    #   #   
+# # #  # #    # #    #   #   
+# #  # # #####  #    #   #   
+# #   ## #      #    #   #   
+# #    # #       ####    #   
+*/
+
+.input01::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url('./images/search-bar_search-bar_border.png') white;
+  width: 237px;
+  height: 22px;
+  z-index: -1;
+}
+
+.input01 {
+  position: relative;
+  padding: 2px;
+  height: 18px;
+  width: 234px;
+  /* background: white; */
+}
+
+.input01 input {
+}
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+.button03 {
+  border: 1px solid #919191;
+}
