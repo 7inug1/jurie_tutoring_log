@@ -387,7 +387,35 @@ body {
 .main .middle,
 .main .right,
 .main .bottom {
+  box-sizing: border-box;
+}
+
+.main .main-page {
+  position: relative;
+  padding-top: 5px;
+  padding-right: 7px;
+  padding-bottom: 80px;
+  padding-left: 7px;
+}
+
+.main .left {
   display: inline-block;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  /* width: 203px; */
+}
+
+.main .middle {
+  width: 543px;
+  padding-left: 212px;
+}
+
+.main .right {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  width: 202px;
 }
 
 .main .left > div,
@@ -558,6 +586,37 @@ body {
 ### #   #  # #    # #    #   #   
 ### #    # #  ####  #    #   #   
 */
+
+/* 
+    #####   ####  ##### #####  ####  #    # 
+    #    # #    #   #     #   #    # ##  ## 
+    #####  #    #   #     #   #    # # ## # 
+### #    # #    #   #     #   #    # #    # 
+### #    # #    #   #     #   #    # #    # 
+### #####   ####    #     #    ####  #    # 
+*/
+.main .bottom {
+  margin-top: 8px;
+}
+
+/* .main .bottom ul::after {
+  content: '';
+  display: block;
+  clear: both;
+} */
+
+.main .bottom ul li {
+  position: relative;
+  width: 97px;
+  height: 46px;
+  float: left;
+}
+
+.main .bottom ul li .image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 /* 
 # #    # #####  #    # ##### 
