@@ -977,6 +977,10 @@ body {
   padding-left: 46px;
 }
 
+label.input-container01 {
+  display: block;
+}
+
 .input01 {
   position: relative;
   height: 20px;

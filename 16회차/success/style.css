@@ -345,7 +345,7 @@ body {
   position: absolute;
   top: 25px;
   left: -15px;
-  min-width: 616px;
+  /* min-width: 616px; */
   padding-left: 7px;
   height: 32px;
   background: url('./images/subnavigation_head.png') left no-repeat;
@@ -362,9 +362,10 @@ body {
 
 .header .subnavigation-bar > .tail > ul {
   display: inline-block;
+  min-width: 593px;
   height: 32px;
   padding-left: 6px;
-  padding-right: 10px;
+  padding-right: 2px;
   background: url('./images/subnavigation_body.png') center repeat-x;
 }
 
@@ -541,6 +542,26 @@ body {
 .grouping_signin-container_announcement_button-container .button-container {
   margin-top: 8px;
   /* padding-left: 721px; */
+}
+
+.grouping_signin-container_announcement_button-container
+  .button-container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grouping_signin-container_announcement_button-container
+  .button-container
+  button {
+  float: left;
+}
+
+.grouping_signin-container_announcement_button-container
+  .button-container
+  button
+  + button {
+  margin-left: 5px;
 }
 
 /* 
@@ -1111,6 +1132,8 @@ body {
   padding-left: 13px;
   padding-right: 2px;
   padding-bottom: 13px;
+  width: 233px;
+  box-sizing: border-box;
 }
 
 .third-line .story {
@@ -1118,6 +1141,8 @@ body {
   padding-left: 13px;
   padding-right: 2px;
   padding-bottom: 15px;
+  width: 233px;
+  box-sizing: border-box;
 }
 
 .third-line .the-items {
@@ -1125,6 +1150,8 @@ body {
   padding-left: 13px;
   padding-right: 2px;
   padding-bottom: 17px;
+  width: 233px;
+  box-sizing: border-box;
 }
 
 .third-line .customer-service {
@@ -1132,7 +1159,8 @@ body {
   padding-left: 13px;
   padding-right: 10px;
   padding-bottom: 12px;
-  margin-left: 8px;
+  width: 242px;
+  box-sizing: border-box;
 }
 
 .third-line .inside .content,
@@ -1227,6 +1255,7 @@ body {
   .grouping_title_description
   .description {
   margin-top: 6px;
+  letter-spacing: -0.231px;
 }
 
 .third-line > ul > li .more02 {
@@ -1478,6 +1507,7 @@ body {
 .select01 select {
   color: #858585;
   font-size: 11px;
+  vertical-align: top;
 }
 
 /* 

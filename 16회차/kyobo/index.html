@@ -20,10 +20,12 @@
           <button class="return current">반품</button>
           <button class="exchange">교환</button>
         </div>
+        <!-- 세 탭 (주문취소, 반품, 교환)에 대한 페이지  -->
         <div class="pages">
+          <!-- 주문취소 탭의 페이지 -->
           <div class="order-cancel" hidden></div>
+          <!-- 반품 탭의 페이지 -->
           <div class="return">
-            <!-- 1. -->
             <ul class="order-history">
               <li class="order-number">
                 <h2 class="title">주문번호 :</h2>
@@ -36,11 +38,12 @@
             </ul>
 
             <!-- 2. module01-->
+            <!-- 1번째 배송지 -->
             <div class="module01 shipping-destination">
               <div class="table01">
                 <h2 class="title">1번째 배송지</h2>
                 <table>
-                  <caption hidden>배송지 표</caption>
+                  <caption hidden>1번째 배송지 표</caption>
                   <colgroup>
                     <col style="width: 93px" />
                     <col style="width: 427px" />
@@ -65,10 +68,11 @@
                   </tbody>
                 </table>
               </div>
+              <!-- (첫 번째) 회수지 주소 -->
               <div class="table02">
                 <h2 class="title">회수지 주소</h2>
                 <table>
-                  <caption hidden>회수지 주소 표</caption>
+                  <caption hidden>첫 번째 회수지 주소 표</caption>
                   <colgroup>
                     <col style="width: 93px" />
                     <col style="width: 297px" />
@@ -83,7 +87,7 @@
                           <label for="general-shipping1">
                             <input
                               type="radio"
-                              name="return-address"
+                              name="first-return-address"
                               id="general-shipping1"
                               value="[국내] 일반택배"
                             />
@@ -92,7 +96,7 @@
                           <label for="conveni-shipping1">
                             <input
                               type="radio"
-                              name="return-address"
+                              name="first-return-address"
                               id="conveni-shipping1"
                               value="[국내] 편의점 배송"
                             />
@@ -204,10 +208,11 @@
 
             <!-- 3. module02 -->
             <div class="module02">
+              <!-- 교보배송상품 -->
               <h2 class="title">교보배송상품</h2>
               <div class="table01">
                 <table>
-                  <caption hidden>배송상품 표</caption>
+                  <caption hidden>교보배송상품 표</caption>
                   <colgroup>
                     <col style="width: 42px" />
                     <col style="width: 247px" />
@@ -233,20 +238,26 @@
                       <td class="checkbox">
                         <input
                           type="checkbox"
-                          name="checkbox1"
-                          id="checkbox1"
+                          name="kyobo_checkbox1"
+                          id="kyobo_checkbox1"
                         />
                       </td>
-                      <td class="product-name">[도서] 운명이다</td>
-                      <td class="order-quantity">1</td>
-                      <td class="price">30,000원</td>
+                      <td class="product-name">
+                        <label for="kyobo_checkbox1">[도서] 운명이다</label>
+                      </td>
+                      <td class="order-quantity">
+                        <label for="kyobo_checkbox1">1</label>
+                      </td>
+                      <td class="price">
+                        <label for="kyobo_checkbox1">30,000원</label>
+                      </td>
                       <td class="return-quantity">
-                        <div class="input-container01">
+                        <label class="input-container01">
                           <div class="input01 quantity">
-                            <input type="text" />
+                            <input type="text" name="text1" />
                           </div>
                           <span>1</span>
-                        </div>
+                        </label>
                       </td>
                       <td class="return-reason">
                         <div class="select01 return-reason">
@@ -266,20 +277,26 @@
                       <td class="checkbox">
                         <input
                           type="checkbox"
-                          name="checkbox1"
-                          id="checkbox1"
+                          name="kyobo_checkbox2"
+                          id="kyobo_checkbox2"
                         />
                       </td>
-                      <td class="product-name">[도서] 운명이다</td>
-                      <td class="order-quantity">1</td>
-                      <td class="price">30,000원</td>
+                      <td class="product-name">
+                        <label for="kyobo_checkbox2">[도서] 운명이다</label>
+                      </td>
+                      <td class="order-quantity">
+                        <label for="kyobo_checkbox2">1</label>
+                      </td>
+                      <td class="price">
+                        <label for="kyobo_checkbox2">30,000원</label>
+                      </td>
                       <td class="return-quantity">
-                        <div class="input-container01">
+                        <label class="input-container01">
                           <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
-                        </div>
+                        </label>
                       </td>
                       <td class="return-reason">
                         <div class="select01 return-reason">
@@ -301,9 +318,10 @@
                   </tbody>
                 </table>
               </div>
+
               <div class="table02">
                 <table>
-                  <caption hidden></caption>
+                  <caption hidden>교보배송상품 배송방법 표</caption>
                   <colgroup>
                     <col style="width: 211px" />
                     <col style="width: 178px" />
@@ -325,7 +343,7 @@
                           <label for="kyobo-shipping1">
                             <input
                               type="radio"
-                              name="shipping-method"
+                              name="kyobo_shipping-method"
                               id="kyobo-shipping1"
                               value="교보택배"
                             />
@@ -334,7 +352,7 @@
                           <label for="personal-shipping1">
                             <input
                               type="radio"
-                              name="shipping-method"
+                              name="kyobo_shipping-method"
                               id="personal-shipping1"
                               value="개인배송"
                             />
@@ -351,10 +369,11 @@
               </div>
             </div>
             <div class="module02">
+              <!-- 업체배송상품 (업체명 : 수송사) -->
               <h2 class="title">업체배송상품 (업체명 : 수송사)</h2>
               <div class="table01">
                 <table>
-                  <caption hidden>배송상품 표</caption>
+                  <caption hidden>업체배송상품 표</caption>
                   <colgroup>
                     <col style="width: 42px" />
                     <col style="width: 247px" />
@@ -380,20 +399,26 @@
                       <td class="checkbox">
                         <input
                           type="checkbox"
-                          name="checkbox1"
-                          id="checkbox1"
+                          name="courier_checkbox1"
+                          id="courier_checkbox1"
                         />
                       </td>
-                      <td class="product-name">[중고] 운명이다</td>
-                      <td class="order-quantity">1</td>
-                      <td class="price">30,000원</td>
+                      <td class="product-name">
+                        <label for="courier_checkbox1">[중고] 운명이다</label>
+                      </td>
+                      <td class="order-quantity">
+                        <label for="courier_checkbox1">1</label>
+                      </td>
+                      <td class="price">
+                        <label for="courier_checkbox1">30,000원</label>
+                      </td>
                       <td class="return-quantity">
-                        <div class="input-container01">
+                        <label class="input-container01">
                           <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
-                        </div>
+                        </label>
                       </td>
                       <td class="return-reason">
                         <div class="select01 return-reason">
@@ -413,20 +438,26 @@
                       <td class="checkbox">
                         <input
                           type="checkbox"
-                          name="checkbox1"
-                          id="checkbox1"
+                          name="courier_checkbox2"
+                          id="courier_checkbox2"
                         />
                       </td>
-                      <td class="product-name">[중고] 운명이다</td>
-                      <td class="order-quantity">1</td>
-                      <td class="price">30,000원</td>
+                      <td class="product-name">
+                        <label for="courier_checkbox2">[중고] 운명이다</label>
+                      </td>
+                      <td class="order-quantity">
+                        <label for="courier_checkbox2">1</label>
+                      </td>
+                      <td class="price">
+                        <label for="courier_checkbox2">30,000원</label>
+                      </td>
                       <td class="return-quantity">
-                        <div class="input-container01">
+                        <label class="input-container01">
                           <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
-                        </div>
+                        </label>
                       </td>
                       <td class="return-reason">
                         <div class="select01 return-reason">
@@ -450,7 +481,7 @@
               </div>
               <div class="table02">
                 <table>
-                  <caption hidden></caption>
+                  <caption hidden>업체배송상품 배송방법 표</caption>
                   <colgroup>
                     <col style="width: 211px" />
                     <col style="width: 178px" />
@@ -472,7 +503,7 @@
                           <label for="kyobo-shipping2">
                             <input
                               type="radio"
-                              name="shipping-method"
+                              name="courier_shipping-method"
                               id="kyobo-shipping2"
                               value="교보택배"
                             />
@@ -481,7 +512,7 @@
                           <label for="personal-shipping2">
                             <input
                               type="radio"
-                              name="shipping-method"
+                              name="courier_shipping-method"
                               id="personal-shipping2"
                               value="개인배송"
                             />
@@ -499,10 +530,11 @@
             </div>
 
             <div class="module01 shipping-destination">
+              <!-- 2번째 배송지 -->
               <div class="table01">
                 <h2 class="title">2번째 배송지</h2>
                 <table>
-                  <caption hidden>배송지 표</caption>
+                  <caption hidden>2번째 배송지 표</caption>
                   <colgroup>
                     <col style="width: 93px" />
                     <col style="width: 427px" />
@@ -527,10 +559,11 @@
                   </tbody>
                 </table>
               </div>
+              <!-- (두 번째) 회수지 주소 -->
               <div class="table02">
                 <h2 class="title">회수지 주소</h2>
                 <table>
-                  <caption hidden>회수지 주소 표</caption>
+                  <caption hidden>두 번째 회수지 주소 표</caption>
                   <colgroup>
                     <col style="width: 93px" />
                     <col style="width: 297px" />
@@ -545,7 +578,7 @@
                           <label for="general-shipping2">
                             <input
                               type="radio"
-                              name="return-address"
+                              name="second-return-address"
                               id="general-shipping2"
                               value="[국내] 일반택배"
                             />
@@ -554,7 +587,7 @@
                           <label for="conveni-shipping2">
                             <input
                               type="radio"
-                              name="return-address"
+                              name="second-return-address"
                               id="conveni-shipping2"
                               value="[국내] 편의점 배송"
                             />
@@ -663,11 +696,13 @@
                 </table>
               </div>
             </div>
+
             <div class="module02">
+              <!-- 상품 쿠폰 -->
               <h2 class="title">상품 쿠폰</h2>
               <div class="table01">
                 <table>
-                  <caption hidden>배송상품 표</caption>
+                  <caption hidden>상품쿠폰 표</caption>
                   <colgroup>
                     <col style="width: 42px" />
                     <col style="width: 247px" />
@@ -693,20 +728,26 @@
                       <td class="checkbox">
                         <input
                           type="checkbox"
-                          name="checkbox1"
-                          id="checkbox1"
+                          name="coupon_checkbox1"
+                          id="coupon_checkbox1"
                         />
                       </td>
-                      <td class="product-name">[도서] 운명이다</td>
-                      <td class="order-quantity">1</td>
-                      <td class="price">30,000원</td>
+                      <td class="product-name">
+                        <label for="coupon_checkbox1">[도서] 운명이다</label>
+                      </td>
+                      <td class="order-quantity">
+                        <label for="coupon_checkbox1">1</label>
+                      </td>
+                      <td class="price">
+                        <label for="coupon_checkbox1">30,000원</label>
+                      </td>
                       <td class="return-quantity">
-                        <div class="input-container01">
+                        <label class="input-container01">
                           <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
-                        </div>
+                        </label>
                       </td>
                       <td class="return-reason">
                         <div class="select01 return-reason">
@@ -726,20 +767,26 @@
                       <td class="checkbox">
                         <input
                           type="checkbox"
-                          name="checkbox1"
-                          id="checkbox1"
+                          name="coupon_checkbox2"
+                          id="coupon_checkbox2"
                         />
                       </td>
-                      <td class="product-name">[도서] 운명이다</td>
-                      <td class="order-quantity">1</td>
-                      <td class="price">30,000원</td>
+                      <td class="product-name">
+                        <label for="coupon_checkbox2">[도서] 운명이다</label>
+                      </td>
+                      <td class="order-quantity">
+                        <label for="coupon_checkbox2">1</label>
+                      </td>
+                      <td class="price">
+                        <label for="coupon_checkbox2">30,000원</label>
+                      </td>
                       <td class="return-quantity">
-                        <div class="input-container01">
+                        <label class="input-container01">
                           <div class="input01 quantity">
                             <input type="text" />
                           </div>
                           <span>1</span>
-                        </div>
+                        </label>
                       </td>
                       <td class="return-reason">
                         <div class="select01 return-reason">
@@ -763,7 +810,7 @@
               </div>
               <div class="table02">
                 <table>
-                  <caption hidden></caption>
+                  <caption hidden>상품쿠폰 배송방법 표</caption>
                   <colgroup>
                     <col style="width: 211px" />
                     <col style="width: 178px" />
@@ -785,7 +832,7 @@
                           <label for="kyobo-shipping3">
                             <input
                               type="radio"
-                              name="shipping-method"
+                              name="coupon_shipping-method"
                               id="kyobo-shipping3"
                               value="교보택배"
                             />
@@ -794,7 +841,7 @@
                           <label for="personal-shipping3">
                             <input
                               type="radio"
-                              name="shipping-method"
+                              name="coupon_shipping-method"
                               id="personal-shipping3"
                               value="개인배송"
                             />
@@ -830,6 +877,7 @@
 
             <div class="refund-amount">
               <h2 class="title">환불 금액</h2>
+              <!-- 환불 금액 -->
               <div class="table03">
                 <table>
                   <caption hidden>환불 금액 표</caption>
@@ -920,6 +968,7 @@
               </button>
             </div>
           </div>
+          <!-- 교환 탭의 페이지 -->
           <div class="exchange" hidden></div>
         </div>
       </div>

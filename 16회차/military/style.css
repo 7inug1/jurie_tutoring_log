@@ -612,10 +612,27 @@ body {
   float: left;
 }
 
+.main .bottom ul li:not(:first-of-type) {
+  margin-left: 9px;
+}
+
 .main .bottom ul li .image-container {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
+
+.footer {
+  background: #b2cbe7;
 }
 
 /* 
