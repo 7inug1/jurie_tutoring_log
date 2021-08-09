@@ -190,7 +190,7 @@ body > .wrapper {
   position: relative;
   padding-top: 5px;
   padding-right: 7px;
-  padding-bottom: 80px;
+  padding-bottom: 136px;
   padding-left: 7px;
 }
 
@@ -220,12 +220,38 @@ body > .wrapper {
   margin-left: 9px;
 }
 
-.main .left > div,
-.main .middle > div,
+.main .left > div:not(.side-banner-links),
+.main .middle > div:not(.camp-multimedia),
 .main .right > div,
-.main .bottom > ul > li {
+.main .bottom > ul > li,
+.main .middle .camp-multimedia > div,
+.main .left .side-banner-links div {
   border: 1px solid #a1c7f2;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+}
+
+.main .left > div,
+.main .middle > div:not(.camp-multimedia),
+.main .left > div:not(.side-banner-links),
+.main .right > div,
+.main .middle .camp-multimedia div,
+.main .left .side-banner-links div {
+  margin-top: 8px;
+}
+
+.main .left > div > .title,
+.main .middle > div > .title,
+.main .right > div > .title,
+.main .middle .camp-multimedia div .title {
+  padding-left: 9px;
+  padding-top: 6px;
+}
+
+.main .middle .camp-multimedia {
+  /* border: 0 none; */
+}
+
+.main .middle .camp-multimedia div {
 }
 
 /* 
@@ -267,6 +293,7 @@ body > .wrapper {
   background: url('./images/forecast_weather-info_icon.png');
   width: 11px;
   height: 14px;
+  cursor: pointer;
 }
 
 .left .forecast .wrapper .weather-info {
@@ -543,7 +570,9 @@ body > .wrapper {
 ####### ### #####  #    # #  ####  #    # #####  ######       #    # #    # # #    #       #    #  ####    #   #   ##   #   #     #  
 */
 
-/* .main .left .brigade-main-activity */
+.main .left .brigade-main-activity .content span {
+  font-size: 13px;
+}
 
 /* 
 #                                                                                                                     
@@ -584,6 +613,10 @@ body > .wrapper {
 ### #    # # #####  #####  ###### ###### 
 */
 
+.middle .empty-space {
+  height: 27px;
+}
+
 /* 
     #####  #  ####  #    # ##### 
     #    # # #    # #    #   #   
@@ -602,7 +635,9 @@ body > .wrapper {
 ### #####   ####    #     #    ####  #    # 
 */
 .main .bottom {
-  margin-top: 8px;
+  /* margin-top: 8px; */
+  position: absolute;
+  bottom: 80px;
 }
 
 /* .main .bottom ul::after {
@@ -683,6 +718,22 @@ body > .wrapper {
 
 .button03 {
   border: 1px solid #919191;
+}
+
+/* 
+ ####  ###### #      ######  ####  ##### 
+#      #      #      #      #    #   #   
+ ####  #####  #      #####  #        #   
+     # #      #      #      #        #   
+#    # #      #      #      #    #   #   
+ ####  ###### ###### ######  ####    #   
+*/
+
+.select01 {
+  width: 150px;
+  height: 21px;
+  box-sizing: border-box;
+  border: 1px solid #7f9db9;
 }
 
 /*
