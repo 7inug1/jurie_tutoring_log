@@ -1,209 +1,3 @@
-/*
-########  ########  ######  ######## ########  ######   ######   ######  
-##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
-##     ## ##       ##       ##          ##    ##       ##       ##       
-########  ######    ######  ######      ##    ##        ######   ######  
-##   ##   ##             ## ##          ##    ##             ##       ## 
-##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
-##     ## ########  ######  ########    ##     ######   ######   ######  
-*/
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-@media only screen {
-  html,
-  body,
-  div,
-  span,
-  applet,
-  object,
-  iframe,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  a,
-  abbr,
-  acronym,
-  address,
-  big,
-  cite,
-  code,
-  del,
-  dfn,
-  em,
-  img,
-  ins,
-  kbd,
-  q,
-  s,
-  samp,
-  small,
-  strike,
-  strong,
-  sub,
-  sup,
-  tt,
-  var,
-  b,
-  u,
-  i,
-  center,
-  dl,
-  dt,
-  dd,
-  ol,
-  ul,
-  li,
-  fieldset,
-  form,
-  label,
-  legend,
-  table,
-  caption,
-  tbody,
-  tfoot,
-  thead,
-  tr,
-  th,
-  td,
-  article,
-  aside,
-  canvas,
-  details,
-  embed,
-  figure,
-  figcaption,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  output,
-  ruby,
-  section,
-  summary,
-  time,
-  mark,
-  audio,
-  video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  /* HTML5 display-role reset for older browsers */
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  section {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
-  ol,
-  ul {
-    list-style: none;
-  }
-  blockquote,
-  q {
-    quotes: none;
-  }
-  blockquote:before,
-  blockquote:after,
-  q:before,
-  q:after {
-    content: '';
-    content: none;
-  }
-  table {
-    /* added personally */
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-  }
-
-  /* added personally from below */
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  button {
-    padding: 0;
-    border: none;
-    background: transparent;
-  }
-
-  label,
-  input[type='radio'],
-  button {
-    cursor: pointer;
-  }
-
-  input[type='checkbox'] {
-    margin: 0;
-  }
-
-  input[type='text'] {
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    border: 0 none;
-    box-sizing: border-box;
-    background: transparent;
-  }
-
-  textarea {
-    width: 100%;
-    height: 100%;
-    border: 0 none;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
-  select {
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    border: 0 none;
-    box-sizing: border-box;
-  }
-
-  /* for customizing the 'browsing-file' functionality */
-  input[type='file'] {
-    position: absolute;
-    top: -200%;
-    left: -200%;
-    opacity: 0;
-    z-index: -100;
-  }
-
-  strong,
-  .bolder {
-    font-weight: bolder;
-  }
-}
-
 /* 
 #####  ###### #####   ####   ####  #    #   ##   #         #####  ######  ####  ###### #####  ####   ####   ####  
 #    # #      #    # #      #    # ##   #  #  #  #         #    # #      #      #        #   #    # #      #      
@@ -286,9 +80,10 @@ body {
   width: 1024px;
   padding-top: 50px;
   padding-bottom: 50px;
+  font-family: 'dotum', sans-serif;
 }
 
-.wrapper {
+body > .wrapper {
   padding-left: 21px;
   padding-right: 21px;
 }
@@ -316,6 +111,7 @@ body {
   width: 39px;
   height: 52px;
   background: url('./images/title_icon.png');
+  cursor: pointer;
 }
 
 .header .title {
@@ -332,7 +128,7 @@ body {
 
 .header .badges ul li {
   float: left;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .header .badges ul li:not(:first-of-type) {
@@ -398,24 +194,30 @@ body {
   padding-left: 7px;
 }
 
+.main .main-page::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main .left,
+.main .middle,
+.main .right {
+  float: left;
+}
+
 .main .left {
-  display: inline-block;
-  position: absolute;
-  left: 7px;
-  top: 5px;
-  /* width: 203px; */
+  width: 203px;
 }
 
 .main .middle {
   width: 543px;
-  padding-left: 212px;
+  margin-left: 9px;
 }
 
 .main .right {
-  position: absolute;
-  top: 5px;
-  right: 7px;
   width: 202px;
+  margin-left: 9px;
 }
 
 .main .left > div,
@@ -445,6 +247,203 @@ body {
 ####### ### #       ####  #    # ######  ####  #    #  ####    #   
 */
 
+.left .forecast {
+  padding-left: 10px;
+  padding-right: 11px;
+  background: #f5f9fe;
+  box-sizing: border-box;
+}
+
+.left .forecast .wrapper {
+  border-left: 1px solid #cdcdcd;
+  border-right: 1px solid #cdcdcd;
+}
+
+.left .forecast .wrapper .weather-info::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  background: url('./images/forecast_weather-info_icon.png');
+  width: 11px;
+  height: 14px;
+}
+
+.left .forecast .wrapper .weather-info {
+  position: relative;
+  height: 23px;
+  background: url('./images/forecast_background.png') white;
+}
+
+.left .forecast .wrapper .weather-info .title {
+  /* display: inline-block; */
+  position: absolute;
+}
+
+.left .forecast .wrapper .weather-info .title:first-of-type {
+  left: 26px;
+  top: 5px;
+}
+
+.left .forecast .wrapper .weather-info .title + .title {
+  left: 102px;
+  top: 5px;
+}
+
+.left .forecast .wrapper > .todays-weather {
+  position: relative;
+  padding-top: 2px;
+  padding-left: 14px;
+  padding-bottom: 7px;
+  background: white;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.left .forecast .wrapper .todays-weather::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather,
+.left .forecast .wrapper .todays-weather .tomorrows-weather {
+  position: relative;
+  float: left;
+}
+
+.left .forecast .wrapper .todays-weather .tomorrows-weather {
+  padding-left: 38px;
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather .image-container,
+.left .forecast .wrapper .todays-weather .tomorrows-weather .image-container {
+  position: absolute;
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather .image-container {
+  left: 10px;
+  top: 18px;
+}
+
+.left .forecast .wrapper .todays-weather .tomorrows-weather .image-container {
+  left: 45px;
+  top: 18px;
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather .temperature,
+.left .forecast .wrapper .todays-weather .tomorrows-weather .temperature {
+  padding-top: 35px;
+  font-size: 13px;
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather .temperature .lowest {
+  padding-left: 8px;
+}
+
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .tomorrows-weather
+  .temperature
+  .lowest {
+  padding-left: 6px;
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather .temperature .lowest,
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .tomorrows-weather
+  .temperature
+  .lowest,
+.left .forecast .wrapper .todays-weather .todays-weather .temperature .celsius,
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .tomorrows-weather
+  .temperature
+  .celsius {
+  position: relative;
+  color: #0000ff;
+}
+
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .todays-weather
+  .temperature
+  .celsius::before,
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .tomorrows-weather
+  .temperature
+  .celsius::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: url('./images/forecast_degrees.png');
+}
+
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .todays-weather
+  .temperature
+  .highest::before,
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .tomorrows-weather
+  .temperature
+  .highest::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  width: 6px;
+  height: 12px;
+  background: url('./images/forecast_slash.png');
+}
+
+.left .forecast .wrapper .todays-weather .todays-weather .temperature .highest,
+.left
+  .forecast
+  .wrapper
+  .todays-weather
+  .tomorrows-weather
+  .temperature
+  .highest {
+  position: relative;
+  padding-left: 2px;
+  color: #ff0000;
+}
+
+.left .forecast .wrapper .readiness {
+  position: relative;
+  height: 31px;
+  padding-top: 9px;
+  padding-left: 54px;
+  background: url('./images/forecast_readiness_background.png') white;
+  box-sizing: border-box;
+}
+
+.left .forecast .wrapper .readiness .image-container {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+
 /* 
 #                                                                                                                                           
 #           #####  #####  #  ####    ##   #####  ######        ####  ###### #####  #    # #  ####  ######       #####  #        ##   #    # 
@@ -457,7 +456,7 @@ body {
 
 .main .left .brigade-service-plan {
   position: relative;
-  padding-top: 66px;
+  padding-top: 95px;
   padding-bottom: 10px;
 }
 
@@ -469,22 +468,29 @@ body {
   width: 73px;
   height: 98px;
   background: url('./images/brigade-service-plan_character.png');
+  cursor: pointer;
 }
 
 .main .left .brigade-service-plan .title {
-  position: relative;
-  text-align: right;
-  /* padding-left: 63px; */
+  /* display: inline-block; */
+  position: absolute;
+  top: 66px;
+  right: -1px;
+  /* left: 58px; */
+  /* text-align: right; */
+  /* float: right; */
+  /* clear: both; */
 }
 
 .main .left .brigade-service-plan .title::after {
   content: '';
   position: absolute;
   top: -55px;
-  left: 113px;
+  left: 50px;
   width: 29px;
   height: 47px;
   background: url('./images/brigade-service-plan_badges.png');
+  cursor: pointer;
 }
 
 .main .left .brigade-service-plan .button-container {
@@ -677,4 +683,210 @@ body {
 
 .button03 {
   border: 1px solid #919191;
+}
+
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    /* added personally */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* added personally from below */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  label,
+  input[type='radio'],
+  button {
+    cursor: pointer;
+  }
+
+  input[type='checkbox'] {
+    margin: 0;
+  }
+
+  input[type='text'] {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  select {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+  }
+
+  /* for customizing the 'browsing-file' functionality */
+  input[type='file'] {
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  strong,
+  .bolder {
+    font-weight: bolder;
+  }
 }
