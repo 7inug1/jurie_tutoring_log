@@ -674,7 +674,7 @@ body > .wrapper {
 
 .main .middle .brigade-announcement {
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
 }
 
 .main
@@ -754,7 +754,7 @@ body > .wrapper {
 }
 
 .main .middle .brigade-announcement .content {
-  margin-top: 8px;
+  margin-top: 5px;
   padding-left: 25px;
   padding-right: 6px;
 }
@@ -770,20 +770,20 @@ body > .wrapper {
 }
 
 .main .middle .brigade-announcement .content ul li + li {
-  margin-top: 11px;
+  margin-top: 7px;
 }
 
-.main .middle .brigade-announcement .content ul li .title::before {
+.main .middle .brigade-announcement .content ul li a::before {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 7px;
   left: -15px;
   width: 6px;
   height: 6px;
   background: url('./images/brigade-announcement_list-icon.png');
 }
 
-.main .middle .brigade-announcement .content ul li .title {
+.main .middle .brigade-announcement .content ul li a {
   color: #555555;
   font-size: 12px;
   font-weight: normal;
@@ -835,8 +835,16 @@ body > .wrapper {
 }
 
 .main .middle .army-life .content .posting-container .posting-content {
+  display: inline-block;
+  position: relative;
   line-height: 15px;
   padding-top: 7px;
+}
+
+.main .middle .army-life .content .posting-container .posting-content .more01 {
+  position: absolute;
+  bottom: -3px;
+  right: -20px;
 }
 
 /* 
@@ -866,9 +874,10 @@ body > .wrapper {
 .main .middle .camp-multimedia .camp-ucc,
 .main .middle .camp-multimedia .camp-photo,
 .main .middle .camp-multimedia .leaders {
-  float: left;
+  position: relative;
   width: 173px;
-  /* box-sizing: border-box; */
+  height: 210px;
+  float: left;
 }
 
 .main .middle .camp-multimedia .camp-ucc .content,
@@ -876,9 +885,16 @@ body > .wrapper {
   font-size: 12px;
 }
 
+.main .middle .camp-multimedia .camp-ucc > .title,
+.main .middle .camp-multimedia .camp-photo > .title,
+.main .middle .camp-multimedia .leaders > .title {
+  display: inline-block;
+  position: relative;
+}
+
 .main .middle .camp-multimedia .camp-ucc .content .title,
 .main .middle .camp-multimedia .camp-photo .content .title {
-  /* font-weight: normal; */
+  color: #79b1ba;
 }
 
 .main
@@ -896,6 +912,7 @@ body > .wrapper {
   .posting-container
   .posting-details {
   margin-top: 7px;
+  color: #b58139;
 }
 
 .main
@@ -926,6 +943,20 @@ body > .wrapper {
 ####### ###  ####  #    # #    # #             ####   ####   #### 
 */
 
+.main .middle .camp-multimedia .camp-ucc > .title::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -35px;
+  background: url('./images/camp-ucc_icon.png');
+  width: 24px;
+  height: 24px;
+}
+
+/* .main .middle .camp-multimedia .camp-ucc > .title {
+  position: relative;
+} */
+
 .main .middle .camp-multimedia .camp-ucc .content {
   margin-top: 9px;
 }
@@ -933,6 +964,30 @@ body > .wrapper {
 .main .middle .camp-multimedia .camp-ucc .content .posting-container {
   margin-top: 3px;
   padding-left: 7px;
+}
+
+.main
+  .middle
+  .camp-multimedia
+  .camp-ucc
+  .content
+  .posting-container
+  .posting-content {
+  display: inline-block;
+  position: relative;
+}
+
+.main
+  .middle
+  .camp-multimedia
+  .camp-ucc
+  .content
+  .posting-container
+  .posting-content
+  .more01 {
+  position: absolute;
+  bottom: 0px;
+  right: -12px;
 }
 
 /* 
@@ -945,6 +1000,16 @@ body > .wrapper {
 ####### ###  ####  #    # #    # #            #      #    #  ####    #    ####  
 */
 
+.main .middle .camp-multimedia .camp-photo > .title::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: -27px;
+  background: url('./images/camp-photo_icon.png');
+  width: 16px;
+  height: 16px;
+}
+
 .main .middle .camp-multimedia .camp-photo .content {
   margin-top: 10px;
   padding-left: 1px;
@@ -952,6 +1017,30 @@ body > .wrapper {
 
 .main .middle .camp-multimedia .camp-photo .content .posting-container {
   padding-left: 4px;
+}
+
+.main
+  .middle
+  .camp-multimedia
+  .camp-photo
+  .content
+  .posting-container
+  .posting-content {
+  display: inline-block;
+  position: relative;
+}
+
+.main
+  .middle
+  .camp-multimedia
+  .camp-photo
+  .content
+  .posting-container
+  .posting-content
+  .more01 {
+  position: absolute;
+  bottom: -1px;
+  right: -8px;
 }
 
 /* 
@@ -963,10 +1052,25 @@ body > .wrapper {
 #       ### #      #      #    # #    # #      #   #  #    # 
 ####### ### ###### ###### #    # #####  ###### #    #  ####  
 */
-.main .middle .camp-multimedia .camp-ucc,
-.main .middle .camp-multimedia .camp-photo,
+
 .main .middle .camp-multimedia .leaders {
-  height: 210px;
+  position: relative;
+}
+
+.main .middle .camp-multimedia .leaders > .title::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: -25px;
+  background: url('./images/550-leaders_icon.png');
+  width: 16px;
+  height: 14px;
+}
+
+.main .middle .camp-multimedia .leaders .content .more01 {
+  position: absolute;
+  right: 5px;
+  bottom: 2px;
 }
 
 /* 
@@ -1054,6 +1158,243 @@ body > .wrapper {
 .main .right {
   width: 202px;
   margin-left: 9px;
+}
+
+.main .right .information-search .title,
+.main .right .reference-task .title,
+.main .right .brigade-new-comer .title {
+  display: inline-block;
+  position: relative;
+}
+
+.main .right .personal-info,
+.main .right .select-container,
+.main .right .information-search,
+.main .right .reference-task,
+.main .right .brigade-new-comer {
+  box-sizing: border-box;
+}
+
+.main .right .information-search ul li,
+.main .right .reference-task ul li {
+  font-size: 12px;
+}
+
+.main .right .information-search ul li + li,
+.main .right .reference-task ul li + li {
+  margin-top: 4px;
+}
+
+/* 
+#                                                                                                
+#           #####  ###### #####   ####   ####  #    #   ##   #            # #    # ######  ####  
+#           #    # #      #    # #      #    # ##   #  #  #  #            # ##   # #      #    # 
+#           #    # #####  #    #  ####  #    # # #  # #    # #      ##### # # #  # #####  #    # 
+#       ### #####  #      #####       # #    # #  # # ###### #            # #  # # #      #    # 
+#       ### #      #      #   #  #    # #    # #   ## #    # #            # #   ## #      #    # 
+####### ### #      ###### #    #  ####   ####  #    # #    # ######       # #    # #       ####  
+*/
+
+.main .right .personal-info-container {
+  height: 285px;
+  font-size: 12px;
+}
+
+.main .right .personal-info-container .content .personal-info ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background: url('./images/personal-info_list-icon.png');
+}
+
+.main .right .personal-info-container .content .personal-info ul li {
+  position: relative;
+}
+
+.main .right .personal-info-container .content .buttons li a {
+  color: #6b7bb3;
+  border: 1px solid #b8bce2;
+}
+
+/* 
+#                                                                                                                   
+#            ####  ###### #      ######  ####  #####        ####   ####  #    # #####   ##   # #    # ###### #####  
+#           #      #      #      #      #    #   #         #    # #    # ##   #   #    #  #  # ##   # #      #    # 
+#            ####  #####  #      #####  #        #   ##### #      #    # # #  #   #   #    # # # #  # #####  #    # 
+#       ###      # #      #      #      #        #         #      #    # #  # #   #   ###### # #  # # #      #####  
+#       ### #    # #      #      #      #    #   #         #    # #    # #   ##   #   #    # # #   ## #      #   #  
+####### ###  ####  ###### ###### ######  ####    #          ####   ####  #    #   #   #    # # #    # ###### #    # 
+*/
+
+.main .right .select-container {
+  height: 101px;
+  padding-top: 9px;
+  padding-left: 42px;
+  padding-right: 8px;
+  padding-bottom: 9px;
+  box-sizing: border-box;
+}
+
+.main .right .select-container .select01 {
+  position: relative;
+}
+
+.main .right .select-container .select01 + .select01 {
+  margin-top: 9px;
+}
+
+.main .right .select-container .select01.chammoboo::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -39px;
+  background: url('./images/select-container_icon1.png');
+  width: 34px;
+  height: 20px;
+}
+
+.main .right .select-container .select01.jikhaldae::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -35px;
+  background: url('./images/select-container_icon2.png');
+  width: 25px;
+  height: 25px;
+}
+
+.main .right .select-container .select01.main-site::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -30px;
+  background: url('./images/select-container_icon3.png');
+  width: 17px;
+  height: 15px;
+}
+
+/* 
+#                                                                                                                             
+#           # #    # ######  ####  #####  #    #   ##   ##### #  ####  #    #        ####  ######   ##   #####   ####  #    # 
+#           # ##   # #      #    # #    # ##  ##  #  #    #   # #    # ##   #       #      #       #  #  #    # #    # #    # 
+#           # # #  # #####  #    # #    # # ## # #    #   #   # #    # # #  # #####  ####  #####  #    # #    # #      ###### 
+#       ### # #  # # #      #    # #####  #    # ######   #   # #    # #  # #            # #      ###### #####  #      #    # 
+#       ### # #   ## #      #    # #   #  #    # #    #   #   # #    # #   ##       #    # #      #    # #   #  #    # #    # 
+####### ### # #    # #       ####  #    # #    # #    #   #   #  ####  #    #        ####  ###### #    # #    #  ####  #    # 
+*/
+
+.main .right .information-search {
+  height: 126px;
+}
+
+.main .right .information-search .title::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: -21px;
+  background: url('./images/information-search_icon.png');
+  width: 14px;
+  height: 14px;
+}
+
+.main .right .information-search .content {
+  margin-top: 7px;
+  padding-left: 39px;
+}
+
+.main .right .information-search ul li {
+  position: relative;
+}
+
+.main .right .information-search ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -19px;
+  background: url('./images/information-search_list-icon.png');
+  width: 11px;
+  height: 11px;
+}
+
+/* 
+#                                                                                                           
+#           #####  ###### ###### ###### #####  ###### #    #  ####  ######       #####   ##    ####  #    # 
+#           #    # #      #      #      #    # #      ##   # #    # #              #    #  #  #      #   #  
+#           #    # #####  #####  #####  #    # #####  # #  # #      #####  #####   #   #    #  ####  ####   
+#       ### #####  #      #      #      #####  #      #  # # #      #              #   ######      # #  #   
+#       ### #   #  #      #      #      #   #  #      #   ## #    # #              #   #    # #    # #   #  
+####### ### #    # ###### #      ###### #    # ###### #    #  ####  ######         #   #    #  ####  #    # 
+*/
+
+.main .right .reference-task {
+  height: 126px;
+}
+
+.main .right .reference-task .title::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -26px;
+  background: url('./images/reference-task_icon.png');
+  width: 19px;
+  height: 20px;
+}
+
+.main .right .reference-task .content {
+  margin-top: 6px;
+  padding-left: 38px;
+}
+
+.main .right .reference-task ul li {
+  position: relative;
+}
+
+.main .right .reference-task ul li a::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -18px;
+  background: url('./images/reference-task_list-icon.png');
+  width: 11px;
+  height: 11px;
+}
+
+/* 
+#                                                                                                                           
+#           #####  #####  #  ####    ##   #####  ######       #    # ###### #    #        ####   ####  #    # ###### #####  
+#           #    # #    # # #    #  #  #  #    # #            ##   # #      #    #       #    # #    # ##  ## #      #    # 
+#           #####  #    # # #      #    # #    # #####  ##### # #  # #####  #    # ##### #      #    # # ## # #####  #    # 
+#       ### #    # #####  # #  ### ###### #    # #            #  # # #      # ## #       #      #    # #    # #      #####  
+#       ### #    # #   #  # #    # #    # #    # #            #   ## #      ##  ##       #    # #    # #    # #      #   #  
+####### ### #####  #    # #  ####  #    # #####  ######       #    # ###### #    #        ####   ####  #    # ###### #    # 
+*/
+
+.main .right .brigade-new-comer {
+  height: 148px;
+}
+
+.main .right .brigade-new-comer .title::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: -26px;
+  background: url('./images/brigade-new-comer_icon.png');
+  width: 19px;
+  height: 16px;
+}
+
+.main .right .brigade-new-comer {
+  position: relative;
+  height: 144px;
+}
+
+.main .right .brigade-new-comer .content .more01 {
+  position: absolute;
+  bottom: 2px;
+  right: 7px;
 }
 
 /* 
@@ -1151,6 +1492,37 @@ body > .wrapper {
   height: 21px;
   box-sizing: border-box;
   border: 1px solid #7f9db9;
+}
+
+/* 
+                              ###      #   
+#    #  ####  #####  ######  #   #    ##   
+##  ## #    # #    # #      #     #  # #   
+# ## # #    # #    # #####  #     #    #   
+#    # #    # #####  #      #     #    #   
+#    # #    # #   #  #       #   #     #   
+#    #  ####  #    # ######   ###    ##### 
+*/
+
+.more01 {
+  display: inline-block;
+  position: relative;
+  line-height: 14px;
+  padding-right: 26px;
+}
+
+.more01 .three-dots {
+  color: #7d7d7d;
+  font-size: 12px;
+}
+
+.more01 .more-text {
+  position: absolute;
+  left: 14px;
+  top: 0px;
+  color: #ffa620;
+  font-size: 11px;
+  letter-spacing: -0.8px;
 }
 
 /*
