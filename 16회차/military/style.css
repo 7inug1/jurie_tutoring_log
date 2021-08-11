@@ -106,7 +106,7 @@ body > .wrapper {
 #    # ###### #    # #####  ###### #    # 
 */
 
-.header {
+.wrapper > .header {
   position: relative;
   height: 55px;
   text-align: center;
@@ -830,7 +830,7 @@ body > .wrapper {
   left: 9px;
 }
 
-.main .middle .army-life .content .posting-container .posting-details {
+.main .middle .army-life .content .posting-container .posting-details a {
   color: #b58139;
 }
 
@@ -892,8 +892,8 @@ body > .wrapper {
   position: relative;
 }
 
-.main .middle .camp-multimedia .camp-ucc .content .title,
-.main .middle .camp-multimedia .camp-photo .content .title {
+.main .middle .camp-multimedia .camp-ucc .content .title a,
+.main .middle .camp-multimedia .camp-photo .content .title a {
   color: #79b1ba;
 }
 
@@ -903,14 +903,16 @@ body > .wrapper {
   .camp-ucc
   .content
   .posting-container
-  .posting-details,
+  .posting-details
+  a,
 .main
   .middle
   .camp-multimedia
   .camp-photo
   .content
   .posting-container
-  .posting-details {
+  .posting-details
+  a {
   margin-top: 7px;
   color: #b58139;
 }
@@ -1196,15 +1198,80 @@ body > .wrapper {
 */
 
 .main .right .personal-info-container {
+  position: relative;
   height: 285px;
   font-size: 12px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.main .right .personal-info-container > .header {
+  padding-top: 5px;
+  padding-left: 132px;
+}
+
+.main .right .personal-info-container > .header > .admin::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -23px;
+  width: 17px;
+  height: 17px;
+  background: url('./images/personal-info_administrator_left-icon.png');
+}
+
+.main .right .personal-info-container > .header > .admin {
+  position: absolute;
+  left: 37px;
+  top: 8px;
+}
+
+.main .right .personal-info-container > .header > .admin::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -18px;
+  width: 15px;
+  height: 15px;
+  background: url('./images/personal-info_administrator_right-icon.png');
+}
+
+.main .right .personal-info-container > .header > .button02 {
+  /* float: right; */
+}
+
+.main .right .personal-info-container > .header > .button02 > .tail > .body {
+  padding-top: 2px;
+  padding-right: 1px;
+  padding-left: 4px;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+.main .right .personal-info-container .content::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 7px;
+  background: url('./images/personal-info_horizontal-line.png');
+  width: 172px;
+  height: 1px;
+}
+
+.main .right .personal-info-container .content {
+  position: relative;
+  margin-top: 11px;
+}
+
+.main .right .personal-info-container .content .personal-info {
+  padding-left: 13px;
 }
 
 .main .right .personal-info-container .content .personal-info ul li::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 3px;
+  left: -6px;
   width: 3px;
   height: 3px;
   background: url('./images/personal-info_list-icon.png');
@@ -1214,9 +1281,58 @@ body > .wrapper {
   position: relative;
 }
 
+.main .right .personal-info-container .content .personal-info ul li + li {
+  margin-top: 4px;
+}
+
 .main .right .personal-info-container .content .buttons li a {
   color: #6b7bb3;
   border: 1px solid #b8bce2;
+}
+
+.main
+  .right
+  .personal-info-container
+  .content
+  .bottom-section
+  .image-container
+  img {
+  border: 1px solid #282828;
+}
+
+.main .right .personal-info-container .content .bottom-section {
+  position: relative;
+  margin-top: 6px;
+  padding-left: 119px;
+}
+
+.main
+  .right
+  .personal-info-container
+  .content
+  .bottom-section
+  .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main .right .personal-info-container .content .bottom-section .buttons li a {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 9px;
+}
+
+.main
+  .right
+  .personal-info-container
+  .content
+  .bottom-section
+  .buttons
+  li
+  + li {
+  margin-top: 4px;
 }
 
 /* 
@@ -1388,7 +1504,7 @@ body > .wrapper {
 
 .main .right .brigade-new-comer {
   position: relative;
-  height: 144px;
+  height: 146px;
 }
 
 .main .right .brigade-new-comer .content .more01 {
@@ -1408,20 +1524,24 @@ body > .wrapper {
 .main .bottom {
   /* margin-top: 8px; */
   position: absolute;
-  bottom: 80px;
+  bottom: 82px;
+  padding-left: 10px;
 }
 
-/* .main .bottom ul::after {
+.main .bottom ul::after {
   content: '';
   display: block;
   clear: both;
-} */
+}
 
-.main .bottom ul li {
+.main .bottom > ul > li {
   position: relative;
   width: 97px;
   height: 46px;
   float: left;
+  box-sizing: border-box;
+  /* padding-top: 15px;
+  padding-right: 8px; */
 }
 
 .main .bottom ul li:not(:first-of-type) {
@@ -1430,9 +1550,32 @@ body > .wrapper {
 
 .main .bottom ul li .image-container {
   position: absolute;
-  top: 0;
-  right: 0;
 }
+
+.main .bottom ul .report .image-container,
+.main .bottom ul .instruction .image-container,
+.main .bottom ul .system .image-container,
+.main .bottom ul .status .image-container {
+  /* position: absolute; */
+  top: 15px;
+  right: 8px;
+}
+
+.main .bottom ul .security .image-container,
+.main .bottom ul .help .image-container {
+  /* position: absolute; */
+  top: 7px;
+  right: 19px;
+}
+
+/* 
+report
+instruction
+system
+status
+security
+help
+*/
 
 /* 
     ######  ####   ####  ##### ###### #####  
@@ -1672,6 +1815,11 @@ body > .wrapper {
   a {
     text-decoration: none;
     color: black;
+  }
+
+  body {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   button {
