@@ -1,4 +1,19 @@
-/* Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices). */
+/* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+/* Add a Breakpoint */
+
+/* Always Design for Mobile First */
+
+/* Another Breakpoint */
+
+/* Typical Device Breakpoints */
+
+/* Orientation: Portrait / Landscape */
+
+/* Hide Elements With Media Queries */
+
+/* Change Font Size With Media Queries */
+
 .header {
   height: 200px;
   background: orange;
@@ -126,17 +141,3 @@
     display: none;
   }
 }
-
-/* Add a Breakpoint */
-
-/* Always Design for Mobile First */
-
-/* Another Breakpoint */
-
-/* Typical Device Breakpoints */
-
-/* Orientation: Portrait / Landscape */
-
-/* Hide Elements With Media Queries */
-
-/* Change Font Size With Media Queries */
