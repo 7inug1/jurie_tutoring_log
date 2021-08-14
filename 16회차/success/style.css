@@ -362,11 +362,13 @@ body {
 
 .header .subnavigation-bar > .tail > ul {
   display: inline-block;
-  min-width: 593px;
+  min-width: 602px;
   height: 32px;
   padding-left: 6px;
   padding-right: 2px;
+  padding-top: 5px;
   background: url('./images/subnavigation_body.png') center repeat-x;
+  box-sizing: border-box;
 }
 
 .header .subnavigation-bar > .tail > ul::after {
@@ -377,14 +379,13 @@ body {
 
 .header .subnavigation-bar > .tail > ul > li {
   position: relative;
-  padding-top: 5px;
   float: left;
 }
 
 .header .subnavigation-bar > .tail > ul > li:not(:first-of-type)::before {
   content: '';
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: -9px;
   width: 2px;
   height: 8px;
@@ -467,7 +468,6 @@ body {
   position: absolute;
   padding-top: 1px;
   padding-left: 1px;
-  cursor: pointer;
 }
 
 .main-banner .banner-switch {
@@ -712,7 +712,6 @@ body {
 
 .announcement .title {
   display: inline-block;
-  cursor: pointer;
 }
 
 .announcement dl {
@@ -823,7 +822,6 @@ body {
 .second-line .the-academy .left .title {
   padding-top: 13px;
   padding-bottom: 11px;
-  cursor: pointer;
 }
 
 .second-line .the-academy .left .category {
@@ -863,17 +861,16 @@ body {
   float: left;
 }
 
-.second-line .the-academy .banner dl dt,
-.second-line .the-academy .banner dl dd {
-  cursor: pointer;
-}
-
 .second-line .the-academy .banner dl dt {
   position: relative;
   width: 124px;
   height: 82px;
   border: 1px solid #dadada;
   box-sizing: border-box;
+}
+
+.second-line .the-academy .banner dl dt .image-container {
+  height: 82px;
 }
 
 .second-line .the-academy .banner dl dt .image-container .title {
@@ -919,14 +916,6 @@ body {
   border: 1px solid #dadada;
 }
 
-.second-line .the-place-review .title,
-.second-line .the-place-review .content .image-container,
-.second-line .the-place-review .content .title,
-.second-line .the-place-review .content .writer,
-.second-line .the-place-review .content .posting {
-  cursor: pointer;
-}
-
 .second-line .the-place-review .title {
   padding-left: 3px;
 }
@@ -944,6 +933,10 @@ body {
 .second-line .the-place-review .content .image-container {
   position: absolute;
   padding-left: 4px;
+}
+
+.second-line .the-place-review .content .image-container > a {
+  display: block;
 }
 
 .second-line .the-place-review .content .image-container img {
@@ -1037,7 +1030,10 @@ body {
   font-size: 11px;
   font-family: 'dotum', sans-serif;
   line-height: 14px;
-  cursor: pointer;
+}
+
+.third-line > ul > li .title a {
+  display: inline-block;
 }
 
 .third-line > ul > li .content {
@@ -1060,8 +1056,8 @@ body {
   position: relative;
 }
 
-.third-line > ul > li .content > ul > li .thumbnail img {
-  cursor: pointer;
+.third-line > ul > li .content > ul > li .thumbnail > a {
+  display: inline-block;
 }
 
 .third-line > ul > .inside .content > ul > .success-story .thumbnail {
@@ -1171,17 +1167,6 @@ body {
 
 .third-line .customer-service .content {
   margin-top: 6px;
-}
-
-.third-line
-  > ul
-  > li
-  .content
-  > ul
-  > li
-  .grouping_title_description
-  .description {
-  cursor: pointer;
 }
 
 .third-line
