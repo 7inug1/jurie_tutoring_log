@@ -1,0 +1,554 @@
+@font-face {
+  font-family: 'kroeger0556';
+  src: url('./fonts/kroeger0556/kroeger0556.woff') format('woff'),
+    url('./fonts/kroeger0556/kroeger0556.woff2') format('woff2');
+}
+
+body {
+  font-family: 'dotum', sans-serif;
+  min-width: 320px;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+/* 방법1 */
+/* .header {
+  position: relative;
+  background: url('./images/header_whole-bar.png');
+  height: 34px;
+}
+
+.header > .logo {
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+
+.header > .right-bar::before {
+  content: '';
+  position: absolute;
+  left: -47px;
+  background: url('./images/header_right-bar_left.png');
+  width: 47px;
+  height: 34px;
+}
+
+.header > .right-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/header_right-bar_right.png');
+  height: 34px;
+  width: 69%;
+  float: right;
+}
+
+.header > .right-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/header_shadow.png');
+  width: 97px;
+  height: 42px;
+} */
+
+/* 방법2 */
+/* .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 80%;
+  background: url('./images/header_method2/header_middle-bar.png');
+  width: 47px;
+  height: 34px;
+} */
+
+.header {
+  position: relative;
+  background: url('./images/header_method2/header_left-bar2.png') left no-repeat;
+  height: 34px;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/header_right-bar_right.png') repeat-x right;
+  height: 34px;
+  width: calc(100% - 100px);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/header_shadow.png');
+  width: 97px;
+  height: 42px;
+}
+
+.header > .logo {
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+
+.header > .subtitle {
+  position: absolute;
+  left: 92px;
+  top: 9px;
+}
+
+.header > .button-container {
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 14px;
+}
+
+.header > .button-container > .button00 > .tail > .body {
+  padding-top: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #ffffff;
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main .search-section {
+  background: #ededed;
+  padding-top: 7px;
+  padding-bottom: 9px;
+}
+
+.main .search-section .input-container {
+  position: relative;
+  padding-left: 16px;
+  padding-right: 49px;
+}
+
+.main .search-section .input-container .input00 {
+  /* position: absolute; */
+}
+
+.main .search-section .input-container .button01 {
+  position: absolute;
+  top: 0;
+  right: 14px;
+}
+
+.main .search-section .input-container .button01 > .tail > .body {
+  padding-top: 7px;
+  padding-left: 8px;
+  padding-right: 5px;
+}
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
+
+.footer {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* 
+                                              ###   ####### 
+    #####  #    # ##### #####  ####  #    #  #   #  #       
+    #    # #    #   #     #   #    # ##   # #     # #       
+    #####  #    #   #     #   #    # # #  # #     # ######  
+### #    # #    #   #     #   #    # #  # # #     #       # 
+### #    # #    #   #     #   #    # #   ##  #   #  #     # 
+### #####   ####    #     #    ####  #    #   ###    #####  
+*/
+
+.footer > .button-container > .button05 > .tail > .body {
+  padding-top: 6px;
+}
+
+.footer > .button-container > .button05:first-of-type > .tail > .body {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.footer > .button-container > .button05 + .button05 > .tail > .body {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.footer > .button-container > .button05 + .button05 {
+  margin-left: 1px;
+}
+
+.footer .copyright {
+  line-height: 14px;
+  color: #787878;
+  font-size: 8px;
+  font-family: 'kroeger0556', sans-serif;
+  letter-spacing: -0.65px;
+}
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+/* 00 */
+.button00,
+.button00 > .tail,
+.button00 > .tail > .body {
+  display: inline-block;
+  height: 20px;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  vertical-align: top;
+}
+
+.button00 {
+  padding-left: 2px;
+  background: url('./images/button00_head.png');
+}
+
+.button00 > .tail {
+  padding-right: 2px;
+  background: url('./images/button00_tail.png');
+}
+
+.button00 > .tail > .body {
+  background: url('./images/button00_body.png');
+  box-sizing: border-box;
+}
+
+/* 01 */
+.button01,
+.button01 > .tail,
+.button01 > .tail > .body {
+  display: inline-block;
+  height: 28px;
+  font-size: 11px;
+  font-family: 'dotum', sans-serif;
+  vertical-align: top;
+}
+
+.button01 {
+  padding-left: 2px;
+  background: url('./images/button01_head.png');
+}
+
+.button01 > .tail {
+  padding-right: 2px;
+  background: url('./images/button01_tail.png');
+}
+
+.button01 > .tail > .body {
+  background: url('./images/button01_body.png');
+  box-sizing: border-box;
+}
+
+/* 05 */
+.button05,
+.button05 > .tail,
+.button05 > .tail > .body {
+  display: inline-block;
+  vertical-align: top;
+  height: 24px;
+}
+
+.button05 {
+  padding-left: 2px;
+  background: url('./images/button05_head.png');
+}
+
+.button05 > .tail {
+  padding-right: 2px;
+  background: url('./images/button05_tail.png');
+}
+
+.button05 > .tail > .body {
+  background: url('./images/button05_body.png');
+  box-sizing: border-box;
+}
+
+/* 
+# #    # #####  #    # ##### 
+# ##   # #    # #    #   #   
+# # #  # #    # #    #   #   
+# #  # # #####  #    #   #   
+# #   ## #      #    #   #   
+# #    # #       ####    #   
+*/
+
+.input00 {
+  /* width: 100%; */
+  height: 28px;
+  padding-left: 3px;
+  background: url('./images/search-input_head.png') left no-repeat;
+}
+
+.input00 > .tail {
+  display: inline-block;
+  width: 100%;
+  height: 28px;
+  padding-right: 3px;
+  background: url('./images/search-input_tail.png') right no-repeat;
+}
+
+.input00 > .tail > .body {
+  display: inline-block;
+  width: 100%;
+  height: 28px;
+  background: url('./images/search-input_body.png') center repeat-x;
+}
+
+.input00 input {
+  /* background: #ffffff; */
+}
+
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    /* added personally */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* added personally from below */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  label,
+  input[type='radio'],
+  button {
+    cursor: pointer;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    margin: 0;
+  }
+
+  input[type='text'] {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  select {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+  }
+
+  /* for customizing the 'browsing-file' functionality */
+  input[type='file'] {
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  strong,
+  .bolder {
+    font-weight: bolder;
+  }
+}
+
+/* 
+#####  ###### #####   ####   ####  #    #   ##   #         #####  ######  ####  ###### #####  ####   ####   ####  
+#    # #      #    # #      #    # ##   #  #  #  #         #    # #      #      #        #   #    # #      #      
+#    # #####  #    #  ####  #    # # #  # #    # #         #    # #####   ####  #####    #   #       ####   ####  
+#####  #      #####       # #    # #  # # ###### #         #####  #           # #        #   #           #      # 
+#      #      #   #  #    # #    # #   ## #    # #         #   #  #      #    # #        #   #    # #    # #    # 
+#      ###### #    #  ####   ####  #    # #    # ######    #    # ######  ####  ######   #    ####   ####   ####  
+*/
+.whitespace-remover {
+  font-size: 0;
+}
+
+table td {
+  vertical-align: top;
+}
