@@ -132,7 +132,60 @@ body {
 ### #    # #    # # #    # 
 */
 
+.main {
+  position: relative;
+  margin-bottom: 1px;
+}
+
+.main .main-section::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: url('./images/search-section_line.png');
+  width: 100%;
+  height: 1px;
+}
+
+.main .main-section {
+  position: relative;
+  height: 270px;
+  width: 100%;
+  background: url('./images/main-section_background.png');
+}
+
+.main .main-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: url('./images/footer_horizontal-line.png');
+  width: 100%;
+  height: 2px;
+}
+
+/* 
+#                                                                                                      
+#            ####  ######   ##   #####   ####  #    #        ####  ######  ####  ##### #  ####  #    # 
+#           #      #       #  #  #    # #    # #    #       #      #      #    #   #   # #    # ##   # 
+#            ####  #####  #    # #    # #      ###### #####  ####  #####  #        #   # #    # # #  # 
+#       ###      # #      ###### #####  #      #    #            # #      #        #   # #    # #  # # 
+#       ### #    # #      #    # #   #  #    # #    #       #    # #      #    #   #   # #    # #   ## 
+####### ###  ####  ###### #    # #    #  ####  #    #        ####  ######  ####    #   #  ####  #    # 
+*/
+
+.main .search-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('./images/header_line.png');
+  width: 100%;
+  height: 1px;
+}
+
 .main .search-section {
+  position: relative;
   background: #ededed;
   padding-top: 7px;
   padding-bottom: 9px;
@@ -158,6 +211,123 @@ body {
   padding-top: 7px;
   padding-left: 8px;
   padding-right: 5px;
+}
+
+.main .search-section .input-container > .notification {
+  padding-left: 1px;
+  margin-top: 7px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #5c7fb4;
+}
+
+/* 
+                                 #   
+# #    # #####  ###### #    #   ##   
+# ##   # #    # #       #  #   # #   
+# # #  # #    # #####    ##      #   
+# #  # # #    # #        ##      #   
+# #   ## #    # #       #  #     #   
+# #    # #####  ###### #    #  ##### 
+ */
+
+/* 
+                                             ###     ###   
+ ####  ######  ####  ##### #  ####  #    #  #   #   #   #  
+#      #      #    #   #   # #    # ##   # #     # #     # 
+ ####  #####  #        #   # #    # # #  # #     # #     # 
+     # #      #        #   # #    # #  # # #     # #     # 
+#    # #      #    #   #   # #    # #   ##  #   #   #   #  
+ ####  ######  ####    #   #  ####  #    #   ###     ###   
+*/
+
+.section00 > .title {
+  position: relative;
+  color: #1f419f;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.section00 > .utility {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+/* 
+#                                                       
+#            ####  ###### #####  #    # #  ####  ###### 
+#           #      #      #    # #    # # #    # #      
+#            ####  #####  #    # #    # # #      #####  
+#       ###      # #      #####  #    # # #      #      
+#       ### #    # #      #   #   #  #  # #    # #      
+####### ###  ####  ###### #    #   ##   #  ####  ###### 
+*/
+
+.main .main-section .service .title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url('./images/service_line.png');
+  width: 100%;
+  height: 1px;
+}
+
+.main .main-section .service .items li .image-container {
+  background: url('./images/service_item-frame.png') no-repeat;
+  width: 59px;
+  height: 60px;
+}
+
+.main .main-section .service .items li .title {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+/* 
+#                                                                                       
+#           #####  ######  ####  #####  ####  ###### #      #      ###### #####   ####  
+#           #    # #      #        #   #      #      #      #      #      #    # #      
+#           #####  #####   ####    #    ####  #####  #      #      #####  #    #  ####  
+#       ### #    # #           #   #        # #      #      #      #      #####       # 
+#       ### #    # #      #    #   #   #    # #      #      #      #      #   #  #    # 
+####### ### #####  ######  ####    #    ####  ###### ###### ###### ###### #    #  ####  
+*/
+
+.main .main-section .bestsellers > .title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url('./images/bestseller_line.png');
+  width: 100%;
+  height: 2px;
+}
+
+.main .main-section .bestsellers .books {
+  position: relative;
+}
+
+.main .main-section .bestsellers .books::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url('./images/bestseller_shelf.png');
+  width: 100%;
+  height: 22px;
+}
+
+.main .main-section .bestsellers .books li {
+  display: inline-block;
+}
+
+.main .main-section .bestsellers .books li .title {
+  color: #6b6b6b;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 14px;
 }
 
 /* 
@@ -209,6 +379,15 @@ body {
   font-family: 'kroeger0556', sans-serif;
   letter-spacing: -0.65px;
 }
+
+/* 
+      #    #  ####  #####  #    # #      ######  ####        
+      ##  ## #    # #    # #    # #      #      #            
+##### # ## # #    # #    # #    # #      #####   ####  ##### 
+      #    # #    # #    # #    # #      #           #       
+      #    # #    # #    # #    # #      #      #    #       
+      #    #  ####  #####   ####  ###### ######  ####        
+*/
 
 /* 
 #####  #    # ##### #####  ####  #    # 
@@ -271,6 +450,30 @@ body {
   box-sizing: border-box;
 }
 
+/* 04 */
+.button04,
+.button04 > .tail,
+.button04 > .tail > .body {
+  display: inline-block;
+  vertical-align: top;
+  height: 23px;
+}
+
+.button04 {
+  padding-left: 2px;
+  background: url('./images/button04_head.png');
+}
+
+.button04 > .tail {
+  padding-right: 3px;
+  background: url('./images/button04_tail.png');
+}
+
+.button04 > .tail > .body {
+  background: url('./images/button04_body.png');
+  box-sizing: border-box;
+}
+
 /* 05 */
 .button05,
 .button05 > .tail,
@@ -293,6 +496,31 @@ body {
 .button05 > .tail > .body {
   background: url('./images/button05_body.png');
   box-sizing: border-box;
+}
+
+/* 
+#####    ##    ####  # #    #   ##   ##### #  ####  #    # 
+#    #  #  #  #    # # ##   #  #  #    #   # #    # ##   # 
+#    # #    # #      # # #  # #    #   #   # #    # # #  # 
+#####  ###### #  ### # #  # # ######   #   # #    # #  # # 
+#      #    # #    # # #   ## #    #   #   # #    # #   ## 
+#      #    #  ####  # #    # #    #   #   #  ####  #    # 
+*/
+
+.pagination00 ul li {
+  display: inline-block;
+}
+
+.pagination00 ul .current {
+  width: 9px;
+  height: 10px;
+  background: url('./images/bestseller_pagination_current.png');
+}
+
+.pagination00 ul .non-current {
+  width: 9px;
+  height: 10px;
+  background: url('./images/bestseller_pagination_noncurrent.png');
 }
 
 /* 
