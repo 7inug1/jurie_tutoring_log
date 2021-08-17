@@ -149,12 +149,22 @@ body {
 
 .main .main-section {
   position: relative;
-  height: 270px;
+  /* height: 270px; */
   width: 100%;
-  background: url('./images/main-section_background.png');
 }
 
 .main .main-section::after {
+  content: '';
+  position: absolute;
+  background: url('./images/main-section_background.png') repeat-x;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* .main .main-section::after {
   content: '';
   position: absolute;
   bottom: 0px;
@@ -162,7 +172,7 @@ body {
   background: url('./images/footer_horizontal-line.png');
   width: 100%;
   height: 2px;
-}
+} */
 
 /* 
 #                                                                                                      
@@ -437,16 +447,40 @@ body {
 
 .button01 {
   padding-left: 2px;
-  background: url('./images/button01_head.png');
+  background: url('./images/button01_head.png') left no-repeat;
 }
 
 .button01 > .tail {
   padding-right: 2px;
-  background: url('./images/button01_tail.png');
+  background: url('./images/button01_tail.png') right no-repeat;
 }
 
 .button01 > .tail > .body {
-  background: url('./images/button01_body.png');
+  background: url('./images/button01_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
+/* 02 */
+.button02,
+.button02 > .tail,
+.button02 > .tail > .body {
+  display: inline-block;
+  vertical-align: top;
+  height: 28px;
+}
+
+.button02 {
+  padding-left: 5px;
+  background: url('./images/button02_head.png') left no-repeat;
+}
+
+.button02 > .tail {
+  padding-right: 5px;
+  background: url('./images/button02_tail.png') right no-repeat;
+}
+
+.button02 > .tail > .body {
+  background: url('./images/button02_body.png') center repeat-x;
   box-sizing: border-box;
 }
 
@@ -461,16 +495,16 @@ body {
 
 .button04 {
   padding-left: 2px;
-  background: url('./images/button04_head.png');
+  background: url('./images/button04_head.png') left no-repeat;
 }
 
 .button04 > .tail {
   padding-right: 3px;
-  background: url('./images/button04_tail.png');
+  background: url('./images/button04_tail.png') right no-repeat;
 }
 
 .button04 > .tail > .body {
-  background: url('./images/button04_body.png');
+  background: url('./images/button04_body.png') center repeat-x;
   box-sizing: border-box;
 }
 
@@ -485,16 +519,16 @@ body {
 
 .button05 {
   padding-left: 2px;
-  background: url('./images/button05_head.png');
+  background: url('./images/button05_head.png') left no-repeat;
 }
 
 .button05 > .tail {
   padding-right: 2px;
-  background: url('./images/button05_tail.png');
+  background: url('./images/button05_tail.png') right no-repeat;
 }
 
 .button05 > .tail > .body {
-  background: url('./images/button05_body.png');
+  background: url('./images/button05_body.png') center repeat-x;
   box-sizing: border-box;
 }
 
@@ -556,6 +590,18 @@ body {
 
 .input00 input {
   /* background: #ffffff; */
+}
+
+/* 
+#####   ####  #####  #####  ###### #####  
+#    # #    # #    # #    # #      #    # 
+#####  #    # #    # #    # #####  #    # 
+#    # #    # #####  #    # #      #####  
+#    # #    # #   #  #    # #      #   #  
+#####   ####  #    # #####  ###### #    # 
+*/
+
+.border00 {
 }
 
 /*
