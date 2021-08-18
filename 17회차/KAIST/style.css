@@ -294,6 +294,7 @@ body {
 }
 
 .main .main-section .service > .title {
+  position: relative;
   padding-bottom: 4px;
 }
 
@@ -311,6 +312,20 @@ body {
   padding-right: 8px;
 }
 
+.main .main-section .service .utility > ul > li {
+  position: relative;
+}
+
+.main .main-section .service .utility > ul > li:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -15px;
+  background: url('./images/service_utility_vertical-line.png');
+  width: 1px;
+  height: 16px;
+}
+
 .main .main-section .service .utility > ul > li:not(:last-of-type) {
   margin-right: 26px;
 }
@@ -319,6 +334,7 @@ body {
   background: url('./images/service_setting_right-arrow.png') right no-repeat;
   padding-right: 6px;
   padding-top: 1px;
+  color: #35577c;
 }
 
 /* .main .main-section .service .utility > ul > li > .setting::after {
@@ -334,6 +350,7 @@ body {
 .main .main-section .service .utility > ul > li > .all-services {
   background: url('./images/service_setting_down-arrow.png') right no-repeat;
   padding-right: 8px;
+  color: #787878;
 }
 
 /* .main .main-section .service .utility > ul > li > .all-services::after {
@@ -418,11 +435,16 @@ body {
   width: 59px;
 }
 
-.main .main-section .service .items li .title {
+.main .main-section .service .items li .title a {
   font-weight: normal;
   font-size: 11px;
   line-height: 14px;
+  color: #6b6b6b;
 }
+
+/* .main .main-section .service .items li .title a{
+
+} */
 
 /* 
 #                                                                                       
@@ -472,6 +494,7 @@ body {
   background: url('./images/bestseller_arrow-right.png') right no-repeat;
   padding-top: 1px;
   padding-right: 6px;
+  color: #787878;
 }
 
 .main .main-section .bestsellers .books {
@@ -511,12 +534,15 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #6b6b6b;
   font-size: 11px;
-  font-weight: normal;
   margin-top: 15px;
-  line-height: 14px;
   text-align: center;
+}
+
+.main .main-section .bestsellers .books li .title a {
+  color: #6b6b6b;
+  font-weight: normal;
+  line-height: 14px;
 }
 
 .main .main-section .bestsellers .books .my-cultural-heritage .title {
@@ -576,6 +602,7 @@ body {
 
 .footer > .button-container > .button05 > .tail > .body {
   padding-top: 7px;
+  color: #616161;
 }
 
 .footer > .button-container > .button05:first-of-type > .tail > .body {
