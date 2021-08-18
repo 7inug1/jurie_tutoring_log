@@ -84,7 +84,7 @@ body {
   right: 0;
   background: url('./images/header_right-bar_right.png') repeat-x right;
   height: 34px;
-  width: calc(100% - 100px);
+  width: calc(100% - 94px);
 }
 
 .header::after {
@@ -100,12 +100,12 @@ body {
 .header > .logo {
   position: absolute;
   top: 9px;
-  left: 17px;
+  left: 11px;
 }
 
 .header > .subtitle {
   position: absolute;
-  left: 92px;
+  left: 86px;
   top: 9px;
 }
 
@@ -113,7 +113,7 @@ body {
   display: inline-block;
   position: absolute;
   top: 7px;
-  right: 14px;
+  right: 10px;
 }
 
 .header > .button-container > .button00 > .tail > .body {
@@ -140,7 +140,7 @@ body {
 .main .main-section::before {
   content: '';
   position: absolute;
-  top: 0px;
+  top: -1px;
   left: 0;
   background: url('./images/search-section_line.png');
   width: 100%;
@@ -150,7 +150,10 @@ body {
 .main .main-section {
   position: relative;
   /* height: 270px; */
-  width: 100%;
+  /* width: 100%; */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
 }
 
 .main .main-section::after {
@@ -160,8 +163,8 @@ body {
   bottom: 0px;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  height: 270px;
+  z-index: -2;
 }
 
 /* .main .main-section::after {
@@ -203,8 +206,8 @@ body {
 
 .main .search-section .input-container {
   position: relative;
-  padding-left: 16px;
-  padding-right: 49px;
+  padding-left: 10px;
+  padding-right: 45px;
 }
 
 .main .search-section .input-container .input00 {
@@ -214,7 +217,7 @@ body {
 .main .search-section .input-container .button01 {
   position: absolute;
   top: 0;
-  right: 14px;
+  right: 10px;
 }
 
 .main .search-section .input-container .button01 > .tail > .body {
@@ -251,16 +254,29 @@ body {
  ####  ######  ####    #   #  ####  #    #   ###     ###   
 */
 
+.section00 {
+  position: relative;
+}
+
 .section00 > .title {
   position: relative;
   color: #1f419f;
   font-size: 12px;
   line-height: 14px;
+  padding-left: 8px;
 }
 
 .section00 > .utility {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 11px;
   line-height: 14px;
+}
+
+.section00 > .utility > ul > li {
+  display: inline-block;
+  position: relative;
 }
 
 /* 
@@ -273,7 +289,15 @@ body {
 ####### ###  ####  ###### #    #   ##   #  ####  ###### 
 */
 
-.main .main-section .service .title::after {
+.main .main-section .service {
+  /* padding-top: 15px; */
+}
+
+.main .main-section .service > .title {
+  padding-bottom: 4px;
+}
+
+.main .main-section .service > .title::after {
   content: '';
   position: absolute;
   left: 0;
@@ -283,10 +307,115 @@ body {
   height: 1px;
 }
 
-.main .main-section .service .items li .image-container {
-  background: url('./images/service_item-frame.png') no-repeat;
+.main .main-section .service .utility > ul {
+  padding-right: 8px;
+}
+
+.main .main-section .service .utility > ul > li:not(:last-of-type) {
+  margin-right: 26px;
+}
+
+.main .main-section .service .utility > ul > li > .setting {
+  background: url('./images/service_setting_right-arrow.png') right no-repeat;
+  padding-right: 6px;
+  padding-top: 1px;
+}
+
+/* .main .main-section .service .utility > ul > li > .setting::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/service_setting_right-arrow.png');
+  width: 4px;
+  height: 5px;
+} */
+
+.main .main-section .service .utility > ul > li > .all-services {
+  background: url('./images/service_setting_down-arrow.png') right no-repeat;
+  padding-right: 8px;
+}
+
+/* .main .main-section .service .utility > ul > li > .all-services::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/service_setting_right-arrow.png');
+  width: 5px;
+  height: 4px;
+} */
+
+.main .main-section .service > .items {
+  font-size: 0;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.main .main-section .service > .items::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main .main-section .service > .items + .items {
+  /* margin-top: 29px; */
+  margin-top: 15px;
+}
+
+.main .main-section .service > .items > li {
+  display: inline-block;
+  position: relative;
   width: 59px;
-  height: 60px;
+  height: 74px;
+  vertical-align: top;
+}
+
+.main .main-section .service > .items > .notice .title {
+  left: 8px;
+}
+.main .main-section .service > .items > .guide .title {
+  left: 3px;
+}
+.main .main-section .service > .items > .reservation .title {
+  left: 8px;
+}
+.main .main-section .service > .items > .my-library .title {
+  /* left: 8px; */
+}
+.main .main-section .service > .items > .ebook .title {
+  left: 7px;
+}
+.main .main-section .service > .items > .ejournal .title {
+  left: 8px;
+}
+.main .main-section .service > .items > .database .title {
+  left: -3px;
+}
+.main .main-section .service > .items > .apply .title {
+  left: -4px;
+}
+
+.main .main-section .service > .items li:not(:first-of-type) {
+  margin-left: 15px;
+}
+
+.main .main-section .service > .items li:last-of-type {
+  margin-left: 14px;
+}
+
+.main .main-section .service > .items li .title {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: max-content;
+}
+
+.main .main-section .service .items li .image-container {
+  /* background: url('./images/service_item-frame.png') no-repeat;
+  width: 59px;
+  height: 60px; */
+  width: 59px;
 }
 
 .main .main-section .service .items li .title {
@@ -305,6 +434,26 @@ body {
 ####### ### #####  ######  ####    #    ####  ###### ###### ###### ###### #    #  ####  
 */
 
+.main .main-section .bestsellers {
+  position: relative;
+  margin-top: 24px;
+  padding-bottom: 12px;
+}
+
+.main .main-section .bestsellers::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  background: url('./images/bestseller_line.png');
+  width: 100%;
+  height: 2px;
+  margin: 0 auto;
+}
+
+.main .main-section .bestsellers > .title {
+  padding-bottom: 5px;
+}
+
 .main .main-section .bestsellers > .title::after {
   content: '';
   position: absolute;
@@ -315,29 +464,85 @@ body {
   height: 2px;
 }
 
+.main .main-section .bestsellers .utility > ul {
+  padding-right: 10px;
+}
+
+.main .main-section .bestsellers .utility > ul > li > .more {
+  background: url('./images/bestseller_arrow-right.png') right no-repeat;
+  padding-top: 1px;
+  padding-right: 6px;
+}
+
 .main .main-section .bestsellers .books {
   position: relative;
+  padding-top: 14px;
+  padding-left: 10px;
+  font-size: 0;
 }
 
 .main .main-section .bestsellers .books::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 20px;
   background: url('./images/bestseller_shelf.png');
   width: 100%;
   height: 22px;
+  z-index: -1;
 }
 
 .main .main-section .bestsellers .books li {
   display: inline-block;
+  position: relative;
+  /* width: 58px; */
+  height: 125px;
+}
+
+.main .main-section .bestsellers .books li:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+.main .main-section .bestsellers .books li .image-container {
+  /* position: absolute; */
 }
 
 .main .main-section .bestsellers .books li .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   color: #6b6b6b;
   font-size: 11px;
   font-weight: normal;
+  margin-top: 15px;
   line-height: 14px;
+  text-align: center;
+}
+
+.main .main-section .bestsellers .books .my-cultural-heritage .title {
+  left: 3px;
+}
+
+.main .main-section .bestsellers .books .the-crusaders-story .title {
+  left: 6px;
+}
+
+.main .main-section .bestsellers .books .steve-jobs .title {
+  left: 10px;
+}
+
+.main .main-section .bestsellers .books .rural-doctor .title {
+  left: 2px;
+}
+
+.main .main-section .bestsellers .pagination00 {
+  margin-top: 13px;
+}
+
+.main .main-section .bestsellers .pagination00 .button04 > .tail > .body {
+  padding-top: 3px;
+  padding-left: 14px;
+  padding-right: 12px;
 }
 
 /* 
@@ -352,6 +557,11 @@ body {
 .footer {
   font-size: 11px;
   text-align: center;
+  padding-top: 2px;
+}
+
+.footer .button-container {
+  padding-top: 9px;
 }
 
 /* 
@@ -365,7 +575,7 @@ body {
 */
 
 .footer > .button-container > .button05 > .tail > .body {
-  padding-top: 6px;
+  padding-top: 7px;
 }
 
 .footer > .button-container > .button05:first-of-type > .tail > .body {
@@ -383,6 +593,8 @@ body {
 }
 
 .footer .copyright {
+  padding-top: 3px;
+  padding-left: 5px;
   line-height: 14px;
   color: #787878;
   font-size: 8px;
@@ -421,16 +633,16 @@ body {
 
 .button00 {
   padding-left: 2px;
-  background: url('./images/button00_head.png');
+  background: url('./images/button00_head.png') left no-repeat;
 }
 
 .button00 > .tail {
   padding-right: 2px;
-  background: url('./images/button00_tail.png');
+  background: url('./images/button00_tail.png') right no-repeat;
 }
 
 .button00 > .tail > .body {
-  background: url('./images/button00_body.png');
+  background: url('./images/button00_body.png') center repeat-x;
   box-sizing: border-box;
 }
 
@@ -541,19 +753,39 @@ body {
 #      #    #  ####  # #    # #    #   #   #  ####  #    # 
 */
 
-.pagination00 ul li {
+.pagination00 {
+  text-align: center;
+}
+
+.pagination00 ul {
   display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.pagination00 ul li {
+  /* display: inline-block; */
+  float: left;
+  cursor: pointer;
+}
+
+.pagination00 ul li:not(:first-of-type) {
+  margin-left: 4px;
 }
 
 .pagination00 ul .current {
   width: 9px;
   height: 10px;
+  /* margin-left: 4px; */
   background: url('./images/bestseller_pagination_current.png');
 }
 
 .pagination00 ul .non-current {
   width: 9px;
   height: 10px;
+  /* margin-left: 3px; */
   background: url('./images/bestseller_pagination_noncurrent.png');
 }
 
