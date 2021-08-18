@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="search-section">
+      <form action="" method="GET" class="search-section">
         <div class="input-container">
           <div class="input00">
             <span class="tail">
@@ -42,28 +42,73 @@
             </span>
           </button>
         </div>
-      </div>
+      </form>
       <div class="main-section">
         <div class="tabs">
           <button class="tab00 current">
             <span class="tail">
               <span class="body">
-                <img src="" alt="소장자료" />
+                <img src="./images/tab_collection-text.png" alt="소장자료" />
               </span>
             </span>
           </button>
-          <button class="tab00 non-current">
+          <button class="tab00 noncurrent">
             <span class="tail">
               <span class="body">
-                <img src="" alt="Article(NoK)" />
+                <img src="./images/tab_article-text.png" alt="Article(NoK)" />
               </span>
             </span>
           </button>
         </div>
         <div class="tab-content">
-          <div class="form-element-container"></div>
-          <div class="form-element-container"></div>
-          <div class="form-element-container"></div>
+          <div class="form-element-container">
+            <div class="select00 data-type">
+              <select name="first-line_data-type" id="first-line_data-type">
+                <option hidden disabled selected value="자료명">자료명</option>
+                <option value="자료명1">자료명1</option>
+                <option value="자료명2">자료명2</option>
+              </select>
+            </div>
+            <div class="input01">
+              <input type="text" />
+            </div>
+            <div class="select00 boolean">
+              <select name="first-line_boolean" id="first-line_boolean">
+                <option selected value="And">And</option>
+                <option value="Or">Or</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-element-container">
+            <div class="select00 data-type">
+              <select name="second-line_data-type" id="second-line_data-type">
+                <option hidden disabled selected value="자료명">자료명</option>
+                <option value="자료명1">자료명1</option>
+                <option value="자료명2">자료명2</option>
+              </select>
+            </div>
+            <div class="input01">
+              <input type="text" />
+            </div>
+            <div class="select00 boolean">
+              <select name="second-line_boolean" id="second-line_boolean">
+                <option selected value="And">And</option>
+                <option value="Or">Or</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-element-container">
+            <div class="select00 data-type">
+              <select name="third-line_data-type" id="third-line_data-type">
+                <option hidden disabled selected value="자료명">자료명</option>
+                <option value="자료명1">자료명1</option>
+                <option value="자료명2">자료명2</option>
+              </select>
+            </div>
+            <div class="input01">
+              <input type="text" />
+            </div>
+          </div>
           <div class="button-container">
             <button class="button02">
               <span class="tail">
