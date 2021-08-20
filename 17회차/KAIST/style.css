@@ -71,13 +71,13 @@ body {
   height: 34px;
 } */
 
-.header {
+body > .header {
   position: relative;
   background: url('./images/header_method2/header_left-bar2.png') left no-repeat;
   height: 34px;
 }
 
-.header::before {
+body > .header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@ body {
   width: calc(100% - 94px);
 }
 
-.header::after {
+body > .header::after {
   content: '';
   position: absolute;
   top: 0;
@@ -147,10 +147,9 @@ body {
   height: 1px;
 }
 
-.main .main-section {
+.main .main-section.index1,
+.main .main-section.index2 {
   position: relative;
-  /* height: 270px; */
-  /* width: 100%; */
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 15px;
@@ -505,7 +504,7 @@ body {
   text-align: center;
 }
 
-.main .main-section .bestsellers .books::after {
+/* .main .main-section .bestsellers .books::after {
   content: '';
   position: absolute;
   left: 0;
@@ -514,6 +513,38 @@ body {
   width: 100%;
   height: 22px;
   z-index: -1;
+} */
+
+.main .main-section .bestsellers .bookshelf::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 0;
+  background: url('./images/bestseller_shelf_left.png') left no-repeat;
+  width: 23px;
+  height: 30px;
+}
+
+.main .main-section .bestsellers .bookshelf {
+  position: absolute;
+  left: 23px;
+  bottom: 60px;
+  width: calc(100% - 46px);
+  height: 30px;
+  background: url('./images/bestseller_shelf_middle.png') center repeat-x;
+  margin: 0 auto;
+  /* text-align: center; */
+  z-index: -1;
+}
+
+.main .main-section .bestsellers .bookshelf::after {
+  content: '';
+  position: absolute;
+  right: -23px;
+  top: -0.5px;
+  background: url('./images/bestseller_shelf_right.png') right no-repeat;
+  width: 23px;
+  height: 30px;
 }
 
 .main .main-section .bestsellers .books li {
@@ -630,8 +661,111 @@ body {
 # #    # #####  ###### #    #  #####  
 */
 
-.main .main-section .search-category ul li {
+.main .main-section {
+  margin-top: 15px;
+}
+
+.main .main-section > .tab-container {
+  padding-left: 10px;
+  padding-right: 9px;
+}
+
+.main .main-section > .tab-container > .tabs {
+  /* padding-left: 10px; */
+}
+
+.main .main-section > .tab-container > .tabs > .tab00 + .tab00 > .tail > .body {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.main .main-section .search-category {
+  margin-top: 4px;
+}
+
+.main .main-section .search-category::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.main .main-section .search-category > li {
   background: #cbcbcb;
+  padding-left: 19px;
+  padding-top: 5px;
+  margin-left: 1px;
+  margin-top: 1px;
+  width: calc(50% - 2px);
+  height: 25px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.main .main-section .result {
+  margin-top: 10px;
+}
+
+.main .main-section .result > .section01 {
+  position: relative;
+}
+
+.main .main-section .result > .section01 + .section01 {
+  margin-top: 11px;
+}
+
+/* 
+.main .main-section .result > .section01::after{
+  content: '';
+  background: url('./images/section01_body-bar.png');
+} */
+
+.main .main-section .result > .section01 > .header {
+  background: url('./images/section01_title-bar.png');
+  height: 35px;
+  width: 100%;
+  padding-left: 12px;
+  padding-top: 11px;
+  box-sizing: border-box;
+}
+
+.main .main-section .result > .section01 > .header::after {
+  content: '';
+  display: block;
+  background: url('./images/section01_title_line');
+  width: 100%;
+  height: 1px;
+}
+
+.main .main-section .result > .section01 > .body li {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background: #eaeaea;
+}
+
+.main .main-section .result > .section01 > .body li + li {
+  margin-top: 1px;
+}
+
+.main .main-section .result > .section01 > .body li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url('./images/section01_body-bar.png');
+  width: 100%;
+  height: 1px;
+}
+
+.main .main-section .result > .section01 > .body li a {
+  display: block;
+}
+
+.main .main-section .result > .section01 .more00 {
+  position: absolute;
+  top: 8px;
+  right: 10px;
 }
 
 /* 
@@ -1034,6 +1168,38 @@ body {
 #    # #      #    #   #   # #    # #   ## 
  ####  ######  ####    #   #  ####  #    # 
 */
+
+/* 
+    #    #  ####  #####  ###### 
+    ##  ## #    # #    # #      
+    # ## # #    # #    # #####  
+### #    # #    # #####  #      
+### #    # #    # #   #  #      
+### #    #  ####  #    # ###### 
+*/
+
+.more00 {
+  display: inline-block;
+  background: url('./images/more00_arrow-right.png') right no-repeat;
+  padding-right: 2px;
+  padding-bottom: 1px;
+}
+
+.more00 a {
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.more00 a::after {
+  content: '';
+  display: inline-block;
+  /* background: url('./images/more00_arrow-right.png') right no-repeat; */
+  width: 4px;
+  height: 5px;
+}
 
 /* 
 #####   ####  #####  #####  ###### #####  
