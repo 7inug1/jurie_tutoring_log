@@ -16,19 +16,12 @@
 #####   ####    #     #    ####  #    # 
 */
 
-.button00 {
-  /* width: 104px; */
-}
-
 .button00.noncurrent,
 .button00.noncurrent > .tail,
 .button00.noncurrent > .tail > .body {
   display: inline-block;
   height: 39px;
-  /* font-size: 11px; */
-  /* font-family: 'dotum', sans-serif; */
   vertical-align: top;
-  /* width: 100%; */
 }
 
 .button00.noncurrent {
@@ -98,7 +91,6 @@
 }
 
 .header .navigation > li {
-  /* display: inline-block; */
   float: left;
   vertical-align: top;
 }
@@ -115,7 +107,6 @@
 }
 
 .header .navigation > li > ul > li {
-  /* display: inline-block; */
   float: left;
 }
 
@@ -123,7 +114,6 @@
 }
 
 .header .navigation > li > ul > li > ul > li > a {
-  /* display: block; */
   font-family: 'dotum', sans-serif;
   font-size: 12px;
   line-height: 20px;
