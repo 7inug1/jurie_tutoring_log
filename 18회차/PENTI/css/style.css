@@ -1,0 +1,377 @@
+/* 
+      #    #  ####  #####  #    # #      ######  ####        
+      ##  ## #    # #    # #    # #      #      #            
+##### # ## # #    # #    # #    # #      #####   ####  ##### 
+      #    # #    # #    # #    # #      #           #       
+      #    # #    # #    # #    # #      #      #    #       
+      #    #  ####  #####   ####  ###### ######  ####        
+*/
+
+/* 
+#####  #    # ##### #####  ####  #    # 
+#    # #    #   #     #   #    # ##   # 
+#####  #    #   #     #   #    # # #  # 
+#    # #    #   #     #   #    # #  # # 
+#    # #    #   #     #   #    # #   ## 
+#####   ####    #     #    ####  #    # 
+*/
+
+.button00.noncurrent,
+.button00.noncurrent > .tail,
+.button00.noncurrent > .tail > .body {
+  display: inline-block;
+  height: 39px;
+  vertical-align: top;
+}
+
+.button00.noncurrent {
+  padding-left: 2px;
+  background: url('./images/navigation_tab_head.png') left no-repeat;
+}
+
+.button00.noncurrent > .tail {
+  padding-right: 2px;
+  background: url('./images/navigation_tab_tail.png') right no-repeat;
+}
+
+.button00.noncurrent > .tail > .body {
+  background: url('./images/navigation_tab_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
+.button00.current {
+  background: #8009ef;
+  height: 39px;
+}
+
+/* 
+    #    # ######   ##   #####  ###### #####  
+    #    # #       #  #  #    # #      #    # 
+    ###### #####  #    # #    # #####  #    # 
+### #    # #      ###### #    # #      #####  
+### #    # #      #    # #    # #      #   #  
+### #    # ###### #    # #####  ###### #    # 
+*/
+
+/* 
+#                                               
+#           #    # ##### # #      # ##### #   # 
+#           #    #   #   # #      #   #    # #  
+#           #    #   #   # #      #   #     #   
+#       ### #    #   #   # #      #   #     #   
+#       ### #    #   #   # #      #   #     #   
+####### ###  ####    #   # ###### #   #     #   
+*/
+
+.header .utility > li {
+  display: inline-block;
+}
+
+.header .utility > li > a {
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  color: #484848;
+}
+
+/* 
+#                                                                      
+#           #    #   ##   #    # #  ####    ##   ##### #  ####  #    # 
+#           ##   #  #  #  #    # # #    #  #  #    #   # #    # ##   # 
+#           # #  # #    # #    # # #      #    #   #   # #    # # #  # 
+#       ### #  # # ###### #    # # #  ### ######   #   # #    # #  # # 
+#       ### #   ## #    #  #  #  # #    # #    #   #   # #    # #   ## 
+####### ### #    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
+*/
+
+.header .navigation::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header .navigation > li {
+  float: left;
+  vertical-align: top;
+}
+
+.header .navigation > li > ul {
+  position: absolute;
+  background: #272524;
+}
+
+.header .navigation > li > ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header .navigation > li > ul > li {
+  float: left;
+}
+
+.header .navigation > li > ul > li > ul > li {
+}
+
+.header .navigation > li > ul > li > ul > li > a {
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.header .navigation > li > ul > li > ul > li > .icon_n {
+  padding-right: 16px;
+  background: url('./images/subnavigation-icon_N.png') right no-repeat;
+}
+
+.header .navigation > li > ul > li > ul > li > .icon_r {
+  padding-right: 15px;
+  background: url('./images/subnavigation-icon_R.png') right no-repeat;
+}
+
+.header .navigation > li > ul > li > ul > li > .icon_rn {
+  padding-right: 29px;
+  background: url('./images/subnavigation-icon_RN.png') right no-repeat;
+}
+
+/* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+/* 
+    ######  ####   ####  ##### ###### #####  
+    #      #    # #    #   #   #      #    # 
+    #####  #    # #    #   #   #####  #    # 
+### #      #    # #    #   #   #      #####  
+### #      #    # #    #   #   #      #   #  
+### #       ####   ####    #   ###### #    # 
+*/
+
+/*
+########  ########  ######  ######## ########  ######   ######   ######  
+##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ##       ##       ##          ##    ##       ##       ##       
+########  ######    ######  ######      ##    ##        ######   ######  
+##   ##   ##             ## ##          ##    ##             ##       ## 
+##    ##  ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
+##     ## ########  ######  ########    ##     ######   ######   ######  
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@media only screen {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    /* added personally */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* added personally from below */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  label,
+  input[type='radio'],
+  button {
+    cursor: pointer;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    margin: 0;
+  }
+
+  input[type='text'] {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  select {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    box-sizing: border-box;
+  }
+
+  /* for customizing the 'browsing-file' functionality */
+  input[type='file'] {
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  strong,
+  .bolder {
+    font-weight: bolder;
+  }
+}
+
+/* 
+#####  ###### #####   ####   ####  #    #   ##   #         #####  ######  ####  ###### #####  ####   ####   ####  
+#    # #      #    # #      #    # ##   #  #  #  #         #    # #      #      #        #   #    # #      #      
+#    # #####  #    #  ####  #    # # #  # #    # #         #    # #####   ####  #####    #   #       ####   ####  
+#####  #      #####       # #    # #  # # ###### #         #####  #           # #        #   #           #      # 
+#      #      #   #  #    # #    # #   ## #    # #         #   #  #      #    # #        #   #    # #    # #    # 
+#      ###### #    #  ####   ####  #    # #    # ######    #    # ######  ####  ######   #    ####   ####   ####  
+*/
+.whitespace-remover {
+  font-size: 0;
+}
+
+table td {
+  vertical-align: top;
+}
