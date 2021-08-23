@@ -26,16 +26,16 @@
 
 .button00.noncurrent {
   padding-left: 2px;
-  background: url('./images/navigation_tab_head.png') left no-repeat;
+  background: url('../images/header/navigation/tab_head.png') left no-repeat;
 }
 
 .button00.noncurrent > .tail {
   padding-right: 2px;
-  background: url('./images/navigation_tab_tail.png') right no-repeat;
+  background: url('../images/header/navigation/tab_tail.png') right no-repeat;
 }
 
 .button00.noncurrent > .tail > .body {
-  background: url('./images/navigation_tab_body.png') center repeat-x;
+  background: url('../images/header/navigation/tab_body.png') center repeat-x;
   box-sizing: border-box;
 }
 
@@ -95,44 +95,41 @@
   vertical-align: top;
 }
 
-.header .navigation > li > ul {
+.header .navigation > li > .subnavigation {
   position: absolute;
   background: #272524;
 }
 
-.header .navigation > li > ul::after {
+.header .navigation > li > .subnavigation::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.header .navigation > li > ul > li {
+.header .navigation > li > .subnavigation > li {
   float: left;
 }
 
-.header .navigation > li > ul > li > ul > li {
-}
-
-.header .navigation > li > ul > li > ul > li > a {
+.header .navigation > li > .subnavigation > li > ul > li > a {
   font-family: 'dotum', sans-serif;
   font-size: 12px;
   line-height: 20px;
   color: #ffffff;
 }
 
-.header .navigation > li > ul > li > ul > li > .icon_n {
+.header .navigation > li > .subnavigation > li > ul > li > .icon_n {
   padding-right: 16px;
-  background: url('./images/subnavigation-icon_N.png') right no-repeat;
+  background: url('../images/header/navigation/subnavigation/icon_N.png') right no-repeat;
 }
 
-.header .navigation > li > ul > li > ul > li > .icon_r {
+.header .navigation > li > .subnavigation > li > ul > li > .icon_r {
   padding-right: 15px;
-  background: url('./images/subnavigation-icon_R.png') right no-repeat;
+  background: url('../images/header/navigation/subnavigation/icon_R.png') right no-repeat;
 }
 
-.header .navigation > li > ul > li > ul > li > .icon_rn {
+.header .navigation > li > .subnavigation > li > ul > li > .icon_rn {
   padding-right: 29px;
-  background: url('./images/subnavigation-icon_RN.png') right no-repeat;
+  background: url('../images/header/navigation/subnavigation/icon_RN.png') right no-repeat;
 }
 
 /* 
