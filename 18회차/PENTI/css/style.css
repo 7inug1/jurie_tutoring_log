@@ -16,9 +16,9 @@
 #####   ####    #     #    ####  #    # 
 */
 
-.button00.noncurrent,
-.button00.noncurrent > .tail,
-.button00.noncurrent > .tail > .body {
+.button00,
+.button00 > .tail,
+.button00 > .tail > .body {
   display: inline-block;
   height: 39px;
   vertical-align: top;
@@ -35,8 +35,18 @@
 }
 
 .button00.noncurrent > .tail > .body {
+  width: 100px;
   background: url('../images/header/navigation/tab_body.png') center repeat-x;
   box-sizing: border-box;
+}
+
+.button00 > .tail > .body {
+  padding-top: 15px;
+}
+
+.button00.current > .tail > .body {
+  box-sizing: border-box;
+  width: 104px;
 }
 
 .button00.current {
@@ -44,10 +54,33 @@
   height: 39px;
 }
 
+/* 
+    #####    ##   #    # #    # ###### #####  
+    #    #  #  #  ##   # ##   # #      #    # 
+    #####  #    # # #  # # #  # #####  #    # 
+### #    # ###### #  # # #  # # #      #####  
+### #    # #    # #   ## #   ## #      #   #  
+### #####  #    # #    # #    # ###### #    # 
+*/
+
+.banner00.head {
+  padding-top: 10px;
+  background: url('../images/main/banner/left/background_head.png') top no-repeat;
+}
+
+.banner00.head > .tail {
+  padding-bottom: 8px;
+  background: url('../images/main/banner/left/background_tail.png') bottom no-repeat;
+}
+
+.banner00.head > .tail > .body {
+  background: url('../images/main/banner/left/background_body.png') center;
+}
+
 body > .wrapper {
   width: 1266px;
   margin: 0 auto;
-  padding-left: 127px;
+  /* padding-left: 127px; */
 }
 
 /* 
@@ -104,6 +137,20 @@ body > .wrapper {
 }
 
 /* 
+    #    #   ##   # #    # 
+    ##  ##  #  #  # ##   # 
+    # ## # #    # # # #  # 
+### #    # ###### # #  # # 
+### #    # #    # # #   ## 
+### #    # #    # # #    # 
+*/
+
+.main {
+  position: relative;
+  padding-left: 127px;
+}
+
+/* 
 #                                                                      
 #           #    #   ##   #    # #  ####    ##   ##### #  ####  #    # 
 #           ##   #  #  #  #    # # #    #  #  #    #   # #    # ##   # 
@@ -113,66 +160,79 @@ body > .wrapper {
 ####### ### #    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
 */
 
-.header .navigation {
+.main .navigation {
+  position: relative;
   margin-top: 18px;
+  padding-left: 127px;
 }
 
-.header .navigation::after {
+.main .navigation::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.header .navigation > li {
+.main .navigation > li {
   float: left;
+  margin-right: 3px;
   vertical-align: top;
 }
 
-.header .navigation > li > .subnavigation {
+.main .navigation > li > .subnavigation {
   position: absolute;
+  left: 0;
   background: #272524;
 }
 
-.header .navigation > li > .subnavigation::after {
+.main .navigation > li > .subnavigation::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.header .navigation > li > .subnavigation > li {
+.main .navigation > li > .subnavigation > li {
   float: left;
+  padding-left: 9px;
+  padding-right: 74px;
+  padding-top: 26px;
+  padding-bottom: 27px;
+  box-sizing: border-box;
 }
 
-.header .navigation > li > .subnavigation > li > ul > li > a {
+.main .navigation > li > .subnavigation > li > ul {
+  padding-top: 9px;
+}
+
+.main .navigation > li > .subnavigation > li > ul > li > a {
   font-family: 'dotum', sans-serif;
   font-size: 12px;
   line-height: 20px;
   color: #ffffff;
 }
 
-.header .navigation > li > .subnavigation > li > ul > li > .icon_n {
+.main .navigation > li > .subnavigation > li > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.main .navigation > li > .subnavigation > li > ul > li > a:active {
+  background: #8009ef;
+  text-decoration: none;
+}
+
+.main .navigation > li > .subnavigation > li > ul > li > .icon_n {
   padding-right: 16px;
   background: url('../images/header/navigation/subnavigation/icon_N.png') right no-repeat;
 }
 
-.header .navigation > li > .subnavigation > li > ul > li > .icon_r {
+.main .navigation > li > .subnavigation > li > ul > li > .icon_r {
   padding-right: 15px;
   background: url('../images/header/navigation/subnavigation/icon_R.png') right no-repeat;
 }
 
-.header .navigation > li > .subnavigation > li > ul > li > .icon_rn {
+.main .navigation > li > .subnavigation > li > ul > li > .icon_rn {
   padding-right: 29px;
   background: url('../images/header/navigation/subnavigation/icon_RN.png') right no-repeat;
 }
-
-/* 
-    #    #   ##   # #    # 
-    ##  ##  #  #  # ##   # 
-    # ## # #    # # # #  # 
-### #    # ###### # #  # # 
-### #    # #    # # #   ## 
-### #    # #    # # #    # 
-*/
 
 /* 
 #                                                                  
@@ -214,7 +274,39 @@ body > .wrapper {
 ####### ### #####  #    # #    # #    # ###### #    # 
 */
 
-.main .banner {
+.main .banner .left,
+.main .banner .right {
+  width: 126px;
+}
+
+.main .banner .left {
+  position: absolute;
+  left: -5px;
+  top: 39px;
+  text-align: center;
+}
+
+.main .banner .left .customer-zone > .title {
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-right: 1px;
+}
+
+.main .banner .left .head > .tail > .body > .title,
+.main .banner .right .head > .tail > .body > .title {
+  width: 124px;
+  height: 36px;
+  background: url('../images/main/banner/left/header-frame.png') no-repeat;
+}
+
+.main .banner .right {
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+
+.main .banner .right .banner-zone > .title {
+  text-align: center;
 }
 
 /* 
