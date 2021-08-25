@@ -182,6 +182,7 @@ body > .wrapper {
   position: absolute;
   left: 0;
   background: #272524;
+  border-top: 6px solid #8009ef;
 }
 
 .main .navigation > li > .subnavigation::after {
@@ -194,7 +195,7 @@ body > .wrapper {
   float: left;
   padding-left: 9px;
   padding-right: 74px;
-  padding-top: 26px;
+  padding-top: 20px;
   padding-bottom: 27px;
   box-sizing: border-box;
 }
@@ -296,28 +297,120 @@ body > .wrapper {
 .main .banner .right .head > .tail > .body > .title {
   width: 124px;
   height: 36px;
-  background: url('../images/main/banner/left/header-frame.png') no-repeat;
-}
-
-.main .banner .left .head > .tail > .body > .title {
-  background: url('../images/main/banner/left/header-frame.png') 1px -4px no-repeat;
-
   padding-top: 4px;
   box-sizing: border-box;
 }
 
+.main .banner .left .head > .tail > .body > .title {
+  background: url('../images/main/banner/left/header-frame.png') 1px -4px no-repeat;
+}
+
 .main .banner .left .head > .tail > .body > ul {
   padding-top: 9px;
+  padding-right: 6px;
+  padding-bottom: 76px;
+  /* text-align: center; */
+}
+
+.main .banner .left .head > .tail > .body > ul > li {
+  position: relative;
+}
+
+.main .banner .left .head > .tail > .body > ul > li + li::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: 21px;
+  background: url('../images/main/banner/left/horizontal-line.png');
+  width: 85px;
+  height: 1px;
+}
+
+.main .banner .left .head > .tail > .body > ul > li + li {
+  margin-top: 25px;
+}
+
+.main .banner .left .head > .tail > .body > ul > li > .hours-title {
+  margin-top: 12px;
 }
 
 .main .banner .right {
   position: absolute;
-  right: 0px;
-  top: 0;
+  right: 6px;
+  top: 38px;
+  text-align: center;
 }
 
 .main .banner .right .banner-zone > .title {
   text-align: center;
+}
+
+.main .banner .right .head > .tail > .body > .title {
+  background: url('../images/main/banner/left/header-frame.png') 1px -4px no-repeat;
+  padding-right: 2px;
+}
+
+.main .banner .right .head > .tail > .body > ul {
+  text-align: left;
+  padding-left: 7px;
+  margin-top: 40px;
+  padding-bottom: 22px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li {
+  position: relative;
+}
+
+.main .banner .right .head > .tail > .body > ul > li:first-of-type {
+  /* padding-top: 151px; */
+}
+
+/* .main .banner .right .head > .tail > .body > ul > .spao {
+  background: url('../images/main/banner/right/spao-thumbnail.png') 0px 0px no-repeat;
+}
+.main .banner .right .head > .tail > .body > ul > .birak {
+  background: url('../images/main/banner/right/birak-thumbnail.png') 0px 0px no-repeat;
+}
+.main .banner .right .head > .tail > .body > ul > .good-house {
+  background: url('../images/main/banner/right/good-house-thumbnail.png') 0px 0px no-repeat;
+} */
+
+.main .banner .right .head > .tail > .body > ul > li + li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -10px;
+  background: url('../images/main/banner/right/horizontal-line.png');
+  width: 111px;
+  height: 2px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li + li {
+  margin-top: 18px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li > strong {
+  margin-top: 2px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li > .title {
+  margin-top: 5px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li > strong {
+  margin-top: 5px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li > .title,
+.main .banner .right .head > .tail > .body > ul > li > strong {
+  padding-left: 2px;
+}
+
+.main .banner .right .head > .tail > .body > ul > li > .title,
+.main .banner .right .head > .tail > .body > ul > li > .title > img,
+.main .banner .right .head > .tail > .body > ul > li > strong,
+.main .banner .right .head > .tail > .body > ul > li > strong > img {
+  display: block;
 }
 
 /* 
