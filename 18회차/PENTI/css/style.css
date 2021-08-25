@@ -281,8 +281,8 @@ body > .wrapper {
 
 .main .banner .left {
   position: absolute;
-  left: -5px;
-  top: 39px;
+  left: -6px;
+  top: 38px;
   text-align: center;
 }
 
@@ -297,6 +297,17 @@ body > .wrapper {
   width: 124px;
   height: 36px;
   background: url('../images/main/banner/left/header-frame.png') no-repeat;
+}
+
+.main .banner .left .head > .tail > .body > .title {
+  background: url('../images/main/banner/left/header-frame.png') 1px -4px no-repeat;
+
+  padding-top: 4px;
+  box-sizing: border-box;
+}
+
+.main .banner .left .head > .tail > .body > ul {
+  padding-top: 9px;
 }
 
 .main .banner .right {
