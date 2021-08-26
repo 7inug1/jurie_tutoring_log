@@ -308,7 +308,7 @@ body > .wrapper {
 .main .banner .left .head > .tail > .body > ul {
   padding-top: 9px;
   padding-right: 6px;
-  padding-bottom: 76px;
+  /* padding-bottom: 76px; */
   /* text-align: center; */
 }
 
@@ -316,10 +316,14 @@ body > .wrapper {
   position: relative;
 }
 
+.main .banner .left .head > .tail > .body > ul > li:first-of-type {
+  padding-bottom: 12px;
+}
+
 .main .banner .left .head > .tail > .body > ul > li + li::before {
   content: '';
   position: absolute;
-  top: -13px;
+  top: 0px;
   left: 21px;
   background: url('../images/main/banner/left/horizontal-line.png');
   width: 85px;
@@ -327,7 +331,14 @@ body > .wrapper {
 }
 
 .main .banner .left .head > .tail > .body > ul > li + li {
-  margin-top: 25px;
+  /* margin-top: 25px; */
+  height: 105px;
+}
+
+.main .banner .left .head > .tail > .body > ul > li + li a {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 13px;
 }
 
 .main .banner .left .head > .tail > .body > ul > li > .hours-title {
@@ -410,6 +421,37 @@ body > .wrapper {
 .main .banner .right .head > .tail > .body > ul > li > .title > img,
 .main .banner .right .head > .tail > .body > ul > li > strong,
 .main .banner .right .head > .tail > .body > ul > li > strong > img {
+  display: block;
+}
+
+.main .banner .updown {
+  background: url('../images/main/banner/updown/frame.png');
+  width: 86px;
+  height: 86px;
+}
+
+.main .banner .updown > .up,
+.main .banner .updown > .down {
+  display: block;
+}
+
+.main .banner .updown > .up .image-container,
+.main .banner .updown > .down .image-container {
+  text-align: center;
+}
+
+.main .banner .updown > .up {
+  height: 41px;
+  background: url('../images/main/banner/updown/up-arrow.png') no-repeat;
+}
+
+.main .banner .updown > .down {
+  height: 43px;
+  background: url('../images/main/banner/updown/down-arrow.png') no-repeat;
+}
+
+.main .banner .updown > .up img,
+.main .banner .updown > .down img {
   display: block;
 }
 
