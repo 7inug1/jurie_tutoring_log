@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'kroeger0556';
+  src: url('../fonts/kroeger0556/kroeger0556.woff') format('woff'), url('../fonts/kroeger0556/kroeger0556.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'YDIYGO150-KSCpc-EUC-H';
+  src: url('../fonts/YDIYGO150-KSCpc-EUC-H/YDIYGO150-KSCpc-EUC-H.woff') format('woff'), url('../fonts/YDIYGO150-KSCpc-EUC-H/YDIYGO150-KSCpc-EUC-H.woff2') format('woff2');
+}
+
 /* 
       #    #  ####  #####  #    # #      ######  ####        
       ##  ## #    # #    # #    # #      #      #            
@@ -75,6 +85,10 @@
 
 .banner00.head > .tail > .body {
   background: url('../images/main/banner/left/background_body.png') center;
+}
+
+body {
+  background: #f1f1f1;
 }
 
 body > .wrapper {
@@ -245,6 +259,63 @@ body > .wrapper {
 ####### ### #    # ###### #    #  ####        #####  #    # #    # 
 */
 
+.main .menu-bar {
+  margin-top: 298.5px;
+}
+
+.main .menu-bar .notification .title,
+.main .menu-bar .notification .content {
+  display: inline-block;
+}
+
+.main .menu-bar .notification .title,
+.main .menu-bar .utility .title {
+  font-family: 'YDIYGO150-KSCpc-EUC-H', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.main .menu-bar .notification,
+.main .menu-bar .utility {
+  display: inline-block;
+}
+
+.main .menu-bar .utility::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main .menu-bar .utility li {
+  /* display: inline-block; */
+  float: left;
+}
+
+.main .menu-bar .notification {
+  font-family: 'dotum', sans-serif;
+  font-size: 11px;
+}
+
+.main .menu-bar .utility .recommend-to-friend > .title,
+.main .menu-bar .utility .recommend-to-friend > ul {
+  /* float: left; */
+  display: inline-block;
+}
+
+.main .menu-bar .utility .recommend-to-friend > ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main .menu-bar .utility .recommend-to-friend > ul > li {
+  float: left;
+}
+
+.main .menu-bar .utility > .check-last-month .title {
+  color: #8009ef;
+}
+
 /* 
 #                                                                                  
 #           #    #   ##   # #    #       #####    ##   #    # #    # ###### #####  
@@ -254,6 +325,12 @@ body > .wrapper {
 #       ### #    # #    # # #   ##       #    # #    # #   ## #   ## #      #   #  
 ####### ### #    # #    # # #    #       #####  #    # #    # #    # ###### #    #
 */
+
+.main .main-banner .phrase-section {
+  background: url('../images/main/main-banner/phrase-section/background-image.png');
+  width: 960px;
+  height: 400px;
+}
 
 /* 
 #                                                                                              
@@ -463,6 +540,33 @@ body > .wrapper {
 ### #      #    # #    #   #   #      #   #  
 ### #       ####   ####    #   ###### #    # 
 */
+
+.footer {
+  font-family: 'dotum', sans-serif;
+}
+
+.footer .utility {
+  font-size: 12px;
+  line-height: 18px;
+  color: #484848;
+}
+
+.footer .copyright-contents {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.footer .copyright-contents .title {
+  font-weight: bolder;
+  color: #616161;
+}
+
+.footer .copyright-contents .content,
+.footer .copyright-contents .copyright-liability,
+.footer .copyright-contents .copyright {
+  font-weight: normal;
+  color: #939393;
+}
 
 /*
 ########  ########  ######  ######## ########  ######   ######   ######  
