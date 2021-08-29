@@ -1,11 +1,16 @@
 @font-face {
   font-family: 'kroeger0556';
   src: url('../fonts/kroeger0556/kroeger0556.woff') format('woff'), url('../fonts/kroeger0556/kroeger0556.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'YDIYGO150-KSCpc-EUC-H';
   src: url('../fonts/YDIYGO150-KSCpc-EUC-H/YDIYGO150-KSCpc-EUC-H.woff') format('woff'), url('../fonts/YDIYGO150-KSCpc-EUC-H/YDIYGO150-KSCpc-EUC-H.woff2') format('woff2');
+  font-family: 'YDIYGO320';
+  src: url('../fonts/YDIYGO320/YDIYGO320.woff') format('woff'), url('../fonts/YDIYGO320/YDIYGO320.woff2') format('woff2');
+  font-family: 'YDIYGO330';
+  src: url('../fonts/YDIYGO330/YDIYGO330.woff') format('woff'), url('../fonts/YDIYGO330/YDIYGO330.woff2') format('woff2');
+  font-family: 'YDIYGO360';
+  src: url('../fonts/YDIYGO360/YDIYGO360.woff') format('woff'), url('../fonts/YDIYGO360/YDIYGO360.woff2') format('woff2');
+  font-family: 'Nanum Brush';
+  src: url('../fonts/NanumBrush/NanumBrush.woff') format('woff'), url('../fonts/NanumBrush/NanumBrush.woff2') format('woff2');
 }
 
 /* 
@@ -332,6 +337,74 @@ body > .wrapper {
   height: 400px;
 }
 
+.main .main-banner .phrase-section .text-section > h2 {
+  color: #bdea08;
+  font-family: 'YDIYGO360', sans-serif;
+  font-size: 30px;
+  /* line-height: 30px; */
+  letter-spacing: -0.5px;
+}
+
+.main .main-banner .phrase-section .text-section > p {
+  color: white;
+  font-family: 'Nanum Brush', sans-serif;
+  font-size: 36px;
+  /* line-height: 18px; */
+  letter-spacing: -0.1px;
+}
+
+.main .main-banner .phrase-section .text-section .paragraph p {
+  color: white;
+  font-family: 'YDIYGO330', sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.main .main-banner .price-section .left .percentage,
+.main .main-banner .price-section .left .price .original .number,
+.main .main-banner .price-section .left .price .discounted .number {
+  font-family: 'Dinbol', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.main .main-banner .price-section .left .percentage {
+  font-size: 120px;
+}
+
+.main .main-banner .price-section .left .price .original .number {
+  color: #4f4f4f;
+  font-size: 24px;
+}
+
+.main .main-banner .price-section .left .price .discounted .number {
+  color: #8009ef;
+  font-size: 72px;
+}
+
+.main .main-banner .price-section .right > p {
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+}
+
+.main .main-banner .price-section .right > strong {
+  font-family: 'YDIYGO150-KSCpc-EUC-H', sans-serif;
+  font-size: 30px;
+  letter-spacing: -1.3px;
+}
+
+.main .main-banner .price-section .right button {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.main .main-banner .price-section .right button > span {
+  font-family: 'YDIYGO320', sans-serif;
+}
+
+.main .main-banner .price-section .right button > span + span {
+  font-family: 'YDIYGO360', sans-serif;
+}
+
 /* 
 #                                                                                              
 #           #####   ##   #####         ####   ####  #    # #####   ##   # #    # ###### #####  
@@ -502,14 +575,17 @@ body > .wrapper {
 }
 
 .main .banner .updown {
+  position: relative;
   background: url('../images/main/banner/updown/frame.png');
   width: 86px;
   height: 86px;
+  margin-top: 41px;
 }
 
 .main .banner .updown > .up,
 .main .banner .updown > .down {
-  display: block;
+  /* display: block; */
+  position: absolute;
 }
 
 .main .banner .updown > .up .image-container,
@@ -519,12 +595,19 @@ body > .wrapper {
 
 .main .banner .updown > .up {
   height: 41px;
-  background: url('../images/main/banner/updown/up-arrow.png') no-repeat;
+  background: url('../images/main/banner/updown/up-arrow.png') 4px 1px no-repeat;
+}
+
+.main .banner .updown > .up > button {
+  top: 10px;
+  left: 35px;
 }
 
 .main .banner .updown > .down {
+  top: 30px;
+  left: 25px;
   height: 43px;
-  background: url('../images/main/banner/updown/down-arrow.png') no-repeat;
+  background: url('../images/main/banner/updown/down-arrow.png') 15px 34px no-repeat;
 }
 
 .main .banner .updown > .up img,
