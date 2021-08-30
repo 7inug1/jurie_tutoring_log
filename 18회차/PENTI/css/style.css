@@ -1,14 +1,6 @@
 @font-face {
   font-family: 'kroeger0556';
   src: url('../fonts/kroeger0556/kroeger0556.woff') format('woff'), url('../fonts/kroeger0556/kroeger0556.woff2') format('woff2');
-  font-family: 'YDIYGO150-KSCpc-EUC-H';
-  src: url('../fonts/YDIYGO150-KSCpc-EUC-H/YDIYGO150-KSCpc-EUC-H.woff') format('woff'), url('../fonts/YDIYGO150-KSCpc-EUC-H/YDIYGO150-KSCpc-EUC-H.woff2') format('woff2');
-  font-family: 'YDIYGO320';
-  src: url('../fonts/YDIYGO320/YDIYGO320.woff') format('woff'), url('../fonts/YDIYGO320/YDIYGO320.woff2') format('woff2');
-  font-family: 'YDIYGO330';
-  src: url('../fonts/YDIYGO330/YDIYGO330.woff') format('woff'), url('../fonts/YDIYGO330/YDIYGO330.woff2') format('woff2');
-  font-family: 'YDIYGO360';
-  src: url('../fonts/YDIYGO360/YDIYGO360.woff') format('woff'), url('../fonts/YDIYGO360/YDIYGO360.woff2') format('woff2');
   font-family: 'Nanum Brush';
   src: url('../fonts/NanumBrush/NanumBrush.woff') format('woff'), url('../fonts/NanumBrush/NanumBrush.woff2') format('woff2');
 }
@@ -267,7 +259,7 @@ body > .wrapper {
 
 .main .menu-bar {
   margin-top: 298.5px;
-  height: 50px;
+  /* height: 50px; */
   position: relative;
 }
 
@@ -323,6 +315,7 @@ body > .wrapper {
   font-size: 11px;
   padding-top: 20px;
   padding-left: 15px;
+  padding-bottom: 27px;
 }
 
 .main .menu-bar .utility .recommend-to-friend > .title,
@@ -357,18 +350,72 @@ body > .wrapper {
 ####### ### #    # #    # # #    #       #####  #    # #    # #    # ###### #    #
 */
 
+.main .main-banner::before {
+  content: '';
+  background: url('../images/main/main-banner/phrase-section/corner-tag.png');
+  position: absolute;
+  left: -10px;
+  top: -9px;
+  width: 133px;
+  height: 133px;
+  z-index: 1;
+}
+
+.main .main-banner {
+  position: relative;
+  background: #ffffff;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 20px;
+  /* z-index: 1; */
+}
+
 .main .main-banner .phrase-section {
-  background: url('../images/main/main-banner/phrase-section/background-image.png');
+  position: relative;
+}
+
+.main .main-banner .phrase-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../images/main/main-banner/phrase-section/gray-panel.png');
+  width: 380px;
+  height: 400px;
+}
+
+.main .main-banner .phrase-section {
+  background: url('../images/main/main-banner/phrase-section/background-image.png') no-repeat;
   width: 960px;
   height: 400px;
+  box-sizing: border-box;
+  padding-top: 98px;
+  padding-left: 33px;
+}
+
+.main .main-banner .phrase-section::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  background: url('../images/main/main-banner/phrase-section/timer.png');
+  width: 130px;
+  height: 24px;
+}
+
+.main .main-banner .phrase-section .text-section {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  /* letter-spacing: -0.5px; */
 }
 
 .main .main-banner .phrase-section .text-section > h2 {
   color: #bdea08;
-  font-family: 'YDIYGO360', sans-serif;
+  font-family: 'dotum', sans-serif;
   font-size: 30px;
   /* line-height: 30px; */
-  letter-spacing: -0.5px;
+  letter-spacing: -3.5px;
 }
 
 .main .main-banner .phrase-section .text-section > p {
