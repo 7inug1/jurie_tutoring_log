@@ -61,6 +61,40 @@
   height: 39px;
 }
 
+.button01,
+.button01 > .tail,
+.button01 > .tail > .body {
+  display: inline-block;
+  height: 56px;
+  vertical-align: top;
+}
+
+.button01::before {
+  content: '';
+  background: url('../images/main/main-banner/price-section/buy-ticket-shadow.png');
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 136px;
+  height: 50px;
+}
+
+.button01 {
+  position: relative;
+  padding-left: 6px;
+  background: url('../images/main/main-banner/price-section/buy-ticket-button_head.png') left no-repeat;
+}
+
+.button01 > .tail {
+  padding-right: 6px;
+  background: url('../images/main/main-banner/price-section/buy-ticket-button_tail.png') right no-repeat;
+}
+
+.button01 > .tail > .body {
+  background: url('../images/main/main-banner/price-section/buy-ticket-button_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
 /* 
     #####    ##   #    # #    # ###### #####  
     #    #  #  #  ##   # ##   # #      #    # 
@@ -84,6 +118,15 @@
   background: url('../images/main/banner/left/background_body.png') center;
 }
 
+/* 
+#####   ####  #####  #   # 
+#    # #    # #    #  # #  
+#####  #    # #    #   #   
+#    # #    # #    #   #   
+#    # #    # #    #   #   
+#####   ####  #####    #   
+*/
+
 body {
   background: #f1f1f1;
 }
@@ -91,7 +134,6 @@ body {
 body > .wrapper {
   width: 1266px;
   margin: 0 auto;
-  /* padding-left: 127px; */
 }
 
 /* 
@@ -259,7 +301,6 @@ body > .wrapper {
 
 .main .menu-bar {
   margin-top: 298.5px;
-  /* height: 50px; */
   position: relative;
 }
 
@@ -275,16 +316,15 @@ body > .wrapper {
   font-size: 14px;
 }
 
-.main .menu-bar .notification,
-.main .menu-bar .utility {
-  /* display: inline-block; */
-  float: left;
-}
-
 .main .menu-bar::after {
   content: '';
   display: block;
   clear: both;
+}
+
+.main .menu-bar .notification,
+.main .menu-bar .utility {
+  float: left;
 }
 
 .main .menu-bar .utility {
@@ -300,7 +340,6 @@ body > .wrapper {
 .main .menu-bar .utility > li {
   display: inline-block;
   position: relative;
-  /* float: left; */
 }
 
 .main .menu-bar .utility > li:not(:first-of-type) {
@@ -322,20 +361,14 @@ body > .wrapper {
   font-family: 'dotum', sans-serif;
   font-size: 11px;
   padding-top: 22px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   padding-left: 73px;
-  /* padding-top: 20px;
-  padding-left: 16px;
-  padding-bottom: 27px; */
 }
 
 .main .menu-bar .notification .title {
   position: absolute;
   top: 20px;
   left: 16px;
-}
-
-.main .menu-bar .notification .content {
 }
 
 .main .menu-bar .utility .recommend-to-friend > .title {
@@ -397,7 +430,6 @@ body > .wrapper {
   padding-left: 17px;
   padding-right: 17px;
   padding-top: 20px;
-  /* z-index: 1; */
 }
 
 .main .main-banner .phrase-section {
@@ -423,21 +455,10 @@ body > .wrapper {
   padding-left: 35px;
 }
 
-/* .main .main-banner .phrase-section::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  right: 18px;
-  background: url('../images/main/main-banner/phrase-section/timer.png');
-  width: 130px;
-  height: 24px;
-} */
-
 .main .main-banner .phrase-section .text-section {
   display: inline-block;
   position: relative;
   z-index: 0;
-  /* letter-spacing: -0.5px; */
 }
 
 .main .main-banner .phrase-section .text-section > h2 {
@@ -445,8 +466,6 @@ body > .wrapper {
   color: #bdea08;
   font-family: 'dotum', sans-serif;
   font-size: 30px;
-  /* line-height: 30px; */
-  /* letter-spacing: -3.5px; */
 }
 
 .main .main-banner .phrase-section .text-section img {
@@ -459,8 +478,6 @@ body > .wrapper {
   padding-left: 2px;
   font-family: 'Nanum Brush', sans-serif;
   font-size: 36px;
-  /* line-height: 18px; */
-  /* letter-spacing: -0.1px; */
 }
 
 .main .main-banner .phrase-section .text-section .paragraph {
@@ -471,7 +488,6 @@ body > .wrapper {
   color: white;
   font-family: 'YDIYGO330', sans-serif;
   font-size: 18px;
-  letter-spacing: -0.5px;
 }
 
 .main .main-banner .phrase-section .text-section .paragraph p + p {
@@ -516,49 +532,105 @@ body > .wrapper {
   margin-left: 10px;
 }
 
-.main .main-banner .price-section .left .percentage,
+.main .main-banner .price-section {
+  position: relative;
+}
+
+.main .main-banner .price-section img {
+  display: block;
+}
+
+.main .main-banner .price-section .left {
+  display: inline-block;
+  padding-left: 304px;
+  padding-right: 81px;
+  padding-bottom: 9px;
+}
+
+.main .main-banner .price-section .left strong {
+  /* display: inline-block; */
+  position: absolute;
+  top: 24px;
+  left: 40px;
+}
+
+.main .main-banner .price-section .left .price {
+  display: inline-block;
+}
+
+.main .main-banner .price-section .left .price .original {
+  /* display: inline-block; */
+  position: absolute;
+  top: 19px;
+  left: 62px;
+}
+
+.main .main-banner .price-section .left .price .original,
+.main .main-banner .price-section .left .price .discounted {
+  position: relative;
+}
+
 .main .main-banner .price-section .left .price .original .number,
 .main .main-banner .price-section .left .price .discounted .number {
-  font-family: 'Dinbol', sans-serif;
-  letter-spacing: -0.5px;
+  display: block;
 }
 
-.main .main-banner .price-section .left .percentage {
-  font-size: 120px;
+.main .main-banner .price-section .left .price .original .text,
+.main .main-banner .price-section .left .price .discounted .text {
+  /* display: inline-block; */
+  position: absolute;
+  vertical-align: top;
 }
 
-.main .main-banner .price-section .left .price .original .number {
-  color: #4f4f4f;
-  font-size: 24px;
+.main .main-banner .price-section .left .price .original .text {
+  top: 12px;
+  right: 77px;
 }
 
-.main .main-banner .price-section .left .price .discounted .number {
-  color: #8009ef;
-  font-size: 72px;
+.main .main-banner .price-section .left .price .discounted .text {
+  top: 22px;
+  right: -39px;
+}
+
+.main .main-banner .price-section .right::before {
+  content: '';
+  background: url('../images/main/main-banner/price-section/divider.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 133px;
+}
+
+.main .main-banner .price-section .right {
+  display: inline-block;
+  position: relative;
+  padding-left: 64px;
+  padding-top: 12px;
+  box-sizing: border-box;
+  vertical-align: top;
 }
 
 .main .main-banner .price-section .right > p {
   font-family: 'dotum', sans-serif;
   font-size: 12px;
+  padding-right: 10px;
+  text-align: center;
 }
 
-.main .main-banner .price-section .right > strong {
-  font-family: 'YDIYGO150-KSCpc-EUC-H', sans-serif;
-  font-size: 30px;
-  letter-spacing: -1.3px;
+.main .main-banner .price-section .right > .currently-sold {
+  margin-top: 8px;
+  padding-left: 32px;
 }
 
-.main .main-banner .price-section .right button {
-  font-size: 30px;
-  letter-spacing: -1px;
+.main .main-banner .price-section .right .button01 {
+  margin-top: 10px;
 }
 
-.main .main-banner .price-section .right button > span {
-  font-family: 'YDIYGO320', sans-serif;
-}
-
-.main .main-banner .price-section .right button > span + span {
-  font-family: 'YDIYGO360', sans-serif;
+.main .main-banner .price-section .right .button01 > .tail > .body {
+  padding-top: 11px;
+  padding-left: 43px;
+  padding-right: 53px;
 }
 
 /* 
@@ -614,8 +686,6 @@ body > .wrapper {
 .main .banner .left .head > .tail > .body > ul {
   padding-top: 9px;
   padding-right: 6px;
-  /* padding-bottom: 76px; */
-  /* text-align: center; */
 }
 
 .main .banner .left .head > .tail > .body > ul > li {
@@ -637,7 +707,6 @@ body > .wrapper {
 }
 
 .main .banner .left .head > .tail > .body > ul > li + li {
-  /* margin-top: 25px; */
   height: 105px;
 }
 
@@ -677,20 +746,6 @@ body > .wrapper {
 .main .banner .right .head > .tail > .body > ul > li {
   position: relative;
 }
-
-.main .banner .right .head > .tail > .body > ul > li:first-of-type {
-  /* padding-top: 151px; */
-}
-
-/* .main .banner .right .head > .tail > .body > ul > .spao {
-  background: url('../images/main/banner/right/spao-thumbnail.png') 0px 0px no-repeat;
-}
-.main .banner .right .head > .tail > .body > ul > .birak {
-  background: url('../images/main/banner/right/birak-thumbnail.png') 0px 0px no-repeat;
-}
-.main .banner .right .head > .tail > .body > ul > .good-house {
-  background: url('../images/main/banner/right/good-house-thumbnail.png') 0px 0px no-repeat;
-} */
 
 .main .banner .right .head > .tail > .body > ul > li + li::before {
   content: '';
@@ -740,7 +795,6 @@ body > .wrapper {
 
 .main .banner .updown > .up,
 .main .banner .updown > .down {
-  /* display: block; */
   position: absolute;
 }
 
