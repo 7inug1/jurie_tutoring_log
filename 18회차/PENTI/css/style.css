@@ -95,6 +95,38 @@
   box-sizing: border-box;
 }
 
+.button02,
+.button02 > .tail,
+.button02 > .tail > .body {
+  display: inline-block;
+  height: 84px;
+  vertical-align: top;
+}
+
+.button02 {
+  padding-left: 8px;
+  background: url('../images/main/tab-container/tips-container/button_head.png') left no-repeat;
+}
+
+.button02 > .tail {
+  padding-right: 8px;
+  background: url('../images/main/tab-container/tips-container/button_tail.png') right no-repeat;
+}
+
+.button02 > .tail > .body {
+  background: url('../images/main/tab-container/tips-container/button_body.png') center repeat-x;
+  box-sizing: border-box;
+}
+
+.button02 > .tail > .body {
+  padding-top: 15px;
+}
+
+.button02.current > .tail > .body {
+  box-sizing: border-box;
+  width: 104px;
+}
+
 /* 
     #####    ##   #    # #    # ###### #####  
     #    #  #  #  ##   # ##   # #      #    # 
@@ -427,7 +459,7 @@ body > .wrapper {
   top: -9px;
   width: 133px;
   height: 133px;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 .main .main-banner {
@@ -938,6 +970,165 @@ body > .wrapper {
 /* .tips-container */
 .main .tab-container .content .tips-container {
   margin-top: 9px;
+  padding-top: 31px;
+  padding-bottom: 15px;
+}
+
+.main .tab-container .content .tips-container .title {
+  padding-left: 46px;
+  margin-bottom: 39px;
+}
+
+.main .tab-container .content .tips-container > ul > li > p img {
+  display: block;
+}
+
+.main .tab-container .content .tips-container ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main .tab-container .content .tips-container ul li + li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url('../images/main/tab-container/tips-container/divider.png') no-repeat;
+  width: 58px;
+  height: 133px;
+}
+
+.main .tab-container .content .tips-container ul li {
+  position: relative;
+  float: left;
+  width: 164px;
+  padding-top: 105px;
+}
+
+.main .tab-container .content .tips-container ul li + li {
+  /* margin-left: 2px; */
+}
+
+.main .tab-container .content .tips-container ul .step-one::after,
+.main .tab-container .content .tips-container ul .step-two::after,
+.main .tab-container .content .tips-container ul .step-three::after,
+.main .tab-container .content .tips-container ul .step-four::after,
+.main .tab-container .content .tips-container ul .step-five::after,
+.main .tab-container .content .tips-container ul .step-six::after {
+  content: '';
+  position: absolute;
+  top: -17px;
+  left: 5px;
+}
+
+.main .tab-container .content .tips-container ul .step-one::after {
+  background: url('../images/main/tab-container/tips-container/01.png') no-repeat;
+  width: 14px;
+  height: 13px;
+}
+.main .tab-container .content .tips-container ul .step-two::after {
+  background: url('../images/main/tab-container/tips-container/02.png') no-repeat;
+  width: 16px;
+  height: 13px;
+}
+.main .tab-container .content .tips-container ul .step-three::after {
+  background: url('../images/main/tab-container/tips-container/03.png') no-repeat;
+  width: 16px;
+  height: 13px;
+}
+.main .tab-container .content .tips-container ul .step-four::after {
+  background: url('../images/main/tab-container/tips-container/04.png') no-repeat;
+  width: 17px;
+  height: 13px;
+}
+.main .tab-container .content .tips-container ul .step-five::after {
+  background: url('../images/main/tab-container/tips-container/05.png') no-repeat;
+  width: 16px;
+  height: 13px;
+}
+.main .tab-container .content .tips-container ul .step-six::after {
+  background: url('../images/main/tab-container/tips-container/06.png') no-repeat;
+  width: 16px;
+  height: 13px;
+}
+
+.main .tab-container .content .tips-container ul .step-one p::before,
+.main .tab-container .content .tips-container ul .step-two p::before,
+.main .tab-container .content .tips-container ul .step-three p::before,
+.main .tab-container .content .tips-container ul .step-four p::before,
+.main .tab-container .content .tips-container ul .step-five p::before,
+.main .tab-container .content .tips-container ul .step-six p::before {
+  content: '';
+  position: absolute;
+}
+
+.main .tab-container .content .tips-container ul .step-one p::before {
+  top: -13px;
+  left: 19px;
+  background: url('../images/main/tab-container/tips-container/step1-icon.png') no-repeat;
+  width: 129px;
+  height: 116px;
+}
+.main .tab-container .content .tips-container ul .step-two p::before {
+  top: -5px;
+  left: 24px;
+  background: url('../images/main/tab-container/tips-container/step2-icon.png') no-repeat;
+  width: 131px;
+  height: 104px;
+}
+.main .tab-container .content .tips-container ul .step-three p::before {
+  top: -14px;
+  left: 26px;
+  background: url('../images/main/tab-container/tips-container/step3-icon.png') no-repeat;
+  width: 131px;
+  height: 121px;
+}
+.main .tab-container .content .tips-container ul .step-four p::before {
+  top: -12px;
+  left: 30px;
+  background: url('../images/main/tab-container/tips-container/step4-icon.png') no-repeat;
+  width: 118px;
+  height: 119px;
+}
+.main .tab-container .content .tips-container ul .step-five p::before {
+  top: -11px;
+  left: 37px;
+  background: url('../images/main/tab-container/tips-container/step5-icon.png') no-repeat;
+  width: 108px;
+  height: 118px;
+}
+.main .tab-container .content .tips-container ul .step-six p::before {
+  top: -10px;
+  left: 27px;
+  background: url('../images/main/tab-container/tips-container/step6-icon.png') no-repeat;
+  width: 121px;
+  height: 144px;
+}
+
+.main .tab-container .content .tips-container ul .step-one p {
+  padding-left: 34px;
+}
+.main .tab-container .content .tips-container ul .step-two p {
+  padding-left: 37px;
+}
+.main .tab-container .content .tips-container ul .step-three p {
+  padding-left: 50px;
+}
+.main .tab-container .content .tips-container ul .step-four p {
+  padding-left: 32px;
+}
+.main .tab-container .content .tips-container ul .step-five p {
+  padding-left: 23px;
+}
+.main .tab-container .content .tips-container ul .step-six p {
+  padding-left: 45px;
+}
+
+.main .tab-container .content .tips-container .button-container {
+  margin-top: 29px;
+  text-align: center;
+  padding-right: 16px;
 }
 
 /* .price-container */
