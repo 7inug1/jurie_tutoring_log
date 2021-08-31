@@ -145,12 +145,12 @@ body > .wrapper {
 ### #    # ###### #    # #####  ###### #    # 
 */
 
-.header {
+.wrapper > .header {
   position: relative;
   padding-top: 21px;
 }
 
-.header .title {
+.wrapper > .header > .title {
   text-align: center;
 }
 
@@ -164,18 +164,18 @@ body > .wrapper {
 ####### ###  ####    #   # ###### #   #     #   
 */
 
-.header .utility {
+.wrapper > .header .utility {
   position: absolute;
   top: 0;
   right: 136px;
 }
 
-.header .utility > li {
+.wrapper > .header .utility > li {
   display: inline-block;
   padding-left: 16px;
 }
 
-.header .utility > li > a {
+.wrapper > .header .utility > li > a {
   display: block;
   font-family: 'dotum', sans-serif;
   font-size: 11px;
@@ -183,7 +183,7 @@ body > .wrapper {
   color: #484848;
 }
 
-.header .utility > li > a:hover {
+.wrapper > .header .utility > li > a:hover {
   font-weight: bolder;
   color: #8009ef;
   text-decoration: underline;
@@ -413,7 +413,8 @@ body > .wrapper {
 ####### ### #    # #    # # #    #       #####  #    # #    # #    # ###### #    #
 */
 
-.main .main-banner-wrapper {
+.main .main-banner-wrapper,
+.main .tab-container .content {
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -431,7 +432,6 @@ body > .wrapper {
 
 .main .main-banner {
   position: relative;
-  background: #ffffff;
   padding-left: 17px;
   padding-right: 11px;
   padding-top: 20px;
@@ -444,6 +444,13 @@ body > .wrapper {
 .main .tab-container .content .else-container {
   border-radius: 6px;
   box-shadow: 1px 3px 1px lightgray, -1px 0px 1px lightgray;
+}
+
+.main .main-banner,
+.main .tab-container .content .checkpoint-container,
+.main .tab-container .content .tips-container,
+.main .tab-container .content .else-container {
+  background: #ffffff;
 }
 
 .main .main-banner .phrase-section {
@@ -664,20 +671,162 @@ body > .wrapper {
 .main .tab-container .tabs {
   border-bottom: 6px solid #272524;
   padding-left: 20px;
+  font-size: 0;
+}
+
+.main .tab-container .tabs button::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: url('../images/main/tab-container/button_gloss.png');
+  width: 164px;
+  height: 34px;
 }
 
 .main .tab-container .tabs button {
+  position: relative;
   background: #d7d7d7;
+  width: 176px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.main .tab-container .tabs button:not(:first-of-type) {
+  margin-left: 3px;
 }
 
 .main .tab-container .tabs .current {
   background: #272524;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  padding-left: 72px;
-  padding-right: 73px;
 }
 
+.main .tab-container .content {
+  margin-top: 31px;
+}
+
+.main .tab-container .content .checkpoint-container .header {
+  position: relative;
+  padding-left: 268px;
+  padding-top: 70px;
+  padding-bottom: 35px;
+}
+
+.main .tab-container .content .checkpoint-container .header .title {
+  display: inline-block;
+  position: absolute;
+  top: 35px;
+  left: 47px;
+}
+
+.main .tab-container .content .checkpoint-container .header .title img {
+  display: block;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container {
+  display: inline-block;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container img {
+  display: block;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul li:not(:first-of-type) {
+  margin-left: 33px;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul li {
+  position: relative;
+  float: left;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul li .text {
+  display: inline-block;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul .parking::before,
+.main .tab-container .content .checkpoint-container .header .icon-container ul .calendar::before,
+.main .tab-container .content .checkpoint-container .header .icon-container ul .reservation::before,
+.main .tab-container .content .checkpoint-container .header .icon-container ul .valid-period::before,
+.main .tab-container .content .checkpoint-container .header .icon-container ul .pickup-service::before,
+.main .tab-container .content .checkpoint-container .header .icon-container ul .change-time::before,
+.main .tab-container .content .checkpoint-container .header .icon-container ul .whirlpool_spa::before {
+  content: '';
+  position: absolute;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul .parking::before {
+  width: 77px;
+  height: 72px;
+  bottom: -2px;
+  left: -14px;
+  background: url('../images/main/tab-container/checkpoint-container/header/parking-icon.png') no-repeat;
+}
+
+.main .tab-container .content .checkpoint-container .header .icon-container ul .calendar::before {
+  width: 74px;
+  height: 74px;
+  bottom: -5px;
+  left: -8px;
+  background: url('../images/main/tab-container/checkpoint-container/header/calendar-icon.png') no-repeat;
+}
+.main .tab-container .content .checkpoint-container .header .icon-container ul .reservation::before {
+  width: 75px;
+  height: 76px;
+  bottom: -6px;
+  left: -12px;
+  background: url('../images/main/tab-container/checkpoint-container/header/reservation-phone-icon.png') no-repeat;
+}
+.main .tab-container .content .checkpoint-container .header .icon-container ul .valid-period::before {
+  width: 75px;
+  height: 74px;
+  bottom: -6px;
+  left: -11px;
+  background: url('../images/main/tab-container/checkpoint-container/header/valid-period-icon.png') no-repeat;
+}
+.main .tab-container .content .checkpoint-container .header .icon-container ul .pickup-service::before {
+  width: 67px;
+  height: 72px;
+  bottom: -2px;
+  left: -3px;
+  background: url('../images/main/tab-container/checkpoint-container/header/pickup-service-icon.png') no-repeat;
+}
+.main .tab-container .content .checkpoint-container .header .icon-container ul .change-time::before {
+  width: 72px;
+  height: 74px;
+  bottom: -5px;
+  left: -5px;
+  background: url('../images/main/tab-container/checkpoint-container/header/change-time-clock-icon.png') no-repeat;
+}
+.main .tab-container .content .checkpoint-container .header .icon-container ul .whirlpool_spa::before {
+  width: 80px;
+  height: 72px;
+  bottom: -3px;
+  left: -13px;
+  background: url('../images/main/tab-container/checkpoint-container/header/whirlpool_spa-heart-icon.png') no-repeat;
+}
+
+.main .tab-container .content .checkpoint-container .header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url('../images/main/tab-container/checkpoint-container/top-divider.png');
+  width: 100%;
+  height: 35px;
+}
+
+.main .tab-container .content .checkpoint-container .body::before {
+  content: '';
+  background: url('../images/main/tab-container/checkpoint-container/body/');
+}
 /* 
 #                                                     
 #           #####    ##   #    # #    # ###### #####  
