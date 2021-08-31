@@ -427,7 +427,7 @@ body > .wrapper {
   top: -9px;
   width: 133px;
   height: 133px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .main .main-banner {
@@ -479,7 +479,7 @@ body > .wrapper {
 .main .main-banner .phrase-section .text-section {
   display: inline-block;
   position: relative;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 .main .main-banner .phrase-section .text-section > h2 {
@@ -823,9 +823,127 @@ body > .wrapper {
   height: 35px;
 }
 
-.main .tab-container .content .checkpoint-container .body::before {
+.main .tab-container .content .checkpoint-container .body {
+  position: relative;
+  padding-left: 46px;
+  padding-top: 6px;
+  background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') -11px -4px no-repeat;
+}
+
+.main .tab-container .content .checkpoint-container .body img {
+  display: block;
+}
+
+.main .tab-container .content .checkpoint-container .body .left,
+.main .tab-container .content .checkpoint-container .body .right {
+  display: inline-block;
+}
+
+.main .tab-container .content .checkpoint-container .body .left {
+  position: relative;
+  padding-right: 13px;
+  /* z-index: 2; */
+}
+
+.main .tab-container .content .checkpoint-container .body .left::after {
   content: '';
-  background: url('../images/main/tab-container/checkpoint-container/body/');
+  background: url('../images/main/tab-container/checkpoint-container/body/WWW-background.png');
+  position: absolute;
+  bottom: 30px;
+  right: -177px;
+  width: 293px;
+  height: 154px;
+  z-index: 1;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul {
+  position: relative;
+  margin-top: 13px;
+  padding-bottom: 48px;
+}
+
+.main .tab-container .content .checkpoint-container .body .left ul li {
+  position: relative;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul > li::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -26px;
+  background: url('../images/main/tab-container/checkpoint-container/body/left/left_list-icon.png') no-repeat;
+  width: 27px;
+  height: 26px;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul > .list-one ul li + li {
+  margin-top: 5px;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul > .list-two {
+  margin-top: 25px;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul > .list-two ul li + li {
+  margin-top: 4px;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul > .list-three {
+  margin-top: 29px;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul > .list-three p + p {
+  margin-top: 4px;
+}
+
+.main .tab-container .content .checkpoint-container .body .right::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  background: url('../images/main/tab-container/checkpoint-container/body/vertical-divider.png') no-repeat;
+  width: 35px;
+  height: 375px;
+}
+
+.main .tab-container .content .checkpoint-container .body .right {
+  position: relative;
+  padding-left: 45px;
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+  vertical-align: top;
+}
+
+.main .tab-container .content .checkpoint-container .body .left > ul,
+.main .tab-container .content .checkpoint-container .body .right .paragraph-container {
+  z-index: 2;
+}
+
+.main .tab-container .content .checkpoint-container .body .right .paragraph-container {
+  position: relative;
+  margin-top: 15px;
+  padding-left: 2px;
+}
+
+.main .tab-container .content .checkpoint-container .body .right .paragraph-container strong {
+  display: block;
+}
+
+.main .tab-container .content .checkpoint-container .body .right .paragraph-container p:not(:first-of-type),
+.main .tab-container .content .checkpoint-container .body .right .paragraph-container strong {
+  margin-top: 7px;
+}
+
+/* .tips-container */
+.main .tab-container .content .tips-container {
+  margin-top: 9px;
+}
+
+/* .price-container */
+
+.main .tab-container .content .price-container {
+  margin-top: 10px;
 }
 /* 
 #                                                     
