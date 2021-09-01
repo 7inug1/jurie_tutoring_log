@@ -230,7 +230,8 @@ body > .wrapper {
 ### #    # #    # # #    # 
 */
 
-.main {
+.main,
+.footer {
   position: relative;
   padding-left: 127px;
   padding-right: 139px;
@@ -1529,31 +1530,117 @@ body > .wrapper {
 
 .footer {
   font-family: 'dotum', sans-serif;
+  border-top: 3px solid #d9d9d9;
+  margin-top: 102px;
+  /* padding-left: 165px; */
+  padding-bottom: 120px;
+  background: #e8e8e8;
 }
 
-.footer .utility {
+.footer .wrapper {
+  position: relative;
+  padding-left: 165px;
+}
+
+.footer img {
+  display: block;
+}
+
+.footer .left {
+  position: absolute;
+  top: 54px;
+  left: -14px;
+}
+
+.footer .right::before {
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: 0;
+  background: url('../images/footer/divider.png');
+  width: 1px;
+  height: 99px;
+}
+
+.footer .right {
+  position: relative;
+  padding-left: 25px;
+  padding-top: 44px;
+}
+
+.footer .right .utility {
   font-size: 12px;
   line-height: 18px;
+}
+
+.footer .right .utility li a {
   color: #484848;
 }
 
-.footer .copyright-contents {
-  font-size: 11px;
-  line-height: 18px;
+.footer .right .utility::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
-.footer .copyright-contents .title {
+.footer .right .utility li:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -15px;
+  background: url('../images/footer/utility-divider.png');
+  width: 1px;
+  height: 10px;
+}
+
+.footer .right .utility li:not(:first-of-type) {
+  margin-left: 32px;
+}
+
+.footer .right .utility li {
+  position: relative;
+  float: left;
+}
+
+.footer .right .copyright-contents {
+  font-size: 11px;
+  line-height: 18px;
+  margin-top: 14px;
+}
+
+.footer .right .copyright-contents .information .title:not(:first-of-type)::before,
+.footer .right .copyright-contents .cs .title:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: -10px;
+  background: url('../images/footer/dot.png');
+  width: 1px;
+  height: 2px;
+}
+
+.footer .right .copyright-contents .information .title:not(:first-of-type),
+.footer .right .copyright-contents .cs .title:not(:first-of-type) {
+  margin-left: 14px;
+}
+
+.footer .right .copyright-contents .title {
+  position: relative;
   font-weight: bolder;
   color: #616161;
 }
 
-.footer .copyright-contents .content,
-.footer .copyright-contents .copyright-liability,
-.footer .copyright-contents .copyright {
+.footer .right .copyright-contents .content,
+.footer .right .copyright-contents .copyright-liability,
+.footer .right .copyright-contents .copyright {
   font-weight: normal;
   color: #939393;
 }
 
+.footer .right .copyright-contents .copyright {
+  font-family: 'tahoma', sans-serif;
+  font-size: 10px;
+}
 /*
 ########  ########  ######  ######## ########  ######   ######   ######  
 ##     ## ##       ##    ## ##          ##    ##    ## ##    ## ##    ## 
