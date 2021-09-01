@@ -1193,7 +1193,149 @@ body > .wrapper {
 
 .main .tab-container .content .price-container {
   margin-top: 10px;
+  padding-top: 40px;
+  background: #272524;
 }
+
+.main .tab-container .content .price-container .title {
+  text-align: center;
+}
+
+.main .tab-container .content .price-container > .title > span {
+  display: block;
+  position: relative;
+  top: -3px;
+  padding-left: 122px;
+}
+
+.main .tab-container .content .price-container span img {
+  display: inline-block;
+}
+
+.main .tab-container .content .price-container span img {
+}
+
+.main .tab-container .content .price-container .image-container-wrapper {
+  margin-top: 33px;
+  text-align: center;
+}
+
+.main .tab-container .content .price-container .image-container-wrapper .image-container::before {
+  content: '';
+  background: url('../images/main/tab-container/price-container/banner_tag.png');
+  width: 137px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 31px;
+}
+
+.main .tab-container .content .price-container .image-container-wrapper .image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.main .tab-container .content .price-container .text-container {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.main .tab-container .content .price-container .text-container strong {
+  display: block;
+}
+
+.main .tab-container .content .price-container .text-container img {
+  display: inline-block;
+}
+
+.main .tab-container .content .price-container .text-container div:first-of-type {
+  margin-top: 23px;
+}
+
+.main .tab-container .content .price-container .text-container div + div {
+  margin-top: 6px;
+}
+
+.main .tab-container .content .price-container .table-container {
+  margin-top: 81px;
+  padding-left: 29px;
+  padding-right: 32px;
+}
+
+.main .tab-container .content .price-container .table-container table thead {
+  position: relative;
+}
+
+.main .tab-container .content .price-container .table-container table thead th {
+  padding-bottom: 23px;
+}
+
+.main .tab-container .content .price-container .table-container table thead .weekday_mon-to-thur {
+  /* padding-right: 138px; */
+  box-sizing: border-box;
+}
+
+.main .tab-container .content .price-container .table-container table thead::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: url('../images/main/tab-container/price-container/table_horizontal-line.png');
+  width: 100%;
+  height: 3px;
+}
+
+.main .tab-container .content .price-container .table-container table th,
+.main .tab-container .content .price-container .table-container table td {
+  /* border: 1px solid white; */
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr th {
+  text-align: left;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr td ins,
+.main .tab-container .content .price-container .table-container table tbody tr td del,
+.main .tab-container .content .price-container .table-container table tbody tr td img {
+  display: block;
+}
+
+/* else-container */
+.main .tab-container .content .else-container {
+  margin-top: 40px;
+  padding-top: 55px;
+  /* padding-bottom: 70px; */
+}
+
+.main .tab-container .content .else-container .title,
+.main .tab-container .content .else-container .image-container-wrapper,
+.main .tab-container .content .else-container .button-container {
+  text-align: center;
+}
+
+.main .tab-container .content .else-container .title div:first-of-type {
+  margin-top: 4px;
+  padding-right: 4px;
+}
+
+.main .tab-container .content .else-container .title .caption {
+  margin-top: 49px;
+  padding-left: 6px;
+}
+
+.main .tab-container .content .else-container .image-container-wrapper {
+  margin-top: 44px;
+}
+
+.main .tab-container .content .else-container .button-container {
+  margin-top: 63px;
+}
+
+.main .tab-container .content .else-container .button-container button {
+  width: 100%;
+  padding-right: 1px;
+  padding-bottom: 70px;
+}
+
 /* 
 #                                                     
 #           #####    ##   #    # #    # ###### #####  
