@@ -1018,7 +1018,7 @@ body > .wrapper {
 .main .tab-container .content .tips-container ul .step-six::after {
   content: '';
   position: absolute;
-  top: -17px;
+  top: -16px;
   left: 5px;
 }
 
@@ -1064,46 +1064,56 @@ body > .wrapper {
 }
 
 .main .tab-container .content .tips-container ul .step-one p::before {
-  top: -13px;
+  /* top: -12px; */
   left: 19px;
+  bottom: 13px;
   background: url('../images/main/tab-container/tips-container/step1-icon.png') no-repeat;
   width: 129px;
   height: 116px;
 }
 .main .tab-container .content .tips-container ul .step-two p::before {
-  top: -5px;
+  /* top: -4px; */
   left: 24px;
+  bottom: 31px;
   background: url('../images/main/tab-container/tips-container/step2-icon.png') no-repeat;
   width: 131px;
   height: 104px;
 }
 .main .tab-container .content .tips-container ul .step-three p::before {
-  top: -14px;
+  /* top: -13px; */
   left: 26px;
+  bottom: 23px;
   background: url('../images/main/tab-container/tips-container/step3-icon.png') no-repeat;
   width: 131px;
   height: 121px;
 }
 .main .tab-container .content .tips-container ul .step-four p::before {
-  top: -12px;
+  /* top: -11px; */
   left: 30px;
+  bottom: 9px;
   background: url('../images/main/tab-container/tips-container/step4-icon.png') no-repeat;
   width: 118px;
   height: 119px;
 }
 .main .tab-container .content .tips-container ul .step-five p::before {
-  top: -11px;
+  /* top: -10px; */
   left: 37px;
+  bottom: 23px;
   background: url('../images/main/tab-container/tips-container/step5-icon.png') no-repeat;
   width: 108px;
   height: 118px;
 }
 .main .tab-container .content .tips-container ul .step-six p::before {
-  top: -10px;
+  /* top: -9px; */
   left: 27px;
+  bottom: -18px;
   background: url('../images/main/tab-container/tips-container/step6-icon.png') no-repeat;
   width: 121px;
   height: 144px;
+}
+
+.main .tab-container .content .tips-container ul li p {
+  position: relative;
 }
 
 .main .tab-container .content .tips-container ul .step-one p {
@@ -1125,10 +1135,58 @@ body > .wrapper {
   padding-left: 45px;
 }
 
+.main .tab-container .content .tips-container ul .step-one p::after,
+.main .tab-container .content .tips-container ul .step-two p::after,
+.main .tab-container .content .tips-container ul .step-four p::after {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  background: url('../images/main/tab-container/tips-container/red-correct-mark.png') no-repeat;
+}
+
+.main .tab-container .content .tips-container ul .step-one p::after {
+  top: -11px;
+  left: 52px;
+}
+
+.main .tab-container .content .tips-container ul .step-two p::after {
+  top: -9px;
+  left: 78px;
+}
+
+.main .tab-container .content .tips-container ul .step-four p::after {
+  top: -11px;
+  left: 23px;
+}
+
 .main .tab-container .content .tips-container .button-container {
   margin-top: 29px;
   text-align: center;
-  padding-right: 16px;
+  /* padding-right: 4px; */
+}
+
+.main .tab-container .content .tips-container .button-container .button02 > .tail > .body {
+  padding-left: 8px;
+  padding-right: 3px;
+}
+
+.main .tab-container .content .tips-container .button-container .button02 > .tail > .body > .image-container {
+  display: inline-block;
+}
+
+.main .tab-container .content .tips-container .button-container .button02 > .tail > .body > .image-container:first-of-type {
+  padding-top: 7px;
+}
+
+.main .tab-container .content .tips-container .button-container .button02 > .tail > .body > .image-container + .image-container {
+  padding-top: 15px;
+  padding-left: 4px;
+  vertical-align: top;
+}
+
+.main .tab-container .content .tips-container .button-container .button02 > .tail > .body img {
+  display: inline-block;
 }
 
 /* .price-container */
