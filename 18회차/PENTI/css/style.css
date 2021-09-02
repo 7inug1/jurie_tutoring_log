@@ -1621,17 +1621,22 @@ body > .wrapper {
   /* background: url('../images/main/banner/updown/up-arrow.png') 4px 1px no-repeat; */
 }
 
-.main .banner .updown > .up > button {
+.main .banner .updown > .up {
   position: relative;
-  top: 10px;
-  left: 35px;
+  height: 41px;
+  padding-top: 22px;
+  padding-left: 35px;
+  padding-right: 35px;
+  background: url('../images/main/banner/updown/up-arrow.png') 39px 11px no-repeat;
+  /* top: 10px;
+  left: 35px; */
 }
 
-.main .banner .updown > .down::before {
+.main .banner .updown > .down::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   background: url('../images/main/banner/updown/horizontal-line.png');
   width: 67px;
   height: 1px;
@@ -1641,6 +1646,10 @@ body > .wrapper {
   /* top: 30px;
   left: 25px; */
   height: 43px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  background: url('../images/main/banner/updown/down-arrow.png') 39px 23px no-repeat;
   /* background: url('../images/main/banner/updown/down-arrow.png') 15px 34px no-repeat; */
 }
 
