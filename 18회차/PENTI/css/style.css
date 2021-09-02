@@ -230,8 +230,9 @@ body > .wrapper {
 ### #    # #    # # #    # 
 */
 
-.main,
-.footer {
+.main
+/* ,.footer */
+ {
   position: relative;
   padding-left: 127px;
   padding-right: 139px;
@@ -627,6 +628,16 @@ body > .wrapper {
 .main .main-banner .price-section .left .price .original .number,
 .main .main-banner .price-section .left .price .discounted .number {
   display: block;
+}
+
+.main .main-banner .price-section .left .price .original .number::before {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: -99px;
+  width: 176px;
+  height: 34px;
+  background: url('../images/main/main-banner/price-section/discount-arrow.png');
 }
 
 .main .main-banner .price-section .left .price .original .text,
@@ -1198,7 +1209,7 @@ body > .wrapper {
   background: #272524;
 }
 
-.main .tab-container .content .price-container .title {
+.main .tab-container .content .price-container > .title {
   text-align: center;
 }
 
@@ -1274,6 +1285,14 @@ body > .wrapper {
 .main .tab-container .content .price-container .table-container table thead .weekday_mon-to-thur {
   /* padding-right: 138px; */
   box-sizing: border-box;
+  padding-right: 8px;
+}
+
+.main .tab-container .content .price-container .table-container table thead .weekday_fri {
+  padding-left: 20px;
+}
+.main .tab-container .content .price-container .table-container table thead .weekends {
+  padding-left: 48px;
 }
 
 .main .tab-container .content .price-container .table-container table thead::after {
@@ -1292,6 +1311,52 @@ body > .wrapper {
 
 .main .tab-container .content .price-container .table-container table tbody tr th {
   text-align: left;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  padding-left: 4px;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr .title {
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr .brackets {
+  margin-top: 2px;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr td {
+  position: relative;
+  padding-top: 27px;
+  padding-left: 51px;
+  box-sizing: border-box;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr td::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../images/main/tab-container/price-container/arrow-body.png');
+  width: 84px;
+  height: 100px;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr td ins {
+  margin-top: 5px;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr td del::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -26px;
+  background: url('../images/main/tab-container/price-container/discount-arrow.png');
+  width: 187px;
+  height: 22px;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr td del {
+  position: relative;
+  padding-left: 44px;
 }
 
 .main .tab-container .content .price-container .table-container table tbody tr td ins,
@@ -1434,7 +1499,7 @@ body > .wrapper {
   text-align: left;
   padding-left: 7px;
   margin-top: 40px;
-  padding-bottom: 22px;
+  padding-bottom: 24px;
 }
 
 .main .banner .right .head > .tail > .body > ul > li {
@@ -1459,8 +1524,13 @@ body > .wrapper {
   margin-top: 2px;
 }
 
+.main .banner .right .head > .tail > .body > ul > li img,
+.main .banner .right .head > .tail > .body > ul > li a {
+  display: block;
+}
+
 .main .banner .right .head > .tail > .body > ul > li > .title {
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .main .banner .right .head > .tail > .body > ul > li > strong {
@@ -1485,33 +1555,50 @@ body > .wrapper {
   width: 86px;
   height: 86px;
   margin-top: 41px;
+  text-align: center;
+}
+
+.main .banner .updown img {
+  display: block;
 }
 
 .main .banner .updown > .up,
 .main .banner .updown > .down {
-  position: absolute;
+  position: relative;
+  display: block;
 }
 
-.main .banner .updown > .up .image-container,
+/* .main .banner .updown > .up .image-container,
 .main .banner .updown > .down .image-container {
   text-align: center;
-}
+} */
 
-.main .banner .updown > .up {
+.main .banner .updown > .up::before .main .banner .updown > .up {
   height: 41px;
-  background: url('../images/main/banner/updown/up-arrow.png') 4px 1px no-repeat;
+  /* background: url('../images/main/banner/updown/up-arrow.png') 4px 1px no-repeat; */
 }
 
 .main .banner .updown > .up > button {
+  position: relative;
   top: 10px;
   left: 35px;
 }
 
+.main .banner .updown > .down::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../images/main/banner/updown/horizontal-line.png');
+  width: 67px;
+  height: 1px;
+}
+
 .main .banner .updown > .down {
-  top: 30px;
-  left: 25px;
+  /* top: 30px;
+  left: 25px; */
   height: 43px;
-  background: url('../images/main/banner/updown/down-arrow.png') 15px 34px no-repeat;
+  /* background: url('../images/main/banner/updown/down-arrow.png') 15px 34px no-repeat; */
 }
 
 .main .banner .updown > .up img,
@@ -1532,7 +1619,7 @@ body > .wrapper {
   font-family: 'dotum', sans-serif;
   border-top: 3px solid #d9d9d9;
   margin-top: 102px;
-  /* padding-left: 165px; */
+  padding-left: 169px;
   padding-bottom: 120px;
   background: #e8e8e8;
 }
