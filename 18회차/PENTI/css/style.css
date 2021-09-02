@@ -1252,8 +1252,19 @@ body > .wrapper {
   text-align: center;
 }
 
+.main .tab-container .content .price-container .text-container strong::before {
+  content: '';
+  background: url('../images/main/tab-container/price-container/65percent-icon.png');
+  position: absolute;
+  top: 40px;
+  left: 74px;
+  width: 139px;
+  height: 140px;
+}
+
 .main .tab-container .content .price-container .text-container strong {
   display: block;
+  position: relative;
 }
 
 .main .tab-container .content .price-container .text-container img {
@@ -1330,14 +1341,46 @@ body > .wrapper {
   box-sizing: border-box;
 }
 
-.main .tab-container .content .price-container .table-container table tbody tr td::before {
+.main .tab-container .content .price-container .table-container table tbody tr:first-of-type td::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 19px;
+  right: 20px;
   background: url('../images/main/tab-container/price-container/arrow-body.png');
   width: 84px;
-  height: 100px;
+  height: 221px;
+  z-index: 1;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr:nth-of-type(2) td::after {
+  content: '';
+  position: absolute;
+  top: 43px;
+  right: 44px;
+  background: url('../images/main/tab-container/price-container/65percent_white-text.png');
+  width: 32px;
+  height: 14px;
+  z-index: 1;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr:nth-of-type(3) td::before {
+  content: '';
+  position: absolute;
+  top: 33px;
+  right: 20px;
+  background: url('../images/main/tab-container/price-container/arrow-body_bottom.png');
+  width: 84px;
+  height: 36px;
+}
+
+.main .tab-container .content .price-container .table-container table tbody tr:last-of-type td::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  background: url('../images/main/tab-container/price-container/arrow-head.png');
+  width: 89px;
+  height: 23px;
 }
 
 .main .tab-container .content .price-container .table-container table tbody tr td ins {
