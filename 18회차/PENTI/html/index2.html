@@ -339,12 +339,8 @@
               </h2>
               <div class="content">
                 <form action="" method="POST" class="comment-writing-section">
-                  <div class="input00">
-                    <input
-                      type="text"
-                      value="안녕하세요~ 궁금한 사항이 있어서 글 남깁니다.
-                    펜션 예약시 ..."
-                    />
+                  <div class="textarea00">
+                    <textarea name="textarea" cols="30" rows="10">안녕하세요~ 궁금한 사항이 있어서 글 남깁니다. &#10;펜션 예약시 ...</textarea>
                   </div>
                   <button type="submit" class="comment-submit-button">
                     <img src="../images/main/tab-container/comment-container/content/comment-writing-section/button_text.png" alt="덧글입력" />
@@ -364,6 +360,7 @@
                         <p>위 조건은 티몬고객 뿐만 아니라, 플루토를 이용하는 모든 고객에게 해당됩니다.</p>
                         <br />
                         <p>감사합니다.</p>
+                        <button class="reply-delete-button"><img src="../images/main/tab-container/comment-container/content/comments-section/delete-button.png" alt="댓글 삭제 버튼" /></button>
                         <div class="date">2011.09.01 00:04</div>
                       </div>
                     </div>
@@ -380,8 +377,19 @@
                         <p>위 조건은 티몬고객 뿐만 아니라, 플루토를 이용하는 모든 고객에게 해당됩니다.</p>
                         <br />
                         <p>감사합니다.</p>
+                        <button class="reply-delete-button"><img src="../images/main/tab-container/comment-container/content/comments-section/delete-button.png" alt="댓글 삭제 버튼" /></button>
                         <div class="date">2011.09.01 00:04</div>
-                        <div class="button-container"><button></button><button></button><button></button></div>
+                        <div class="button-container">
+                          <button>
+                            <img src="../images/main/tab-container/comment-container/content/comments-section/button_comment-text.png" alt="댓글" />
+                          </button>
+                          <button>
+                            <img src="../images/main/tab-container/comment-container/content/comments-section/button_edit-text.png" alt="수정" />
+                          </button>
+                          <button>
+                            <img src="../images/main/tab-container/comment-container/content/comments-section/button_remove-text.png" alt="삭제" />
+                          </button>
+                        </div>
                         <ul class="replies">
                           <li>
                             <div class="writer">Penti_cs</div>
@@ -393,63 +401,69 @@
                     </div>
                   </li>
                 </ul>
-                <div class="pagination">
-                  <div class="button-container">
-                    <button></button>
-                    <button></button>
+                <div class="pagination-wrapper">
+                  <div class="pagination00">
+                    <div class="button-container">
+                      <button class="left-button">
+                        <img src="../images/main/tab-container/comment-container/content/comments-section/pagination_left-button.png" alt="pagination left button" />
+                      </button>
+                      <button class="right-button">
+                        <img src="../images/main/tab-container/comment-container/content/comments-section/pagination_right-button.png" alt="pagination right button" />
+                      </button>
+                    </div>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          1
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          3
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          4
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          5
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          6
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          7
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          8
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          9
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          10
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                  <ul>
-                    <li>
-                      <a href="#">
-                        1
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        2
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        3
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        4
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        5
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        6
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        7
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        8
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        9
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        10
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>

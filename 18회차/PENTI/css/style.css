@@ -139,11 +139,69 @@
 input[type='text'] {
 }
 
-.input00 {
+.textarea00 {
   display: inline-block;
-  background: #ffffff;
-  height: 117px;
+  padding: 18px 15px 18px 15px;
   width: calc(100% - 184px);
+  height: 117px;
+  line-height: 18px;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* 
+    #####    ##    ####  # #    #   ##   ##### #  ####  #    # 
+    #    #  #  #  #    # # ##   #  #  #    #   # #    # ##   # 
+    #    # #    # #      # # #  # #    #   #   # #    # # #  # 
+### #####  ###### #  ### # #  # # ######   #   # #    # #  # # 
+### #      #    # #    # # #   ## #    #   #   # #    # #   ## 
+### #      #    #  ####  # #    # #    #   #   #  ####  #    # 
+*/
+
+.pagination00 {
+  display: inline-block;
+  position: relative;
+}
+
+.pagination00 .button-container button {
+  position: absolute;
+}
+
+.pagination00 .button-container .left-button {
+  top: 0;
+  left: 0;
+}
+.pagination00 .button-container .right-button {
+  top: 0;
+  right: 0;
+}
+
+.pagination00 ul {
+  padding-left: 31px;
+  padding-right: 33px;
+}
+
+.pagination00 ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.pagination00 ul li {
+  float: left;
+}
+
+.pagination00 ul li:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.pagination00 ul li a {
+  font-weight: bolder;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 /* 
@@ -467,7 +525,7 @@ body > .wrapper {
 */
 
 .main .main-banner-wrapper,
-.main .tab-container .content {
+.main .tab-container > .content {
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -773,9 +831,14 @@ body > .wrapper {
 
 /* index2 */
 
-.main .tab-container .content .comment-container .title {
-  padding-left: 17px;
-  padding-top: 20px;
+.main .tab-container .content .comment-container {
+  /* padding-bottom: 131px; */
+  padding: 20px 20px 131px 17px;
+}
+
+.main .tab-container .content .comment-container > .title {
+  /* padding-left: 17px;
+  padding-top: 20px; */
 }
 
 .main .tab-container .content .comment-container .title p {
@@ -791,10 +854,11 @@ body > .wrapper {
   display: block;
 }
 
-.main .tab-container .content .comment-container .content {
+.main .tab-container .content .comment-container > .content {
   margin-top: 17px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 3px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .main .tab-container .content .comment-container .content .comment-writing-section {
@@ -804,7 +868,7 @@ body > .wrapper {
   padding: 20px 20px 20px 793px;
 }
 
-.main .tab-container .content .comment-container .content .comment-writing-section .input00 {
+.main .tab-container .content .comment-container .content .comment-writing-section .textarea00 {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -821,6 +885,193 @@ body > .wrapper {
 
 .main .tab-container .content .comment-container .content .comment-writing-section .comment-submit-button img {
   display: block;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 212px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer,
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+  font-size: 12px;
+  font-family: 'dotum', sans-serif;
+  line-height: 18px;
+  border-radius: 8px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section li .writer {
+  font-weight: bolder;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section li .date {
+  color: #a1a1a1;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 25px 0 26px 21px;
+  width: 170px;
+  color: #000000;
+  background: #e8e8e8;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer {
+  background: #800aef;
+  color: #ffffff;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer::after,
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: -21px;
+  width: 21px;
+  height: 8px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer::after {
+  background: url('../images/main/tab-container/comment-container/content/comments-section/grey-comment_right-tail.png');
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer::after {
+  background: url('../images/main/tab-container/comment-container/content/comments-section/purple-comment_right-tail.png');
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment,
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+  box-sizing: border-box;
+  width: 742px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -21px;
+  width: 21px;
+  height: 8px;
+  background: url('../images/main/tab-container/comment-container/content/comments-section/grey-comment_left-tail.png');
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+  position: relative;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment {
+  padding: 17px 19px 15px 19px;
+  /* padding-left: 19px;
+  padding-top: 20px; */
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .reply-delete-button img {
+  display: block;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .reply-delete-button {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > p:last-of-type {
+  display: inline-block;
+  /* position: absolute; */
+}
+
+/* .main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > p:last-of-type::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: -19px;
+  width: 13px;
+  height: 13px;
+  background: url('../images/main/tab-container/comment-container/content/comments-section/close-button.png');
+} */
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment > .title {
+  color: #800aef;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment > .content {
+  margin-top: 12px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .date {
+  margin-top: 12px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .button-container {
+  margin-top: 15px;
+  padding-left: 1px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .button-container button {
+  padding: 3px 7px 4px 16px;
+  border-radius: 2px;
+  background: url('../images/main/tab-container/comment-container/content/comments-section/button_arrow.png') 6px 8px no-repeat #8511f2;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .button-container img {
+  display: block;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies {
+  margin-top: 5px;
+  padding-left: 38px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -37px;
+  background: url('../images/main/tab-container/comment-container/content/comments-section/re-icon.png');
+  width: 27px;
+  height: 9px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .date {
+  padding-left: 2px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .content {
+  margin-top: 4px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li {
+  position: relative;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment > .content > .date {
+  margin-top: 13px;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .writer,
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .date {
+  display: inline-block;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+  display: inline-block;
+  padding: 18px 19px 16px 19px;
+  /* padding-left: 19px;
+  padding-top: 21px; */
+  background: #e8e8e8;
+}
+
+.main .tab-container .content .comment-container .content > .pagination-wrapper {
+  margin-top: 23px;
+  text-align: center;
 }
 
 .main .tab-container .content .checkpoint-container .header {
@@ -2028,7 +2279,7 @@ body > .wrapper {
     background: transparent;
   }
 
-  input[type='text']:focus {
+  textarea:focus {
     outline: 0 none;
   }
 
@@ -2039,6 +2290,7 @@ body > .wrapper {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background: transparent;
   }
 
   select {
