@@ -241,7 +241,7 @@ body {
 }
 
 body > .wrapper {
-  width: 1266px;
+  /* width: 1266px; */
   margin: 0 auto;
 }
 
@@ -326,7 +326,7 @@ body > .wrapper {
 .main .navigation {
   position: relative;
   margin-top: 18px;
-  padding-left: 127px;
+  /* padding-left: 127px; */
 }
 
 .main .navigation::after {
@@ -336,7 +336,8 @@ body > .wrapper {
 }
 
 .main .navigation > li {
-  float: left;
+  /* float: left; */
+  position: relative;
   margin-right: 3px;
   vertical-align: top;
 }
@@ -353,7 +354,8 @@ body > .wrapper {
 
 .main .navigation > li > .subnavigation {
   position: absolute;
-  left: 0;
+  top:0;
+  left: 104px;
   background: #272524;
   border-top: 6px solid #8009ef;
 }
@@ -365,11 +367,11 @@ body > .wrapper {
 }
 
 .main .navigation > li > .subnavigation > li {
-  float: left;
+  /* float: left; */
   padding-left: 9px;
   padding-right: 74px;
-  padding-top: 20px;
-  padding-bottom: 27px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
   box-sizing: border-box;
 }
 
