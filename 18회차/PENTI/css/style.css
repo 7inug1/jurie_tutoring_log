@@ -1928,6 +1928,7 @@ body > .wrapper {
 
 .footer {
   font-family: 'dotum', sans-serif;
+  width: 100%;
   border-top: 3px solid #d9d9d9;
   margin-top: 102px;
   padding-left: 169px;
@@ -2270,5 +2271,11 @@ table td {
 @media only screen and (max-width: 1265px) {
   body > .wrapper > .main > .banner {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  body {
+    /* background: red; */
   }
 }
