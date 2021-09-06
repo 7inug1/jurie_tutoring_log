@@ -242,7 +242,7 @@ body {
 
 body > .wrapper {
   /* width: 1266px; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 /* 
@@ -310,6 +310,7 @@ body > .wrapper {
 
 .main {
   position: relative;
+  max-width: 1000px;
   padding-left: 127px;
   padding-right: 122px;
   /* text-align: center; */
@@ -369,12 +370,14 @@ body > .wrapper {
 }
 
 .main .subnavigation > li {
-  float: left;
+  display: inline-block;
+  /* float: left; */
   padding-left: 9px;
   padding-right: 74px;
   padding-top: 20px;
   padding-bottom: 27px;
   box-sizing: border-box;
+  vertical-align: top;
 }
 
 .main .subnavigation > li > ul {
@@ -452,9 +455,21 @@ body > .wrapper {
   position: relative;
 }
 
+.main .menu-bar img {
+  width: 100%;
+}
+
 .main .menu-bar .notification .title,
 .main .menu-bar .notification .content {
   display: inline-block;
+}
+
+.main .menu-bar .notification .content {
+  position: relative;
+  /* top: 2px; */
+  margin-left: 1px;
+  padding-top: 2px;
+  vertical-align: top;
 }
 
 .main .menu-bar .notification .title,
@@ -500,6 +515,7 @@ body > .wrapper {
 }
 
 .main .menu-bar .notification {
+  display: inline-block;
   position: relative;
   font-family: 'dotum', sans-serif;
   font-size: 11px;
@@ -662,10 +678,12 @@ body > .wrapper {
 .main .main-banner .phrase-section .timer {
   position: absolute;
   top: 10px;
-  right: 18px;
+  right: 24px;
 }
 
-.main .main-banner .phrase-section .timer div {
+.main .main-banner .phrase-section .timer > .hours,
+.main .main-banner .phrase-section .timer > .minutes,
+.main .main-banner .phrase-section .timer > .seconds {
   display: inline-block;
   position: relative;
   background: url('../images/main/main-banner/phrase-section/timer-block.png');
@@ -673,17 +691,30 @@ body > .wrapper {
   height: 24px;
 }
 
-.main .main-banner .phrase-section .timer div span {
+.main .main-banner .phrase-section .timer span > .time-container {
   position: absolute;
   left: 3px;
   top: 4px;
+  /* position: relative; */
+  /* top: 7px; */
+  /* padding-left: 4px;
+  padding-top: 7px; */
   font-family: 'tahoma', sans-serif;
   font-size: 14px;
   color: #ffffff;
   letter-spacing: 10px;
 }
 
-.main .main-banner .phrase-section .timer div:not(:first-of-type)::before {
+.main .main-banner .phrase-section .timer > .colon-container {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.main .main-banner .phrase-section .timer > .colon-container img {
+  display: inline-block;
+}
+
+/* .main .main-banner .phrase-section .timer div:not(:first-of-type)::before {
   content: '';
   position: absolute;
   background: url('../images/main/main-banner/phrase-section/timer-dots.png');
@@ -691,11 +722,11 @@ body > .wrapper {
   height: 24px;
   top: 0;
   left: -10px;
-}
+} */
 
-.main .main-banner .phrase-section .timer div:not(:first-of-type) {
+/* .main .main-banner .phrase-section .timer div:not(:first-of-type) {
   margin-left: 10px;
-}
+} */
 
 .main .main-banner .price-section {
   position: relative;
@@ -1504,6 +1535,10 @@ body > .wrapper {
   padding-top: 7px;
 }
 
+.main .tab-container .content .tips-container .button-container .button02 > .tail > .body > .image-container img {
+  width: 100%;
+}
+
 .main .tab-container .content .tips-container .button-container .button02 > .tail > .body > .image-container + .image-container {
   padding-top: 15px;
   padding-left: 4px;
@@ -1539,6 +1574,10 @@ body > .wrapper {
 .main .tab-container .content .price-container .image-container-wrapper {
   margin-top: 33px;
   text-align: center;
+}
+
+.main .tab-container .content .price-container .image-container-wrapper img {
+  width: 100%;
 }
 
 .main .tab-container .content .price-container .image-container-wrapper .image-container::before {
@@ -1589,9 +1628,13 @@ body > .wrapper {
 }
 
 .main .tab-container .content .price-container .table-container {
-  margin-top: 81px;
+  margin-top: 82px;
   padding-left: 29px;
   padding-right: 32px;
+}
+
+.main .tab-container .content .price-container .table-container img {
+  width: 100%;
 }
 
 .main .tab-container .content .price-container .table-container table thead {
@@ -1732,10 +1775,17 @@ body > .wrapper {
 
 .main .tab-container .content .else-container .image-container-wrapper {
   margin-top: 44px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.main .tab-container .content .else-container .image-container-wrapper img {
+  display: block;
+  width: 100%;
 }
 
 .main .tab-container .content .else-container .button-container {
-  margin-top: 63px;
+  margin-top: 66px;
 }
 
 .main .tab-container .content .else-container .button-container button {
@@ -1968,6 +2018,12 @@ body > .wrapper {
 .footer .wrapper {
   position: relative;
   padding-left: 165px;
+}
+
+.footer .wrapper::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .footer img {
@@ -2312,7 +2368,6 @@ table td {
   .main {
     padding-left: 0;
     padding-right: 0;
-    width: 1000px;
   }
 }
 
