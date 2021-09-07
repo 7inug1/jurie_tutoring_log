@@ -1231,6 +1231,7 @@ body > .wrapper {
   position: relative;
   padding-left: 46px;
   padding-top: 6px;
+  padding-bottom: 48px;
   background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') -11px -4px no-repeat;
 }
 
@@ -1248,23 +1249,13 @@ body > .wrapper {
 .main .tab-container .content .checkpoint-container .body .left {
   position: relative;
   padding-right: 13px;
-}
-
-.main .tab-container .content .checkpoint-container .body .left::after {
-  content: '';
-  background: url('../images/main/tab-container/checkpoint-container/body/WWW-background.png');
-  position: absolute;
-  bottom: 30px;
-  right: -177px;
-  width: 293px;
-  height: 154px;
-  z-index: 1;
+  /* background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') 0px 0px no-repeat; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left > ul {
   position: relative;
   margin-top: 13px;
-  padding-bottom: 48px;
+  /* padding-bottom: 48px; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left ul li {
@@ -1301,20 +1292,32 @@ body > .wrapper {
   margin-top: 4px;
 }
 
-.main .tab-container .content .checkpoint-container .body .right::before {
+.main .tab-container .content .checkpoint-container .body .left::after {
   content: '';
   position: absolute;
   top: -14px;
-  left: 0;
+  right: -39px;
   background: url('../images/main/tab-container/checkpoint-container/body/vertical-divider.png') no-repeat;
   width: 35px;
   height: 375px;
+}
+
+.main .tab-container .content .checkpoint-container .body .right::before {
+  content: '';
+  /* background: url('../images/main/tab-container/checkpoint-container/body/WWW-background.png'); */
+  position: absolute;
+  bottom: 30px;
+  left: -177px;
+  width: 293px;
+  height: 154px;
+  z-index: 1;
 }
 
 .main .tab-container .content .checkpoint-container .body .right {
   position: relative;
   padding-left: 45px;
   vertical-align: top;
+  background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') 0px 0px no-repeat;
 }
 
 .main .tab-container .content .checkpoint-container .body .left > ul,
@@ -1369,11 +1372,17 @@ body > .wrapper {
   height: 133px;
 }
 
+.main .tab-container .content .tips-container ul {
+  font-size: 0;
+}
+
 .main .tab-container .content .tips-container ul li {
   position: relative;
-  float: left;
+  display: inline-block;
+  /* float: left; */
   width: 164px;
   padding-top: 105px;
+  vertical-align: top;
 }
 
 .main .tab-container .content .tips-container ul .step-one::after,
@@ -2022,7 +2031,7 @@ body > .wrapper {
   width: 100%;
   border-top: 3px solid #d9d9d9;
   margin-top: 102px;
-  /* padding-left: 169px; */
+  padding-left: 169px;
   padding-bottom: 120px;
   background: #e8e8e8;
 }
@@ -2032,26 +2041,14 @@ body > .wrapper {
   padding-left: 165px;
 }
 
-.footer .wrapper::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .footer img {
   display: block;
 }
 
-.footer .left,
-.footer .right {
-  float: left;
-}
-
 .footer .left {
-  /* display: inline-block; */
-  /* position: absolute;
+  position: absolute;
   top: 54px;
-  left: -14px; */
+  left: -14px;
 }
 
 .footer .right::before {
@@ -2065,10 +2062,9 @@ body > .wrapper {
 }
 
 .footer .right {
-  /* display: inline-block; */
   position: relative;
   padding-left: 25px;
-  /* padding-top: 44px; */
+  padding-top: 44px;
 }
 
 .footer .right .utility {
@@ -2383,8 +2379,142 @@ table td {
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
-  body {
-    /* background: red; */
+@media only screen and (max-width: 1000px) {
+  .main .tab-container .content .price-container .text-container div + div img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wrapper > .header .utility {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .wrapper > .header .utility > li + li {
+    display: none;
+  }
+
+  .main .tab-container .content .else-container .title div:first-of-type img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main .main-banner .price-section .right::before {
+    display: none;
+  }
+
+  .main .main-banner .price-section {
+    text-align: center;
+  }
+
+  .main .main-banner .price-section .left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main .main-banner .price-section > .left > strong {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+  }
+
+  .main .main-banner {
+    padding-bottom: 10px;
+  }
+
+  .main .main-banner .price-section .left strong img {
+    width: 100%;
+  }
+
+  .main .main-banner .price-section .right {
+    padding-left: 0px;
+  }
+
+  .main .main-banner .price-section .right .button01 .body img {
+    width: 100%;
+  }
+
+  .main .main-banner .phrase-section .text-section > h2 img,
+  .main .main-banner .phrase-section .text-section > p img {
+    width: 100%;
+  }
+
+  .main .main-banner .phrase-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images/main/main-banner/phrase-section/gray-panel.png');
+    width: 100%;
+    height: auto;
+  }
+
+  .main .tab-container .content .checkpoint-container .body .left::after {
+    display: none;
+  }
+
+  /* footer */
+  .footer {
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer .wrapper {
+    padding-left: 0;
+  }
+
+  .footer .right::before {
+    /* content: ''; */
+    display: none;
+  }
+
+  .footer .left,
+  .footer .right {
+    float: none;
+  }
+
+  .footer .left {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .footer .right::before {
+    display: none;
+  }
+
+  .footer .right {
+    padding: 0;
+  }
+
+  .footer .right .utility li:not(:first-of-type)::before {
+    display: none;
+  }
+
+  .footer .right .utility li:not(:first-of-type) {
+    margin-left: 0;
+  }
+
+  .footer .right .utility li {
+    float: none;
+  }
+
+  .footer .right .copyright-contents .information .title:not(:first-of-type),
+  .footer .right .copyright-contents .cs .title:not(:first-of-type) {
+    margin-left: 14px;
+  }
+
+  .footer .right .copyright-contents .title {
+    position: relative;
+    font-weight: bolder;
+    color: #616161;
+  }
+
+  .footer .right .copyright-contents .copyright-liability {
+    margin-top: 10px;
   }
 }
