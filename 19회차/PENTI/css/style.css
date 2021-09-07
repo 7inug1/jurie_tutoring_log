@@ -455,10 +455,6 @@ body > .wrapper {
   position: relative;
 }
 
-.main .menu-bar img {
-  width: 100%;
-}
-
 .main .menu-bar .notification .title,
 .main .menu-bar .notification .content {
   display: inline-block;
@@ -1116,6 +1112,11 @@ body > .wrapper {
   padding-bottom: 35px;
 }
 
+.main .tab-container .content .checkpoint-container .header img {
+  width: 100%;
+  height: auto;
+}
+
 .main .tab-container .content .checkpoint-container .header .title {
   display: inline-block;
   position: absolute;
@@ -1235,6 +1236,8 @@ body > .wrapper {
 
 .main .tab-container .content .checkpoint-container .body img {
   display: block;
+  /* width: 100%;
+  height: auto; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left,
@@ -1554,6 +1557,7 @@ body > .wrapper {
   margin-top: 10px;
   padding-top: 40px;
   background: #272524;
+  padding-bottom: 46px;
 }
 
 .main .tab-container .content .price-container > .title {
@@ -1615,6 +1619,11 @@ body > .wrapper {
   position: relative;
 }
 
+.main .tab-container .content .price-container .text-container strong img {
+  max-width: 100%;
+  height: auto;
+}
+
 .main .tab-container .content .price-container .text-container img {
   display: inline-block;
 }
@@ -1628,13 +1637,16 @@ body > .wrapper {
 }
 
 .main .tab-container .content .price-container .table-container {
-  margin-top: 82px;
-  padding-left: 29px;
-  padding-right: 32px;
+  margin-top: 83px;
+  /* padding-left: 34px;
+  padding-right: 32px; */
+  text-align: center;
+  padding-left: 8px;
 }
 
 .main .tab-container .content .price-container .table-container img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .main .tab-container .content .price-container .table-container table thead {
