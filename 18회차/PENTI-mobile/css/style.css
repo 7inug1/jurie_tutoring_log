@@ -999,8 +999,8 @@ padding-bottom: 10px; */
   color: #ffffff;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li  .writer-wrapper .writer::after,
-.main .tab-container .content .comment-container .content > .comments-section > .administrator  .writer-wrapper .writer::after {
+.main .tab-container .content .comment-container .content > .comments-section > li .writer-wrapper .writer::after,
+.main .tab-container .content .comment-container .content > .comments-section > .administrator .writer-wrapper .writer::after {
   content: '';
   position: absolute;
   bottom: 20px;

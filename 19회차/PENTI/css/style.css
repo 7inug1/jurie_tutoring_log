@@ -327,7 +327,8 @@ body > .wrapper {
 ####### ### #    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
 */
 
-.main .navigation-container.mobile {
+.main .navigation-container.mobile,
+.main .navigation-list.mobile {
   display: none;
 }
 
@@ -945,8 +946,8 @@ body > .wrapper {
   border-bottom: 1px solid #f1f1f1;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .writer,
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper .writer,
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment {
   font-size: 12px;
   font-family: 'dotum', sans-serif;
   line-height: 18px;
@@ -961,7 +962,7 @@ body > .wrapper {
   color: #a1a1a1;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .writer {
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper .writer {
   display: inline-block;
   position: absolute;
   top: 20px;
@@ -974,13 +975,13 @@ body > .wrapper {
   vertical-align: top;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer-wrapper .writer {
   background: #800aef;
   color: #ffffff;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .writer::after,
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer::after {
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper .writer::after,
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer-wrapper .writer::after {
   content: '';
   position: absolute;
   bottom: 20px;
@@ -989,21 +990,21 @@ body > .wrapper {
   height: 8px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .writer::after {
+.main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper .writer::after {
   background: url('../images/main/tab-container/comment-container/content/comments-section/grey-comment_right-tail.png');
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer::after {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer-wrapper .writer::after {
   background: url('../images/main/tab-container/comment-container/content/comments-section/purple-comment_right-tail.png');
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment,
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment,
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment {
   box-sizing: border-box;
   width: 742px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment::before {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -1013,61 +1014,61 @@ body > .wrapper {
   background: url('../images/main/tab-container/comment-container/content/comments-section/grey-comment_left-tail.png');
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment {
   position: relative;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment {
   padding: 17px 19px 15px 19px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .reply-delete-button img {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .reply-delete-button img {
   display: block;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .reply-delete-button {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .reply-delete-button {
   position: relative;
   top: 2px;
   left: 2px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > p:last-of-type {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > p:last-of-type {
   display: inline-block;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment > .title {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment > .title {
   color: #800aef;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment > .content {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment > .content {
   margin-top: 12px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .date {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .date {
   margin-top: 12px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .button-container {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .button-container {
   margin-top: 15px;
   padding-left: 1px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .button-container button {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .button-container button {
   padding: 3px 7px 4px 16px;
   border-radius: 2px;
   background: url('../images/main/tab-container/comment-container/content/comments-section/button_arrow.png') 6px 8px no-repeat #8511f2;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .button-container img {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .button-container img {
   display: block;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies {
   margin-top: 5px;
   padding-left: 38px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li::before {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li::before {
   content: '';
   position: absolute;
   top: 3px;
@@ -1077,28 +1078,33 @@ body > .wrapper {
   height: 9px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .date {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .date {
   padding-left: 2px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .content {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .content {
+  display: inline-block;
   margin-top: 4px;
 }
-
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .content .reply-delete-button {
+  position: relative;
+  top: 2px;
+  right: 0px;
+}
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li {
   position: relative;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment > .content > .date {
+.main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment > .content > .date {
   margin-top: 13px;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .writer,
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment > .content > .replies li .date {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .writer,
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .date {
   display: inline-block;
 }
 
-.main .tab-container .content .comment-container .content > .comments-section > li > .comment {
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment {
   display: inline-block;
   padding: 18px 19px 16px 19px;
   background: #e8e8e8;
@@ -2386,23 +2392,19 @@ table td {
 }
 
 @media only screen and (max-width: 1000px) {
-  .main .tab-container .content .price-container .text-container div + div img {
-    max-width: 100%;
-    height: auto;
-  }
-
   .button00.noncurrent > .tail > .body {
-    width: calc(100vw - 21px);
+    width: calc(100vw - 4px);
   }
 
   .button00.current > .tail > .body {
-    width: calc(100vw - 17px);
+    width: 100vw;
   }
 
-  .main .subnavigation {
-    text-align: center;
+  .main {
+    margin-top: 10px;
   }
 
+  /* utility */
   .wrapper > .header .utility {
     position: relative;
     top: 0;
@@ -2410,28 +2412,19 @@ table td {
     text-align: center;
   }
 
+  .wrapper > .header .utility > li {
+    padding: 0;
+  }
+
+  .wrapper > .header .utility > li > a {
+    font-size: 12px;
+  }
+
   .wrapper > .header .utility > li + li {
     display: none;
   }
 
-  .wrapper > .header .utility > li {
-    /* padding: 0; */
-  }
-
-  .main {
-    margin-top: 10px;
-  }
-
-  .main .tab-container .content .else-container .title div:first-of-type img {
-    width: 100%;
-    height: auto;
-  }
-
-  .main .tab-container .content .checkpoint-container .body {
-    padding-left: 0;
-    text-align: center;
-  }
-
+  /* navigation */
   .main .navigation.desktop,
   .main .subnavigation.desktop {
     display: none;
@@ -2443,27 +2436,42 @@ table td {
   }
 
   .main .navigation-list.mobile {
+    display: block;
     margin-top: 10px;
+  }
+
+  .main .navigation-list.mobile .subnavigation {
+    display: none;
+  }
+
+  .main .navigation-list.mobile .subnavigation.active {
+    display: block;
+  }
+
+  .main .navigation-list.mobile .subnavigation.active li ul {
+    display: none;
+  }
+
+  .main .navigation-list.mobile .subnavigation.active li .active {
+    display: block;
   }
 
   .main .navigation.mobile::before {
     content: '';
     position: absolute;
     top: 5px;
-    left: 4px;
+    left: 7px;
     width: 30px;
     height: 4px;
     border-radius: 5px;
     background: #fff;
   }
-  .wrapper > .header .utility > li {
-    padding: 0;
-  }
+
   .main .navigation.mobile {
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 38px;
+    width: 43px;
     height: 30px;
     font-size: 0;
     border-radius: 4px;
@@ -2474,7 +2482,7 @@ table td {
   .main .navigation.mobile > span {
     position: absolute;
     top: 50%;
-    left: 4px;
+    left: 7px;
     margin-top: -2px;
     width: 30px;
     height: 4px;
@@ -2486,22 +2494,74 @@ table td {
     content: '';
     position: absolute;
     bottom: 5px;
-    left: 4px;
+    left: 7px;
     width: 30px;
     height: 4px;
     border-radius: 5px;
     background: #fff;
   }
 
+  .main .subnavigation.active {
+    display: block;
+  }
+
+  .main .subnavigation {
+    text-align: center;
+  }
+
+  .main .subnavigation > li {
+    display: block;
+    padding: 10px 0 10px 0;
+  }
+
+  /* menu-bar */
+  .main .menu-bar {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .main .menu-bar .notification {
+    padding-left: 0;
+    padding-top: 0px;
+  }
+
+  .main .menu-bar .utility {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .main .menu-bar .utility li::before {
+    display: none;
+  }
+
+  .main .menu-bar .utility li {
+    display: block;
+  }
+
+  .main .menu-bar .utility > li:not(:first-of-type) {
+    /* display: inline-block; */
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .main .menu-bar .utility > li .title {
+    display: inline-block;
+  }
+
+  /* main-banner */
   .main .main-banner .price-section .right::before {
     display: none;
   }
 
   .main .main-banner .price-section {
+    margin-top: 10px;
     text-align: center;
   }
 
   .main .main-banner .price-section .left {
+    display: block;
     padding-left: 0;
     padding-right: 0;
   }
@@ -2522,6 +2582,7 @@ table td {
   }
 
   .main .main-banner .price-section .right {
+    /* display: block; */
     padding-left: 0px;
   }
 
@@ -2544,9 +2605,104 @@ table td {
     height: auto;
   }
 
+  /* tabs */
+  .main .tab-container .tabs {
+    padding: 0;
+  }
+
+  .main .tab-container .tabs button {
+    width: 100vw;
+  }
+
+  .main .tab-container .tabs button:not(:first-of-type) {
+    margin-top: 2px;
+    margin-left: 0;
+  }
+
+  /* 1. checkpoint container */
+  .main .tab-container .content .checkpoint-container .header {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .main .tab-container .content .checkpoint-container .header .title {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .main .tab-container .content .checkpoint-container .body {
+    text-align: center;
+  }
+
+  .main .tab-container .content .checkpoint-container .body .left {
+    padding-right: 0;
+  }
+
+  .main .tab-container .content .checkpoint-container .body .right {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  /* 2. tips-container */
+  .main .tab-container .content .tips-container {
+    text-align: center;
+  }
+
+  .main .tab-container .content .tips-container .title {
+    padding-left: 0;
+  }
+
+  .main .tab-container .content .tips-container .title img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main .tab-container .content .tips-container ul li:not(:first-of-type) {
+    margin-top: 30px;
+  }
+
+  /* 3. price-container */
+  .main .tab-container .content .price-container .text-container strong::before {
+    display: none;
+  }
+
+  .main .tab-container .content .price-container > .title > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main .tab-container .content .price-container .text-container div + div img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main .tab-container .content .price-container > .title > span {
+    padding-left: 0;
+  }
+
+  .main .tab-container .content .price-container > .title > span img {
+  }
+
+  /* 4. else-container */
+  .main .tab-container .content .else-container .title div:first-of-type img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main .tab-container .content .checkpoint-container .body {
+    padding-left: 0;
+    text-align: center;
+  }
+
   .main .tab-container .content .checkpoint-container .body .left::after {
     display: none;
   }
+
+  /* .main .tab-container .content .checkpoint-container .body .left ul img {
+    width: 100%;
+    height: auto;
+  } */
 
   /* footer */
   .footer {
@@ -2608,5 +2764,106 @@ table td {
 
   .footer .right .copyright-contents .copyright-liability {
     margin-top: 10px;
+  }
+
+  /* index2 */
+
+  .main .tab-container .content .comment-container .title {
+    text-align: center;
+  }
+  .main .tab-container .content .comment-container .title p img {
+    width: 100%;
+    height: auto;
+  }
+  .main .tab-container .content .comment-container .content .comment-writing-section {
+    padding-left: 20px;
+    text-align: right;
+  }
+  .main .tab-container .content .comment-container .content .comment-writing-section .textarea00 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .main .tab-container .content .comment-container .content .comment-writing-section .comment-submit-button {
+    width: 100%;
+    margin-top: 10px;
+    background: url('../images/main/tab-container/comment-container/content/comment-writing-section/button_background.png') repeat-x;
+  }
+
+  .main .tab-container .content .comment-container .content .comment-writing-section .comment-submit-button img {
+    display: inline-block;
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > li {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > li .writer-wrapper {
+    padding-right: 40px;
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > li .comment-wrapper {
+    padding-left: 40px;
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > li .writer-wrapper .writer {
+    position: relative;
+    width: 100%;
+  }
+  .main .tab-container .content .comment-container .content > .comments-section > li .writer {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .main .tab-container .content .comment-container .content > .comments-section > li .writer-wrapper .writer {
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment,
+  .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > .administrator .comment-wrapper .comment,
+  .main .tab-container .content .comment-container .content > .comments-section > li .comment-wrapper .comment {
+    /* box-sizing: border-box; */
+  }
+
+  .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .content {
+    display: inline-block;
+  }
+
+  /* .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .content .reply-delete-button {
+    position: relative;
+    top: 2px;
+    right: 0px;
+  } */
+}
+
+@media only screen and (max-width: 424px) {
+  /* body {
+    background: red;
+  } */
+
+  .main .tab-container .content .checkpoint-container .body .left ul .list-one ul li:nth-of-type(2) img,
+  .main .tab-container .content .checkpoint-container .body .left ul .list-two ul li:first-of-type img,
+  .main .tab-container .content .checkpoint-container .body .left ul .list-two ul li:nth-of-type(3) img,
+  .main .tab-container .content .checkpoint-container .body .left ul .list-two ul li:nth-of-type(4) img,
+  .main .tab-container .content .checkpoint-container .body .left ul .list-three p img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main .tab-container .content .checkpoint-container .body .right .paragraph-container p:first-of-type img,
+  .main .tab-container .content .checkpoint-container .body .right .paragraph-container p:nth-of-type(3) img,
+  .main .tab-container .content .checkpoint-container .body .right .paragraph-container p:nth-of-type(5) img,
+  .main .tab-container .content .checkpoint-container .body .right .paragraph-container strong img {
+    width: 100%;
+    height: auto;
   }
 }
