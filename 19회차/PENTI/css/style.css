@@ -327,6 +327,10 @@ body > .wrapper {
 ####### ### #    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
 */
 
+.main .navigation-container.mobile {
+  display: none;
+}
+
 .main .navigation {
   /* display: inline-block; */
   position: relative;
@@ -1107,9 +1111,11 @@ body > .wrapper {
 
 .main .tab-container .content .checkpoint-container .header {
   position: relative;
-  padding-left: 268px;
-  padding-top: 70px;
-  padding-bottom: 35px;
+  padding-left: 254px;
+  padding-top: 12px;
+  /* padding-top: 70px; */
+  padding-bottom: 31px;
+  /* text-align: center; */
 }
 
 .main .tab-container .content .checkpoint-container .header img {
@@ -2385,6 +2391,18 @@ table td {
     height: auto;
   }
 
+  .button00.noncurrent > .tail > .body {
+    width: calc(100vw - 21px);
+  }
+
+  .button00.current > .tail > .body {
+    width: calc(100vw - 17px);
+  }
+
+  .main .subnavigation {
+    text-align: center;
+  }
+
   .wrapper > .header .utility {
     position: relative;
     top: 0;
@@ -2396,9 +2414,83 @@ table td {
     display: none;
   }
 
+  .wrapper > .header .utility > li {
+    /* padding: 0; */
+  }
+
+  .main {
+    margin-top: 10px;
+  }
+
   .main .tab-container .content .else-container .title div:first-of-type img {
     width: 100%;
     height: auto;
+  }
+
+  .main .tab-container .content .checkpoint-container .body {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .main .navigation.desktop,
+  .main .subnavigation.desktop {
+    display: none;
+  }
+
+  .main .navigation-container.mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .main .navigation-list.mobile {
+    margin-top: 10px;
+  }
+
+  .main .navigation.mobile::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .wrapper > .header .utility > li {
+    padding: 0;
+  }
+  .main .navigation.mobile {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 38px;
+    height: 30px;
+    font-size: 0;
+    border-radius: 4px;
+    background: #7806e3;
+    z-index: 1;
+  }
+
+  .main .navigation.mobile > span {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -2px;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff;
+  }
+
+  .main .navigation.mobile::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 4px;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff;
   }
 
   .main .main-banner .price-section .right::before {
