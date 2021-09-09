@@ -243,14 +243,11 @@ body {
 }
 
 body {
-  /* width: 1266px; */
-  /* margin: 0 auto; */
   background-color: #f1f1f1;
 }
 
 body > .wrapper {
   background: url('../images/header/title/background.png') no-repeat;
-
   background-position: top -14px right -318px;
 }
 
@@ -322,7 +319,6 @@ body > .wrapper {
   max-width: 1000px;
   padding-left: 127px;
   padding-right: 122px;
-  /* text-align: center; */
   margin: 0 auto;
 }
 
@@ -342,7 +338,6 @@ body > .wrapper {
 }
 
 .main .navigation {
-  /* display: inline-block; */
   position: relative;
   margin-top: 18px;
   padding-left: 127px;
@@ -384,8 +379,7 @@ body > .wrapper {
 }
 
 .main .subnavigation {
-  /* position: absolute;
-  left: 0; */
+  left: 0;
   background: #272524;
   border-top: 6px solid #8009ef;
 }
@@ -408,9 +402,6 @@ body > .wrapper {
 
 .main .subnavigation > li > ul {
   padding-top: 9px;
-}
-
-.main .subnavigation > li > ul > li {
 }
 
 .main .subnavigation > li > ul > li > a {
@@ -449,23 +440,7 @@ body > .wrapper {
   position: absolute;
   top: 0;
   right: 0;
-  /* display: inline-block; */
 }
-
-/* .main .subnavigation > li > ul > li > .icon_n {
-  padding-right: 16px;
-  background: url('../image/subnavigation/icon_N.png') right no-repeat;
-}
-
-.main .subnavigation > li > ul > li > .icon_r {
-  padding-right: 15px;
-  background: url('../image/subnavigation/icon_R.png') right no-repeat;
-}
-
-.main .subnavigation > li > ul > li > .icon_rn {
-  padding-right: 29px;
-  background: url('../image/subnavigation/icon_RN.png') right no-repeat;
-} */
 
 /* 
 #                                                                  
@@ -488,7 +463,6 @@ body > .wrapper {
 
 .main .menu-bar .notification .content {
   position: relative;
-  /* top: 2px; */
   margin-left: 1px;
   padding-top: 2px;
   vertical-align: top;
@@ -544,12 +518,6 @@ body > .wrapper {
   padding-top: 20px;
   padding-bottom: 15px;
   padding-left: 16px;
-}
-
-.main .menu-bar .notification .title {
-  /* position: absolute;
-  top: 20px;
-  left: 16px; */
 }
 
 .main .menu-bar .utility .recommend-to-friend > .title {
@@ -717,10 +685,6 @@ body > .wrapper {
   position: absolute;
   left: 3px;
   top: 4px;
-  /* position: relative; */
-  /* top: 7px; */
-  /* padding-left: 4px;
-  padding-top: 7px; */
   font-family: 'tahoma', sans-serif;
   font-size: 14px;
   color: #ffffff;
@@ -736,20 +700,6 @@ body > .wrapper {
   display: inline-block;
 }
 
-/* .main .main-banner .phrase-section .timer div:not(:first-of-type)::before {
-  content: '';
-  position: absolute;
-  background: url('../images/main/main-banner/phrase-section/timer-dots.png');
-  width: 6px;
-  height: 24px;
-  top: 0;
-  left: -10px;
-} */
-
-/* .main .main-banner .phrase-section .timer div:not(:first-of-type) {
-  margin-left: 10px;
-} */
-
 .main .main-banner .price-section {
   position: relative;
 }
@@ -758,17 +708,40 @@ body > .wrapper {
   display: block;
 }
 
+.main .main-banner .price-section .right .currently-sold img {
+  display: inline-block;
+}
+
+.main .main-banner .price-section .right .currently-sold .number {
+  position: relative;
+  top: 3px;
+  color: #8009ef;
+  font-family: 'gulim', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 24px;
+  letter-spacing: -1.3px;
+  vertical-align: top;
+}
+
 .main .main-banner .price-section .left {
   display: inline-block;
+  padding-top: 2px;
   padding-left: 304px;
   padding-right: 81px;
   padding-bottom: 10px;
 }
 
-.main .main-banner .price-section .left strong {
+.main .main-banner .price-section .left .percentage {
+  font-family: 'dinbol', sans-serif;
+  font-size: 120px;
+  letter-spacing: -0.5px;
+  color: #000000;
+  text-shadow: 3px 5px 1px #dbdbdb;
+  vertical-align: top;
   position: absolute;
-  top: 24px;
-  left: 40px;
+  top: 6px;
+  left: 21px;
 }
 
 .main .main-banner .price-section .left .price {
@@ -821,8 +794,8 @@ body > .wrapper {
   content: '';
   background: url('../images/main/main-banner/price-section/divider.png');
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: -39px;
   width: 58px;
   height: 133px;
 }
@@ -830,7 +803,7 @@ body > .wrapper {
 .main .main-banner .price-section .right {
   display: inline-block;
   position: relative;
-  padding-left: 64px;
+  padding-left: 25px;
   padding-top: 12px;
   box-sizing: border-box;
   vertical-align: top;
@@ -849,7 +822,7 @@ body > .wrapper {
 }
 
 .main .main-banner .price-section .right .button01 {
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .main .main-banner .price-section .right .button01 > .tail > .body {
@@ -963,7 +936,6 @@ body > .wrapper {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  /* padding-left: 212px; */
   border-bottom: 1px solid #f1f1f1;
 }
 
@@ -991,13 +963,9 @@ body > .wrapper {
   background: #e8e8e8;
   box-sizing: border-box;
   word-break: break-all;
-  /* vertical-align: top; */
 }
 
 .main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper {
-  /* position: absolute;
-  top: 20px;
-  left: 0; */
   display: inline-block;
   width: 170px;
   margin-right: 38px;
@@ -1152,9 +1120,7 @@ body > .wrapper {
   position: relative;
   padding-left: 254px;
   padding-top: 12px;
-  /* padding-top: 70px; */
   padding-bottom: 31px;
-  /* text-align: center; */
 }
 
 .main .tab-container .content .checkpoint-container .header img {
@@ -1163,7 +1129,6 @@ body > .wrapper {
 }
 
 .main .tab-container .content .checkpoint-container .header .title {
-  display: inline-block;
   position: absolute;
   top: 35px;
   left: 47px;
@@ -1282,8 +1247,6 @@ body > .wrapper {
 
 .main .tab-container .content .checkpoint-container .body img {
   display: block;
-  /* width: 100%;
-  height: auto; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left,
@@ -1294,13 +1257,11 @@ body > .wrapper {
 .main .tab-container .content .checkpoint-container .body .left {
   position: relative;
   padding-right: 13px;
-  /* background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') 0px 0px no-repeat; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left > ul {
   position: relative;
   margin-top: 13px;
-  /* padding-bottom: 48px; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left ul li {
@@ -1349,7 +1310,6 @@ body > .wrapper {
 
 .main .tab-container .content .checkpoint-container .body .right::before {
   content: '';
-  /* background: url('../images/main/tab-container/checkpoint-container/body/WWW-background.png'); */
   position: absolute;
   bottom: 30px;
   left: -177px;
@@ -1424,7 +1384,6 @@ body > .wrapper {
 .main .tab-container .content .tips-container ul li {
   position: relative;
   display: inline-block;
-  /* float: left; */
   width: 164px;
   padding-top: 105px;
   vertical-align: top;
@@ -1692,8 +1651,6 @@ body > .wrapper {
 
 .main .tab-container .content .price-container .table-container {
   margin-top: 83px;
-  /* padding-left: 34px;
-  padding-right: 32px; */
   text-align: center;
   padding-left: 8px;
 }
@@ -2426,7 +2383,6 @@ table td {
 
 @media only screen and (max-width: 1000px) {
   .button00.noncurrent > .tail > .body {
-    /* width: calc(100vw - 4px); */
     width: 100%;
   }
 
@@ -2435,9 +2391,6 @@ table td {
   .button00.noncurrent > .tail > .body {
     display: block;
   }
-  /* .button00.current > .tail > .body {
-    width: 100vw;
-  } */
 
   .main {
     margin-top: 10px;
@@ -2588,7 +2541,6 @@ table td {
   }
 
   .main .menu-bar .utility > li:not(:first-of-type) {
-    /* display: inline-block; */
     margin-left: 0;
     margin-top: 10px;
   }
@@ -2613,7 +2565,7 @@ table td {
     padding-right: 0;
   }
 
-  .main .main-banner .price-section > .left > strong {
+  .main .main-banner .price-section > .left > .percentage {
     position: relative;
     top: 0;
     left: 0;
@@ -2629,7 +2581,6 @@ table td {
   }
 
   .main .main-banner .price-section .right {
-    /* display: block; */
     padding-left: 0px;
   }
 
@@ -2728,9 +2679,6 @@ table td {
     padding-left: 0;
   }
 
-  .main .tab-container .content .price-container > .title > span img {
-  }
-
   /* 4. else-container */
   .main .tab-container .content .else-container .title div:first-of-type img {
     width: 100%;
@@ -2762,7 +2710,6 @@ table td {
   }
 
   .footer .right::before {
-    /* content: ''; */
     display: none;
   }
 
@@ -2814,7 +2761,6 @@ table td {
   }
 
   /* index2 */
-
   .main .tab-container .content .comment-container .title {
     text-align: center;
   }
@@ -2864,18 +2810,11 @@ table td {
     padding-left: 40px;
   }
 
-  .main .tab-container .content .comment-container .content > .comments-section > li .writer-wrapper {
-  }
   .main .tab-container .content .comment-container .content > .comments-section > li .writer {
     position: relative;
     top: 0;
     left: 0;
   }
-  .main .tab-container .content .comment-container .content > .comments-section > li .writer-wrapper .writer {
-  }
-
-  /* .main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment,
-  .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment */
 
   .main .tab-container .content .comment-container .content > .comments-section > .administrator > .comment-wrapper .comment,
   .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment {
@@ -2883,27 +2822,12 @@ table td {
     margin-top: 15px;
   }
 
-  .main .tab-container .content .comment-container .content > .comments-section > .administrator .comment-wrapper .comment,
-  .main .tab-container .content .comment-container .content > .comments-section > li .comment-wrapper .comment {
-    /* box-sizing: border-box; */
-  }
-
   .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .content {
     display: inline-block;
   }
-
-  /* .main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper .comment > .content > .replies li .content .reply-delete-button {
-    position: relative;
-    top: 2px;
-    right: 0px;
-  } */
 }
 
 @media only screen and (max-width: 424px) {
-  /* body {
-    background: red;
-  } */
-
   .main .tab-container .content .checkpoint-container .body .left ul .list-one ul li:nth-of-type(2) img,
   .main .tab-container .content .checkpoint-container .body .left ul .list-two ul li:first-of-type img,
   .main .tab-container .content .checkpoint-container .body .left ul .list-two ul li:nth-of-type(3) img,
