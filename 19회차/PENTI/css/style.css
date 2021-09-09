@@ -32,7 +32,9 @@
 }
 
 .button00 {
+  display: block;
   position: relative;
+  width: 100%;
 }
 
 .button00.noncurrent {
@@ -240,9 +242,16 @@ body {
   background: #f1f1f1;
 }
 
-body > .wrapper {
+body {
   /* width: 1266px; */
   /* margin: 0 auto; */
+  background-color: #f1f1f1;
+}
+
+body > .wrapper {
+  background: url('../images/header/title/background.png') no-repeat;
+
+  background-position: top -14px right -318px;
 }
 
 /* 
@@ -346,6 +355,7 @@ body > .wrapper {
 }
 
 .main .navigation > li {
+  position: relative;
   float: left;
   margin-right: 3px;
   vertical-align: top;
@@ -356,9 +366,21 @@ body > .wrapper {
   position: absolute;
   top: -19px;
   left: 32px;
-  background: url('../images/header/navigation/choongchung-jeolla_number.png');
+  background: url('../images/header/navigation/number-bubble.png');
   width: 43px;
   height: 33px;
+}
+
+.main .navigation > li .button00 .number {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: #ffffff;
+  font-family: 'dotum', sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  line-height: 18px;
 }
 
 .main .subnavigation {
@@ -376,7 +398,6 @@ body > .wrapper {
 
 .main .subnavigation > li {
   display: inline-block;
-  /* float: left; */
   padding-left: 9px;
   padding-right: 74px;
   padding-top: 20px;
@@ -942,7 +963,7 @@ body > .wrapper {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 212px;
+  /* padding-left: 212px; */
   border-bottom: 1px solid #f1f1f1;
 }
 
@@ -964,18 +985,27 @@ body > .wrapper {
 
 .main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper .writer {
   display: block;
-  padding: 25px 0 26px 21px;
+  position: relative;
+  padding: 25px 21px 26px 21px;
   color: #000000;
   background: #e8e8e8;
   box-sizing: border-box;
-  vertical-align: top;
+  word-break: break-all;
+  /* vertical-align: top; */
 }
 
 .main .tab-container .content .comment-container .content > .comments-section > li > .writer-wrapper {
-  position: absolute;
+  /* position: absolute;
   top: 20px;
-  left: 0;
+  left: 0; */
+  display: inline-block;
   width: 170px;
+  margin-right: 38px;
+  vertical-align: top;
+}
+
+.main .tab-container .content .comment-container .content > .comments-section > li > .comment-wrapper {
+  display: inline-block;
 }
 
 .main .tab-container .content .comment-container .content > .comments-section > .administrator > .writer-wrapper .writer {
@@ -2396,12 +2426,18 @@ table td {
 
 @media only screen and (max-width: 1000px) {
   .button00.noncurrent > .tail > .body {
-    width: calc(100vw - 4px);
+    /* width: calc(100vw - 4px); */
+    width: 100%;
   }
 
-  .button00.current > .tail > .body {
-    width: 100vw;
+  .button00.noncurrent,
+  .button00.noncurrent > .tail,
+  .button00.noncurrent > .tail > .body {
+    display: block;
   }
+  /* .button00.current > .tail > .body {
+    width: 100vw;
+  } */
 
   .main {
     margin-top: 10px;
@@ -2413,6 +2449,10 @@ table td {
     top: 0;
     left: 0;
     text-align: center;
+  }
+
+  .wrapper > .header .utility {
+    margin: 15px 0 20px 0;
   }
 
   .wrapper > .header .utility > li {
@@ -2529,6 +2569,10 @@ table td {
     padding-top: 0px;
   }
 
+  .main .menu-bar .notification .content a {
+    font-size: 12px;
+  }
+
   .main .menu-bar .utility {
     position: relative;
     top: 0;
@@ -2614,7 +2658,7 @@ table td {
   }
 
   .main .tab-container .tabs button {
-    width: 100vw;
+    width: 100%;
   }
 
   .main .tab-container .tabs button:not(:first-of-type) {
@@ -2791,7 +2835,7 @@ table td {
   .main .tab-container .content .comment-container .content .comment-writing-section .comment-submit-button {
     width: 100%;
     margin-top: 10px;
-    background: url('../images/main/tab-container/comment-container/content/comment-writing-section/button_background.png') repeat-x;
+    background: #800aef;
   }
 
   .main .tab-container .content .comment-container .content .comment-writing-section .comment-submit-button img {
@@ -2816,6 +2860,7 @@ table td {
   }
 
   .main .tab-container .content .comment-container .content > .comments-section > li .comment-wrapper {
+    display: block;
     padding-left: 40px;
   }
 
