@@ -247,8 +247,8 @@ body {
 }
 
 body > .wrapper {
-  background: url('../images/header/title/background.png') no-repeat;
-  background-position: top -14px right -318px;
+  background: url('../images/header/title/background.png') no-repeat center -15px;
+  /* background-position: top -14px right -318px; */
 }
 
 /* 
@@ -268,6 +268,14 @@ body > .wrapper {
 .wrapper > .header > .title {
   text-align: center;
   padding-left: 16px;
+}
+
+.wrapper > .header > .title a {
+  display: inline-block;
+}
+
+.wrapper > .header > .title a img {
+  display: block;
 }
 
 /* 
@@ -729,7 +737,7 @@ body > .wrapper {
   padding-top: 2px;
   padding-left: 304px;
   padding-right: 81px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .main .main-banner .price-section .left .percentage {
@@ -749,26 +757,25 @@ body > .wrapper {
 }
 
 .main .main-banner .price-section .left .price .original {
-  position: absolute;
-  top: 19px;
-  left: 62px;
+  display: inline-block;
+  position: relative;
+  padding-left: 69px;
+  padding-top: 25px;
 }
-
-.main .main-banner .price-section .left .price .original,
 .main .main-banner .price-section .left .price .discounted {
   position: relative;
 }
 
-.main .main-banner .price-section .left .price .original .number,
-.main .main-banner .price-section .left .price .discounted .number {
-  display: block;
+.main .main-banner .price-section .left .price .original .number {
+  display: inline-block;
+  position: relative;
 }
 
-.main .main-banner .price-section .left .price .original .number::before {
+.main .main-banner .price-section .left .price .original::before {
   content: '';
   position: absolute;
-  bottom: 2px;
-  left: -99px;
+  bottom: -16px;
+  left: -37px;
   width: 176px;
   height: 34px;
   background: url('../images/main/main-banner/price-section/discount-arrow.png');
@@ -2396,16 +2403,25 @@ table td {
     margin-top: 10px;
   }
 
-  /* utility */
-  .wrapper > .header .utility {
-    position: relative;
-    top: 0;
-    left: 0;
-    text-align: center;
+  .wrapper > .header {
+    padding-top: 8px;
   }
 
+  .wrapper > .header > .title {
+    padding: 0px;
+  }
+
+  .wrapper > .header > .title a img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* utility */
   .wrapper > .header .utility {
-    margin: 15px 0 20px 0;
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    text-align: center;
   }
 
   .wrapper > .header .utility > li {
@@ -2452,22 +2468,25 @@ table td {
     display: block;
   }
 
-  .main .navigation.mobile::before {
+  .header .navigation.mobile::before {
     content: '';
     position: absolute;
     top: 5px;
-    left: 7px;
-    width: 30px;
+    left: 3px;
+    width: 28px;
     height: 4px;
     border-radius: 5px;
     background: #fff;
   }
 
-  .main .navigation.mobile {
+  .header .navigation.mobile {
+    position: absolute;
+    top: 12px;
+    left: 8px;
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 43px;
+    width: 34px;
     height: 30px;
     font-size: 0;
     border-radius: 4px;
@@ -2475,23 +2494,23 @@ table td {
     z-index: 1;
   }
 
-  .main .navigation.mobile > span {
+  .header .navigation.mobile > span {
     position: absolute;
     top: 50%;
-    left: 7px;
+    left: 3px;
     margin-top: -2px;
-    width: 30px;
+    width: 28px;
     height: 4px;
     border-radius: 5px;
     background: #fff;
   }
 
-  .main .navigation.mobile::after {
+  .header .navigation.mobile::after {
     content: '';
     position: absolute;
     bottom: 5px;
-    left: 7px;
-    width: 30px;
+    left: 3px;
+    width: 28px;
     height: 4px;
     border-radius: 5px;
     background: #fff;
