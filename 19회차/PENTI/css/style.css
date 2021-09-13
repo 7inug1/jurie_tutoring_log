@@ -340,31 +340,35 @@ body > .wrapper {
 ####### ### #    # #    #   ##   #  ####  #    #   #   #  ####  #    # 
 */
 
-.main .navigation-container.mobile,
-.main .navigation-list.mobile {
+.header .hamburger-icon .navigation-container.mobile,
+.navigation-list.mobile {
   display: none;
 }
 
-.main .navigation {
+.navigation {
   position: relative;
   margin-top: 18px;
   padding-left: 127px;
 }
 
-.main .navigation::after {
+.hamburger-icon {
+  display: none;
+}
+
+.navigation::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.main .navigation > li {
+.navigation > li {
   position: relative;
   float: left;
   margin-right: 3px;
   vertical-align: top;
 }
 
-.main .navigation > li:not(:first-of-type) .button00:before {
+.navigation > li:not(:first-of-type) .button00:before {
   content: '';
   position: absolute;
   top: -19px;
@@ -374,7 +378,7 @@ body > .wrapper {
   height: 33px;
 }
 
-.main .navigation > li .button00 .number {
+.navigation > li .button00 .number {
   position: absolute;
   top: -16px;
   left: 50%;
@@ -386,19 +390,19 @@ body > .wrapper {
   line-height: 18px;
 }
 
-.main .subnavigation {
+.subnavigation {
   left: 0;
   background: #272524;
   border-top: 6px solid #8009ef;
 }
 
-.main .subnavigation::after {
+.subnavigation::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.main .subnavigation > li {
+.subnavigation > li {
   display: inline-block;
   padding-left: 9px;
   padding-right: 74px;
@@ -408,11 +412,11 @@ body > .wrapper {
   vertical-align: top;
 }
 
-.main .subnavigation > li > ul {
+.subnavigation > li > ul {
   padding-top: 9px;
 }
 
-.main .subnavigation > li > ul > li > a {
+.subnavigation > li > ul > li > a {
   position: relative;
   font-family: 'dotum', sans-serif;
   font-size: 12px;
@@ -420,31 +424,31 @@ body > .wrapper {
   line-height: 20px;
 }
 
-.main .subnavigation > li > ul > li > a:hover {
+.subnavigation > li > ul > li > a:hover {
   text-decoration: underline;
 }
 
-.main .subnavigation > li > ul > li > a:active {
+.subnavigation > li > ul > li > a:active {
   background: #8009ef;
   text-decoration: none;
 }
 
-.main .subnavigation > li > ul > li > .icon_r > .icon-container,
-.main .subnavigation > li > ul > li > .icon_n > .icon-container {
+.subnavigation > li > ul > li > .icon_r > .icon-container,
+.subnavigation > li > ul > li > .icon_n > .icon-container {
   top: -2px;
   right: -12px;
 }
 
-.main .subnavigation > li > ul > li > .icon_rn > .icon-container {
+.subnavigation > li > ul > li > .icon_rn > .icon-container {
   top: -3px;
   right: -25px;
 }
 
-.main .subnavigation > li > ul > li > .icon_rn > .icon-container img + img {
+.subnavigation > li > ul > li > .icon_rn > .icon-container img + img {
   margin-left: 3px;
 }
 
-.main .subnavigation .icon-container {
+.subnavigation .icon-container {
   position: absolute;
   top: 0;
   right: 0;
@@ -2400,7 +2404,7 @@ table td {
   }
 
   .main {
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   .wrapper > .header {
@@ -2437,38 +2441,68 @@ table td {
   }
 
   /* navigation */
-  .main .navigation.desktop,
-  .main .subnavigation.desktop {
+
+  /* .navigation.desktop,
+  .subnavigation.desktop {
+    display: none;
+  } */
+
+  .navigation {
+    padding-left: 0;
+  }
+
+  .navigation li {
+    float: none;
+    margin-right: 0;
+  }
+
+  .navigation > li:not(:first-of-type) .button00 .tail .body {
+    position: relative;
+  }
+
+  .navigation > li:not(:first-of-type) .button00 {
+    position: relative;
+  }
+
+  .navigation > li:not(:first-of-type) .button00::before {
+    display: none;
+    /* left: auto;
+    top: 5px;
+    right: 5px;
+    z-index: 1; */
+  }
+
+  .navigation > li .button00 .number {
     display: none;
   }
 
-  .main .navigation-container.mobile {
+  .navigation-container.mobile {
     display: block;
     text-align: center;
   }
 
-  .main .navigation-list.mobile {
+  .navigation-list.mobile {
     display: block;
     margin-top: 10px;
   }
 
-  .main .navigation-list.mobile .subnavigation {
+  .navigation-list.mobile .subnavigation {
     display: none;
   }
 
-  .main .navigation-list.mobile .subnavigation.active {
+  .navigation-list.mobile .subnavigation.active {
     display: block;
   }
 
-  .main .navigation-list.mobile .subnavigation.active li ul {
+  .navigation-list.mobile .subnavigation.active li ul {
     display: none;
   }
 
-  .main .navigation-list.mobile .subnavigation.active li .active {
+  .navigation-list.mobile .subnavigation.active li .active {
     display: block;
   }
 
-  .header .navigation.mobile::before {
+  .hamburger-icon::before {
     content: '';
     position: absolute;
     top: 5px;
@@ -2479,7 +2513,7 @@ table td {
     background: #fff;
   }
 
-  .header .navigation.mobile {
+  .hamburger-icon {
     position: absolute;
     top: 12px;
     left: 8px;
@@ -2494,7 +2528,7 @@ table td {
     z-index: 1;
   }
 
-  .header .navigation.mobile > span {
+  .hamburger-icon > span {
     position: absolute;
     top: 50%;
     left: 3px;
@@ -2505,7 +2539,7 @@ table td {
     background: #fff;
   }
 
-  .header .navigation.mobile::after {
+  .hamburger-icon::after {
     content: '';
     position: absolute;
     bottom: 5px;
@@ -2516,15 +2550,15 @@ table td {
     background: #fff;
   }
 
-  .main .subnavigation.active {
+  .subnavigation.active {
     display: block;
   }
 
-  .main .subnavigation {
+  .subnavigation {
     text-align: center;
   }
 
-  .main .subnavigation > li {
+  .subnavigation > li {
     display: block;
     padding: 10px 0 10px 0;
   }
