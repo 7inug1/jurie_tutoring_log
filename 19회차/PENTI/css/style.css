@@ -109,7 +109,68 @@
   box-sizing: border-box;
 }
 
-.button02,
+.button02::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 4px;
+  height: 41px;
+  background: url('../images/main/tab-container/tips-container/button-shadow_left.png');
+}
+
+.button02 .image-container::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-image: url('../images/main/tab-container/tips-container/button-shadow_center.png');
+}
+
+.button02 {
+  position: relative;
+  background: linear-gradient(#b4b4b4, #6c6c6c);
+
+  border-radius: 5px;
+  padding-left: 9px;
+  padding-right: 12px;
+  padding-top: 21px;
+  padding-bottom: 13px;
+  box-shadow: 1px 5px 3px lightgray, -1px 0px 1px lightgray;
+}
+
+.button02::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 4px;
+  height: 41px;
+  background: url('../images/main/tab-container/tips-container/button-shadow_right.png');
+}
+
+.button02 .image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.button02 .image-container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button02 .image-container img {
+  /* display: inline-block; */
+  float: left;
+}
+
+/* .button02 .image-container img:first-of-type,
+.button02 .image-container img:nth-of-type(3) {
+  width: auto;
+} */
+
+/* .button02,
 .button02 > .tail,
 .button02 > .tail > .body {
   display: inline-block;
@@ -139,7 +200,7 @@
 .button02.current > .tail > .body {
   box-sizing: border-box;
   width: 104px;
-}
+} */
 
 /* 
 # #    # #####  #    # ##### 
@@ -2192,6 +2253,25 @@ body > .wrapper {
     display: inline-block;
   }
 
+  .button02 {
+    text-align: center;
+  }
+
+  .button02 .image-container {
+    display: block;
+  }
+
+  .button02 .image-container img {
+    /* vertical-align: top; */
+    display: inline-block;
+    float: none;
+  }
+
+  .button02 .image-container img:first-of-type,
+  .button02 .image-container img:nth-of-type(3) {
+    width: auto;
+  }
+
   .main {
     /* margin-top: 10px; */
   }
@@ -2678,16 +2758,23 @@ body > .wrapper {
     padding: 0;
   }
 
+  .footer .right .utility {
+    text-align: center;
+  }
+
   .footer .right .utility li:not(:first-of-type)::before {
     display: none;
   }
 
   .footer .right .utility li:not(:first-of-type) {
-    margin-left: 0;
+    /* margin-left: 0; */
+    margin-left: 8px;
   }
 
   .footer .right .utility li {
     float: none;
+    display: inline-block;
+    /* margin-left: 5px; */
   }
 
   .footer .right .copyright-contents .information .title:not(:first-of-type),
