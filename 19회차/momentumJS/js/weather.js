@@ -11,8 +11,8 @@ function onGeoSuccess(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      weather.innerText = `${data.main.temp}°C`;
+      // console.log(typeof data.main.temp);
+      weather.innerText = `${data.main.temp.toFixed(1)}°C`;
       city.innerText = `${data.name}`;
     });
 }

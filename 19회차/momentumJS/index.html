@@ -8,40 +8,43 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <div class="content">
-      <div class="clock-container">
-        <span class="clock">00:00</span>
-      </div>
-      <div class="weather">
-        <p>
-          <span class="temperature"></span>
-          <span class="location"></span>
-        </p>
-      </div>
-      <form class="login-form hidden">
-        <div class="input-container">
-          <input
-            type="text"
-            placeholder="My name is ..."
-            required
-            maxlength="15"
-          />
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="clock-container">
+          <span class="clock">00:00</span>
         </div>
-        <button type="button">Log In</button>
-      </form>
-      <h1 class="greeting hidden"></h1>
+        <div class="weather">
+          <p>
+            <span class="temperature"></span>
+            <span class="location"></span>
+          </p>
+        </div>
+        <form class="login-form hidden">
+          <div class="input-container name">
+            <input
+              type="text"
+              placeholder="My name is ..."
+              required
+              maxlength="15"
+            />
+          </div>
+          <button type="submit" class="login-button">Log In</button>
+        </form>
+        <h1 class="greeting hidden"></h1>
 
-      <form class="todo-form">
-        <div class="input-container">
-          <input type="text" placeholder="Write a to-do" required />
+        <form class="todo-form">
+          <div class="input-container">
+            <input type="text" placeholder="Write a to-do" required />
+          </div>
+          <button type="submit" class="todo-button">Add ToDo</button>
+        </form>
+        <ul class="todo-list"></ul>
+        <div class="quote-container">
+          <h2 class="author"></h2>
+          once said,
+          <p class="quote"></p>
+          <p class="admin-message">Hope this line made your day. 🙂</p>
         </div>
-      </form>
-      <ul class="todo-list"></ul>
-      <div class="quote-container">
-        <h2 class="author"></h2>
-        once said,
-        <p class="quote"></p>
-        <p class="admin-message">Hope this line made your day. 🙂</p>
       </div>
     </div>
     <script src="./js/greetings.js"></script>
