@@ -4,11 +4,19 @@ const toDoList = document.querySelector('.todo-list');
 const toDoButton = document.querySelector('.todo-button');
 
 const TODOS_KEY = 'todo';
+const savedToDos = localStorage.getItem(TODOS_KEY);
+// const CLASSNAME_HIDDEN = 'hidden';
 
 let todos = [];
-// let localStorageTodos = JSON.parse(localStorage.getItem('todo'));
 
 toDoButton.addEventListener('click', onToDoButtonClick);
+toDoForm.addEventListener('submit', handleToDoSubmit);
+
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  todos = parsedToDos;
+  parsedToDos.forEach(paintToDo);
+}
 
 function onToDoButtonClick() {
   if (toDoInput.required === true) {
@@ -32,6 +40,7 @@ function handleToDoSubmit(event) {
 }
 
 function paintToDo(newToDo) {
+  console.log('paintToDo');
   const listItem = document.createElement('div');
   const li = document.createElement('li');
   li.id = newToDo.id;
@@ -39,19 +48,21 @@ function paintToDo(newToDo) {
   listItem.innerText = newToDo.text;
 
   const buttonContainer = document.createElement('div');
-  buttonContainer.className = 'button-container';
   const deleteButton = document.createElement('button');
-  deleteButton.className = 'delete-button';
   const editButton = document.createElement('button');
+  buttonContainer.className = 'button-container';
+  deleteButton.className = 'delete-button';
   editButton.className = 'edit-button';
-  deleteButton.innerText = '❌';
   editButton.innerText = '✏️';
+  deleteButton.innerText = '❌';
+
   deleteButton.addEventListener('click', deleteToDo);
   editButton.addEventListener('click', editToDo);
+
+  buttonContainer.appendChild(editButton);
+  buttonContainer.appendChild(deleteButton);
   li.appendChild(listItem);
   li.appendChild(buttonContainer);
-  buttonContainer.appendChild(deleteButton);
-  buttonContainer.appendChild(editButton);
   toDoList.appendChild(li);
 }
 
@@ -69,32 +80,53 @@ function deleteToDo(event) {
 }
 
 function editToDo(event) {
-  // console.log(event.target);
+  const editButton = event.target;
+  const deleteButton = editButton.nextSibling;
   const buttonContainer = event.target.parentElement;
   const li = event.target.parentNode.parentElement;
+  const listItem = li.querySelector('.list-item');
+  // editButton.classlist.add(CLASSNAME_HIDDEN);
+  // deleteButton.classlist.add(CLASSNAME_HIDDEN);
+  editButton.style.display = 'none';
+  deleteButton.style.display = 'none';
 
   // if there is no input-container yet
   if (buttonContainer.nextSibling === null) {
     const editInputContainer = document.createElement('div');
-    editInputContainer.className = 'edit-input-container';
     const editInput = document.createElement('input');
+    const confirmButton = document.createElement('button');
     editInput.type = 'text';
+    editInputContainer.className = 'edit-input-container';
     editInputContainer.appendChild(editInput);
-    li.appendChild(editInputContainer);
+    listItem.style.display = 'none';
+    // listItem.classlist.add(CLASSNAME_HIDDEN);
+    editInput.value = listItem.innerText;
+    li.prepend(editInputContainer);
 
-    const editConfirmButton = document.createElement('button');
-    editConfirmButton.innerText = '✔️';
-    buttonContainer.appendChild(editConfirmButton);
+    confirmButton.className = 'confirm-button';
+    confirmButton.innerText = '✔️';
+    buttonContainer.prepend(confirmButton);
 
-    editConfirmButton.addEventListener('click', () => {
+    confirmButton.addEventListener('click', () => {
+      // editButton.classlist.remove(CLASSNAME_HIDDEN);
+      // deleteButton.classlist.remove(CLASSNAME_HIDDEN);
+      // confirmButton.classlist.add(CLASSNAME_HIDDEN);
+      // listItem.classlist.remove(CLASSNAME_HIDDEN);
+      // editInputContainer.classlist.add(CLASSNAME_HIDDEN);
+
+      editButton.style.display = 'inline-block';
+      deleteButton.style.display = 'inline-block';
+      confirmButton.style.display = 'none';
+
+      listItem.style.display = 'block';
+      editInputContainer.style.display = 'none';
+
       const textToReplace = editInput.value;
-      console.log(textToReplace);
-      // console.log(li.querySelector('.list-item'));
-      const textToBeReplaced = li.querySelector('.list-item');
+      const textToBeReplaced = listItem;
       textToBeReplaced.innerText = textToReplace;
 
-      console.log(li.id);
-      console.log(textToBeReplaced.innerText);
+      // console.log(li.id);
+      // console.log(textToBeReplaced.innerText);
 
       todos.forEach((todo) => {
         console.log(todo.id);
@@ -104,30 +136,7 @@ function editToDo(event) {
       });
       saveToDos();
 
-      // JSON.parse(localStorage.getItem('todo')).forEach((item) => {
-      //   if (item.id === li.id) {
-      //     todos.forEach((todo) => {
-      //       todo.text = textToBeReplaced;
-      //     });
-      //   }
-      // });
-
       editInput.value = '';
     });
   }
-}
-
-function callBackFunction(event) {
-  console.log(event.target);
-}
-
-toDoForm.addEventListener('submit', handleToDoSubmit);
-
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-if (savedToDos !== null) {
-  const parsedToDos = JSON.parse(savedToDos);
-  todos = parsedToDos;
-  // toDos.forEach(paintToDo);
-  parsedToDos.forEach(paintToDo);
 }
