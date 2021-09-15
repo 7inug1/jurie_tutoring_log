@@ -23,7 +23,7 @@ function onLoginButtonClick() {
   }
 }
 
-function onLoginSubmit(event) {
+function onLoginSubmit() {
   event.preventDefault();
   loginForm.classList.add(CLASSNAME_HIDDEN);
   const username = loginInput.value;
