@@ -176,13 +176,13 @@
                       <td class="left-aligned-box">
                         <!-- <input type="text" /> -->
                         <div class="search-file-button-container">
-                          <!-- <label for="file-upload-button">
+                          <label for="file-upload-button">
                             <button type="button" class="white-button_head">
                               <span class="white-button_tail">
                                 <span class="white-button_body">파일찾기</span>
                               </span>
                             </button>
-                          </label> -->
+                          </label>
                           <input
                             type="file"
                             id="file-upload-button"
@@ -216,19 +216,40 @@
                         <label for="file-upload-button">첨부파일</label>
                       </th>
                       <td class="left-aligned-box">
-                        <!-- <input type="text" /> -->
+                        <input
+                          type="text"
+                          readonly="readonly"
+                          id="file-input"
+                        />
                         <div class="search-file-button-container">
-                          <!-- <label for="file-upload-button">
-                            <button type="button" class="white-button_head">
-                              <span class="white-button_tail">
-                                <span class="white-button_body">파일찾기</span>
-                              </span>
-                            </button>
-                          </label> -->
+                          <label
+                            for="file-upload-button"
+                            class="white-button_head"
+                          >
+                            <span class="white-button_tail">
+                              <span class="white-button_body">파일찾기</span>
+                            </span>
+                          </label>
+                          <script>
+                            let fileInput =
+                              document.querySelector('#file-input');
+                            fileInput.value = '';
+
+                            function getEventChange() {
+                              let fileInput =
+                                document.querySelector('#file-input');
+                              let fileName =
+                                document.getElementById('file-upload-button');
+                              fileName = fileName.value;
+                              console.log('filename: ' + fileName);
+                              fileInput.value = fileName;
+                            }
+                          </script>
                           <input
                             type="file"
                             id="file-upload-button"
                             name="file-upload-button"
+                            onchange="getEventChange()"
                           />
                         </div>
                       </td>

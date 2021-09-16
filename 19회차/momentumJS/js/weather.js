@@ -1,5 +1,5 @@
-const temperature = document.querySelector('.temperature .temperature');
-const currentLocation = document.querySelector('.temperature .location');
+const temperature = document.querySelector('.weather .temperature');
+const currentLocation = document.querySelector('.weather .location');
 const API_KEY = 'dabeec5de20d5b7bd7753d1b05573c0d';
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoFailure);
@@ -7,7 +7,7 @@ navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoFailure);
 function onGeoSuccess(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
-  const url = `https://api.opentemperaturemap.org/data/2.5/temperature?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -19,6 +19,5 @@ function onGeoSuccess(position) {
 
 function onGeoFailure() {
   alert(`Can't retrieve location & temperature. Please retry.`);
-  // temperature.innerText =
-  //   'Failed to retrieve location & temperature. Please refresh or change your browser setting.';
+  temperature.innerText = 'Failed to retrieve location & temperature.';
 }

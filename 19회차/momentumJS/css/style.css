@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'digital-7';
-  src: url('../fonts/digital-7.woff2') format('woff2'),
-    url('../fonts/digital-7.woff') format('woff');
+  src: url('../fonts/digital-7.woff') format('woff'),
+    url('../fonts/digital-7.woff2') format('woff2');
 }
 
 /* 
@@ -210,7 +210,7 @@ body {
 .clock {
   color: #ffffff;
   font-family: 'digital-7', sans-serif;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bolder;
   /* letter-spacing: 2px; */
 }

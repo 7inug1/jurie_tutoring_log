@@ -190,7 +190,6 @@ textarea + .length {
   bottom: 0;
   right: 0;
   font-size: 12px;
-  /* text-align: right; */
 }
 
 input {
@@ -359,25 +358,35 @@ td.textarea {
   display: inline-block;
 }
 
-.header-nav a:first-of-type {
+.header-nav > span {
+  display: inline-block;
+  position: relative;
+}
+
+.header-nav > span:first-of-type {
   padding-right: 9px;
 }
 
-.header-nav > a:nth-of-type(2)::before {
+.header-nav > span + span {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.header-nav > span + span::before {
   content: '';
-  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -2.75px;
+  left: 0px;
   width: 1px;
   height: 7px;
-  padding-left: 9px;
   background: url('./images/header_nav_vertical-bar.png') no-repeat;
-  vertical-align: 2px;
 }
 
 /* ----------------------------------------------------------- */
 
 .logout-button-container {
   display: inline-block;
-  /* padding-top: 11px; */
   margin-left: 13px;
 }
 
@@ -424,6 +433,7 @@ td.textarea {
 
 .main-wrapper {
   position: relative;
+  padding-left: 226px;
 }
 
 /*
@@ -487,6 +497,8 @@ td.textarea {
 
 .navigation {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 211px;
   min-height: 100%;
   border: 1px solid #f8f8f7;
@@ -589,7 +601,6 @@ td.textarea {
 
 .main-section {
   position: relative;
-  padding-left: 226px;
 }
 
 .main-section .background {

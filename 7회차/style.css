@@ -203,12 +203,10 @@ h1 > img {
 
 .innerbox.head {
   padding-top: 3px;
-  /* background: url('./images/채용안내/inner_box_headtail.png') top no-repeat; */
 }
 
 .innerbox.tail {
   padding-bottom: 3px;
-  /* background: url('./images/채용안내/inner_box_headtail.png') bottom no-repeat; */
 }
 
 .innerbox.body {
@@ -218,12 +216,15 @@ h1 > img {
   border-right: 3px solid #efefef;
 }
 
+.innerbox.body.hr {
+  padding: 30px 30px 30px 30px;
+}
+
 .innerbox.body.ethics {
   border-top: none;
 }
 
 .location {
-  display: inline-block;
   position: absolute;
   top: 50%;
   right: 0;
@@ -231,17 +232,23 @@ h1 > img {
   font-size: 0;
 }
 
-.location-text {
-  color: #c8c8c8;
+.location-text a,
+.location-text.last {
   font-size: 11px;
   font-family: '돋움', Dotum;
   text-decoration: none;
   letter-spacing: -0.4px;
 }
 
-.location-text.second,
-.location-text.third,
-.location-text.last {
+.location-text a {
+  color: #c8c8c8;
+}
+
+.location-text {
+  display: inline-block;
+}
+
+.location-text + .location-text {
   margin-left: 15px;
 }
 
@@ -251,7 +258,6 @@ h1 > img {
 
 .location-text:not(.location-text.last)::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 50%;
   margin-top: -4.5px;
@@ -412,7 +418,6 @@ li.process.employment {
   position: relative;
   padding: 0 2.5px;
   width: 103px;
-  /* height: 39px; */
   line-height: 2;
   color: #9b9b9b;
   font-size: 0;
@@ -428,9 +433,7 @@ li.process.third.employment::after,
 li.process.fourth.employment::after {
   position: absolute;
   content: '';
-  display: inline;
   top: 50%;
-  /* left: 0; */
   right: -9px;
   margin-top: -6px;
   width: 9px;
@@ -497,10 +500,6 @@ div.innerbox.head.ethics {
 
 .innerbox.body.ethics {
   padding: 21px;
-  /* min-width: 670px; */
-  /* background: url('./images/윤리규범/orange-horizontal-line.png') repeat-x; */
-  /* border: 3px solid black; */
-  /* border-top: 3px solid #ff9500; */
   border-left: 3px solid #ececec;
   border-right: 3px solid #ececec;
   border-bottom: 3px solid #ececec;
@@ -524,9 +523,7 @@ div.body_ethics {
 
 button.first.ethics,
 button.second.ethics {
-  /* width: 135px; */
   padding: 6px 38px;
-  /* min-height: 29px; */
   font-size: 15px;
   border: none;
   color: white;
@@ -670,15 +667,22 @@ p.head.hr > img {
 
 section.hr {
   font-size: 0;
-  padding: 30px 0px 30px 30px;
+  position: relative;
   min-height: 65px;
 }
 
-section.second.hr,
-section.third.hr,
-section.first.hr {
-  background: url('./images/인사관리/dotted-horizontal-line.png') bottom
-    no-repeat;
+section.hr::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  background: url('./images/인사관리/dotted-horizontal-line.png');
+  width: 100%;
+  height: 1px;
+}
+
+section.hr:not(:first-of-type) {
+  margin-top: 60px;
 }
 
 h2.thumbnail.hr {
@@ -731,6 +735,24 @@ h2.description.hr {
   vertical-align: top;
 }
 
+.description li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.description li::before,
+.description li::before,
+.description li::before,
+.description li::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background: url('./images/인사관리/arrow-icon.png');
+  width: 7px;
+  height: 9px;
+}
+
 /* 
 회원가입
 #### ##    ## ########  ######## ##     ##    ##        
@@ -747,28 +769,16 @@ div.h1-wrapper.signup {
   padding: 10px 0;
 }
 
-/* h1.signup {
-  background: url('./images/회원가입/h1-title.png') no-repeat;
-  height: 18px;
-} */
-
 p.head.bottom.signup {
   display: inline-block;
   margin-top: 20px;
-  /* min-width: 664px; */
-  /* height: 14px; */
-  /* background: url('./images/회원가입/paragraph_bottom_signup.png') no-repeat; */
 }
 
 p.head.top.signup {
-  display: inline-block;
   position: absolute;
   top: 50%;
   margin-top: -7.5px;
   left: 117px;
-  /* min-width: 318px; */
-  /* height: 15px; */
-  /* background: url('./images/회원가입/paragraph_top_signup.png') no-repeat; */
 }
 
 p.head.bottom.signup > img,
@@ -782,10 +792,6 @@ div.body_signup {
 
 form.signup {
   margin-top: 43px;
-}
-
-fieldset.innerbox.signup {
-  /* padding-top: 22px; */
 }
 
 h2.fieldset.title.signup {
@@ -813,10 +819,7 @@ span.label.signup {
 }
 
 .fieldset-wrapper {
-  /* width: 623px; */
-  /* margin: 8px 0 12px 0; */
   padding: 30px 20px 12px 19px;
-  /* padding-left: 19px; */
 }
 
 fieldset.button-container.signup {
@@ -848,7 +851,6 @@ span.button.body.signup {
 span.button.one.body.signup {
   display: inline-block;
   position: relative;
-  /* padding: 0px 4px; */
   min-width: 72px;
   height: 36px;
   line-height: 36px;
@@ -923,7 +925,7 @@ div.label-container.signup {
   text-align: right;
 }
 
-label.label.signup {
+div.label-container.signup label {
   position: relative;
 }
 
@@ -935,6 +937,7 @@ input.signup {
 }
 
 span.label.signup {
+  position: relative;
   padding-right: 12px;
 }
 
@@ -956,9 +959,6 @@ span.label.signup {
 strong.talent {
   display: inline-block;
   margin-top: 31px;
-  /* min-width: 658px; */
-  /* height: 19px; */
-  /* background: url('./images/인재상/strong_talent.png') no-repeat; */
 }
 
 strong.talent > img {
@@ -967,13 +967,15 @@ strong.talent > img {
 
 div.diagram-container.talent {
   position: relative;
-  margin-top: 34px;
   min-height: 455px;
   background: url('./images/인재상/main-board.png') no-repeat;
 }
 
+.wrapper.talent .body {
+  margin-top: 34px;
+}
+
 dl.talent {
-  display: inline-block;
   position: absolute;
   text-align: center;
 }
