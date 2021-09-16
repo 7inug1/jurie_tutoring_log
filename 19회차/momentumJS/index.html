@@ -5,18 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <title>Momentum App</title>
   </head>
   <body>
     <div class="content-wrapper">
       <div class="content">
         <div class="clock-container">
-          <span class="clock">00:00</span>
+          <span class="clock">
+            <span class="hours">00</span>
+            <span>:</span>
+            <span class="minutes">00</span>
+            <span>:</span>
+            <span class="seconds">00</span>
+          </span>
         </div>
         <div class="weather">
           <p>
-            <span class="temperature">Temperature</span>
-            <span class="location">and location loading...</span>
+            <div class="temperature">Location & temperature loading...</div>
+            <div class="location"></div>
           </p>
         </div>
         <form class="login-form hidden">
@@ -40,10 +47,13 @@
         </form>
         <ul class="todo-list"></ul>
         <div class="quote-container">
-          <h2 class="author"></h2>
-          once said,
-          <p class="quote"></p>
-          <p class="admin-message">Hope this line made your day. 🙂</p>
+          <h1 class="title"></h1>
+          <div class="content">
+            <h2 class="author"></h2>
+            <span>once said,</span>
+            <p class="quote"></p>
+            <p class="admin-message">Hope this line made your day. 🙂</p>
+          </div>
         </div>
       </div>
     </div>

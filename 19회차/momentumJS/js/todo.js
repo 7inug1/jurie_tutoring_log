@@ -20,38 +20,8 @@ if (savedToDos !== null) {
   parsedToDos.forEach(paintToDo);
 }
 
-function clickAddToDoButton() {
-  if (toDoInput.required === true) {
-    submitToDoForm();
-  }
-}
-
-function submitToDoForm(event) {
-  event.preventDefault();
-  const newToDo = toDoInput.value;
-  toDoInput.value = '';
-
-  const newToDoObj = {
-    text: newToDo,
-    id: Date.now(),
-  };
-
-  todos.push(newToDoObj);
-  paintToDo(newToDoObj);
-  saveToDos();
-}
-
 function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
-}
-
-function removeToDo(event) {
-  if (confirm('Delete this ToDo?')) {
-    const li = event.target.parentNode.parentElement;
-    li.remove();
-    todos = todos.filter((toDo) => toDo.id !== parseInt(li.id));
-    saveToDos();
-  }
 }
 
 function paintToDo(newToDo) {
@@ -81,8 +51,40 @@ function paintToDo(newToDo) {
   li.appendChild(buttonContainer);
   toDoList.appendChild(li);
 }
+// 1. 추가
 
-// 수정 시작하기
+function clickAddToDoButton() {
+  if (toDoInput.required === true) {
+    submitToDoForm();
+  }
+}
+
+function submitToDoForm(event) {
+  event.preventDefault();
+  const newToDo = toDoInput.value;
+  toDoInput.value = '';
+
+  const newToDoObj = {
+    text: newToDo,
+    id: Date.now(),
+  };
+
+  todos.push(newToDoObj);
+  paintToDo(newToDoObj);
+  saveToDos();
+}
+
+// 2. 제거
+function removeToDo(event) {
+  if (confirm('Delete this ToDo?')) {
+    const li = event.target.parentNode.parentElement;
+    li.remove();
+    todos = todos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
+  }
+}
+
+// 3. 수정
 function clickEditToDoButton(event) {
   const editButton = event.target;
   const deleteButton = editButton.nextSibling;
@@ -93,7 +95,6 @@ function clickEditToDoButton(event) {
   const li = event.target.parentNode.parentElement;
   const listItem = li.querySelector('.list-item');
   originalToDo = listItem.innerText;
-  // console.log(li.querySelector('.edit-input-container'));
 
   // edit-input-container 아예 없을 때
   if (li.querySelector('.edit-input-container') === null) {
@@ -113,21 +114,14 @@ function clickEditToDoButton(event) {
     editInputContainer.appendChild(editInput);
     editInputForm.appendChild(editInputContainer);
     li.prepend(editInputForm);
-    //
     editInput.value = originalToDo;
+    editInput.select();
     listItem.classList.add(CLASSNAME_HIDDEN);
 
     buttonContainer.prepend(confirmButton);
 
     confirmButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
-    // confirmButton.addEventListener('click', () => {
-    //   if (editInput.value !== originalToDo) {
-    //   confirmButton.addEventListener('click', submitConfirmEditToDo);
-    // } else {
-    //   console.log('not changed');
-    // }
-    // })
   } else {
     const editInputForm = li.querySelector('.edit-input-form');
     const editInputContainer = li.querySelector('.edit-input-container');
@@ -139,76 +133,88 @@ function clickEditToDoButton(event) {
     listItem.classList.add(CLASSNAME_HIDDEN);
     confirmButton.classList.remove(CLASSNAME_HIDDEN);
 
-    // console.log(editInput.value);
+    editInput.select();
     confirmButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
-    // confirmButton.addEventListener('click', () => {
-    //   if (editInput.value !== originalToDo) {
-    //   submitConfirmEditToDo();
-    // } else {
-    //   console.log('not changed');
-    // }
-    // })
   }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      console.log('ESC');
+      closeInputField(event);
+    }
+  });
+
+  console.log('this');
 }
 
-function clickConfirmEditToDoButton() {
-  console.log(
-    event.target.parentNode.parentElement
-      .querySelector('.edit-input-form')
-      .querySelector('.edit-input-container')
-      .querySelector('input')
-  );
+// 3. 수정 - 수정 완료 버튼 클릭 시
+function clickConfirmEditToDoButton(event) {
   const editInput = event.target.parentNode.parentElement
     .querySelector('.edit-input-form')
     .querySelector('.edit-input-container')
     .querySelector('input');
   if (editInput.required === true) {
-    submitConfirmEditToDo();
+    submitConfirmEditToDo(event);
   }
 }
 
-// function enterEditInput() {
-//   if (event.keyCode === 13) {
-//     console.log('enter');
-//     submitConfirmEditToDo();
-//   }
-// }
-
-function submitConfirmEditToDo() {
+function closeInputField(event) {
+  console.log('closeinputfield');
   event.preventDefault();
-  const li = event.target.parentNode.parentElement;
+  const li = event.target.closest('li');
   const listItem = li.querySelector('.list-item');
   const editInputForm = li.querySelector('.edit-input-form');
-  const editInputContainer = li.querySelector('.edit-input-container');
-  const editInput = editInputContainer.querySelector('input');
-  const buttonContainer = event.target.parentElement;
-  const confirmButton = event.target;
+
+  const buttonContainer = li.querySelector('.button-container');
+  const confirmButton = buttonContainer.querySelector('.confirm-button');
   const editButton = buttonContainer.querySelector('.edit-button');
   const deleteButton = buttonContainer.querySelector('.delete-button');
 
-  console.log(listItem);
   editButton.classList.remove(CLASSNAME_HIDDEN);
   deleteButton.classList.remove(CLASSNAME_HIDDEN);
   confirmButton.classList.add(CLASSNAME_HIDDEN);
 
   listItem.classList.remove(CLASSNAME_HIDDEN);
   editInputForm.classList.add(CLASSNAME_HIDDEN);
+}
+
+// 3. 수정 - form submit 시
+function submitConfirmEditToDo(event) {
+  // event.preventDefault();
+  const li = event.target.closest('li');
+  const listItem = li.querySelector('.list-item');
+  const editInputForm = li.querySelector('.edit-input-form');
+  const editInputContainer = editInputForm.querySelector(
+    '.edit-input-container'
+  );
+  const editInput = editInputContainer.querySelector('input');
+  // const buttonContainer = li.querySelector('.button-container');
+  // const confirmButton = buttonContainer.querySelector('.confirm-button');
+  // const editButton = buttonContainer.querySelector('.edit-button');
+  // const deleteButton = buttonContainer.querySelector('.delete-button');
+
+  // editButton.classList.remove(CLASSNAME_HIDDEN);
+  // deleteButton.classList.remove(CLASSNAME_HIDDEN);
+  // confirmButton.classList.add(CLASSNAME_HIDDEN);
+
+  // listItem.classList.remove(CLASSNAME_HIDDEN);
+  // editInputForm.classList.add(CLASSNAME_HIDDEN);
+  closeInputField(event);
 
   if (editInput.value !== originalToDo) {
+    console.log('editInput.value !== originalToDo');
     const textToReplace = editInput.value;
     const textToBeReplaced = listItem;
     textToBeReplaced.innerText = textToReplace;
-
     // 좀 더 깔끔히 만드는 법 있을지?
     todos.forEach((todo) => {
-      // console.log(todo.id);
       if (todo.id == li.id) {
-        todo.text = textToBeReplaced.innerText;
+        todo.text = textToReplace;
       }
     });
     saveToDos();
 
     editInput.value = '';
+  } else {
   }
 }

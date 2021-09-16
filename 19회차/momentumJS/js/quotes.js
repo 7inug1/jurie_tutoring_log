@@ -25,9 +25,13 @@ const quotes = [
   },
 ];
 
+const title = document.querySelector('.quote-container .title');
 const author = document.querySelector('.quote-container .author');
 const quote = document.querySelector('.quote-container .quote');
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+const quotesLength = quotes.length;
+const todaysQuoteIndex = Math.floor(Math.random() * quotes.length);
+const todaysQuote = quotes[todaysQuoteIndex];
 
+title.innerText = `Random Quote #${todaysQuoteIndex + 1} / ${quotesLength}`;
 author.innerText = `${todaysQuote.author}`;
 quote.innerText = `"${todaysQuote.quote}"`;
