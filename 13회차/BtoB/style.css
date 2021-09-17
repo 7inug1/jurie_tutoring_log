@@ -201,12 +201,6 @@ input {
   border: 2px solid black;
 }
 
-/* body {
-  padding-top: 20px;
-  padding-left: 21px;
-  padding-right: 20px;
-} */
-
 .body.index1 {
   text-align: center;
 }
@@ -214,15 +208,6 @@ input {
 .body.index1 {
   margin-top: 54px;
 }
-
-/* .body.index1 p {
-  margin-top: 57px;
-  margin-bottom: 19px;
-} */
-
-/* .body.index1 span {
-  text-align: center;
-} */
 
 .body.index2 {
   margin-top: 18px;
@@ -333,15 +318,6 @@ input {
   vertical-align: top;
 }
 
-/* h2 {
-  text-align: left;
-}
-
-h2,
-h2 + span {
-  display: inline-block;
-} */
-
 .red {
   color: red;
 }
@@ -358,32 +334,21 @@ strong {
 .loading-bar_empty {
   display: inline-block;
   position: relative;
-  padding-top: 17px;
-}
-
-.loading-bar_filled {
-  position: absolute;
-  top: 19px;
-  left: 0px;
-  width: 141px;
+  margin-top: 17px;
+  width: 267px;
   height: 12px;
-  background: url(./images/loading-bar_filled.png) no-repeat;
+  background: url('./images/loading-bar_empty.png') no-repeat;
 }
 
-/* .loading-bar_filled img {
-  height: 100%;
-  width: 100%;
-} */
-
-/* .loading-bar::after {
+.loading-bar_empty::after {
   content: '';
   position: absolute;
-  top: 2.5px;
+  top: 0px;
   left: 0px;
   width: 141px;
   height: 12px;
-  background: url(./images/loading-bar_filled.png);
-} */
+  background: url('./images/loading-bar_filled.png') no-repeat;
+}
 
 button {
   background: transparent;
@@ -391,9 +356,6 @@ button {
 }
 
 .button_type02_head {
-  /* position: absolute;
-  top: 0;
-  right: 0; */
   display: inline-block;
   padding-left: 1px;
   height: 22px;
@@ -440,7 +402,6 @@ button {
 }
 
 .close-button {
-  /* display: inline-block; */
   position: absolute;
   top: 20px;
   right: 20px;

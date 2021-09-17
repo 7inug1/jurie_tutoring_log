@@ -138,6 +138,17 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
+  button {
+    cursor: pointer;
+  }
+  input {
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
 }
 
 /* 
@@ -165,8 +176,6 @@ body {
 
 .header_head {
   display: inline-block;
-  /* padding-top: 6px; */
-  /* min-width: 455px; */
   padding-left: 9px;
   height: 40px;
   background: url('./images/header_head.png') left no-repeat;
@@ -190,7 +199,6 @@ body {
 
 .header_body h1::before {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 12px;
   left: 5px;
@@ -225,11 +233,7 @@ p#warning {
 }
 
 .body h2 {
-  display: inline-block;
   position: absolute;
-  /* margin-top: 5px; */
-  /* padding-top: 13px;
-  padding-left: 15px; */
   top: 13px;
   left: 16px;
 }
@@ -240,11 +244,6 @@ p#warning {
 }
 
 input#textbox1 {
-  /* position: absolute; */
-  /* top: 10px;
-  left: 81px; */
-  /* margin-top: 10px;
-  margin-left: 80px; */
   width: 355px;
   height: 18px;
   border: 1px solid #9bb3d5;
@@ -308,14 +307,12 @@ button {
   padding-right: 1px;
   height: 20px;
   background: url('./images/blue-button_headtail.png') right no-repeat;
-  /* vertical-align: middle; */
 }
 .blue-button_body {
   display: inline-block;
   min-width: 58px;
   height: 20px;
   background: url('./images/blue-button_body.png') center repeat-x;
-  /* vertical-align: middle; */
 }
 
 .blue-button_body img {

@@ -361,10 +361,16 @@ body {
 */
 
 .table_type02-container:nth-of-type(2) {
-  margin-top: 29px;
+  /* margin-top: 29px; */
 }
 
-.table_type02-container:nth-of-type(2) .table_type02 {
+.wrapper.index1 .main .table_type02-container:nth-of-type(2) table tbody tr td {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.table_type02-container:nth-of-type(2),
+.wrapper.index1 .main .table_type02-container:nth-of-type(2) table {
   margin-top: 8px;
 }
 

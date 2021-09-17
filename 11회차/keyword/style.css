@@ -138,6 +138,17 @@
     border-collapse: separate;
     border-spacing: 0;
   }
+  button {
+    cursor: pointer;
+  }
+  input {
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
 }
 
 /* 
@@ -177,21 +188,21 @@ input {
   background: url('./images/background.png') no-repeat;
   position: relative;
   margin: 0 auto;
+  padding-top: 285px;
   width: 1024px;
   height: 1253px;
-  z-index: -3;
+  text-align: center;
 }
 
 .wrapper::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
   width: 1024px;
   height: 1253px;
   background: url('./images/popup-background.png') no-repeat;
-  z-index: -2;
+  z-index: 0;
 }
 
 /* 
@@ -203,9 +214,8 @@ input {
 #       ####  #       ####  #  
 */
 .popup_wrapper {
+  display: inline-block;
   max-width: 872px;
-  padding-top: 285px;
-  padding-left: 114px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -415,16 +425,13 @@ h1 {
   padding-left: 30px;
 }
 
-.input-box {
-  padding: 0 0 0 145px;
-}
-
 input[type='text'] {
-  padding: 0;
+  padding: 5px;
   width: 335px;
   height: 27px;
   background: url('./images/inputbox.png') no-repeat;
   border: none;
+  box-sizing: border-box;
 }
 
 .boxes-container_wrapper {
@@ -434,6 +441,7 @@ input[type='text'] {
 
 .boxes-container {
   position: relative;
+  padding-left: 145px;
 }
 
 .boxes-container:nth-of-type(2),
