@@ -188,12 +188,18 @@ textarea {
   height: 100%;
   border: 0 none;
   box-sizing: border-box;
-  padding: 0;
+  padding: 5px;
   margin: 0;
 }
 
 select {
+  padding: 0;
   box-sizing: border-box;
+}
+
+textarea,
+input[type='text'] {
+  outline: none;
 }
 
 /* 
@@ -345,10 +351,6 @@ body {
   padding-top: 17px;
 }
 
-.main.index5 {
-  /* padding-left: 29px; */
-}
-
 /* 
                                                                           ###    #####  
     #####   ##   #####  #      ######         ##### #   # #####  ######  #   #  #     # 
@@ -359,10 +361,6 @@ body {
 ###   #   #    # #####  ###### ######           #     #   #      ######   ###   ####### 
                                       #######                                           
 */
-
-.table_type02-container:nth-of-type(2) {
-  /* margin-top: 29px; */
-}
 
 .wrapper.index1 .main .table_type02-container:nth-of-type(2) table tbody tr td {
   text-align: left;
@@ -421,7 +419,12 @@ body {
   margin-top: 10px;
 }
 
-.table_type02.index2 th {
+.wrapper.index2 .table_type02.index2 td {
+  text-align: center;
+}
+
+.table_type02.index2 th,
+.wrapper.index2 .table_type02.index2 td {
   padding-top: 11px;
   padding-bottom: 9px;
 }
@@ -456,6 +459,8 @@ body {
   height: 20px;
   border: 1px solid #d8d8d8;
   box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .input-wrapper_type00.index5 {
@@ -465,9 +470,14 @@ body {
 
 .input-wrapper_type01 {
   width: 312px;
-  height: 21px;
   border: 1px solid #d8d8d8;
   box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.input-wrapper_type01 input {
+  height: 21px;
 }
 
 .input-wrapper_type01.index3 {
@@ -536,8 +546,6 @@ body {
 .content_type02::before {
   content: '';
   position: absolute;
-  /* left: 0px; */
-  /* top: 8px; */
   width: 2px;
   height: 2px;
   background: url('./images/middle-dot.png');
@@ -576,9 +584,6 @@ body {
 */
 
 .button-container {
-  /* padding-top: 11px;
-  padding-bottom: 11px;
-  padding-right: 1px; */
   padding-top: 11px;
   padding-bottom: 10px;
   font-size: 0;
@@ -591,16 +596,12 @@ body {
 .button-container.index2 {
   padding-right: 2px;
 }
-.button-container.index3 {
-  /* padding-left: 4px; */
-}
 
 .button-container_01 {
   text-align: right;
 }
 
 .button-container.index3 .button_type01_orange_body {
-  /* padding: 0; */
   position: relative;
   padding-top: 5px;
   padding-left: 11px;
@@ -693,9 +694,6 @@ body {
 }
 
 .button_type02_head {
-  /* position: absolute;
-  top: 0;
-  right: 0; */
   display: inline-block;
   padding-left: 1px;
   height: 22px;
@@ -722,7 +720,7 @@ body {
 }
 
 .button_type02_body.index3 {
-  padding-left: 13px;
+  padding-left: 6px;
   padding-right: 5px;
 }
 

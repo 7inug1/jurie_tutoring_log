@@ -35,7 +35,7 @@
           </li>
         </ul>
         <div class="button-container_01">
-          <button class="button_type03_head index3">
+          <button type="button" class="button_type03_head index3">
             <span class="button_type03_tail">
               <span class="button_type03_body index3">
                 <a href="./엑셀_업로드_샘플.xlsx" download>
@@ -83,17 +83,32 @@
                     />
                   </div>
                   <div class="excel-file-upload-container">
-                    <label for="excel-file-upload" class="button_type02_head">
+                    <label
+                      for="excel-file-upload"
+                      class="button_type02_head file-upload-button"
+                    >
                       <span class="button_type02_tail">
                         <span class="button_type02_body index3">파일 찾기</span>
                       </span>
                     </label>
+                    <script>
+                      let fileInput = document.querySelector('#file-input');
+                      fileInput.value = '';
 
+                      function getEventChange() {
+                        let fileInput = document.querySelector('#file-input');
+                        let fileName =
+                          document.getElementById('excel-file-upload');
+                        fileName = fileName.value;
+                        console.log('filename: ' + fileName);
+                        fileInput.value = fileName;
+                      }
+                    </script>
                     <input
                       type="file"
                       name="excel file upload"
                       id="excel-file-upload"
-                      readonly
+                      onchange="getEventChange()"
                     />
                   </div>
                   <p
@@ -120,7 +135,7 @@
       </div>
       <div class="footer">
         <div class="button-container index3">
-          <button class="button_type01_orange_head">
+          <button type="button" class="button_type01_orange_head">
             <span class="button_type01_orange_tail">
               <span class="button_type01_orange_body">
                 <img
@@ -130,7 +145,7 @@
               </span>
             </span>
           </button>
-          <button class="button_type01_white_head">
+          <button type="button" class="button_type01_white_head">
             <span class="button_type01_white_tail">
               <span class="button_type01_white_body">
                 <img src="./images/button_cancel.png" alt="취소" />

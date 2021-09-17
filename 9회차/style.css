@@ -163,6 +163,10 @@ button {
   cursor: pointer;
 }
 
+label[for='file-upload-button'] {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }

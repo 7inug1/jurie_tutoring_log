@@ -227,7 +227,6 @@ h1 + p {
   position: relative;
   padding-left: 1px;
   font-size: 0;
-  /* background: red; */
 }
 
 .tab-container.index1 button:first-of-type {
@@ -360,7 +359,6 @@ h1 + p {
 
 .tab1 > ul.steps_title {
   position: absolute;
-  /* left: 36px; */
   color: white;
   font-family: 'Verdana', sans-serif;
   font-size: 9px;
@@ -432,20 +430,6 @@ h1 + p {
   background: url('./images/step04_icon.png') no-repeat;
 }
 
-/* .tab1 > ul > li:nth-of-type(4)::before {
-  content: '';
-  position: absolute;
-  top: 336px;
-  left: 30px;
-  width: 46px;
-  height: 50px;
-  background: url('./images/step04_icon.png') no-repeat;
-} */
-/* 
-.line-height_16px li p {
-  line-height: 16px;
-} */
-
 .letter-spacing_010px li p {
   letter-spacing: -0.1px;
 }
@@ -462,9 +446,6 @@ h1 + p {
   padding-left: 18px;
 }
 
-.tab1 > ul.steps_content > li:first-of-type {
-  /* margin-top: 43px; */
-}
 .tab1 > ul.steps_content > li:nth-of-type(2) {
   margin-top: 54px;
 }
@@ -500,19 +481,14 @@ h1 + p {
 
 .step01_desc-icon {
   position: relative;
-  /* padding-left: 11px; */
 }
 
 .step01_desc-icon::before {
   content: '';
   display: inline-block;
-  /* position: absolute; */
-
-  top: 0px;
-  left: 0px;
   padding-right: 11px;
   width: 19px;
   height: 13px;
-  background: url(./images/step01_desc-icon.png) no-repeat;
+  background: url('./images/step01_desc-icon.png') no-repeat;
   vertical-align: bottom;
 }
