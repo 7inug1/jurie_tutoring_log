@@ -2246,7 +2246,9 @@ body > .wrapper {
   }
 
   .navigation-wrapper {
-    display: none;
+    display: block;
+    position: relative;
+    z-index: 2;
   }
 
   .navigation-wrapper img {
@@ -2265,6 +2267,7 @@ body > .wrapper {
     position: absolute;
     top: 0px;
     left: 0;
+    /* display: inline-block; */
     padding-left: 0;
     margin-top: 0px;
   }
@@ -2369,8 +2372,11 @@ body > .wrapper {
   }
 
   .subnavigation {
-    display: inline-block;
-    position: relative;
+    /* display: inline-block; */
+    position: absolute;
+
+    left: 104px;
+    top: 0;
     text-align: center;
     z-index: 3;
     padding-left: 30px;
