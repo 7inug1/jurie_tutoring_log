@@ -44,7 +44,7 @@ function paintToDo(newToDo) {
 
   deleteButton.addEventListener('click', removeToDo);
   editButton.addEventListener('click', clickEditToDoButton);
-
+  li.addEventListener('dblclick', clickEditToDoButton);
   buttonContainer.appendChild(editButton);
   buttonContainer.appendChild(deleteButton);
   li.appendChild(listItem);
@@ -77,7 +77,7 @@ function submitToDoForm(event) {
 // 2. 제거
 function removeToDo(event) {
   if (confirm('Delete this ToDo?')) {
-    const li = event.target.parentNode.parentElement;
+    const li = event.target.closest('li');
     li.remove();
     todos = todos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
@@ -86,14 +86,15 @@ function removeToDo(event) {
 
 // 3. 수정
 function clickEditToDoButton(event) {
-  const editButton = event.target;
-  const deleteButton = editButton.nextSibling;
+  const li = event.target.closest('li');
+  const listItem = li.querySelector('.list-item');
+  const buttonContainer = li.querySelector('.button-container');
+  const editButton = buttonContainer.querySelector('.edit-button');
+  const deleteButton = buttonContainer.querySelector('.delete-button');
+
   editButton.classList.add(CLASSNAME_HIDDEN);
   deleteButton.classList.add(CLASSNAME_HIDDEN);
 
-  const buttonContainer = event.target.parentElement;
-  const li = event.target.parentNode.parentElement;
-  const listItem = li.querySelector('.list-item');
   originalToDo = listItem.innerText;
 
   // edit-input-container 아예 없을 때
@@ -104,6 +105,16 @@ function clickEditToDoButton(event) {
     const editInputContainer = document.createElement('div');
     const editInput = document.createElement('input');
     const confirmButton = document.createElement('button');
+
+    editInput.addEventListener('blur', (event) => {
+      console.log(event.target);
+      // document.addEventListener('click', (event) => {
+      // console.log(event.target);
+      closeInputField(event);
+      // if (event.target !== confirmButton) {
+      // }
+      // });
+    });
 
     editInputContainer.className = 'edit-input-container';
     editInput.type = 'text';
@@ -136,20 +147,22 @@ function clickEditToDoButton(event) {
     editInput.select();
     confirmButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
+
+    editInput.addEventListener('blur', (event) => {
+      closeInputField(event);
+    });
   }
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      console.log('ESC');
       closeInputField(event);
     }
   });
-
-  console.log('this');
 }
 
 // 3. 수정 - 수정 완료 버튼 클릭 시
 function clickConfirmEditToDoButton(event) {
-  const editInput = event.target.parentNode.parentElement
+  const editInput = event.target
+    .closest('li')
     .querySelector('.edit-input-form')
     .querySelector('.edit-input-container')
     .querySelector('input');
@@ -180,7 +193,7 @@ function closeInputField(event) {
 
 // 3. 수정 - form submit 시
 function submitConfirmEditToDo(event) {
-  // event.preventDefault();
+  console.log('submitConfirmEditToDo');
   const li = event.target.closest('li');
   const listItem = li.querySelector('.list-item');
   const editInputForm = li.querySelector('.edit-input-form');
@@ -188,17 +201,7 @@ function submitConfirmEditToDo(event) {
     '.edit-input-container'
   );
   const editInput = editInputContainer.querySelector('input');
-  // const buttonContainer = li.querySelector('.button-container');
-  // const confirmButton = buttonContainer.querySelector('.confirm-button');
-  // const editButton = buttonContainer.querySelector('.edit-button');
-  // const deleteButton = buttonContainer.querySelector('.delete-button');
 
-  // editButton.classList.remove(CLASSNAME_HIDDEN);
-  // deleteButton.classList.remove(CLASSNAME_HIDDEN);
-  // confirmButton.classList.add(CLASSNAME_HIDDEN);
-
-  // listItem.classList.remove(CLASSNAME_HIDDEN);
-  // editInputForm.classList.add(CLASSNAME_HIDDEN);
   closeInputField(event);
 
   if (editInput.value !== originalToDo) {
@@ -215,6 +218,5 @@ function submitConfirmEditToDo(event) {
     saveToDos();
 
     editInput.value = '';
-  } else {
   }
 }
