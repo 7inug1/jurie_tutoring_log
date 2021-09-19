@@ -4,7 +4,7 @@
   font-family: 'Nanum Brush';
   src: url('../fonts/NanumBrush/NanumBrush.woff') format('woff'), url('../fonts/NanumBrush/NanumBrush.woff2') format('woff2');
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 /* 
       #    #  ####  #####  #    # #      ######  ####        
       ##  ## #    # #    # #    # #      #      #            
@@ -45,34 +45,42 @@
   width: 100%;
 }
 
-.button00.noncurrent {
+.button00 {
   padding-left: 2px;
   background: url('../images/header/navigation/tab_head.png') left no-repeat;
 }
 
-.button00.noncurrent > .tail {
+.button00 > .tail {
   padding-right: 2px;
   background: url('../images/header/navigation/tab_tail.png') right no-repeat;
 }
 
-.button00.noncurrent > .tail > .body {
+.button00 > .tail > .body {
   width: 100px;
   background: url('../images/header/navigation/tab_body.png') center repeat-x;
   box-sizing: border-box;
+  color: #3e3e3e;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .button00 > .tail > .body {
-  padding-top: 15px;
+  padding-top: 11px;
+  padding-right: 2px;
 }
 
 .button00.current > .tail > .body {
   box-sizing: border-box;
   width: 104px;
+  color: #ffffff;
+  background: #8009ef;
 }
 
-.button00.current {
-  background: #8009ef;
-  height: 39px;
+.button00.current,
+.button00.current > .tail,
+.button00.current > .tail > .body {
+  /* height: 39px; */
 }
 
 .button01,
@@ -442,6 +450,10 @@ body > .wrapper {
   padding-bottom: 27px;
   box-sizing: border-box;
   vertical-align: top;
+}
+
+.subnavigation > li > button {
+  cursor: default;
 }
 
 .subnavigation > li > ul {
@@ -2182,9 +2194,9 @@ body > .wrapper {
     width: auto;
   }
 
-  .button00.noncurrent,
-  .button00.noncurrent > .tail,
-  .button00.noncurrent > .tail > .body {
+  .button00,
+  .button00 > .tail,
+  .button00 > .tail > .body {
     display: inline-block;
   }
 
@@ -2217,8 +2229,8 @@ body > .wrapper {
   /* utility */
   .wrapper > .header .utility {
     position: absolute;
-    top: 16px;
-    right: 8px;
+    top: 40px;
+    right: 20px;
     text-align: center;
   }
 
@@ -2253,19 +2265,23 @@ body > .wrapper {
   }
 
   .navigation-wrapper .dummy-wrap {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 100px);
+    background: rgba(0, 0, 0, 0.4);
   }
 
   .navigation {
+    display: none;
     position: absolute;
     top: 0px;
     left: 0;
     padding-left: 0;
     margin-top: 0px;
+    z-index: 1;
   }
 
   .navigation li {
@@ -2328,8 +2344,8 @@ body > .wrapper {
 
   .hamburger-icon {
     position: absolute;
-    top: 12px;
-    left: 8px;
+    top: 40px;
+    left: 20px;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -2368,6 +2384,7 @@ body > .wrapper {
   }
 
   .subnavigation {
+    display: none;
     position: absolute;
     left: 104px;
     top: 0;
@@ -2380,6 +2397,10 @@ body > .wrapper {
   .subnavigation > li {
     display: block;
     padding: 10px 0 10px 0;
+  }
+
+  .subnavigation > li > button {
+    cursor: pointer;
   }
 
   .subnavigation > li:not(:first-of-type) > ul {
