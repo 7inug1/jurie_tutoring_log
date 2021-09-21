@@ -1380,6 +1380,10 @@ body > .wrapper {
   background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') 0px 0px no-repeat;
 }
 
+.main .tab-container .content .checkpoint-container .body .left > ul {
+  padding-left: 27px;
+}
+
 .main .tab-container .content .checkpoint-container .body .left > ul,
 .main .tab-container .content .checkpoint-container .body .right .paragraph-container {
   z-index: 2;
@@ -2558,6 +2562,10 @@ body > .wrapper {
   /* 2. tips-container */
   .main .tab-container .content .tips-container {
     text-align: center;
+  }
+
+  .main .tab-container .content .tips-container .content {
+    text-align: left;
   }
 
   .main .tab-container .content .tips-container ul li p {
