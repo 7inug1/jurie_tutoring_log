@@ -1300,6 +1300,15 @@ body > .wrapper {
   background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') -11px -4px no-repeat;
 }
 
+/* .main .tab-container .content .checkpoint-container .body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 978px;
+  height: 362px;
+} */
+
 .main .tab-container .content .checkpoint-container .body img {
   display: block;
 }
@@ -1360,7 +1369,7 @@ body > .wrapper {
   right: -39px;
   background: url('../images/main/tab-container/checkpoint-container/body/vertical-divider.png') no-repeat;
   width: 35px;
-  height: 375px;
+  height: 372px;
 }
 
 .main .tab-container .content .checkpoint-container .body .right::before {
@@ -1377,7 +1386,7 @@ body > .wrapper {
   position: relative;
   padding-left: 45px;
   vertical-align: top;
-  background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') 0px 0px no-repeat;
+  /* background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') 0px 0px no-repeat; */
 }
 
 .main .tab-container .content .checkpoint-container .body .left > ul {
@@ -2545,18 +2554,19 @@ body > .wrapper {
     padding-right: 0;
   }
 
-  .main .tab-container .content .checkpoint-container .body .left > ul > .list-one {
+  /* .main .tab-container .content .checkpoint-container .body .left > ul > .list-one {
     padding-right: 10%;
   }
 
   .main .tab-container .content .checkpoint-container .body .left > ul > .list-two,
   .main .tab-container .content .checkpoint-container .body .left > ul > .list-three {
     padding-right: 25%;
-  }
+  } */
   .main .tab-container .content .checkpoint-container .body .right {
     margin-top: 20px;
     padding-left: 0;
-    padding-right: 10%;
+    padding-right: 0;
+    /* background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') repeat-x; */
   }
 
   /* 2. tips-container */
@@ -2641,6 +2651,16 @@ body > .wrapper {
   .main .tab-container .content .checkpoint-container .body {
     padding-left: 0;
     text-align: center;
+    background: url('../images/main/tab-container/checkpoint-container/body/grid-background.png') -11px -4px repeat;
+  }
+
+  .main .tab-container .content .checkpoint-container .body::after {
+    /* content: '';
+    position: absolute;
+    top: 0;
+    left: 0; */
+    /* width: 978px;
+    height: 362px; */
   }
 
   .main .tab-container .content .checkpoint-container .body .left::after {
