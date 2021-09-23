@@ -107,7 +107,7 @@ body {
   border: 1px solid rgb(181, 218, 250);
 }
 
-.confirm-button {
+.submit-button {
   position: absolute;
   top: 0;
   right: 18px;

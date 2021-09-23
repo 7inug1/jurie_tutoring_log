@@ -61,6 +61,7 @@ function clickAddToDoButton() {
 
 function submitToDoForm(event) {
   event.preventDefault();
+  console.log('submitToDoForm');
   const newToDo = toDoInput.value;
   toDoInput.value = '';
 
@@ -84,7 +85,6 @@ function removeToDo(event) {
   }
 }
 
-// 3. 수정
 function clickEditToDoButton(event) {
   const li = event.target.closest('li');
   const listItem = li.querySelector('.list-item');
@@ -100,57 +100,61 @@ function clickEditToDoButton(event) {
   // edit-input-container 아예 없을 때
   if (li.querySelector('.edit-input-container') === null) {
     // edit-related var declaration
+    const editInputContainer = document.createElement('div');
     const editInputForm = document.createElement('form');
     editInputForm.className = 'edit-input-form';
-    const editInputContainer = document.createElement('div');
     const editInput = document.createElement('input');
-    const confirmButton = document.createElement('button');
+    // const editInputContainer = document.createElement('div');
+    const submitButton = document.createElement('button');
 
-    editInput.addEventListener('blur', (event) => {
-      console.log(event.target);
-      // document.addEventListener('click', (event) => {
-      // console.log(event.target);
-      closeInputField(event);
-      // if (event.target !== confirmButton) {
-      // }
-      // });
-    });
+    // editInput.addEventListener('blur', blur);
+
+    // function blur(event) {
+    //   console.log(event.target);
+    //   closeInputField(event);
+    //   editInput.removeEventListener('blur', blur);
+    // }
 
     editInputContainer.className = 'edit-input-container';
     editInput.type = 'text';
     editInput.required = true;
-    confirmButton.className = 'confirm-button';
-    confirmButton.type = 'submit';
-    confirmButton.innerText = '✔️';
+    submitButton.className = 'submit-button';
+    submitButton.type = 'submit';
+    submitButton.innerText = '✔️';
     editInputContainer.appendChild(editInput);
     editInputForm.appendChild(editInputContainer);
+    editInputForm.appendChild(submitButton);
     li.prepend(editInputForm);
     editInput.value = originalToDo;
     editInput.select();
     listItem.classList.add(CLASSNAME_HIDDEN);
 
-    buttonContainer.prepend(confirmButton);
+    // buttonContainer.prepend(submitButton);
 
-    confirmButton.addEventListener('click', clickConfirmEditToDoButton);
+    submitButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
   } else {
     const editInputForm = li.querySelector('.edit-input-form');
     const editInputContainer = li.querySelector('.edit-input-container');
     const editInput = editInputContainer.querySelector('input');
     const buttonContainer = li.querySelector('.button-container');
-    const confirmButton = buttonContainer.querySelector('.confirm-button');
+    const submitButton = editInputForm.querySelector('.submit-button');
     editInputForm.classList.remove(CLASSNAME_HIDDEN);
     editInputContainer.querySelector('input').value = originalToDo;
     listItem.classList.add(CLASSNAME_HIDDEN);
-    confirmButton.classList.remove(CLASSNAME_HIDDEN);
+    submitButton.classList.remove(CLASSNAME_HIDDEN);
 
     editInput.select();
-    confirmButton.addEventListener('click', clickConfirmEditToDoButton);
+    submitButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
 
-    editInput.addEventListener('blur', (event) => {
-      closeInputField(event);
-    });
+    // editInput.addEventListener('blur', blur);
+
+    // function blur(event) {
+    //   console.log(event.target);
+    //   closeInputField(event);
+    //   editInput.removeEventListener('blur', blur);
+    // }
   }
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
@@ -159,8 +163,8 @@ function clickEditToDoButton(event) {
   });
 }
 
-// 3. 수정 - 수정 완료 버튼 클릭 시
 function clickConfirmEditToDoButton(event) {
+  console.log('clickConfirmEditToDoButton');
   const editInput = event.target
     .closest('li')
     .querySelector('.edit-input-form')
@@ -177,21 +181,23 @@ function closeInputField(event) {
   const li = event.target.closest('li');
   const listItem = li.querySelector('.list-item');
   const editInputForm = li.querySelector('.edit-input-form');
+  const editInputContainer = editInputForm.querySelector(
+    'edit-input-container'
+  );
 
   const buttonContainer = li.querySelector('.button-container');
-  const confirmButton = buttonContainer.querySelector('.confirm-button');
+  const submitButton = editInputForm.querySelector('.submit-button');
   const editButton = buttonContainer.querySelector('.edit-button');
   const deleteButton = buttonContainer.querySelector('.delete-button');
 
   editButton.classList.remove(CLASSNAME_HIDDEN);
   deleteButton.classList.remove(CLASSNAME_HIDDEN);
-  confirmButton.classList.add(CLASSNAME_HIDDEN);
+  submitButton.classList.add(CLASSNAME_HIDDEN);
 
   listItem.classList.remove(CLASSNAME_HIDDEN);
   editInputForm.classList.add(CLASSNAME_HIDDEN);
 }
 
-// 3. 수정 - form submit 시
 function submitConfirmEditToDo(event) {
   console.log('submitConfirmEditToDo');
   const li = event.target.closest('li');
