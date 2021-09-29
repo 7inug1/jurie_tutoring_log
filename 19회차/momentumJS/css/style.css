@@ -98,7 +98,13 @@ body {
   right: 0;
 }
 
-.todo-button {
+.todo-list .sort-button-container {
+  text-align: left;
+}
+
+.todo-button,
+.alphabetical-sort-button,
+.date-sort-button {
   padding: 2px;
   color: #5353ff;
   margin-top: 5px;

@@ -2,14 +2,22 @@ const toDoForm = document.querySelector('.todo-form');
 const toDoInput = document.querySelector('.todo-form input');
 const toDoList = document.querySelector('.todo-list');
 const addToDoButton = document.querySelector('.todo-button');
-
+const alphabeticalSortButton = document.querySelector(
+  '.alphabetical-sort-button'
+);
+const dateSortButton = document.querySelector('.date-sort-button');
 const TODOS_KEY = 'todo';
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 let originalToDo = '';
 let todos = [];
 
+let alphabeticalIsAscending = false;
+let dateIsAscending = false;
+
 toDoForm.addEventListener('submit', submitToDoForm);
+
+// console.log('savedToDos: ' + savedToDos);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
@@ -22,6 +30,7 @@ function saveToDos() {
 }
 
 function paintToDo(newToDo) {
+  // console.log(newToDo);
   // for new item to add
   const listItem = document.createElement('div');
   const li = document.createElement('li');
@@ -49,6 +58,71 @@ function paintToDo(newToDo) {
   li.appendChild(buttonContainer);
   toDoList.appendChild(li);
 }
+
+alphabeticalSortButton.addEventListener('click', alphabeticalSortToDos);
+dateSortButton.addEventListener('click', dateSortToDos);
+
+function alphabeticalSortToDos() {
+  toDoList.innerHTML = '';
+
+  console.log(toDoList.childNodes);
+  if (!alphabeticalIsAscending) {
+    alphabeticalIsAscending = !alphabeticalIsAscending;
+    todos.sort((a, b) => {
+      if (a.text.toString().toLowerCase() < b.text.toString().toLowerCase()) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  } else {
+    alphabeticalIsAscending = !alphabeticalIsAscending;
+    todos.sort((a, b) => {
+      console.log(Number.isInteger(a));
+      // if (Number.isInteger(a) && Number.isInteger(b)) {
+      //   return a - b;
+      // }
+
+      if (a.text.toString().toLowerCase() > b.text.toString().toLowerCase()) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  }
+  console.log(todos);
+
+  todos.forEach(paintToDo); //?
+  // paintToDo(todos);
+}
+
+function dateSortToDos() {
+  // 리스트 지우기
+  toDoList.innerHTML = '';
+  // sort 시스틈 (by id)로 만들기 - 2가지
+  if (!dateIsAscending) {
+    dateIsAscending = !dateIsAscending;
+    todos.sort((a, b) => {
+      if (a.id < b.id) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  } else {
+    dateIsAscending = !dateIsAscending;
+    todos.sort((a, b) => {
+      if (a.id > b.id) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  }
+  // 그리기
+  todos.forEach(paintToDo);
+}
+
 // 1. 추가
 
 function submitToDoForm(event) {
