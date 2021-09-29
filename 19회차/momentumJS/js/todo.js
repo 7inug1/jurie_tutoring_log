@@ -5,13 +5,10 @@ const addToDoButton = document.querySelector('.todo-button');
 
 const TODOS_KEY = 'todo';
 const savedToDos = localStorage.getItem(TODOS_KEY);
-// const CLASSNAME_HIDDEN = 'hidden';
 
 let originalToDo = '';
-
 let todos = [];
 
-addToDoButton.addEventListener('click', clickAddToDoButton);
 toDoForm.addEventListener('submit', submitToDoForm);
 
 if (savedToDos !== null) {
@@ -45,6 +42,7 @@ function paintToDo(newToDo) {
   deleteButton.addEventListener('click', removeToDo);
   editButton.addEventListener('click', clickEditToDoButton);
   li.addEventListener('dblclick', clickEditToDoButton);
+
   buttonContainer.appendChild(editButton);
   buttonContainer.appendChild(deleteButton);
   li.appendChild(listItem);
@@ -53,15 +51,8 @@ function paintToDo(newToDo) {
 }
 // 1. 추가
 
-function clickAddToDoButton() {
-  if (toDoInput.required === true) {
-    submitToDoForm();
-  }
-}
-
 function submitToDoForm(event) {
   event.preventDefault();
-  console.log('submitToDoForm');
   const newToDo = toDoInput.value;
   toDoInput.value = '';
 
@@ -99,21 +90,13 @@ function clickEditToDoButton(event) {
 
   // edit-input-container 아예 없을 때
   if (li.querySelector('.edit-input-container') === null) {
+    console.log(event.target.closest('li').id);
     // edit-related var declaration
     const editInputContainer = document.createElement('div');
     const editInputForm = document.createElement('form');
     editInputForm.className = 'edit-input-form';
     const editInput = document.createElement('input');
-    // const editInputContainer = document.createElement('div');
     const submitButton = document.createElement('button');
-
-    // editInput.addEventListener('blur', blur);
-
-    // function blur(event) {
-    //   console.log(event.target);
-    //   closeInputField(event);
-    //   editInput.removeEventListener('blur', blur);
-    // }
 
     editInputContainer.className = 'edit-input-container';
     editInput.type = 'text';
@@ -125,36 +108,25 @@ function clickEditToDoButton(event) {
     editInputForm.appendChild(editInputContainer);
     editInputForm.appendChild(submitButton);
     li.prepend(editInputForm);
+
     editInput.value = originalToDo;
     editInput.select();
     listItem.classList.add(CLASSNAME_HIDDEN);
-
-    // buttonContainer.prepend(submitButton);
-
-    submitButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
   } else {
+    console.log(event.target);
     const editInputForm = li.querySelector('.edit-input-form');
     const editInputContainer = li.querySelector('.edit-input-container');
     const editInput = editInputContainer.querySelector('input');
-    const buttonContainer = li.querySelector('.button-container');
     const submitButton = editInputForm.querySelector('.submit-button');
+
     editInputForm.classList.remove(CLASSNAME_HIDDEN);
-    editInputContainer.querySelector('input').value = originalToDo;
+    editInput.value = originalToDo;
     listItem.classList.add(CLASSNAME_HIDDEN);
     submitButton.classList.remove(CLASSNAME_HIDDEN);
 
     editInput.select();
-    submitButton.addEventListener('click', clickConfirmEditToDoButton);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
-
-    // editInput.addEventListener('blur', blur);
-
-    // function blur(event) {
-    //   console.log(event.target);
-    //   closeInputField(event);
-    //   editInput.removeEventListener('blur', blur);
-    // }
   }
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
@@ -163,21 +135,10 @@ function clickEditToDoButton(event) {
   });
 }
 
-function clickConfirmEditToDoButton(event) {
-  console.log('clickConfirmEditToDoButton');
-  const editInput = event.target
-    .closest('li')
-    .querySelector('.edit-input-form')
-    .querySelector('.edit-input-container')
-    .querySelector('input');
-  if (editInput.required === true) {
-    submitConfirmEditToDo(event);
-  }
-}
-
 function closeInputField(event) {
   console.log('closeinputfield');
   event.preventDefault();
+  console.log(event.target);
   const li = event.target.closest('li');
   const listItem = li.querySelector('.list-item');
   const editInputForm = li.querySelector('.edit-input-form');
