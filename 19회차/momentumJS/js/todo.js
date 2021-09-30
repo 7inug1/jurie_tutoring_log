@@ -16,8 +16,8 @@ let alphabeticalIsAscending = false;
 let dateIsAscending = false;
 
 toDoForm.addEventListener('submit', submitToDoForm);
-
-// console.log('savedToDos: ' + savedToDos);
+alphabeticalSortButton.addEventListener('click', alphabeticalSortToDos);
+dateSortButton.addEventListener('click', dateSortToDos);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
@@ -34,6 +34,7 @@ function paintToDo(newToDo) {
   // for new item to add
   const listItem = document.createElement('div');
   const li = document.createElement('li');
+  li.setAttribute('data-isOpen', false);
   li.id = newToDo.id;
   listItem.className = 'list-item';
   listItem.innerText = newToDo.text;
@@ -58,9 +59,6 @@ function paintToDo(newToDo) {
   li.appendChild(buttonContainer);
   toDoList.appendChild(li);
 }
-
-alphabeticalSortButton.addEventListener('click', alphabeticalSortToDos);
-dateSortButton.addEventListener('click', dateSortToDos);
 
 function alphabeticalSortToDos() {
   toDoList.innerHTML = '';
@@ -162,9 +160,11 @@ function clickEditToDoButton(event) {
 
   originalToDo = listItem.innerText;
 
+  console.log(li);
+  console.log(li.dataset.isOpen);
   // edit-input-container 아예 없을 때
   if (li.querySelector('.edit-input-container') === null) {
-    console.log(event.target.closest('li').id);
+    // console.log(event.target.closest('li').id);
     // edit-related var declaration
     const editInputContainer = document.createElement('div');
     const editInputForm = document.createElement('form');
@@ -188,7 +188,7 @@ function clickEditToDoButton(event) {
     listItem.classList.add(CLASSNAME_HIDDEN);
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
   } else {
-    console.log(event.target);
+    // console.log(event.target);
     const editInputForm = li.querySelector('.edit-input-form');
     const editInputContainer = li.querySelector('.edit-input-container');
     const editInput = editInputContainer.querySelector('input');
