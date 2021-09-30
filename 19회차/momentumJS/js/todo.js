@@ -1,40 +1,34 @@
-const toDoForm = document.querySelector('.todo-form');
-const toDoInput = document.querySelector('.todo-form input');
 const toDoList = document.querySelector('.todo-list');
-const addToDoButton = document.querySelector('.todo-button');
-const alphabeticalSortButton = document.querySelector(
-  '.alphabetical-sort-button'
-);
-const dateSortButton = document.querySelector('.date-sort-button');
-const TODOS_KEY = 'todo';
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-let originalToDo = '';
+const toDoLists = toDoList.getElementsByTagName('li');
 let todos = [];
 
-let alphabeticalIsAscending = false;
-let dateIsAscending = false;
+// if (toDoLists.dataset.editable === 'true') {
+//   console.log('true appears');
+// }
 
-toDoForm.addEventListener('submit', submitToDoForm);
-alphabeticalSortButton.addEventListener('click', alphabeticalSortToDos);
-dateSortButton.addEventListener('click', dateSortToDos);
+// event delegation
+// toDoList.addEventListener('click', (event) => {
+//   console.log(event.target);
+// });
+// console.log(toDoLists);
 
+// <localStorage>
+const TODOS_KEY = 'todo';
+const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   todos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
-
 function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
 }
-
 function paintToDo(newToDo) {
   // console.log(newToDo);
   // for new item to add
   const listItem = document.createElement('div');
   const li = document.createElement('li');
-  li.setAttribute('data-isOpen', false);
+  li.setAttribute('data-editable', !!false);
   li.id = newToDo.id;
   listItem.className = 'list-item';
   listItem.innerText = newToDo.text;
@@ -60,6 +54,36 @@ function paintToDo(newToDo) {
   toDoList.appendChild(li);
 }
 
+// <todo-input field>
+const toDoForm = document.querySelector('.todo-form');
+const toDoInput = document.querySelector('.todo-form input');
+toDoForm.addEventListener('submit', submitToDoForm);
+function submitToDoForm(event) {
+  event.preventDefault();
+  const newToDo = toDoInput.value;
+  toDoInput.value = '';
+
+  const newToDoObj = {
+    text: newToDo,
+    id: Date.now(),
+  };
+
+  todos.push(newToDoObj);
+  paintToDo(newToDoObj);
+  saveToDos();
+}
+
+// <sorting>
+const alphabeticalSortButton = document.querySelector(
+  '.alphabetical-sort-button'
+);
+const dateSortButton = document.querySelector('.date-sort-button');
+
+alphabeticalSortButton.addEventListener('click', alphabeticalSortToDos);
+dateSortButton.addEventListener('click', dateSortToDos);
+
+let alphabeticalIsAscending = false;
+let dateIsAscending = false;
 function alphabeticalSortToDos() {
   toDoList.innerHTML = '';
 
@@ -121,24 +145,7 @@ function dateSortToDos() {
   todos.forEach(paintToDo);
 }
 
-// 1. 추가
-
-function submitToDoForm(event) {
-  event.preventDefault();
-  const newToDo = toDoInput.value;
-  toDoInput.value = '';
-
-  const newToDoObj = {
-    text: newToDo,
-    id: Date.now(),
-  };
-
-  todos.push(newToDoObj);
-  paintToDo(newToDoObj);
-  saveToDos();
-}
-
-// 2. 제거
+// <remove>
 function removeToDo(event) {
   if (confirm('Delete this ToDo?')) {
     const li = event.target.closest('li');
@@ -148,8 +155,19 @@ function removeToDo(event) {
   }
 }
 
+// <todo edit>
+let originalToDo = '';
+let editedLI = '';
+// 리스트 더블클릭 OR 수정 버튼 클릭
 function clickEditToDoButton(event) {
+  console.log('before', editedLI);
+  console.log(typeof editedLI);
+  if (typeof editedLI === 'object') {
+    closeInputField(editedLI);
+  }
+  const ul = event.target.closest('ul');
   const li = event.target.closest('li');
+  const lists = ul.getElementsByTagName('li');
   const listItem = li.querySelector('.list-item');
   const buttonContainer = li.querySelector('.button-container');
   const editButton = buttonContainer.querySelector('.edit-button');
@@ -159,9 +177,28 @@ function clickEditToDoButton(event) {
   deleteButton.classList.add(CLASSNAME_HIDDEN);
 
   originalToDo = listItem.innerText;
+  console.log(ul);
+  // console.log(li);
+  li.setAttribute('data-editable', !!true);
 
-  console.log(li);
-  console.log(li.dataset.isOpen);
+  li.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeInputField(event);
+    }
+  });
+
+  editedLI = event;
+  console.log('after', editedLI);
+
+  // for (let i = 0; i < lists.length; i++) {
+  //   if (lists[i].dataset.editable == 'true') {
+  //     if (li.id !== lists[i].id) {
+  //       lists[i].setAttribute('data-editable', !!false);
+  //       // closeInputField(event);
+  //     }
+  //   }
+  // }
+  // console.log(li.dataset.editable);
   // edit-input-container 아예 없을 때
   if (li.querySelector('.edit-input-container') === null) {
     // console.log(event.target.closest('li').id);
@@ -202,37 +239,14 @@ function clickEditToDoButton(event) {
     editInput.select();
     editInputForm.addEventListener('submit', submitConfirmEditToDo);
   }
-  document.addEventListener('keydown', (event) => {
+  li.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeInputField(event);
     }
   });
 }
 
-function closeInputField(event) {
-  console.log('closeinputfield');
-  event.preventDefault();
-  console.log(event.target);
-  const li = event.target.closest('li');
-  const listItem = li.querySelector('.list-item');
-  const editInputForm = li.querySelector('.edit-input-form');
-  const editInputContainer = editInputForm.querySelector(
-    'edit-input-container'
-  );
-
-  const buttonContainer = li.querySelector('.button-container');
-  const submitButton = editInputForm.querySelector('.submit-button');
-  const editButton = buttonContainer.querySelector('.edit-button');
-  const deleteButton = buttonContainer.querySelector('.delete-button');
-
-  editButton.classList.remove(CLASSNAME_HIDDEN);
-  deleteButton.classList.remove(CLASSNAME_HIDDEN);
-  submitButton.classList.add(CLASSNAME_HIDDEN);
-
-  listItem.classList.remove(CLASSNAME_HIDDEN);
-  editInputForm.classList.add(CLASSNAME_HIDDEN);
-}
-
+// <todo edited submit>
 function submitConfirmEditToDo(event) {
   console.log('submitConfirmEditToDo');
   const li = event.target.closest('li');
@@ -260,4 +274,32 @@ function submitConfirmEditToDo(event) {
 
     editInput.value = '';
   }
+}
+
+//
+function closeInputField(event) {
+  console.log(event);
+  console.log('closeinputfield');
+  event.preventDefault();
+  console.log(event.target);
+  const li = event.target.closest('li');
+  const listItem = li.querySelector('.list-item');
+  const editInputForm = li.querySelector('.edit-input-form');
+  const editInputContainer = editInputForm.querySelector(
+    'edit-input-container'
+  );
+
+  const buttonContainer = li.querySelector('.button-container');
+  const submitButton = editInputForm.querySelector('.submit-button');
+  const editButton = buttonContainer.querySelector('.edit-button');
+  const deleteButton = buttonContainer.querySelector('.delete-button');
+
+  li.setAttribute('data-editable', false);
+
+  editButton.classList.remove(CLASSNAME_HIDDEN);
+  deleteButton.classList.remove(CLASSNAME_HIDDEN);
+  submitButton.classList.add(CLASSNAME_HIDDEN);
+
+  listItem.classList.remove(CLASSNAME_HIDDEN);
+  editInputForm.classList.add(CLASSNAME_HIDDEN);
 }
