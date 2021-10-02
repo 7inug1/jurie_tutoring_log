@@ -92,7 +92,6 @@ body {
 }
 
 .todo-list .button-container {
-  display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
@@ -134,17 +133,23 @@ body {
 
 .login-form {
   position: relative;
-  /* margin-top: 20px; */
   text-align: right;
 }
 
 .login-button {
+  display: block;
+  width: 100%;
   padding: 2px;
   color: #5353ff;
-  margin-top: 5px;
+  margin-top: 20px;
   font-size: 15px;
+  font-weight: bolder;
   background: aliceblue;
   border: 1px solid rgb(181, 218, 250);
+}
+
+.login-button:hover {
+  transform: scale(1.1);
 }
 
 .login {

@@ -2,11 +2,7 @@ const toDoList = document.querySelector('.todo-list');
 const toDoLists = toDoList.getElementsByTagName('li');
 let todos = [];
 
-// if (toDoLists.dataset.editable === 'true') {
-//   console.log('true appears');
-// }
-
-// event delegation
+// <event delegation - implement 예정>
 // toDoList.addEventListener('click', (event) => {
 //   console.log(event.target);
 // });
@@ -114,8 +110,7 @@ function alphabeticalSortToDos() {
   }
   console.log(todos);
 
-  todos.forEach(paintToDo); //?
-  // paintToDo(todos);
+  todos.forEach(paintToDo);
 }
 
 function dateSortToDos() {
@@ -141,7 +136,6 @@ function dateSortToDos() {
       }
     });
   }
-  // 그리기
   todos.forEach(paintToDo);
 }
 
