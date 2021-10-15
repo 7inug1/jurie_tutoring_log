@@ -175,105 +175,90 @@ subnavigation.className = "subnavigation"
 let navigationStr = ''
 let subnavigationStr = ''
 
-// let header = document.querySelector('.header');
-// header.addEventListener('click', () => {
-//   console.log("click")
-// }) 
 
-
-navigationLists.map((navigationList) => {
-  console.log(navigationList)
-})
-
-// navigationLists.map((navigationList) => { console.log(navigationList.title) })
 navigationLists.map((navigationList) => {
   if (navigationList.number === null) {
-    navigationStr += `<li>
-    <button type="button" class="button00">
-    <span class="tail">
-    <span class="body">
-    ${navigationList.title}</span>
-    </span>
-    </button>
+    navigationStr +=
+    `<li>
+      <button type="button" class="button00">
+        <span class="tail">
+          <span class="body">
+            ${navigationList.title}</span>
+          </span>
+      </button>
     </li>`
   } else {
-    
-    navigationStr += `<li>
-    <button type="button" class="button00">
-    <span class="tail">
-    <span class="body">
-    <span class="number">${navigationList.number}</span>
-    ${navigationList.title}</span>
-    </span>
-    </button>
+    navigationStr +=
+    `<li>
+      <button type="button" class="button00">
+        <span class="tail">
+          <span class="body">
+            <span class="number">${navigationList.number}</span>
+              ${navigationList.title}
+            </span>
+          </span>
+      </button>
     </li>`
   }
-})
-
-navigationLists.map((navigationList) => {
-  
-  
-  // console.log(navigationList.title)
-  
-  
   navigationList.list.map((subnavigationList) => {
-    subnavigationStr += `
-    <li>
-    <button type="button">
-      ${subnavigationList.title}
-    </button>
-    <ul>
-    `
+    subnavigationStr +=
+    `<li>
+      <button type="button">
+        ${subnavigationList.title}
+      </button>
+      <ul>`
+    
     subnavigationList.list.map((subsubnavigationList) => {
       if (subsubnavigationList.status === null) {
-        subnavigationStr += `
-        <li>
-        <a href="#">
-          <span>${subsubnavigationList.title}</span>
-          <span class="icon-container"></span>
-        </a>
-      </li>
-        `
+        subnavigationStr +=
+        `<li>
+          <a href="#">
+            <span>${subsubnavigationList.title}</span>
+            <span class="icon-container"></span>
+          </a>
+        </li>`
       }
       else if (subsubnavigationList.status === "new") {
-        subnavigationStr += `
-        <li>
-        <a href="#" class="icon_n">
+        subnavigationStr +=
+        `<li>
+          <a href="#" class="icon_n">
           <span>${subsubnavigationList.title}</span>
           <span class="icon-container"><img src="../images/header/navigation/subnavigation/icon_N.png" alt="new"/></span>
         </a>
-      </li>
-        `
+        </li>`
       } else if (subsubnavigationList.status === "renewal") {
-        subnavigationStr += `
-        <li>
-        <a href="#" class="icon_r">
-          <span>${subsubnavigationList.title}</span>
-          <span class="icon-container"><img src="../images/header/navigation/subnavigation/icon_R.png" alt="renewal"/></span>
-        </a>
-      </li>
-        `
+        subnavigationStr +=
+        `<li>
+          <a href="#" class="icon_r">
+            <span>${subsubnavigationList.title}</span>
+            <span class="icon-container"><img src="../images/header/navigation/subnavigation/icon_R.png" alt="renewal"/></span>
+          </a>
+        </li>`
       }
       else if (subsubnavigationList.status === "renewalnew") {
-        subnavigationStr += `
-        <li>
-                  <a href="#" class="icon_rn">
-                    <span>${subsubnavigationList.title}</span>
-                    <span class="icon-container"><img src="../images/header/navigation/subnavigation/icon_R.png" alt="renewal"/><img src="../images/header/navigation/subnavigation/icon_N.png" alt="new"/></span>
-                  </a>
-                </li>
-                `
+        subnavigationStr +=
+        `<li>
+          <a href="#" class="icon_rn">
+            <span>${subsubnavigationList.title}</span>
+            <span class="icon-container"><img src="../images/header/navigation/subnavigation/icon_R.png" alt="renewal"/><img src="../images/header/navigation/subnavigation/icon_N.png" alt="new"/></span>
+          </a>
+        </li> `
       }
-
-      
-      
-      // console.log(typeof subsubnavigationList.status)
     })
-    subnavigationStr+=`</ul>
+    subnavigationStr +=
+    `</ul>
     </li>`
 
   })
-  // console.log(navigationList.list[0].list)
+})
+
+
+let button00 = document.querySelector('.navigation');
+button00.addEventListener('click', (event) => {
+  console.log(event.target)
+}) 
+window.addEventListener('load', () => {
+  console.log("loaded")
 })
 
 navigation.innerHTML = navigationStr
@@ -282,8 +267,3 @@ navigationWrapper2.appendChild(navigation)
 navigationWrapper2.appendChild(subnavigation)
 
 
-
-let button00 = document.querySelector('.navigation li');
-button00.addEventListener('click', () => {
-  console.log("click")
-}) 
