@@ -454,6 +454,8 @@ body > .wrapper {
 
 .subnavigation > li > button {
   cursor: default;
+  color:white;
+  font-weight: bolder;
 }
 
 .subnavigation > li > ul {
