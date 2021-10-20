@@ -643,9 +643,9 @@ function getRegions(navigationList) {
 
     getPensions(pensionUL, regionLI, subnavigationList);
 
-    regionLI.appendChild(pensionUL);
     regionLI.appendChild(getRegionButton(subnavigationList));
     subnavigation.appendChild(regionLI);
+    regionLI.appendChild(pensionUL);
   });
 }
 
