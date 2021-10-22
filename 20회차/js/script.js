@@ -587,40 +587,47 @@ let subnavigation = document.createElement('ul');
 navigationWrapper.className = 'navigation-wrapper';
 navigation.className = 'navigation';
 subnavigation.className = 'subnavigation';
+// let button = document.querySelector('.navigation');
+navigation.addEventListener('click', buttonOnClick);
 
 header.appendChild(navigationWrapper);
 
-// function getProvinces()
-navigationLists.forEach((navigationList, index) => {
-  let navigationLI = document.createElement('li');
+getProvinces();
 
+function getProvinces() {
+  navigationLists.forEach((navigationList, index) => {
+    navigation.appendChild(getProvinceButtonsList(navigationList, index));
+    navigationWrapper.appendChild(navigation);
+    navigationWrapper.appendChild(subnavigation);
+
+    getRegions(navigationList);
+  });
+}
+
+function getProvinceButtonsList(navigationList, index) {
+  let navigationLI = document.createElement('li');
+  navigationLI.id = index;
+  navigationLI.appendChild(getProvinceButtons(navigationList, index));
+
+  return navigationLI;
+}
+
+function getProvinceButtons(navigationList, index) {
+  console.log(navigationList);
   let button_head = document.createElement('button');
   let button_tail = document.createElement('span');
   let button_body = document.createElement('span');
-
-  // let numberSpan = document.createElement('span');
 
   button_head.className = 'button00';
   button_head.type = 'button';
   button_tail.className = 'tail';
   button_body.className = 'body';
   button_body.innerText = navigationList.title;
-
-  button_body.appendChild(getPensionNumberSpan(index));
+  if (navigationList.title !== '전국') button_body.appendChild(getPensionNumberSpan(index));
   button_tail.appendChild(button_body);
   button_head.appendChild(button_tail);
-
-  // getProvinceButtons()
-
-  navigationLI.appendChild(button_head);
-  navigation.appendChild(navigationLI);
-  navigationWrapper.appendChild(navigation);
-  navigationWrapper.appendChild(subnavigation);
-
-  getRegions(navigationList);
-});
-
-function getProvinceButtons() {}
+  return button_head;
+}
 function getPensionNumberSpan(index) {
   let numberSpan = document.createElement('span');
   numberSpan.className = 'number';
@@ -714,3 +721,9 @@ function getIconNew() {
 
 // navigationWrapper.appendChild(navigation)
 // navigationWrapper.appendChild(subnavigation)
+
+function buttonOnClick(event) {
+  let buttonID = event.target.closest('li').id;
+  console.log(buttonID);
+  return buttonID;
+}
