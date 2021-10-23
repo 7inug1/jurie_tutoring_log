@@ -588,7 +588,6 @@ navigationWrapper.className = 'navigation-wrapper';
 navigation.className = 'navigation';
 subnavigation.className = 'subnavigation';
 // let button = document.querySelector('.navigation');
-navigation.addEventListener('click', buttonOnClick);
 
 header.appendChild(navigationWrapper);
 
@@ -600,8 +599,18 @@ function getProvinces() {
     navigationWrapper.appendChild(navigation);
     navigationWrapper.appendChild(subnavigation);
 
+    // navigation.addEventListener('click', (event) => {
+    //   getRegions(event, navigationList);
+    // });
     getRegions(navigationList);
   });
+
+  navigation.addEventListener('click', (event) => {
+    buttonOnClick(event);
+  });
+
+  // let buttonID = event.target.closest('li').id;
+  // console.log(buttonID);
 }
 
 function getProvinceButtonsList(navigationList, index) {
@@ -613,7 +622,7 @@ function getProvinceButtonsList(navigationList, index) {
 }
 
 function getProvinceButtons(navigationList, index) {
-  console.log(navigationList);
+  // console.log(navigationList);
   let button_head = document.createElement('button');
   let button_tail = document.createElement('span');
   let button_body = document.createElement('span');
@@ -643,18 +652,43 @@ function getPensionNumbers(index) {
   return number;
 }
 
-function getRegions(navigationList) {
-  navigationList.list.forEach((subnavigationList) => {
-    let regionLI = document.createElement('li');
-    let pensionUL = document.createElement('ul');
-
-    getPensions(pensionUL, regionLI, subnavigationList);
-
-    regionLI.appendChild(getRegionButton(subnavigationList));
-    subnavigation.appendChild(regionLI);
-    regionLI.appendChild(pensionUL);
-  });
+function getRegions(navigationList, buttonID) {
+  console.log(buttonID);
+  if (buttonID === undefined) {
+    navigationList.list.forEach((subnavigationList) => {
+      console.log(subnavigationList);
+      let regionLI = document.createElement('li');
+      let pensionUL = document.createElement('ul');
+      getPensions(pensionUL, regionLI, subnavigationList);
+      regionLI.appendChild(getRegionButton(subnavigationList));
+      subnavigation.appendChild(regionLI);
+      regionLI.appendChild(pensionUL);
+    });
+  } else {
+    subnavigation.innerHTML = '';
+    navigationList.list.forEach((subnavigationList) => {
+      console.log(subnavigationList);
+      let regionLI = document.createElement('li');
+      let pensionUL = document.createElement('ul');
+      getPensions(pensionUL, regionLI, subnavigationList);
+      regionLI.appendChild(getRegionButton(subnavigationList));
+      subnavigation.appendChild(regionLI);
+      regionLI.appendChild(pensionUL);
+    });
+  }
 }
+
+// function getRegions(provinceID) {
+//   console.log(provinceID, 'provinceID');
+//   let regionLI = document.createElement('li');
+//   let pensionUL = document.createElement('ul');
+//   provinceID.list.forEach((province) => {
+//     getPensions(pensionUL, regionLI, province);
+//     regionLI.appendChild(getRegionButton(province));
+//     subnavigation.appendChild(regionLI);
+//     regionLI.appendChild(pensionUL);
+//   });
+// }
 
 // region
 function getRegionButton(subnavigationList) {
@@ -725,5 +759,6 @@ function getIconNew() {
 function buttonOnClick(event) {
   let buttonID = event.target.closest('li').id;
   console.log(buttonID);
-  return buttonID;
+  getRegions(navigationLists[buttonID], buttonID);
+  // return buttonID;
 }
