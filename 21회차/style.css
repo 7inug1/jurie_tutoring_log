@@ -271,7 +271,8 @@ body {
 
 .header .title01 {
   padding: 15px 0px 15px 15px;
-  font-size: 0;
+  /* font-size: 0; */
+  font-weight: bolder;
 }
 
 /* 
@@ -374,13 +375,16 @@ body {
   padding-top: 5px;
   padding-left: 16px;
   padding-right: 16px;
+  font-weight: bolder;
 }
 
 .button01_head_orange .button01_body {
   background: url('./images/button01_orange_body.png') center repeat-x;
+  color: #fff;
 }
 .button01_head_white .button01_body {
   background: url('./images/button01_white_body.png') center repeat-x;
+  color: #727272;
 }
 
 .button01_head_white.index5 {
@@ -506,14 +510,13 @@ body {
 
 /* customize */
 
-.button-container.index1,
-.button-container.index2,
-.button-container.index3,
-.button-container.index4,
-/* .button-container.index5, */
-.button-container.index6 {
-  padding-top: 11px;
-  padding-bottom: 10px;
+.button-container,
+.button-container,
+.button-container,
+.button-container,
+.button-container {
+  margin-top: 11px;
+  margin-bottom: 10px;
   /* padding-right: 2px; */
 }
 
