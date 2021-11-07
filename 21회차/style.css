@@ -336,8 +336,6 @@ body {
   text-align: center;
 }
 
-/* 공통 */
-
 .button01_head_orange,
 .button01_head_white,
 .button01_tail,
@@ -388,6 +386,21 @@ body {
 .button01_head_white.index5 {
   margin-left: 5px;
 }
+
+.button01,
+.button02,
+.button03 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.button01.body,
+.button02.body,
+.button03.body {
+  box-sizing: border-box;
+}
+
+/* 공통 */
 
 .button01,
 .button02,
