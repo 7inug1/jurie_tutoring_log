@@ -52,10 +52,28 @@ function getHeader(titleText) {
 
 function getMain() {
   let main = document.createElement('div');
+  let ul = document.createElement('ul');
+  let ul_li = document.createElement('li');
+  let ul_li_title = document.createElement('h2');
+  let ul_li_ul = document.createElement('ul');
+  let ul_li_ul_li = document.createElement('li');
+  let ul_li_ul_li_p = document.createElement('p');
   main.className = 'main01';
+  ul.className = 'content03';
+  ul_li_title.className = 'content03_title';
+  ul_li_title.innerText = '1. 캠페인 구분';
+  ul_li_ul.className = 'content03_content-container';
+  ul_li_ul_li.className = 'content03_content';
+  ul_li_ul_li_p.className = 'content';
+  ul_li_ul_li_p.innerText =
+    '캠페인은 고객님이 원하시는 발송 형태에 따라 3가지 중 선택할 수 있습니다.';
 
-  let content = document.createElement('div');
-  content.className = 'content03';
+  ul_li_ul_li.appendChild(ul_li_ul_li_p);
+  ul_li_ul.appendChild(ul_li_ul_li);
+  ul_li.appendChild(ul_li_title);
+  ul_li.appendChild(ul_li_ul);
+  ul.appendChild(ul_li);
+  main.appendChild(ul);
 
   return main;
 }
@@ -65,7 +83,9 @@ function getButtonContainer(confirmButtonText, cancelButtonText) {
   buttonContainer.className = 'button-container';
 
   buttonContainer.appendChild(getConfirmButton(confirmButtonText));
-  buttonContainer.appendChild(getCancelButton(cancelButtonText));
+  if (cancelButtonText) {
+    buttonContainer.appendChild(getCancelButton(cancelButtonText));
+  }
 
   return buttonContainer;
 }
