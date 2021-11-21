@@ -220,6 +220,21 @@ body {
   box-sizing: border-box;
 }
 
+.modal-container .wrapper01 {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  z-index: 1;
+}
+
+.wrapper01 .header,
+.wrapper01 .main01,
+.wrapper01 .button-container {
+  background: #fff;
+}
+
 .wrapper01.index1,
 .wrapper01.index2,
 .wrapper01.index3 {
@@ -1059,4 +1074,26 @@ body {
 .warning.whitespace-remover.index5 span,
 .warning.whitespace-remover.index5 strong {
   font-size: 11px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-link {
+  display: block;
+  margin-top: 100px;
+}
+
+.dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: url('./images/popup-background.png');
+}
+
+.modal-link {
+  cursor: pointer;
 }
