@@ -13,7 +13,7 @@ createCustomModal({
   dim: true,
   title: '제목1',
   content: undefined,
-  button: undefined,
+  button: 'undefined',
 });
 
 function createCustomModal(setting) {
@@ -35,6 +35,9 @@ function createCustomModal(setting) {
   let dim = document.createElement('div');
   dim.className = 'dim';
 
+  let buttonContainer = document.createElement('div');
+  buttonContainer.className = 'button-container';
+
   if (setting.dim) {
     dim.addEventListener('click', () => {
       closeModal(wrapper);
@@ -47,6 +50,13 @@ function createCustomModal(setting) {
 
   wrapper01.appendChild(header);
   wrapper01.appendChild(main);
+  wrapper01.appendChild(main);
+  if (setting.button === undefined) {
+    wrapper01.appendChild(getButtonContainer('확인'));
+  } else {
+    wrapper01.appendChild(getButtonContainer(setting.button));
+  }
+
   wrapper.appendChild(wrapper01);
   wrapper.appendChild(dim);
   modalContainer.appendChild(wrapper);
@@ -59,6 +69,11 @@ function createCustomModal(setting) {
   //   content.innerText = setting.content;
   // }
   // return wrapper;
+
+  if (setting.button === undefined) {
+    getButtonContainer('확인');
+  } else {
+  }
 }
 
 function getHeader(titleText) {
@@ -79,16 +94,30 @@ function getMain(content) {
 }
 
 // function getButtonContainer(wrapper, confirmButtonText, cancelButtonText) {
-//   let buttonContainer = document.createElement('div');
-//   buttonContainer.className = 'button-container';
+function getButtonContainer(confirmButtonText) {
+  let buttonContainer = document.createElement('div');
+  buttonContainer.className = 'button-container';
 
-//   buttonContainer.appendChild(getConfirmButton(confirmButtonText));
-//   if (cancelButtonText !== null) {
-//     buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText));
-//   }
+  buttonContainer.appendChild(getConfirmButton(confirmButtonText));
+  // if (cancelButtonText !== null) {
+  //   buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText));
+  // }
 
-//   return buttonContainer;
-// }
+  return buttonContainer;
+}
+
+function getConfirmButton(confirmButtonText) {
+  let confirmButton = document.createElement('button');
+  confirmButton.className = 'button01_head_orange';
+  let confirmButton_tail = document.createElement('span');
+  confirmButton_tail.className = 'button01_tail';
+  let confirmButton_body = document.createElement('span');
+  confirmButton_body.className = 'button01_body';
+  confirmButton_body.innerHTML = `${confirmButtonText}`;
+  confirmButton.appendChild(confirmButton_tail);
+  confirmButton_tail.appendChild(confirmButton_body);
+  return confirmButton;
+}
 
 // function getCancelButton(wrapper, cancelButtonText) {
 //   let cancelButton = document.createElement('button');
