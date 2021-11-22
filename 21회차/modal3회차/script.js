@@ -1,7 +1,8 @@
-let body = document.querySelector('body');
+let body = document.querySelector('.main-body');
 let modalLinks = document.querySelectorAll('.modal-link');
 let modalContainer = document.createElement('div');
 modalContainer.className = 'modal-container';
+let overflowHidden = 'overflow-hidden';
 
 modalLinks.forEach((modalLink) => {
   modalLink.addEventListener('click', (event) => {
@@ -9,12 +10,25 @@ modalLinks.forEach((modalLink) => {
   });
 });
 
-createCustomModal({
-  dim: true,
-  title: '제목1',
-  content: undefined,
-  button: 'undefined',
-});
+function toggleBodyOverflow() {
+  body.classList.contains(overflowHidden)
+    ? body.classList.remove(overflowHidden)
+    : body.classList.add(overflowHidden);
+  // if (!body.classList.contains(overflowHidden)) {
+  //   body.classList.add(overflowHidden);
+  //   console.log('hidden yes');
+  //   // body.className = 'overflow-hidden';
+  // } else {
+  //   console.log('hidden no');
+  // }
+}
+
+// createCustomModal({
+//   dim: true,
+//   title: '제목1',
+//   content: undefined,
+//   button: 'undefined',
+// });
 
 function createCustomModal(setting) {
   console.log(setting.dim);
@@ -148,6 +162,8 @@ function getCloseButton(wrapper) {
 }
 
 function onModalClick(modalLink) {
+  // body.addEventListener('click', toggleBodyOverflow);
+  toggleBodyOverflow();
   let wrapper = document.createElement('div');
   wrapper.className = 'wrapper';
   let clone = modalLink.cloneNode(true);
@@ -171,9 +187,9 @@ function onModalClick(modalLink) {
   modalContainer.appendChild(wrapper);
 }
 
-function getModal(modalLink) {}
-
 function closeModal(wrapper) {
   modalContainer.removeChild(wrapper);
-  console.log('dim click');
+  toggleBodyOverflow();
+  // body.classList.remove('overflow-hidden');
+  console.log('closeModal');
 }
