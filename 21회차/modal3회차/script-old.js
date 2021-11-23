@@ -99,10 +99,6 @@ function getButtonContainer(confirmButtonText) {
   buttonContainer.className = "button-container";
 
   buttonContainer.appendChild(getConfirmButton(confirmButtonText));
-  // if (cancelButtonText !== null) {
-  //   buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText));
-  // }
-
   return buttonContainer;
 }
 
@@ -176,5 +172,4 @@ function onModalClick(modal) {
 function closeModal(wrapper) {
   modalContainer.removeChild(wrapper);
   toggleBodyOverflow();
-  // body.classList.remove('overflow-hidden');
 }
