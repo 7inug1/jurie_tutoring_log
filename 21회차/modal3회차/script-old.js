@@ -1,11 +1,11 @@
-let body = document.querySelector('.main-body');
-let modals = document.querySelectorAll('.modal-link');
-let modalContainer = document.createElement('div');
-modalContainer.className = 'modal-container';
-let overflowHidden = 'overflow-hidden';
+let body = document.querySelector(".main-body");
+let modals = document.querySelectorAll(".modal-link");
+let modalContainer = document.createElement("div");
+modalContainer.className = "modal-container";
+let overflowHidden = "overflow-hidden";
 
 modals.forEach((modal) => {
-  modal.addEventListener('click', (event) => {
+  modal.addEventListener("click", (event) => {
     onModalClick(modal, {});
   });
 });
@@ -14,13 +14,6 @@ function toggleBodyOverflow() {
   body.classList.contains(overflowHidden)
     ? body.classList.remove(overflowHidden)
     : body.classList.add(overflowHidden);
-  // if (!body.classList.contains(overflowHidden)) {
-  //   body.classList.add(overflowHidden);
-  //   console.log('hidden yes');
-  //   // body.className = 'overflow-hidden';
-  // } else {
-  //   console.log('hidden no');
-  // }
 }
 
 function createCustomModal(setting) {
@@ -29,24 +22,24 @@ function createCustomModal(setting) {
   console.log(setting.content);
   console.log(setting.button);
 
-  let wrapper = document.createElement('div');
-  wrapper.className = 'wrapper';
+  let wrapper = document.createElement("div");
+  wrapper.className = "wrapper";
 
-  let wrapper01 = document.createElement('div');
-  wrapper01.className = 'wrapper01';
+  let wrapper01 = document.createElement("div");
+  wrapper01.className = "wrapper01";
   let header = getHeader(setting.title);
 
-  let main = document.createElement('div');
+  let main = document.createElement("div");
   main = getMain(setting.content);
 
-  let dim = document.createElement('div');
-  dim.className = 'dim';
+  let dim = document.createElement("div");
+  dim.className = "dim";
 
-  let buttonContainer = document.createElement('div');
-  buttonContainer.className = 'button-container';
+  let buttonContainer = document.createElement("div");
+  buttonContainer.className = "button-container";
 
   if (setting.dim) {
-    dim.addEventListener('click', () => {
+    dim.addEventListener("click", () => {
       closeModal(wrapper);
     });
   }
@@ -59,7 +52,7 @@ function createCustomModal(setting) {
   wrapper01.appendChild(main);
   wrapper01.appendChild(main);
   if (setting.button === undefined) {
-    wrapper01.appendChild(getButtonContainer('확인'));
+    wrapper01.appendChild(getButtonContainer("확인"));
   } else {
     wrapper01.appendChild(getButtonContainer(setting.button));
   }
@@ -78,32 +71,32 @@ function createCustomModal(setting) {
   // return wrapper;
 
   if (setting.button === undefined) {
-    getButtonContainer('확인');
+    getButtonContainer("확인");
   } else {
   }
 }
 
 function getHeader(titleText) {
-  let header = document.createElement('div');
-  header.className = 'header';
-  let title = document.createElement('h1');
-  title.className = 'title01';
+  let header = document.createElement("div");
+  header.className = "header";
+  let title = document.createElement("h1");
+  title.className = "title01";
   title.innerHTML = `${titleText}`;
   header.appendChild(title);
   return header;
 }
 
 function getMain(content) {
-  let main = document.createElement('div');
-  main.className = 'main01';
+  let main = document.createElement("div");
+  main.className = "main01";
   main.innerHTML = content;
   return main;
 }
 
 // function getButtonContainer(wrapper, confirmButtonText, cancelButtonText) {
 function getButtonContainer(confirmButtonText) {
-  let buttonContainer = document.createElement('div');
-  buttonContainer.className = 'button-container';
+  let buttonContainer = document.createElement("div");
+  buttonContainer.className = "button-container";
 
   buttonContainer.appendChild(getConfirmButton(confirmButtonText));
   // if (cancelButtonText !== null) {
@@ -114,12 +107,12 @@ function getButtonContainer(confirmButtonText) {
 }
 
 function getConfirmButton(confirmButtonText) {
-  let confirmButton = document.createElement('button');
-  confirmButton.className = 'button01_head_orange';
-  let confirmButton_tail = document.createElement('span');
-  confirmButton_tail.className = 'button01_tail';
-  let confirmButton_body = document.createElement('span');
-  confirmButton_body.className = 'button01_body';
+  let confirmButton = document.createElement("button");
+  confirmButton.className = "button01_head_orange";
+  let confirmButton_tail = document.createElement("span");
+  confirmButton_tail.className = "button01_tail";
+  let confirmButton_body = document.createElement("span");
+  confirmButton_body.className = "button01_body";
   confirmButton_body.innerHTML = `${confirmButtonText}`;
   confirmButton.appendChild(confirmButton_tail);
   confirmButton_tail.appendChild(confirmButton_body);
@@ -143,13 +136,13 @@ function getConfirmButton(confirmButtonText) {
 // }
 
 function getCloseButton(wrapper) {
-  let closeButton = document.createElement('button');
-  closeButton.className = 'close-button';
-  closeButton.addEventListener('click', () => {
+  let closeButton = document.createElement("button");
+  closeButton.className = "close-button";
+  closeButton.addEventListener("click", () => {
     closeModal(wrapper);
   });
-  let closeButtonImg = document.createElement('img');
-  closeButtonImg.src = './images/close-button.png';
+  let closeButtonImg = document.createElement("img");
+  closeButtonImg.src = "./images/close-button.png";
   closeButton.appendChild(closeButtonImg);
   return closeButton;
 }
@@ -157,13 +150,13 @@ function getCloseButton(wrapper) {
 function onModalClick(modal) {
   // body.addEventListener('click', toggleBodyOverflow);
   toggleBodyOverflow();
-  let wrapper = document.createElement('div');
-  wrapper.className = 'wrapper';
+  let wrapper = document.createElement("div");
+  wrapper.className = "wrapper";
   let clone = modal.cloneNode(true);
-  let dim = document.createElement('div');
-  dim.className = 'dim';
+  let dim = document.createElement("div");
+  dim.className = "dim";
 
-  dim.addEventListener('click', () => {
+  dim.addEventListener("click", () => {
     closeModal(wrapper);
   });
 
@@ -184,5 +177,4 @@ function closeModal(wrapper) {
   modalContainer.removeChild(wrapper);
   toggleBodyOverflow();
   // body.classList.remove('overflow-hidden');
-  console.log('closeModal');
 }
