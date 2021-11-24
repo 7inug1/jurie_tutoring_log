@@ -4,6 +4,10 @@ let modalContainer = document.createElement("div");
 modalContainer.className = "modal-container";
 let overflowHidden = "overflow-hidden";
 
+window.addEventListener("click", (event) => {
+  console.log(event.target);
+});
+
 function getHeader(titleText) {
   let header = document.createElement("div");
   header.className = "header";
@@ -32,7 +36,7 @@ function getButtonContainer(confirmButtonText, cancelButtonText, wrapper) {
   buttonContainer.className = "button-container";
 
   buttonContainer.appendChild(getConfirmButton(confirmButtonText));
-  buttonContainer.appendChild(getCancelButton(cancelButtonText, wrapper));
+  buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText));
 
   return buttonContainer;
 }
@@ -51,6 +55,7 @@ function getConfirmButton(confirmButtonText) {
 }
 
 function getCancelButton(wrapper, cancelButtonText) {
+  console.log(cancelButtonText);
   let cancelButton = document.createElement("button");
   cancelButton.className = "button01_head_white";
   let cancelButton_tail = document.createElement("span");
@@ -134,6 +139,5 @@ modals.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     modal = modalObj;
     // onModalClick(modal, {});
-    console.log(modal.id);
   });
 });
