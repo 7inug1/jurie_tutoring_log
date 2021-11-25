@@ -214,13 +214,16 @@ body {
 #    # #    # #    # #      #      ###### #    # 
 */
 
+.main-body > .modal > .wrapper01 {
+  z-index: -2;
+}
+
 .wrapper01 {
   position: relative;
   border: 3px solid #c6c6c6;
   margin: 0 auto;
   box-sizing: border-box;
   text-align: left;
-  z-index: -1;
 }
 
 .modal-container {
@@ -232,12 +235,16 @@ body {
   /* margin-left: -350px; */
 }
 
+.modal {
+  display: inline-block;
+}
+
 .modal-container .wrapper01 {
   /* position: absolute;
   top: 100px;
   left: 50%;
   margin-left: -350px; */
-  z-index: 1;
+  z-index: 2;
 }
 
 .wrapper01 .header,

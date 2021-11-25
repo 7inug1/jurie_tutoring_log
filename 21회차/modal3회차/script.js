@@ -5,7 +5,19 @@ modalContainer.className = 'modal-container';
 let overflowHidden = 'overflow-hidden';
 
 window.addEventListener('click', (event) => {
-  console.log(event.target);
+  if (event.target.className === 'modal') {
+    console.log(event.target);
+    // modalObj.open({
+    //   dim: true,
+    //   title:,
+    //   content:,
+    //   confirmButton:,
+    //   cancelButton:
+    // });
+  }
+  // if ((event.target.className = 'modal')) {
+  // console.log('modal clicked');
+  // }
 });
 
 function getHeader(titleText) {
@@ -31,12 +43,12 @@ function toggleBodyOverflow() {
     : body.classList.add(overflowHidden);
 }
 
-function getButtonContainer(confirmButtonText, cancelButtonText, wrapper) {
+function getButtonContainer(confirmButtonText, cancelButtonText, wrapper, dim) {
   let buttonContainer = document.createElement('div');
   buttonContainer.className = 'button-container';
 
   buttonContainer.appendChild(getConfirmButton(confirmButtonText));
-  buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText));
+  buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText, dim));
 
   return buttonContainer;
 }
@@ -54,8 +66,7 @@ function getConfirmButton(confirmButtonText) {
   return confirmButton;
 }
 
-function getCancelButton(wrapper, cancelButtonText) {
-  console.log(cancelButtonText);
+function getCancelButton(wrapper, cancelButtonText, dim) {
   let cancelButton = document.createElement('button');
   cancelButton.className = 'button01_head_white';
   let cancelButton_tail = document.createElement('span');
@@ -66,13 +77,15 @@ function getCancelButton(wrapper, cancelButtonText) {
   cancelButton.appendChild(cancelButton_tail);
   cancelButton_tail.appendChild(cancelButton_body);
   cancelButton.addEventListener('click', () => {
-    closeModal(wrapper);
+    closeModal(wrapper, dim);
   });
   return cancelButton;
 }
 
-function closeModal(wrapper) {
+function closeModal(wrapper, dim) {
+  console.log('close modal');
   modalContainer.removeChild(wrapper);
+  wrapper.removeChild(dim);
   toggleBodyOverflow();
 }
 
@@ -83,29 +96,23 @@ const modalObj = {
     i++;
     return idStr;
   },
-  open: () => {
-    // window.addEventListener('click', (event) => {
-    //   if
-    // });
+  open: (setting) => {
+    toggleBodyOverflow();
 
     let wrapper = document.createElement('div');
     wrapper.className = 'wrapper';
-
     let wrapper01 = document.createElement('div');
     wrapper01.className = 'wrapper01';
-    let header = getHeader(defaultSetting.title);
-
-    let main = getMain(defaultSetting.content);
-
+    let header = getHeader(setting.title);
+    let main = getMain(setting.content);
     let dim = document.createElement('div');
     dim.className = 'dim';
-
     let buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
 
-    if (defaultSetting.dim) {
+    if (setting.dim) {
       dim.addEventListener('click', () => {
-        closeModal(wrapper);
+        closeModal(wrapper, dim);
       });
     }
 
@@ -118,9 +125,10 @@ const modalObj = {
 
     wrapper01.appendChild(
       getButtonContainer(
-        defaultSetting.confirmButton,
-        defaultSetting.cancelButton,
-        wrapper
+        setting.confirmButton,
+        setting.cancelButton,
+        wrapper,
+        dim
       )
     );
 
@@ -134,14 +142,17 @@ const modalObj = {
 let defaultSetting = {
   dim: true,
   title: '제목을 입력해주세요',
-  content: '내용을 입력해주세요',
-  confirmButton: '확인',
-  cancelButton: '취소',
+  content: `defaultSetting 대신 커스텀 세팅을 이용하시고 싶다면 다음의 형식으로 입력해주세요: <br><br>
+  {<br>
+    &nbspdim: Boolean,<br>
+    &nbsptitle: String,<br> 
+    &nbspcontent: String,<br>
+    &nbspconfirmButton: String,<br>
+    &nbspcancelButton: String<br>},<br>`,
 };
 
 modals.forEach((modal) => {
   modal.addEventListener('click', (event) => {
     modal = modalObj;
-    // onModalClick(modal, {});
   });
 });
