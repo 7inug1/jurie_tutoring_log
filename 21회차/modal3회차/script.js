@@ -3,6 +3,19 @@ let modals = document.querySelectorAll(".modal");
 let modalContainer = document.createElement("div");
 modalContainer.className = "modal-container";
 let overflowHidden = "overflow-hidden";
+let defaultSetting = {
+  dim: true,
+  title: "제목을 입력해주세요",
+  content: `defaultSetting 대신 커스텀 세팅을 이용하시고 싶다면 다음의 형식으로 입력해주세요: <br><br>
+  {<br>
+    &nbspdim: Boolean,<br>
+    &nbsptitle: String,<br> 
+    &nbspcontent: String,<br>
+    &nbspconfirmButton: String,<br>
+    &nbspcancelButton: String<br>},<br>`,
+  confirmButton: "확인",
+  cancelButton: "취소",
+};
 
 // 화면에 있는 modal 클릭 시
 window.addEventListener("click", (event) => {
@@ -76,7 +89,7 @@ function getCancelButton(wrapper, cancelButtonText, dim) {
   cancelButton.appendChild(cancelButton_tail);
   cancelButton_tail.appendChild(cancelButton_body);
   cancelButton.addEventListener("click", () => {
-    closeModal(wrapper, dim);
+    modalObj.close(wrapper, dim);
   });
 
   return cancelButton;
@@ -127,7 +140,8 @@ function getDim(wrapper, isClosable) {
   dim.className = "dim";
   if (isClosable) {
     dim.addEventListener("click", () => {
-      closeModal(wrapper, dim);
+      console.log("here");
+      modalObj.close(wrapper, dim);
     });
   }
 
@@ -137,10 +151,12 @@ function getDim(wrapper, isClosable) {
 //
 
 const modalObj = {
-  id: () => {
-    let id = 0;
-    let idStr = `id + ${id}`;
-    i++;
+  id: 0,
+  getId: () => {
+    let id = modalObj.id;
+    let idStr = `id${id}`;
+    id++;
+    console.log(id);
     return idStr;
   },
   open: (setting) => {
@@ -176,18 +192,4 @@ const modalObj = {
     wrapper.appendChild(dim);
     modalContainer.appendChild(wrapper);
   },
-};
-
-let defaultSetting = {
-  dim: true,
-  title: "제목을 입력해주세요",
-  content: `defaultSetting 대신 커스텀 세팅을 이용하시고 싶다면 다음의 형식으로 입력해주세요: <br><br>
-  {<br>
-    &nbspdim: Boolean,<br>
-    &nbsptitle: String,<br> 
-    &nbspcontent: String,<br>
-    &nbspconfirmButton: String,<br>
-    &nbspcancelButton: String<br>},<br>`,
-  confirmButton: "확인",
-  cancelButton: "취소",
 };
