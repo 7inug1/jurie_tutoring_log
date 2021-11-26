@@ -20,8 +20,12 @@ let defaultSetting = {
 // 화면에 있는 modal 클릭 시
 window.addEventListener("click", (event) => {
   if (event.target.className === "modal") {
-    console.log(event.target);
+    // let buttonContainer = event.target.children[0].children[2];
+    // let confirmButton = event.target.children[0].children[2].children[0];
+    // let cancelButton;
+    // console.log(event.target.children[0].children[3]);
     let clonedModal = event.target.children[0].cloneNode(true);
+
     modalObj.clone(clonedModal);
   }
 });
@@ -46,23 +50,34 @@ function getMain(content) {
   return main;
 }
 
-function toggleBodyOverflow() {
-  body.classList.contains(overflowHidden)
-    ? body.classList.remove(overflowHidden)
-    : body.classList.add(overflowHidden);
+function createBodyOverflow() {
+  if (!body.classList.contains(overflowHidden)) {
+    body.classList.add(overflowHidden);
+  }
+}
+
+function removeBodyOverflow() {
+  if (
+    body.classList.contains(overflowHidden) &&
+    !(body.lastChild.className === "modal-container")
+  ) {
+    body.classList.remove(overflowHidden);
+  }
 }
 
 function getButtonContainer(confirmButtonText, cancelButtonText, wrapper, dim) {
   let buttonContainer = document.createElement("div");
   buttonContainer.className = "button-container";
 
-  buttonContainer.appendChild(getConfirmButton(confirmButtonText));
+  buttonContainer.appendChild(
+    getConfirmButton(wrapper, confirmButtonText, dim)
+  );
   buttonContainer.appendChild(getCancelButton(wrapper, cancelButtonText, dim));
 
   return buttonContainer;
 }
 
-function getConfirmButton(confirmButtonText) {
+function getConfirmButton(wrapper, confirmButtonText, dim) {
   let confirmButton = document.createElement("button");
   confirmButton.className = "button01_head_orange";
   let confirmButton_tail = document.createElement("span");
@@ -73,6 +88,10 @@ function getConfirmButton(confirmButtonText) {
 
   confirmButton.appendChild(confirmButton_tail);
   confirmButton_tail.appendChild(confirmButton_body);
+
+  confirmButton.addEventListener("click", () => {
+    modalObj.close(wrapper, dim);
+  });
 
   return confirmButton;
 }
@@ -95,19 +114,15 @@ function getCancelButton(wrapper, cancelButtonText, dim) {
   return cancelButton;
 }
 
-function closeModal(wrapper, dim) {
-  console.log("close modal");
-  modalContainer.removeChild(wrapper);
-  wrapper.removeChild(dim);
-
-  toggleModalContainer(modalContainer.hasChildNodes());
-  toggleBodyOverflow();
+function createModalContainer(hasChild) {
+  if (hasChild) {
+    body.appendChild(modalContainer);
+  }
 }
-
-function toggleModalContainer(hasChild) {
-  hasChild
-    ? body.appendChild(modalContainer)
-    : body.removeChild(modalContainer);
+function removeModalContainer(hasChild) {
+  if (!hasChild) {
+    body.removeChild(modalContainer);
+  }
 }
 
 // modalFrame
@@ -160,8 +175,9 @@ const modalObj = {
     return idStr;
   },
   open: (setting) => {
-    toggleBodyOverflow();
-    toggleModalContainer(!body.contains(modalContainer));
+    createBodyOverflow();
+    console.log(!body.contains(modalContainer));
+    createModalContainer(!body.contains(modalContainer));
 
     let header = getHeader(setting.title);
     let main = getMain(setting.content);
@@ -177,16 +193,37 @@ const modalObj = {
     modalContainer.removeChild(wrapper);
     wrapper.removeChild(dim);
 
-    toggleModalContainer(modalContainer.hasChildNodes());
-    toggleBodyOverflow();
+    removeModalContainer(modalContainer.hasChildNodes());
+    removeBodyOverflow();
   },
   clone: (clonedModal) => {
     console.log(this);
-    toggleBodyOverflow();
-    toggleModalContainer(!body.contains(modalContainer));
 
     let wrapper = getWrapper();
     let dim = getDim(wrapper, true);
+    console.log(clonedModal);
+    let closeButton = clonedModal.querySelector(".close-button");
+    let buttonContainer = clonedModal.querySelector(".button-container");
+    let confirmButton = buttonContainer.children[0];
+    console.log(buttonContainer);
+    console.log(closeButton);
+    console.log(clonedModal);
+    if (buttonContainer.children.length > 1) {
+      let cancelButton = buttonContainer.children[1];
+      cancelButton.addEventListener("click", () => {
+        modalObj.close(wrapper, dim);
+      });
+    }
+
+    closeButton.addEventListener("click", () => {
+      modalObj.close(wrapper, dim);
+    });
+    confirmButton.addEventListener("click", () => {
+      modalObj.close(wrapper, dim);
+    });
+
+    createBodyOverflow();
+    createModalContainer(!body.contains(modalContainer));
 
     wrapper.appendChild(clonedModal);
     wrapper.appendChild(dim);
