@@ -166,13 +166,18 @@ function getDim(wrapper, isClosable) {
 //
 
 const modalObj = {
-  id: 0,
-  getId: () => {
-    let id = modalObj.id;
-    let idStr = `id${id}`;
-    id++;
-    console.log(id);
-    return idStr;
+  id: 1,
+  getId: (id) => {
+    // let id = modalObj.id;
+    // let idStr = `id${id}`;
+    // id++;
+    // console.log(id);
+    // return idStr;
+    // let id = 1;
+    function incrementId(id) {
+      this.id = id++;
+      return this.id;
+    }
   },
   open: (setting) => {
     createBodyOverflow();
