@@ -236,10 +236,11 @@ body {
 
 .modal-container {
   position: fixed;
-  top: 50px;
+  top: 50%;
   left: 50%;
+  /* transform: translate(30%, 50%); */
   /* margin-left: -350px; */
-  /* transform: translateX(-50%); */
+  /* transform: translate(-50%, -50%); */
   /* margin-left: -350px; */
 }
 
